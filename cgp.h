@@ -71,7 +71,7 @@ void test(Parameters* p, float** data, float** out);
 
 Chromosome CGP(Chromosome best, float** dataset, float** outputs, Parameters* params, int *seeds);
 
-Chromosome PCGP(Chromosome best, float* transposeDataset, float* transposeOutputs, Parameters* params, int *seeds);
+Chromosome PCGP(Chromosome best, Dataset* data, Parameters* params, int *seeds);
 
 Chromosome CGPDE_IN();
 

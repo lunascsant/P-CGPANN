@@ -56,6 +56,7 @@ unsigned int randomOutputIndex(int* seed);
 unsigned int getFunctionInputs(unsigned int function);
 
 void readDataset(Parameters* params, float*** dataset, float*** outputs, char* filename);
+void readDataset(Parameters* params, Dataset* fulldata, char* filename);
 void printDataset(Parameters *params, float **dataset, float **outputs);
 
 
@@ -64,9 +65,14 @@ unsigned NextPowerOf2( unsigned n );
 bool stopCriteria(unsigned int it);
 
 
+Dataset* generateFolds(float** dataset, float** outputs, Parameters* p);
+Dataset* generateFolds(Dataset* data);
+
+void transposeData(Dataset* data, float** transposeDataset, float** transposeOutputs);
+
 const char *getErrorString(cl_int error);
 void setupOpenCLOnePlatform(std::vector<cl::Platform> &platforms, std::vector<cl::Device> &devices);
 std::string ToString( float t );
-std::string setProgramSource(Parameters* p, int localSize);
+std::string setProgramSource(Dataset* data, Parameters* p, int localSize);
 void setNDRanges(size_t* globalSize, size_t* localSize, std::string* compileFlags, size_t maxLocalSize, size_t numPoints, cl_device_type deviceType);
 #endif //PCGP_UTILS_H

@@ -52,7 +52,7 @@
 
 /** Genetic parameters */
 #ifndef NUM_INDIV
-#define NUM_INDIV (6)
+#define NUM_INDIV (5)
 #endif // NUM_INDIV
 
 #ifndef PROB_CROSS
@@ -64,7 +64,7 @@
 #endif // PROB_MUT
 
 
-#define NUM_GENERATIONS 100
+#define NUM_GENERATIONS 50000
 #define NUM_EVALUATIONS 2.40e+007
 
 

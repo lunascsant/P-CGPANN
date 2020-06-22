@@ -603,7 +603,13 @@ void checkError(cl_int result){
         std::cerr << getErrorString(result) << std::endl;
 }
 
-Chromosome PCGP(Chromosome best, float* transposeDataset, float* transposeOutputs, Parameters* params, int *seeds){
+Chromosome PCGP(Chromosome best,  Dataset* data, Parameters* params, int *seeds){
+    ///transposicao de dados
+    float* transposeDataset;
+    float* transposeOutputs;
+
+    transposeData(data, &transposeDataset, &transposeOutputs);
+
     Chromosome new_best;
     Chromosome newBest[NUM_INDIV];
 
@@ -628,9 +634,9 @@ Chromosome PCGP(Chromosome best, float* transposeDataset, float* transposeOutput
     ///Buffers
     cl::Buffer bufferSeeds     (context, CL_MEM_READ_WRITE, NUM_INDIV * sizeof(int), nullptr,  &result);
     checkError(result);
-    cl::Buffer bufferDataset   (context, CL_MEM_READ_ONLY, params->M * params->N * sizeof(float), nullptr,  &result);
+    cl::Buffer bufferDataset   (context, CL_MEM_READ_ONLY, data->M * data->N * sizeof(float), nullptr,  &result);
     checkError(result);
-    cl::Buffer bufferOutputs   (context, CL_MEM_READ_ONLY, params->M * params->O * sizeof(float), nullptr,  &result);
+    cl::Buffer bufferOutputs   (context, CL_MEM_READ_ONLY, data->M * data->O * sizeof(float), nullptr,  &result);
     checkError(result);
     cl::Buffer bufferFunctions (context, CL_MEM_READ_ONLY, ((params->NUM_FUNCTIONS)) * sizeof(unsigned int), nullptr,  &result);
     checkError(result);
@@ -656,7 +662,7 @@ Chromosome PCGP(Chromosome best, float* transposeDataset, float* transposeOutput
     ///Program build
     std::ifstream sourceFileName("kernels\\kernel.cl");
     std::string sourceFile(std::istreambuf_iterator<char>(sourceFileName),(std::istreambuf_iterator<char>()));
-    std::string program_src = setProgramSource(params, (int)localSize_aval) + sourceFile;
+    std::string program_src = setProgramSource(data, params, (int)localSize_aval) + sourceFile;
 
     cl::Program program(context, program_src);
 
@@ -711,7 +717,6 @@ Chromosome PCGP(Chromosome best, float* transposeDataset, float* transposeOutput
         krnl_cgp.setArg(4, bufferFunctions);
         krnl_cgp.setArg(5, bufferSeeds);
         krnl_cgp.setArg(6, (int)localSize_aval * sizeof(float), nullptr);
-        krnl_cgp.setArg(7, sizeof(int), &params->M);
 
         result = cmdQueue.enqueueNDRangeKernel(krnl_cgp, cl::NullRange, cl::NDRange(globalSize_aval), cl::NDRange(localSize_aval));
         checkError(result);

@@ -1,3 +1,0 @@
-C:\Users\bruno\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\201.7223.86\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\PCGP.dir/objects.a
-C:\mingw64\bin\ar.exe cr CMakeFiles\PCGP.dir/objects.a @CMakeFiles\PCGP.dir\objects1.rsp
-C:\mingw64\bin\g++.exe  -static-libstdc++ -static-libgcc -g   -Wl,--whole-archive CMakeFiles\PCGP.dir/objects.a -Wl,--no-whole-archive  -o PCGP.exe -Wl,--out-implib,libPCGP.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\PCGP.dir\linklibs.rsp

@@ -5,30 +5,30 @@ CMakeFiles/P-CGPDE.dir/GPTime.cpp.obj
  C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.cpp
  C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.h
 CMakeFiles/P-CGPDE.dir/cgp.cpp.obj
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl.hpp
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_d3d10.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_dx9_media_sharing.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_ext.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_gl.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_gl_ext.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_platform.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/opencl.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl.hpp
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_d3d10.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_dx9_media_sharing.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_ext.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_gl.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_gl_ext.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_platform.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/opencl.h
  C:/Users/bruno/CLionProjects/P-CGPDE/cgp.cpp
  C:/Users/bruno/CLionProjects/P-CGPDE/cgp.h
  C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
  C:/Users/bruno/CLionProjects/P-CGPDE/stack.h
  C:/Users/bruno/CLionProjects/P-CGPDE/utils.h
 CMakeFiles/P-CGPDE.dir/main.cpp.obj
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl.hpp
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_d3d10.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_dx9_media_sharing.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_ext.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_gl.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_gl_ext.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_platform.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/opencl.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl.hpp
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_d3d10.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_dx9_media_sharing.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_ext.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_gl.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_gl_ext.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_platform.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/opencl.h
  C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.h
  C:/Users/bruno/CLionProjects/P-CGPDE/cgp.h
  C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
@@ -40,15 +40,15 @@ CMakeFiles/P-CGPDE.dir/stack.cpp.obj
  C:/Users/bruno/CLionProjects/P-CGPDE/stack.cpp
  C:/Users/bruno/CLionProjects/P-CGPDE/stack.h
 CMakeFiles/P-CGPDE.dir/utils.cpp.obj
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl.hpp
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_d3d10.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_dx9_media_sharing.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_ext.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_gl.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_gl_ext.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/cl_platform.h
- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include/CL/opencl.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl.hpp
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_d3d10.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_dx9_media_sharing.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_ext.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_gl.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_gl_ext.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_platform.h
+ C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/opencl.h
  C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
  C:/Users/bruno/CLionProjects/P-CGPDE/utils.cpp
  C:/Users/bruno/CLionProjects/P-CGPDE/utils.h

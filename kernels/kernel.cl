@@ -589,8 +589,7 @@ float executeFunction(__global Chromosome* c, int node, ExStack* exStack){
 void evaluateCircuitParallel(__global Chromosome* c,
                             __constant float* data, 
                             __constant float* out, 
-                            __local float* error,
-                            int M) {
+                            __local float* error) {
     
     //c->fitness = 0.0;
 
@@ -735,12 +734,11 @@ __kernel void evaluate(__global Chromosome* pop,
                        __constant float* dataset,
                        __constant float* outputs,
                        __global unsigned int* functionSet,
-                       __local float* error,
-                       const int M){
+                       __local float* error){
 
     int group_id = get_group_id(0);
 
-    evaluateCircuitParallel(&pop[group_id], dataset, outputs, error, M);
+    evaluateCircuitParallel(&pop[group_id], dataset, outputs, error);
 
 }
 
@@ -751,8 +749,7 @@ __kernel void CGP(__global Chromosome* pop,
                   __constant float* outputs,
                   __global unsigned int* functionSet,
                   __global int *seeds,
-                  __local float* error,
-                  const int M){
+                  __local float* error){
 
 int group_id = get_group_id(0);
 int seed = seeds[group_id];
@@ -764,7 +761,7 @@ mutateTopologyProbabilistic(&pop[group_id], functionSet, &seed,  0);
 
 barrier(CLK_LOCAL_MEM_FENCE);
 
-evaluateCircuitParallel(&pop[group_id], dataset, outputs, error, M);
+evaluateCircuitParallel(&pop[group_id], dataset, outputs, error);
 
 barrier(CLK_LOCAL_MEM_FENCE);
 

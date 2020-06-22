@@ -93,6 +93,130 @@ unsigned NextPowerOf2( unsigned n ){
 
     return n;
 }
+void readDataset(Parameters* params, Dataset* fulldata, char* filename){
+
+    std::fstream arq;
+
+    int i, j, k;
+    int readLabel = 0;
+    int readOps;
+    int info;
+
+    printf("Lendo Dados Arquivo... %s\n",filename);
+    arq.open(filename, std::fstream::in);
+
+    /** Read the dataset size (M) and number of inputs (N) */
+    std::string value;
+/*
+    arq >> value;
+    if(value == ".p")
+        arq >> (params->M);
+    arq >> value;
+    if(value == ".i")
+        arq >> (params->N);
+    arq >> value;
+    if(value == ".o")
+        arq >> (params->O);
+*/
+    arq >> (params->N);
+    arq >> (params->O);
+    arq >> (params->M);
+
+
+    //arq >> (readLabel);
+
+    unsigned int M = params->M;
+    unsigned int N = params->N;
+    unsigned int O = params->O;
+    //std::cout << M << " " << N << " " << O << std::endl;
+
+    fulldata->M = M;
+    fulldata->N = N;
+    fulldata->O = O;
+
+    (fulldata->data) = new float* [(M)];
+    for(i = 0; i < (M); i++){
+        (fulldata->data)[i] = new float [(N)];
+    }
+
+    (fulldata->output) = new float* [(M)];
+    for(i = 0; i < (M); i++) {
+        (fulldata->output)[i] = new float[(O)];
+    }
+
+    (params->labels) = new char* [(N + O)];
+    for(i = 0; i < (N + O); i++){
+        (params->labels)[i] = new char [10];
+    }
+
+    //LABELS
+    for(i = 0; i < params->N; i++){
+        std::stringstream ss;
+        std::string str;
+        ss << "i";
+        ss << i;
+        ss >> str;
+        strcpy((params->labels)[i], (str.c_str()));
+    }
+    for(; i < params->N+params->O; i++){
+        std::stringstream ss;
+        std::string str;
+        ss << "o";
+        ss << i;
+        ss >> str;
+        strcpy((params->labels)[i], (str.c_str()));
+    }
+
+
+    /** Read the dataset */
+    std::string line;
+    for(i = 0; i < (M); i++){
+        //arq >> line;
+        //std::cout << line <<std::endl;
+        for(j = 0; j < (N); j++){
+            arq >> (fulldata->data)[i][j] ;//= line[j] - '0';
+            //std::cout << (*dataset)[i][j] << " ";
+        }
+        for(k = 0; j<(N+O); j++, k++){
+            arq >> (fulldata->output)[i][k];// = line[j] - '0';
+            //std::cout << (*outputs)[i][k] << " ";
+        }
+        //std::cout << std::endl;
+    }
+
+    arq >> readOps;
+
+
+    params->NUM_FUNCTIONS = 1;
+    (params->functionSet) = new unsigned int [params->NUM_FUNCTIONS];
+
+    i = 0;
+
+    (params->functionSet)[i++] = SIG;
+    //(params->maxFunctionInputs)[i++] = 2;
+/*
+    (params->functionSet)[i++] = OR;
+    //(params->maxFunctionInputs)[i++] = 2;
+
+    (params->functionSet)[i++] = XOR;
+    //(params->maxFunctionInputs)[i++] = 2;
+
+    (params->functionSet)[i++] = NAND;
+    //(params->maxFunctionInputs)[i++] = 2;
+
+    (params->functionSet)[i++] = NOR;
+    //(params->maxFunctionInputs)[i++] = 2;
+
+    (params->functionSet)[i++] = XNOR;
+    //(params->maxFunctionInputs)[i++] = 2;
+
+    (params->functionSet)[i++] = NOT;
+    //(params->maxFunctionInputs)[i++] = 1;
+*/
+
+
+    params->weightRange = 5;
+}
 
 void readDataset(Parameters* params, float*** dataset, float*** outputs, char* filename){
 
@@ -331,6 +455,11 @@ void setupOpenCLOnePlatform(std::vector<cl::Platform> &platforms, std::vector<cl
         std::cout << "Erro ao encontrar plataformas." << std::endl;
         exit(1);
     }
+    std::cout << "Available platforms: " << std::endl;
+
+    for(int i = 0; i < platforms.size(); i++){
+        std::cout << "\t" << platforms[i].getInfo<CL_PLATFORM_NAME>() << std::endl;
+    }
 
     ///Encontrando os dispositivos disponiveis na plataforma.
 #if GPU
@@ -346,11 +475,12 @@ std::string ToString( float t ){
     std::stringstream ss; ss << std::setprecision(32) << t; return ss.str();
 }
 
-std::string setProgramSource(Parameters* p, int localSize){
+std::string setProgramSource(Dataset* data, Parameters* p, int localSize){
     std::string program_src =
             "#define SEED "  + ToString( SEED ) + "\n" +
-            "#define N   " + ToString( p->N ) + "\n" +
-            "#define O   " + ToString( p->O ) + "\n" +
+            "#define N   " + ToString( data->N ) + "\n" +
+            "#define O   " + ToString( data->O ) + "\n" +
+            "#define M   " + ToString( data->M ) + "\n" +
             "#define WEIGTH_RANGE    " + ToString(p->weightRange) + "\n" +
             "#define NUM_FUNCTIONS    " + ToString(p->NUM_FUNCTIONS) + "\n" +
             "#define SIG    " + ToString(SIG) + "\n" +
@@ -401,4 +531,181 @@ void setNDRanges(size_t* globalSize, size_t* localSize, std::string* compileFlag
     std::cout << "...fim." << std::endl;
 
     std::cout << "Global Size = " << globalSize << std::endl << "Local size = " << localSize << std::endl << std::endl;
+}
+
+
+Dataset* generateFolds(Dataset* data){
+    int i, j, k, l, count;
+    Dataset* folds;
+    folds = new Dataset[10];
+
+    for (i = 0; i < 10; i++)
+    {
+        folds[i].N = data->N;
+        folds[i].O = data->O;
+        folds[i].M = 0;
+    }
+
+    i = 0;
+    count = 0;
+    while(1) // set the size of each fold
+    {
+        folds[i].M = folds[i].M + 1;
+        count++;
+        if(count == data->M)
+            break;
+        if(i == 9)
+            i = 0;
+        else
+            i++;
+    }
+
+    // allocate memory for the folds data
+    for(i = 0; i < 10; i++) // for each fold
+    {
+        folds[i].data = new float* [folds[i].M];
+        folds[i].output = new float* [folds[i].M];
+
+        for(j = 0; j < folds[i].M; j++) // for each instance of each fold
+        {
+            folds[i].data[j] = new float [folds[i].N];
+            folds[i].output[j] = new float [folds[i].O];
+        }
+    }
+
+
+    // keep the same class proportion in each fold
+    int counter[10];// k = 10 // = (int*)malloc(10*sizeof(int));
+    for(i = 0; i < 10; i++)
+    {
+        counter[i] = 0;
+    }
+
+    k = 0;
+    for(i = 0; i < data->O; i++) // for each class
+    {
+        for(j = 0; j < data->M; j++) // for each instance
+        {
+            if(data->output[j][i] == 1.0)
+            {
+                for (l = 0; l < data->N; l++)
+                {
+                    folds[k].data[counter[k]][l] = data->data[j][l];
+                }
+
+                for (l = 0; l < data->O; l++)
+                {
+                    folds[k].output[counter[k]][l] = data->output[j][l];
+                }
+
+                counter[k] = counter[k] + 1;
+                if(k == 9)
+                    k = 0;
+                else
+                    k++;
+            }
+        }
+    }
+
+    return folds;
+}
+
+Dataset* generateFolds(float** dataset, float** outputs, Parameters* p){
+    int i, j, k, l, count;
+    Dataset* folds;
+    folds = new Dataset[10];
+
+    for (i = 0; i < 10; i++)
+    {
+        folds[i].N = p->N;
+        folds[i].O = p->O;
+        folds[i].M = 0;
+    }
+
+    i = 0;
+    count = 0;
+    while(1) // set the size of each fold
+    {
+        folds[i].M = folds[i].M + 1;
+        count++;
+        if(count == p->M)
+            break;
+        if(i == 9)
+            i = 0;
+        else
+            i++;
+    }
+
+    // allocate memory for the folds data
+    for(i = 0; i < 10; i++) // for each fold
+    {
+        folds[i].data = new float* [folds[i].M];
+        folds[i].output = new float* [folds[i].M];
+
+        for(j = 0; j < folds[i].M; j++) // for each instance of each fold
+        {
+            folds[i].data[j] = new float [folds[i].N];
+            folds[i].output[j] = new float [folds[i].O];
+        }
+    }
+
+
+    // keep the same class proportion in each fold
+    int counter[10];// k = 10 // = (int*)malloc(10*sizeof(int));
+    for(i = 0; i < 10; i++)
+    {
+        counter[i] = 0;
+    }
+
+    k = 0;
+    for(i = 0; i < p->O; i++) // for each class
+    {
+        for(j = 0; j < p->M; j++) // for each instance
+        {
+            if(outputs[j][i] == 1.0)
+            {
+                for (l = 0; l < p->N; l++)
+                {
+                    folds[k].data[counter[k]][l] = dataset[j][l];
+                }
+
+                for (l = 0; l < p->O; l++)
+                {
+                    folds[k].output[counter[k]][l] = outputs[j][l];
+                }
+
+                counter[k] = counter[k] + 1;
+                if(k == 9)
+                    k = 0;
+                else
+                    k++;
+            }
+        }
+    }
+
+    return folds;
+}
+
+void transposeData(Dataset* data, float** transposeDataset, float** transposeOutputs){
+
+    (*transposeDataset) = new float [data->M * data->N];
+    //transposição necessária para otimizar a execução no opencl com acessos sequenciais à memória
+    unsigned int pos = 0;
+    std::cout << "Transpondo dados..." << std::endl;
+    for(int j = 0; j < data->N; ++j ){
+        for(int i = 0; i < data->M; ++i ){
+            (*transposeDataset)[pos++] = data->data[i][j];
+        }
+    }
+
+    (*transposeOutputs) = new float [data->M * data->O];
+    //transposição necessária para otimizar a execução no opencl com acessos sequenciais à memória
+    pos = 0;
+    std::cout << "Transpondo outputs..." << std::endl;
+    for(int j = 0; j < data->O; ++j ){
+        for(int i = 0; i < data->M; ++i ){
+            (*transposeOutputs)[pos++] = data->output[i][j];
+        }
+    }
+
 }
