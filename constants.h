@@ -71,6 +71,8 @@
 #define GPU 1
 #define PARALLEL 1
 
+#define KFOLDS 10
+
 typedef struct
 {
     unsigned int N; //inputs
@@ -88,9 +90,12 @@ typedef struct
 
 typedef struct
 {
-    unsigned int N; //inputs
-    unsigned int O; //outputs
-    unsigned int M; //dataset size
+    /** Number of inputs */
+    unsigned int N;
+    /** Number of outputs */
+    unsigned int O;
+    /** Number of entries */
+    unsigned int M;
 
     float** data;
     float** output;

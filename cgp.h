@@ -55,8 +55,11 @@ void activateNodes(Chromosome* c, Parameters* p);
 void circuitGenerator(Chromosome* c, Parameters* params, int* seed);
 
 void evaluateCircuit(Chromosome* c, Parameters* p, float** data, float** out);
+void evaluateCircuit(Chromosome* c, Dataset* data);
+void evaluateCircuitValidation(Chromosome* c, Parameters* p, float** data, float** out);
 
-void runCircuit(Chromosome* c, Parameters* p, float* data, float* out);
+void runCircuit(Chromosome* c, Parameters* p, float* data, float* out, int validation);
+void runCircuit(Chromosome* c, Dataset* datasettt, int index, int validation);
 
 void initializePopulation(Chromosome* pop, Parameters* p, int* seed);
 
@@ -70,8 +73,10 @@ Chromosome *mutateTopologyPoint(Chromosome *c, Parameters *p, int *seed);
 void test(Parameters* p, float** data, float** out);
 
 Chromosome CGP(Chromosome best, float** dataset, float** outputs, Parameters* params, int *seeds);
+Chromosome CGP(Dataset* training, Dataset* validation, Parameters* params, int *seeds);
 
-Chromosome PCGP(Chromosome best, Dataset* data, Parameters* params, int *seeds);
+Chromosome PCGP(Dataset* data, Parameters* params, int *seeds);
+Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, int *seeds);
 
 Chromosome CGPDE_IN();
 

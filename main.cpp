@@ -42,24 +42,47 @@ int main(int argc, char** argv) {
     //printDataset(params, dataset, outputs);
     //test(params, dataset, outputs);
 
-    Dataset* folds = generateFolds(&fullData);
 
-    initializePopulation(current_pop, params, &seeds[0]);
+    //shuffleData(&fullData, &seeds[0]);
+
+
+    //initializePopulation(current_pop, params, &seeds[0]);
 
     //best = current_pop[evaluatePopulation(current_pop, params, dataset, outputs)];
-    best = current_pop[evaluatePopulation(current_pop, params, fullData.data, fullData.output)];
-    new_best = best;
+    //best = current_pop[evaluatePopulation(current_pop, params, fullData.data, fullData.output)];
+    //new_best = best;
     //printPopulation(current_pop, params);
+    int i, j, aux;
+    for(i = 0; i < 3; i++) {
+        for(aux = 0; aux < NUM_INDIV; aux++){
+            seeds[aux] = i + 50;
+        }
+        shuffleData(&fullData, &seeds[0]);
+        Dataset* folds = generateFolds(&fullData);
 
-#if PARALLEL
+        for(j = 0; j < KFOLDS; j++){
 
-    best = PCGP(best, &fullData, params, seeds);
+            int testIndex = j;
+            int indices[KFOLDS];// = new int
+            ///return a permutation of the possible indexes for training and validation
+            getIndexes(indices, KFOLDS, testIndex, &seeds[0]);
+            indices[KFOLDS-1] = testIndex;
 
-#else
+            Dataset* trainingData = getSelectedDataset(folds, indices, 0, 6);
+            Dataset* validationData = getSelectedDataset(folds, indices, 7, 9);
+            Dataset* testData = getSelectedDataset(folds, indices, 10, 10);
 
-    best = CGP(best, dataset, outputs, params, seeds);
+            #if PARALLEL
+                //Chromosome executionBest = PCGP(&fullData, params, seeds);
+                Chromosome executionBest = PCGP(trainingData, validationData, params, seeds);
+            #else
+                Chromosome executionBest = CGP(trainingData, validationData, params, seeds);
+            #endif
+        }
 
-#endif
+
+    }
+
 
     //printPopulation(current_pop, params);
     timeManager.getEndTime(Total_T);

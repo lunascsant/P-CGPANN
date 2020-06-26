@@ -90,6 +90,12 @@
 		<Unit filename="C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.h">
 			<Option target="P-CGPDE"/>
 		</Unit>
+		<Unit filename="C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.cpp">
+			<Option target="P-CGPDE"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h">
+			<Option target="P-CGPDE"/>
+		</Unit>
 		<Unit filename="C:/Users/bruno/CLionProjects/P-CGPDE/cgp.cpp">
 			<Option target="P-CGPDE"/>
 		</Unit>

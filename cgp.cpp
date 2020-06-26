@@ -107,17 +107,25 @@ void setFitness(Chromosome* c, Parameters* p, float* out, int* fitness) {
 }
 */
 
-void evaluateCircuit(Chromosome* c, Parameters* p, float** data, float** out) {
+void evaluateCircuit(Chromosome* c, Dataset* data) {
     int i;
-    int fitness = 0;
     c->fitness = 0.0;
-    for(i = 0; i < p->M; i++){
-        runCircuit(c, p, data[i], out[i]);
+    for(i = 0; i < data->M; i++){
+        runCircuit(c, data, i, 0);
         //setFitness(c, p, out[i], &fitness);
     }
-    c->fitness = c->fitness / (float) p->M;
+    c->fitness = c->fitness / (float) data->M;
 }
 
+void evaluateCircuitValidation(Chromosome* c, Dataset* data) {
+    int i;
+    c->fitnessValidation = 0.0;
+    for(i = 0; i < data->M; i++){
+        runCircuit(c, data, i, 1);
+        //setFitness(c, p, out[i], &fitness);
+    }
+    c->fitnessValidation = c->fitnessValidation / (float) data->M;
+}
 
 float executeFunction(Chromosome* c, int node, ExStack* exStack){
     int i;
@@ -302,8 +310,7 @@ float executeFunction(Chromosome* c, int node, ExStack* exStack){
     return result;
 }
 
-
-void runCircuit(Chromosome* c, Parameters* p, float* data, float* out){
+void runCircuit(Chromosome* c, Parameters* p, float* data, float* out, int validation){
 
     int i;
     float maxPredicted = -DBL_MAX;
@@ -371,9 +378,90 @@ void runCircuit(Chromosome* c, Parameters* p, float* data, float* out){
     }
 
     if(predictedClass == correctClass) {
-        (c->fitness)++;
+        if(validation == 1){
+            (c->fitnessValidation)++;
+        } else {
+            (c->fitness)++;
+        }
+
+    }
+}
+
+void runCircuit(Chromosome* c, Dataset* datasettt, int index, int validation){
+
+    int i;
+    float maxPredicted = -DBL_MAX;
+    int predictedClass = 0;
+    int correctClass = 0;
+
+    float executionOut[MAX_OUTPUTS];
+    float alreadyEvaluated[MAX_NODES];
+    int inputsEvaluatedAux[MAX_NODES];
+
+    for(i = 0; i < MAX_NODES; i++){
+        alreadyEvaluated[i] = -FLT_MAX;
+        inputsEvaluatedAux[i] = 0;
+        //c->nodes[i].inputsEvaluated = 0;
     }
 
+    Stack s;
+    s.topIndex = -1;
+
+    ExStack exStack;
+    exStack.topIndex = -1;
+
+
+    for( i = 0; i < MAX_OUTPUTS; i++) {
+        unsigned int nodeIndex = c->output[i];
+        push(&s, nodeIndex);
+
+        while(s.topIndex != -1) {
+            unsigned int node = pop(&s);
+            for (int j = inputsEvaluatedAux[node]; j < c->nodes[node].maxInputs; j++) {
+                if (c->nodes[node].inputs[j] >= datasettt->N) { // se é um outro nó, empilha nó ou o resultado
+                    unsigned int refIndex = c->nodes[node].inputs[j] - datasettt->N;
+
+                    if(alreadyEvaluated[refIndex] > -FLT_MAX) {
+                        inputsEvaluatedAux[node]++;//c->nodes[node].inputsEvaluated++;
+                        pushEx(&exStack, alreadyEvaluated[refIndex]);
+                    } else {
+                        push(&s, node); // reinsere o nó que nao terminou de ser avaliado
+                        push(&s, refIndex); //avalia o próximo
+                        break;
+                    }
+                } else {
+                    inputsEvaluatedAux[node]++;//c->nodes[node].inputsEvaluated++;
+                    pushEx(&exStack, datasettt->data[index][c->nodes[node].inputs[j]]);
+                }
+            }
+            if(inputsEvaluatedAux[node] == c->nodes[node].maxInputs){
+
+                alreadyEvaluated[node] = executeFunction(c, node, &exStack);
+                //alreadyEvaluated[node] = 1;
+            }
+
+        }
+        executionOut[i] = alreadyEvaluated[nodeIndex];//c->nodes[c->output[i]].output;//popEx(&exStack);
+
+        if(executionOut[i] > maxPredicted) {
+            maxPredicted = executionOut[i];
+            predictedClass = i;
+        }
+
+        if(datasettt->output[index][i] == 1.0) {
+            correctClass = i;
+        }
+
+    }
+
+    if(predictedClass == correctClass) {
+        if(validation == 1){
+            (c->fitnessValidation)++;
+        } else {
+            (c->fitness)++;
+        }
+
+    }
 }
 
 void initializePopulation(Chromosome* pop, Parameters* p, int* seed) {
@@ -382,26 +470,43 @@ void initializePopulation(Chromosome* pop, Parameters* p, int* seed) {
     }
 }
 
-int evaluatePopulation(Chromosome* pop, Parameters* p, float** data, float** out){
+int evaluatePopulation(Chromosome* pop, Dataset* dataset, int validation){
     int i, j;
     float bestFitness = 0;
     unsigned int bestActiveNodes = 999;
     int bestIndex = -1;
-
-    for(j = 0; j < NUM_INDIV; j++) {
-        evaluateCircuit(&pop[j], p, data, out);
-        if(pop[j].fitness > bestFitness){
-            bestFitness = pop[j].fitness;
-            bestActiveNodes = pop[j].numActiveNodes;
-            bestIndex = j;
-        } else if (pop[j].fitness == bestFitness) {
-            if(pop[j].numActiveNodes <= bestActiveNodes){
+    if(validation == 1 ){
+        for(j = 0; j < NUM_INDIV; j++) {
+            evaluateCircuitValidation(&pop[j], dataset);
+            if(pop[j].fitnessValidation > bestFitness){
+                bestFitness = pop[j].fitnessValidation;
+                bestActiveNodes = pop[j].numActiveNodes;
+                bestIndex = j;
+            } else if (pop[j].fitnessValidation == bestFitness) {
+                if(pop[j].numActiveNodes <= bestActiveNodes){
+                    bestFitness = pop[j].fitnessValidation;
+                    bestActiveNodes = pop[j].numActiveNodes;
+                    bestIndex = j;
+                }
+            }
+        }
+    } else {
+        for(j = 0; j < NUM_INDIV; j++) {
+            evaluateCircuit(&pop[j], dataset);
+            if(pop[j].fitness > bestFitness){
                 bestFitness = pop[j].fitness;
                 bestActiveNodes = pop[j].numActiveNodes;
                 bestIndex = j;
+            } else if (pop[j].fitness == bestFitness) {
+                if(pop[j].numActiveNodes <= bestActiveNodes){
+                    bestFitness = pop[j].fitness;
+                    bestActiveNodes = pop[j].numActiveNodes;
+                    bestIndex = j;
+                }
             }
         }
     }
+
     return bestIndex;
 }
 
@@ -500,7 +605,7 @@ Chromosome *mutateTopologyPoint(Chromosome *c, Parameters *p, int *seed) {
 }
 
 
-void test(Parameters* p, float** data, float** out){
+void test(Parameters* p, Dataset* data){
     Chromosome c;
     c.nodes[0].function  = XOR;
     c.nodes[0].inputs[0] = 1;
@@ -542,76 +647,483 @@ void test(Parameters* p, float** data, float** out){
     c.output[2] = 0;
 
     c.fitness = 0.0;
-    evaluateCircuit(&c, p, data, out);
+    evaluateCircuit(&c, data);
     std::cout << "Fitness " << c.fitness << std::endl;
 
 
 }
 
-Chromosome CGP(Chromosome best, float** dataset, float** outputs, Parameters* params, int *seeds) {
-    Chromosome new_best;
+Chromosome CGP(Dataset* training, Dataset* validation, Parameters* params, int *seeds) {
+    Chromosome *current_pop;
+    current_pop = new Chromosome[NUM_INDIV];
+
+    Chromosome best;
+    Chromosome best_train;
+    Chromosome best_valid;
     Chromosome mutated_best;
 
-    new_best = best;
+    initializePopulation(current_pop, params, &seeds[0]);
+
+    int bestTrain = evaluatePopulation(current_pop, training, 0);
+    int bestValid = evaluatePopulation(current_pop, validation, 1);
+
+
+    best_train = current_pop[bestTrain];
+    best_valid = current_pop[bestValid];
+    best = best_train;
 
     int iterations = 0;
     while(stopCriteria(iterations)) {
-        if(iterations % 10 == 0) printf("Generation %d:\n", iterations);
+        printf("Generation %d:\n", iterations);
+        std::cout << "Active nodes: " << best.numActiveNodes << ", FitnessTrain: " << best.fitness << ", FitnessValidation: " << best.fitnessValidation  << std::endl;
+
+
         //printCircuit(&best, params);
         for (int i = 0; i < NUM_INDIV; i++){
             mutated_best = best;
             mutateTopologyProbabilistic(&mutated_best, params, &seeds[i], 0);
-            evaluateCircuit(&mutated_best, params, dataset, outputs);
-            if(mutated_best.fitness > new_best.fitness){
-                new_best = mutated_best;
-            } else if (mutated_best.fitness == new_best.fitness) {
-                if(mutated_best.numActiveNodes <= new_best.numActiveNodes){
-                    new_best = mutated_best;
-                }
+
+            evaluateCircuit(&mutated_best, training);
+            evaluateCircuitValidation(&mutated_best, validation);
+
+            if(mutated_best.fitnessValidation >= best_valid.fitnessValidation){
+                best_valid = mutated_best;
+            }
+
+            if(mutated_best.fitness >= best_train.fitness){
+                best_train = mutated_best;
             }
         }
-        best = new_best;
-        std::cout << "Best fitness  = " << best.fitness << std::endl;
+        best = best_train;
+        //std::cout << "Best fitness  = " << best.fitness << std::endl;
         iterations++;
     }
 
-    return best;
+    return best_valid;
 }
 
+Chromosome PCGP_SeparateKernels(Dataset* training, Dataset* validation, Parameters* params, int *seeds){
 
-void printOpenclDeviceInfo(std::vector<cl::Platform> platforms, std::vector<cl::Device> devices){
+    Chromosome *current_pop;
+    current_pop = new Chromosome[NUM_INDIV];
 
-    std::cout << "Available Devices for Platform " << platforms[GPU_PLATFORM].getInfo<CL_PLATFORM_NAME>()<< ":\n";
+    Chromosome best;
+    Chromosome best_train;
+    Chromosome best_valid;
+    Chromosome newBest[NUM_INDIV];
 
-    for(int i = 0; i < devices.size(); ++i) {
-        std::cout << "[" << i << "]" << devices[i].getInfo<CL_DEVICE_NAME>() << std::endl;
-        std::cout << "\tType:   " << devices[i].getInfo<CL_DEVICE_TYPE>() << std::endl;
-        std::cout << "\tOpenCL: " << devices[i].getInfo<CL_DEVICE_OPENCL_C_VERSION>() << std::endl;
-        std::cout << "\tMax Comp Un: " << devices[i].getInfo<CL_DEVICE_MAX_COMPUTE_UNITS>() << std::endl;
-        std::cout << "\tMax WrkGr Sz: " << devices[i].getInfo<CL_DEVICE_MAX_WORK_GROUP_SIZE>() << std::endl;
-        std::cout << "\tFp config: " << devices[i].getInfo<CL_DEVICE_SINGLE_FP_CONFIG>() << std::endl;
-        std::cout << "\tMax Mem Alloc: " << devices[i].getInfo<CL_DEVICE_MAX_MEM_ALLOC_SIZE>() << std::endl;
-        std::cout << "\tLocal Mem Size: " << devices[i].getInfo<CL_DEVICE_LOCAL_MEM_SIZE>() << std::endl;
-        std::cout << "\tMax Const Size: " << devices[i].getInfo<CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE>() << std::endl;
+    initializePopulation(current_pop, params, &seeds[0]);
 
+    int bestTrain = evaluatePopulation(current_pop, training, 0);
+    int bestValid = evaluatePopulation(current_pop, validation, 1);
+
+    best_train = current_pop[bestTrain];
+    best_valid = current_pop[bestValid];
+    best = best_train;
+
+    ///transposicao de dados
+    float* transposeDatasetTrain;
+    float* transposeOutputsTrain;
+
+    float* transposeDatasetValid;
+    float* transposeOutputsValid;
+
+    transposeData(training, &transposeDatasetTrain, &transposeOutputsTrain);
+    transposeData(validation, &transposeDatasetValid, &transposeOutputsValid);
+
+    ///OpenCL
+    cl_int result;
+
+    ///Platforms and Devices
+    std::vector<cl::Platform> platforms;
+    std::vector<cl::Device> devices;
+
+    setupOpenCLOnePlatform(platforms,devices);
+    printOpenclDeviceInfo(platforms, devices);
+
+    ///Context
+    cl::Context context(devices, nullptr, nullptr, nullptr, &result);
+
+    ///Command Queue
+    cl_command_queue_properties commandQueueProperties = CL_QUEUE_PROFILING_ENABLE;
+    cl::CommandQueue cmdQueue(context, devices[GPU_DEVICE], commandQueueProperties, &result);
+
+    ///Buffers
+    cl::Buffer bufferSeeds     (context, CL_MEM_READ_WRITE, NUM_INDIV * sizeof(int), nullptr,  &result);
+    checkError(result);
+
+    cl::Buffer bufferDatasetTrain   (context, CL_MEM_READ_ONLY, training->M * training->N * sizeof(float), nullptr,  &result);
+    checkError(result);
+    cl::Buffer bufferOutputsTrain   (context, CL_MEM_READ_ONLY, training->M * training->O * sizeof(float), nullptr,  &result);
+    checkError(result);
+
+    cl::Buffer bufferDatasetValid   (context, CL_MEM_READ_ONLY, validation->M * validation->N * sizeof(float), nullptr,  &result);
+    checkError(result);
+    cl::Buffer bufferOutputsValid   (context, CL_MEM_READ_ONLY, validation->M * validation->O * sizeof(float), nullptr,  &result);
+    checkError(result);
+
+    cl::Buffer bufferFunctions (context, CL_MEM_READ_ONLY, ((params->NUM_FUNCTIONS)) * sizeof(unsigned int), nullptr,  &result);
+    checkError(result);
+    cl::Buffer bufferBest      (context, CL_MEM_READ_ONLY, sizeof(Chromosome), nullptr,  &result);
+    checkError(result);
+    cl::Buffer bufferNewBest   (context, CL_MEM_READ_WRITE, NUM_INDIV * sizeof(Chromosome), nullptr,  &result);
+    checkError(result);
+
+
+    ///ND-Ranges
+    std::string compileFlags;
+    std::string compileFlags_train;
+    std::string compileFlags_valid;
+
+    size_t numPoints = (size_t) training->M + validation->M; ///Max that is going to be executed
+    size_t numPointsTrain = (size_t) training->M;
+    size_t numPointsValid = (size_t) validation->M;
+
+    size_t maxLocalSize = cmdQueue.getInfo<CL_QUEUE_DEVICE>().getInfo<CL_DEVICE_MAX_WORK_GROUP_SIZE>();
+
+    size_t localSize_evol = 1;
+    size_t globalSize_evol = NUM_INDIV;
+
+    size_t localSize_aval, globalSize_aval;
+    size_t localSize_aval_train, globalSize_aval_train;
+    size_t localSize_aval_valid, globalSize_aval_valid;
+
+    setNDRanges(&globalSize_aval, &localSize_aval,       maxLocalSize, numPoints, cmdQueue.getInfo<CL_QUEUE_DEVICE>().getInfo<CL_DEVICE_TYPE>()); /// ok
+    setNDRanges(&globalSize_aval_train, &localSize_aval_train, maxLocalSize, numPointsTrain, cmdQueue.getInfo<CL_QUEUE_DEVICE>().getInfo<CL_DEVICE_TYPE>()); /// ok
+    setNDRanges(&globalSize_aval_valid, &localSize_aval_valid, maxLocalSize, numPointsValid, cmdQueue.getInfo<CL_QUEUE_DEVICE>().getInfo<CL_DEVICE_TYPE>()); /// ok
+
+    //setCompileFlags(&compileFlags, localSize_aval, localSize_aval_train,  localSize_aval_valid, numPoints, numPointsTrain, numPointsValid);
+    setCompileFlags(&compileFlags_train, localSize_aval_train, numPointsTrain, 0);
+    setCompileFlags(&compileFlags_valid, localSize_aval_valid, numPointsValid, 1);
+
+    ///Program build
+    std::ifstream sourceFileName("kernels\\kernel.cl");
+    std::string sourceFile(std::istreambuf_iterator<char>(sourceFileName),(std::istreambuf_iterator<char>()));
+
+    //std::string program_src = setProgramSource(training, validation, params, (int)localSize_aval,(int)localSize_aval_train,(int)localSize_aval_valid) + sourceFile;
+    std::string program_src_train      = setProgramSource(training  ,params, (int)localSize_aval_train) + sourceFile;
+    std::string program_src_validation = setProgramSource(validation, params,(int)localSize_aval_valid) + sourceFile;
+
+    //cl::Program program(context, program_src);
+    cl::Program program_train(context, program_src_train);
+    cl::Program program_valid(context, program_src_validation);
+
+    //result = program.build(devices, compileFlags.c_str());
+    result = program_train.build(devices, compileFlags_train.c_str());
+    result = program_valid.build(devices, compileFlags_valid.c_str());
+
+    if(result != CL_SUCCESS){
+        std::cerr << getErrorString(result) << std::endl;
+
+        std::string buildLog = program_train.getBuildInfo<CL_PROGRAM_BUILD_LOG>(devices[0]);
+        std::cerr << "Build log:" << std::endl
+                  << buildLog << std::endl;
     }
 
+
+    ///Kernels
+    cl::Kernel krnl_evolve(program_train, "evolve", &result);
+    checkError(result);
+
+    //cl::Kernel krnl_evaluate(program, "evaluate", &result);
+    //checkError(result);
+    cl::Kernel krnl_evaluate_train(program_train, "evaluate", &result);
+    checkError(result);
+    cl::Kernel krnl_evaluate_valid(program_valid, "evaluate", &result);
+    checkError(result);
+
+    //cl::Kernel krnl_cgp(program, "CGP", &result);
+    //checkError(result);
+
+    ///Write buffers that won't be read back to host
+    cmdQueue.enqueueWriteBuffer(bufferSeeds, CL_FALSE, 0, NUM_INDIV * sizeof(int), seeds);
+    cmdQueue.enqueueWriteBuffer(bufferDatasetTrain, CL_FALSE, 0, training->M * training->N * sizeof(float), transposeDatasetTrain);
+    cmdQueue.enqueueWriteBuffer(bufferOutputsTrain, CL_FALSE, 0, training->M * training->O * sizeof(float), transposeOutputsTrain);
+
+    cmdQueue.enqueueWriteBuffer(bufferDatasetValid, CL_FALSE, 0, validation->M * validation->N * sizeof(float), transposeDatasetValid);
+    cmdQueue.enqueueWriteBuffer(bufferOutputsValid, CL_FALSE, 0, validation->M * validation->O * sizeof(float), transposeOutputsValid);
+
+    cmdQueue.enqueueWriteBuffer(bufferFunctions, CL_FALSE, 0, (params->NUM_FUNCTIONS) * sizeof(unsigned int), params->functionSet);
+    std::cout << params->M * params->N * sizeof(float) << std::endl;
+    std::cout << params->M * params->O * sizeof(float) << std::endl;
+
+    cmdQueue.finish();
+
+    ///fixed params
+    krnl_evolve.setArg(2, bufferFunctions);
+    krnl_evolve.setArg(3, bufferSeeds);
+
+    krnl_evaluate_train.setArg(1, bufferDatasetTrain);
+    krnl_evaluate_train.setArg(2, bufferOutputsTrain);
+    krnl_evaluate_train.setArg(3, bufferFunctions);
+
+    krnl_evaluate_valid.setArg(1, bufferDatasetValid);
+    krnl_evaluate_valid.setArg(2, bufferOutputsValid);
+    krnl_evaluate_valid.setArg(3, bufferFunctions);
+
+
+    int iterations = 0;
+    while(stopCriteria(iterations)) {
+        printf("Generation %d:\n", iterations);
+
+        std::cout << "Active nodes: " << best.numActiveNodes << ", FitnessTrain: " << best.fitness << ", FitnessValidation: " << best.fitnessValidation  << std::endl;
+
+        //timeManager.getStartTime(Iteracao_T);
+
+        ///Evolution Kernel
+        cmdQueue.enqueueWriteBuffer(bufferBest, CL_FALSE, 0, sizeof(Chromosome), &best);
+        cmdQueue.enqueueWriteBuffer(bufferNewBest, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), newBest);
+
+        krnl_evolve.setArg(0, bufferBest);
+        krnl_evolve.setArg(1, bufferNewBest);
+        result = cmdQueue.enqueueNDRangeKernel(krnl_evolve, cl::NullRange, cl::NDRange(globalSize_evol), cl::NDRange(localSize_evol));
+        checkError(result);
+        cmdQueue.finish();
+
+
+        ///Evaluation Kernel - TRAINING
+        krnl_evaluate_train.setArg(0, bufferNewBest);
+        krnl_evaluate_train.setArg(4, (int)localSize_aval * sizeof(float), nullptr);
+        result = cmdQueue.enqueueNDRangeKernel(krnl_evaluate_train, cl::NullRange, cl::NDRange(globalSize_aval_train), cl::NDRange(localSize_aval_train));
+        checkError(result);
+
+        cmdQueue.finish();
+
+        ///Evaluation Kernel - VALIDATION
+        krnl_evaluate_valid.setArg(0, bufferNewBest);
+        krnl_evaluate_valid.setArg(4, (int)localSize_aval * sizeof(float), nullptr);
+        result = cmdQueue.enqueueNDRangeKernel(krnl_evaluate_valid, cl::NullRange, cl::NDRange(globalSize_aval_valid), cl::NDRange(localSize_aval_valid));
+        checkError(result);
+
+        cmdQueue.finish();
+
+        cmdQueue.enqueueReadBuffer(bufferNewBest, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), newBest);
+        cmdQueue.finish();
+
+
+        for(int k = 0; k < NUM_INDIV; k++){
+            if(newBest[k].fitness >= best_train.fitness){
+                best_train = newBest[k];
+            }
+
+            if(newBest[k].fitnessValidation >= best_valid.fitnessValidation){
+                best_valid = newBest[k];
+            }
+
+        }
+        best = best_train;
+        iterations++;
+
+        //timeManager.getEndTime(Iteracao_T);
+        //timeManager.getElapsedTime(Iteracao_T);
+    }
+    return best_valid;
 }
 
-void checkError(cl_int result){
-    if(result != CL_SUCCESS)
+Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, int *seeds){
+
+    Chromosome *current_pop;
+    current_pop = new Chromosome[NUM_INDIV];
+
+    Chromosome best;
+    Chromosome best_train;
+    Chromosome best_valid;
+    Chromosome newBest[NUM_INDIV];
+
+    initializePopulation(current_pop, params, &seeds[0]);
+
+    int bestTrain = evaluatePopulation(current_pop, training, 0);
+    int bestValid = evaluatePopulation(current_pop, validation, 1);
+
+    best_train = current_pop[bestTrain];
+    best_valid = current_pop[bestValid];
+    best = best_train;
+
+    ///transposicao de dados
+    float* transposeDatasetTrain;
+    float* transposeOutputsTrain;
+
+    float* transposeDatasetValid;
+    float* transposeOutputsValid;
+
+    transposeData(training, &transposeDatasetTrain, &transposeOutputsTrain);
+    transposeData(validation, &transposeDatasetValid, &transposeOutputsValid);
+
+    ///OpenCL
+    cl_int result;
+
+    ///Platforms and Devices
+    std::vector<cl::Platform> platforms;
+    std::vector<cl::Device> devices;
+
+    setupOpenCLOnePlatform(platforms,devices);
+    printOpenclDeviceInfo(platforms, devices);
+
+    ///Context
+    cl::Context context(devices, nullptr, nullptr, nullptr, &result);
+
+    ///Command Queue
+    cl_command_queue_properties commandQueueProperties = CL_QUEUE_PROFILING_ENABLE;
+    cl::CommandQueue cmdQueue(context, devices[GPU_DEVICE], commandQueueProperties, &result);
+
+    ///Buffers
+    cl::Buffer bufferSeeds     (context, CL_MEM_READ_WRITE, NUM_INDIV * sizeof(int), nullptr,  &result);
+    checkError(result);
+
+    cl::Buffer bufferDatasetTrain   (context, CL_MEM_READ_ONLY, training->M * training->N * sizeof(float), nullptr,  &result);
+    checkError(result);
+    cl::Buffer bufferOutputsTrain   (context, CL_MEM_READ_ONLY, training->M * training->O * sizeof(float), nullptr,  &result);
+    checkError(result);
+
+    cl::Buffer bufferDatasetValid   (context, CL_MEM_READ_ONLY, validation->M * validation->N * sizeof(float), nullptr,  &result);
+    checkError(result);
+    cl::Buffer bufferOutputsValid   (context, CL_MEM_READ_ONLY, validation->M * validation->O * sizeof(float), nullptr,  &result);
+    checkError(result);
+
+    cl::Buffer bufferFunctions (context, CL_MEM_READ_ONLY, ((params->NUM_FUNCTIONS)) * sizeof(unsigned int), nullptr,  &result);
+    checkError(result);
+    cl::Buffer bufferBest      (context, CL_MEM_READ_ONLY, sizeof(Chromosome), nullptr,  &result);
+    checkError(result);
+    cl::Buffer bufferNewBest   (context, CL_MEM_READ_WRITE, NUM_INDIV * sizeof(Chromosome), nullptr,  &result);
+    checkError(result);
+
+
+    ///ND-Ranges
+    std::string compileFlags;
+
+    size_t numPointsTrain = (size_t) training->M;
+    size_t numPointsValid = (size_t) validation->M;
+
+    size_t maxLocalSize = cmdQueue.getInfo<CL_QUEUE_DEVICE>().getInfo<CL_DEVICE_MAX_WORK_GROUP_SIZE>();
+
+    size_t localSize_evol = 1;
+    size_t globalSize_evol = NUM_INDIV;
+
+    size_t localSize_aval, globalSize_aval;
+
+    setNDRanges(&globalSize_aval, &localSize_aval, maxLocalSize, numPointsTrain, cmdQueue.getInfo<CL_QUEUE_DEVICE>().getInfo<CL_DEVICE_TYPE>()); /// ok
+
+    setCompileFlags(&compileFlags, localSize_aval, numPointsTrain, numPointsValid);
+
+
+    ///Program build
+    std::ifstream sourceFileName("kernels\\kernel_split_data.cl");
+    std::string sourceFile(std::istreambuf_iterator<char>(sourceFileName),(std::istreambuf_iterator<char>()));
+
+    std::string program_src = setProgramSource(training, validation, params, (int)localSize_aval) + sourceFile;
+
+
+    cl::Program program(context, program_src);
+
+    result = program.build(devices, compileFlags.c_str());
+
+    if(result != CL_SUCCESS){
         std::cerr << getErrorString(result) << std::endl;
+
+        std::string buildLog = program.getBuildInfo<CL_PROGRAM_BUILD_LOG>(devices[0]);
+        std::cerr << "Build log:" << std::endl
+                  << buildLog << std::endl;
+    }
+
+
+    ///Kernels
+    cl::Kernel krnl_evolve(program, "evolve", &result);
+    checkError(result);
+
+    cl::Kernel krnl_evaluate(program, "evaluate", &result);
+    checkError(result);
+
+    cl::Kernel krnl_cgp(program, "CGP", &result);
+    checkError(result);
+
+    ///Write buffers that won't be read back to host
+    cmdQueue.enqueueWriteBuffer(bufferSeeds, CL_FALSE, 0, NUM_INDIV * sizeof(int), seeds);
+    cmdQueue.enqueueWriteBuffer(bufferDatasetTrain, CL_FALSE, 0, training->M * training->N * sizeof(float), transposeDatasetTrain);
+    cmdQueue.enqueueWriteBuffer(bufferOutputsTrain, CL_FALSE, 0, training->M * training->O * sizeof(float), transposeOutputsTrain);
+
+    cmdQueue.enqueueWriteBuffer(bufferDatasetValid, CL_FALSE, 0, validation->M * validation->N * sizeof(float), transposeDatasetValid);
+    cmdQueue.enqueueWriteBuffer(bufferOutputsValid, CL_FALSE, 0, validation->M * validation->O * sizeof(float), transposeOutputsValid);
+
+    cmdQueue.enqueueWriteBuffer(bufferFunctions, CL_FALSE, 0, (params->NUM_FUNCTIONS) * sizeof(unsigned int), params->functionSet);
+    std::cout << params->M * params->N * sizeof(float) << std::endl;
+    std::cout << params->M * params->O * sizeof(float) << std::endl;
+
+    cmdQueue.finish();
+
+    ///fixed params
+
+    krnl_cgp.setArg(2, bufferDatasetTrain);
+    krnl_cgp.setArg(3, bufferOutputsTrain);
+    krnl_cgp.setArg(4, bufferDatasetValid);
+    krnl_cgp.setArg(5, bufferOutputsValid);
+    krnl_cgp.setArg(6, bufferFunctions);
+    krnl_cgp.setArg(7, bufferSeeds);
+
+    int iterations = 0;
+    while(stopCriteria(iterations)) {
+        printf("Generation %d:\n", iterations);
+
+        std::cout << "Active nodes: " << best.numActiveNodes << ", FitnessTrain: " << best.fitness << ", FitnessValidation: " << best.fitnessValidation  << std::endl;
+
+        //timeManager.getStartTime(Iteracao_T);
+
+        ///Evolution Kernel
+        cmdQueue.enqueueWriteBuffer(bufferBest, CL_FALSE, 0, sizeof(Chromosome), &best);
+        cmdQueue.enqueueWriteBuffer(bufferNewBest, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), newBest);
+
+        krnl_cgp.setArg(0, bufferNewBest);
+        krnl_cgp.setArg(1, bufferBest);
+        krnl_cgp.setArg(8, (int)localSize_aval * sizeof(float), nullptr);
+
+        result = cmdQueue.enqueueNDRangeKernel(krnl_cgp, cl::NullRange, cl::NDRange(globalSize_aval), cl::NDRange(localSize_aval));
+        checkError(result);
+        cmdQueue.finish();
+
+
+        cmdQueue.enqueueReadBuffer(bufferNewBest, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), newBest);
+        cmdQueue.finish();
+
+
+        for(int k = 0; k < NUM_INDIV; k++){
+            if(newBest[k].fitness >= best_train.fitness){
+                best_train = newBest[k];
+            }
+
+            if(newBest[k].fitnessValidation >= best_valid.fitnessValidation){
+                best_valid = newBest[k];
+            }
+
+        }
+        best = best_train;
+        iterations++;
+
+        //timeManager.getEndTime(Iteracao_T);
+        //timeManager.getElapsedTime(Iteracao_T);
+    }
+    return best_valid;
 }
 
-Chromosome PCGP(Chromosome best,  Dataset* data, Parameters* params, int *seeds){
+
+
+
+Chromosome PCGP(Dataset* data, Parameters* params, int *seeds){
+
+    Chromosome *current_pop;
+    current_pop = new Chromosome[NUM_INDIV];
+
+    Chromosome best;
+    Chromosome new_best;
+    Chromosome newBest[NUM_INDIV];
+
+    initializePopulation(current_pop, params, &seeds[0]);
+
+    best = current_pop[evaluatePopulation(current_pop, data, 0)];
+
     ///transposicao de dados
     float* transposeDataset;
     float* transposeOutputs;
 
     transposeData(data, &transposeDataset, &transposeOutputs);
-
-    Chromosome new_best;
-    Chromosome newBest[NUM_INDIV];
 
     ///OpenCL
     new_best = best;
@@ -649,15 +1161,15 @@ Chromosome PCGP(Chromosome best,  Dataset* data, Parameters* params, int *seeds)
     ///ND-Ranges
     std::string compileFlags;
 
-    size_t numPoints = (size_t) params->M;;
+    size_t numPoints = (size_t) data->M;;
     size_t maxLocalSize = cmdQueue.getInfo<CL_QUEUE_DEVICE>().getInfo<CL_DEVICE_MAX_WORK_GROUP_SIZE>();
 
     size_t localSize_evol = 1;
     size_t globalSize_evol = NUM_INDIV;
     size_t localSize_aval, globalSize_aval;
 
-    setNDRanges(&globalSize_aval, &localSize_aval, &compileFlags, maxLocalSize, numPoints, cmdQueue.getInfo<CL_QUEUE_DEVICE>().getInfo<CL_DEVICE_TYPE>()); /// ok
-
+    setNDRanges(&globalSize_aval, &localSize_aval, maxLocalSize, numPoints, cmdQueue.getInfo<CL_QUEUE_DEVICE>().getInfo<CL_DEVICE_TYPE>()); /// ok
+    setCompileFlags(&compileFlags, localSize_aval, numPoints, 0);
 
     ///Program build
     std::ifstream sourceFileName("kernels\\kernel.cl");
@@ -696,7 +1208,11 @@ Chromosome PCGP(Chromosome best,  Dataset* data, Parameters* params, int *seeds)
 
     cmdQueue.finish();
 
-
+    ///fixed kernel parameters
+    krnl_cgp.setArg(2, bufferDataset);
+    krnl_cgp.setArg(3, bufferOutputs);
+    krnl_cgp.setArg(4, bufferFunctions);
+    krnl_cgp.setArg(5, bufferSeeds);
 
     int iterations = 0;
     while(stopCriteria(iterations)) {
@@ -712,10 +1228,6 @@ Chromosome PCGP(Chromosome best,  Dataset* data, Parameters* params, int *seeds)
 
         krnl_cgp.setArg(0, bufferNewBest);
         krnl_cgp.setArg(1, bufferBest);
-        krnl_cgp.setArg(2, bufferDataset);
-        krnl_cgp.setArg(3, bufferOutputs);
-        krnl_cgp.setArg(4, bufferFunctions);
-        krnl_cgp.setArg(5, bufferSeeds);
         krnl_cgp.setArg(6, (int)localSize_aval * sizeof(float), nullptr);
 
         result = cmdQueue.enqueueNDRangeKernel(krnl_cgp, cl::NullRange, cl::NDRange(globalSize_aval), cl::NDRange(localSize_aval));

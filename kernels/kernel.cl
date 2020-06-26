@@ -27,7 +27,7 @@ typedef struct {
     float info[MAX_NODES * MAX_ARITY];
 } ExStack;
 
-void push(Stack* s, unsigned int info){
+void push(Stack* s  unsigned int info){
     (s->topIndex)++;
     if(s->topIndex < MAX_NODES * MAX_ARITY){
         s->info[s->topIndex] = info;
@@ -41,7 +41,7 @@ unsigned int pop(Stack* s){
     }
 }
 
-void pushEx(ExStack* s, float info) {
+void pushEx(ExStack* s  float info) {
     (s->topIndex)++;
     if(s->topIndex < MAX_NODES * MAX_ARITY){
         s->info[s->topIndex] = info;
@@ -57,13 +57,13 @@ float popEx(ExStack* s) {
 
 int rand2(int *seed){
     int s  = *seed;
-    s = ((unsigned int)(s * 16807) % 2147483647);//(int)(pown(2.0, 31)-1));
+    s = ((unsigned int)(s * 16807) % 2147483647);//(int)(pown(2.0  31)-1));
     *seed = s;
 
     return s;
 }
 
-unsigned int randomInput(unsigned int index, int *seed) {
+unsigned int randomInput(unsigned int index  int *seed) {
     return (rand2(seed) % (N + index));
 }
 
@@ -79,13 +79,14 @@ float randomConnectionWeight(int *seed) {
     return (((float) rand2(seed) / (float) (2147483647) ) * 2 * WEIGTH_RANGE) - WEIGTH_RANGE;
 }
 
-int randomInterval(int inf_bound, int sup_bound, int *seed) {
+int randomInterval(int inf_bound  int sup_bound  int *seed) {
     return rand2(seed) % (sup_bound - inf_bound + 1) + inf_bound;
 }
 
 float randomProb(int* seed){
-    return (float)rand2(seed) / 2147483647;//pown(2.0, 31);
+    return (float)rand2(seed) / 2147483647;//pown(2.0  31);
 }
+
 
 unsigned int getFunctionInputs(unsigned int function){
     switch (function) {
@@ -189,7 +190,7 @@ unsigned int getFunctionInputs(unsigned int function){
 }
 
 void activateNodes(__global Chromosome* c){
-    int i, j;
+    int i  j;
     int alreadyEvaluated[MAX_NODES] = {-1};
     for(i = 0; i < MAX_NODES; i++) {
         alreadyEvaluated[i] = -1;
@@ -202,14 +203,14 @@ void activateNodes(__global Chromosome* c){
 
     for(i = 0; i < MAX_OUTPUTS; i++) {
         unsigned int nodeIndex = c->output[i];
-        push(&s, nodeIndex);
+        push(&s  nodeIndex);
 
         while(s.topIndex != -1) {
             unsigned int node = pop(&s);
             if( c->nodes[node].active == 0) {
                 for (j = 0; j < MAX_ARITY; j++) {
                     if (c->nodes[node].inputs[j] >= N) {
-                        push(&s, c->nodes[node].inputs[j] - N);
+                        push(&s  c->nodes[node].inputs[j] - N);
                     }
                 }
                 c->nodes[node].active = 1;
@@ -220,9 +221,9 @@ void activateNodes(__global Chromosome* c){
     }
 }
 
-void mutateTopologyProbabilistic(__global Chromosome *c, __global unsigned int* functionSet, int *seed, int type) {
+void mutateTopologyProbabilistic(__global Chromosome *c  __global unsigned int* functionSet  int *seed  int type) {
 
-    int i, j;
+    int i  j;
     for(i = 0; i < MAX_NODES; i++){
 
         if(randomProb(seed) <= PROB_MUT) {
@@ -231,7 +232,7 @@ void mutateTopologyProbabilistic(__global Chromosome *c, __global unsigned int* 
         }
         for(j = 0; j < c->nodes[i].maxInputs; j++) {
             if(randomProb(seed) <= PROB_MUT) {
-                c->nodes[i].inputs[j] = randomInput(i, seed);
+                c->nodes[i].inputs[j] = randomInput(i  seed);
             }
             if(type == 0 && randomProb(seed) <= PROB_MUT){
                 c->nodes[i].inputsWeight[j] = randomConnectionWeight(seed);
@@ -242,9 +243,9 @@ void mutateTopologyProbabilistic(__global Chromosome *c, __global unsigned int* 
     activateNodes(c);
 }
 
-void mutateTopologyProbabilisticActive(__global Chromosome *c, __global unsigned int* functionSet, int *seed, int type) {
+void mutateTopologyProbabilisticActive(__global Chromosome *c  __global unsigned int* functionSet  int *seed  int type) {
 
-    int i, j;
+    int i  j;
     for(i = 0; i < MAX_NODES; i++){
         if(c->nodes[i].active == 1){
             if(randomProb(seed) <= PROB_MUT) {
@@ -253,7 +254,7 @@ void mutateTopologyProbabilisticActive(__global Chromosome *c, __global unsigned
             }
             for(j = 0; j < c->nodes[i].maxInputs; j++) {
                 if(randomProb(seed) <= PROB_MUT) {
-                    c->nodes[i].inputs[j] = randomInput(i, seed);
+                    c->nodes[i].inputs[j] = randomInput(i  seed);
                 }
                 if(type == 0 && randomProb(seed) <= PROB_MUT){
                     c->nodes[i].inputsWeight[j] = randomConnectionWeight(seed);
@@ -265,7 +266,7 @@ void mutateTopologyProbabilisticActive(__global Chromosome *c, __global unsigned
     activateNodes(c);
 }
 
-void mutateTopologyPoint(__global Chromosome *c, __global unsigned int* functionSet, int *seed) {
+void mutateTopologyPoint(__global Chromosome *c  __global unsigned int* functionSet  int *seed) {
     int mutationComplete = -1;
     unsigned int newIndex;
     unsigned int newInputIndex;
@@ -273,7 +274,7 @@ void mutateTopologyPoint(__global Chromosome *c, __global unsigned int* function
 
     int num_inputs = MAX_NODES * MAX_ARITY;
     while (mutationComplete == -1){
-        unsigned int nodeIndex = randomInterval(0, MAX_NODES + (num_inputs) + MAX_OUTPUTS, seed); //Select any node or output
+        unsigned int nodeIndex = randomInterval(0  MAX_NODES + (num_inputs) + MAX_OUTPUTS  seed); //Select any node or output
         if(nodeIndex < MAX_NODES) { // select function
             newIndex = nodeIndex;
             newValue = functionSet[randomFunction(seed)];
@@ -288,7 +289,7 @@ void mutateTopologyPoint(__global Chromosome *c, __global unsigned int* function
             newIndex = (unsigned int) ((nodeIndex - MAX_NODES) / MAX_ARITY);
             newInputIndex= (unsigned int) ((nodeIndex - MAX_NODES) % MAX_ARITY);
 
-            newValue = randomInput(newIndex, seed);
+            newValue = randomInput(newIndex  seed);
 
             if(newValue != c->nodes[newIndex].inputs[newInputIndex]){
                 c->nodes[newIndex].inputs[newInputIndex] = newValue;
@@ -311,9 +312,9 @@ void mutateTopologyPoint(__global Chromosome *c, __global unsigned int* function
     activateNodes(c);
 }
 
-float executeFunction(__global Chromosome* c, int node, ExStack* exStack){
+float executeFunction(__global Chromosome* c  int node  ExStack* exStack){
     int i;
-    float result, sum;
+    float result  sum;
     unsigned int inputs = c->nodes[node].maxInputs;
     switch (c->nodes[node].function){
         #ifdef ADD
@@ -370,20 +371,20 @@ float executeFunction(__global Chromosome* c, int node, ExStack* exStack){
         
         #ifdef SQ
         case SQ:
-            result = pow((float)popEx(exStack), (float)2);
+            result = pow((float)popEx(exStack)  (float)2);
         break;
         #endif
         
         #ifdef CUBE
         case CUBE:
-            result = pow((float)popEx(exStack), (float)3);
+            result = pow((float)popEx(exStack)  (float)3);
             break;
         #endif
         
         #ifdef POW
         case POW:
             result = popEx(exStack);
-            result = pow((float)popEx(exStack), (float)result);
+            result = pow((float)popEx(exStack)  (float)result);
             break;
         #endif
         
@@ -539,7 +540,7 @@ float executeFunction(__global Chromosome* c, int node, ExStack* exStack){
             for(i = 0; i < inputs; i++){
                 sum += (popEx(exStack) * c->nodes[node].inputsWeight[i]);
             }
-            result = exp(-(pow((float) (sum - 0), (float) 2)) / (2 * pow((float)1, (float)2)));
+            result = exp(-(pow((float) (sum - 0)  (float) 2)) / (2 * pow((float)1  (float)2)));
             break;
         #endif
         
@@ -586,21 +587,21 @@ float executeFunction(__global Chromosome* c, int node, ExStack* exStack){
     return result;
 }
 
-void evaluateCircuitParallel(__global Chromosome* c,
-                            __constant float* data, 
-                            __constant float* out, 
+void evaluateCircuitParallel(__global Chromosome* c 
+                            __constant float* data  
+                            __constant float* out  
                             __local float* error) {
     
     //c->fitness = 0.0;
 
-    int i, k, j = 0;
+    int i  k  j = 0;
     int erro = 0;
 
     int local_id = get_local_id(0);
     int group_id = get_group_id(0);
 
     error[local_id] = 0.0f;
-    float num, div;
+    float num  div;
 
     #ifndef NUM_POINTS_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
    /* When we know that NUM_POINTS is divisible by LOCAL_SIZE then we can avoid a
@@ -614,7 +615,7 @@ void evaluateCircuitParallel(__global Chromosome* c,
             if( k * LOCAL_SIZE + local_id < M){
     #endif
         //printf("c");
-        //int i, j;
+        //int i  j;
         float maxPredicted = -FLT_MAX;
         int predictedClass = 0;
         int correctClass = 0;
@@ -637,36 +638,36 @@ void evaluateCircuitParallel(__global Chromosome* c,
 
         for( i = 0; i < MAX_OUTPUTS; i++) {
             unsigned int nodeIndex = c->output[i];
-            push(&s, nodeIndex);
+            push(&s  nodeIndex);
 
             while(s.topIndex != -1) {
                 unsigned int node = pop(&s);
                 for (j = inputsEvaluatedAux[node]; j < c->nodes[node].maxInputs; j++) {
-                    if (c->nodes[node].inputs[j] >= N) { // se é um outro nó, empilha nó ou o resultado
+                    if (c->nodes[node].inputs[j] >= N) { // se é um outro nó  empilha nó ou o resultado
                         unsigned int refIndex = c->nodes[node].inputs[j] - N;
 
                         if(alreadyEvaluated[refIndex] > -FLT_MAX) {
                             inputsEvaluatedAux[node]++;
-                            pushEx(&exStack, alreadyEvaluated[refIndex]);
+                            pushEx(&exStack  alreadyEvaluated[refIndex]);
                         } else {
-                            push(&s, node); // reinsere o nó que nao terminou de ser avaliado
-                            push(&s, refIndex); //avalia o próximo
+                            push(&s  node); // reinsere o nó que nao terminou de ser avaliado
+                            push(&s  refIndex); //avalia o próximo
                             break;
                         }
                     } else {
                         inputsEvaluatedAux[node]++;
-                        pushEx(&exStack, data[k * LOCAL_SIZE + local_id + ( M * c->nodes[node].inputs[j])]);
+                        pushEx(&exStack  data[k * LOCAL_SIZE + local_id + ( M * c->nodes[node].inputs[j])]);
                     }
                 }
                 if(inputsEvaluatedAux[node] == c->nodes[node].maxInputs){
 
-                    alreadyEvaluated[node] = executeFunction(c, node, &exStack);
+                    alreadyEvaluated[node] = executeFunction(c  node  &exStack);
                     //alreadyEvaluated[node] = 1;
                 }
 
             }
             executionOut[i] = alreadyEvaluated[nodeIndex];//popEx(&exStack);
-            //printf("%f\n", maxPredicted);
+            //printf("%f\n"  maxPredicted);
             if(executionOut[i] > maxPredicted) {
                 maxPredicted = executionOut[i];
                 predictedClass = i;
@@ -697,7 +698,7 @@ void evaluateCircuitParallel(__global Chromosome* c,
     #ifndef LOCAL_SIZE_IS_NOT_POWER_OF_2
         if( local_id < i )
     #else
-        /* LOCAL_SIZE is not power of 2, so we need to perform an additional
+        /* LOCAL_SIZE is not power of 2  so we need to perform an additional
         * check to ensure that no access beyond PE's range will occur. */ 
         if( (local_id < i) && (local_id + i < LOCAL_SIZE) )
     #endif 
@@ -705,13 +706,18 @@ void evaluateCircuitParallel(__global Chromosome* c,
     }
         
     if(local_id == 0){
-        c->fitness = error[0] / M; 
+        #ifdef IS_VALIDATION
+            c->fitnessValidation = error[0] / M;
+        #else
+            c->fitness = error[0] / M;
+        #endif
     }
 }
 
-__kernel void evolve(__global Chromosome* best,
-                     __global Chromosome* newBest,
-                     __global unsigned int* functionSet,
+
+__kernel void evolve(__global Chromosome* best 
+                     __global Chromosome* newBest 
+                     __global unsigned int* functionSet 
                      __global int *seeds){
 
     int group_id = get_group_id(0);
@@ -722,7 +728,7 @@ __kernel void evolve(__global Chromosome* best,
 
     barrier(CLK_LOCAL_MEM_FENCE);
 
-    mutateTopologyProbabilistic(&newBest[group_id], functionSet, &seed,  0);
+    mutateTopologyProbabilistic(&newBest[group_id]  functionSet  &seed   0);
 
     barrier(CLK_LOCAL_MEM_FENCE);
 
@@ -730,40 +736,40 @@ __kernel void evolve(__global Chromosome* best,
     seeds[group_id] = seed;
 }
 
-__kernel void evaluate(__global Chromosome* pop,
-                       __constant float* dataset,
-                       __constant float* outputs,
-                       __global unsigned int* functionSet,
+__kernel void evaluate(__global Chromosome* pop 
+                       __constant float* dataset 
+                       __constant float* outputs 
+                       __global unsigned int* functionSet 
                        __local float* error){
 
     int group_id = get_group_id(0);
 
-    evaluateCircuitParallel(&pop[group_id], dataset, outputs, error);
+    evaluateCircuitParallel(&pop[group_id]  dataset  outputs  error);
 
 }
 
 
-__kernel void CGP(__global Chromosome* pop,
-                  __global Chromosome* best,
-                  __constant float* dataset,
-                  __constant float* outputs,
-                  __global unsigned int* functionSet,
-                  __global int *seeds,
+__kernel void CGP(__global Chromosome* pop 
+                  __global Chromosome* best 
+                  __constant float* dataset 
+                  __constant float* outputs 
+                  __global unsigned int* functionSet 
+                  __global int *seeds 
                   __local float* error){
 
-int group_id = get_group_id(0);
-int seed = seeds[group_id];
+    int group_id = get_group_id(0);
+    int seed = seeds[group_id];
 
-pop[group_id] = *best;
-barrier(CLK_LOCAL_MEM_FENCE);
+    pop[group_id] = *best;
+    barrier(CLK_LOCAL_MEM_FENCE);
 
-mutateTopologyProbabilistic(&pop[group_id], functionSet, &seed,  0);
+    mutateTopologyProbabilistic(&pop[group_id]  functionSet  &seed   0);
 
-barrier(CLK_LOCAL_MEM_FENCE);
+    barrier(CLK_LOCAL_MEM_FENCE);
 
-evaluateCircuitParallel(&pop[group_id], dataset, outputs, error);
+    evaluateCircuitParallel(&pop[group_id]  dataset  outputs  error);
 
-barrier(CLK_LOCAL_MEM_FENCE);
+    barrier(CLK_LOCAL_MEM_FENCE);
 
-seeds[group_id] = seed;
+    seeds[group_id] = seed;
 }

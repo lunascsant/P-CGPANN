@@ -149,6 +149,33 @@ GPTime.cpp.s:
 	$(MAKE) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/GPTime.cpp.s
 .PHONY : GPTime.cpp.s
 
+OCLConfig.obj: OCLConfig.cpp.obj
+
+.PHONY : OCLConfig.obj
+
+# target to build an object file
+OCLConfig.cpp.obj:
+	$(MAKE) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.obj
+.PHONY : OCLConfig.cpp.obj
+
+OCLConfig.i: OCLConfig.cpp.i
+
+.PHONY : OCLConfig.i
+
+# target to preprocess a source file
+OCLConfig.cpp.i:
+	$(MAKE) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.i
+.PHONY : OCLConfig.cpp.i
+
+OCLConfig.s: OCLConfig.cpp.s
+
+.PHONY : OCLConfig.s
+
+# target to generate assembly for a file
+OCLConfig.cpp.s:
+	$(MAKE) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.s
+.PHONY : OCLConfig.cpp.s
+
 cgp.obj: cgp.cpp.obj
 
 .PHONY : cgp.obj
@@ -269,6 +296,9 @@ help:
 	@echo ... GPTime.obj
 	@echo ... GPTime.i
 	@echo ... GPTime.s
+	@echo ... OCLConfig.obj
+	@echo ... OCLConfig.i
+	@echo ... OCLConfig.s
 	@echo ... cgp.obj
 	@echo ... cgp.i
 	@echo ... cgp.s

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/P-CGPDE.dir/GPTime.cpp.obj"
+  "CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.obj"
   "CMakeFiles/P-CGPDE.dir/cgp.cpp.obj"
   "CMakeFiles/P-CGPDE.dir/main.cpp.obj"
   "CMakeFiles/P-CGPDE.dir/stack.cpp.obj"

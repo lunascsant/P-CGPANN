@@ -32,7 +32,7 @@ typedef struct {
     float info[MAX_NODES * MAX_ARITY];
 } ExStack;
 
-void push(Stack* s, unsigned int info){
+void push(Stack* s  unsigned int info){
     (s->topIndex)++;
     if(s->topIndex < MAX_NODES * MAX_ARITY){
         s->info[s->topIndex] = info;
@@ -46,7 +46,7 @@ unsigned int pop(Stack* s){
     }
 }
 
-void pushEx(ExStack* s, float info) {
+void pushEx(ExStack* s  float info) {
     (s->topIndex)++;
     if(s->topIndex < MAX_NODES * MAX_ARITY){
         s->info[s->topIndex] = info;
@@ -62,13 +62,13 @@ float popEx(ExStack* s) {
 
 int rand2(int *seed){
     int s  = *seed;
-    s = ((unsigned int)(s * 16807) % 2147483647);//(int)(pown(2.0, 31)-1));
+    s = ((unsigned int)(s * 16807) % 2147483647);//(int)(pown(2.0  31)-1));
     *seed = s;
 
     return s;
 }
 
-unsigned int randomInput(unsigned int index, int *seed) {
+unsigned int randomInput(unsigned int index  int *seed) {
     return (rand2(seed) % (N + index));
 }
 
@@ -84,12 +84,12 @@ float randomConnectionWeight(int *seed) {
     return (((float) rand2(seed) / (float) (2147483647) ) * 2 * WEIGTH_RANGE) - WEIGTH_RANGE;
 }
 
-int randomInterval(int inf_bound, int sup_bound, int *seed) {
+int randomInterval(int inf_bound  int sup_bound  int *seed) {
     return rand2(seed) % (sup_bound - inf_bound + 1) + inf_bound;
 }
 
 float randomProb(int* seed){
-    return (float)rand2(seed) / 2147483647;//pown(2.0, 31);
+    return (float)rand2(seed) / 2147483647;//pown(2.0  31);
 }
 
 unsigned int getFunctionInputs(unsigned int function){

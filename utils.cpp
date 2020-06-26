@@ -339,26 +339,18 @@ void readDataset(Parameters* params, float*** dataset, float*** outputs, char* f
     params->weightRange = 5;
 }
 
-void printDataset(Parameters *params, float **dataset, float **outputs){
+
+void printDataset(Dataset* data){
     unsigned int i, j;
 
-    for(j = 0; j < params->N; j++) {
-        std::cout << params->labels[j] << " ";
-    }
-    std::cout << "| ";
-    for(; j < params->O + params->N; j++) {
-        std::cout <<  params->labels[j] << " ";
-    }
-    std::cout << std::endl;
-
-
-    for(i = 0; i < params->M; i++){
-        for(j = 0; j < params->N; j++) {
-            std::cout << dataset[i][j] << " ";
+    for(i = 0; i < data->M; i++){
+        std::cout << i << " - ";
+        for(j = 0; j < data->N; j++) {
+            std::cout << data->data[i][j] << " ";
         }
         std::cout << "| ";
-        for(j = 0; j < params->O; j++) {
-            std::cout << outputs[i][j] << " ";
+        for(j = 0; j < data->O; j++) {
+            std::cout << data->output[i][j] << " ";
         }
         std::cout << std::endl;
     }
@@ -493,10 +485,57 @@ std::string setProgramSource(Dataset* data, Parameters* p, int localSize){
             "#define NUM_GENERATIONS    "+ ToString( NUM_GENERATIONS ) + "\n" +
             "#define CONST_PI    "+ ToString( CONST_PI ) + "\n" +
             "#define LOCAL_SIZE " + ToString( localSize ) + "\n";
-    return program_src;
-}//96468
 
-void setNDRanges(size_t* globalSize, size_t* localSize, std::string* compileFlags, size_t maxLocalSize, size_t numPoints, cl_device_type deviceType){
+    return program_src;
+}
+
+std::string setProgramSource(Dataset* train, Dataset* valid,  Parameters* p, int localSize){
+    std::string program_src =
+            "#define SEED "  + ToString( SEED ) + "\n" +
+            "#define N   " + ToString( p->N ) + "\n" +
+            "#define O   " + ToString( p->O ) + "\n" +
+            "#define M   " + ToString( train->M ) + "\n" +
+            "#define M_VAlIDATION   " + ToString( valid->M ) + "\n" +
+            "#define WEIGTH_RANGE    " + ToString(p->weightRange) + "\n" +
+            "#define NUM_FUNCTIONS    " + ToString(p->NUM_FUNCTIONS) + "\n" +
+            "#define SIG    " + ToString(SIG) + "\n" +
+            "#define MAX_NODES     " + ToString( MAX_NODES ) + "\n" +
+            "#define MAX_OUTPUTS  " + ToString( MAX_OUTPUTS ) + "\n" +
+            "#define NUM_INDIV   " + ToString( NUM_INDIV ) + "\n" +
+            "#define MAX_ARITY "    + ToString( MAX_ARITY ) + "\n" +
+            "#define PROB_CROSS  "+ ToString( PROB_CROSS ) + "\n" +
+            "#define PROB_MUT    "+ ToString( PROB_MUT ) + "\n" +
+            "#define NUM_GENERATIONS    "+ ToString( NUM_GENERATIONS ) + "\n" +
+            "#define CONST_PI    "+ ToString( CONST_PI ) + "\n" +
+            "#define LOCAL_SIZE " + ToString( localSize ) + "\n";
+    return program_src;
+}
+
+void printOpenclDeviceInfo(std::vector<cl::Platform> platforms, std::vector<cl::Device> devices){
+
+    std::cout << "Available Devices for Platform " << platforms[GPU_PLATFORM].getInfo<CL_PLATFORM_NAME>()<< ":\n";
+
+    for(int i = 0; i < devices.size(); ++i) {
+        std::cout << "[" << i << "]" << devices[i].getInfo<CL_DEVICE_NAME>() << std::endl;
+        std::cout << "\tType:   " << devices[i].getInfo<CL_DEVICE_TYPE>() << std::endl;
+        std::cout << "\tOpenCL: " << devices[i].getInfo<CL_DEVICE_OPENCL_C_VERSION>() << std::endl;
+        std::cout << "\tMax Comp Un: " << devices[i].getInfo<CL_DEVICE_MAX_COMPUTE_UNITS>() << std::endl;
+        std::cout << "\tMax WrkGr Sz: " << devices[i].getInfo<CL_DEVICE_MAX_WORK_GROUP_SIZE>() << std::endl;
+        std::cout << "\tFp config: " << devices[i].getInfo<CL_DEVICE_SINGLE_FP_CONFIG>() << std::endl;
+        std::cout << "\tMax Mem Alloc: " << devices[i].getInfo<CL_DEVICE_MAX_MEM_ALLOC_SIZE>() << std::endl;
+        std::cout << "\tLocal Mem Size: " << devices[i].getInfo<CL_DEVICE_LOCAL_MEM_SIZE>() << std::endl;
+        std::cout << "\tMax Const Size: " << devices[i].getInfo<CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE>() << std::endl;
+
+    }
+
+}
+
+void checkError(cl_int result){
+    if(result != CL_SUCCESS)
+        std::cerr << getErrorString(result) << std::endl;
+}
+
+void setNDRanges(size_t* globalSize, size_t* localSize, size_t maxLocalSize, size_t numPoints, cl_device_type deviceType){
     //FOR GPU
     /*if(deviceType == CL_DEVICE_TYPE_GPU){*/
     std::cout << "Definindo NDRanges para avaliacao ...";
@@ -509,43 +548,89 @@ void setNDRanges(size_t* globalSize, size_t* localSize, std::string* compileFlag
     // One individual per work-group
     *globalSize = (*localSize) * NUM_INDIV;
 
-    //if( MAX_NOS > (*localSize) )
-    //    (*compileFlags) += " -D PROGRAM_TREE_DOES_NOT_FIT_IN_LOCAL_SIZE";
 
-    if( !IsPowerOf2( *localSize ) )
-        (*compileFlags) += " -D LOCAL_SIZE_IS_NOT_POWER_OF_2";
-
-    if( numPoints % (*localSize) != 0 )
-        (*compileFlags) += " -D NUM_POINTS_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE";
-
-    ///FOR CPU
-    /*  } else if (deviceType == CL_DEVICE_TYPE_CPU){
+    /* FOR CPU
+      } else if (deviceType == CL_DEVICE_TYPE_CPU){
           std::cout << "Definindo NDRanges para avaliacao em CPU..." << std::endl;
           *localSize = 1;//m_num_points;
           *globalSize = NUM_INDIV;
-      }*/
-
-    (*compileFlags) += " -D LOCAL_SIZE_ROUNDED_UP_TO_POWER_OF_2="
-                       + ToString( NextPowerOf2(*localSize) );
+      }
+    */
 
     std::cout << "...fim." << std::endl;
 
     std::cout << "Global Size = " << globalSize << std::endl << "Local size = " << localSize << std::endl << std::endl;
 }
 
+void setCompileFlags(std::string* compileFlags,
+                     size_t localSize,
+                     size_t numPoints,
+                     int validation){
+
+    std::cout << "Setting compile flags..." << std::endl;
+
+    //if( MAX_NOS > (*localSize) )
+    //    (*compileFlags) += " -D PROGRAM_TREE_DOES_NOT_FIT_IN_LOCAL_SIZE";
+
+    if( !IsPowerOf2( localSize ) )
+        (*compileFlags) += " -D LOCAL_SIZE_IS_NOT_POWER_OF_2";
+
+    if( numPoints % (localSize) != 0 )
+        (*compileFlags) += " -D NUM_POINTS_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE";
+
+    if( validation == 1 )
+        (*compileFlags) += " -D IS_VALIDATION";
+
+
+    (*compileFlags) += " -D LOCAL_SIZE_ROUNDED_UP_TO_POWER_OF_2="
+                       + ToString( NextPowerOf2(localSize) );
+
+
+}
+
+void setCompileFlags(std::string* compileFlags,
+        size_t localSize,
+        size_t numPoints,
+        size_t numPoints_valid
+        ){
+
+    std::cout << "Setting compile flags..." << std::endl;
+
+    //if( MAX_NOS > (*localSize) )
+    //    (*compileFlags) += " -D PROGRAM_TREE_DOES_NOT_FIT_IN_LOCAL_SIZE";
+
+    if( !IsPowerOf2( localSize ) )
+        (*compileFlags) += " -D LOCAL_SIZE_IS_NOT_POWER_OF_2";
+
+
+    if( numPoints % (localSize) != 0 )
+        (*compileFlags) += " -D NUM_POINTS_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE";
+
+    if( numPoints_valid % (localSize) != 0 )
+        (*compileFlags) += " -D NUM_POINTS_VALIDATION_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE";
+
+
+    (*compileFlags) += " -D LOCAL_SIZE_ROUNDED_UP_TO_POWER_OF_2="
+                       + ToString( NextPowerOf2(localSize) );
+
+}
+
 
 Dataset* generateFolds(Dataset* data){
     int i, j, k, l, count;
     Dataset* folds;
-    folds = new Dataset[10];
+    folds = new Dataset[KFOLDS];
 
-    for (i = 0; i < 10; i++)
+    int foldsSize = (int)data->M/KFOLDS;
+    int excessData= data->M % KFOLDS;
+
+    for (i = 0; i < KFOLDS; i++)
     {
         folds[i].N = data->N;
         folds[i].O = data->O;
-        folds[i].M = 0;
+        folds[i].M = foldsSize;
     }
-
+/*
     i = 0;
     count = 0;
     while(1) // set the size of each fold
@@ -559,7 +644,7 @@ Dataset* generateFolds(Dataset* data){
         else
             i++;
     }
-
+*/
     // allocate memory for the folds data
     for(i = 0; i < 10; i++) // for each fold
     {
@@ -584,7 +669,7 @@ Dataset* generateFolds(Dataset* data){
     k = 0;
     for(i = 0; i < data->O; i++) // for each class
     {
-        for(j = 0; j < data->M; j++) // for each instance
+        for(j = 0; j < data->M - excessData; j++) // for each instance
         {
             if(data->output[j][i] == 1.0)
             {
@@ -610,80 +695,106 @@ Dataset* generateFolds(Dataset* data){
     return folds;
 }
 
-Dataset* generateFolds(float** dataset, float** outputs, Parameters* p){
-    int i, j, k, l, count;
-    Dataset* folds;
-    folds = new Dataset[10];
+void shuffleData(Dataset* data, int* seed) {
+    //printDataset(data);
+    std::cout <<"Shuffling dataset..."<< std::endl;
+    for(int i = 0; i < data->M; i++){
+        int index1 = randomInterval(0, data->M-1, seed);
+        int index2 = randomInterval(0, data->M-1, seed);
 
-    for (i = 0; i < 10; i++)
-    {
-        folds[i].N = p->N;
-        folds[i].O = p->O;
-        folds[i].M = 0;
+        float* aux1_input = (float*) malloc(data->N * sizeof(float));
+        float* aux1_output = (float*) malloc(data->O * sizeof(float));
+
+        std::memcpy(aux1_input, data->data[index1], data->N * sizeof(float));
+        std::memcpy(aux1_output, data->output[index1], data->O * sizeof(float));
+
+        std::memcpy(data->data[index1], data->data[index2], data->N * sizeof(float));
+        std::memcpy(data->output[index1], data->output[index2], data->O * sizeof(float));
+
+        std::memcpy(data->data[index2], aux1_input, data->N * sizeof(float));
+        std::memcpy(data->output[index2], aux1_output, data->O * sizeof(float));
+
+        free(aux1_input);
+        free(aux1_output);
+
+    }
+    //printDataset(data);
+}
+
+Dataset* getSelectedDataset(Dataset* folds, int* indexes, int index_start, int index_end){
+    Dataset* newDataset = new Dataset;
+
+    newDataset->N = folds[0].N;
+    newDataset->O = folds[0].O;
+    newDataset->M = 0;
+
+    for(int i = index_start; i <= index_end; i++){
+        newDataset->M += folds[indexes[i]].M;
     }
 
-    i = 0;
-    count = 0;
-    while(1) // set the size of each fold
-    {
-        folds[i].M = folds[i].M + 1;
-        count++;
-        if(count == p->M)
-            break;
-        if(i == 9)
-            i = 0;
-        else
-            i++;
+    (newDataset->data) = new float* [newDataset->M];
+    (newDataset->output) = new float* [newDataset->M];
+
+    for(int i = 0; i < newDataset->M; i++){
+        (newDataset->data)[i] = new float [newDataset->N];
+        (newDataset->output)[i] = new float[newDataset->O];
     }
 
-    // allocate memory for the folds data
-    for(i = 0; i < 10; i++) // for each fold
-    {
-        folds[i].data = new float* [folds[i].M];
-        folds[i].output = new float* [folds[i].M];
+    int l = 0;
+    for(int i = index_start; i <= index_end; i++){
+        int foldIndex = indexes[i];
+        for(int j = 0; j < folds[foldIndex].M; j++){
 
-        for(j = 0; j < folds[i].M; j++) // for each instance of each fold
-        {
-            folds[i].data[j] = new float [folds[i].N];
-            folds[i].output[j] = new float [folds[i].O];
-        }
-    }
-
-
-    // keep the same class proportion in each fold
-    int counter[10];// k = 10 // = (int*)malloc(10*sizeof(int));
-    for(i = 0; i < 10; i++)
-    {
-        counter[i] = 0;
-    }
-
-    k = 0;
-    for(i = 0; i < p->O; i++) // for each class
-    {
-        for(j = 0; j < p->M; j++) // for each instance
-        {
-            if(outputs[j][i] == 1.0)
-            {
-                for (l = 0; l < p->N; l++)
-                {
-                    folds[k].data[counter[k]][l] = dataset[j][l];
-                }
-
-                for (l = 0; l < p->O; l++)
-                {
-                    folds[k].output[counter[k]][l] = outputs[j][l];
-                }
-
-                counter[k] = counter[k] + 1;
-                if(k == 9)
-                    k = 0;
-                else
-                    k++;
+            for(int k = 0; k < newDataset->N; k++){
+                newDataset->data[l][k] = folds[foldIndex].data[j][k];
             }
+
+            for(int k = 0; k < newDataset->O; k++){
+                newDataset->output[l][k] = folds[foldIndex].output[j][k];
+            }
+            l++;
+        }
+    }
+    return newDataset;
+
+}
+
+/* Fisher–Yates shuffle */
+void shuffleArray(std::vector<int>* array, int size, int* seed){
+    for(int i = size-1; i > 0; i--){
+        int index = randomInterval(0, i, seed);
+
+        std::swap((*array)[i], (*array)[index]);
+        /*
+        int temp = array[i];
+        array[i] = array[index];
+        array[index] = temp;
+         */
+    }
+}
+
+void getIndexes(int* indices, int k, int excludeIndex, int* seed){
+
+    std::vector<int> indexes;
+    for(int i = 0; i < k; i++){
+        if(i != excludeIndex){
+            indexes.emplace_back(i);
         }
     }
 
-    return folds;
+    for(int i = 0; i < indexes.size(); i++){
+        std::cout << indexes[i] << " ";
+    }
+    std::cout << std::endl;
+
+    shuffleArray(&indexes, indexes.size(), seed);
+
+    for(int i = 0; i < indexes.size(); i++){
+        indices[i] = indexes[i];
+        std::cout << indices[i]  << " ";
+    }
+    std::cout << std::endl;
+
 }
 
 void transposeData(Dataset* data, float** transposeDataset, float** transposeOutputs){
