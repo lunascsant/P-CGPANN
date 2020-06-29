@@ -64,14 +64,57 @@
 #endif // PROB_MUT
 
 
-#define NUM_GENERATIONS 50000
+#define NUM_GENERATIONS 10000
 #define NUM_EVALUATIONS 2.40e+007
 
 
 #define GPU 1
 #define PARALLEL 1
-
 #define KFOLDS 10
+
+#define TRAIN_FOLDS 7
+#define VALID_FOLDS 2
+#define TEST_FOLDS 1
+
+/**
+ * How the Chromosome is build:
+ *
+ *           _____________________________________________________________
+ * nodes:   |( F0 | I0 | I1 )|( F2 | I0' | I1' )| ... |( Fn | I0n | I1n )|
+ *          -------------------------------------------------------------
+ *          Fn -> Value coded with a function from the functions set
+ *          I0, I1 -> Inputs of the function. Can be wither a Variable from the dataset or any node with a smaller index
+ *          -> This way, each node occupies 3 spaces in the array.
+ *
+ *           _____________________
+ * outputs: | O0 | O1 | ... | On |
+ *          ---------------------
+ *          On -> index of the node from which the output is taken
+ *
+ * fitness: sum of
+ */
+
+typedef struct
+{
+    //unsigned int inputsEvaluated;
+    unsigned int function;
+    unsigned int maxInputs;
+    unsigned int inputs[MAX_ARITY];
+    double inputsWeight[MAX_ARITY];
+    //double output;
+    int active;
+
+} Node;
+
+typedef struct
+{
+    Node nodes[MAX_NODES];
+    unsigned int output[MAX_OUTPUTS];
+    unsigned int numActiveNodes;
+    double fitness;
+    double fitnessValidation;
+} Chromosome;
+
 
 typedef struct
 {
@@ -97,8 +140,8 @@ typedef struct
     /** Number of entries */
     unsigned int M;
 
-    float** data;
-    float** output;
+    double** data;
+    double** output;
 } Dataset;
 
 #endif //PCGP_CONSTANTS_H

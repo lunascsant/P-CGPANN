@@ -214,7 +214,7 @@ typedef struct _cl_buffer_region {
 #define CL_DEVICE_PREFERRED_VECTOR_WIDTH_SHORT      0x1007
 #define CL_DEVICE_PREFERRED_VECTOR_WIDTH_INT        0x1008
 #define CL_DEVICE_PREFERRED_VECTOR_WIDTH_LONG       0x1009
-#define CL_DEVICE_PREFERRED_VECTOR_WIDTH_FLOAT      0x100A
+#define CL_DEVICE_PREFERRED_VECTOR_WIDTH_double      0x100A
 #define CL_DEVICE_PREFERRED_VECTOR_WIDTH_DOUBLE     0x100B
 #define CL_DEVICE_MAX_CLOCK_FREQUENCY               0x100C
 #define CL_DEVICE_ADDRESS_BITS                      0x100D
@@ -262,7 +262,7 @@ typedef struct _cl_buffer_region {
 #define CL_DEVICE_NATIVE_VECTOR_WIDTH_SHORT         0x1037
 #define CL_DEVICE_NATIVE_VECTOR_WIDTH_INT           0x1038
 #define CL_DEVICE_NATIVE_VECTOR_WIDTH_LONG          0x1039
-#define CL_DEVICE_NATIVE_VECTOR_WIDTH_FLOAT         0x103A
+#define CL_DEVICE_NATIVE_VECTOR_WIDTH_double         0x103A
 #define CL_DEVICE_NATIVE_VECTOR_WIDTH_DOUBLE        0x103B
 #define CL_DEVICE_NATIVE_VECTOR_WIDTH_HALF          0x103C
 #define CL_DEVICE_OPENCL_C_VERSION                  0x103D
@@ -288,7 +288,7 @@ typedef struct _cl_buffer_region {
 #define CL_FP_ROUND_TO_ZERO                         (1 << 3)
 #define CL_FP_ROUND_TO_INF                          (1 << 4)
 #define CL_FP_FMA                                   (1 << 5)
-#define CL_FP_SOFT_FLOAT                            (1 << 6)
+#define CL_FP_SOFT_double                            (1 << 6)
 #define CL_FP_CORRECTLY_ROUNDED_DIVIDE_SQRT         (1 << 7)
 
 /* cl_device_mem_cache_type */
@@ -385,8 +385,8 @@ typedef struct _cl_buffer_region {
 #define CL_UNSIGNED_INT8                            0x10DA
 #define CL_UNSIGNED_INT16                           0x10DB
 #define CL_UNSIGNED_INT32                           0x10DC
-#define CL_HALF_FLOAT                               0x10DD
-#define CL_FLOAT                                    0x10DE
+#define CL_HALF_double                               0x10DD
+#define CL_double                                    0x10DE
 #define CL_UNORM_INT24                              0x10DF
 
 /* cl_mem_object_type */

@@ -25,16 +25,16 @@ unsigned int randomFunction(Parameters *p, int *seed) {
     return (rand2(seed) % (p->NUM_FUNCTIONS));
 }
 
-float randomConnectionWeight(Parameters *p, int *seed) {
-    return (((float) rand2(seed) / (float) (2147483647) ) * 2 * p->weightRange) - p->weightRange;
+double randomConnectionWeight(Parameters *p, int *seed) {
+    return (((double) rand2(seed) / (double) (2147483647) ) * 2 * p->weightRange) - p->weightRange;
 }
 
 int randomInterval(int inf_bound, int sup_bound, int *seed) {
     return rand2(seed) % (sup_bound - inf_bound + 1) + inf_bound;
 }
 
-float randomProb(int* seed){
-    return (float)rand2(seed) / 2147483647;//pown(2.0, 31);
+double randomProb(int* seed){
+    return (double)rand2(seed) / 2147483647;//pown(2.0, 31);
 }
 
 unsigned int getFunctionInputs(unsigned int function){
@@ -93,6 +93,11 @@ unsigned NextPowerOf2( unsigned n ){
 
     return n;
 }
+
+std::string ToString( double t ){
+    std::stringstream ss; ss << std::setprecision(32) << t; return ss.str();
+}
+
 void readDataset(Parameters* params, Dataset* fulldata, char* filename){
 
     std::fstream arq;
@@ -134,14 +139,14 @@ void readDataset(Parameters* params, Dataset* fulldata, char* filename){
     fulldata->N = N;
     fulldata->O = O;
 
-    (fulldata->data) = new float* [(M)];
+    (fulldata->data) = new double* [(M)];
     for(i = 0; i < (M); i++){
-        (fulldata->data)[i] = new float [(N)];
+        (fulldata->data)[i] = new double [(N)];
     }
 
-    (fulldata->output) = new float* [(M)];
+    (fulldata->output) = new double* [(M)];
     for(i = 0; i < (M); i++) {
-        (fulldata->output)[i] = new float[(O)];
+        (fulldata->output)[i] = new double[(O)];
     }
 
     (params->labels) = new char* [(N + O)];
@@ -218,128 +223,6 @@ void readDataset(Parameters* params, Dataset* fulldata, char* filename){
     params->weightRange = 5;
 }
 
-void readDataset(Parameters* params, float*** dataset, float*** outputs, char* filename){
-
-    std::fstream arq;
-
-    int i, j, k;
-    int readLabel = 0;
-    int readOps;
-    int info;
-
-    printf("Lendo Dados Arquivo... %s\n",filename);
-    arq.open(filename, std::fstream::in);
-
-    /** Read the dataset size (M) and number of inputs (N) */
-    std::string value;
-/*
-    arq >> value;
-    if(value == ".p")
-        arq >> (params->M);
-    arq >> value;
-    if(value == ".i")
-        arq >> (params->N);
-    arq >> value;
-    if(value == ".o")
-        arq >> (params->O);
-*/
-    arq >> (params->N);
-    arq >> (params->O);
-    arq >> (params->M);
-
-
-    //arq >> (readLabel);
-
-    unsigned int M = params->M;
-    unsigned int N = params->N;
-    unsigned int O = params->O;
-    //std::cout << M << " " << N << " " << O << std::endl;
-
-    (*dataset) = new float* [(M)];
-    for(i = 0; i < (M); i++){
-        (*dataset)[i] = new float [(N)];
-    }
-
-    (*outputs) = new float* [(M)];
-    for(i = 0; i < (M); i++) {
-        (*outputs)[i] = new float[(O)];
-    }
-
-    (params->labels) = new char* [(N + O)];
-    for(i = 0; i < (N + O); i++){
-        (params->labels)[i] = new char [10];
-    }
-
-    //LABELS
-    for(i = 0; i < params->N; i++){
-        std::stringstream ss;
-        std::string str;
-        ss << "i";
-        ss << i;
-        ss >> str;
-        strcpy((params->labels)[i], (str.c_str()));
-    }
-    for(; i < params->N+params->O; i++){
-        std::stringstream ss;
-        std::string str;
-        ss << "o";
-        ss << i;
-        ss >> str;
-        strcpy((params->labels)[i], (str.c_str()));
-    }
-
-
-    /** Read the dataset */
-    std::string line;
-    for(i = 0; i < (M); i++){
-        //arq >> line;
-        //std::cout << line <<std::endl;
-        for(j = 0; j < (N); j++){
-            arq >> (*dataset)[i][j] ;//= line[j] - '0';
-            //std::cout << (*dataset)[i][j] << " ";
-        }
-        for(k = 0; j<(N+O); j++, k++){
-            arq >> (*outputs)[i][k];// = line[j] - '0';
-            //std::cout << (*outputs)[i][k] << " ";
-        }
-        //std::cout << std::endl;
-    }
-
-    arq >> readOps;
-
-
-    params->NUM_FUNCTIONS = 1;
-    (params->functionSet) = new unsigned int [params->NUM_FUNCTIONS];
-
-    i = 0;
-
-    (params->functionSet)[i++] = SIG;
-    //(params->maxFunctionInputs)[i++] = 2;
-/*
-    (params->functionSet)[i++] = OR;
-    //(params->maxFunctionInputs)[i++] = 2;
-
-    (params->functionSet)[i++] = XOR;
-    //(params->maxFunctionInputs)[i++] = 2;
-
-    (params->functionSet)[i++] = NAND;
-    //(params->maxFunctionInputs)[i++] = 2;
-
-    (params->functionSet)[i++] = NOR;
-    //(params->maxFunctionInputs)[i++] = 2;
-
-    (params->functionSet)[i++] = XNOR;
-    //(params->maxFunctionInputs)[i++] = 2;
-
-    (params->functionSet)[i++] = NOT;
-    //(params->maxFunctionInputs)[i++] = 1;
-*/
-
-
-    params->weightRange = 5;
-}
-
-
 void printDataset(Dataset* data){
     unsigned int i, j;
 
@@ -356,268 +239,18 @@ void printDataset(Dataset* data){
     }
 }
 
+
+
 bool stopCriteria(unsigned int it){
     return it < NUM_GENERATIONS;
     //return (it * NUM_INDIV < NUM_EVALUATIONS);
 }
 
 
-const char *getErrorString(cl_int error) {
-    switch(error){
-        // run-time and JIT compiler errors
-        case 0: return "CL_SUCCESS";
-        case -1: return "CL_DEVICE_NOT_FOUND";
-        case -2: return "CL_DEVICE_NOT_AVAILABLE";
-        case -3: return "CL_COMPILER_NOT_AVAILABLE";
-        case -4: return "CL_MEM_OBJECT_ALLOCATION_FAILURE";
-        case -5: return "CL_OUT_OF_RESOURCES";
-        case -6: return "CL_OUT_OF_HOST_MEMORY";
-        case -7: return "CL_PROFILING_INFO_NOT_AVAILABLE";
-        case -8: return "CL_MEM_COPY_OVERLAP";
-        case -9: return "CL_IMAGE_FORMAT_MISMATCH";
-        case -10: return "CL_IMAGE_FORMAT_NOT_SUPPORTED";
-        case -11: return "CL_BUILD_PROGRAM_FAILURE";
-        case -12: return "CL_MAP_FAILURE";
-        case -13: return "CL_MISALIGNED_SUB_BUFFER_OFFSET";
-        case -14: return "CL_EXEC_STATUS_ERROR_FOR_EVENTS_IN_WAIT_LIST";
-        case -15: return "CL_COMPILE_PROGRAM_FAILURE";
-        case -16: return "CL_LINKER_NOT_AVAILABLE";
-        case -17: return "CL_LINK_PROGRAM_FAILURE";
-        case -18: return "CL_DEVICE_PARTITION_FAILED";
-        case -19: return "CL_KERNEL_ARG_INFO_NOT_AVAILABLE";
 
-            // compile-time errors
-        case -30: return "CL_INVALID_VALUE";
-        case -31: return "CL_INVALID_DEVICE_TYPE";
-        case -32: return "CL_INVALID_PLATFORM";
-        case -33: return "CL_INVALID_DEVICE";
-        case -34: return "CL_INVALID_CONTEXT";
-        case -35: return "CL_INVALID_QUEUE_PROPERTIES";
-        case -36: return "CL_INVALID_COMMAND_QUEUE";
-        case -37: return "CL_INVALID_HOST_PTR";
-        case -38: return "CL_INVALID_MEM_OBJECT";
-        case -39: return "CL_INVALID_IMAGE_FORMAT_DESCRIPTOR";
-        case -40: return "CL_INVALID_IMAGE_SIZE";
-        case -41: return "CL_INVALID_SAMPLER";
-        case -42: return "CL_INVALID_BINARY";
-        case -43: return "CL_INVALID_BUILD_OPTIONS";
-        case -44: return "CL_INVALID_PROGRAM";
-        case -45: return "CL_INVALID_PROGRAM_EXECUTABLE";
-        case -46: return "CL_INVALID_KERNEL_NAME";
-        case -47: return "CL_INVALID_KERNEL_DEFINITION";
-        case -48: return "CL_INVALID_KERNEL";
-        case -49: return "CL_INVALID_ARG_INDEX";
-        case -50: return "CL_INVALID_ARG_VALUE";
-        case -51: return "CL_INVALID_ARG_SIZE";
-        case -52: return "CL_INVALID_KERNEL_ARGS";
-        case -53: return "CL_INVALID_WORK_DIMENSION";
-        case -54: return "CL_INVALID_WORK_GROUP_SIZE";
-        case -55: return "CL_INVALID_WORK_ITEM_SIZE";
-        case -56: return "CL_INVALID_GLOBAL_OFFSET";
-        case -57: return "CL_INVALID_EVENT_WAIT_LIST";
-        case -58: return "CL_INVALID_EVENT";
-        case -59: return "CL_INVALID_OPERATION";
-        case -60: return "CL_INVALID_GL_OBJECT";
-        case -61: return "CL_INVALID_BUFFER_SIZE";
-        case -62: return "CL_INVALID_MIP_LEVEL";
-        case -63: return "CL_INVALID_GLOBAL_WORK_SIZE";
-        case -64: return "CL_INVALID_PROPERTY";
-        case -65: return "CL_INVALID_IMAGE_DESCRIPTOR";
-        case -66: return "CL_INVALID_COMPILER_OPTIONS";
-        case -67: return "CL_INVALID_LINKER_OPTIONS";
-        case -68: return "CL_INVALID_DEVICE_PARTITION_COUNT";
-
-            // extension errors
-        case -1000: return "CL_INVALID_GL_SHAREGROUP_REFERENCE_KHR";
-        case -1001: return "CL_PLATFORM_NOT_FOUND_KHR";
-        case -1002: return "CL_INVALID_D3D10_DEVICE_KHR";
-        case -1003: return "CL_INVALID_D3D10_RESOURCE_KHR";
-        case -1004: return "CL_D3D10_RESOURCE_ALREADY_ACQUIRED_KHR";
-        case -1005: return "CL_D3D10_RESOURCE_NOT_ACQUIRED_KHR";
-        default: return "Unknown OpenCL error";
-    }
-}
-
-
-/**OpenCL**/
-void setupOpenCLOnePlatform(std::vector<cl::Platform> &platforms, std::vector<cl::Device> &devices){
-    ///Encontrando as plataformas disponiveis
-    int result = cl::Platform::get(&platforms);
-    if(result != CL_SUCCESS){
-        std::cout << "Erro ao encontrar plataformas." << std::endl;
-        exit(1);
-    }
-    std::cout << "Available platforms: " << std::endl;
-
-    for(int i = 0; i < platforms.size(); i++){
-        std::cout << "\t" << platforms[i].getInfo<CL_PLATFORM_NAME>() << std::endl;
-    }
-
-    ///Encontrando os dispositivos disponiveis na plataforma.
-#if GPU
-    platforms[GPU_PLATFORM].getDevices(CL_DEVICE_TYPE_ALL, &devices);
-#else
-    platforms[CPU_PLATFORM].getDevices(CL_DEVICE_TYPE_ALL, &devices);
-#endif
-
-    std::cout << std::endl;
-}
-
-std::string ToString( float t ){
-    std::stringstream ss; ss << std::setprecision(32) << t; return ss.str();
-}
-
-std::string setProgramSource(Dataset* data, Parameters* p, int localSize){
-    std::string program_src =
-            "#define SEED "  + ToString( SEED ) + "\n" +
-            "#define N   " + ToString( data->N ) + "\n" +
-            "#define O   " + ToString( data->O ) + "\n" +
-            "#define M   " + ToString( data->M ) + "\n" +
-            "#define WEIGTH_RANGE    " + ToString(p->weightRange) + "\n" +
-            "#define NUM_FUNCTIONS    " + ToString(p->NUM_FUNCTIONS) + "\n" +
-            "#define SIG    " + ToString(SIG) + "\n" +
-            "#define MAX_NODES     " + ToString( MAX_NODES ) + "\n" +
-            "#define MAX_OUTPUTS  " + ToString( MAX_OUTPUTS ) + "\n" +
-            "#define NUM_INDIV   " + ToString( NUM_INDIV ) + "\n" +
-            "#define MAX_ARITY "    + ToString( MAX_ARITY ) + "\n" +
-            "#define PROB_CROSS  "+ ToString( PROB_CROSS ) + "\n" +
-            "#define PROB_MUT    "+ ToString( PROB_MUT ) + "\n" +
-            "#define NUM_GENERATIONS    "+ ToString( NUM_GENERATIONS ) + "\n" +
-            "#define CONST_PI    "+ ToString( CONST_PI ) + "\n" +
-            "#define LOCAL_SIZE " + ToString( localSize ) + "\n";
-
-    return program_src;
-}
-
-std::string setProgramSource(Dataset* train, Dataset* valid,  Parameters* p, int localSize){
-    std::string program_src =
-            "#define SEED "  + ToString( SEED ) + "\n" +
-            "#define N   " + ToString( p->N ) + "\n" +
-            "#define O   " + ToString( p->O ) + "\n" +
-            "#define M   " + ToString( train->M ) + "\n" +
-            "#define M_VAlIDATION   " + ToString( valid->M ) + "\n" +
-            "#define WEIGTH_RANGE    " + ToString(p->weightRange) + "\n" +
-            "#define NUM_FUNCTIONS    " + ToString(p->NUM_FUNCTIONS) + "\n" +
-            "#define SIG    " + ToString(SIG) + "\n" +
-            "#define MAX_NODES     " + ToString( MAX_NODES ) + "\n" +
-            "#define MAX_OUTPUTS  " + ToString( MAX_OUTPUTS ) + "\n" +
-            "#define NUM_INDIV   " + ToString( NUM_INDIV ) + "\n" +
-            "#define MAX_ARITY "    + ToString( MAX_ARITY ) + "\n" +
-            "#define PROB_CROSS  "+ ToString( PROB_CROSS ) + "\n" +
-            "#define PROB_MUT    "+ ToString( PROB_MUT ) + "\n" +
-            "#define NUM_GENERATIONS    "+ ToString( NUM_GENERATIONS ) + "\n" +
-            "#define CONST_PI    "+ ToString( CONST_PI ) + "\n" +
-            "#define LOCAL_SIZE " + ToString( localSize ) + "\n";
-    return program_src;
-}
-
-void printOpenclDeviceInfo(std::vector<cl::Platform> platforms, std::vector<cl::Device> devices){
-
-    std::cout << "Available Devices for Platform " << platforms[GPU_PLATFORM].getInfo<CL_PLATFORM_NAME>()<< ":\n";
-
-    for(int i = 0; i < devices.size(); ++i) {
-        std::cout << "[" << i << "]" << devices[i].getInfo<CL_DEVICE_NAME>() << std::endl;
-        std::cout << "\tType:   " << devices[i].getInfo<CL_DEVICE_TYPE>() << std::endl;
-        std::cout << "\tOpenCL: " << devices[i].getInfo<CL_DEVICE_OPENCL_C_VERSION>() << std::endl;
-        std::cout << "\tMax Comp Un: " << devices[i].getInfo<CL_DEVICE_MAX_COMPUTE_UNITS>() << std::endl;
-        std::cout << "\tMax WrkGr Sz: " << devices[i].getInfo<CL_DEVICE_MAX_WORK_GROUP_SIZE>() << std::endl;
-        std::cout << "\tFp config: " << devices[i].getInfo<CL_DEVICE_SINGLE_FP_CONFIG>() << std::endl;
-        std::cout << "\tMax Mem Alloc: " << devices[i].getInfo<CL_DEVICE_MAX_MEM_ALLOC_SIZE>() << std::endl;
-        std::cout << "\tLocal Mem Size: " << devices[i].getInfo<CL_DEVICE_LOCAL_MEM_SIZE>() << std::endl;
-        std::cout << "\tMax Const Size: " << devices[i].getInfo<CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE>() << std::endl;
-
-    }
-
-}
-
-void checkError(cl_int result){
-    if(result != CL_SUCCESS)
-        std::cerr << getErrorString(result) << std::endl;
-}
-
-void setNDRanges(size_t* globalSize, size_t* localSize, size_t maxLocalSize, size_t numPoints, cl_device_type deviceType){
-    //FOR GPU
-    /*if(deviceType == CL_DEVICE_TYPE_GPU){*/
-    std::cout << "Definindo NDRanges para avaliacao ...";
-    if(numPoints < maxLocalSize){
-        *localSize = numPoints;
-    }else{
-        *localSize = maxLocalSize;
-    }
-
-    // One individual per work-group
-    *globalSize = (*localSize) * NUM_INDIV;
-
-
-    /* FOR CPU
-      } else if (deviceType == CL_DEVICE_TYPE_CPU){
-          std::cout << "Definindo NDRanges para avaliacao em CPU..." << std::endl;
-          *localSize = 1;//m_num_points;
-          *globalSize = NUM_INDIV;
-      }
-    */
-
-    std::cout << "...fim." << std::endl;
-
-    std::cout << "Global Size = " << globalSize << std::endl << "Local size = " << localSize << std::endl << std::endl;
-}
-
-void setCompileFlags(std::string* compileFlags,
-                     size_t localSize,
-                     size_t numPoints,
-                     int validation){
-
-    std::cout << "Setting compile flags..." << std::endl;
-
-    //if( MAX_NOS > (*localSize) )
-    //    (*compileFlags) += " -D PROGRAM_TREE_DOES_NOT_FIT_IN_LOCAL_SIZE";
-
-    if( !IsPowerOf2( localSize ) )
-        (*compileFlags) += " -D LOCAL_SIZE_IS_NOT_POWER_OF_2";
-
-    if( numPoints % (localSize) != 0 )
-        (*compileFlags) += " -D NUM_POINTS_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE";
-
-    if( validation == 1 )
-        (*compileFlags) += " -D IS_VALIDATION";
-
-
-    (*compileFlags) += " -D LOCAL_SIZE_ROUNDED_UP_TO_POWER_OF_2="
-                       + ToString( NextPowerOf2(localSize) );
-
-
-}
-
-void setCompileFlags(std::string* compileFlags,
-        size_t localSize,
-        size_t numPoints,
-        size_t numPoints_valid
-        ){
-
-    std::cout << "Setting compile flags..." << std::endl;
-
-    //if( MAX_NOS > (*localSize) )
-    //    (*compileFlags) += " -D PROGRAM_TREE_DOES_NOT_FIT_IN_LOCAL_SIZE";
-
-    if( !IsPowerOf2( localSize ) )
-        (*compileFlags) += " -D LOCAL_SIZE_IS_NOT_POWER_OF_2";
-
-
-    if( numPoints % (localSize) != 0 )
-        (*compileFlags) += " -D NUM_POINTS_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE";
-
-    if( numPoints_valid % (localSize) != 0 )
-        (*compileFlags) += " -D NUM_POINTS_VALIDATION_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE";
-
-
-    (*compileFlags) += " -D LOCAL_SIZE_ROUNDED_UP_TO_POWER_OF_2="
-                       + ToString( NextPowerOf2(localSize) );
-
-}
-
-
-Dataset* generateFolds(Dataset* data){
+Dataset* generateFolds(Dataset* data, int* indexesData, int* indexesDataInFolds){
     int i, j, k, l, count;
+
     Dataset* folds;
     folds = new Dataset[KFOLDS];
 
@@ -648,13 +281,13 @@ Dataset* generateFolds(Dataset* data){
     // allocate memory for the folds data
     for(i = 0; i < 10; i++) // for each fold
     {
-        folds[i].data = new float* [folds[i].M];
-        folds[i].output = new float* [folds[i].M];
+        folds[i].data = new double* [folds[i].M];
+        folds[i].output = new double* [folds[i].M];
 
         for(j = 0; j < folds[i].M; j++) // for each instance of each fold
         {
-            folds[i].data[j] = new float [folds[i].N];
-            folds[i].output[j] = new float [folds[i].O];
+            folds[i].data[j] = new double [folds[i].N];
+            folds[i].output[j] = new double [folds[i].O];
         }
     }
 
@@ -683,6 +316,8 @@ Dataset* generateFolds(Dataset* data){
                     folds[k].output[counter[k]][l] = data->output[j][l];
                 }
 
+                indexesDataInFolds[counter[k] + k * foldsSize] = indexesData[j];
+
                 counter[k] = counter[k] + 1;
                 if(k == 9)
                     k = 0;
@@ -695,24 +330,38 @@ Dataset* generateFolds(Dataset* data){
     return folds;
 }
 
-void shuffleData(Dataset* data, int* seed) {
+
+void calculateDatasetsSize(Dataset* data, int* trainSize, int* validationSize, int* testSize){
+    /// Garantir que todos os folds tem o mesmo tamanho para que os tamanhos dos kernels/buffers não precisem mudar
+
+    int foldsSize  = (int)data->M/KFOLDS;
+
+    *trainSize = TRAIN_FOLDS * foldsSize;
+    *validationSize = VALID_FOLDS * foldsSize;
+    *testSize = TEST_FOLDS * foldsSize;
+}
+
+void shuffleData(Dataset* data, int* indexesData, int* seed) {
     //printDataset(data);
     std::cout <<"Shuffling dataset..."<< std::endl;
     for(int i = 0; i < data->M; i++){
         int index1 = randomInterval(0, data->M-1, seed);
         int index2 = randomInterval(0, data->M-1, seed);
 
-        float* aux1_input = (float*) malloc(data->N * sizeof(float));
-        float* aux1_output = (float*) malloc(data->O * sizeof(float));
+        indexesData[index1] = index2;
+        indexesData[index2] = index1;
 
-        std::memcpy(aux1_input, data->data[index1], data->N * sizeof(float));
-        std::memcpy(aux1_output, data->output[index1], data->O * sizeof(float));
+        double* aux1_input = (double*) malloc(data->N * sizeof(double));
+        double* aux1_output = (double*) malloc(data->O * sizeof(double));
 
-        std::memcpy(data->data[index1], data->data[index2], data->N * sizeof(float));
-        std::memcpy(data->output[index1], data->output[index2], data->O * sizeof(float));
+        std::memcpy(aux1_input, data->data[index1], data->N * sizeof(double));
+        std::memcpy(aux1_output, data->output[index1], data->O * sizeof(double));
 
-        std::memcpy(data->data[index2], aux1_input, data->N * sizeof(float));
-        std::memcpy(data->output[index2], aux1_output, data->O * sizeof(float));
+        std::memcpy(data->data[index1], data->data[index2], data->N * sizeof(double));
+        std::memcpy(data->output[index1], data->output[index2], data->O * sizeof(double));
+
+        std::memcpy(data->data[index2], aux1_input, data->N * sizeof(double));
+        std::memcpy(data->output[index2], aux1_output, data->O * sizeof(double));
 
         free(aux1_input);
         free(aux1_output);
@@ -732,12 +381,12 @@ Dataset* getSelectedDataset(Dataset* folds, int* indexes, int index_start, int i
         newDataset->M += folds[indexes[i]].M;
     }
 
-    (newDataset->data) = new float* [newDataset->M];
-    (newDataset->output) = new float* [newDataset->M];
+    (newDataset->data) = new double* [newDataset->M];
+    (newDataset->output) = new double* [newDataset->M];
 
     for(int i = 0; i < newDataset->M; i++){
-        (newDataset->data)[i] = new float [newDataset->N];
-        (newDataset->output)[i] = new float[newDataset->O];
+        (newDataset->data)[i] = new double [newDataset->N];
+        (newDataset->output)[i] = new double[newDataset->O];
     }
 
     int l = 0;
@@ -794,29 +443,5 @@ void getIndexes(int* indices, int k, int excludeIndex, int* seed){
         std::cout << indices[i]  << " ";
     }
     std::cout << std::endl;
-
-}
-
-void transposeData(Dataset* data, float** transposeDataset, float** transposeOutputs){
-
-    (*transposeDataset) = new float [data->M * data->N];
-    //transposição necessária para otimizar a execução no opencl com acessos sequenciais à memória
-    unsigned int pos = 0;
-    std::cout << "Transpondo dados..." << std::endl;
-    for(int j = 0; j < data->N; ++j ){
-        for(int i = 0; i < data->M; ++i ){
-            (*transposeDataset)[pos++] = data->data[i][j];
-        }
-    }
-
-    (*transposeOutputs) = new float [data->M * data->O];
-    //transposição necessária para otimizar a execução no opencl com acessos sequenciais à memória
-    pos = 0;
-    std::cout << "Transpondo outputs..." << std::endl;
-    for(int j = 0; j < data->O; ++j ){
-        for(int i = 0; i < data->M; ++i ){
-            (*transposeOutputs)[pos++] = data->output[i][j];
-        }
-    }
 
 }

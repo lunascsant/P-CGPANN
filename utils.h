@@ -45,42 +45,24 @@
 
 unsigned int randomFunction(Parameters *p, int *seed);
 unsigned int randomInput(Parameters *p, unsigned int index, int *seed);
-float randomConnectionWeight(Parameters *p, int *seed);
+double randomConnectionWeight(Parameters *p, int *seed);
 int randomInterval(int inf_bound, int sup_bound, int *seed);
-float randomProb(int *seed);
+double randomProb(int *seed);
 unsigned int randomOutputIndex(int* seed);
 unsigned int getFunctionInputs(unsigned int function);
 
-
-void readDataset(Parameters* params, float*** dataset, float*** outputs, char* filename);
 void readDataset(Parameters* params, Dataset* fulldata, char* filename);
 void printDataset(Dataset *data);
 
 
-Dataset* generateFolds(Dataset* data);
-void shuffleData(Dataset* data, int* seed);
+Dataset* generateFolds(Dataset* data, int* indexesData, int* indexesDataInFolds);
+void calculateDatasetsSize(Dataset* data, int* trainSize, int* validationSize, int* testSize);
+void shuffleData(Dataset* data, int* indexesData, int* seed);
 void getIndexes(int* indices, int k, int excludeIndex, int* seed);
 Dataset* getSelectedDataset(Dataset* folds, int* indexes, int index_start, int index_end);
-void transposeData(Dataset* data, float** transposeDataset, float** transposeOutputs);
 
 
-void setupOpenCLOnePlatform(std::vector<cl::Platform> &platforms, std::vector<cl::Device> &devices);
-
-std::string setProgramSource(Dataset* data, Parameters* p, int localSize);
-std::string setProgramSource(Dataset* train, Dataset* valid, Parameters* p, int localSize);
-
-void setNDRanges(size_t* globalSize, size_t* localSize, size_t maxLocalSize, size_t numPoints, cl_device_type deviceType);
-
-void setCompileFlags(std::string* compileFlags, size_t localSize, size_t numPoints, int validation);
-void setCompileFlags(std::string* compileFlags,size_t localSize, size_t numPoints, size_t numPoints_valid);
-
-
-void printOpenclDeviceInfo(std::vector<cl::Platform> platforms, std::vector<cl::Device> devices);
-const char *getErrorString(cl_int error);
-void checkError(cl_int result);
-
-
-std::string ToString( float t );
+std::string ToString( double t );
 bool IsPowerOf2( int n );
 unsigned NextPowerOf2( unsigned n );
 bool stopCriteria(unsigned int it);

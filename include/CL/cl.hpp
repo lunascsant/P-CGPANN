@@ -1292,7 +1292,7 @@ inline cl_int getInfoHelper(Func f, cl_uint name, T* param, int, typename T::cl_
     F(cl_device_info, CL_DEVICE_PREFERRED_VECTOR_WIDTH_SHORT, cl_uint) \
     F(cl_device_info, CL_DEVICE_PREFERRED_VECTOR_WIDTH_INT, cl_uint) \
     F(cl_device_info, CL_DEVICE_PREFERRED_VECTOR_WIDTH_LONG, cl_uint) \
-    F(cl_device_info, CL_DEVICE_PREFERRED_VECTOR_WIDTH_FLOAT, cl_uint) \
+    F(cl_device_info, CL_DEVICE_PREFERRED_VECTOR_WIDTH_double, cl_uint) \
     F(cl_device_info, CL_DEVICE_PREFERRED_VECTOR_WIDTH_DOUBLE, cl_uint) \
     F(cl_device_info, CL_DEVICE_MAX_CLOCK_FREQUENCY, cl_uint) \
     F(cl_device_info, CL_DEVICE_ADDRESS_BITS, cl_uint) \
@@ -1404,7 +1404,7 @@ inline cl_int getInfoHelper(Func f, cl_uint name, T* param, int, typename T::cl_
     F(cl_device_info, CL_DEVICE_NATIVE_VECTOR_WIDTH_SHORT, cl_uint) \
     F(cl_device_info, CL_DEVICE_NATIVE_VECTOR_WIDTH_INT, cl_uint) \
     F(cl_device_info, CL_DEVICE_NATIVE_VECTOR_WIDTH_LONG, cl_uint) \
-    F(cl_device_info, CL_DEVICE_NATIVE_VECTOR_WIDTH_FLOAT, cl_uint) \
+    F(cl_device_info, CL_DEVICE_NATIVE_VECTOR_WIDTH_double, cl_uint) \
     F(cl_device_info, CL_DEVICE_NATIVE_VECTOR_WIDTH_DOUBLE, cl_uint) \
     F(cl_device_info, CL_DEVICE_NATIVE_VECTOR_WIDTH_HALF, cl_uint) \
     F(cl_device_info, CL_DEVICE_DOUBLE_FP_CONFIG, cl_device_fp_config) \
@@ -5963,13 +5963,13 @@ public:
     /**
      * Enqueue a command to fill an image object with a specified color.
      * \param fillColor is the color to use to fill the image.
-     *     This is a four component RGBA floating-point color value if
+     *     This is a four component RGBA doubleing-point color value if
      *     the image channel data type is not an unnormalized signed or
      *     unsigned data type.
      */
     cl_int enqueueFillImage(
         const Image& image,
-        cl_float4 fillColor,
+        cl_double4 fillColor,
         const size_t<3>& origin,
         const size_t<3>& region,
         const VECTOR_CLASS<Event>* events = NULL,

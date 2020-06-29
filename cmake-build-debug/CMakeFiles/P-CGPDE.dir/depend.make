@@ -27,6 +27,8 @@ CMakeFiles/P-CGPDE.dir/cgp.cpp.obj: C:/Program\ Files/NVIDIA\ GPU\ Computing\ To
 CMakeFiles/P-CGPDE.dir/cgp.cpp.obj: C:/Program\ Files/NVIDIA\ GPU\ Computing\ Toolkit/CUDA/v11.0/include/CL/cl_gl_ext.h
 CMakeFiles/P-CGPDE.dir/cgp.cpp.obj: C:/Program\ Files/NVIDIA\ GPU\ Computing\ Toolkit/CUDA/v11.0/include/CL/cl_platform.h
 CMakeFiles/P-CGPDE.dir/cgp.cpp.obj: C:/Program\ Files/NVIDIA\ GPU\ Computing\ Toolkit/CUDA/v11.0/include/CL/opencl.h
+CMakeFiles/P-CGPDE.dir/cgp.cpp.obj: ../GPTime.h
+CMakeFiles/P-CGPDE.dir/cgp.cpp.obj: ../OCLConfig.h
 CMakeFiles/P-CGPDE.dir/cgp.cpp.obj: ../cgp.cpp
 CMakeFiles/P-CGPDE.dir/cgp.cpp.obj: ../cgp.h
 CMakeFiles/P-CGPDE.dir/cgp.cpp.obj: ../constants.h
@@ -43,6 +45,7 @@ CMakeFiles/P-CGPDE.dir/main.cpp.obj: C:/Program\ Files/NVIDIA\ GPU\ Computing\ T
 CMakeFiles/P-CGPDE.dir/main.cpp.obj: C:/Program\ Files/NVIDIA\ GPU\ Computing\ Toolkit/CUDA/v11.0/include/CL/cl_platform.h
 CMakeFiles/P-CGPDE.dir/main.cpp.obj: C:/Program\ Files/NVIDIA\ GPU\ Computing\ Toolkit/CUDA/v11.0/include/CL/opencl.h
 CMakeFiles/P-CGPDE.dir/main.cpp.obj: ../GPTime.h
+CMakeFiles/P-CGPDE.dir/main.cpp.obj: ../OCLConfig.h
 CMakeFiles/P-CGPDE.dir/main.cpp.obj: ../cgp.h
 CMakeFiles/P-CGPDE.dir/main.cpp.obj: ../constants.h
 CMakeFiles/P-CGPDE.dir/main.cpp.obj: ../main.cpp

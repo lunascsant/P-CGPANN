@@ -1,13 +1,16 @@
-#ifndef M_VAlIDATION
-    #define M_VAlIDATION 1
+#ifdef cl_khr_fp64
+#pragma OPENCL EXTENSION cl_khr_fp64 : enable
+#elif defined(cl_amd_fp64)
+#pragma OPENCL EXTENSION cl_amd_fp64 : enable
+#else
+#error "Double precision floating point not supported by OpenCL implementation."
 #endif
-
 typedef struct
 {
     unsigned int function;
     unsigned int maxInputs;
     unsigned int inputs[MAX_ARITY];
-    float inputsWeight[MAX_ARITY];
+    double inputsWeight[MAX_ARITY];
     int active;
 
 } Node;
@@ -17,8 +20,8 @@ typedef struct
     Node nodes[MAX_NODES];
     unsigned int output[MAX_OUTPUTS];
     unsigned int numActiveNodes;
-    float fitness;
-    float fitnessValidation;
+    double fitness;
+    double fitnessValidation;
 } Chromosome;
 
 typedef struct {
@@ -28,7 +31,7 @@ typedef struct {
 
 typedef struct {
     int topIndex;
-    float info[MAX_NODES * MAX_ARITY];
+    double info[MAX_NODES * MAX_ARITY];
 } ExStack;
 
 void push(Stack* s, unsigned int info){
@@ -45,14 +48,14 @@ unsigned int pop(Stack* s){
     }
 }
 
-void pushEx(ExStack* s, float info) {
+void pushEx(ExStack* s, double info) {
     (s->topIndex)++;
     if(s->topIndex < MAX_NODES * MAX_ARITY){
         s->info[s->topIndex] = info;
     }
 }
 
-float popEx(ExStack* s) {
+double popEx(ExStack* s) {
     if(s->topIndex >= 0){
         (s->topIndex)--;
         return s->info[(s->topIndex) + 1];
@@ -79,16 +82,16 @@ unsigned int randomFunction(int *seed) {
     return (rand2(seed) % (NUM_FUNCTIONS));
 }
 
-float randomConnectionWeight(int *seed) {
-    return (((float) rand2(seed) / (float) (2147483647) ) * 2 * WEIGTH_RANGE) - WEIGTH_RANGE;
+double randomConnectionWeight(int *seed) {
+    return (((double) rand2(seed) / (double) (2147483647) ) * 2 * WEIGTH_RANGE) - WEIGTH_RANGE;
 }
 
 int randomInterval(int inf_bound, int sup_bound, int *seed) {
     return rand2(seed) % (sup_bound - inf_bound + 1) + inf_bound;
 }
 
-float randomProb(int* seed){
-    return (float)rand2(seed) / 2147483647;//pown(2.0, 31);
+double randomProb(int* seed){
+    return (double)rand2(seed) / 2147483647;//pown(2.0, 31);
 }
 
 
@@ -194,39 +197,36 @@ unsigned int getFunctionInputs(unsigned int function){
 }
 
 void activateNodes(__global Chromosome* c){
-    int local_id = get_local_id(0);
-    if(local_id == 0){
-        int i, j;
-        int alreadyEvaluated[MAX_NODES] = {-1};
-        for(i = 0; i < MAX_NODES; i++) {
-            alreadyEvaluated[i] = -1;
-            c->nodes[i].active = 0;
-        }
 
-        c->numActiveNodes = 0;
-        Stack s;
-        s.topIndex = -1;
+    int i, j;
+    int alreadyEvaluated[MAX_NODES] = {-1};
+    for(i = 0; i < MAX_NODES; i++) {
+        alreadyEvaluated[i] = -1;
+        c->nodes[i].active = 0;
+    }
 
-        for(i = 0; i < MAX_OUTPUTS; i++) {
-            unsigned int nodeIndex = c->output[i];
-            push(&s, nodeIndex);
+    c->numActiveNodes = 0;
+    Stack s;
+    s.topIndex = -1;
 
-            while(s.topIndex != -1) {
-                unsigned int node = pop(&s);
-                if( c->nodes[node].active == 0) {
-                    for (j = 0; j < MAX_ARITY; j++) {
-                        if (c->nodes[node].inputs[j] >= N) {
-                            push(&s, c->nodes[node].inputs[j] - N);
-                        }
+    for(i = 0; i < MAX_OUTPUTS; i++) {
+        unsigned int nodeIndex = c->output[i];
+        push(&s, nodeIndex);
+
+        while(s.topIndex != -1) {
+            unsigned int node = pop(&s);
+            if( c->nodes[node].active == 0) {
+                for (j = 0; j < MAX_ARITY; j++) {
+                    if (c->nodes[node].inputs[j] >= N) {
+                        push(&s, c->nodes[node].inputs[j] - N);
                     }
-                    c->nodes[node].active = 1;
-                    c->numActiveNodes++;
                 }
-
+                c->nodes[node].active = 1;
+                c->numActiveNodes++;
             }
+
         }
     }
-    
 }
 
 void mutateTopologyProbabilistic(__global Chromosome *c, __global unsigned int* functionSet, int *seed, int type) {
@@ -249,6 +249,8 @@ void mutateTopologyProbabilistic(__global Chromosome *c, __global unsigned int* 
     }
 
     activateNodes(c);
+    
+
 }
 
 void mutateTopologyProbabilisticActive(__global Chromosome *c, __global unsigned int* functionSet, int *seed, int type) {
@@ -320,9 +322,9 @@ void mutateTopologyPoint(__global Chromosome *c, __global unsigned int* function
     activateNodes(c);
 }
 
-float executeFunction(__global Chromosome* c, int node, ExStack* exStack){
+double executeFunction(__global Chromosome* c, int node, ExStack* exStack){
     int i;
-    float result, sum;
+    double result, sum;
     unsigned int inputs = c->nodes[node].maxInputs;
     switch (c->nodes[node].function){
         #ifdef ADD
@@ -379,20 +381,20 @@ float executeFunction(__global Chromosome* c, int node, ExStack* exStack){
         
         #ifdef SQ
         case SQ:
-            result = pow((float)popEx(exStack), (float)2);
+            result = pow((double)popEx(exStack), (double)2);
         break;
         #endif
         
         #ifdef CUBE
         case CUBE:
-            result = pow((float)popEx(exStack), (float)3);
+            result = pow((double)popEx(exStack), (double)3);
             break;
         #endif
         
         #ifdef POW
         case POW:
             result = popEx(exStack);
-            result = pow((float)popEx(exStack), (float)result);
+            result = pow((double)popEx(exStack), (double)result);
             break;
         #endif
         
@@ -537,7 +539,7 @@ float executeFunction(__global Chromosome* c, int node, ExStack* exStack){
             for(i = 0; i < inputs; i++){
                 sum += (popEx(exStack) * c->nodes[node].inputsWeight[i]);
             }
-            result = 1 / (1 + exp((-1) * sum));
+            result = 1.0f / (1 + exp(-sum));
             break;
         #endif
         
@@ -548,7 +550,7 @@ float executeFunction(__global Chromosome* c, int node, ExStack* exStack){
             for(i = 0; i < inputs; i++){
                 sum += (popEx(exStack) * c->nodes[node].inputsWeight[i]);
             }
-            result = exp(-(pow((float) (sum - 0), (float) 2)) / (2 * pow((float)1, (float)2)));
+            result = exp(-(pow((double) (sum - 0), (double) 2)) / (2 * pow((double)1, (double)2)));
             break;
         #endif
         
@@ -595,12 +597,13 @@ float executeFunction(__global Chromosome* c, int node, ExStack* exStack){
     return result;
 }
 
+
 void evaluateCircuitParallel(__global Chromosome* c,
-                            __constant float* data, 
-                            __constant float* out, 
-                            __local float* error) {
+                            __constant double* data, 
+                            __constant double* out, 
+                            __local double* error) {
     
-    //c->fitness = 0.0;
+    
 
     int i, k, j = 0;
     int erro = 0;
@@ -609,7 +612,7 @@ void evaluateCircuitParallel(__global Chromosome* c,
     int group_id = get_group_id(0);
 
     error[local_id] = 0.0f;
-    float num, div;
+    double num, div;
 
     #ifndef NUM_POINTS_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
    /* When we know that NUM_POINTS is divisible by LOCAL_SIZE then we can avoid a
@@ -618,22 +621,22 @@ void evaluateCircuitParallel(__global Chromosome* c,
     for(k = 0; k < (M/LOCAL_SIZE) ; k++){
 
     #else
-        for(k = 0; k < ceil( M/ (float)LOCAL_SIZE ) ; k++){
+        for(k = 0; k < ceil( M/ (double)LOCAL_SIZE ) ; k++){
             
             if( k * LOCAL_SIZE + local_id < M){
     #endif
         //printf("c");
         //int i, j;
-        float maxPredicted = -FLT_MAX;
+        double maxPredicted = -DBL_MAX ;
         int predictedClass = 0;
         int correctClass = 0;
 
-        float executionOut[MAX_OUTPUTS];
-        float alreadyEvaluated[MAX_NODES];
+        double executionOut[MAX_OUTPUTS];
+        double alreadyEvaluated[MAX_NODES];
         int inputsEvaluatedAux[MAX_NODES];
 
         for(i = 0; i < MAX_NODES; i++){
-            alreadyEvaluated[i] = -FLT_MAX;
+            alreadyEvaluated[i] = -DBL_MAX ;
             inputsEvaluatedAux[i] = 0;
         }
 
@@ -654,7 +657,7 @@ void evaluateCircuitParallel(__global Chromosome* c,
                     if (c->nodes[node].inputs[j] >= N) { // se é um outro nó, empilha nó ou o resultado
                         unsigned int refIndex = c->nodes[node].inputs[j] - N;
 
-                        if(alreadyEvaluated[refIndex] > -FLT_MAX) {
+                        if(alreadyEvaluated[refIndex] > -DBL_MAX) {
                             inputsEvaluatedAux[node]++;
                             pushEx(&exStack, alreadyEvaluated[refIndex]);
                         } else {
@@ -669,7 +672,12 @@ void evaluateCircuitParallel(__global Chromosome* c,
                 }
                 if(inputsEvaluatedAux[node] == c->nodes[node].maxInputs){
 
-                    alreadyEvaluated[node] = executeFunction(c, node, &exStack);
+                  
+                    if(!(alreadyEvaluated[node] > -DBL_MAX)) {
+                        alreadyEvaluated[node] = executeFunction(c, node, &exStack);
+                    }
+                    //alreadyEvaluated[node] = executeFunction(c, node, &exStack);
+                    //pushEx(&exStack, alreadyEvaluated[node]);
                     //alreadyEvaluated[node] = 1;
                 }
 
@@ -712,18 +720,22 @@ void evaluateCircuitParallel(__global Chromosome* c,
     #endif 
            error[local_id] += error[local_id + i];
     }
-        
+    
+    barrier(CLK_LOCAL_MEM_FENCE);    
+
     if(local_id == 0){
+
         c->fitness = error[0] / M;
+
     }
 }
 
-void evaluateCircuitParallelValidation(__global Chromosome* c,
-                                    __constant float* data, 
-                                    __constant float* out, 
-                                    __local float* error) {
+void evaluateCircuitParallelTrainValidation(__global Chromosome* c,
+                                    __constant double* data, 
+                                    __constant double* out, 
+                                    __local double* error) {
     
-    //c->fitness = 0.0;
+    
 
     int i, k, j = 0;
     int erro = 0;
@@ -732,31 +744,31 @@ void evaluateCircuitParallelValidation(__global Chromosome* c,
     int group_id = get_group_id(0);
 
     error[local_id] = 0.0f;
-    float num, div;
+    double num, div;
 
-    #ifndef NUM_POINTS_VALIDATION_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
+    #ifndef NUM_POINTS_VALIDATION_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE_GLOBAL
    /* When we know that NUM_POINTS is divisible by LOCAL_SIZE then we can avoid a
       comparison in each iteration due to the guarantee of not having work-items
       accessing beyond the available amount of points. */
-    for(k = 0; k < (M_VAlIDATION/LOCAL_SIZE) ; k++){
+    for(k = 0; k < (M_VALIDATION/LOCAL_SIZE) ; k++){
 
     #else
-        for(k = 0; k < ceil( M_VAlIDATION/ (float)LOCAL_SIZE ) ; k++){
+        for(k = 0; k < ceil( M_VALIDATION/ (double)LOCAL_SIZE ) ; k++){
             
-            if( k * LOCAL_SIZE + local_id < M_VAlIDATION){
+            if( k * LOCAL_SIZE + local_id < M_VALIDATION){
     #endif
         //printf("c");
         //int i, j;
-        float maxPredicted = -FLT_MAX;
+        double maxPredicted = -DBL_MAX;
         int predictedClass = 0;
         int correctClass = 0;
 
-        float executionOut[MAX_OUTPUTS];
-        float alreadyEvaluated[MAX_NODES];
+        double executionOut[MAX_OUTPUTS];
+        double alreadyEvaluated[MAX_NODES];
         int inputsEvaluatedAux[MAX_NODES];
 
         for(i = 0; i < MAX_NODES; i++){
-            alreadyEvaluated[i] = -FLT_MAX;
+            alreadyEvaluated[i] = -DBL_MAX;
             inputsEvaluatedAux[i] = 0;
         }
 
@@ -777,7 +789,7 @@ void evaluateCircuitParallelValidation(__global Chromosome* c,
                     if (c->nodes[node].inputs[j] >= N) { // se é um outro nó, empilha nó ou o resultado
                         unsigned int refIndex = c->nodes[node].inputs[j] - N;
 
-                        if(alreadyEvaluated[refIndex] > -FLT_MAX) {
+                        if(alreadyEvaluated[refIndex] > -DBL_MAX) {
                             inputsEvaluatedAux[node]++;
                             pushEx(&exStack, alreadyEvaluated[refIndex]);
                         } else {
@@ -787,12 +799,14 @@ void evaluateCircuitParallelValidation(__global Chromosome* c,
                         }
                     } else {
                         inputsEvaluatedAux[node]++;
-                        pushEx(&exStack, data[k * LOCAL_SIZE + local_id + ( M_VAlIDATION * c->nodes[node].inputs[j])]);
+                        pushEx(&exStack, data[k * LOCAL_SIZE + local_id + ( M_VALIDATION * c->nodes[node].inputs[j])]);
                     }
                 }
                 if(inputsEvaluatedAux[node] == c->nodes[node].maxInputs){
-
-                    alreadyEvaluated[node] = executeFunction(c, node, &exStack);
+                    if(!(alreadyEvaluated[node] > -DBL_MAX)) {
+                        alreadyEvaluated[node] = executeFunction(c, node, &exStack);
+                    }
+                    //alreadyEvaluated[node] = executeFunction(c, node, &exStack);
                     //alreadyEvaluated[node] = 1;
                 }
 
@@ -804,7 +818,7 @@ void evaluateCircuitParallelValidation(__global Chromosome* c,
                 predictedClass = i;
             }
 
-            if(out[k*LOCAL_SIZE + local_id + (M_VAlIDATION*i)] == 1.0) {
+            if(out[k*LOCAL_SIZE + local_id + (M_VALIDATION*i)] == 1.0) {
                 correctClass = i;
             }
         }
@@ -813,7 +827,7 @@ void evaluateCircuitParallelValidation(__global Chromosome* c,
             erro += 1.0;
         }
         
-        #ifdef NUM_POINTS_VALIDATION_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
+        #ifdef NUM_POINTS_VALIDATION_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE_GLOBAL
         }
     #endif
     }
@@ -835,39 +849,423 @@ void evaluateCircuitParallelValidation(__global Chromosome* c,
     #endif 
            error[local_id] += error[local_id + i];
     }
+    barrier(CLK_LOCAL_MEM_FENCE);
         
     if(local_id == 0){
-        c->fitnessValidation = error[0] / M_VAlIDATION;
+        c->fitnessValidation = error[0] / M_VALIDATION;
     }
 }
 
 
-__kernel void evolve(__global Chromosome* best,
-                     __global Chromosome* newBest,
-                     __global unsigned int* functionSet,
-                     __global int *seeds){
+void evaluateCircuitParallelTest(__global Chromosome* c,
+                                __constant double* data, 
+                                __constant double* out, 
+                                __local double* error) {
+    
+    
+
+    int i, k, j = 0;
+    int erro = 0;
+
+    int local_id = get_local_id(0);
+    int group_id = get_group_id(0);
+
+    error[local_id] = 0.0f;
+    double num, div;
+
+    #ifndef NUM_POINTS_TEST_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
+   /* When we know that NUM_POINTS is divisible by LOCAL_SIZE then we can avoid a
+      comparison in each iteration due to the guarantee of not having work-items
+      accessing beyond the available amount of points. */
+    for(k = 0; k < (M_TEST/LOCAL_SIZE_TEST) ; k++){
+
+    #else
+        for(k = 0; k < ceil( M_TEST/ (double)LOCAL_SIZE_TEST ) ; k++){
+            
+            if( k * LOCAL_SIZE_TEST + local_id < M_TEST){
+    #endif
+        //printf("c");
+        //int i, j;
+        double maxPredicted = -DBL_MAX;
+        int predictedClass = 0;
+        int correctClass = 0;
+
+        double executionOut[MAX_OUTPUTS];
+        double alreadyEvaluated[MAX_NODES];
+        int inputsEvaluatedAux[MAX_NODES];
+
+        for(i = 0; i < MAX_NODES; i++){
+            alreadyEvaluated[i] = -DBL_MAX;
+            inputsEvaluatedAux[i] = 0;
+        }
+
+        Stack s;
+        s.topIndex = -1;
+
+        ExStack exStack;
+        exStack.topIndex = -1;
+
+
+        for( i = 0; i < MAX_OUTPUTS; i++) {
+            unsigned int nodeIndex = c->output[i];
+            push(&s, nodeIndex);
+
+            while(s.topIndex != -1) {
+                unsigned int node = pop(&s);
+                for (j = inputsEvaluatedAux[node]; j < c->nodes[node].maxInputs; j++) {
+                    if (c->nodes[node].inputs[j] >= N) { // se é um outro nó, empilha nó ou o resultado
+                        unsigned int refIndex = c->nodes[node].inputs[j] - N;
+
+                        if(alreadyEvaluated[refIndex] > -DBL_MAX) {
+                            inputsEvaluatedAux[node]++;
+                            pushEx(&exStack, alreadyEvaluated[refIndex]);
+                        } else {
+                            push(&s, node); // reinsere o nó que nao terminou de ser avaliado
+                            push(&s, refIndex); //avalia o próximo
+                            break;
+                        }
+                    } else {
+                        inputsEvaluatedAux[node]++;
+                        pushEx(&exStack, data[k * LOCAL_SIZE_TEST + local_id + ( M_TEST * c->nodes[node].inputs[j])]);
+                    }
+                }
+                if(inputsEvaluatedAux[node] == c->nodes[node].maxInputs){
+
+                    if(!(alreadyEvaluated[node] > -DBL_MAX)) {
+                        alreadyEvaluated[node] = executeFunction(c, node, &exStack);
+                    }
+                    //alreadyEvaluated[node] = 1;
+                }
+
+            }
+            executionOut[i] = alreadyEvaluated[nodeIndex];//popEx(&exStack);
+            //printf("%f\n", maxPredicted);
+            if(executionOut[i] > maxPredicted) {
+                maxPredicted = executionOut[i];
+                predictedClass = i;
+            }
+
+            if(out[k*LOCAL_SIZE_TEST + local_id + (M_TEST*i)] == 1.0) {
+                correctClass = i;
+            }
+            
+        }
+
+        if(predictedClass == correctClass){
+            erro += 1.0;
+        }
+        //barrier(CLK_LOCAL_MEM_FENCE);
+        
+        #ifdef NUM_POINTS_TEST_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
+        }
+    #endif
+    }
+
+    error[local_id] = erro;
+    barrier(CLK_LOCAL_MEM_FENCE);
+
+    ///redução erros por work group
+    for(i =  LOCAL_SIZE_TEST_ROUNDED_UP_TO_POWER_OF_2 /2 ; i > 0; i>>=1){
+        barrier(CLK_LOCAL_MEM_FENCE);
+
+
+    #ifndef LOCAL_SIZE_TEST_IS_NOT_POWER_OF_2
+        if( local_id < i )
+    #else
+        /* LOCAL_SIZE is not power of 2, so we need to perform an additional
+        * check to ensure that no access beyond PE's range will occur. */ 
+        if( (local_id < i) && (local_id + i < LOCAL_SIZE_TEST) )
+    #endif 
+           error[local_id] += error[local_id + i];
+    }
+        
+    if(local_id == 0){
+        c->fitness = error[0] / M_TEST;
+    }
+}
+
+void evaluateCircuitParallelTrain(__global Chromosome* c,
+                                    __constant double* data, 
+                                    __constant double* out, 
+                                    __local double* error) {
+    
+    
+
+    int i, k, j = 0;
+    int erro = 0;
+
+    int local_id = get_local_id(0);
+    int group_id = get_group_id(0);
+
+    error[local_id] = 0.0f;
+    double num, div;
+
+    #ifndef NUM_POINTS_TRAIN_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
+   /* When we know that NUM_POINTS is divisible by LOCAL_SIZE then we can avoid a
+      comparison in each iteration due to the guarantee of not having work-items
+      accessing beyond the available amount of points. */
+    for(k = 0; k < (M_TRAIN/LOCAL_SIZE_TRAIN) ; k++){
+
+    #else
+        for(k = 0; k < ceil( M_TRAIN/ (double)LOCAL_SIZE_TRAIN ) ; k++){
+            
+            if( k * LOCAL_SIZE_TRAIN + local_id < M_TRAIN){
+    #endif
+        //printf("c");
+        //int i, j;
+        double maxPredicted = -DBL_MAX;
+        int predictedClass = 0;
+        int correctClass = 0;
+
+        double executionOut[MAX_OUTPUTS];
+        double alreadyEvaluated[MAX_NODES];
+        int inputsEvaluatedAux[MAX_NODES];
+
+        for(i = 0; i < MAX_NODES; i++){
+            alreadyEvaluated[i] = -DBL_MAX;
+            inputsEvaluatedAux[i] = 0;
+        }
+
+        Stack s;
+        s.topIndex = -1;
+
+        ExStack exStack;
+        exStack.topIndex = -1;
+
+
+        for( i = 0; i < MAX_OUTPUTS; i++) {
+            unsigned int nodeIndex = c->output[i];
+            push(&s, nodeIndex);
+
+            while(s.topIndex != -1) {
+                unsigned int node = pop(&s);
+                for (j = inputsEvaluatedAux[node]; j < c->nodes[node].maxInputs; j++) {
+                    if (c->nodes[node].inputs[j] >= N) { // se é um outro nó, empilha nó ou o resultado
+                        unsigned int refIndex = c->nodes[node].inputs[j] - N;
+
+                        if(alreadyEvaluated[refIndex] > -DBL_MAX) {
+                            inputsEvaluatedAux[node]++;
+                            pushEx(&exStack, alreadyEvaluated[refIndex]);
+                        } else {
+                            push(&s, node); // reinsere o nó que nao terminou de ser avaliado
+                            push(&s, refIndex); //avalia o próximo
+                            break;
+                        }
+                    } else {
+                        inputsEvaluatedAux[node]++;
+                        pushEx(&exStack, data[k * LOCAL_SIZE_TRAIN + local_id + ( M_TRAIN * c->nodes[node].inputs[j])]);
+                    }
+                }
+                if(inputsEvaluatedAux[node] == c->nodes[node].maxInputs){
+
+                    if(!(alreadyEvaluated[node] > -DBL_MAX)) {
+                        alreadyEvaluated[node] = executeFunction(c, node, &exStack);
+                    }
+                    //alreadyEvaluated[node] = 1;
+                }
+
+            }
+            executionOut[i] = alreadyEvaluated[nodeIndex];//popEx(&exStack);
+            //printf("%f\n", maxPredicted);
+            if(executionOut[i] > maxPredicted) {
+                maxPredicted = executionOut[i];
+                predictedClass = i;
+            }
+
+            if(out[k*LOCAL_SIZE_TRAIN + local_id + (M_TRAIN*i)] == 1.0) {
+                correctClass = i;
+            }
+            
+        }
+
+        if(predictedClass == correctClass){
+            erro += 1.0;
+        }
+        //barrier(CLK_LOCAL_MEM_FENCE);
+        
+        #ifdef NUM_POINTS_TRAIN_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
+        }
+    #endif
+    }
+
+    error[local_id] = erro;
+    barrier(CLK_LOCAL_MEM_FENCE);
+
+    ///redução erros por work group
+    for(i =  LOCAL_SIZE_TRAIN_ROUNDED_UP_TO_POWER_OF_2 /2 ; i > 0; i>>=1){
+        barrier(CLK_LOCAL_MEM_FENCE);
+
+
+    #ifndef LOCAL_SIZE_TRAIN_IS_NOT_POWER_OF_2
+        if( local_id < i )
+    #else
+        /* LOCAL_SIZE is not power of 2, so we need to perform an additional
+        * check to ensure that no access beyond PE's range will occur. */ 
+        if( (local_id < i) && (local_id + i < LOCAL_SIZE_TRAIN) )
+    #endif 
+           error[local_id] += error[local_id + i];
+    }
+        
+    if(local_id == 0){
+        c->fitness = error[0] / M_TRAIN;
+    }
+}
+
+void evaluateCircuitParallelValidation(__global Chromosome* c,
+                                    __constant double* data, 
+                                    __constant double* out, 
+                                    __local double* error) {
+
+    int i, k, j = 0;
+    int erro = 0;
+
+    int local_id = get_local_id(0);
+    int group_id = get_group_id(0);
+
+    error[local_id] = 0.0f;
+    double num, div;
+
+    #ifndef NUM_POINTS_VALIDATION_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
+   /* When we know that NUM_POINTS is divisible by LOCAL_SIZE then we can avoid a
+      comparison in each iteration due to the guarantee of not having work-items
+      accessing beyond the available amount of points. */
+    for(k = 0; k < (M_VALIDATION/LOCAL_SIZE_VALIDATION) ; k++){
+
+    #else
+        for(k = 0; k < ceil( M_VALIDATION/ (double)LOCAL_SIZE_VALIDATION ) ; k++){
+            
+            if( k * LOCAL_SIZE_VALIDATION + local_id < M_VALIDATION){
+    #endif
+        //printf("c");
+        //int i, j;
+        double maxPredicted = -DBL_MAX;
+        int predictedClass = 0;
+        int correctClass = 0;
+
+        double executionOut[MAX_OUTPUTS];
+        double alreadyEvaluated[MAX_NODES];
+        int inputsEvaluatedAux[MAX_NODES];
+
+        for(i = 0; i < MAX_NODES; i++){
+            alreadyEvaluated[i] = -DBL_MAX;
+            inputsEvaluatedAux[i] = 0;
+        }
+
+        Stack s;
+        s.topIndex = -1;
+
+        ExStack exStack;
+        exStack.topIndex = -1;
+
+
+        for( i = 0; i < MAX_OUTPUTS; i++) {
+            unsigned int nodeIndex = c->output[i];
+            push(&s, nodeIndex);
+
+            while(s.topIndex != -1) {
+                unsigned int node = pop(&s);
+                for (j = inputsEvaluatedAux[node]; j < c->nodes[node].maxInputs; j++) {
+                    if (c->nodes[node].inputs[j] >= N) { // se é um outro nó, empilha nó ou o resultado
+                        unsigned int refIndex = c->nodes[node].inputs[j] - N;
+
+                        if(alreadyEvaluated[refIndex] > -DBL_MAX) {
+                            inputsEvaluatedAux[node]++;
+                            pushEx(&exStack, alreadyEvaluated[refIndex]);
+                        } else {
+                            push(&s, node); // reinsere o nó que nao terminou de ser avaliado
+                            push(&s, refIndex); //avalia o próximo
+                            break;
+                        }
+                    } else {
+                        inputsEvaluatedAux[node]++;
+                        pushEx(&exStack, data[k * LOCAL_SIZE_VALIDATION + local_id + ( M_VALIDATION * c->nodes[node].inputs[j])]);
+                    }
+                }
+                if(inputsEvaluatedAux[node] == c->nodes[node].maxInputs){
+
+                    if(!(alreadyEvaluated[node] > -DBL_MAX)) {
+                        alreadyEvaluated[node] = executeFunction(c, node, &exStack);
+                    }
+                    //alreadyEvaluated[node] = 1;
+                }
+
+            }
+            executionOut[i] = alreadyEvaluated[nodeIndex];//popEx(&exStack);
+            //printf("%f\n", maxPredicted);
+            if(executionOut[i] > maxPredicted) {
+                maxPredicted = executionOut[i];
+                predictedClass = i;
+            }
+
+            if(out[k*LOCAL_SIZE_VALIDATION + local_id + (M_VALIDATION*i)] == 1.0) {
+                correctClass = i;
+            }
+            
+        }
+
+        if(predictedClass == correctClass){
+            erro += 1.0;
+        }
+        //barrier(CLK_LOCAL_MEM_FENCE);
+        
+        #ifdef NUM_POINTS_VALIDATION_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
+        }
+    #endif
+    }
+
+    error[local_id] = erro;
+    barrier(CLK_LOCAL_MEM_FENCE);
+
+    ///redução erros por work group
+    for(i =  LOCAL_SIZE_VALIDATION_ROUNDED_UP_TO_POWER_OF_2 /2 ; i > 0; i>>=1){
+        barrier(CLK_LOCAL_MEM_FENCE);
+
+
+    #ifndef LOCAL_SIZE_VALIDATION_IS_NOT_POWER_OF_2
+        if( local_id < i )
+    #else
+        /* LOCAL_SIZE is not power of 2, so we need to perform an additional
+        * check to ensure that no access beyond PE's range will occur. */ 
+        if( (local_id < i) && (local_id + i < LOCAL_SIZE_VALIDATION) )
+    #endif 
+           error[local_id] += error[local_id + i];
+    }
+        
+    if(local_id == 0){
+        c->fitnessValidation = error[0] / M_VALIDATION;
+    }
+}
+
+
+__kernel void evolve(__global unsigned int* functionSet,
+                     __global int *seeds,
+                     __global Chromosome* best,
+                     __global Chromosome* newBest){
 
     int group_id = get_group_id(0);
-    
+    int local_id = get_local_id(0);
     int seed = seeds[group_id];
 
     newBest[group_id] = *best;
 
     barrier(CLK_LOCAL_MEM_FENCE);
-
-    mutateTopologyProbabilistic(&newBest[group_id], functionSet, &seed,  0);
+    if(local_id == 0){
+        mutateTopologyProbabilistic(&newBest[group_id], functionSet, &seed,  0);
+    }
 
     barrier(CLK_LOCAL_MEM_FENCE);
 
-    
+    if(local_id == 0){
     seeds[group_id] = seed;
+
+    }
 }
 
-__kernel void evaluate(__global Chromosome* pop,
-                       __constant float* dataset,
-                       __constant float* outputs,
+__kernel void evaluate(__constant double* dataset,
+                       __constant double* outputs,
                        __global unsigned int* functionSet,
-                       __local float* error){
+                       __global Chromosome* pop,
+                       __local double* error){
 
     int group_id = get_group_id(0);
 
@@ -875,36 +1273,82 @@ __kernel void evaluate(__global Chromosome* pop,
 
 }
 
+__kernel void evaluateTest(__constant double* dataset,
+                            __constant double* outputs,
+                            __global unsigned int* functionSet,
+                            __global Chromosome* individual,
+                            __local double* error){
 
-__kernel void CGP(__global Chromosome* pop,
-                  __global Chromosome* best,
-                  __constant float* datasetTrain,
-                  __constant float* outputsTrain,
-                  __constant float* datasetValid,
-                  __constant float* outputsValid,
+
+    evaluateCircuitParallelTest(individual, dataset, outputs, error);
+
+}
+
+__kernel void evaluateTrain(__constant double* dataset,
+                            __constant double* outputs,
+                            __global unsigned int* functionSet,
+                            __global Chromosome* individual,
+                            __local double* error){
+
+
+    evaluateCircuitParallelTrain(individual, dataset, outputs, error);
+
+}
+
+__kernel void evaluateValidation(__constant double* dataset,
+                            __constant double* outputs,
+                            __global unsigned int* functionSet,
+                            __global Chromosome* individual,
+                            __local double* error){
+
+
+    evaluateCircuitParallelValidation(individual, dataset, outputs, error);
+
+}
+
+__kernel void CGP(__constant double* datasetTrain,
+                  __constant double* outputsTrain,
+                  __constant double* datasetValid,
+                  __constant double* outputsValid,
                   __global unsigned int* functionSet,
                   __global int *seeds,
-                  __local float* error){
+                  __global Chromosome* pop,
+                  __global Chromosome* best,
+                  __local double* error){
 
     int group_id = get_group_id(0);
+    int local_id = get_local_id(0);
+    //printf("%d", group_id);
     int seed = seeds[group_id];
-
+    
     pop[group_id] = *best;
+
     barrier(CLK_LOCAL_MEM_FENCE);
-
-    mutateTopologyProbabilistic(&pop[group_id], functionSet, &seed,  0);
-
+    
+    if(local_id == 0){
+        mutateTopologyProbabilistic(&pop[group_id], functionSet, &seed,  0);
+    }
+    
     barrier(CLK_LOCAL_MEM_FENCE);
 
     evaluateCircuitParallel(&pop[group_id], datasetTrain, outputsTrain, error);
 
-    //barrier(CLK_LOCAL_MEM_FENCE);
+    barrier(CLK_LOCAL_MEM_FENCE);
 
-    evaluateCircuitParallelValidation(&pop[group_id], datasetValid, outputsValid, error);
+    evaluateCircuitParallelTrainValidation(&pop[group_id], datasetValid, outputsValid, error);
 
     barrier(CLK_LOCAL_MEM_FENCE);
 
+    if(local_id == 0){
+        seeds[group_id] = seed;
+    }
+}
 
+__kernel void testMemory(__constant int* test, __local double* error){
 
-    seeds[group_id] = seed;
+    int group_id = get_group_id(0);
+    int local_id = get_local_id(0);
+     
+    if(local_id == 0)
+        printf("%d\n", test[group_id]);
 }

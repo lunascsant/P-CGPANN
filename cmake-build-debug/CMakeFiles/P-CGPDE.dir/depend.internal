@@ -28,6 +28,8 @@ CMakeFiles/P-CGPDE.dir/cgp.cpp.obj
  C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_gl_ext.h
  C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_platform.h
  C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/opencl.h
+ C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.h
+ C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
  C:/Users/bruno/CLionProjects/P-CGPDE/cgp.cpp
  C:/Users/bruno/CLionProjects/P-CGPDE/cgp.h
  C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
@@ -44,6 +46,7 @@ CMakeFiles/P-CGPDE.dir/main.cpp.obj
  C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_platform.h
  C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/opencl.h
  C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.h
+ C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
  C:/Users/bruno/CLionProjects/P-CGPDE/cgp.h
  C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
  C:/Users/bruno/CLionProjects/P-CGPDE/main.cpp

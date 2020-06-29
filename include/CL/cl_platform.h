@@ -130,7 +130,7 @@ typedef signed   __int64        cl_long;
 typedef unsigned __int64        cl_ulong;
 
 typedef unsigned __int16        cl_half;
-typedef float                   cl_float;
+typedef double                   cl_double;
 typedef double                  cl_double;
 
 /* Macro names and corresponding values defined by OpenCL */
@@ -201,9 +201,9 @@ typedef double                  cl_double;
 #define  CL_M_SQRT1_2_F     0.70710676908493f
 
 #define CL_NAN              (CL_INFINITY - CL_INFINITY)
-#define CL_HUGE_VALF        ((cl_float) 1e50)
+#define CL_HUGE_VALF        ((cl_double) 1e50)
 #define CL_HUGE_VAL         ((cl_double) 1e500)
-#define CL_MAXFLOAT         CL_FLT_MAX
+#define CL_MAXdouble         CL_FLT_MAX
 #define CL_INFINITY         CL_HUGE_VALF
 
 #else
@@ -221,7 +221,7 @@ typedef int64_t         cl_long     __attribute__((aligned(8)));
 typedef uint64_t        cl_ulong    __attribute__((aligned(8)));
 
 typedef uint16_t        cl_half     __attribute__((aligned(2)));
-typedef float           cl_float    __attribute__((aligned(4)));
+typedef double           cl_double    __attribute__((aligned(4)));
 typedef double          cl_double   __attribute__((aligned(8)));
 
 /* Macro names and corresponding values defined by OpenCL */
@@ -296,12 +296,12 @@ typedef double          cl_double   __attribute__((aligned(8)));
    #define CL_HUGE_VAL      __builtin_huge_val()
    #define CL_NAN           __builtin_nanf( "" )
 #else
-   #define CL_HUGE_VALF     ((cl_float) 1e50)
+   #define CL_HUGE_VALF     ((cl_double) 1e50)
    #define CL_HUGE_VAL      ((cl_double) 1e500)
-   float nanf( const char * );
+   double nanf( const char * );
    #define CL_NAN           nanf( "" )  
 #endif
-#define CL_MAXFLOAT         CL_FLT_MAX
+#define CL_MAXdouble         CL_FLT_MAX
 #define CL_INFINITY         CL_HUGE_VALF
 
 #endif
@@ -318,12 +318,12 @@ typedef unsigned int cl_GLenum;
  *
  *  Note:   OpenCL requires that all types be naturally aligned. 
  *          This means that vector types must be naturally aligned.
- *          For example, a vector of four floats must be aligned to
+ *          For example, a vector of four doubles must be aligned to
  *          a 16 byte boundary (calculated as 4 * the natural 4-byte 
- *          alignment of the float).  The alignment qualifiers here
+ *          alignment of the double).  The alignment qualifiers here
  *          will only function properly if your compiler supports them
  *          and if you don't actively work to defeat them.  For example,
- *          in order for a cl_float4 to be 16 byte aligned in a struct,
+ *          in order for a cl_double4 to be 16 byte aligned in a struct,
  *          the start of the struct must itself be 16-byte aligned. 
  *
  *          Maintaining proper alignment is the user's responsibility.
@@ -338,14 +338,14 @@ typedef unsigned int cl_GLenum;
    typedef vector signed short      __cl_short8;
    typedef vector unsigned int      __cl_uint4;
    typedef vector signed int        __cl_int4;
-   typedef vector float             __cl_float4;
+   typedef vector double             __cl_double4;
    #define  __CL_UCHAR16__  1
    #define  __CL_CHAR16__   1
    #define  __CL_USHORT8__  1
    #define  __CL_SHORT8__   1
    #define  __CL_UINT4__    1
    #define  __CL_INT4__     1
-   #define  __CL_FLOAT4__   1
+   #define  __CL_double4__   1
 #endif
 
 #if defined( __SSE__ )
@@ -355,11 +355,11 @@ typedef unsigned int cl_GLenum;
         #include <xmmintrin.h>
     #endif
     #if defined( __GNUC__ )
-        typedef float __cl_float4   __attribute__((vector_size(16)));
+        typedef double __cl_double4   __attribute__((vector_size(16)));
     #else
-        typedef __m128 __cl_float4;
+        typedef __m128 __cl_double4;
     #endif
-    #define __CL_FLOAT4__   1
+    #define __CL_double4__   1
 #endif
 
 #if defined( __SSE2__ )
@@ -411,7 +411,7 @@ typedef unsigned int cl_GLenum;
         typedef cl_int      __cl_int2       __attribute__((vector_size(8)));
         typedef cl_ulong    __cl_ulong1     __attribute__((vector_size(8)));
         typedef cl_long     __cl_long1      __attribute__((vector_size(8)));
-        typedef cl_float    __cl_float2     __attribute__((vector_size(8)));
+        typedef cl_double    __cl_double2     __attribute__((vector_size(8)));
     #else
         typedef __m64       __cl_uchar8;
         typedef __m64       __cl_char8;
@@ -421,7 +421,7 @@ typedef unsigned int cl_GLenum;
         typedef __m64       __cl_int2;
         typedef __m64       __cl_ulong1;
         typedef __m64       __cl_long1;
-        typedef __m64       __cl_float2;
+        typedef __m64       __cl_double2;
     #endif
     #define __CL_UCHAR8__   1
     #define __CL_CHAR8__    1
@@ -431,7 +431,7 @@ typedef unsigned int cl_GLenum;
     #define __CL_UINT2__    1
     #define __CL_ULONG1__   1
     #define __CL_LONG1__    1
-    #define __CL_FLOAT2__   1
+    #define __CL_double2__   1
 #endif
 
 #if defined( __AVX__ )
@@ -441,13 +441,13 @@ typedef unsigned int cl_GLenum;
         #include <immintrin.h> 
     #endif
     #if defined( __GNUC__ )
-        typedef cl_float    __cl_float8     __attribute__((vector_size(32)));
+        typedef cl_double    __cl_double8     __attribute__((vector_size(32)));
         typedef cl_double   __cl_double4    __attribute__((vector_size(32)));
     #else
-        typedef __m256      __cl_float8;
+        typedef __m256      __cl_double8;
         typedef __m256d     __cl_double4;
     #endif
-    #define __CL_FLOAT8__   1
+    #define __CL_double8__   1
     #define __CL_DOUBLE4__  1
 #endif
 
@@ -1091,80 +1091,80 @@ typedef union
 }cl_ulong16;
 
 
-/* --- cl_floatn ---- */
+/* --- cl_doublen ---- */
 
 typedef union
 {
-    cl_float  CL_ALIGNED(8) s[2];
+    cl_double  CL_ALIGNED(8) s[2];
 #if __CL_HAS_ANON_STRUCT__
-   __CL_ANON_STRUCT__ struct{ cl_float  x, y; };
-   __CL_ANON_STRUCT__ struct{ cl_float  s0, s1; };
-   __CL_ANON_STRUCT__ struct{ cl_float  lo, hi; };
+   __CL_ANON_STRUCT__ struct{ cl_double  x, y; };
+   __CL_ANON_STRUCT__ struct{ cl_double  s0, s1; };
+   __CL_ANON_STRUCT__ struct{ cl_double  lo, hi; };
 #endif
-#if defined( __CL_FLOAT2__) 
-    __cl_float2     v2;
+#if defined( __CL_double2__)
+    __cl_double2     v2;
 #endif
-}cl_float2;
+}cl_double2;
 
 typedef union
 {
-    cl_float  CL_ALIGNED(16) s[4];
+    cl_double  CL_ALIGNED(16) s[4];
 #if __CL_HAS_ANON_STRUCT__
-   __CL_ANON_STRUCT__ struct{ cl_float   x, y, z, w; };
-   __CL_ANON_STRUCT__ struct{ cl_float   s0, s1, s2, s3; };
-   __CL_ANON_STRUCT__ struct{ cl_float2  lo, hi; };
+   __CL_ANON_STRUCT__ struct{ cl_double   x, y, z, w; };
+   __CL_ANON_STRUCT__ struct{ cl_double   s0, s1, s2, s3; };
+   __CL_ANON_STRUCT__ struct{ cl_double2  lo, hi; };
 #endif
-#if defined( __CL_FLOAT2__) 
-    __cl_float2     v2[2];
+#if defined( __CL_double2__)
+    __cl_double2     v2[2];
 #endif
-#if defined( __CL_FLOAT4__) 
-    __cl_float4     v4;
+#if defined( __CL_double4__)
+    __cl_double4     v4;
 #endif
-}cl_float4;
+}cl_double4;
 
-/* cl_float3 is identical in size, alignment and behavior to cl_float4. See section 6.1.5. */
-typedef  cl_float4  cl_float3;
-
-typedef union
-{
-    cl_float   CL_ALIGNED(32) s[8];
-#if __CL_HAS_ANON_STRUCT__
-   __CL_ANON_STRUCT__ struct{ cl_float   x, y, z, w; };
-   __CL_ANON_STRUCT__ struct{ cl_float   s0, s1, s2, s3, s4, s5, s6, s7; };
-   __CL_ANON_STRUCT__ struct{ cl_float4  lo, hi; };
-#endif
-#if defined( __CL_FLOAT2__) 
-    __cl_float2     v2[4];
-#endif
-#if defined( __CL_FLOAT4__) 
-    __cl_float4     v4[2];
-#endif
-#if defined( __CL_FLOAT8__ )
-    __cl_float8     v8;
-#endif
-}cl_float8;
+/* cl_double3 is identical in size, alignment and behavior to cl_double4. See section 6.1.5. */
+typedef  cl_double4  cl_double3;
 
 typedef union
 {
-    cl_float  CL_ALIGNED(64) s[16];
+    cl_double   CL_ALIGNED(32) s[8];
 #if __CL_HAS_ANON_STRUCT__
-   __CL_ANON_STRUCT__ struct{ cl_float  x, y, z, w, __spacer4, __spacer5, __spacer6, __spacer7, __spacer8, __spacer9, sa, sb, sc, sd, se, sf; };
-   __CL_ANON_STRUCT__ struct{ cl_float  s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, sA, sB, sC, sD, sE, sF; };
-   __CL_ANON_STRUCT__ struct{ cl_float8 lo, hi; };
+   __CL_ANON_STRUCT__ struct{ cl_double   x, y, z, w; };
+   __CL_ANON_STRUCT__ struct{ cl_double   s0, s1, s2, s3, s4, s5, s6, s7; };
+   __CL_ANON_STRUCT__ struct{ cl_double4  lo, hi; };
 #endif
-#if defined( __CL_FLOAT2__) 
-    __cl_float2     v2[8];
+#if defined( __CL_double2__)
+    __cl_double2     v2[4];
 #endif
-#if defined( __CL_FLOAT4__) 
-    __cl_float4     v4[4];
+#if defined( __CL_double4__)
+    __cl_double4     v4[2];
 #endif
-#if defined( __CL_FLOAT8__ )
-    __cl_float8     v8[2];
+#if defined( __CL_double8__ )
+    __cl_double8     v8;
 #endif
-#if defined( __CL_FLOAT16__ )
-    __cl_float16    v16;
+}cl_double8;
+
+typedef union
+{
+    cl_double  CL_ALIGNED(64) s[16];
+#if __CL_HAS_ANON_STRUCT__
+   __CL_ANON_STRUCT__ struct{ cl_double  x, y, z, w, __spacer4, __spacer5, __spacer6, __spacer7, __spacer8, __spacer9, sa, sb, sc, sd, se, sf; };
+   __CL_ANON_STRUCT__ struct{ cl_double  s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, sA, sB, sC, sD, sE, sF; };
+   __CL_ANON_STRUCT__ struct{ cl_double8 lo, hi; };
 #endif
-}cl_float16;
+#if defined( __CL_double2__)
+    __cl_double2     v2[8];
+#endif
+#if defined( __CL_double4__)
+    __cl_double4     v4[4];
+#endif
+#if defined( __CL_double8__ )
+    __cl_double8     v8[2];
+#endif
+#if defined( __CL_double16__ )
+    __cl_double16    v16;
+#endif
+}cl_double16;
 
 /* --- cl_doublen ---- */
 
@@ -1251,7 +1251,7 @@ typedef union
  *   Example:
  *
  *   const char *my_program = CL_PROGRAM_STRING_DEBUG_INFO "\
- *   kernel void foo( int a, float * b )             \n\
+ *   kernel void foo( int a, double * b )             \n\
  *   {                                               \n\
  *      // my comment                                \n\
  *      *b[ get_global_id(0)] = a;                   \n\

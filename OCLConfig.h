@@ -9,46 +9,107 @@
 #include "utils.h"
 
 class OCLConfig {
-    public:
-        std::vector<cl::Platform> platforms;
-        std::vector<cl::Device> devices;
+public:
+    OCLConfig();
 
-        cl::Context context;
-        cl::CommandQueue cmdQueue;
-        cl::Program program;
-        cl::Kernel kernel;
+    std::vector<cl::Platform> platforms;
+    std::vector<std::vector<cl::Device>> devices;
 
-        ///Buffers
-        cl::Buffer bufferSeeds;
+    cl::Context context;
+    cl::CommandQueue cmdQueue;
+    cl::Program program;
 
-        cl::Buffer bufferDatasetTrain;
-        cl::Buffer bufferOutputsTrain;
-
-        cl::Buffer bufferDatasetValid;
-        cl::Buffer bufferOutputsValid;
-
-        cl::Buffer bufferDatasetTest;
-        cl::Buffer bufferOutputsTest;
-
-        cl::Buffer bufferFunctions;
-
-        cl::Buffer bufferBest;
-        cl::Buffer bufferNewBest;
-
-        size_t numPointsTrain;
-        size_t numPointsValid;
-        size_t numPointsTest;
-
-        size_t localSize_aval;
-        size_t globalSize_aval;
-
-        std::string compileFlags;
-        cl_command_queue_properties commandQueueProperties;
+    cl::Kernel testKernel;
 
 
+    cl::Kernel kernelCGP;
+    //cl::Kernel kernelCGPDE;
+    //cl::Kernel kernelDE;
+
+    cl::Kernel kernelTrain;
+    cl::Kernel kernelValid;
+    cl::Kernel kernelTest;
+
+    cl::Kernel kernelEvolve;
 
 
+    ///Buffers
+    cl::Buffer bufferSeeds;
 
+    cl::Buffer bufferDatasetTrain;
+    cl::Buffer bufferOutputsTrain;
+
+    cl::Buffer bufferDatasetValid;
+    cl::Buffer bufferOutputsValid;
+
+    cl::Buffer bufferDatasetTest;
+    cl::Buffer bufferOutputsTest;
+
+    cl::Buffer bufferFunctions;
+
+    cl::Buffer bufferBest;
+    cl::Buffer bufferPopulation;
+
+    size_t numPoints;
+    size_t numPointsTrain;
+    size_t numPointsValid;
+    size_t numPointsTest;
+
+    size_t maxLocalSize;
+
+    size_t localSizeTrain;
+    size_t localSizeValid;
+    size_t localSizeTest;
+
+    size_t globalSizeTrain;
+    size_t globalSizeValid;
+    size_t globalSizeTest;
+
+    size_t localSizeAval;
+    size_t globalSizeAval;
+
+    size_t localSizeEvol;
+    size_t globalSizeEvol;
+
+    std::string compileFlags;
+
+    cl_command_queue_properties commandQueueProperties;
+
+    double* transposeDatasetTrain;
+    double* transposeOutputsTrain;
+
+    double* transposeDatasetValid;
+    double* transposeOutputsValid;
+
+    double* transposeDatasetTest;
+    double* transposeOutputsTest;
+
+
+    void allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int sizeTest);
+    void setNDRages();
+    void setCompileFlags();
+    std::string setProgramSource(Parameters* p, Dataset* fullData);
+    void buildProgram(Parameters* p, Dataset* fullData, std::string sourceFileStr);
+    void buildKernels();
+    void writeReadOnlyBufers(Parameters* p, int* seeds);
+    void transposeDatasets(Dataset* train, Dataset* valid, Dataset* test);
+
+    void writeBestBuffer(Chromosome* best);
+    void writePopulationBuffer(Chromosome* population);
+
+    void readBestBuffer(Chromosome* best);
+    void readPopulationBuffer(Chromosome* population);
+    void readSeedsBuffer(int* seeds);
+
+    void finishCommandQueue();
+
+    void enqueueCGPKernel();
+    void enqueueTestKernel();
+private:
+    void printOpenclDeviceInfo();
+    void checkError(cl_int result);
+    void transposeData(Dataset* data, double** transposeDataset, double** transposeOutputs);
+    const char *getErrorString(cl_int error);
 
 };
 
