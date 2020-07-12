@@ -64,7 +64,7 @@
 #endif // PROB_MUT
 
 
-#define NUM_GENERATIONS 10000
+#define NUM_GENERATIONS 500
 #define NUM_EVALUATIONS 2.40e+007
 
 
@@ -99,6 +99,7 @@ typedef struct
     //unsigned int inputsEvaluated;
     unsigned int function;
     unsigned int maxInputs;
+    //double inputsOutputs[MAX_ARITY];
     unsigned int inputs[MAX_ARITY];
     double inputsWeight[MAX_ARITY];
     //double output;
@@ -110,6 +111,7 @@ typedef struct
 {
     Node nodes[MAX_NODES];
     unsigned int output[MAX_OUTPUTS];
+    int activeNodes[MAX_NODES];
     unsigned int numActiveNodes;
     double fitness;
     double fitnessValidation;

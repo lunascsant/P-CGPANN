@@ -27,12 +27,25 @@ void newNode(Chromosome* c, Parameters* params, unsigned int index, int* seed){
 
 }
 
+/*
+	used by qsort in sortIntArray
+*/
+static int cmpInt(const void * a, const void * b) {
+    return ( *(int*)a - * (int*)b );
+}
+
+void sortActiveArray(int *array, const int length) {
+
+    qsort(array, length, sizeof(int), cmpInt);
+}
+
 void activateNodes(Chromosome* c, Parameters* p){
 
     int i, j;
     int alreadyEvaluated[MAX_NODES] = {-1};
     for(i = 0; i < MAX_NODES; i++) {
         alreadyEvaluated[i] = -1;
+        c->activeNodes[i] = MAX_NODES + 1;
         c->nodes[i].active = 0;
     }
     c->numActiveNodes = 0;
@@ -53,13 +66,14 @@ void activateNodes(Chromosome* c, Parameters* p){
                         push(&s, c->nodes[node].inputs[j] - p->N);
                     }
                 }
-
+                c->activeNodes[c->numActiveNodes] = node;
                 c->nodes[node].active = 1;
                 c->numActiveNodes++;
             }
 
         }
     }
+    sortActiveArray(c->activeNodes, c->numActiveNodes);
 }
 
 void circuitGenerator(Chromosome* c, Parameters* params, int* seed){
@@ -101,6 +115,26 @@ void evaluateCircuitValidation(Chromosome* c, Dataset* data) {
     c->fitnessValidation = 0.0;
     for(i = 0; i < data->M; i++){
         runCircuit(c, data, i, 1);
+        //setFitness(c, p, out[i], &fitness);
+    }
+    c->fitnessValidation = c->fitnessValidation / (double) data->M;
+}
+
+void evaluateCircuitLinear(Chromosome* c, Dataset* data) {
+    int i;
+    c->fitness = 0.0;
+    for(i = 0; i < data->M; i++){
+        runCircuitLinear(c, data, i, 0);
+        //setFitness(c, p, out[i], &fitness);
+    }
+    c->fitness = c->fitness / (double) data->M;
+}
+
+void evaluateCircuitValidationLinear(Chromosome* c, Dataset* data) {
+    int i;
+    c->fitnessValidation = 0.0;
+    for(i = 0; i < data->M; i++){
+        runCircuitLinear(c, data, i, 1);
         //setFitness(c, p, out[i], &fitness);
     }
     c->fitnessValidation = c->fitnessValidation / (double) data->M;
@@ -326,6 +360,7 @@ void runCircuit(Chromosome* c, Dataset* dataset, int index, int validation){
 
                     if(alreadyEvaluated[refIndex] > -DBL_MAX) {
                         inputsEvaluatedAux[node]++;//c->nodes[node].inputsEvaluated++;
+                        //c->nodes->inputsOutputs[j] = alreadyEvaluated[refIndex];
                         pushEx(&exStack, alreadyEvaluated[refIndex]);
                     } else {
                         push(&s, node); // reinsere o nó que nao terminou de ser avaliado
@@ -334,6 +369,7 @@ void runCircuit(Chromosome* c, Dataset* dataset, int index, int validation){
                     }
                 } else {
                     inputsEvaluatedAux[node]++;//c->nodes[node].inputsEvaluated++;
+                    //c->nodes->inputsOutputs[j] = dataset->data[index][c->nodes[node].inputs[j]];
                     pushEx(&exStack, dataset->data[index][c->nodes[node].inputs[j]]);
                 }
             }
@@ -350,6 +386,86 @@ void runCircuit(Chromosome* c, Dataset* dataset, int index, int validation){
             }
 
         }
+        executionOut[i] = alreadyEvaluated[nodeIndex];//c->nodes[c->output[i]].output;//popEx(&exStack);
+
+        if(executionOut[i] > maxPredicted) {
+            maxPredicted = executionOut[i];
+            predictedClass = i;
+        }
+
+        if(dataset->output[index][i] == 1.0) {
+            correctClass = i;
+        }
+
+    }
+
+    if(predictedClass == correctClass) {
+        if(validation == 1){
+            (c->fitnessValidation)++;
+        } else {
+            (c->fitness)++;
+        }
+
+    }
+}
+
+void runCircuitLinear(Chromosome* c, Dataset* dataset, int index, int validation){
+
+    int i, j, currentActive, activeInputs;
+    double maxPredicted = -DBL_MAX;
+    int predictedClass = 0;
+    int correctClass = 0;
+
+    double executionOut[MAX_OUTPUTS];
+    double alreadyEvaluated[MAX_NODES];
+
+    for(i = 0; i < MAX_NODES; i++){
+        alreadyEvaluated[i] = -DBL_MAX;
+    }
+
+    ExStack exStack;
+    exStack.topIndex = -1;
+
+    for(i = 0; i < c->numActiveNodes; i++){
+        currentActive = c->activeNodes[i];
+        activeInputs = c->nodes[currentActive].maxInputs;
+
+        for(j = 0; j < activeInputs; j++){
+            if (c->nodes[currentActive].inputs[j] >= dataset->N) { // se é um outro nó, empilha nó ou o resultado
+                unsigned int refIndex = c->nodes[currentActive].inputs[j] - dataset->N;
+
+                if(alreadyEvaluated[refIndex] > -DBL_MAX) {
+                    pushEx(&exStack, alreadyEvaluated[refIndex]);
+                } else {
+                    printf("ERRO. \n");
+                }
+            } else {
+                pushEx(&exStack, dataset->data[index][c->nodes[currentActive].inputs[j]]);
+            }
+        }
+
+        alreadyEvaluated[currentActive] = executeFunction(c, currentActive, &exStack);
+
+        /* deal with doubles becoming NAN */
+        if (std::isnan(alreadyEvaluated[currentActive]) != 0) {
+            alreadyEvaluated[currentActive] = 0;
+        }
+         /* prevent double form going to inf and -inf */
+        else if (std::isinf(alreadyEvaluated[currentActive]) != 0 ) {
+
+            if (alreadyEvaluated[currentActive] > 0) {
+                alreadyEvaluated[currentActive] = DBL_MAX;
+            }
+            else {
+                alreadyEvaluated[currentActive] = DBL_MIN;
+            }
+        }
+
+    }
+
+    for( i = 0; i < MAX_OUTPUTS; i++) {
+        unsigned int nodeIndex = c->output[i];
+
         executionOut[i] = alreadyEvaluated[nodeIndex];//c->nodes[c->output[i]].output;//popEx(&exStack);
 
         if(executionOut[i] > maxPredicted) {
@@ -430,6 +546,40 @@ Chromosome *mutateTopologyProbabilistic(Chromosome *c, Parameters *p, int *seed,
             if(type == 0 && randomProb(seed) <= PROB_MUT){
                 c->nodes[i].inputsWeight[j] = randomConnectionWeight(p, seed);
             }
+        }
+    }
+
+    activateNodes(c, p);
+    return  c;
+}
+
+Chromosome *mutateTopologyProbabilistic2(Chromosome *c, Parameters *p, int *seeds, int type, int index) {
+
+    int i, j;
+
+    for(i = 0; i < MAX_NODES; i++){
+        int nodeIndex  = index * 1024 + ((i*MAX_ARITY) % 1024);
+
+        /*if(randomProb(&seeds[nodeIndex]) <= PROB_MUT) {
+            c->nodes[i].function = p->functionSet[randomFunction(p, &seeds[nodeIndex])];
+            c->nodes[i].maxInputs = getFunctionInputs(c->nodes[i].function);
+        }
+*/
+        for(j = 0; j < c->nodes[i].maxInputs; j++) {
+            int arrayIndex = index * 1024 + ((i*MAX_ARITY + j) % 1024);
+            if(randomProb(&seeds[arrayIndex]) <= PROB_MUT) {
+                c->nodes[i].inputs[j] = randomInput(p, i, &seeds[arrayIndex]);
+            }
+            if(type == 0 && randomProb(&seeds[arrayIndex]) <= PROB_MUT){
+                c->nodes[i].inputsWeight[j] = randomConnectionWeight(p, &seeds[arrayIndex]);
+            }
+            if(j == 0) {
+                if(randomProb(&seeds[arrayIndex]) <= PROB_MUT) {
+                    c->nodes[i].function = p->functionSet[randomFunction(p, &seeds[arrayIndex])];
+                    c->nodes[i].maxInputs = getFunctionInputs(c->nodes[i].function);
+                }
+            }
+
         }
     }
 
@@ -540,10 +690,15 @@ Chromosome CGP(Dataset* training, Dataset* validation, Parameters* params, int *
         //printCircuit(&best, params);
         for (int i = 0; i < NUM_INDIV; i++){
             mutated_best = best;
-            mutateTopologyProbabilistic(&mutated_best, params, &seeds[i], 0);
+            //mutateTopologyProbabilistic(&mutated_best, params, &seeds[i], 0);
+            mutateTopologyProbabilistic2(&mutated_best, params, seeds, 0, i);
 
-            evaluateCircuit(&mutated_best, training);
-            evaluateCircuitValidation(&mutated_best, validation);
+            //evaluateCircuit(&mutated_best, training);
+            //evaluateCircuitValidation(&mutated_best, validation);
+
+            evaluateCircuitLinear(&mutated_best, training);
+            evaluateCircuitValidationLinear(&mutated_best, validation);
+
 
 
             if(mutated_best.fitness >= best_train.fitness){
@@ -553,7 +708,10 @@ Chromosome CGP(Dataset* training, Dataset* validation, Parameters* params, int *
             if(mutated_best.fitnessValidation >= best_valid.fitnessValidation){
                 best_valid = mutated_best;
             }
+
+            //std::cout << mutated_best.fitness << " ";
         }
+        //std::cout << std::endl;
         best = best_train;
         //std::cout << "Best fitness  = " << best.fitness << std::endl;
         timeManager.getEndTime(Iteracao_T);
@@ -561,15 +719,12 @@ Chromosome CGP(Dataset* training, Dataset* validation, Parameters* params, int *
         timeManager.getElapsedTime(Iteracao_T);
         if(iterations%100 == 0){
             printf("Generation %d:\n", iterations);
-            printf("Time: %f:\n", timeManager.getTotalTime(Iteracao_T));
+            printf("Time: %f\n", timeManager.getTotalTime(Iteracao_T));
 
         }
         iterations++;
     }
-    for(int i = 0; i < NUM_INDIV; i++){
-        std::cout << seeds[i] << " ";
-    }
-    std::cout << std::endl;
+
     return best_valid;
 }
 
@@ -594,35 +749,35 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
 
     ocl->writeReadOnlyBufers(params, seeds);
 
-    int result, iterations = 0;
+    int iterations = 0;
     while(stopCriteria(iterations)) {
 
         timeManager.getStartTime(Iteracao_T);
         //std::cout << "Active nodes: " << best.numActiveNodes << ", FitnessTrain: " << best.fitness << ", FitnessValidation: " << best.fitnessValidation  << std::endl;
 
-        //timeManager.getStartTime(Iteracao_T);
-
-        //ocl->cmdQueue.enqueueWriteBuffer(ocl->bufferBest, CL_FALSE, 0, sizeof(Chromosome), &best);
-        //ocl->cmdQueue.enqueueWriteBuffer(ocl->bufferPopulation, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), population);
+        for(int k = 0; k < NUM_INDIV; k++){
+            population[k] = best;
+            mutateTopologyProbabilistic2(&population[k], params, seeds, 0, k);
+        }
 
         ocl->writeBestBuffer(&best);
         ocl->writePopulationBuffer(population);
 
-
         ocl->finishCommandQueue();
 
-        //result = ocl->cmdQueue.enqueueNDRangeKernel(ocl->kernelCGP, cl::NullRange, cl::NDRange(ocl->globalSizeAval), cl::NDRange(ocl->localSizeAval));
-        //checkError(result);
-        ocl->enqueueCGPKernel();
+        //ocl->enqueueCGPKernel();
+        //ocl->enqueueEvolveKernel();
+        //ocl->finishCommandQueue();
+
+        ocl->enqueueEvaluationKernel();
         ocl->finishCommandQueue();
 
         ocl->readPopulationBuffer(population);
-        //ocl->cmdQueue.enqueueReadBuffer(ocl->bufferPopulation, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), population);
-
         ocl->finishCommandQueue();
 
 
         for(int k = 0; k < NUM_INDIV; k++){
+            //std::cout << population[k].fitness << " ";
             if(population[k].fitness >= best_train.fitness){
                 best_train = population[k];
             }
@@ -630,24 +785,26 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
             if(population[k].fitnessValidation >= best_valid.fitnessValidation){
                 best_valid = population[k];
             }
-
         }
+        //std::cout << std::endl;
+
         best = best_train;
-        iterations++;
         timeManager.getEndTime(Iteracao_T);
         timeManager.getElapsedTime(Iteracao_T);
 
         if(iterations%100 == 0){
             printf("Generation %d:\n", iterations);
-            printf("Time: %f:\n", timeManager.getTotalTime(Iteracao_T));
-
+            printf("Time: %f\n", timeManager.getTotalTime(Iteracao_T));
         }
+        iterations++;
+
     }
+
     ocl->readSeedsBuffer(seeds);
     ocl->finishCommandQueue();
-    for(int i = 0; i < NUM_INDIV; i++){
+   /* for(int i = 0; i < NUM_INDIV * ocl->maxLocalSize; i++){
         std::cout << seeds[i] << " ";
-    }
+    }*/
     std::cout << std::endl;
 
     return best_valid;

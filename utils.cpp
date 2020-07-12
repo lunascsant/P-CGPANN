@@ -430,18 +430,20 @@ void getIndexes(int* indices, int k, int excludeIndex, int* seed){
             indexes.emplace_back(i);
         }
     }
-
+/*
     for(int i = 0; i < indexes.size(); i++){
         std::cout << indexes[i] << " ";
     }
     std::cout << std::endl;
+    */
 
     shuffleArray(&indexes, indexes.size(), seed);
-
+/*
     for(int i = 0; i < indexes.size(); i++){
         indices[i] = indexes[i];
         std::cout << indices[i]  << " ";
     }
     std::cout << std::endl;
+    */
 
 }

@@ -19,6 +19,10 @@ public:
     cl::CommandQueue cmdQueue;
     cl::Program program;
 
+    ///Evento para controlar tempo gasto
+    cl_ulong inicio, fim;
+    cl::Event e_tempo;
+
     cl::Kernel testKernel;
 
 
@@ -32,9 +36,13 @@ public:
 
     cl::Kernel kernelEvolve;
 
+    cl::Kernel kernelEvaluate;
+    cl::Kernel kernelEvaluate2;
 
     ///Buffers
     cl::Buffer bufferSeeds;
+
+    cl::Buffer bufferDataOut;
 
     cl::Buffer bufferDatasetTrain;
     cl::Buffer bufferOutputsTrain;
@@ -75,6 +83,8 @@ public:
 
     cl_command_queue_properties commandQueueProperties;
 
+    double* transposeDatasetOutput;
+
     double* transposeDatasetTrain;
     double* transposeOutputsTrain;
 
@@ -104,11 +114,21 @@ public:
     void finishCommandQueue();
 
     void enqueueCGPKernel();
+
     void enqueueTestKernel();
+
+    void enqueueEvolveKernel();
+
+    void enqueueEvaluationKernel();
+    void enqueueEvaluationKernel2();
+
+    double getKernelElapsedTime();
+
 private:
     void printOpenclDeviceInfo();
     void checkError(cl_int result);
     void transposeData(Dataset* data, double** transposeDataset, double** transposeOutputs);
+    void transposeDataOut(Dataset* data, double** transposeDatasetOutput);
     const char *getErrorString(cl_int error);
 
 };

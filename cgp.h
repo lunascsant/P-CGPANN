@@ -17,7 +17,11 @@ void circuitGenerator(Chromosome* c, Parameters* params, int* seed);
 void evaluateCircuit(Chromosome* c, Dataset* data);
 void evaluateCircuitValidation(Chromosome* c, Dataset* data);
 
+void evaluateCircuitLinear(Chromosome* c, Dataset* data);
+void evaluateCircuitValidationLinear(Chromosome* c, Dataset* data);
+
 void runCircuit(Chromosome* c, Dataset* dataset, int index, int validation);
+void runCircuitLinear(Chromosome* c, Dataset* dataset, int index, int validation);
 
 void initializePopulation(Chromosome* pop, Parameters* p, int* seed);
 int evaluatePopulation(Chromosome* pop, Dataset* dataset, int validation);

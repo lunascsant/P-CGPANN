@@ -4,7 +4,7 @@
 #include "utils.h"
 #include "GPTime.h"
 #include "OCLConfig.h"
-
+#include "omp.h"
 
 int main(int argc, char** argv) {
     char* datasetFile = argv[1];
@@ -17,19 +17,7 @@ int main(int argc, char** argv) {
     Parameters *params;
     params = new Parameters;
 
-    int* seeds;
-    seeds = new int [NUM_INDIV];
-    srand(SEED);
-
-    /*random seeds used in parallel code*/
-    for(int i = 0; i < NUM_INDIV; i++){
-        seeds[i] = rand();
-    }
-
-    Chromosome executionBest;
-
     Dataset fullData;
-
     readDataset(params, &fullData, datasetFile);
 
     int trainSize, validSize, testSize;
@@ -46,6 +34,16 @@ int main(int argc, char** argv) {
     ocl->buildProgram(params, &fullData, "kernels\\kernel_split_data.cl");
     ocl->buildKernels();
 
+    int* seeds;
+    seeds = new int [ocl->maxLocalSize * NUM_INDIV];
+    srand(SEED);
+
+    /*random seeds used in parallel code*/
+    for(i = 0; i < ocl->maxLocalSize * NUM_INDIV; i++){
+        seeds[i] = rand();
+    }
+
+
     int* indexesData = new int[fullData.M];// save the index order given the data shuffle+folds generation
     for(aux = 0; aux < fullData.M; aux++){
         indexesData[aux] = aux;
@@ -53,16 +51,20 @@ int main(int argc, char** argv) {
     int* indexesDataInFolds = new int[fullData.M - (fullData.M % KFOLDS)];// save the indexes given the folds generation
 
     for(i = 0; i < 3; i++) {
-        for(aux = 0; aux < NUM_INDIV; aux++){
-            seeds[aux] = i + 50;
+        for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
+            seeds[aux] = aux + 50;
         }
 
         shuffleData(&fullData, indexesData, &seeds[0]);
         Dataset* folds = generateFolds(&fullData, indexesData, indexesDataInFolds);
-
-
+        int id;
+        //#pragma omp parallel for default(none), private(j, id), shared(i, params, folds, f_CGP, timeManager, seeds, ocl), schedule(dynamic), num_threads(10)
         for(j = 0; j < KFOLDS; j++){
-            std::cout << "(" << i << " " << j << ")" << std::endl;
+            //id = omp_get_thread_num();
+            //printf("%d: Hello World!\n", id);
+            printf("( %d %d )\n", i, j);
+
+            //std::cout << "(" << i << " " << j << ")" << std::endl;
 
             int testIndex = j;
             int indexesFolds[KFOLDS];
@@ -84,7 +86,8 @@ int main(int argc, char** argv) {
                 //Chromosome executionBest = PCGP_SeparateKernels(trainingData, validationData, params,  seeds);
 
 
-                executionBest = PCGP(trainingData, validationData, params, ocl, seeds);
+                Chromosome executionBest = PCGP(trainingData, validationData, params, ocl, seeds);
+
                 std::cout << "Test execution: " << std::endl;
 
                 std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
@@ -100,16 +103,19 @@ int main(int argc, char** argv) {
                 std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
 
             #else
-                executionBest = CGP(trainingData, validationData, params, seeds);
-                std::cout << "Test execution: " << std::endl;
+                Chromosome executionBest = CGP(trainingData, validationData, params, seeds);
+                //std::cout << "Test execution: " << std::endl;
                 std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
 
                 evaluateCircuit(&executionBest, testData);
+                printf("Test execution: %f ", executionBest.fitness);
 
-                std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
+                //std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
             #endif
             timeManager.getEndTime(Evolucao_T);
-            std::cout << "Evol time  = " << timeManager.getElapsedTime(Evolucao_T) << std::endl;
+            printf("Evol time: %f \n", timeManager.getElapsedTime(Evolucao_T));
+
+            //std::cout << "Evol time  = " << timeManager.getElapsedTime(Evolucao_T) << std::endl;
 
             fprintf(f_CGP, "%d,\t%d,\t%.4f\n", i, j, executionBest.fitness);
 
@@ -122,7 +128,7 @@ int main(int argc, char** argv) {
     timeManager.getEndTime(Total_T);
 
     //printCircuit(&best, params);
-    std::cout << "Best fitness  = " << executionBest.fitness << std::endl;
+    //std::cout << "Best fitness  = " << executionBest.fitness << std::endl;
 
     std::cout << "Total time  = " << timeManager.getElapsedTime(Total_T) << std::endl;
 

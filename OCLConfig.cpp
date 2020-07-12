@@ -53,8 +53,13 @@ void OCLConfig::printOpenclDeviceInfo(){
 
 void OCLConfig::allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int sizeTest){
     int result;
+    std::cout << "Allocating buffers... " << std::endl;
+
     ///Buffers
-    bufferSeeds = cl::Buffer(context, CL_MEM_READ_WRITE, NUM_INDIV * sizeof(int), nullptr,  &result);
+    bufferSeeds = cl::Buffer(context, CL_MEM_READ_WRITE, NUM_INDIV * maxLocalSize  * sizeof(int), nullptr,  &result);
+    checkError(result);
+
+    bufferDataOut      = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTrain * (p->N + p->O) * sizeof(double), nullptr,  &result);
     checkError(result);
 
     bufferDatasetTrain = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTrain * p->N * sizeof(double), nullptr,  &result);
@@ -88,12 +93,23 @@ void OCLConfig::allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int
     numPointsValid = sizeValid;
     numPointsTest = sizeTest;
     numPoints = numPointsTrain > numPointsValid ? numPointsTrain : numPointsValid;
-};
+
+    (transposeDatasetTrain) = new double [numPointsTrain * p->N];
+    (transposeOutputsTrain) = new double [numPointsTrain * p->O];
+
+    (transposeDatasetValid) = new double [numPointsValid * p->N];
+    (transposeOutputsValid) = new double [numPointsValid * p->O];
+
+    (transposeDatasetTest) = new double [numPointsTest * p->N];
+    (transposeOutputsTest) = new double [numPointsTest * p->O];
+
+    (transposeDatasetOutput) = new double [numPoints * (p->N + p->O)];
+}
 
 void OCLConfig::setNDRages() {
     //FOR GPU
 
-    std::cout << "Definindo NDRanges ...";
+    std::cout << "Setting NDRanges ..." << std::endl;
     if(numPointsTrain < maxLocalSize){
         localSizeTrain = numPointsTrain;
     }else{
@@ -130,10 +146,15 @@ void OCLConfig::setNDRages() {
     ///treino quanto de validação
     //localSizeAval = localSizeTrain > localSizeValid ? localSizeTrain : localSizeValid;
 
-    localSizeEvol = 1;
-    globalSizeEvol = NUM_INDIV;
+    if(MAX_NODES * MAX_ARITY < maxLocalSize){
+        localSizeEvol = MAX_NODES * MAX_ARITY;
+    }else{
+        localSizeEvol = maxLocalSize;
+    }
 
-    std::cout << "...fim." << std::endl;
+    //localSizeEvol = MAX_NODES * MAX_ARITY;
+    globalSizeEvol = localSizeEvol * NUM_INDIV;
+
 
 }
 
@@ -174,8 +195,8 @@ void OCLConfig::setCompileFlags(){
 }
 
 std::string OCLConfig::setProgramSource(Parameters* p, Dataset* fullData){
-    double* transposeDataset;
-    double* transposeOutput;
+    double* transposeDataset = new double [fullData->M * fullData->N];
+    double* transposeOutput = new double [fullData->M * fullData->O];
     transposeData(fullData, &transposeDataset, &transposeOutput);
 
     std::string datasetString = "{";
@@ -216,10 +237,13 @@ std::string OCLConfig::setProgramSource(Parameters* p, Dataset* fullData){
             "#define LOCAL_SIZE " + ToString( localSizeAval ) + "\n"+
             "#define LOCAL_SIZE_TRAIN " + ToString( localSizeTrain ) + "\n"+
             "#define LOCAL_SIZE_VALIDATION " + ToString( localSizeValid ) + "\n"+
-            "#define LOCAL_SIZE_TEST " + ToString( localSizeTest ) + "\n";// +
+            "#define LOCAL_SIZE_TEST " + ToString( localSizeTest ) + "\n" +
+            "#define LOCAL_SIZE_EVOL " + ToString( localSizeEvol ) + "\n";// +
             //"__constant double constDataset[" + ToString(fullData->M * fullData->N) + "] = " + datasetString + "\n" +
             //"__constant double constOutputs[" + ToString(fullData->M * fullData->O) + "] = " + outputString + "\n";
 
+    delete [] transposeDataset;
+    delete [] transposeOutput;
 
     return program_src;
 }
@@ -246,9 +270,27 @@ void OCLConfig::buildProgram(Parameters* p, Dataset* fullData, std::string sourc
 void OCLConfig::buildKernels(){
     int result;
     ///Kernels
-    //kernelEvolve = cl::Kernel(program, "evolve", &result);
-    //checkError(result);
 
+
+    kernelEvaluate = cl::Kernel(program, "evaluateTrainValidation", &result);
+    checkError(result);
+    kernelEvaluate.setArg(0, bufferDatasetTrain);
+    kernelEvaluate.setArg(1, bufferOutputsTrain);
+    kernelEvaluate.setArg(2, bufferDatasetValid);
+    kernelEvaluate.setArg(3, bufferOutputsValid);
+    kernelEvaluate.setArg(4, bufferFunctions);
+    kernelEvaluate.setArg(5, bufferPopulation);
+    kernelEvaluate.setArg(6, bufferBest);
+    kernelEvaluate.setArg(7, (int)localSizeAval * sizeof(double), nullptr);
+
+    /*
+    kernelEvaluate2 = cl::Kernel(program, "evaluate2", &result);
+    checkError(result);
+    kernelEvaluate2.setArg(0, bufferDataOut);
+    kernelEvaluate2.setArg(1, bufferFunctions);
+    kernelEvaluate2.setArg(2, bufferPopulation);
+    kernelEvaluate2.setArg(3, (int)localSizeAval * sizeof(double), nullptr);
+*/
 
     kernelTest = cl::Kernel(program, "evaluateTest", &result);
     checkError(result);
@@ -270,6 +312,14 @@ void OCLConfig::buildKernels(){
     kernelCGP.setArg(6, bufferPopulation);
     kernelCGP.setArg(7, bufferBest);
     kernelCGP.setArg(8, (int)localSizeAval * sizeof(double), nullptr);
+
+    kernelEvolve = cl::Kernel(program, "evolve", &result);
+    checkError(result);
+    kernelEvolve.setArg(0, bufferFunctions);
+    kernelEvolve.setArg(1, bufferSeeds);
+    kernelEvolve.setArg(2, bufferPopulation);
+    kernelEvolve.setArg(3, bufferBest);
+
 }
 
 void OCLConfig::transposeDatasets(Dataset* train, Dataset* valid, Dataset* test){
@@ -277,12 +327,15 @@ void OCLConfig::transposeDatasets(Dataset* train, Dataset* valid, Dataset* test)
     transposeData(train, &transposeDatasetTrain, &transposeOutputsTrain);
     transposeData(valid, &transposeDatasetValid, &transposeOutputsValid);
     transposeData(test, &transposeDatasetTest, &transposeOutputsTest);
+    transposeDataOut(train, &transposeDatasetOutput);
 }
 
-
 void OCLConfig::writeReadOnlyBufers(Parameters* p, int* seeds){
+    int result;
+    result = cmdQueue.enqueueWriteBuffer(bufferSeeds, CL_FALSE, 0, NUM_INDIV * maxLocalSize  * sizeof(int), seeds);
+    checkError(result);
 
-    cmdQueue.enqueueWriteBuffer(bufferSeeds, CL_FALSE, 0, NUM_INDIV * sizeof(int), seeds);
+    cmdQueue.enqueueWriteBuffer(bufferDataOut, CL_FALSE, 0, numPoints * (p->N + p->O) * sizeof(double), transposeDatasetOutput);
 
     cmdQueue.enqueueWriteBuffer(bufferDatasetTrain, CL_FALSE, 0, numPointsTrain * p->N * sizeof(double), transposeDatasetTrain);
     cmdQueue.enqueueWriteBuffer(bufferOutputsTrain, CL_FALSE, 0, numPointsTrain * p->O * sizeof(double), transposeOutputsTrain);
@@ -298,11 +351,31 @@ void OCLConfig::writeReadOnlyBufers(Parameters* p, int* seeds){
     cmdQueue.finish();
 }
 
+void OCLConfig::transposeDataOut(Dataset* data, double** transposeDatasetOut){
 
+    //(*transposeDatasetOut) = new double [data->M * (data->N + data->O)];
+    //transposição necessária para otimizar a execução no opencl com acessos sequenciais à memória
+    unsigned int pos = 0;
+    //std::cout << "Transpondo dados..." << std::endl;
+    for(int j = 0; j < data->N + data->O; ++j ){
+        for(int i = 0; i < data->M; ++i ){
+            if(j < data->N){
+                (*transposeDatasetOut)[pos++] = data->data[i][j];
+                //std::cout << (*transposeDatasetOut)[pos-1] << " ";
+            }else{
+                (*transposeDatasetOut)[pos++] = data->output[i][j - data->N];
+                //std::cout << (*transposeDatasetOut)[pos-1] << " ";
+            }
+
+        }
+        //std::cout << std::endl;
+    }
+
+}
 
 void OCLConfig::transposeData(Dataset* data, double** transposeDataset, double** transposeOutputs){
 
-    (*transposeDataset) = new double [data->M * data->N];
+    //(*transposeDataset) = new double [data->M * data->N];
     //transposição necessária para otimizar a execução no opencl com acessos sequenciais à memória
     unsigned int pos = 0;
     //std::cout << "Transpondo dados..." << std::endl;
@@ -312,7 +385,7 @@ void OCLConfig::transposeData(Dataset* data, double** transposeDataset, double**
         }
     }
 
-    (*transposeOutputs) = new double [data->M * data->O];
+    //(*transposeOutputs) = new double [data->M * data->O];
     //transposição necessária para otimizar a execução no opencl com acessos sequenciais à memória
     pos = 0;
     //std::cout << "Transpondo outputs..." << std::endl;
@@ -341,21 +414,48 @@ void OCLConfig::readPopulationBuffer(Chromosome* population){
 }
 
 void OCLConfig::readSeedsBuffer(int* seeds){
-    cmdQueue.enqueueReadBuffer(bufferSeeds, CL_FALSE, 0, NUM_INDIV * sizeof(int), seeds);
+    cmdQueue.enqueueReadBuffer(bufferSeeds, CL_FALSE, 0, NUM_INDIV * maxLocalSize  * sizeof(int), seeds);
 }
 
 void OCLConfig::finishCommandQueue(){
-    cmdQueue.finish();
+    int result = cmdQueue.finish();
+    checkError(result);
 }
 
 void OCLConfig::enqueueCGPKernel(){
-    int result = cmdQueue.enqueueNDRangeKernel(kernelCGP, cl::NullRange, cl::NDRange(globalSizeAval), cl::NDRange(localSizeAval));
+    int result = cmdQueue.enqueueNDRangeKernel(kernelCGP, cl::NullRange, cl::NDRange(globalSizeAval), cl::NDRange(localSizeAval),
+                                               nullptr, &e_tempo);
     checkError(result);
 }
 
 void OCLConfig::enqueueTestKernel(){
-    int result = cmdQueue.enqueueNDRangeKernel(kernelTest, cl::NullRange, cl::NDRange(globalSizeTest), cl::NDRange(localSizeTest));
+    int result = cmdQueue.enqueueNDRangeKernel(kernelTest, cl::NullRange, cl::NDRange(globalSizeTest), cl::NDRange(localSizeTest),
+                                               nullptr, &e_tempo);
     checkError(result);
+}
+
+void OCLConfig::enqueueEvolveKernel(){
+    int result = cmdQueue.enqueueNDRangeKernel(kernelEvolve, cl::NullRange, cl::NDRange(globalSizeEvol), cl::NDRange(localSizeEvol),
+                                               nullptr, &e_tempo);
+    checkError(result);
+}
+
+void OCLConfig::enqueueEvaluationKernel(){
+    int result = cmdQueue.enqueueNDRangeKernel(kernelEvaluate, cl::NullRange, cl::NDRange(globalSizeAval), cl::NDRange(localSizeAval),
+                                               nullptr, &e_tempo);
+    checkError(result);
+}
+/*
+void OCLConfig::enqueueEvaluationKernel2(){
+    int result = cmdQueue.enqueueNDRangeKernel(kernelEvaluate2, cl::NullRange, cl::NDRange(globalSizeAval), cl::NDRange(localSizeAval),
+                                               nullptr, &e_tempo);
+    checkError(result);
+}
+*/
+double OCLConfig::getKernelElapsedTime(){
+    e_tempo.getProfilingInfo(CL_PROFILING_COMMAND_START, &inicio);
+    e_tempo.getProfilingInfo(CL_PROFILING_COMMAND_END, &fim);
+    return ((fim-inicio)/1.0E9);
 }
 
 const char* OCLConfig::getErrorString(cl_int error) {
