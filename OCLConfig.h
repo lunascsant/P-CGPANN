@@ -83,16 +83,16 @@ public:
 
     cl_command_queue_properties commandQueueProperties;
 
-    double* transposeDatasetOutput;
+    float* transposeDatasetOutput;
 
-    double* transposeDatasetTrain;
-    double* transposeOutputsTrain;
+    float* transposeDatasetTrain;
+    float* transposeOutputsTrain;
 
-    double* transposeDatasetValid;
-    double* transposeOutputsValid;
+    float* transposeDatasetValid;
+    float* transposeOutputsValid;
 
-    double* transposeDatasetTest;
-    double* transposeOutputsTest;
+    float* transposeDatasetTest;
+    float* transposeOutputsTest;
 
 
     void allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int sizeTest);
@@ -127,8 +127,8 @@ public:
 private:
     void printOpenclDeviceInfo();
     void checkError(cl_int result);
-    void transposeData(Dataset* data, double** transposeDataset, double** transposeOutputs);
-    void transposeDataOut(Dataset* data, double** transposeDatasetOutput);
+    void transposeData(Dataset* data, float** transposeDataset, float** transposeOutputs);
+    void transposeDataOut(Dataset* data, float** transposeDatasetOutput);
     const char *getErrorString(cl_int error);
 
 };

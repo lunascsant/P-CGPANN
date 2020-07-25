@@ -1,0 +1,53 @@
+C:\Users\bruno\CLionProjects\P-CGPDE\cmake-build-debug\P-CGPDE.exe datasets\new_abalone.txt
+Lendo Dados Arquivo... datasets\new_abalone.txt
+Available Devices for Platform NVIDIA CUDA :
+[0]GeForce GTX 750 Ti
+        Type:   4
+        OpenCL: OpenCL C 1.2
+        Max Comp Un: 5
+        Max WrkGr Sz: 1024
+        Fp config: 191
+        Max Mem Alloc: 268435456
+        Local Mem Size: 49152
+        Max Const Size: 65536
+        Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base
+_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_n
+v_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_d3d10_sharing cl_khr_d3d10_sharing cl_nv_d3d11
+_sharing cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics
+Allocating buffers...
+Setting NDRanges ...
+Setting compile flags...
+Shuffling dataset...
+( 0 0 )
+Transpondo dados...
+Generation 0:
+Time: 0.250391
+Generation 100:
+Time: 14.453626
+Generation 200:
+Time: 28.690275
+Generation 300:
+Time: 42.743967
+Generation 400:
+Time: 56.658171
+Generation 500:
+Time: 70.617016
+Generation 600:
+Time: 84.633523
+Generation 700:
+Time: 98.609383
+Generation 800:
+Time: 112.590296
+Generation 900:
+Time: 126.560935
+Generation 1000:
+Time: 140.539949
+
+Test execution:
+0.230216 0.230216
+0.230216 0.230216
+Evol time: 143.102114
+( 0 1 )
+Transpondo dados...
+
+Process finished with exit code -1073741510 (0xC000013A: interrupted by Ctrl+C)

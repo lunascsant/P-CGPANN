@@ -42,7 +42,7 @@ void sortActiveArray(int *array, const int length) {
 void activateNodes(Chromosome* c, Parameters* p){
 
     int i, j;
-    int alreadyEvaluated[MAX_NODES] = {-1};
+    int alreadyEvaluated[MAX_NODES];
     for(i = 0; i < MAX_NODES; i++) {
         alreadyEvaluated[i] = -1;
         c->activeNodes[i] = MAX_NODES + 1;
@@ -107,7 +107,7 @@ void evaluateCircuit(Chromosome* c, Dataset* data) {
         runCircuit(c, data, i, 0);
         //setFitness(c, p, out[i], &fitness);
     }
-    c->fitness = c->fitness / (double) data->M;
+    c->fitness = c->fitness / (float) data->M;
 }
 
 void evaluateCircuitValidation(Chromosome* c, Dataset* data) {
@@ -117,7 +117,7 @@ void evaluateCircuitValidation(Chromosome* c, Dataset* data) {
         runCircuit(c, data, i, 1);
         //setFitness(c, p, out[i], &fitness);
     }
-    c->fitnessValidation = c->fitnessValidation / (double) data->M;
+    c->fitnessValidation = c->fitnessValidation / (float) data->M;
 }
 
 void evaluateCircuitLinear(Chromosome* c, Dataset* data) {
@@ -127,7 +127,7 @@ void evaluateCircuitLinear(Chromosome* c, Dataset* data) {
         runCircuitLinear(c, data, i, 0);
         //setFitness(c, p, out[i], &fitness);
     }
-    c->fitness = c->fitness / (double) data->M;
+    c->fitness = c->fitness / (float) data->M;
 }
 
 void evaluateCircuitValidationLinear(Chromosome* c, Dataset* data) {
@@ -137,12 +137,12 @@ void evaluateCircuitValidationLinear(Chromosome* c, Dataset* data) {
         runCircuitLinear(c, data, i, 1);
         //setFitness(c, p, out[i], &fitness);
     }
-    c->fitnessValidation = c->fitnessValidation / (double) data->M;
+    c->fitnessValidation = c->fitnessValidation / (float) data->M;
 }
 
-double executeFunction(Chromosome* c, int node, ExStack* exStack){
+float executeFunction(Chromosome* c, int node, ExStack* exStack){
     int i;
-    double result, sum;
+    float result, sum;
     unsigned int inputs = c->nodes[node].maxInputs;
 
     switch (c->nodes[node].function){
@@ -327,12 +327,12 @@ double executeFunction(Chromosome* c, int node, ExStack* exStack){
 void runCircuit(Chromosome* c, Dataset* dataset, int index, int validation){
 
     int i;
-    double maxPredicted = -DBL_MAX;
+    float maxPredicted = -DBL_MAX;
     int predictedClass = 0;
     int correctClass = 0;
 
-    double executionOut[MAX_OUTPUTS];
-    double alreadyEvaluated[MAX_NODES];
+    float executionOut[MAX_OUTPUTS];
+    float alreadyEvaluated[MAX_NODES];
     int inputsEvaluatedAux[MAX_NODES];
 
     for(i = 0; i < MAX_NODES; i++){
@@ -412,12 +412,12 @@ void runCircuit(Chromosome* c, Dataset* dataset, int index, int validation){
 void runCircuitLinear(Chromosome* c, Dataset* dataset, int index, int validation){
 
     int i, j, currentActive, activeInputs;
-    double maxPredicted = -DBL_MAX;
+    float maxPredicted = -DBL_MAX;
     int predictedClass = 0;
     int correctClass = 0;
 
-    double executionOut[MAX_OUTPUTS];
-    double alreadyEvaluated[MAX_NODES];
+    float executionOut[MAX_OUTPUTS];
+    float alreadyEvaluated[MAX_NODES];
 
     for(i = 0; i < MAX_NODES; i++){
         alreadyEvaluated[i] = -DBL_MAX;
@@ -446,11 +446,11 @@ void runCircuitLinear(Chromosome* c, Dataset* dataset, int index, int validation
 
         alreadyEvaluated[currentActive] = executeFunction(c, currentActive, &exStack);
 
-        /* deal with doubles becoming NAN */
+        /* deal with floats becoming NAN */
         if (std::isnan(alreadyEvaluated[currentActive]) != 0) {
             alreadyEvaluated[currentActive] = 0;
         }
-         /* prevent double form going to inf and -inf */
+         /* prevent float form going to inf and -inf */
         else if (std::isinf(alreadyEvaluated[currentActive]) != 0 ) {
 
             if (alreadyEvaluated[currentActive] > 0) {
@@ -471,27 +471,25 @@ void runCircuitLinear(Chromosome* c, Dataset* dataset, int index, int validation
         if(executionOut[i] > maxPredicted) {
             maxPredicted = executionOut[i];
             predictedClass = i;
+        } else {
+            maxPredicted = maxPredicted;
+            predictedClass = predictedClass;
         }
 
-        if(dataset->output[index][i] == 1.0) {
-            correctClass = i;
-        }
+        correctClass = (dataset->output[index][i] == 1.0) ? i : correctClass;
 
     }
 
-    if(predictedClass == correctClass) {
-        if(validation == 1){
-            (c->fitnessValidation)++;
-        } else {
-            (c->fitness)++;
-        }
-
+    if(validation == 1){
+        c->fitnessValidation = (predictedClass == correctClass) ? c->fitnessValidation+1 : c->fitnessValidation+0;
+    } else {
+        c->fitness = (predictedClass == correctClass) ? c->fitness+1 : c->fitness+0;
     }
 }
 
 int evaluatePopulation(Chromosome* pop, Dataset* dataset, int validation){
     int i, j;
-    double bestFitness = 0;
+    float bestFitness = 0;
     unsigned int bestActiveNodes = 999;
     int bestIndex = -1;
     if(validation == 1 ){

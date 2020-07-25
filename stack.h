@@ -15,13 +15,13 @@ typedef struct {
 
 typedef struct {
     int topIndex;
-    double info[MAX_NODES * MAX_ARITY];
+    float info[MAX_NODES * MAX_ARITY];
 } ExStack;
 
 void push(Stack* s, unsigned int info);
 unsigned int pop(Stack* s);
 
-void pushEx(ExStack* s, double info);
-double popEx(ExStack* s);
+void pushEx(ExStack* s, float info);
+float popEx(ExStack* s);
 
 #endif //PCGPDE_STACK_H

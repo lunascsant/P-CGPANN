@@ -45,9 +45,9 @@
 
 unsigned int randomFunction(Parameters *p, int *seed);
 unsigned int randomInput(Parameters *p, unsigned int index, int *seed);
-double randomConnectionWeight(Parameters *p, int *seed);
+float randomConnectionWeight(Parameters *p, int *seed);
 int randomInterval(int inf_bound, int sup_bound, int *seed);
-double randomProb(int *seed);
+float randomProb(int *seed);
 unsigned int randomOutputIndex(int* seed);
 unsigned int getFunctionInputs(unsigned int function);
 

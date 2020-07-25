@@ -25,16 +25,16 @@ unsigned int randomFunction(Parameters *p, int *seed) {
     return (rand2(seed) % (p->NUM_FUNCTIONS));
 }
 
-double randomConnectionWeight(Parameters *p, int *seed) {
-    return (((double) rand2(seed) / (double) (2147483647) ) * 2 * p->weightRange) - p->weightRange;
+float randomConnectionWeight(Parameters *p, int *seed) {
+    return (((float) rand2(seed) / (float) (2147483647) ) * 2 * p->weightRange) - p->weightRange;
 }
 
 int randomInterval(int inf_bound, int sup_bound, int *seed) {
     return rand2(seed) % (sup_bound - inf_bound + 1) + inf_bound;
 }
 
-double randomProb(int* seed){
-    return (double)rand2(seed) / 2147483647;//pown(2.0, 31);
+float randomProb(int* seed){
+    return (float)rand2(seed) / 2147483647;//pown(2.0, 31);
 }
 
 unsigned int getFunctionInputs(unsigned int function){
@@ -139,14 +139,14 @@ void readDataset(Parameters* params, Dataset* fulldata, char* filename){
     fulldata->N = N;
     fulldata->O = O;
 
-    (fulldata->data) = new double* [(M)];
+    (fulldata->data) = new float* [(M)];
     for(i = 0; i < (M); i++){
-        (fulldata->data)[i] = new double [(N)];
+        (fulldata->data)[i] = new float [(N)];
     }
 
-    (fulldata->output) = new double* [(M)];
+    (fulldata->output) = new float* [(M)];
     for(i = 0; i < (M); i++) {
-        (fulldata->output)[i] = new double[(O)];
+        (fulldata->output)[i] = new float[(O)];
     }
 
     (params->labels) = new char* [(N + O)];
@@ -281,13 +281,13 @@ Dataset* generateFolds(Dataset* data, int* indexesData, int* indexesDataInFolds)
     // allocate memory for the folds data
     for(i = 0; i < 10; i++) // for each fold
     {
-        folds[i].data = new double* [folds[i].M];
-        folds[i].output = new double* [folds[i].M];
+        folds[i].data = new float* [folds[i].M];
+        folds[i].output = new float* [folds[i].M];
 
         for(j = 0; j < folds[i].M; j++) // for each instance of each fold
         {
-            folds[i].data[j] = new double [folds[i].N];
-            folds[i].output[j] = new double [folds[i].O];
+            folds[i].data[j] = new float [folds[i].N];
+            folds[i].output[j] = new float [folds[i].O];
         }
     }
 
@@ -351,17 +351,17 @@ void shuffleData(Dataset* data, int* indexesData, int* seed) {
         indexesData[index1] = index2;
         indexesData[index2] = index1;
 
-        double* aux1_input = (double*) malloc(data->N * sizeof(double));
-        double* aux1_output = (double*) malloc(data->O * sizeof(double));
+        float* aux1_input = (float*) malloc(data->N * sizeof(float));
+        float* aux1_output = (float*) malloc(data->O * sizeof(float));
 
-        std::memcpy(aux1_input, data->data[index1], data->N * sizeof(double));
-        std::memcpy(aux1_output, data->output[index1], data->O * sizeof(double));
+        std::memcpy(aux1_input, data->data[index1], data->N * sizeof(float));
+        std::memcpy(aux1_output, data->output[index1], data->O * sizeof(float));
 
-        std::memcpy(data->data[index1], data->data[index2], data->N * sizeof(double));
-        std::memcpy(data->output[index1], data->output[index2], data->O * sizeof(double));
+        std::memcpy(data->data[index1], data->data[index2], data->N * sizeof(float));
+        std::memcpy(data->output[index1], data->output[index2], data->O * sizeof(float));
 
-        std::memcpy(data->data[index2], aux1_input, data->N * sizeof(double));
-        std::memcpy(data->output[index2], aux1_output, data->O * sizeof(double));
+        std::memcpy(data->data[index2], aux1_input, data->N * sizeof(float));
+        std::memcpy(data->output[index2], aux1_output, data->O * sizeof(float));
 
         free(aux1_input);
         free(aux1_output);
@@ -381,12 +381,12 @@ Dataset* getSelectedDataset(Dataset* folds, int* indexes, int index_start, int i
         newDataset->M += folds[indexes[i]].M;
     }
 
-    (newDataset->data) = new double* [newDataset->M];
-    (newDataset->output) = new double* [newDataset->M];
+    (newDataset->data) = new float* [newDataset->M];
+    (newDataset->output) = new float* [newDataset->M];
 
     for(int i = 0; i < newDataset->M; i++){
-        (newDataset->data)[i] = new double [newDataset->N];
-        (newDataset->output)[i] = new double[newDataset->O];
+        (newDataset->data)[i] = new float [newDataset->N];
+        (newDataset->output)[i] = new float[newDataset->O];
     }
 
     int l = 0;

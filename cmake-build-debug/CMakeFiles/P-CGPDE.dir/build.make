@@ -60,85 +60,85 @@ CMakeFiles/P-CGPDE.dir/main.cpp.obj: CMakeFiles/P-CGPDE.dir/flags.make
 CMakeFiles/P-CGPDE.dir/main.cpp.obj: CMakeFiles/P-CGPDE.dir/includes_CXX.rsp
 CMakeFiles/P-CGPDE.dir/main.cpp.obj: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\CLionProjects\P-CGPDE\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/P-CGPDE.dir/main.cpp.obj"
-	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\P-CGPDE.dir\main.cpp.obj -c C:\Users\bruno\CLionProjects\P-CGPDE\main.cpp
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\P-CGPDE.dir\main.cpp.obj -c C:\Users\bruno\CLionProjects\P-CGPDE\main.cpp
 
 CMakeFiles/P-CGPDE.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/P-CGPDE.dir/main.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\bruno\CLionProjects\P-CGPDE\main.cpp > CMakeFiles\P-CGPDE.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\bruno\CLionProjects\P-CGPDE\main.cpp > CMakeFiles\P-CGPDE.dir\main.cpp.i
 
 CMakeFiles/P-CGPDE.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/P-CGPDE.dir/main.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bruno\CLionProjects\P-CGPDE\main.cpp -o CMakeFiles\P-CGPDE.dir\main.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bruno\CLionProjects\P-CGPDE\main.cpp -o CMakeFiles\P-CGPDE.dir\main.cpp.s
 
 CMakeFiles/P-CGPDE.dir/cgp.cpp.obj: CMakeFiles/P-CGPDE.dir/flags.make
 CMakeFiles/P-CGPDE.dir/cgp.cpp.obj: CMakeFiles/P-CGPDE.dir/includes_CXX.rsp
 CMakeFiles/P-CGPDE.dir/cgp.cpp.obj: ../cgp.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\CLionProjects\P-CGPDE\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/P-CGPDE.dir/cgp.cpp.obj"
-	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\P-CGPDE.dir\cgp.cpp.obj -c C:\Users\bruno\CLionProjects\P-CGPDE\cgp.cpp
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\P-CGPDE.dir\cgp.cpp.obj -c C:\Users\bruno\CLionProjects\P-CGPDE\cgp.cpp
 
 CMakeFiles/P-CGPDE.dir/cgp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/P-CGPDE.dir/cgp.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\bruno\CLionProjects\P-CGPDE\cgp.cpp > CMakeFiles\P-CGPDE.dir\cgp.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\bruno\CLionProjects\P-CGPDE\cgp.cpp > CMakeFiles\P-CGPDE.dir\cgp.cpp.i
 
 CMakeFiles/P-CGPDE.dir/cgp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/P-CGPDE.dir/cgp.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bruno\CLionProjects\P-CGPDE\cgp.cpp -o CMakeFiles\P-CGPDE.dir\cgp.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bruno\CLionProjects\P-CGPDE\cgp.cpp -o CMakeFiles\P-CGPDE.dir\cgp.cpp.s
 
 CMakeFiles/P-CGPDE.dir/utils.cpp.obj: CMakeFiles/P-CGPDE.dir/flags.make
 CMakeFiles/P-CGPDE.dir/utils.cpp.obj: CMakeFiles/P-CGPDE.dir/includes_CXX.rsp
 CMakeFiles/P-CGPDE.dir/utils.cpp.obj: ../utils.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\CLionProjects\P-CGPDE\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/P-CGPDE.dir/utils.cpp.obj"
-	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\P-CGPDE.dir\utils.cpp.obj -c C:\Users\bruno\CLionProjects\P-CGPDE\utils.cpp
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\P-CGPDE.dir\utils.cpp.obj -c C:\Users\bruno\CLionProjects\P-CGPDE\utils.cpp
 
 CMakeFiles/P-CGPDE.dir/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/P-CGPDE.dir/utils.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\bruno\CLionProjects\P-CGPDE\utils.cpp > CMakeFiles\P-CGPDE.dir\utils.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\bruno\CLionProjects\P-CGPDE\utils.cpp > CMakeFiles\P-CGPDE.dir\utils.cpp.i
 
 CMakeFiles/P-CGPDE.dir/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/P-CGPDE.dir/utils.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bruno\CLionProjects\P-CGPDE\utils.cpp -o CMakeFiles\P-CGPDE.dir\utils.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bruno\CLionProjects\P-CGPDE\utils.cpp -o CMakeFiles\P-CGPDE.dir\utils.cpp.s
 
 CMakeFiles/P-CGPDE.dir/stack.cpp.obj: CMakeFiles/P-CGPDE.dir/flags.make
 CMakeFiles/P-CGPDE.dir/stack.cpp.obj: CMakeFiles/P-CGPDE.dir/includes_CXX.rsp
 CMakeFiles/P-CGPDE.dir/stack.cpp.obj: ../stack.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\CLionProjects\P-CGPDE\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/P-CGPDE.dir/stack.cpp.obj"
-	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\P-CGPDE.dir\stack.cpp.obj -c C:\Users\bruno\CLionProjects\P-CGPDE\stack.cpp
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\P-CGPDE.dir\stack.cpp.obj -c C:\Users\bruno\CLionProjects\P-CGPDE\stack.cpp
 
 CMakeFiles/P-CGPDE.dir/stack.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/P-CGPDE.dir/stack.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\bruno\CLionProjects\P-CGPDE\stack.cpp > CMakeFiles\P-CGPDE.dir\stack.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\bruno\CLionProjects\P-CGPDE\stack.cpp > CMakeFiles\P-CGPDE.dir\stack.cpp.i
 
 CMakeFiles/P-CGPDE.dir/stack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/P-CGPDE.dir/stack.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bruno\CLionProjects\P-CGPDE\stack.cpp -o CMakeFiles\P-CGPDE.dir\stack.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bruno\CLionProjects\P-CGPDE\stack.cpp -o CMakeFiles\P-CGPDE.dir\stack.cpp.s
 
 CMakeFiles/P-CGPDE.dir/GPTime.cpp.obj: CMakeFiles/P-CGPDE.dir/flags.make
 CMakeFiles/P-CGPDE.dir/GPTime.cpp.obj: CMakeFiles/P-CGPDE.dir/includes_CXX.rsp
 CMakeFiles/P-CGPDE.dir/GPTime.cpp.obj: ../GPTime.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\CLionProjects\P-CGPDE\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/P-CGPDE.dir/GPTime.cpp.obj"
-	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\P-CGPDE.dir\GPTime.cpp.obj -c C:\Users\bruno\CLionProjects\P-CGPDE\GPTime.cpp
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\P-CGPDE.dir\GPTime.cpp.obj -c C:\Users\bruno\CLionProjects\P-CGPDE\GPTime.cpp
 
 CMakeFiles/P-CGPDE.dir/GPTime.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/P-CGPDE.dir/GPTime.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\bruno\CLionProjects\P-CGPDE\GPTime.cpp > CMakeFiles\P-CGPDE.dir\GPTime.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\bruno\CLionProjects\P-CGPDE\GPTime.cpp > CMakeFiles\P-CGPDE.dir\GPTime.cpp.i
 
 CMakeFiles/P-CGPDE.dir/GPTime.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/P-CGPDE.dir/GPTime.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bruno\CLionProjects\P-CGPDE\GPTime.cpp -o CMakeFiles\P-CGPDE.dir\GPTime.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bruno\CLionProjects\P-CGPDE\GPTime.cpp -o CMakeFiles\P-CGPDE.dir\GPTime.cpp.s
 
 CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.obj: CMakeFiles/P-CGPDE.dir/flags.make
 CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.obj: CMakeFiles/P-CGPDE.dir/includes_CXX.rsp
 CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.obj: ../OCLConfig.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\CLionProjects\P-CGPDE\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.obj"
-	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\P-CGPDE.dir\OCLConfig.cpp.obj -c C:\Users\bruno\CLionProjects\P-CGPDE\OCLConfig.cpp
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\P-CGPDE.dir\OCLConfig.cpp.obj -c C:\Users\bruno\CLionProjects\P-CGPDE\OCLConfig.cpp
 
 CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\bruno\CLionProjects\P-CGPDE\OCLConfig.cpp > CMakeFiles\P-CGPDE.dir\OCLConfig.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\bruno\CLionProjects\P-CGPDE\OCLConfig.cpp > CMakeFiles\P-CGPDE.dir\OCLConfig.cpp.i
 
 CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bruno\CLionProjects\P-CGPDE\OCLConfig.cpp -o CMakeFiles\P-CGPDE.dir\OCLConfig.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bruno\CLionProjects\P-CGPDE\OCLConfig.cpp -o CMakeFiles\P-CGPDE.dir\OCLConfig.cpp.s
 
 # Object files for target P-CGPDE
 P__CGPDE_OBJECTS = \

@@ -59,25 +59,25 @@ void OCLConfig::allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int
     bufferSeeds = cl::Buffer(context, CL_MEM_READ_WRITE, NUM_INDIV * maxLocalSize  * sizeof(int), nullptr,  &result);
     checkError(result);
 
-    bufferDataOut      = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTrain * (p->N + p->O) * sizeof(double), nullptr,  &result);
+    bufferDataOut      = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTrain * (p->N + p->O) * sizeof(float), nullptr,  &result);
     checkError(result);
 
-    bufferDatasetTrain = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTrain * p->N * sizeof(double), nullptr,  &result);
+    bufferDatasetTrain = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTrain * p->N * sizeof(float), nullptr,  &result);
     checkError(result);
 
-    bufferOutputsTrain = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTrain * p->O * sizeof(double), nullptr,  &result);
+    bufferOutputsTrain = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTrain * p->O * sizeof(float), nullptr,  &result);
     checkError(result);
 
-    bufferDatasetValid = cl::Buffer(context, CL_MEM_READ_ONLY, sizeValid * p->N * sizeof(double), nullptr,  &result);
+    bufferDatasetValid = cl::Buffer(context, CL_MEM_READ_ONLY, sizeValid * p->N * sizeof(float), nullptr,  &result);
     checkError(result);
 
-    bufferOutputsValid = cl::Buffer(context, CL_MEM_READ_ONLY, sizeValid * p->O * sizeof(double), nullptr,  &result);
+    bufferOutputsValid = cl::Buffer(context, CL_MEM_READ_ONLY, sizeValid * p->O * sizeof(float), nullptr,  &result);
     checkError(result);
 
-    bufferDatasetTest = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTest * p->N * sizeof(double), nullptr,  &result);
+    bufferDatasetTest = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTest * p->N * sizeof(float), nullptr,  &result);
     checkError(result);
 
-    bufferOutputsTest = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTest * p->O * sizeof(double), nullptr,  &result);
+    bufferOutputsTest = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTest * p->O * sizeof(float), nullptr,  &result);
     checkError(result);
 
     bufferFunctions = cl::Buffer(context, CL_MEM_READ_ONLY, ((p->NUM_FUNCTIONS)) * sizeof(unsigned int), nullptr,  &result);
@@ -94,16 +94,16 @@ void OCLConfig::allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int
     numPointsTest = sizeTest;
     numPoints = numPointsTrain > numPointsValid ? numPointsTrain : numPointsValid;
 
-    (transposeDatasetTrain) = new double [numPointsTrain * p->N];
-    (transposeOutputsTrain) = new double [numPointsTrain * p->O];
+    (transposeDatasetTrain) = new float [numPointsTrain * p->N];
+    (transposeOutputsTrain) = new float [numPointsTrain * p->O];
 
-    (transposeDatasetValid) = new double [numPointsValid * p->N];
-    (transposeOutputsValid) = new double [numPointsValid * p->O];
+    (transposeDatasetValid) = new float [numPointsValid * p->N];
+    (transposeOutputsValid) = new float [numPointsValid * p->O];
 
-    (transposeDatasetTest) = new double [numPointsTest * p->N];
-    (transposeOutputsTest) = new double [numPointsTest * p->O];
+    (transposeDatasetTest) = new float [numPointsTest * p->N];
+    (transposeOutputsTest) = new float [numPointsTest * p->O];
 
-    (transposeDatasetOutput) = new double [numPoints * (p->N + p->O)];
+    (transposeDatasetOutput) = new float [numPoints * (p->N + p->O)];
 }
 
 void OCLConfig::setNDRages() {
@@ -195,8 +195,8 @@ void OCLConfig::setCompileFlags(){
 }
 
 std::string OCLConfig::setProgramSource(Parameters* p, Dataset* fullData){
-    double* transposeDataset = new double [fullData->M * fullData->N];
-    double* transposeOutput = new double [fullData->M * fullData->O];
+    float* transposeDataset = new float [fullData->M * fullData->N];
+    float* transposeOutput = new float [fullData->M * fullData->O];
     transposeData(fullData, &transposeDataset, &transposeOutput);
 
     std::string datasetString = "{";
@@ -239,8 +239,8 @@ std::string OCLConfig::setProgramSource(Parameters* p, Dataset* fullData){
             "#define LOCAL_SIZE_VALIDATION " + ToString( localSizeValid ) + "\n"+
             "#define LOCAL_SIZE_TEST " + ToString( localSizeTest ) + "\n" +
             "#define LOCAL_SIZE_EVOL " + ToString( localSizeEvol ) + "\n";// +
-            //"__constant double constDataset[" + ToString(fullData->M * fullData->N) + "] = " + datasetString + "\n" +
-            //"__constant double constOutputs[" + ToString(fullData->M * fullData->O) + "] = " + outputString + "\n";
+            //"__constant float constDataset[" + ToString(fullData->M * fullData->N) + "] = " + datasetString + "\n" +
+            //"__constant float constOutputs[" + ToString(fullData->M * fullData->O) + "] = " + outputString + "\n";
 
     delete [] transposeDataset;
     delete [] transposeOutput;
@@ -281,7 +281,7 @@ void OCLConfig::buildKernels(){
     kernelEvaluate.setArg(4, bufferFunctions);
     kernelEvaluate.setArg(5, bufferPopulation);
     kernelEvaluate.setArg(6, bufferBest);
-    kernelEvaluate.setArg(7, (int)localSizeAval * sizeof(double), nullptr);
+    kernelEvaluate.setArg(7, (int)localSizeAval * sizeof(float), nullptr);
 
     /*
     kernelEvaluate2 = cl::Kernel(program, "evaluate2", &result);
@@ -289,7 +289,7 @@ void OCLConfig::buildKernels(){
     kernelEvaluate2.setArg(0, bufferDataOut);
     kernelEvaluate2.setArg(1, bufferFunctions);
     kernelEvaluate2.setArg(2, bufferPopulation);
-    kernelEvaluate2.setArg(3, (int)localSizeAval * sizeof(double), nullptr);
+    kernelEvaluate2.setArg(3, (int)localSizeAval * sizeof(float), nullptr);
 */
 
     kernelTest = cl::Kernel(program, "evaluateTest", &result);
@@ -298,7 +298,7 @@ void OCLConfig::buildKernels(){
     kernelTest.setArg(1, bufferOutputsTest);
     kernelTest.setArg(2, bufferFunctions);
     kernelTest.setArg(3, bufferBest);
-    kernelTest.setArg(4, (int)localSizeTest * sizeof(double), nullptr);
+    kernelTest.setArg(4, (int)localSizeTest * sizeof(float), nullptr);
 
     kernelCGP = cl::Kernel(program, "CGP", &result);
     checkError(result);
@@ -311,7 +311,7 @@ void OCLConfig::buildKernels(){
     kernelCGP.setArg(5, bufferSeeds);
     kernelCGP.setArg(6, bufferPopulation);
     kernelCGP.setArg(7, bufferBest);
-    kernelCGP.setArg(8, (int)localSizeAval * sizeof(double), nullptr);
+    kernelCGP.setArg(8, (int)localSizeAval * sizeof(float), nullptr);
 
     kernelEvolve = cl::Kernel(program, "evolve", &result);
     checkError(result);
@@ -335,25 +335,25 @@ void OCLConfig::writeReadOnlyBufers(Parameters* p, int* seeds){
     result = cmdQueue.enqueueWriteBuffer(bufferSeeds, CL_FALSE, 0, NUM_INDIV * maxLocalSize  * sizeof(int), seeds);
     checkError(result);
 
-    cmdQueue.enqueueWriteBuffer(bufferDataOut, CL_FALSE, 0, numPoints * (p->N + p->O) * sizeof(double), transposeDatasetOutput);
+    cmdQueue.enqueueWriteBuffer(bufferDataOut, CL_FALSE, 0, numPoints * (p->N + p->O) * sizeof(float), transposeDatasetOutput);
 
-    cmdQueue.enqueueWriteBuffer(bufferDatasetTrain, CL_FALSE, 0, numPointsTrain * p->N * sizeof(double), transposeDatasetTrain);
-    cmdQueue.enqueueWriteBuffer(bufferOutputsTrain, CL_FALSE, 0, numPointsTrain * p->O * sizeof(double), transposeOutputsTrain);
+    cmdQueue.enqueueWriteBuffer(bufferDatasetTrain, CL_FALSE, 0, numPointsTrain * p->N * sizeof(float), transposeDatasetTrain);
+    cmdQueue.enqueueWriteBuffer(bufferOutputsTrain, CL_FALSE, 0, numPointsTrain * p->O * sizeof(float), transposeOutputsTrain);
 
-    cmdQueue.enqueueWriteBuffer(bufferDatasetValid, CL_FALSE, 0, numPointsValid * p->N * sizeof(double), transposeDatasetValid);
-    cmdQueue.enqueueWriteBuffer(bufferOutputsValid, CL_FALSE, 0, numPointsValid * p->O * sizeof(double), transposeOutputsValid);
+    cmdQueue.enqueueWriteBuffer(bufferDatasetValid, CL_FALSE, 0, numPointsValid * p->N * sizeof(float), transposeDatasetValid);
+    cmdQueue.enqueueWriteBuffer(bufferOutputsValid, CL_FALSE, 0, numPointsValid * p->O * sizeof(float), transposeOutputsValid);
 
-    cmdQueue.enqueueWriteBuffer(bufferDatasetTest, CL_FALSE, 0, numPointsTest * p->N * sizeof(double), transposeDatasetTest);
-    cmdQueue.enqueueWriteBuffer(bufferOutputsTest, CL_FALSE, 0, numPointsTest * p->O * sizeof(double), transposeOutputsTest);
+    cmdQueue.enqueueWriteBuffer(bufferDatasetTest, CL_FALSE, 0, numPointsTest * p->N * sizeof(float), transposeDatasetTest);
+    cmdQueue.enqueueWriteBuffer(bufferOutputsTest, CL_FALSE, 0, numPointsTest * p->O * sizeof(float), transposeOutputsTest);
 
     cmdQueue.enqueueWriteBuffer(bufferFunctions, CL_FALSE, 0, (p->NUM_FUNCTIONS) * sizeof(unsigned int), p->functionSet);
 
     cmdQueue.finish();
 }
 
-void OCLConfig::transposeDataOut(Dataset* data, double** transposeDatasetOut){
+void OCLConfig::transposeDataOut(Dataset* data, float** transposeDatasetOut){
 
-    //(*transposeDatasetOut) = new double [data->M * (data->N + data->O)];
+    //(*transposeDatasetOut) = new float [data->M * (data->N + data->O)];
     //transposição necessária para otimizar a execução no opencl com acessos sequenciais à memória
     unsigned int pos = 0;
     //std::cout << "Transpondo dados..." << std::endl;
@@ -373,9 +373,9 @@ void OCLConfig::transposeDataOut(Dataset* data, double** transposeDatasetOut){
 
 }
 
-void OCLConfig::transposeData(Dataset* data, double** transposeDataset, double** transposeOutputs){
+void OCLConfig::transposeData(Dataset* data, float** transposeDataset, float** transposeOutputs){
 
-    //(*transposeDataset) = new double [data->M * data->N];
+    //(*transposeDataset) = new float [data->M * data->N];
     //transposição necessária para otimizar a execução no opencl com acessos sequenciais à memória
     unsigned int pos = 0;
     //std::cout << "Transpondo dados..." << std::endl;
@@ -385,7 +385,7 @@ void OCLConfig::transposeData(Dataset* data, double** transposeDataset, double**
         }
     }
 
-    //(*transposeOutputs) = new double [data->M * data->O];
+    //(*transposeOutputs) = new float [data->M * data->O];
     //transposição necessária para otimizar a execução no opencl com acessos sequenciais à memória
     pos = 0;
     //std::cout << "Transpondo outputs..." << std::endl;

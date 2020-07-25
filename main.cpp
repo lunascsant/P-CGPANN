@@ -4,7 +4,6 @@
 #include "utils.h"
 #include "GPTime.h"
 #include "OCLConfig.h"
-#include "omp.h"
 
 int main(int argc, char** argv) {
     char* datasetFile = argv[1];

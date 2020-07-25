@@ -46,7 +46,7 @@
 /** Graph parameters */
 #define MAX_NODES 500
 #define MAX_NODES_SIZE (3 * MAX_NODES)
-#define MAX_OUTPUTS 2
+#define MAX_OUTPUTS 3
 #define MAX_ARITY 20
 
 
@@ -64,7 +64,7 @@
 #endif // PROB_MUT
 
 
-#define NUM_GENERATIONS 500
+#define NUM_GENERATIONS 1001
 #define NUM_EVALUATIONS 2.40e+007
 
 
@@ -99,10 +99,10 @@ typedef struct
     //unsigned int inputsEvaluated;
     unsigned int function;
     unsigned int maxInputs;
-    //double inputsOutputs[MAX_ARITY];
+    //float inputsOutputs[MAX_ARITY];
     unsigned int inputs[MAX_ARITY];
-    double inputsWeight[MAX_ARITY];
-    //double output;
+    float inputsWeight[MAX_ARITY];
+    //float output;
     int active;
 
 } Node;
@@ -113,8 +113,8 @@ typedef struct
     unsigned int output[MAX_OUTPUTS];
     int activeNodes[MAX_NODES];
     unsigned int numActiveNodes;
-    double fitness;
-    double fitnessValidation;
+    float fitness;
+    float fitnessValidation;
 } Chromosome;
 
 
@@ -129,7 +129,7 @@ typedef struct
     //unsigned int* maxFunctionInputs;
     //unsigned int* inputVariablesSet;
 
-    double weightRange;
+    float weightRange;
     char** labels;
 } Parameters;
 
@@ -142,8 +142,8 @@ typedef struct
     /** Number of entries */
     unsigned int M;
 
-    double** data;
-    double** output;
+    float** data;
+    float** output;
 } Dataset;
 
 #endif //PCGP_CONSTANTS_H
