@@ -95,7 +95,8 @@ unsigned NextPowerOf2( unsigned n ){
 }
 
 std::string ToString( double t ){
-    std::stringstream ss; ss << std::setprecision(32) << t; return ss.str();
+    std::stringstream ss;
+    ss << std::setprecision(32) << t; return ss.str();
 }
 
 void readDataset(Parameters* params, Dataset* fulldata, char* filename){

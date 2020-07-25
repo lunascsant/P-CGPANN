@@ -1,3 +1,1 @@
-C:\Users\bruno\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\201.7846.88\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\P-CGPDE.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\P-CGPDE.dir/objects.a @CMakeFiles\P-CGPDE.dir\objects1.rsp
-C:\MinGW\bin\g++.exe  -static-libstdc++ -static-libgcc -g   -Wl,--whole-archive CMakeFiles\P-CGPDE.dir/objects.a -Wl,--no-whole-archive  -o P-CGPDE.exe -Wl,--out-implib,libP-CGPDE.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\P-CGPDE.dir\linklibs.rsp
+/usr/bin/g++   -m32 -static-libstdc++ -static-libgcc -g   CMakeFiles/P-CGPDE.dir/main.cpp.o CMakeFiles/P-CGPDE.dir/cgp.cpp.o CMakeFiles/P-CGPDE.dir/utils.cpp.o CMakeFiles/P-CGPDE.dir/stack.cpp.o CMakeFiles/P-CGPDE.dir/GPTime.cpp.o CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.o  -o P-CGPDE   -L/home/bmarcosps/multi2sim-5.0/lib/.libs  -Wl,-rpath,/home/bmarcosps/multi2sim-5.0/lib/.libs -lm2s-opencl 

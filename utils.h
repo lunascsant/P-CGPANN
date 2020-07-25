@@ -33,7 +33,7 @@
 
 #define CL_HPP_ENABLE_EXCEPTIONS
 
-#include <CL/cl.hpp>
+#include <CL/cl.h>
 
 
 #define GPU_PLATFORM 0

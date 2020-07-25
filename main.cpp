@@ -7,9 +7,11 @@
 
 int main(int argc, char** argv) {
     char* datasetFile = argv[1];
-    FILE *f_CGP = fopen("./results/cgpann.txt", "w");
-    fprintf(f_CGP, "i,\tj,\taccuracy\n");
+    //FILE *f_CGP = fopen("./results/cgpann.txt", "w");
+    //fprintf(f_CGP, "i,\tj,\taccuracy\n");
+    std::cout << argv[1] <<std::endl;
 
+    std::cout << "START" <<std::endl;
     GPTime timeManager(4);
     timeManager.getStartTime(Total_T);
 
@@ -25,12 +27,12 @@ int main(int argc, char** argv) {
     int i, j, aux;
 
     OCLConfig* ocl = new OCLConfig();
-
+    ocl->printOpenclDeviceInfo();
     ocl->allocateBuffers(params, trainSize, validSize, testSize);
     ocl->setNDRages();
     ocl->setCompileFlags();
     //ocl->setProgramSource(params, &fullData);
-    ocl->buildProgram(params, &fullData, "kernels\\kernel_split_data.cl");
+    ocl->buildProgram(params, &fullData, "./kernels/kernel_split_data.cl");
     ocl->buildKernels();
 
     int* seeds;
@@ -116,7 +118,7 @@ int main(int argc, char** argv) {
 
             //std::cout << "Evol time  = " << timeManager.getElapsedTime(Evolucao_T) << std::endl;
 
-            fprintf(f_CGP, "%d,\t%d,\t%.4f\n", i, j, executionBest.fitness);
+            //fprintf(f_CGP, "%d,\t%d,\t%.4f\n", i, j, executionBest.fitness);
 
         }
 

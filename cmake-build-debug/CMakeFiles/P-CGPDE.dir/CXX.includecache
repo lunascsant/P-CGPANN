@@ -6,125 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl.h
-OpenCL/cl_platform.h
--
-CL/cl_platform.h
--
-
-C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl.hpp
-malloc.h
--
-CL/cl_d3d10.h
--
-CL/cl_dx9_media_sharing.h
--
-intrin.h
--
-CL/cl_ext.h
--
-OpenCL/opencl.h
--
-CL/opencl.h
--
-atomic
--
-utility
--
-limits
--
-iterator
--
-exception
--
-vector
--
-string
--
-alloca.h
--
-cstring
--
-
-C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_d3d10.h
-d3d10.h
--
-CL/cl.h
--
-CL/cl_platform.h
--
-
-C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_dx9_media_sharing.h
-CL/cl.h
--
-CL/cl_platform.h
--
-d3d9.h
--
-
-C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_ext.h
-OpenCL/cl.h
--
-AvailabilityMacros.h
--
-CL/cl.h
--
-
-C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_gl.h
-OpenCL/cl.h
--
-CL/cl.h
--
-
-C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_gl_ext.h
-OpenCL/cl_gl.h
--
-CL/cl_gl.h
--
-
-C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/cl_platform.h
-AvailabilityMacros.h
--
+/home/bmarcosps/multi2sim-5.0/runtime/include/CL/cl.h
 stdint.h
 -
 stddef.h
 -
-altivec.h
--
-intrin.h
--
-xmmintrin.h
--
-intrin.h
--
-emmintrin.h
--
-mmintrin.h
--
-intrin.h
--
-immintrin.h
--
 
-C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.0/include/CL/opencl.h
-OpenCL/cl.h
--
-OpenCL/cl_gl.h
--
-OpenCL/cl_gl_ext.h
--
-OpenCL/cl_ext.h
--
-CL/cl.h
--
-CL/cl_gl.h
--
-CL/cl_gl_ext.h
--
-CL/cl_ext.h
--
-
-C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/GPTime.h
 vector
 -
 iostream
@@ -132,43 +20,39 @@ iostream
 sys/time.h
 -
 
-C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.cpp
-OCLConfig.h
-C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
-
-C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
 constants.h
-C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/constants.h
 utils.h
-C:/Users/bruno/CLionProjects/P-CGPDE/utils.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/utils.h
 
-C:/Users/bruno/CLionProjects/P-CGPDE/cgp.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/cgp.h
 utils.h
-C:/Users/bruno/CLionProjects/P-CGPDE/utils.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/utils.h
 stack.h
-C:/Users/bruno/CLionProjects/P-CGPDE/stack.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/stack.h
 OCLConfig.h
-C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
 
-C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/constants.h
 
-C:/Users/bruno/CLionProjects/P-CGPDE/main.cpp
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/main.cpp
 iostream
 -
 cgp.h
-C:/Users/bruno/CLionProjects/P-CGPDE/cgp.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/cgp.h
 utils.h
-C:/Users/bruno/CLionProjects/P-CGPDE/utils.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/utils.h
 GPTime.h
-C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/GPTime.h
 OCLConfig.h
-C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
 
-C:/Users/bruno/CLionProjects/P-CGPDE/stack.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/stack.h
 constants.h
-C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/constants.h
 
-C:/Users/bruno/CLionProjects/P-CGPDE/utils.h
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/utils.h
 cstdio
 -
 cstdlib
@@ -202,7 +86,7 @@ fstream
 algorithm
 -
 constants.h
-C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
-CL/cl.hpp
+/mnt/c/Users/bruno/CLionProjects/P-CGPDE/constants.h
+CL/cl.h
 -
 

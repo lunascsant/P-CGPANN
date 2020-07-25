@@ -1,7 +1,7 @@
 void evaluateCircuitParallel(__global Chromosome* circ,
-                            __constant double* data, 
-                            __constant double* out, 
-                            __local double* error) {
+                            __constant float* data, 
+                            __constant float* out, 
+                            __local float* error) {
     
     
     __private Chromosome c = (*circ);      
@@ -12,7 +12,7 @@ void evaluateCircuitParallel(__global Chromosome* circ,
     int group_id = get_group_id(0);
 
     error[local_id] = 0.0f;
-    double num, div;
+    float num, div;
 
     #ifndef NUM_POINTS_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
    /* When we know that NUM_POINTS is divisible by LOCAL_SIZE then we can avoid a
@@ -21,18 +21,18 @@ void evaluateCircuitParallel(__global Chromosome* circ,
     for(k = 0; k < (M/LOCAL_SIZE) ; k++){
 
     #else
-        for(k = 0; k < ceil( M/ (double)LOCAL_SIZE ) ; k++){
+        for(k = 0; k < ceil( M/ (float)LOCAL_SIZE ) ; k++){
             
             if( k * LOCAL_SIZE + local_id < M){
     #endif
         //printf("c");
         //int i, j;
-        double maxPredicted = -DBL_MAX ;
+        float maxPredicted = -DBL_MAX ;
         int predictedClass = 0;
         int correctClass = 0;
 
-        double executionOut[MAX_OUTPUTS];
-        double alreadyEvaluated[MAX_NODES];
+        float executionOut[MAX_OUTPUTS];
+        float alreadyEvaluated[MAX_NODES];
         int inputsEvaluatedAux[MAX_NODES];
 
         for(i = 0; i < MAX_NODES; i++){

@@ -7,22 +7,43 @@
 
 OCLConfig::OCLConfig() {
 
-    int result = cl::Platform::get(&platforms);
+    int result = clGetPlatformIDs(0, NULL, &platformCount);
+    checkError(result);
+    platforms = (cl_platform_id*) malloc(sizeof(cl_platform_id) * platformCount);
+    result = clGetPlatformIDs(platformCount, platforms, nullptr);
+
+    //int result = cl::Platform::get(&platforms);
     checkError(result);
 
-    for(int i = 0; i < platforms.size(); i++){
-        devices.emplace_back(std::vector<cl::Device>());
-        platforms[i].getDevices(CL_DEVICE_TYPE_ALL, &devices[i]);
+    devices = (cl_device_id**) malloc(sizeof(cl_device_id*) * platformCount);
+    deviceCount = (cl_uint*) malloc(sizeof(cl_uint) * platformCount);
+    for(int i = 0; i < platformCount; i++){
+        clGetDeviceIDs(platforms[i], CL_DEVICE_TYPE_ALL, 0, nullptr, &deviceCount[i]);
+        devices[i] = (cl_device_id*) malloc(sizeof(cl_device_id) * deviceCount[i]);
+        clGetDeviceIDs(platforms[i], CL_DEVICE_TYPE_ALL, deviceCount[i], devices[i], nullptr);
+
+        //devices.emplace_back(std::vector<cl::Device>());
+        //platforms[i].getDevices(CL_DEVICE_TYPE_ALL, &devices[i]);
     }
 
-    context = cl::Context(devices[GPU_PLATFORM], nullptr, nullptr, nullptr, &result);
+    context = clCreateContext(nullptr, 1, devices[GPU_PLATFORM], nullptr, nullptr, &result);
+
+    //context = cl::Context(devices[GPU_PLATFORM], nullptr, nullptr, nullptr, &result);
     checkError(result);
 
     commandQueueProperties = CL_QUEUE_PROFILING_ENABLE;
-    cmdQueue = cl::CommandQueue(context, devices[GPU_PLATFORM][GPU_DEVICE], commandQueueProperties, &result);
+    cmdQueue = clCreateCommandQueue(context, devices[GPU_PLATFORM][GPU_DEVICE], commandQueueProperties, &result);
+
+    //cmdQueue = cl::CommandQueue(context, devices[GPU_PLATFORM][GPU_DEVICE], commandQueueProperties, &result);
     checkError(result);
 
-    maxLocalSize = cmdQueue.getInfo<CL_QUEUE_DEVICE>().getInfo<CL_DEVICE_MAX_WORK_GROUP_SIZE>();
+    size_t valueSize;
+    clGetDeviceInfo(devices[GPU_PLATFORM][GPU_DEVICE], CL_DEVICE_VERSION, 0, nullptr, &valueSize);
+
+    result = clGetDeviceInfo(devices[GPU_PLATFORM][GPU_DEVICE], CL_DEVICE_MAX_WORK_GROUP_SIZE, valueSize, &maxLocalSize,
+                             nullptr);
+            //cmdQueue.getInfo<CL_QUEUE_DEVICE>().getInfo<CL_DEVICE_MAX_WORK_GROUP_SIZE>();
+    checkError(result);
 
     printOpenclDeviceInfo();
 }
@@ -32,20 +53,79 @@ void OCLConfig::checkError(cl_int result){
         std::cerr << getErrorString(result) << std::endl;
 }
 void OCLConfig::printOpenclDeviceInfo(){
-    for(int j = 0; j < platforms.size(); ++j) {
-        std::cout << "Available Devices for Platform " << platforms[j].getInfo<CL_PLATFORM_NAME>() << ":\n";
+    for(int j = 0; j < platformCount; ++j) {
+        char* value;
+        size_t valueSize;
 
-        for (int i = 0; i < devices[j].size(); ++i) {
-            std::cout << "[" << i << "]" << devices[j][i].getInfo<CL_DEVICE_NAME>() << std::endl;
-            std::cout << "\tType:   " << devices[j][i].getInfo<CL_DEVICE_TYPE>() << std::endl;
-            std::cout << "\tOpenCL: " << devices[j][i].getInfo<CL_DEVICE_OPENCL_C_VERSION>() << std::endl;
-            std::cout << "\tMax Comp Un: " << devices[j][i].getInfo<CL_DEVICE_MAX_COMPUTE_UNITS>() << std::endl;
-            std::cout << "\tMax WrkGr Sz: " << devices[j][i].getInfo<CL_DEVICE_MAX_WORK_GROUP_SIZE>() << std::endl;
-            std::cout << "\tFp config: " << devices[j][i].getInfo<CL_DEVICE_SINGLE_FP_CONFIG>() << std::endl;
-            std::cout << "\tMax Mem Alloc: " << devices[j][i].getInfo<CL_DEVICE_MAX_MEM_ALLOC_SIZE>() << std::endl;
-            std::cout << "\tLocal Mem Size: " << devices[j][i].getInfo<CL_DEVICE_LOCAL_MEM_SIZE>() << std::endl;
-            std::cout << "\tMax Const Size: " << devices[j][i].getInfo<CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE>() << std::endl;
-            std::cout << "\tDevice Extensions: " << devices[j][i].getInfo<CL_DEVICE_EXTENSIONS>() << std::endl;
+        clGetPlatformInfo(platforms[j], CL_PLATFORM_NAME, 0, nullptr, &valueSize);
+        value = (char*) malloc(valueSize);
+        clGetPlatformInfo(platforms[j], CL_PLATFORM_NAME, valueSize, value, nullptr);
+        std::cout << "Available Devices for Platform " <<value << ":\n";
+        free(value);
+
+        for (int i = 0; i < deviceCount[j]; ++i) {
+
+
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_NAME, 0, nullptr, &valueSize);
+            value = (char*) malloc(valueSize);
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_NAME, valueSize, value, nullptr);
+            std::cout << "[" << i << "]" << value << std::endl;
+            free(value);
+
+
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_TYPE, 0, nullptr, &valueSize);
+            value = (char*) malloc(valueSize);
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_TYPE, valueSize, value, nullptr);
+            std::cout << "\tType:   " << value << std::endl;
+            free(value);
+
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_OPENCL_C_VERSION, 0, nullptr, &valueSize);
+            value = (char*) malloc(valueSize);
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_OPENCL_C_VERSION, valueSize, value, nullptr);
+            std::cout << "\tOpenCL: " << value << std::endl;
+            free(value);
+
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_MAX_COMPUTE_UNITS, 0, nullptr, &valueSize);
+            value = (char*) malloc(valueSize);
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_MAX_COMPUTE_UNITS, valueSize, value, nullptr);
+            std::cout << "\tMax Comp Un: " << value << std::endl;
+            free(value);
+
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_MAX_WORK_GROUP_SIZE, 0, nullptr, &valueSize);
+            value = (char*) malloc(valueSize);
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_MAX_WORK_GROUP_SIZE, valueSize, value, nullptr);
+            std::cout << "\tMax WrkGr Sz: " << value << std::endl;
+            free(value);
+
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_SINGLE_FP_CONFIG, 0, nullptr, &valueSize);
+            value = (char*) malloc(valueSize);
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_SINGLE_FP_CONFIG, valueSize, value, nullptr);
+            std::cout << "\tFp config: " << value << std::endl;
+            free(value);
+
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_MAX_MEM_ALLOC_SIZE, 0, nullptr, &valueSize);
+            value = (char*) malloc(valueSize);
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_MAX_MEM_ALLOC_SIZE, valueSize, value, nullptr);
+            std::cout << "\tMax Mem Alloc: " << value << std::endl;
+            free(value);
+
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_LOCAL_MEM_SIZE, 0, nullptr, &valueSize);
+            value = (char*) malloc(valueSize);
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_LOCAL_MEM_SIZE, valueSize, value, nullptr);
+            std::cout << "\tLocal Mem Size: " << value << std::endl;
+            free(value);
+
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE, 0, nullptr, &valueSize);
+            value = (char*) malloc(valueSize);
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE, valueSize, value, nullptr);
+            std::cout << "\tMax Const Size: " << value << std::endl;
+            free(value);
+
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_EXTENSIONS, 0, nullptr, &valueSize);
+            value = (char*) malloc(valueSize);
+            clGetDeviceInfo(devices[j][i], CL_DEVICE_EXTENSIONS, valueSize, value, nullptr);
+            std::cout << "\tDevice Extensions: " << value << std::endl;
+            free(value);
 
         }
     }
@@ -56,37 +136,37 @@ void OCLConfig::allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int
     std::cout << "Allocating buffers... " << std::endl;
 
     ///Buffers
-    bufferSeeds = cl::Buffer(context, CL_MEM_READ_WRITE, NUM_INDIV * maxLocalSize  * sizeof(int), nullptr,  &result);
+    bufferSeeds = clCreateBuffer(context, CL_MEM_READ_WRITE, NUM_INDIV * maxLocalSize  * sizeof(int), nullptr,  &result);
     checkError(result);
 
-    bufferDataOut      = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTrain * (p->N + p->O) * sizeof(float), nullptr,  &result);
+    bufferDataOut      = clCreateBuffer(context, CL_MEM_READ_ONLY, sizeTrain * (p->N + p->O) * sizeof(float), nullptr,  &result);
     checkError(result);
 
-    bufferDatasetTrain = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTrain * p->N * sizeof(float), nullptr,  &result);
+    bufferDatasetTrain = clCreateBuffer(context, CL_MEM_READ_ONLY, sizeTrain * p->N * sizeof(float), nullptr,  &result);
     checkError(result);
 
-    bufferOutputsTrain = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTrain * p->O * sizeof(float), nullptr,  &result);
+    bufferOutputsTrain = clCreateBuffer(context, CL_MEM_READ_ONLY, sizeTrain * p->O * sizeof(float), nullptr,  &result);
     checkError(result);
 
-    bufferDatasetValid = cl::Buffer(context, CL_MEM_READ_ONLY, sizeValid * p->N * sizeof(float), nullptr,  &result);
+    bufferDatasetValid = clCreateBuffer(context, CL_MEM_READ_ONLY, sizeValid * p->N * sizeof(float), nullptr,  &result);
     checkError(result);
 
-    bufferOutputsValid = cl::Buffer(context, CL_MEM_READ_ONLY, sizeValid * p->O * sizeof(float), nullptr,  &result);
+    bufferOutputsValid = clCreateBuffer(context, CL_MEM_READ_ONLY, sizeValid * p->O * sizeof(float), nullptr,  &result);
     checkError(result);
 
-    bufferDatasetTest = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTest * p->N * sizeof(float), nullptr,  &result);
+    bufferDatasetTest = clCreateBuffer(context, CL_MEM_READ_ONLY, sizeTest * p->N * sizeof(float), nullptr,  &result);
     checkError(result);
 
-    bufferOutputsTest = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTest * p->O * sizeof(float), nullptr,  &result);
+    bufferOutputsTest = clCreateBuffer(context, CL_MEM_READ_ONLY, sizeTest * p->O * sizeof(float), nullptr,  &result);
     checkError(result);
 
-    bufferFunctions = cl::Buffer(context, CL_MEM_READ_ONLY, ((p->NUM_FUNCTIONS)) * sizeof(unsigned int), nullptr,  &result);
+    bufferFunctions = clCreateBuffer(context, CL_MEM_READ_ONLY, ((p->NUM_FUNCTIONS)) * sizeof(unsigned int), nullptr,  &result);
     checkError(result);
 
-    bufferBest = cl::Buffer(context, CL_MEM_READ_ONLY, sizeof(Chromosome), nullptr,  &result);
+    bufferBest = clCreateBuffer(context, CL_MEM_READ_ONLY, sizeof(Chromosome), nullptr,  &result);
     checkError(result);
 
-    bufferPopulation = cl::Buffer(context, CL_MEM_READ_WRITE, NUM_INDIV * sizeof(Chromosome), nullptr, &result);
+    bufferPopulation = clCreateBuffer(context, CL_MEM_READ_WRITE, NUM_INDIV * sizeof(Chromosome), nullptr, &result);
     checkError(result);
 
     numPointsTrain = sizeTrain;
@@ -248,22 +328,55 @@ std::string OCLConfig::setProgramSource(Parameters* p, Dataset* fullData){
     return program_src;
 }
 
+#define MAX_SOURCE_SIZE (0x100000)
+
 void OCLConfig::buildProgram(Parameters* p, Dataset* fullData, std::string sourceFileStr){
     ///Program build
-    std::ifstream sourceFileName(sourceFileStr);//"kernels\\kernel_split_data.cl");
-    std::string sourceFile(std::istreambuf_iterator<char>(sourceFileName),(std::istreambuf_iterator<char>()));
+    char *source_str;
+    size_t source_size;
+    FILE *fp;
+    fp = fopen(sourceFileStr.c_str(), "r");
+    if (!fp) {
+        fprintf(stderr, "Failed to load kernel.\n");
+        exit(1);
+    }
 
-    std::string program_src = setProgramSource(p,fullData) + sourceFile;
+    source_str = (char*)malloc(MAX_SOURCE_SIZE);
+    source_size = fread( source_str, 1, MAX_SOURCE_SIZE, fp);
+    fclose( fp );
+
+    //std::ifstream sourceFileName(sourceFileStr);//"kernels\\kernel_split_data.cl");
+
+    //std::string sourceFile(std::istreambuf_iterator<char>(sourceFileName),(std::istreambuf_iterator<char>()));
+
+    std::string program_src = setProgramSource(p,fullData) + source_str;
     //std::cout << program_src << std::endl;
-    program = cl::Program(context, program_src);
+    // declaring character array
+    char char_array[program_src.size() + 1];
+    source_size = program_src.size() + 1;
+    strncpy(char_array, program_src.c_str(), source_size);
 
-    int result = program.build(devices[GPU_PLATFORM], compileFlags.c_str());
+    int result;
+
+    program = clCreateProgramWithSource(context, 1, (const char **)&char_array, (const size_t *)&source_size, &result);
+    checkError(result);
+
+    result = clBuildProgram(program, 1, devices[GPU_PLATFORM], compileFlags.c_str(), nullptr, nullptr);
+    checkError(result);
 
     if(result != CL_SUCCESS){
         std::cerr << getErrorString(result) << std::endl;
-        std::string buildLog = program.getBuildInfo<CL_PROGRAM_BUILD_LOG>(devices[GPU_PLATFORM][GPU_DEVICE]);
+        char* value;
+        size_t valueSize;
+        clGetProgramBuildInfo(program, devices[GPU_PLATFORM][GPU_DEVICE], CL_PROGRAM_BUILD_LOG, 0, nullptr, &valueSize);
+        value = (char*) malloc(valueSize);
+        clGetProgramBuildInfo(program, devices[GPU_PLATFORM][GPU_DEVICE], CL_PROGRAM_BUILD_LOG, valueSize, value,
+                              nullptr);
+        //std::string buildLog = clGetProgramBuildInfo(program, devices[GPU_PLATFORM])
+        //program.getBuildInfo<CL_PROGRAM_BUILD_LOG>(devices[GPU_PLATFORM][GPU_DEVICE]);
         std::cerr << "Build log:" << std::endl
-                  << buildLog << std::endl;
+                  << value << std::endl;
+        free(value);
     }
 }
 
@@ -272,16 +385,16 @@ void OCLConfig::buildKernels(){
     ///Kernels
 
 
-    kernelEvaluate = cl::Kernel(program, "evaluateTrainValidation", &result);
+    kernelEvaluate = clCreateKernel(program, "evaluateTrainValidation", &result);
     checkError(result);
-    kernelEvaluate.setArg(0, bufferDatasetTrain);
-    kernelEvaluate.setArg(1, bufferOutputsTrain);
-    kernelEvaluate.setArg(2, bufferDatasetValid);
-    kernelEvaluate.setArg(3, bufferOutputsValid);
-    kernelEvaluate.setArg(4, bufferFunctions);
-    kernelEvaluate.setArg(5, bufferPopulation);
-    kernelEvaluate.setArg(6, bufferBest);
-    kernelEvaluate.setArg(7, (int)localSizeAval * sizeof(float), nullptr);
+    clSetKernelArg(kernelEvaluate, 0, sizeof(cl_mem), bufferDatasetTrain);
+    clSetKernelArg(kernelEvaluate, 1, sizeof(cl_mem), bufferOutputsTrain);
+    clSetKernelArg(kernelEvaluate, 2, sizeof(cl_mem), bufferDatasetValid);
+    clSetKernelArg(kernelEvaluate, 3, sizeof(cl_mem), bufferOutputsValid);
+    clSetKernelArg(kernelEvaluate, 4, sizeof(cl_mem), bufferFunctions);
+    clSetKernelArg(kernelEvaluate, 5, sizeof(cl_mem), bufferPopulation);
+    clSetKernelArg(kernelEvaluate, 6, sizeof(cl_mem), bufferBest);
+    clSetKernelArg(kernelEvaluate, 7, (int)localSizeAval * sizeof(float), nullptr);
 
     /*
     kernelEvaluate2 = cl::Kernel(program, "evaluate2", &result);
@@ -292,33 +405,33 @@ void OCLConfig::buildKernels(){
     kernelEvaluate2.setArg(3, (int)localSizeAval * sizeof(float), nullptr);
 */
 
-    kernelTest = cl::Kernel(program, "evaluateTest", &result);
+    kernelTest = clCreateKernel(program, "evaluateTest", &result);
     checkError(result);
-    kernelTest.setArg(0, bufferDatasetTest);
-    kernelTest.setArg(1, bufferOutputsTest);
-    kernelTest.setArg(2, bufferFunctions);
-    kernelTest.setArg(3, bufferBest);
-    kernelTest.setArg(4, (int)localSizeTest * sizeof(float), nullptr);
+    clSetKernelArg(kernelTest, 0, sizeof(cl_mem), bufferDatasetTest);
+    clSetKernelArg(kernelTest, 1, sizeof(cl_mem), bufferOutputsTest);
+    clSetKernelArg(kernelTest, 2, sizeof(cl_mem), bufferFunctions);
+    clSetKernelArg(kernelTest, 3, sizeof(cl_mem), bufferBest);
+    clSetKernelArg(kernelTest, 4, (int)localSizeTest * sizeof(float), nullptr);
 
-    kernelCGP = cl::Kernel(program, "CGP", &result);
+    kernelCGP = clCreateKernel(program, "CGP", &result);
     checkError(result);
     ///set fixed params
-    kernelCGP.setArg(0, bufferDatasetTrain);
-    kernelCGP.setArg(1, bufferOutputsTrain);
-    kernelCGP.setArg(2, bufferDatasetValid);
-    kernelCGP.setArg(3, bufferOutputsValid);
-    kernelCGP.setArg(4, bufferFunctions);
-    kernelCGP.setArg(5, bufferSeeds);
-    kernelCGP.setArg(6, bufferPopulation);
-    kernelCGP.setArg(7, bufferBest);
-    kernelCGP.setArg(8, (int)localSizeAval * sizeof(float), nullptr);
+    clSetKernelArg(kernelCGP, 0,sizeof(cl_mem), bufferDatasetTrain);
+    clSetKernelArg(kernelCGP, 1,sizeof(cl_mem), bufferOutputsTrain);
+    clSetKernelArg(kernelCGP, 2,sizeof(cl_mem), bufferDatasetValid);
+    clSetKernelArg(kernelCGP, 3,sizeof(cl_mem), bufferOutputsValid);
+    clSetKernelArg(kernelCGP, 4,sizeof(cl_mem), bufferFunctions);
+    clSetKernelArg(kernelCGP, 5,sizeof(cl_mem), bufferSeeds);
+    clSetKernelArg(kernelCGP, 6,sizeof(cl_mem), bufferPopulation);
+    clSetKernelArg(kernelCGP, 7,sizeof(cl_mem), bufferBest);
+    clSetKernelArg(kernelCGP, 8, (int)localSizeAval * sizeof(float), nullptr);
 
-    kernelEvolve = cl::Kernel(program, "evolve", &result);
+    kernelEvolve = clCreateKernel(program, "evolve", &result);
     checkError(result);
-    kernelEvolve.setArg(0, bufferFunctions);
-    kernelEvolve.setArg(1, bufferSeeds);
-    kernelEvolve.setArg(2, bufferPopulation);
-    kernelEvolve.setArg(3, bufferBest);
+    clSetKernelArg(kernelEvolve, 0, sizeof(cl_mem), bufferFunctions);
+    clSetKernelArg(kernelEvolve, 1, sizeof(cl_mem), bufferSeeds);
+    clSetKernelArg(kernelEvolve, 2, sizeof(cl_mem), bufferPopulation);
+    clSetKernelArg(kernelEvolve, 3, sizeof(cl_mem), bufferBest);
 
 }
 
@@ -332,23 +445,32 @@ void OCLConfig::transposeDatasets(Dataset* train, Dataset* valid, Dataset* test)
 
 void OCLConfig::writeReadOnlyBufers(Parameters* p, int* seeds){
     int result;
-    result = cmdQueue.enqueueWriteBuffer(bufferSeeds, CL_FALSE, 0, NUM_INDIV * maxLocalSize  * sizeof(int), seeds);
+    result = clEnqueueWriteBuffer(cmdQueue, bufferSeeds, CL_FALSE, 0, NUM_INDIV * maxLocalSize  * sizeof(int), seeds,
+                                  0, nullptr, nullptr);
     checkError(result);
 
-    cmdQueue.enqueueWriteBuffer(bufferDataOut, CL_FALSE, 0, numPoints * (p->N + p->O) * sizeof(float), transposeDatasetOutput);
+    result = clEnqueueWriteBuffer(cmdQueue, bufferDataOut, CL_FALSE, 0, numPoints * (p->N + p->O) * sizeof(float), transposeDatasetOutput, 0,
+                                  nullptr, nullptr);
 
-    cmdQueue.enqueueWriteBuffer(bufferDatasetTrain, CL_FALSE, 0, numPointsTrain * p->N * sizeof(float), transposeDatasetTrain);
-    cmdQueue.enqueueWriteBuffer(bufferOutputsTrain, CL_FALSE, 0, numPointsTrain * p->O * sizeof(float), transposeOutputsTrain);
+    result = clEnqueueWriteBuffer(cmdQueue, bufferDatasetTrain, CL_FALSE, 0, numPointsTrain * p->N * sizeof(float), transposeDatasetTrain, 0,
+                                  nullptr, nullptr);
+    result = clEnqueueWriteBuffer(cmdQueue, bufferOutputsTrain, CL_FALSE, 0, numPointsTrain * p->O * sizeof(float), transposeOutputsTrain, 0,
+                                  nullptr, nullptr);
 
-    cmdQueue.enqueueWriteBuffer(bufferDatasetValid, CL_FALSE, 0, numPointsValid * p->N * sizeof(float), transposeDatasetValid);
-    cmdQueue.enqueueWriteBuffer(bufferOutputsValid, CL_FALSE, 0, numPointsValid * p->O * sizeof(float), transposeOutputsValid);
+    result = clEnqueueWriteBuffer(cmdQueue, bufferDatasetValid, CL_FALSE, 0, numPointsValid * p->N * sizeof(float), transposeDatasetValid, 0,
+                                  nullptr, nullptr);
+    result = clEnqueueWriteBuffer(cmdQueue, bufferOutputsValid, CL_FALSE, 0, numPointsValid * p->O * sizeof(float), transposeOutputsValid, 0,
+                                  nullptr, nullptr);
 
-    cmdQueue.enqueueWriteBuffer(bufferDatasetTest, CL_FALSE, 0, numPointsTest * p->N * sizeof(float), transposeDatasetTest);
-    cmdQueue.enqueueWriteBuffer(bufferOutputsTest, CL_FALSE, 0, numPointsTest * p->O * sizeof(float), transposeOutputsTest);
+    result = clEnqueueWriteBuffer(cmdQueue, bufferDatasetTest, CL_FALSE, 0, numPointsTest * p->N * sizeof(float), transposeDatasetTest, 0,
+                                  nullptr, nullptr);
+    result = clEnqueueWriteBuffer(cmdQueue, bufferOutputsTest, CL_FALSE, 0, numPointsTest * p->O * sizeof(float), transposeOutputsTest, 0,
+                                  nullptr, nullptr);
 
-    cmdQueue.enqueueWriteBuffer(bufferFunctions, CL_FALSE, 0, (p->NUM_FUNCTIONS) * sizeof(unsigned int), p->functionSet);
+    result = clEnqueueWriteBuffer(cmdQueue, bufferFunctions, CL_FALSE, 0, (p->NUM_FUNCTIONS) * sizeof(unsigned int), p->functionSet, 0,
+                                  nullptr, nullptr);
 
-    cmdQueue.finish();
+    clFinish(cmdQueue);
 }
 
 void OCLConfig::transposeDataOut(Dataset* data, float** transposeDatasetOut){
@@ -398,50 +520,53 @@ void OCLConfig::transposeData(Dataset* data, float** transposeDataset, float** t
 }
 
 void OCLConfig::writeBestBuffer(Chromosome* best){
-    cmdQueue.enqueueWriteBuffer(bufferBest, CL_FALSE, 0, sizeof(Chromosome), best);
+    clEnqueueWriteBuffer(cmdQueue, bufferBest, CL_FALSE, 0, sizeof(Chromosome), best, 0, nullptr, nullptr);
 }
 
 void OCLConfig::writePopulationBuffer(Chromosome* population){
-    cmdQueue.enqueueWriteBuffer(bufferPopulation, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), population);
+    clEnqueueWriteBuffer(cmdQueue, bufferPopulation, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), population, 0, nullptr,
+                         nullptr);
 }
 
 void OCLConfig::readBestBuffer(Chromosome* best){
-    cmdQueue.enqueueReadBuffer(bufferBest, CL_FALSE, 0,  sizeof(Chromosome), best);
+    clEnqueueReadBuffer(cmdQueue, bufferBest, CL_FALSE, 0,  sizeof(Chromosome), best, 0, nullptr, nullptr);
 }
 
 void OCLConfig::readPopulationBuffer(Chromosome* population){
-    cmdQueue.enqueueReadBuffer(bufferPopulation, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), population);
+    clEnqueueReadBuffer(cmdQueue, bufferPopulation, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), population, 0, nullptr,
+                        nullptr);
 }
 
 void OCLConfig::readSeedsBuffer(int* seeds){
-    cmdQueue.enqueueReadBuffer(bufferSeeds, CL_FALSE, 0, NUM_INDIV * maxLocalSize  * sizeof(int), seeds);
+    clEnqueueReadBuffer(cmdQueue, bufferSeeds, CL_FALSE, 0, NUM_INDIV * maxLocalSize  * sizeof(int), seeds, 0, nullptr,
+                        nullptr);
 }
 
 void OCLConfig::finishCommandQueue(){
-    int result = cmdQueue.finish();
+    int result = clFinish(cmdQueue);
     checkError(result);
 }
 
 void OCLConfig::enqueueCGPKernel(){
-    int result = cmdQueue.enqueueNDRangeKernel(kernelCGP, cl::NullRange, cl::NDRange(globalSizeAval), cl::NDRange(localSizeAval),
+    int result = clEnqueueNDRangeKernel(cmdQueue, kernelCGP, 1, nullptr, &globalSizeAval, &localSizeAval, 0,
                                                nullptr, &e_tempo);
     checkError(result);
 }
 
 void OCLConfig::enqueueTestKernel(){
-    int result = cmdQueue.enqueueNDRangeKernel(kernelTest, cl::NullRange, cl::NDRange(globalSizeTest), cl::NDRange(localSizeTest),
+    int result = clEnqueueNDRangeKernel(cmdQueue, kernelTest, 1, nullptr, &globalSizeTest, &localSizeTest, 0,
                                                nullptr, &e_tempo);
     checkError(result);
 }
 
 void OCLConfig::enqueueEvolveKernel(){
-    int result = cmdQueue.enqueueNDRangeKernel(kernelEvolve, cl::NullRange, cl::NDRange(globalSizeEvol), cl::NDRange(localSizeEvol),
+    int result = clEnqueueNDRangeKernel(cmdQueue, kernelEvolve, 1, nullptr, &globalSizeEvol, &localSizeEvol, 0,
                                                nullptr, &e_tempo);
     checkError(result);
 }
 
 void OCLConfig::enqueueEvaluationKernel(){
-    int result = cmdQueue.enqueueNDRangeKernel(kernelEvaluate, cl::NullRange, cl::NDRange(globalSizeAval), cl::NDRange(localSizeAval),
+    int result = clEnqueueNDRangeKernel(cmdQueue, kernelEvaluate, 1, nullptr, &globalSizeAval, &localSizeAval, 0,
                                                nullptr, &e_tempo);
     checkError(result);
 }
@@ -452,11 +577,13 @@ void OCLConfig::enqueueEvaluationKernel2(){
     checkError(result);
 }
 */
+/*
 double OCLConfig::getKernelElapsedTime(){
     e_tempo.getProfilingInfo(CL_PROFILING_COMMAND_START, &inicio);
     e_tempo.getProfilingInfo(CL_PROFILING_COMMAND_END, &fim);
     return ((fim-inicio)/1.0E9);
 }
+ */
 
 const char* OCLConfig::getErrorString(cl_int error) {
     switch(error){

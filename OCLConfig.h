@@ -12,51 +12,61 @@ class OCLConfig {
 public:
     OCLConfig();
 
-    std::vector<cl::Platform> platforms;
-    std::vector<std::vector<cl::Device>> devices;
+    cl_uint platformCount;
+    cl_platform_id *platforms;
 
-    cl::Context context;
-    cl::CommandQueue cmdQueue;
-    cl::Program program;
+    cl_uint* deviceCount;
+    cl_device_id** devices;
+
+    cl_context context;
+    cl_command_queue cmdQueue;
+    cl_program program;
+
+    //std::vector<cl::Platform> platforms;
+    //std::vector<std::vector<cl::Device>> devices;
+
+    //cl::Context context;
+    //cl::CommandQueue cmdQueue;
+    //cl::Program program;
 
     ///Evento para controlar tempo gasto
     cl_ulong inicio, fim;
-    cl::Event e_tempo;
+    cl_event e_tempo;
 
-    cl::Kernel testKernel;
+    cl_kernel testKernel;
 
 
-    cl::Kernel kernelCGP;
+    cl_kernel kernelCGP;
     //cl::Kernel kernelCGPDE;
     //cl::Kernel kernelDE;
 
-    cl::Kernel kernelTrain;
-    cl::Kernel kernelValid;
-    cl::Kernel kernelTest;
+    cl_kernel kernelTrain;
+    cl_kernel kernelValid;
+    cl_kernel kernelTest;
 
-    cl::Kernel kernelEvolve;
+    cl_kernel kernelEvolve;
 
-    cl::Kernel kernelEvaluate;
-    cl::Kernel kernelEvaluate2;
+    cl_kernel kernelEvaluate;
+    cl_kernel kernelEvaluate2;
 
     ///Buffers
-    cl::Buffer bufferSeeds;
+    cl_mem bufferSeeds;
 
-    cl::Buffer bufferDataOut;
+    cl_mem bufferDataOut;
 
-    cl::Buffer bufferDatasetTrain;
-    cl::Buffer bufferOutputsTrain;
+    cl_mem bufferOutputsTrain;
+    cl_mem bufferDatasetTrain;
 
-    cl::Buffer bufferDatasetValid;
-    cl::Buffer bufferOutputsValid;
+    cl_mem bufferDatasetValid;
+    cl_mem bufferOutputsValid;
 
-    cl::Buffer bufferDatasetTest;
-    cl::Buffer bufferOutputsTest;
+    cl_mem bufferDatasetTest;
+    cl_mem bufferOutputsTest;
 
-    cl::Buffer bufferFunctions;
+    cl_mem bufferFunctions;
 
-    cl::Buffer bufferBest;
-    cl::Buffer bufferPopulation;
+    cl_mem bufferBest;
+    cl_mem bufferPopulation;
 
     size_t numPoints;
     size_t numPointsTrain;
@@ -123,9 +133,9 @@ public:
     void enqueueEvaluationKernel2();
 
     double getKernelElapsedTime();
-
-private:
     void printOpenclDeviceInfo();
+private:
+
     void checkError(cl_int result);
     void transposeData(Dataset* data, float** transposeDataset, float** transposeOutputs);
     void transposeDataOut(Dataset* data, float** transposeDatasetOutput);
