@@ -124,14 +124,6 @@ CL/cl_gl_ext.h
 CL/cl_ext.h
 -
 
-C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.h
-vector
--
-iostream
--
-sys/time.h
--
-
 C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.cpp
 OCLConfig.h
 C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
@@ -142,30 +134,6 @@ C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
 utils.h
 C:/Users/bruno/CLionProjects/P-CGPDE/utils.h
 
-C:/Users/bruno/CLionProjects/P-CGPDE/cgp.h
-utils.h
-C:/Users/bruno/CLionProjects/P-CGPDE/utils.h
-stack.h
-C:/Users/bruno/CLionProjects/P-CGPDE/stack.h
-OCLConfig.h
-C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
-
-C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
-
-C:/Users/bruno/CLionProjects/P-CGPDE/main.cpp
-iostream
--
-cgp.h
-C:/Users/bruno/CLionProjects/P-CGPDE/cgp.h
-utils.h
-C:/Users/bruno/CLionProjects/P-CGPDE/utils.h
-GPTime.h
-C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.h
-OCLConfig.h
-C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
-
-C:/Users/bruno/CLionProjects/P-CGPDE/stack.h
-constants.h
 C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
 
 C:/Users/bruno/CLionProjects/P-CGPDE/utils.h

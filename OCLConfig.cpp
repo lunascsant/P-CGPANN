@@ -4,6 +4,55 @@
 
 #include "OCLConfig.h"
 
+void printImageFormat(cl_image_format format)
+{
+    #define CASE(order) case order: std::cout << #order; break;
+    switch (format.image_channel_order)
+    {
+        CASE(CL_R);
+        CASE(CL_A);
+        CASE(CL_RG);
+        CASE(CL_RA);
+        CASE(CL_RGB);
+        CASE(CL_RGBA);
+        CASE(CL_BGRA);
+        CASE(CL_ARGB);
+        CASE(CL_INTENSITY);
+        CASE(CL_LUMINANCE);
+        CASE(CL_Rx);
+        CASE(CL_RGx);
+        CASE(CL_RGBx);
+        CASE(CL_DEPTH);
+        CASE(CL_DEPTH_STENCIL);
+    }
+    #undef CASE
+
+    std::cout << " - ";
+
+    #define CASE(type) case type: std::cout << #type; break;
+    switch (format.image_channel_data_type)
+    {
+        CASE(CL_SNORM_INT8);
+        CASE(CL_SNORM_INT16);
+        CASE(CL_UNORM_INT8);
+        CASE(CL_UNORM_INT16);
+        CASE(CL_UNORM_SHORT_565);
+        CASE(CL_UNORM_SHORT_555);
+        CASE(CL_UNORM_INT_101010);
+        CASE(CL_SIGNED_INT8);
+        CASE(CL_SIGNED_INT16);
+        CASE(CL_SIGNED_INT32);
+        CASE(CL_UNSIGNED_INT8);
+        CASE(CL_UNSIGNED_INT16);
+        CASE(CL_UNSIGNED_INT32);
+        CASE(CL_HALF_FLOAT);
+        CASE(CL_FLOAT);
+        CASE(CL_UNORM_INT24);
+    }
+    #undef CASE
+
+    std::cout << std::endl;
+}
 
 OCLConfig::OCLConfig() {
 
@@ -18,6 +67,10 @@ OCLConfig::OCLConfig() {
     context = cl::Context(devices[GPU_PLATFORM], nullptr, nullptr, nullptr, &result);
     checkError(result);
 
+    context.getSupportedImageFormats(CL_MEM_READ_ONLY, CL_MEM_OBJECT_IMAGE2D, &imageFormats);
+    for (int i = 0; i < imageFormats.size(); ++i) {
+        printImageFormat(imageFormats[i]);
+    }
     commandQueueProperties = CL_QUEUE_PROFILING_ENABLE;
     cmdQueue = cl::CommandQueue(context, devices[GPU_PLATFORM][GPU_DEVICE], commandQueueProperties, &result);
     checkError(result);
@@ -46,9 +99,15 @@ void OCLConfig::printOpenclDeviceInfo(){
             std::cout << "\tLocal Mem Size: " << devices[j][i].getInfo<CL_DEVICE_LOCAL_MEM_SIZE>() << std::endl;
             std::cout << "\tMax Const Size: " << devices[j][i].getInfo<CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE>() << std::endl;
             std::cout << "\tDevice Extensions: " << devices[j][i].getInfo<CL_DEVICE_EXTENSIONS>() << std::endl;
+            std::cout << "\tDevice Img Support: " << devices[j][i].getInfo<CL_DEVICE_IMAGE_SUPPORT>() << std::endl;
+
 
         }
     }
+    std::cout << "\tNode size: " << sizeof(Node) << std::endl;
+    std::cout << "\tIndividuals size: " << sizeof(Chromosome) << std::endl;
+    std::cout <<  sizeof(int) <<sizeof(unsigned int) << sizeof(float) <<sizeof(double) <<std::endl;
+
 }
 
 void OCLConfig::allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int sizeTest){
@@ -87,6 +146,15 @@ void OCLConfig::allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int
     checkError(result);
 
     bufferPopulation = cl::Buffer(context, CL_MEM_READ_WRITE, NUM_INDIV * sizeof(Chromosome), nullptr, &result);
+    checkError(result);
+
+    bufferPopulationActive = cl::Buffer(context, CL_MEM_READ_ONLY, NUM_INDIV * sizeof(ActiveChromosome), nullptr, &result);
+    checkError(result);
+
+    bufferFitness =  cl::Buffer(context, CL_MEM_WRITE_ONLY, NUM_INDIV * sizeof(float), nullptr, &result);
+    checkError(result);
+
+    bufferFitnessValidation =  cl::Buffer(context, CL_MEM_WRITE_ONLY, NUM_INDIV * sizeof(float), nullptr, &result);
     checkError(result);
 
     numPointsTrain = sizeTrain;
@@ -135,8 +203,8 @@ void OCLConfig::setNDRages() {
     }
 
     // One individual per work-group
-    globalSizeTrain = localSizeTrain * 1;//* NUM_INDIV;
-    globalSizeValid = localSizeValid * 1;//* NUM_INDIV;
+    globalSizeTrain = localSizeTrain * NUM_INDIV;
+    globalSizeValid = localSizeValid * NUM_INDIV;
     globalSizeTest = localSizeTest * 1;//* NUM_INDIV;
     globalSizeAval = localSizeAval * NUM_INDIV;
 
@@ -283,14 +351,55 @@ void OCLConfig::buildKernels(){
     kernelEvaluate.setArg(6, bufferBest);
     kernelEvaluate.setArg(7, (int)localSizeAval * sizeof(float), nullptr);
 
-    /*
-    kernelEvaluate2 = cl::Kernel(program, "evaluate2", &result);
+
+    kernelEvaluateActive = cl::Kernel(program, "evaluateTrainValidationActive", &result);
     checkError(result);
-    kernelEvaluate2.setArg(0, bufferDataOut);
-    kernelEvaluate2.setArg(1, bufferFunctions);
-    kernelEvaluate2.setArg(2, bufferPopulation);
-    kernelEvaluate2.setArg(3, (int)localSizeAval * sizeof(float), nullptr);
-*/
+    kernelEvaluateActive.setArg(0, bufferDatasetTrain);
+    kernelEvaluateActive.setArg(1, bufferOutputsTrain);
+    kernelEvaluateActive.setArg(2, bufferDatasetValid);
+    kernelEvaluateActive.setArg(3, bufferOutputsValid);
+    kernelEvaluateActive.setArg(4, bufferFunctions);
+    kernelEvaluateActive.setArg(5, bufferPopulationActive);
+    kernelEvaluateActive.setArg(6, (int)localSizeAval * sizeof(float), nullptr);
+    kernelEvaluateActive.setArg(7, bufferFitness);
+    kernelEvaluateActive.setArg(8, bufferFitnessValidation);
+
+    kernelEvaluateImage = cl::Kernel(program, "evaluateTrainImage", &result);
+    checkError(result);
+    kernelEvaluateImage.setArg(0, bufferDatasetTrain);
+    kernelEvaluateImage.setArg(1, bufferOutputsTrain);
+    kernelEvaluateImage.setArg(2, bufferFunctions);
+    kernelEvaluateImage.setArg(3, populationImage);
+    kernelEvaluateImage.setArg(4, (int)localSizeTrain * sizeof(float), nullptr);
+    kernelEvaluateImage.setArg(5, bufferFitness);
+    kernelEvaluateImage.setArg(6, bufferFitnessValidation);
+
+    kernelEvaluateImageValidation = cl::Kernel(program, "evaluateValidationImage", &result);
+    checkError(result);
+    kernelEvaluateImageValidation.setArg(0, bufferDatasetValid);
+    kernelEvaluateImageValidation.setArg(1, bufferOutputsValid);
+    kernelEvaluateImageValidation.setArg(2, bufferFunctions);
+    kernelEvaluateImageValidation.setArg(3, populationImage);
+    kernelEvaluateImageValidation.setArg(4, (int)localSizeValid * sizeof(float), nullptr);
+    kernelEvaluateImageValidation.setArg(5, bufferFitness);
+    kernelEvaluateImageValidation.setArg(6, bufferFitnessValidation);
+
+
+    kernelTrain = cl::Kernel(program, "evaluateTrain", &result);
+    checkError(result);
+    kernelTrain.setArg(0, bufferDatasetTrain);
+    kernelTrain.setArg(1, bufferOutputsTrain);
+    kernelTrain.setArg(2, bufferFunctions);
+    kernelTrain.setArg(3, bufferPopulation);
+    kernelTrain.setArg(4, (int)localSizeTrain * sizeof(float), nullptr);
+
+    kernelValid = cl::Kernel(program, "evaluateValidation", &result);
+    checkError(result);
+    kernelValid.setArg(0, bufferDatasetValid);
+    kernelValid.setArg(1, bufferOutputsValid);
+    kernelValid.setArg(2, bufferFunctions);
+    kernelValid.setArg(3, bufferPopulation);
+    kernelValid.setArg(4, (int)localSizeValid * sizeof(float), nullptr);
 
     kernelTest = cl::Kernel(program, "evaluateTest", &result);
     checkError(result);
@@ -300,18 +409,6 @@ void OCLConfig::buildKernels(){
     kernelTest.setArg(3, bufferBest);
     kernelTest.setArg(4, (int)localSizeTest * sizeof(float), nullptr);
 
-    kernelCGP = cl::Kernel(program, "CGP", &result);
-    checkError(result);
-    ///set fixed params
-    kernelCGP.setArg(0, bufferDatasetTrain);
-    kernelCGP.setArg(1, bufferOutputsTrain);
-    kernelCGP.setArg(2, bufferDatasetValid);
-    kernelCGP.setArg(3, bufferOutputsValid);
-    kernelCGP.setArg(4, bufferFunctions);
-    kernelCGP.setArg(5, bufferSeeds);
-    kernelCGP.setArg(6, bufferPopulation);
-    kernelCGP.setArg(7, bufferBest);
-    kernelCGP.setArg(8, (int)localSizeAval * sizeof(float), nullptr);
 
     kernelEvolve = cl::Kernel(program, "evolve", &result);
     checkError(result);
@@ -398,23 +495,48 @@ void OCLConfig::transposeData(Dataset* data, float** transposeDataset, float** t
 }
 
 void OCLConfig::writeBestBuffer(Chromosome* best){
-    cmdQueue.enqueueWriteBuffer(bufferBest, CL_FALSE, 0, sizeof(Chromosome), best);
+    int result = cmdQueue.enqueueWriteBuffer(bufferBest, CL_FALSE, 0, sizeof(Chromosome), best);
+    checkError(result);
 }
 
 void OCLConfig::writePopulationBuffer(Chromosome* population){
-    cmdQueue.enqueueWriteBuffer(bufferPopulation, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), population);
+    int result = cmdQueue.enqueueWriteBuffer(bufferPopulation, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), population);
+    checkError(result);
+}
+
+void OCLConfig::writePopulationActiveBuffer(ActiveChromosome* population){
+    int result = cmdQueue.enqueueWriteBuffer(bufferPopulationActive, CL_FALSE, 0, NUM_INDIV * sizeof(ActiveChromosome), population);
+    checkError(result);
 }
 
 void OCLConfig::readBestBuffer(Chromosome* best){
-    cmdQueue.enqueueReadBuffer(bufferBest, CL_FALSE, 0,  sizeof(Chromosome), best);
+    int result = cmdQueue.enqueueReadBuffer(bufferBest, CL_FALSE, 0,  sizeof(Chromosome), best);
+    checkError(result);
 }
 
 void OCLConfig::readPopulationBuffer(Chromosome* population){
-    cmdQueue.enqueueReadBuffer(bufferPopulation, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), population);
+    int result = cmdQueue.enqueueReadBuffer(bufferPopulation, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), population);
+    checkError(result);
+}
+
+void OCLConfig::readPopulationActiveBuffer(ActiveChromosome* population){
+    int result = cmdQueue.enqueueReadBuffer(bufferPopulationActive, CL_FALSE, 0, NUM_INDIV * sizeof(ActiveChromosome), population);
+    checkError(result);
+}
+
+void OCLConfig::readFitnessBuffer(float* fitness){
+    int result = cmdQueue.enqueueReadBuffer(bufferFitness, CL_FALSE, 0, NUM_INDIV * sizeof(float), fitness);
+    checkError(result);
+}
+
+void OCLConfig::readFitnessValidationBuffer(float* fitnessValidation){
+    int result = cmdQueue.enqueueReadBuffer(bufferFitnessValidation, CL_FALSE, 0, NUM_INDIV * sizeof(float), fitnessValidation);
+    checkError(result);
 }
 
 void OCLConfig::readSeedsBuffer(int* seeds){
-    cmdQueue.enqueueReadBuffer(bufferSeeds, CL_FALSE, 0, NUM_INDIV * maxLocalSize  * sizeof(int), seeds);
+    int result = cmdQueue.enqueueReadBuffer(bufferSeeds, CL_FALSE, 0, NUM_INDIV * maxLocalSize  * sizeof(int), seeds);
+    checkError(result);
 }
 
 void OCLConfig::finishCommandQueue(){
@@ -424,6 +546,18 @@ void OCLConfig::finishCommandQueue(){
 
 void OCLConfig::enqueueCGPKernel(){
     int result = cmdQueue.enqueueNDRangeKernel(kernelCGP, cl::NullRange, cl::NDRange(globalSizeAval), cl::NDRange(localSizeAval),
+                                               nullptr, &e_tempo);
+    checkError(result);
+}
+
+void OCLConfig::enqueueTrainKernel(){
+    int result = cmdQueue.enqueueNDRangeKernel(kernelTrain, cl::NullRange, cl::NDRange(globalSizeTrain), cl::NDRange(localSizeTrain),
+                                               nullptr, &e_tempo);
+    checkError(result);
+}
+
+void OCLConfig::enqueueValidationKernel(){
+    int result = cmdQueue.enqueueNDRangeKernel(kernelValid, cl::NullRange, cl::NDRange(globalSizeValid), cl::NDRange(localSizeValid),
                                                nullptr, &e_tempo);
     checkError(result);
 }
@@ -445,13 +579,103 @@ void OCLConfig::enqueueEvaluationKernel(){
                                                nullptr, &e_tempo);
     checkError(result);
 }
-/*
-void OCLConfig::enqueueEvaluationKernel2(){
-    int result = cmdQueue.enqueueNDRangeKernel(kernelEvaluate2, cl::NullRange, cl::NDRange(globalSizeAval), cl::NDRange(localSizeAval),
+
+void OCLConfig::enqueueEvaluationActiveKernel(){
+    int result = cmdQueue.enqueueNDRangeKernel(kernelEvaluateActive, cl::NullRange, cl::NDRange(globalSizeAval), cl::NDRange(localSizeAval),
                                                nullptr, &e_tempo);
     checkError(result);
 }
-*/
+
+void OCLConfig::enqueueEvaluationImageKernel(){
+    kernelEvaluateImage.setArg(3, populationImage);
+    int result = cmdQueue.enqueueNDRangeKernel(kernelEvaluateImage, cl::NullRange, cl::NDRange(globalSizeTrain), cl::NDRange(localSizeTrain),
+                                               nullptr, &e_tempo);
+    checkError(result);
+}
+
+void OCLConfig::enqueueEvaluationImageValidationKernel() {
+    kernelEvaluateImageValidation.setArg(3, populationImage);
+    int result = cmdQueue.enqueueNDRangeKernel(kernelEvaluateImageValidation, cl::NullRange, cl::NDRange(globalSizeValid), cl::NDRange(localSizeValid),
+                                               nullptr, &e_tempo);
+    checkError(result);
+}
+
+
+void OCLConfig::setupImageBuffers(){
+    image_format.image_channel_data_type = CL_UNSIGNED_INT16;
+    image_format.image_channel_order = CL_RG;
+
+    image_desc.image_type = CL_MEM_OBJECT_IMAGE2D;
+    image_desc.image_width = (MAX_ARITY + 1);
+    image_desc.image_height = (MAX_NODES * 2) + 2;
+    image_desc.image_depth = 0;
+    image_desc.image_array_size = NUM_INDIV;
+
+    image_desc.image_row_pitch = 0;
+    image_desc.image_slice_pitch = 0;
+    image_desc.num_mip_levels = 0;
+    image_desc.num_samples = 0;
+    image_desc.buffer = nullptr;
+
+    int result;
+    populationImage = cl::Image2DArray(context, CL_MEM_READ_ONLY,
+            image_format,
+            image_desc.image_array_size,
+            image_desc.image_width,
+            image_desc.image_height,
+            0,
+            0,
+            nullptr, &result);
+    checkError(result);
+
+
+    origin[0] = 0;
+    origin[1] = 0;
+    origin[2] = 0;
+
+    imgSize[0] =static_cast<size_t>(image_desc.image_width);
+    imgSize[1] =static_cast<size_t>(image_desc.image_height);
+    imgSize[2] =static_cast<size_t>(image_desc.image_array_size);
+
+    //populationImageObject = new unsigned int[imgSize[0]*imgSize[1]*imgSize[2]];
+
+    populationImageObject = new unsigned int[image_desc.image_width *
+                                            image_desc.image_height *
+                                            image_desc.image_array_size];
+
+}
+
+void OCLConfig::writeImageBuffer(ActiveChromosome* population){
+
+    int index = 0;
+
+    for(int i = 0; i < NUM_INDIV; i++ ){
+        populationImageObject[index++] = population[i].numActiveNodes;
+
+        while(index % image_desc.image_width != 0) index++;
+
+        for(int j = 0; j < MAX_NODES; j++){
+            populationImageObject[index++] = population[i].nodes[j].originalIndex;
+            for(int k = 0; k < MAX_ARITY; k++){
+                populationImageObject[index++] = population[i].nodes[j].inputs[k];
+            }
+            populationImageObject[index++] = population[i].nodes[j].function;
+            for(int k = 0; k < MAX_ARITY; k++){
+                populationImageObject[index++] = *(unsigned int*)&population[i].nodes[j].inputsWeight[k];
+            }
+        }
+        for(int j = 0; j < MAX_OUTPUTS; j++){
+            populationImageObject[index++] = population[i].output[j];
+        }
+
+        while(index % image_desc.image_width != 0) index++;
+        //std::cout << index << std::endl;
+    }
+
+    int result = cmdQueue.enqueueWriteImage( populationImage, CL_TRUE, origin, imgSize,0, 0, populationImageObject);
+    checkError(result);
+}
+
 double OCLConfig::getKernelElapsedTime(){
     e_tempo.getProfilingInfo(CL_PROFILING_COMMAND_START, &inicio);
     e_tempo.getProfilingInfo(CL_PROFILING_COMMAND_END, &fim);

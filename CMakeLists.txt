@@ -9,7 +9,7 @@ set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++ -static-libgcc")
 #link_directories(lib/x64)
 
 #-lm2s-opencl -I/home/bmarcosps/multi2sim-5.0/runtime/include
-include_directories(.)
+#include_directories(.)
 include_directories("C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.0\\include")
 link_directories("C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.0\\lib\\Win32")
 

@@ -64,7 +64,7 @@
 #endif // PROB_MUT
 
 
-#define NUM_GENERATIONS 1001
+#define NUM_GENERATIONS 50000
 #define NUM_EVALUATIONS 2.40e+007
 
 
@@ -97,13 +97,15 @@
 typedef struct
 {
     //unsigned int inputsEvaluated;
+
+    //float inputsOutputs[MAX_ARITY];
     unsigned int function;
     unsigned int maxInputs;
-    //float inputsOutputs[MAX_ARITY];
     unsigned int inputs[MAX_ARITY];
     float inputsWeight[MAX_ARITY];
-    //float output;
     int active;
+    //float output;
+
 
 } Node;
 
@@ -116,6 +118,25 @@ typedef struct
     float fitness;
     float fitnessValidation;
 } Chromosome;
+
+
+
+typedef struct
+{
+    unsigned int function;
+    unsigned int maxInputs;
+    unsigned int inputs[MAX_ARITY];
+    float inputsWeight[MAX_ARITY];
+    unsigned int originalIndex;
+
+} ActiveNode;
+
+typedef struct
+{
+    ActiveNode nodes[MAX_NODES];
+    unsigned int output[MAX_OUTPUTS];
+    unsigned int numActiveNodes;
+} ActiveChromosome;
 
 
 typedef struct

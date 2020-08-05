@@ -15,6 +15,10 @@ public:
     std::vector<cl::Platform> platforms;
     std::vector<std::vector<cl::Device>> devices;
 
+    std::vector<cl::ImageFormat> imageFormats;
+    cl::size_t<3> origin;
+    cl::size_t<3> imgSize;
+
     cl::Context context;
     cl::CommandQueue cmdQueue;
     cl::Program program;
@@ -37,7 +41,9 @@ public:
     cl::Kernel kernelEvolve;
 
     cl::Kernel kernelEvaluate;
-    cl::Kernel kernelEvaluate2;
+    cl::Kernel kernelEvaluateActive;
+    cl::Kernel kernelEvaluateImage;
+    cl::Kernel kernelEvaluateImageValidation;
 
     ///Buffers
     cl::Buffer bufferSeeds;
@@ -57,6 +63,16 @@ public:
 
     cl::Buffer bufferBest;
     cl::Buffer bufferPopulation;
+    cl::Buffer bufferPopulationActive;
+
+    cl::Buffer bufferFitness;
+    cl::Buffer bufferFitnessValidation;
+
+    cl::Image2DArray populationImage;
+    unsigned int* populationImageObject;
+
+    cl::ImageFormat image_format;
+    cl_image_desc image_desc;
 
     size_t numPoints;
     size_t numPointsTrain;
@@ -95,6 +111,10 @@ public:
     float* transposeOutputsTest;
 
 
+
+
+
+
     void allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int sizeTest);
     void setNDRages();
     void setCompileFlags();
@@ -106,23 +126,37 @@ public:
 
     void writeBestBuffer(Chromosome* best);
     void writePopulationBuffer(Chromosome* population);
+    void writePopulationActiveBuffer(ActiveChromosome* population);
 
     void readBestBuffer(Chromosome* best);
     void readPopulationBuffer(Chromosome* population);
+    void readPopulationActiveBuffer(ActiveChromosome* population);
     void readSeedsBuffer(int* seeds);
+    void readFitnessBuffer(float* fitness);
+    void readFitnessValidationBuffer(float* fitnessValidation);
+
+    void setupImageBuffers();
 
     void finishCommandQueue();
 
     void enqueueCGPKernel();
 
+    void enqueueTrainKernel();
+    void enqueueValidationKernel();
     void enqueueTestKernel();
+
 
     void enqueueEvolveKernel();
 
     void enqueueEvaluationKernel();
-    void enqueueEvaluationKernel2();
+    void enqueueEvaluationActiveKernel();
+    void enqueueEvaluationImageKernel();
+    void enqueueEvaluationImageValidationKernel();
+
 
     double getKernelElapsedTime();
+
+    void writeImageBuffer(ActiveChromosome* population);
 
 private:
     void printOpenclDeviceInfo();

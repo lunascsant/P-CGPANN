@@ -39,6 +39,8 @@ void sortActiveArray(int *array, const int length) {
     qsort(array, length, sizeof(int), cmpInt);
 }
 
+
+
 void activateNodes(Chromosome* c, Parameters* p){
 
     int i, j;
@@ -551,6 +553,39 @@ Chromosome *mutateTopologyProbabilistic(Chromosome *c, Parameters *p, int *seed,
     return  c;
 }
 
+void copyNode(Node* n, ActiveNode* an){
+    an->function = n->function;
+    an->maxInputs = n->maxInputs;
+    for(int i = 0; i < MAX_ARITY; i++){
+        an->inputs[i] = n->inputs[i];
+        an->inputsWeight[i] = n->inputsWeight[i];
+    }
+}
+
+void copyActiveNodes(Chromosome *c, ActiveChromosome* ac){
+
+    for(int i = 0; i < NUM_INDIV; i++ ){
+
+        unsigned int numActiveNodes = c[i].numActiveNodes;
+        ac[i].numActiveNodes = numActiveNodes;
+
+
+        for(int j = 0; j < numActiveNodes; j++){
+            unsigned int currentActive = c[i].activeNodes[j];
+
+            copyNode(&(c[i].nodes[currentActive]), &(ac[i].nodes[j]));
+            ac[i].nodes[j].originalIndex = currentActive;
+        }
+
+
+        for(int j = 0; j < MAX_OUTPUTS; j++){
+            ac[i].output[j] = c[i].output[j];
+        }
+
+
+    }
+}
+
 Chromosome *mutateTopologyProbabilistic2(Chromosome *c, Parameters *p, int *seeds, int type, int index) {
 
     int i, j;
@@ -698,7 +733,8 @@ Chromosome CGP(Dataset* training, Dataset* validation, Parameters* params, int *
             evaluateCircuitValidationLinear(&mutated_best, validation);
 
 
-
+            if(iterations%100 == 0)
+                std::cout << mutated_best.fitness << " ";
             if(mutated_best.fitness >= best_train.fitness){
                 best_train = mutated_best;
             }
@@ -709,7 +745,8 @@ Chromosome CGP(Dataset* training, Dataset* validation, Parameters* params, int *
 
             //std::cout << mutated_best.fitness << " ";
         }
-        //std::cout << std::endl;
+        if(iterations%100 == 0)
+            std::cout << std::endl;
         best = best_train;
         //std::cout << "Best fitness  = " << best.fitness << std::endl;
         timeManager.getEndTime(Iteracao_T);
@@ -735,6 +772,10 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
     Chromosome best_train;
     Chromosome best_valid;
     Chromosome* population = new Chromosome[NUM_INDIV];
+    ActiveChromosome* activePopulation = new ActiveChromosome[NUM_INDIV];
+
+    float fitness[NUM_INDIV];
+    float fitnessValidation[NUM_INDIV];
 
     initializePopulation(population, params, &seeds[0]);
 
@@ -749,33 +790,66 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
 
     int iterations = 0;
     while(stopCriteria(iterations)) {
-
         timeManager.getStartTime(Iteracao_T);
+
         //std::cout << "Active nodes: " << best.numActiveNodes << ", FitnessTrain: " << best.fitness << ", FitnessValidation: " << best.fitnessValidation  << std::endl;
 
         for(int k = 0; k < NUM_INDIV; k++){
             population[k] = best;
-            mutateTopologyProbabilistic2(&population[k], params, seeds, 0, k);
+            //mutateTopologyProbabilistic2(&population[k], params, seeds, 0, k);
         }
 
-        ocl->writeBestBuffer(&best);
-        ocl->writePopulationBuffer(population);
+        //ocl->writeBestBuffer(&best);
+        //ocl->writePopulationBuffer(population);
+        //ocl->writePopulationActiveBuffer(activePopulation);
 
-        ocl->finishCommandQueue();
+        //ocl->finishCommandQueue();
 
-        //ocl->enqueueCGPKernel();
         //ocl->enqueueEvolveKernel();
         //ocl->finishCommandQueue();
 
-        ocl->enqueueEvaluationKernel();
+        //ocl->readPopulationBuffer(population);
+        //ocl->finishCommandQueue();
+
+       // for(int k = 0; k < NUM_INDIV; k++){
+        //    activateNodes(&population[k], params);
+        //}
+
+        copyActiveNodes(population, activePopulation);
+        ocl->writeImageBuffer(activePopulation);
+        //ocl->writePopulationActiveBuffer(activePopulation);
+
         ocl->finishCommandQueue();
 
-        ocl->readPopulationBuffer(population);
+        //ocl->enqueueEvaluationKernel();
+        //ocl->enqueueEvaluationActiveKernel();
+
+        //ocl->enqueueTrainKernel();
+        //ocl->enqueueValidationKernel();
+        //ocl->finishCommandQueue();
+
+        ocl->enqueueEvaluationImageKernel();
+        ocl->enqueueEvaluationImageValidationKernel();
+
+        ocl->finishCommandQueue();
+
+
+        //ocl->readPopulationBuffer(population);
+        ocl->readFitnessBuffer(fitness);
+        ocl->readFitnessValidationBuffer(fitnessValidation);
+
+
         ocl->finishCommandQueue();
 
 
         for(int k = 0; k < NUM_INDIV; k++){
-            //std::cout << population[k].fitness << " ";
+
+            population[k].fitness = fitness[k];
+            population[k].fitnessValidation = fitnessValidation[k];
+
+            if(iterations%100 == 0)
+                std::cout << population[k].fitness << " ";
+
             if(population[k].fitness >= best_train.fitness){
                 best_train = population[k];
             }
@@ -784,7 +858,8 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
                 best_valid = population[k];
             }
         }
-        //std::cout << std::endl;
+        if(iterations%100 == 0)
+        std::cout << std::endl;
 
         best = best_train;
         timeManager.getEndTime(Iteracao_T);

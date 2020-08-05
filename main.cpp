@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
     //ocl->setProgramSource(params, &fullData);
     ocl->buildProgram(params, &fullData, "kernels\\kernel_split_data.cl");
     ocl->buildKernels();
-
+    ocl->setupImageBuffers();
     int* seeds;
     seeds = new int [ocl->maxLocalSize * NUM_INDIV];
     srand(SEED);
@@ -51,7 +51,7 @@ int main(int argc, char** argv) {
 
     for(i = 0; i < 3; i++) {
         for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
-            seeds[aux] = aux + 50;
+            seeds[aux] = aux + 55;
         }
 
         shuffleData(&fullData, indexesData, &seeds[0]);

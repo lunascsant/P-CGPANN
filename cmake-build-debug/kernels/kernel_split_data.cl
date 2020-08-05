@@ -3,7 +3,7 @@
 #elif defined(cl_amd_fp64)
 #pragma OPENCL EXTENSION cl_amd_fp64 : enable
 #else
-#error "Double precision floating point not supported by OpenCL implementation."
+#error "float precision floating point not supported by OpenCL implementation."
 #endif
 
 typedef struct
@@ -11,7 +11,7 @@ typedef struct
     unsigned int function;
     unsigned int maxInputs;
     unsigned int inputs[MAX_ARITY];
-    double inputsWeight[MAX_ARITY];
+    float inputsWeight[MAX_ARITY];
     int active;
 
 } Node;
@@ -22,8 +22,8 @@ typedef struct
     unsigned int output[MAX_OUTPUTS];
     int activeNodes[MAX_NODES];
     unsigned int numActiveNodes;
-    double fitness;
-    double fitnessValidation;
+    float fitness;
+    float fitnessValidation;
 } Chromosome;
 
 typedef struct {
@@ -33,7 +33,7 @@ typedef struct {
 
 typedef struct {
     int topIndex;
-    double info[MAX_NODES * MAX_ARITY];
+    float info[MAX_NODES * MAX_ARITY];
 } ExStack;
 
 void push(Stack* s, unsigned int info){
@@ -50,14 +50,14 @@ unsigned int pop(Stack* s){
     }
 }
 
-void pushEx(ExStack* s, double info) {
+void pushEx(ExStack* s, float info) {
     (s->topIndex)++;
     if(s->topIndex < MAX_NODES * MAX_ARITY){
         s->info[s->topIndex] = info;
     }
 }
 
-double popEx(ExStack* s) {
+float popEx(ExStack* s) {
     if(s->topIndex >= 0){
         (s->topIndex)--;
         return s->info[(s->topIndex) + 1];
@@ -84,16 +84,16 @@ unsigned int randomFunction(int *seed) {
     return (rand2(seed) % (NUM_FUNCTIONS));
 }
 
-double randomConnectionWeight(int *seed) {
-    return (((double) rand2(seed) / (double) (2147483647) ) * 2 * WEIGTH_RANGE) - WEIGTH_RANGE;
+float randomConnectionWeight(int *seed) {
+    return (((float) rand2(seed) / (float) (2147483647) ) * 2 * WEIGTH_RANGE) - WEIGTH_RANGE;
 }
 
 int randomInterval(int inf_bound, int sup_bound, int *seed) {
     return rand2(seed) % (sup_bound - inf_bound + 1) + inf_bound;
 }
 
-double randomProb(int* seed){
-    return (double)rand2(seed) / 2147483647;//pown(2.0, 31);
+float randomProb(int* seed){
+    return (float)rand2(seed) / 2147483647;//pown(2.0, 31);
 }
 
 
@@ -324,7 +324,7 @@ void mutateTopologyProbabilistic2(__global Chromosome *c, __global unsigned int*
     //for(i = 0; i < MAX_NODES; i++){
     //if(local_id < MAX_NODES) {
 
-    for(k = 0; k < ceil( (size)/ (double)LOCAL_SIZE_EVOL ) ; k++){
+    for(k = 0; k < ceil( (size)/ (float)LOCAL_SIZE_EVOL ) ; k++){
 
         int index = k * LOCAL_SIZE_EVOL + local_id;
         
@@ -430,9 +430,9 @@ void mutateTopologyPoint(__global Chromosome *c, __global unsigned int* function
     activateNodes(c);
 }
 
-double executeFunction(__global Chromosome* c, int node, ExStack* exStack){
+float executeFunction(__global Chromosome* c, int node, ExStack* exStack){
     int i;
-    double result, sum;
+    float result, sum;
     unsigned int inputs = c->nodes[node].maxInputs;
     switch (c->nodes[node].function){
         #ifdef ADD
@@ -489,20 +489,20 @@ double executeFunction(__global Chromosome* c, int node, ExStack* exStack){
         
         #ifdef SQ
         case SQ:
-            result = pow((double)popEx(exStack), (double)2);
+            result = pow((float)popEx(exStack), (float)2);
         break;
         #endif
         
         #ifdef CUBE
         case CUBE:
-            result = pow((double)popEx(exStack), (double)3);
+            result = pow((float)popEx(exStack), (float)3);
             break;
         #endif
         
         #ifdef POW
         case POW:
             result = popEx(exStack);
-            result = pow((double)popEx(exStack), (double)result);
+            result = pow((float)popEx(exStack), (float)result);
             break;
         #endif
         
@@ -658,7 +658,7 @@ double executeFunction(__global Chromosome* c, int node, ExStack* exStack){
             for(i = 0; i < inputs; i++){
                 sum += (popEx(exStack) * c->nodes[node].inputsWeight[i]);
             }
-            result = exp(-(pow((double) (sum - 0), (double) 2)) / (2 * pow((double)1, (double)2)));
+            result = exp(-(pow((float) (sum - 0), (float) 2)) / (2 * pow((float)1, (float)2)));
             break;
         #endif
         
@@ -706,9 +706,9 @@ double executeFunction(__global Chromosome* c, int node, ExStack* exStack){
 }
 
 void evaluateCircuitParallelLinear(__global Chromosome* c,
-                                    __global double* data, 
-                                    __global double* out, 
-                                    __local double* error) {
+                                    __global float* data, 
+                                    __global float* out, 
+                                    __local float* error) {
     
     
     
@@ -720,7 +720,7 @@ void evaluateCircuitParallelLinear(__global Chromosome* c,
     int group_id = get_group_id(0);
 
     error[local_id] = 0.0f;
-    double num, div;
+    float num, div;
 
 
     #ifndef NUM_POINTS_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
@@ -730,17 +730,17 @@ void evaluateCircuitParallelLinear(__global Chromosome* c,
     for(k = 0; k < (M/LOCAL_SIZE) ; k++){
 
     #else
-        for(k = 0; k < ceil( M/ (double)LOCAL_SIZE ) ; k++){
+        for(k = 0; k < ceil( M/ (float)LOCAL_SIZE ) ; k++){
             
             if( k * LOCAL_SIZE + local_id < M){
     #endif
             //printf("c");
             //int i, j;
-            double maxPredicted = -DBL_MAX ;
+            float maxPredicted = -DBL_MAX ;
             int predictedClass = 0;
             int correctClass = 0;
 
-            double alreadyEvaluated[MAX_NODES];
+            float alreadyEvaluated[MAX_NODES];
 
             for(i = 0; i < MAX_NODES; i++){
                 alreadyEvaluated[i] = -DBL_MAX ;
@@ -834,9 +834,9 @@ void evaluateCircuitParallelLinear(__global Chromosome* c,
 }
 
 void evaluateCircuitParallel(__global Chromosome* c,
-                            __global double* data, 
-                            __global double* out, 
-                            __local double* error) {
+                            __global float* data, 
+                            __global float* out, 
+                            __local float* error) {
     
     
     
@@ -847,7 +847,7 @@ void evaluateCircuitParallel(__global Chromosome* c,
     int group_id = get_group_id(0);
 
     error[local_id] = 0.0f;
-    double num, div;
+    float num, div;
 
 
     #ifndef NUM_POINTS_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
@@ -857,18 +857,18 @@ void evaluateCircuitParallel(__global Chromosome* c,
     for(k = 0; k < (M/LOCAL_SIZE) ; k++){
 
     #else
-        for(k = 0; k < ceil( M/ (double)LOCAL_SIZE ) ; k++){
+        for(k = 0; k < ceil( M/ (float)LOCAL_SIZE ) ; k++){
             
             if( k * LOCAL_SIZE + local_id < M){
     #endif
         //printf("c");
         //int i, j;
-        double maxPredicted = -DBL_MAX ;
+        float maxPredicted = -DBL_MAX ;
         int predictedClass = 0;
         int correctClass = 0;
 
-        double executionOut[MAX_OUTPUTS];
-        double alreadyEvaluated[MAX_NODES];
+        float executionOut[MAX_OUTPUTS];
+        float alreadyEvaluated[MAX_NODES];
         int inputsEvaluatedAux[MAX_NODES];
 
         for(i = 0; i < MAX_NODES; i++){
@@ -967,8 +967,8 @@ void evaluateCircuitParallel(__global Chromosome* c,
 }
 
 void evaluateCircuitParallel2(__global Chromosome* c,
-                                __global double* data,
-                                __local double* error) {
+                                __global float* data,
+                                __local float* error) {
     
     
 
@@ -979,7 +979,7 @@ void evaluateCircuitParallel2(__global Chromosome* c,
     int group_id = get_group_id(0);
 
     error[local_id] = 0.0f;
-    double num, div;
+    float num, div;
 
     #ifndef NUM_POINTS_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
    /* When we know that NUM_POINTS is divisible by LOCAL_SIZE then we can avoid a
@@ -988,18 +988,18 @@ void evaluateCircuitParallel2(__global Chromosome* c,
     for(k = 0; k < (M/LOCAL_SIZE) ; k++){
 
     #else
-        for(k = 0; k < ceil( M/ (double)LOCAL_SIZE ) ; k++){
+        for(k = 0; k < ceil( M/ (float)LOCAL_SIZE ) ; k++){
             
             if( k * LOCAL_SIZE + local_id < M){
     #endif
         //printf("c");
         //int i, j;
-        double maxPredicted = -DBL_MAX ;
+        float maxPredicted = -DBL_MAX ;
         int predictedClass = 0;
         int correctClass = 0;
 
-        double executionOut[MAX_OUTPUTS];
-        double alreadyEvaluated[MAX_NODES];
+        float executionOut[MAX_OUTPUTS];
+        float alreadyEvaluated[MAX_NODES];
         int inputsEvaluatedAux[MAX_NODES];
 
         for(i = 0; i < MAX_NODES; i++){
@@ -1099,9 +1099,9 @@ void evaluateCircuitParallel2(__global Chromosome* c,
 }
 
 void evaluateCircuitParallelTrainValidationLinear(__global Chromosome* c,
-                                                __global double* data, 
-                                                __global double* out, 
-                                                __local double* error) {
+                                                __global float* data, 
+                                                __global float* out, 
+                                                __local float* error) {
                 
     
     
@@ -1113,7 +1113,7 @@ void evaluateCircuitParallelTrainValidationLinear(__global Chromosome* c,
     int group_id = get_group_id(0);
 
     error[local_id] = 0.0f;
-    double num, div;
+    float num, div;
 
 
     #ifndef NUM_POINTS_VALIDATION_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE_GLOBAL
@@ -1123,17 +1123,17 @@ void evaluateCircuitParallelTrainValidationLinear(__global Chromosome* c,
     for(k = 0; k < (M_VALIDATION/LOCAL_SIZE) ; k++){
 
     #else
-        for(k = 0; k < ceil( M_VALIDATION/ (double)LOCAL_SIZE ) ; k++){
+        for(k = 0; k < ceil( M_VALIDATION/ (float)LOCAL_SIZE ) ; k++){
             
             if( k * LOCAL_SIZE + local_id < M_VALIDATION){
     #endif
             //printf("c");
             //int i, j;
-            double maxPredicted = -DBL_MAX ;
+            float maxPredicted = -DBL_MAX ;
             int predictedClass = 0;
             int correctClass = 0;
 
-            double alreadyEvaluated[MAX_NODES];
+            float alreadyEvaluated[MAX_NODES];
 
             for(i = 0; i < MAX_NODES; i++){
                 alreadyEvaluated[i] = -DBL_MAX ;
@@ -1224,9 +1224,9 @@ void evaluateCircuitParallelTrainValidationLinear(__global Chromosome* c,
 }
 
 void evaluateCircuitParallelTrainValidation(__global Chromosome* c,
-                                    __global double* data, 
-                                    __global double* out, 
-                                    __local double* error) {
+                                    __global float* data, 
+                                    __global float* out, 
+                                    __local float* error) {
     
     
 
@@ -1237,7 +1237,7 @@ void evaluateCircuitParallelTrainValidation(__global Chromosome* c,
     int group_id = get_group_id(0);
 
     error[local_id] = 0.0f;
-    double num, div;
+    float num, div;
 
     #ifndef NUM_POINTS_VALIDATION_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE_GLOBAL
    /* When we know that NUM_POINTS is divisible by LOCAL_SIZE then we can avoid a
@@ -1246,18 +1246,18 @@ void evaluateCircuitParallelTrainValidation(__global Chromosome* c,
     for(k = 0; k < (M_VALIDATION/LOCAL_SIZE) ; k++){
 
     #else
-        for(k = 0; k < ceil( M_VALIDATION/ (double)LOCAL_SIZE ) ; k++){
+        for(k = 0; k < ceil( M_VALIDATION/ (float)LOCAL_SIZE ) ; k++){
             
             if( k * LOCAL_SIZE + local_id < M_VALIDATION){
     #endif
         //printf("c");
         //int i, j;
-        double maxPredicted = -DBL_MAX;
+        float maxPredicted = -DBL_MAX;
         int predictedClass = 0;
         int correctClass = 0;
 
-        double executionOut[MAX_OUTPUTS];
-        double alreadyEvaluated[MAX_NODES];
+        float executionOut[MAX_OUTPUTS];
+        float alreadyEvaluated[MAX_NODES];
         int inputsEvaluatedAux[MAX_NODES];
 
         for(i = 0; i < MAX_NODES; i++){
@@ -1351,9 +1351,9 @@ void evaluateCircuitParallelTrainValidation(__global Chromosome* c,
 
 
 void evaluateCircuitParallelTest(__global Chromosome* c,
-                                __global double* data, 
-                                __global double* out, 
-                                __local double* error) {
+                                __global float* data, 
+                                __global float* out, 
+                                __local float* error) {
     
     
 
@@ -1364,7 +1364,7 @@ void evaluateCircuitParallelTest(__global Chromosome* c,
     int group_id = get_group_id(0);
 
     error[local_id] = 0.0f;
-    double num, div;
+    float num, div;
 
     #ifndef NUM_POINTS_TEST_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
    /* When we know that NUM_POINTS is divisible by LOCAL_SIZE then we can avoid a
@@ -1373,18 +1373,18 @@ void evaluateCircuitParallelTest(__global Chromosome* c,
     for(k = 0; k < (M_TEST/LOCAL_SIZE_TEST) ; k++){
 
     #else
-        for(k = 0; k < ceil( M_TEST/ (double)LOCAL_SIZE_TEST ) ; k++){
+        for(k = 0; k < ceil( M_TEST/ (float)LOCAL_SIZE_TEST ) ; k++){
             
             if( k * LOCAL_SIZE_TEST + local_id < M_TEST){
     #endif
         //printf("c");
         //int i, j;
-        double maxPredicted = -DBL_MAX;
+        float maxPredicted = -DBL_MAX;
         int predictedClass = 0;
         int correctClass = 0;
 
-        double executionOut[MAX_OUTPUTS];
-        double alreadyEvaluated[MAX_NODES];
+        float executionOut[MAX_OUTPUTS];
+        float alreadyEvaluated[MAX_NODES];
         int inputsEvaluatedAux[MAX_NODES];
 
         for(i = 0; i < MAX_NODES; i++){
@@ -1478,9 +1478,9 @@ void evaluateCircuitParallelTest(__global Chromosome* c,
 }
 
 void evaluateCircuitParallelTrain(__global Chromosome* c,
-                                    __global double* data, 
-                                    __global double* out, 
-                                    __local double* error) {
+                                    __global float* data, 
+                                    __global float* out, 
+                                    __local float* error) {
     
     
 
@@ -1491,7 +1491,7 @@ void evaluateCircuitParallelTrain(__global Chromosome* c,
     int group_id = get_group_id(0);
 
     error[local_id] = 0.0f;
-    double num, div;
+    float num, div;
 
     #ifndef NUM_POINTS_TRAIN_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
    /* When we know that NUM_POINTS is divisible by LOCAL_SIZE then we can avoid a
@@ -1500,18 +1500,18 @@ void evaluateCircuitParallelTrain(__global Chromosome* c,
     for(k = 0; k < (M_TRAIN/LOCAL_SIZE_TRAIN) ; k++){
 
     #else
-        for(k = 0; k < ceil( M_TRAIN/ (double)LOCAL_SIZE_TRAIN ) ; k++){
+        for(k = 0; k < ceil( M_TRAIN/ (float)LOCAL_SIZE_TRAIN ) ; k++){
             
             if( k * LOCAL_SIZE_TRAIN + local_id < M_TRAIN){
     #endif
         //printf("c");
         //int i, j;
-        double maxPredicted = -DBL_MAX;
+        float maxPredicted = -DBL_MAX;
         int predictedClass = 0;
         int correctClass = 0;
 
-        double executionOut[MAX_OUTPUTS];
-        double alreadyEvaluated[MAX_NODES];
+        float executionOut[MAX_OUTPUTS];
+        float alreadyEvaluated[MAX_NODES];
         int inputsEvaluatedAux[MAX_NODES];
 
         for(i = 0; i < MAX_NODES; i++){
@@ -1605,9 +1605,9 @@ void evaluateCircuitParallelTrain(__global Chromosome* c,
 }
 
 void evaluateCircuitParallelValidation(__global Chromosome* c,
-                                    __global double* data, 
-                                    __global double* out, 
-                                    __local double* error) {
+                                    __global float* data, 
+                                    __global float* out, 
+                                    __local float* error) {
 
     int i, k, j = 0;
     int erro = 0;
@@ -1616,7 +1616,7 @@ void evaluateCircuitParallelValidation(__global Chromosome* c,
     int group_id = get_group_id(0);
 
     error[local_id] = 0.0f;
-    double num, div;
+    float num, div;
 
     #ifndef NUM_POINTS_VALIDATION_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
    /* When we know that NUM_POINTS is divisible by LOCAL_SIZE then we can avoid a
@@ -1625,18 +1625,18 @@ void evaluateCircuitParallelValidation(__global Chromosome* c,
     for(k = 0; k < (M_VALIDATION/LOCAL_SIZE_VALIDATION) ; k++){
 
     #else
-        for(k = 0; k < ceil( M_VALIDATION/ (double)LOCAL_SIZE_VALIDATION ) ; k++){
+        for(k = 0; k < ceil( M_VALIDATION/ (float)LOCAL_SIZE_VALIDATION ) ; k++){
             
             if( k * LOCAL_SIZE_VALIDATION + local_id < M_VALIDATION){
     #endif
         //printf("c");
         //int i, j;
-        double maxPredicted = -DBL_MAX;
+        float maxPredicted = -DBL_MAX;
         int predictedClass = 0;
         int correctClass = 0;
 
-        double executionOut[MAX_OUTPUTS];
-        double alreadyEvaluated[MAX_NODES];
+        float executionOut[MAX_OUTPUTS];
+        float alreadyEvaluated[MAX_NODES];
         int inputsEvaluatedAux[MAX_NODES];
 
         for(i = 0; i < MAX_NODES; i++){
@@ -1755,11 +1755,11 @@ __kernel void evolve(__global unsigned int* functionSet,
     seeds[global_id] = seed;
 }
 
-__kernel void evaluate(__global double* dataset,
-                       __global double* outputs,
+__kernel void evaluate(__global float* dataset,
+                       __global float* outputs,
                        __global unsigned int* functionSet,
                        __global Chromosome* pop,
-                       __local double* error){
+                       __local float* error){
 
     int group_id = get_group_id(0);
 
@@ -1767,10 +1767,10 @@ __kernel void evaluate(__global double* dataset,
 
 }
 
-__kernel void evaluate2(__global double* datasetOut,
+__kernel void evaluate2(__global float* datasetOut,
                        __global unsigned int* functionSet,
                        __global Chromosome* pop,
-                       __local double* error){
+                       __local float* error){
 
     int group_id = get_group_id(0);
 
@@ -1778,47 +1778,47 @@ __kernel void evaluate2(__global double* datasetOut,
 
 }
 
-__kernel void evaluateTest(__global double* dataset,
-                            __global double* outputs,
+__kernel void evaluateTest(__global float* dataset,
+                            __global float* outputs,
                             __global unsigned int* functionSet,
                             __global Chromosome* individual,
-                            __local double* error){
+                            __local float* error){
 
 
     evaluateCircuitParallelTest(individual, dataset, outputs, error);
 
 }
 
-__kernel void evaluateTrain(__global double* dataset,
-                            __global double* outputs,
+__kernel void evaluateTrain(__global float* dataset,
+                            __global float* outputs,
                             __global unsigned int* functionSet,
                             __global Chromosome* individual,
-                            __local double* error){
+                            __local float* error){
 
 
     evaluateCircuitParallelTrain(individual, dataset, outputs, error);
 
 }
 
-__kernel void evaluateValidation(__global double* dataset,
-                            __global double* outputs,
+__kernel void evaluateValidation(__global float* dataset,
+                            __global float* outputs,
                             __global unsigned int* functionSet,
                             __global Chromosome* individual,
-                            __local double* error){
+                            __local float* error){
 
 
     evaluateCircuitParallelValidation(individual, dataset, outputs, error);
 
 }
 
-__kernel void evaluateTrainValidation(__global double* datasetTrain,
-                                        __global double* outputsTrain,
-                                        __global double* datasetValid,
-                                        __global double* outputsValid,
+__kernel void evaluateTrainValidation(__global float* datasetTrain,
+                                        __global float* outputsTrain,
+                                        __global float* datasetValid,
+                                        __global float* outputsValid,
                                         __global unsigned int* functionSet,
                                         __global Chromosome* pop,
                                         __global Chromosome* best,
-                                        __local double* error){
+                                        __local float* error){
 
     int group_id = get_group_id(0);
     int local_id = get_local_id(0);
@@ -1836,15 +1836,15 @@ __kernel void evaluateTrainValidation(__global double* datasetTrain,
 }
 
 
-__kernel void CGP(__global double* datasetTrain,
-                  __global double* outputsTrain,
-                  __global double* datasetValid,
-                  __global double* outputsValid,
+__kernel void CGP(__global float* datasetTrain,
+                  __global float* outputsTrain,
+                  __global float* datasetValid,
+                  __global float* outputsValid,
                   __global unsigned int* functionSet,
                   __global int *seeds,
                   __global Chromosome* pop,
                   __global Chromosome* best,
-                  __local double* error){
+                  __local float* error){
 
     int group_id = get_group_id(0);
     int local_id = get_local_id(0);
@@ -1874,7 +1874,7 @@ __kernel void CGP(__global double* datasetTrain,
     }
 }
 
-__kernel void testMemory(__global int* test, __local double* error){
+__kernel void testMemory(__global int* test, __local float* error){
 
     int group_id = get_group_id(0);
     int local_id = get_local_id(0);

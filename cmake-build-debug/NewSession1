@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<session version="2" name="NewSession1" hscale="1.0E-6">
+<executable file="C:\Users\bruno\CLionProjects\P-CGPDE\cmake-build-debug\P-CGPDE.exe" timestamp="1595716485630" cwd="C:\Users\bruno\CLionProjects\P-CGPDE" args="datasets\iris.txt" remoteConnectionName="Local" profileonstart="true" concurrentkernels="true" apitrace="true" environmentprofiling="false" uvmprofiling="true"><envs><env name="COMPUTE_PROFILE" value="1"/></envs><multiProcess type="1" rumMPS="false"/></executable>
+<expert><columnprops></columnprops>
+</expert>
+<analysis guided="true"><visitedstages><stage name="KERNELS"/><stage name="TIMELINE"/></visitedstages></analysis>
+<expertsystem current="APPLICATION"><visited><stage name="INTRO"/><stage name="APPLICATION"/></visited></expertsystem>
+<vruler width="200"/>
+<hruler>
+</hruler>
+<timelinestate>
+</timelinestate>
+</session>
