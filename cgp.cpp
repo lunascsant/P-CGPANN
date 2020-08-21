@@ -34,7 +34,7 @@ static int cmpInt(const void * a, const void * b) {
     return ( *(int*)a - * (int*)b );
 }
 
-void sortActiveArray(int *array, const int length) {
+void sortActiveArray(unsigned int *array, const int length) {
 
     qsort(array, length, sizeof(int), cmpInt);
 }
@@ -763,7 +763,7 @@ Chromosome CGP(Dataset* training, Dataset* validation, Parameters* params, int *
     return best_valid;
 }
 
-Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLConfig* ocl, int *seeds){
+Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel){
     GPTime timeManager(4);
     //Chromosome *current_pop;
     //current_pop
@@ -773,15 +773,15 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
     Chromosome best_valid;
     Chromosome* population = new Chromosome[NUM_INDIV];
     ActiveChromosome* activePopulation = new ActiveChromosome[NUM_INDIV];
+    CompactChromosome *compactPopulation = new CompactChromosome[NUM_INDIV];
 
-    float fitness[NUM_INDIV];
-    float fitnessValidation[NUM_INDIV];
+
 
     initializePopulation(population, params, &seeds[0]);
 
     int bestTrain = evaluatePopulation(population, training, 0);
     int bestValid = evaluatePopulation(population, validation, 1);
-
+    double kernelTime = 0;
     best_train = population[bestTrain];
     best_valid = population[bestValid];
     best = best_train;
@@ -796,12 +796,55 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
 
         for(int k = 0; k < NUM_INDIV; k++){
             population[k] = best;
-            //mutateTopologyProbabilistic2(&population[k], params, seeds, 0, k);
+            mutateTopologyProbabilistic2(&population[k], params, seeds, 0, k);
         }
+
+#if DEFAULT
+        ocl->writePopulationBuffer(population);
+        ocl->finishCommandQueue();
+
+        ocl->enqueueTrainKernel();
+        ocl->enqueueValidationKernel();
+#elif COMPACT
+        ocl->compactChromosome(population, compactPopulation);
+        ocl->writePopulationCompactBuffer(compactPopulation);
+        ocl->finishCommandQueue();
+
+        ocl->enqueueTrainCompactKernel();
+        ocl->enqueueValidationCompactKernel();
+#elif COMPACT_IMG
+        ocl->writeImageBufferCompact(population);
+        ocl->finishCommandQueue();
+
+        ocl->enqueueEvaluationImageQuarterCompactKernel();
+        ocl->enqueueEvaluationImageValidationQuarterCompactKernel();
+#elif IMAGE_R
+        ocl->writeImageBuffer(population);
+        ocl->finishCommandQueue();
+
+        ocl->enqueueEvaluationImageKernel();
+        ocl->enqueueEvaluationImageValidationKernel();
+#elif IMAGE_RG
+        ocl->writeImageBufferHalf(population);
+        ocl->finishCommandQueue();
+
+        ocl->enqueueEvaluationImageHalfKernel();
+        ocl->enqueueEvaluationImageValidationHalfKernel();
+#elif IMAGE_RGBA
+        ocl->writeImageBufferQuarter(population);
+        ocl->finishCommandQueue();
+
+        ocl->enqueueEvaluationImageQuarterKernel();
+        ocl->enqueueEvaluationImageValidationQuarterKernel();
+#endif
+
+        ocl->finishCommandQueue();
+        kernelTime+= ocl->getKernelElapsedTimeTrain();
+        kernelTime+= ocl->getKernelElapsedTimeValid();
+
 
         //ocl->writeBestBuffer(&best);
         //ocl->writePopulationBuffer(population);
-        //ocl->writePopulationActiveBuffer(activePopulation);
 
         //ocl->finishCommandQueue();
 
@@ -810,45 +853,27 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
 
         //ocl->readPopulationBuffer(population);
         //ocl->finishCommandQueue();
-
-       // for(int k = 0; k < NUM_INDIV; k++){
+        //for(int k = 0; k < NUM_INDIV; k++){
         //    activateNodes(&population[k], params);
         //}
 
-        copyActiveNodes(population, activePopulation);
-        ocl->writeImageBuffer(activePopulation);
+        //copyActiveNodes(population, activePopulation);
         //ocl->writePopulationActiveBuffer(activePopulation);
-
-        ocl->finishCommandQueue();
-
-        //ocl->enqueueEvaluationKernel();
-        //ocl->enqueueEvaluationActiveKernel();
-
-        //ocl->enqueueTrainKernel();
-        //ocl->enqueueValidationKernel();
-        //ocl->finishCommandQueue();
-
-        ocl->enqueueEvaluationImageKernel();
-        ocl->enqueueEvaluationImageValidationKernel();
-
-        ocl->finishCommandQueue();
-
-
         //ocl->readPopulationBuffer(population);
-        ocl->readFitnessBuffer(fitness);
-        ocl->readFitnessValidationBuffer(fitnessValidation);
 
+        ocl->readFitnessBuffer();
+        ocl->readFitnessValidationBuffer();
 
         ocl->finishCommandQueue();
 
 
         for(int k = 0; k < NUM_INDIV; k++){
 
-            population[k].fitness = fitness[k];
-            population[k].fitnessValidation = fitnessValidation[k];
+            population[k].fitness = ocl->fitness[k];
+            population[k].fitnessValidation = ocl->fitnessValidation[k];
 
             if(iterations%100 == 0)
-                std::cout << population[k].fitness << " ";
+                std::cout << population[k].fitness << ","<< population[k].numActiveNodes << " ";
 
             if(population[k].fitness >= best_train.fitness){
                 best_train = population[k];
@@ -868,10 +893,13 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
         if(iterations%100 == 0){
             printf("Generation %d:\n", iterations);
             printf("Time: %f\n", timeManager.getTotalTime(Iteracao_T));
+            printf("Kernel Time: %f\n", kernelTime);
         }
         iterations++;
 
     }
+    (*timeIter) = timeManager.getTotalTime(Iteracao_T);
+    (*timeKernel) = kernelTime;
 
     ocl->readSeedsBuffer(seeds);
     ocl->finishCommandQueue();

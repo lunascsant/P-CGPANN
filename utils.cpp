@@ -438,12 +438,12 @@ void getIndexes(int* indices, int k, int excludeIndex, int* seed){
     */
 
     shuffleArray(&indexes, indexes.size(), seed);
-/*
+
     for(int i = 0; i < indexes.size(); i++){
         indices[i] = indexes[i];
-        std::cout << indices[i]  << " ";
+        //std::cout << indices[i]  << " ";
     }
-    std::cout << std::endl;
-    */
+    //std::cout << std::endl;
+
 
 }

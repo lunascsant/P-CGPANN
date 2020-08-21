@@ -8,6 +8,10 @@
 int main(int argc, char** argv) {
     char* datasetFile = argv[1];
     FILE *f_CGP = fopen("./results/cgpann.txt", "w");
+    FILE *f_CGP_time = fopen("./results/cgpann_time.txt", "w");
+    FILE *f_CGP_timeKernel = fopen("./results/cgpann_timeKernel.txt", "w");
+
+
     fprintf(f_CGP, "i,\tj,\taccuracy\n");
 
     GPTime timeManager(4);
@@ -24,15 +28,24 @@ int main(int argc, char** argv) {
 
     int i, j, aux;
 
+    /**OPENCL CONFIG */
     OCLConfig* ocl = new OCLConfig();
-
     ocl->allocateBuffers(params, trainSize, validSize, testSize);
     ocl->setNDRages();
     ocl->setCompileFlags();
-    //ocl->setProgramSource(params, &fullData);
-    ocl->buildProgram(params, &fullData, "kernels\\kernel_split_data.cl");
+    ocl->buildProgram(params, &fullData, "kernels\\kernel.cl");
     ocl->buildKernels();
+#if IMAGE_R
     ocl->setupImageBuffers();
+#elif IMAGE_RG
+    ocl->setupImageBuffersHalf();
+#elif IMAGE_RGBA
+    ocl->setupImageBuffersQuarter();
+#elif  COMPACT_IMG
+    ocl->setupImageBuffersCompact();
+#endif
+    /**OPENCL CONFIG */
+
     int* seeds;
     seeds = new int [ocl->maxLocalSize * NUM_INDIV];
     srand(SEED);
@@ -49,7 +62,7 @@ int main(int argc, char** argv) {
     }
     int* indexesDataInFolds = new int[fullData.M - (fullData.M % KFOLDS)];// save the indexes given the folds generation
 
-    for(i = 0; i < 3; i++) {
+    for(i = 0; i < 1; i++) {
         for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
             seeds[aux] = aux + 55;
         }
@@ -79,13 +92,15 @@ int main(int argc, char** argv) {
             //std::cout << "(" << trainingData->M << " " << validationData->M << " " << testData->M << ")" << std::endl;
 
             ocl->transposeDatasets(trainingData, validationData, testData);
-
+            double timeIter = 0;
+            double timeKernel = 0;
             timeManager.getStartTime(Evolucao_T);
             #if PARALLEL
                 //Chromosome executionBest = PCGP_SeparateKernels(trainingData, validationData, params,  seeds);
 
 
-                Chromosome executionBest = PCGP(trainingData, validationData, params, ocl, seeds);
+
+                Chromosome executionBest = PCGP(trainingData, validationData, params, ocl, seeds, &timeIter, &timeKernel);
 
                 std::cout << "Test execution: " << std::endl;
 
@@ -97,9 +112,13 @@ int main(int argc, char** argv) {
                 ocl->enqueueTestKernel();
                 ocl->finishCommandQueue();
 
-                ocl->readBestBuffer(&executionBest);
+                //ocl->readBestBuffer(&executionBest);
+                ocl->readFitnessBuffer();
+
+                executionBest.fitness = ocl->fitness[0];
+
                 ocl->finishCommandQueue();
-                std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
+                std::cout << executionBest.fitness << std::endl;
 
             #else
                 Chromosome executionBest = CGP(trainingData, validationData, params, seeds);
@@ -117,6 +136,8 @@ int main(int argc, char** argv) {
             //std::cout << "Evol time  = " << timeManager.getElapsedTime(Evolucao_T) << std::endl;
 
             fprintf(f_CGP, "%d,\t%d,\t%.4f\n", i, j, executionBest.fitness);
+            fprintf(f_CGP_time, "%d,\t%d,\t%.4f\n", i, j, timeIter);
+            fprintf(f_CGP_timeKernel, "%d,\t%d,\t%.4f\n", i, j, timeKernel);
 
         }
 

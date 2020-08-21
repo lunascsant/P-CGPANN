@@ -12,6 +12,9 @@ class OCLConfig {
 public:
     OCLConfig();
 
+    float fitness[NUM_INDIV];
+    float fitnessValidation[NUM_INDIV];
+
     std::vector<cl::Platform> platforms;
     std::vector<std::vector<cl::Device>> devices;
 
@@ -25,7 +28,7 @@ public:
 
     ///Evento para controlar tempo gasto
     cl_ulong inicio, fim;
-    cl::Event e_tempo;
+    cl::Event e_tempo, e_tempo_train, e_tempo_valid, e_tempo_test;
 
     cl::Kernel testKernel;
 
@@ -38,12 +41,26 @@ public:
     cl::Kernel kernelValid;
     cl::Kernel kernelTest;
 
+    cl::Kernel kernelTrainCompact;
+    cl::Kernel kernelValidCompact;
+    cl::Kernel kernelTestCompact;
+
     cl::Kernel kernelEvolve;
 
     cl::Kernel kernelEvaluate;
     cl::Kernel kernelEvaluateActive;
+
     cl::Kernel kernelEvaluateImage;
     cl::Kernel kernelEvaluateImageValidation;
+
+    cl::Kernel kernelEvaluateImageHalf;
+    cl::Kernel kernelEvaluateImageValidationHalf;
+
+    cl::Kernel kernelEvaluateImageQuarter;
+    cl::Kernel kernelEvaluateImageValidationQuarter;
+
+    cl::Kernel kernelEvaluateImageQuarterCompact;
+    cl::Kernel kernelEvaluateImageValidationQuarterCompact;
 
     ///Buffers
     cl::Buffer bufferSeeds;
@@ -64,12 +81,20 @@ public:
     cl::Buffer bufferBest;
     cl::Buffer bufferPopulation;
     cl::Buffer bufferPopulationActive;
+    cl::Buffer bufferPopulationCompact;
 
     cl::Buffer bufferFitness;
     cl::Buffer bufferFitnessValidation;
 
     cl::Image2DArray populationImage;
+
     unsigned int* populationImageObject;
+    unsigned int * populationImageObjectHalf;
+    unsigned int * populationImageObjectQuarter;
+
+    unsigned int * populationImageObjectHalfCompact;
+
+
 
     cl::ImageFormat image_format;
     cl_image_desc image_desc;
@@ -127,15 +152,26 @@ public:
     void writeBestBuffer(Chromosome* best);
     void writePopulationBuffer(Chromosome* population);
     void writePopulationActiveBuffer(ActiveChromosome* population);
+    void writePopulationCompactBuffer(CompactChromosome* population);
 
     void readBestBuffer(Chromosome* best);
     void readPopulationBuffer(Chromosome* population);
     void readPopulationActiveBuffer(ActiveChromosome* population);
+    void readPopulationCompactBuffer(CompactChromosome* population);
+
+
     void readSeedsBuffer(int* seeds);
-    void readFitnessBuffer(float* fitness);
-    void readFitnessValidationBuffer(float* fitnessValidation);
+    void readFitnessBuffer();
+    void readFitnessValidationBuffer();
 
     void setupImageBuffers();
+    void setupImageBuffersHalf();
+    void setupImageBuffersQuarter();
+
+    void setupImageBuffersCompact();
+
+    void setupImageBuffersQuarterCompact();
+
 
     void finishCommandQueue();
 
@@ -145,18 +181,43 @@ public:
     void enqueueValidationKernel();
     void enqueueTestKernel();
 
+    void enqueueTrainCompactKernel();
+    void enqueueValidationCompactKernel();
+
 
     void enqueueEvolveKernel();
 
     void enqueueEvaluationKernel();
     void enqueueEvaluationActiveKernel();
+
     void enqueueEvaluationImageKernel();
     void enqueueEvaluationImageValidationKernel();
 
+    void enqueueEvaluationImageHalfKernel();
+    void enqueueEvaluationImageValidationHalfKernel();
+
+    void enqueueEvaluationImageQuarterKernel();
+    void enqueueEvaluationImageValidationQuarterKernel();
+
+    void enqueueEvaluationImageQuarterCompactKernel();
+    void enqueueEvaluationImageValidationQuarterCompactKernel();
+
+    void writeImageBuffer(Chromosome* population);
+    void writeImageBuffer(ActiveChromosome* population);
+
+    void writeImageBufferHalf(Chromosome* population);
+    void writeImageBufferHalf(ActiveChromosome* population);
+
+    void writeImageBufferQuarter(Chromosome *population);
+    void writeImageBufferCompact(Chromosome *population);
 
     double getKernelElapsedTime();
+    double getKernelElapsedTimeTrain();
+    double getKernelElapsedTimeValid();
+    double getKernelElapsedTimeTest();
 
-    void writeImageBuffer(ActiveChromosome* population);
+    void compactChromosome(Chromosome* population, CompactChromosome* compactPopulation);
+
 
 private:
     void printOpenclDeviceInfo();
@@ -164,6 +225,14 @@ private:
     void transposeData(Dataset* data, float** transposeDataset, float** transposeOutputs);
     void transposeDataOut(Dataset* data, float** transposeDatasetOutput);
     const char *getErrorString(cl_int error);
+
+
+
+
+    unsigned int return_function_inputs_active(unsigned int function, unsigned int inputs, unsigned int active);
+    unsigned int return_compact_inputs(unsigned int in0, unsigned int in1);
+    unsigned int return_compact_inputs_weights(float in0, float in1);
+
 
 };
 

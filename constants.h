@@ -46,10 +46,10 @@
 /** Graph parameters */
 #define MAX_NODES 500
 #define MAX_NODES_SIZE (3 * MAX_NODES)
-#define MAX_OUTPUTS 3
+#define MAX_OUTPUTS 2
 #define MAX_ARITY 20
 
-
+#define TESTVAR MAX_OUTPUTS/2 + MAX_OUTPUTS%2
 /** Genetic parameters */
 #ifndef NUM_INDIV
 #define NUM_INDIV (5)
@@ -64,12 +64,20 @@
 #endif // PROB_MUT
 
 
-#define NUM_GENERATIONS 50000
+#define NUM_GENERATIONS 1001
 #define NUM_EVALUATIONS 2.40e+007
 
 
 #define GPU 1
-#define PARALLEL 1
+#define PARALLEL    1
+
+#define DEFAULT     0
+#define COMPACT     1
+#define COMPACT_IMG 0
+#define IMAGE_R     0
+#define IMAGE_RG    0
+#define IMAGE_RGBA  0
+
 #define KFOLDS 10
 
 #define TRAIN_FOLDS 7
@@ -96,29 +104,37 @@
 
 typedef struct
 {
-    //unsigned int inputsEvaluated;
-
-    //float inputsOutputs[MAX_ARITY];
     unsigned int function;
     unsigned int maxInputs;
     unsigned int inputs[MAX_ARITY];
     float inputsWeight[MAX_ARITY];
     int active;
-    //float output;
-
-
 } Node;
 
 typedef struct
 {
     Node nodes[MAX_NODES];
     unsigned int output[MAX_OUTPUTS];
-    int activeNodes[MAX_NODES];
+    unsigned int activeNodes[MAX_NODES];
     unsigned int numActiveNodes;
     float fitness;
     float fitnessValidation;
 } Chromosome;
 
+typedef struct
+{
+    unsigned int function_inputs_active;
+    unsigned int inputs[MAX_ARITY/2];
+    float inputsWeight[MAX_ARITY];
+} CompactNode;
+
+typedef struct
+{
+    CompactNode nodes[MAX_NODES];
+    unsigned int output[MAX_OUTPUTS];
+    unsigned int activeNodes[MAX_NODES/2];
+    unsigned int numActiveNodes;
+} CompactChromosome;
 
 
 typedef struct

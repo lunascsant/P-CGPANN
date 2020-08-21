@@ -34,7 +34,7 @@ Chromosome *mutateTopologyPoint(Chromosome *c, Parameters *p, int *seed);
 
 Chromosome CGP(Dataset* training, Dataset* validation, Parameters* params, int *seeds);
 
-Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLConfig* ocl, int *seeds);
+Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel);
 
 
 Chromosome CGPDE_IN();
