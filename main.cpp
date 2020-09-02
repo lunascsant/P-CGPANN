@@ -41,8 +41,12 @@ int main(int argc, char** argv) {
     ocl->setupImageBuffersHalf();
 #elif IMAGE_RGBA
     ocl->setupImageBuffersQuarter();
-#elif  COMPACT_IMG
+#elif  COMPACT_R
     ocl->setupImageBuffersCompact();
+#elif  COMPACT_RG
+    ocl->setupImageBuffersHalfCompact();
+#elif  COMPACT_RGBA
+    ocl->setupImageBuffersQuarterCompact();
 #endif
     /**OPENCL CONFIG */
 
@@ -62,7 +66,7 @@ int main(int argc, char** argv) {
     }
     int* indexesDataInFolds = new int[fullData.M - (fullData.M % KFOLDS)];// save the indexes given the folds generation
 
-    for(i = 0; i < 1; i++) {
+    for(i = 0; i < 3; i++) {
         for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
             seeds[aux] = aux + 55;
         }
@@ -72,8 +76,6 @@ int main(int argc, char** argv) {
         int id;
         //#pragma omp parallel for default(none), private(j, id), shared(i, params, folds, f_CGP, timeManager, seeds, ocl), schedule(dynamic), num_threads(10)
         for(j = 0; j < KFOLDS; j++){
-            //id = omp_get_thread_num();
-            //printf("%d: Hello World!\n", id);
             printf("( %d %d )\n", i, j);
 
             //std::cout << "(" << i << " " << j << ")" << std::endl;
@@ -96,10 +98,6 @@ int main(int argc, char** argv) {
             double timeKernel = 0;
             timeManager.getStartTime(Evolucao_T);
             #if PARALLEL
-                //Chromosome executionBest = PCGP_SeparateKernels(trainingData, validationData, params,  seeds);
-
-
-
                 Chromosome executionBest = PCGP(trainingData, validationData, params, ocl, seeds, &timeIter, &timeKernel);
 
                 std::cout << "Test execution: " << std::endl;

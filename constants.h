@@ -64,19 +64,22 @@
 #endif // PROB_MUT
 
 
-#define NUM_GENERATIONS 1001
+#define NUM_GENERATIONS 50000
 #define NUM_EVALUATIONS 2.40e+007
 
 
 #define GPU 1
 #define PARALLEL    1
 
-#define DEFAULT     0
-#define COMPACT     1
-#define COMPACT_IMG 0
-#define IMAGE_R     0
-#define IMAGE_RG    0
-#define IMAGE_RGBA  0
+#define DEFAULT      0
+#define COMPACT      1
+#define IMAGE_R      0
+#define IMAGE_RG     0
+#define IMAGE_RGBA   0
+#define COMPACT_R    0
+#define COMPACT_RG   0
+#define COMPACT_RGBA 0
+
 
 #define KFOLDS 10
 

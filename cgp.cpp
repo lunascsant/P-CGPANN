@@ -812,12 +812,6 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
 
         ocl->enqueueTrainCompactKernel();
         ocl->enqueueValidationCompactKernel();
-#elif COMPACT_IMG
-        ocl->writeImageBufferCompact(population);
-        ocl->finishCommandQueue();
-
-        ocl->enqueueEvaluationImageQuarterCompactKernel();
-        ocl->enqueueEvaluationImageValidationQuarterCompactKernel();
 #elif IMAGE_R
         ocl->writeImageBuffer(population);
         ocl->finishCommandQueue();
@@ -836,6 +830,25 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
 
         ocl->enqueueEvaluationImageQuarterKernel();
         ocl->enqueueEvaluationImageValidationQuarterKernel();
+#elif COMPACT_R
+        ocl->writeImageBufferCompact(population);
+        ocl->finishCommandQueue();
+
+        ocl->enqueueEvaluationImageCompactKernel();
+        ocl->enqueueEvaluationImageValidationCompactKernel();
+
+#elif COMPACT_RG
+        ocl->writeImageBufferHalfCompact(population);
+        ocl->finishCommandQueue();
+
+        ocl->enqueueEvaluationImageHalfCompactKernel();
+        ocl->enqueueEvaluationImageValidationHalfCompactKernel();
+#elif  COMPACT_RGBA
+        ocl->writeImageBufferQuarterCompact(population);
+        ocl->finishCommandQueue();
+
+        ocl->enqueueEvaluationImageQuarterCompactKernel();
+        ocl->enqueueEvaluationImageValidationQuarterCompactKernel();
 #endif
 
         ocl->finishCommandQueue();

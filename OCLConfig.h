@@ -59,6 +59,12 @@ public:
     cl::Kernel kernelEvaluateImageQuarter;
     cl::Kernel kernelEvaluateImageValidationQuarter;
 
+    cl::Kernel kernelEvaluateImageCompact;
+    cl::Kernel kernelEvaluateImageValidationCompact;
+
+    cl::Kernel kernelEvaluateImageHalfCompact;
+    cl::Kernel kernelEvaluateImageValidationHalfCompact;
+
     cl::Kernel kernelEvaluateImageQuarterCompact;
     cl::Kernel kernelEvaluateImageValidationQuarterCompact;
 
@@ -80,7 +86,7 @@ public:
 
     cl::Buffer bufferBest;
     cl::Buffer bufferPopulation;
-    cl::Buffer bufferPopulationActive;
+    //cl::Buffer bufferPopulationActive;
     cl::Buffer bufferPopulationCompact;
 
     cl::Buffer bufferFitness;
@@ -88,11 +94,9 @@ public:
 
     cl::Image2DArray populationImage;
 
-    unsigned int* populationImageObject;
+    unsigned int * populationImageObject;
     unsigned int * populationImageObjectHalf;
     unsigned int * populationImageObjectQuarter;
-
-    unsigned int * populationImageObjectHalfCompact;
 
 
 
@@ -151,12 +155,12 @@ public:
 
     void writeBestBuffer(Chromosome* best);
     void writePopulationBuffer(Chromosome* population);
-    void writePopulationActiveBuffer(ActiveChromosome* population);
+    //void writePopulationActiveBuffer(ActiveChromosome* population);
     void writePopulationCompactBuffer(CompactChromosome* population);
 
     void readBestBuffer(Chromosome* best);
     void readPopulationBuffer(Chromosome* population);
-    void readPopulationActiveBuffer(ActiveChromosome* population);
+    //void readPopulationActiveBuffer(ActiveChromosome* population);
     void readPopulationCompactBuffer(CompactChromosome* population);
 
 
@@ -167,9 +171,8 @@ public:
     void setupImageBuffers();
     void setupImageBuffersHalf();
     void setupImageBuffersQuarter();
-
     void setupImageBuffersCompact();
-
+    void setupImageBuffersHalfCompact();
     void setupImageBuffersQuarterCompact();
 
 
@@ -183,7 +186,6 @@ public:
 
     void enqueueTrainCompactKernel();
     void enqueueValidationCompactKernel();
-
 
     void enqueueEvolveKernel();
 
@@ -199,17 +201,23 @@ public:
     void enqueueEvaluationImageQuarterKernel();
     void enqueueEvaluationImageValidationQuarterKernel();
 
+    void enqueueEvaluationImageCompactKernel();
+    void enqueueEvaluationImageValidationCompactKernel();
+
+    void enqueueEvaluationImageHalfCompactKernel();
+    void enqueueEvaluationImageValidationHalfCompactKernel();
+
     void enqueueEvaluationImageQuarterCompactKernel();
     void enqueueEvaluationImageValidationQuarterCompactKernel();
 
+
     void writeImageBuffer(Chromosome* population);
-    void writeImageBuffer(ActiveChromosome* population);
-
     void writeImageBufferHalf(Chromosome* population);
-    void writeImageBufferHalf(ActiveChromosome* population);
-
     void writeImageBufferQuarter(Chromosome *population);
     void writeImageBufferCompact(Chromosome *population);
+    void writeImageBufferHalfCompact(Chromosome *population);
+    void writeImageBufferQuarterCompact(Chromosome *population);
+
 
     double getKernelElapsedTime();
     double getKernelElapsedTimeTrain();

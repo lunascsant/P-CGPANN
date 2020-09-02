@@ -65,6 +65,7 @@ OCLConfig::OCLConfig() {
     }
 
     context = cl::Context(devices[GPU_PLATFORM], nullptr, nullptr, nullptr, &result);
+    std::cout << sizeof(context) << std::endl;
     checkError(result);
 /*
     context.getSupportedImageFormats(CL_MEM_READ_ONLY, CL_MEM_OBJECT_IMAGE2D, &imageFormats);
@@ -77,8 +78,8 @@ OCLConfig::OCLConfig() {
     checkError(result);
 
     maxLocalSize = cmdQueue.getInfo<CL_QUEUE_DEVICE>().getInfo<CL_DEVICE_MAX_WORK_GROUP_SIZE>();
-    std::cout << 0xFFFF << std::endl;
-    printOpenclDeviceInfo();
+//    std::cout << 0xFFFF << std::endl;
+//    printOpenclDeviceInfo();
 }
 
 void OCLConfig::checkError(cl_int result){
@@ -121,8 +122,8 @@ void OCLConfig::allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int
     bufferSeeds = cl::Buffer(context, CL_MEM_READ_WRITE, NUM_INDIV * maxLocalSize  * sizeof(int), nullptr,  &result);
     checkError(result);
 
-    bufferDataOut      = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTrain * (p->N + p->O) * sizeof(float), nullptr,  &result);
-    checkError(result);
+    //bufferDataOut      = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTrain * (p->N + p->O) * sizeof(float), nullptr,  &result);
+    //checkError(result);
 
     bufferDatasetTrain = cl::Buffer(context, CL_MEM_READ_ONLY, sizeTrain * p->N * sizeof(float), nullptr,  &result);
     checkError(result);
@@ -151,8 +152,8 @@ void OCLConfig::allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int
     bufferPopulation = cl::Buffer(context, CL_MEM_READ_ONLY, NUM_INDIV * sizeof(Chromosome), nullptr, &result);
     checkError(result);
 
-    bufferPopulationActive = cl::Buffer(context, CL_MEM_READ_ONLY, NUM_INDIV * sizeof(ActiveChromosome), nullptr, &result);
-    checkError(result);
+    //bufferPopulationActive = cl::Buffer(context, CL_MEM_READ_ONLY, NUM_INDIV * sizeof(ActiveChromosome), nullptr, &result);
+    //checkError(result);
 
     bufferPopulationCompact = cl::Buffer(context, CL_MEM_READ_ONLY, NUM_INDIV * sizeof(CompactChromosome), nullptr, &result);
     checkError(result);
@@ -177,7 +178,7 @@ void OCLConfig::allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int
     (transposeDatasetTest) = new float [numPointsTest * p->N];
     (transposeOutputsTest) = new float [numPointsTest * p->O];
 
-    (transposeDatasetOutput) = new float [numPoints * (p->N + p->O)];
+    //(transposeDatasetOutput) = new float [numPoints * (p->N + p->O)];
 }
 
 void OCLConfig::setNDRages() {
@@ -345,7 +346,7 @@ void OCLConfig::buildKernels(){
     int result;
     ///Kernels
 
-
+#if DEFAULT
     kernelEvaluate = cl::Kernel(program, "evaluateTrainValidation", &result);
     checkError(result);
     kernelEvaluate.setArg(0, bufferDatasetTrain);
@@ -358,101 +359,6 @@ void OCLConfig::buildKernels(){
     kernelEvaluate.setArg(7, (int)localSizeAval * sizeof(float), nullptr);
     kernelEvaluate.setArg(8, bufferFitness);
     kernelEvaluate.setArg(9, bufferFitnessValidation);
-
-
-    kernelEvaluateActive = cl::Kernel(program, "evaluateTrainValidationActive", &result);
-    checkError(result);
-    kernelEvaluateActive.setArg(0, bufferDatasetTrain);
-    kernelEvaluateActive.setArg(1, bufferOutputsTrain);
-    kernelEvaluateActive.setArg(2, bufferDatasetValid);
-    kernelEvaluateActive.setArg(3, bufferOutputsValid);
-    kernelEvaluateActive.setArg(4, bufferFunctions);
-    kernelEvaluateActive.setArg(5, bufferPopulationActive);
-    kernelEvaluateActive.setArg(6, (int)localSizeAval * sizeof(float), nullptr);
-    kernelEvaluateActive.setArg(7, bufferFitness);
-    kernelEvaluateActive.setArg(8, bufferFitnessValidation);
-
-
-    kernelEvaluateImage = cl::Kernel(program, "evaluateTrainImage", &result);
-    checkError(result);
-    kernelEvaluateImage.setArg(0, bufferDatasetTrain);
-    kernelEvaluateImage.setArg(1, bufferOutputsTrain);
-    kernelEvaluateImage.setArg(2, bufferFunctions);
-    //kernelEvaluateImage.setArg(3, populationImage);
-    kernelEvaluateImage.setArg(4, (int)localSizeTrain * sizeof(float), nullptr);
-    kernelEvaluateImage.setArg(5, bufferFitness);
-    kernelEvaluateImage.setArg(6, bufferFitnessValidation);
-
-    kernelEvaluateImageValidation = cl::Kernel(program, "evaluateValidationImage", &result);
-    checkError(result);
-    kernelEvaluateImageValidation.setArg(0, bufferDatasetValid);
-    kernelEvaluateImageValidation.setArg(1, bufferOutputsValid);
-    kernelEvaluateImageValidation.setArg(2, bufferFunctions);
-    //kernelEvaluateImageValidation.setArg(3, populationImage);
-    kernelEvaluateImageValidation.setArg(4, (int)localSizeValid * sizeof(float), nullptr);
-    kernelEvaluateImageValidation.setArg(5, bufferFitness);
-    kernelEvaluateImageValidation.setArg(6, bufferFitnessValidation);
-
-
-    kernelEvaluateImageHalf = cl::Kernel(program, "evaluateTrainImageHalf", &result);
-    checkError(result);
-    kernelEvaluateImageHalf.setArg(0, bufferDatasetTrain);
-    kernelEvaluateImageHalf.setArg(1, bufferOutputsTrain);
-    kernelEvaluateImageHalf.setArg(2, bufferFunctions);
-    //kernelEvaluateImageHalf.setArg(3, populationImage);
-    kernelEvaluateImageHalf.setArg(4, (int)localSizeTrain * sizeof(float), nullptr);
-    kernelEvaluateImageHalf.setArg(5, bufferFitness);
-    kernelEvaluateImageHalf.setArg(6, bufferFitnessValidation);
-
-    kernelEvaluateImageValidationHalf = cl::Kernel(program, "evaluateValidationImageHalf", &result);
-    checkError(result);
-    kernelEvaluateImageValidationHalf.setArg(0, bufferDatasetValid);
-    kernelEvaluateImageValidationHalf.setArg(1, bufferOutputsValid);
-    kernelEvaluateImageValidationHalf.setArg(2, bufferFunctions);
-    //kernelEvaluateImageValidationHalf.setArg(3, populationImage);
-    kernelEvaluateImageValidationHalf.setArg(4, (int)localSizeValid * sizeof(float), nullptr);
-    kernelEvaluateImageValidationHalf.setArg(5, bufferFitness);
-    kernelEvaluateImageValidationHalf.setArg(6, bufferFitnessValidation);
-
-    kernelEvaluateImageQuarter = cl::Kernel(program, "evaluateTrainImageQuarter", &result);
-    checkError(result);
-    kernelEvaluateImageQuarter.setArg(0, bufferDatasetTrain);
-    kernelEvaluateImageQuarter.setArg(1, bufferOutputsTrain);
-    kernelEvaluateImageQuarter.setArg(2, bufferFunctions);
-    //kernelEvaluateImageQuarter.setArg(3, populationImage);
-    kernelEvaluateImageQuarter.setArg(4, (int)localSizeTrain * sizeof(float), nullptr);
-    kernelEvaluateImageQuarter.setArg(5, bufferFitness);
-    kernelEvaluateImageQuarter.setArg(6, bufferFitnessValidation);
-
-    kernelEvaluateImageValidationQuarter = cl::Kernel(program, "evaluateValidationImageQuarter", &result);
-    checkError(result);
-    kernelEvaluateImageValidationQuarter.setArg(0, bufferDatasetValid);
-    kernelEvaluateImageValidationQuarter.setArg(1, bufferOutputsValid);
-    kernelEvaluateImageValidationQuarter.setArg(2, bufferFunctions);
-    //kernelEvaluateImageValidationQuarter.setArg(3, populationImage);
-    kernelEvaluateImageValidationQuarter.setArg(4, (int)localSizeValid * sizeof(float), nullptr);
-    kernelEvaluateImageValidationQuarter.setArg(5, bufferFitness);
-    kernelEvaluateImageValidationQuarter.setArg(6, bufferFitnessValidation);
-
-    kernelEvaluateImageQuarterCompact = cl::Kernel(program, "evaluateTrainImageCompact", &result);
-    checkError(result);
-    kernelEvaluateImageQuarterCompact.setArg(0, bufferDatasetTrain);
-    kernelEvaluateImageQuarterCompact.setArg(1, bufferOutputsTrain);
-    kernelEvaluateImageQuarterCompact.setArg(2, bufferFunctions);
-    //kernelEvaluateImageQuarterCompact.setArg(3, populationImage);
-    kernelEvaluateImageQuarterCompact.setArg(4, (int)localSizeTrain * sizeof(float), nullptr);
-    kernelEvaluateImageQuarterCompact.setArg(5, bufferFitness);
-    kernelEvaluateImageQuarterCompact.setArg(6, bufferFitnessValidation);
-
-    kernelEvaluateImageValidationQuarterCompact = cl::Kernel(program, "evaluateValidationImageCompact", &result);
-    checkError(result);
-    kernelEvaluateImageValidationQuarterCompact.setArg(0, bufferDatasetValid);
-    kernelEvaluateImageValidationQuarterCompact.setArg(1, bufferOutputsValid);
-    kernelEvaluateImageValidationQuarterCompact.setArg(2, bufferFunctions);
-    //kernelEvaluateImageValidationQuarterCompact.setArg(3, populationImage);
-    kernelEvaluateImageValidationQuarterCompact.setArg(4, (int)localSizeValid * sizeof(float), nullptr);
-    kernelEvaluateImageValidationQuarterCompact.setArg(5, bufferFitness);
-    kernelEvaluateImageValidationQuarterCompact.setArg(6, bufferFitnessValidation);
 
     kernelTrain = cl::Kernel(program, "evaluateTrain", &result);
     checkError(result);
@@ -474,16 +380,8 @@ void OCLConfig::buildKernels(){
     kernelValid.setArg(5, bufferFitness);
     kernelValid.setArg(6, bufferFitnessValidation);
 
-    kernelTest = cl::Kernel(program, "evaluateTest", &result);
-    checkError(result);
-    kernelTest.setArg(0, bufferDatasetTest);
-    kernelTest.setArg(1, bufferOutputsTest);
-    kernelTest.setArg(2, bufferFunctions);
-    kernelTest.setArg(3, bufferBest);
-    kernelTest.setArg(4, (int)localSizeTest * sizeof(float), nullptr);
-    kernelTest.setArg(5, bufferFitness);
-    kernelTest.setArg(6, bufferFitnessValidation);
 
+#elif COMPACT
     kernelTrainCompact = cl::Kernel(program, "evaluateTrainCompact", &result);
     checkError(result);
     kernelTrainCompact.setArg(0, bufferDatasetTrain);
@@ -504,6 +402,154 @@ void OCLConfig::buildKernels(){
     kernelValidCompact.setArg(5, bufferFitness);
     kernelValidCompact.setArg(6, bufferFitnessValidation);
 
+#elif IMAGE_R
+    kernelEvaluateImage = cl::Kernel(program, "evaluateTrainImage", &result);
+    checkError(result);
+    kernelEvaluateImage.setArg(0, bufferDatasetTrain);
+    kernelEvaluateImage.setArg(1, bufferOutputsTrain);
+    kernelEvaluateImage.setArg(2, bufferFunctions);
+    //kernelEvaluateImage.setArg(3, populationImage);
+    kernelEvaluateImage.setArg(4, (int)localSizeTrain * sizeof(float), nullptr);
+    kernelEvaluateImage.setArg(5, bufferFitness);
+    kernelEvaluateImage.setArg(6, bufferFitnessValidation);
+
+    kernelEvaluateImageValidation = cl::Kernel(program, "evaluateValidationImage", &result);
+    checkError(result);
+    kernelEvaluateImageValidation.setArg(0, bufferDatasetValid);
+    kernelEvaluateImageValidation.setArg(1, bufferOutputsValid);
+    kernelEvaluateImageValidation.setArg(2, bufferFunctions);
+    //kernelEvaluateImageValidation.setArg(3, populationImage);
+    kernelEvaluateImageValidation.setArg(4, (int)localSizeValid * sizeof(float), nullptr);
+    kernelEvaluateImageValidation.setArg(5, bufferFitness);
+    kernelEvaluateImageValidation.setArg(6, bufferFitnessValidation);
+
+#elif IMAGE_RG
+    kernelEvaluateImageHalf = cl::Kernel(program, "evaluateTrainImageHalf", &result);
+    checkError(result);
+    kernelEvaluateImageHalf.setArg(0, bufferDatasetTrain);
+    kernelEvaluateImageHalf.setArg(1, bufferOutputsTrain);
+    kernelEvaluateImageHalf.setArg(2, bufferFunctions);
+    //kernelEvaluateImageHalf.setArg(3, populationImage);
+    kernelEvaluateImageHalf.setArg(4, (int)localSizeTrain * sizeof(float), nullptr);
+    kernelEvaluateImageHalf.setArg(5, bufferFitness);
+    kernelEvaluateImageHalf.setArg(6, bufferFitnessValidation);
+
+    kernelEvaluateImageValidationHalf = cl::Kernel(program, "evaluateValidationImageHalf", &result);
+    checkError(result);
+    kernelEvaluateImageValidationHalf.setArg(0, bufferDatasetValid);
+    kernelEvaluateImageValidationHalf.setArg(1, bufferOutputsValid);
+    kernelEvaluateImageValidationHalf.setArg(2, bufferFunctions);
+    //kernelEvaluateImageValidationHalf.setArg(3, populationImage);
+    kernelEvaluateImageValidationHalf.setArg(4, (int)localSizeValid * sizeof(float), nullptr);
+    kernelEvaluateImageValidationHalf.setArg(5, bufferFitness);
+    kernelEvaluateImageValidationHalf.setArg(6, bufferFitnessValidation);
+#elif IMAGE_RGBA
+    kernelEvaluateImageQuarter = cl::Kernel(program, "evaluateTrainImageQuarter", &result);
+    checkError(result);
+    kernelEvaluateImageQuarter.setArg(0, bufferDatasetTrain);
+    kernelEvaluateImageQuarter.setArg(1, bufferOutputsTrain);
+    kernelEvaluateImageQuarter.setArg(2, bufferFunctions);
+    //kernelEvaluateImageQuarter.setArg(3, populationImage);
+    kernelEvaluateImageQuarter.setArg(4, (int)localSizeTrain * sizeof(float), nullptr);
+    kernelEvaluateImageQuarter.setArg(5, bufferFitness);
+    kernelEvaluateImageQuarter.setArg(6, bufferFitnessValidation);
+
+    kernelEvaluateImageValidationQuarter = cl::Kernel(program, "evaluateValidationImageQuarter", &result);
+    checkError(result);
+    kernelEvaluateImageValidationQuarter.setArg(0, bufferDatasetValid);
+    kernelEvaluateImageValidationQuarter.setArg(1, bufferOutputsValid);
+    kernelEvaluateImageValidationQuarter.setArg(2, bufferFunctions);
+    //kernelEvaluateImageValidationQuarter.setArg(3, populationImage);
+    kernelEvaluateImageValidationQuarter.setArg(4, (int)localSizeValid * sizeof(float), nullptr);
+    kernelEvaluateImageValidationQuarter.setArg(5, bufferFitness);
+    kernelEvaluateImageValidationQuarter.setArg(6, bufferFitnessValidation);
+#elif COMPACT_R
+    kernelEvaluateImageCompact = cl::Kernel(program, "evaluateTrainImageCompact", &result);
+    checkError(result);
+    kernelEvaluateImageCompact.setArg(0, bufferDatasetTrain);
+    kernelEvaluateImageCompact.setArg(1, bufferOutputsTrain);
+    kernelEvaluateImageCompact.setArg(2, bufferFunctions);
+    //kernelEvaluateImageCompact.setArg(3, populationImage);
+    kernelEvaluateImageCompact.setArg(4, (int)localSizeTrain * sizeof(float), nullptr);
+    kernelEvaluateImageCompact.setArg(5, bufferFitness);
+    kernelEvaluateImageCompact.setArg(6, bufferFitnessValidation);
+
+    kernelEvaluateImageValidationCompact = cl::Kernel(program, "evaluateValidationImageCompact", &result);
+    checkError(result);
+    kernelEvaluateImageValidationCompact.setArg(0, bufferDatasetValid);
+    kernelEvaluateImageValidationCompact.setArg(1, bufferOutputsValid);
+    kernelEvaluateImageValidationCompact.setArg(2, bufferFunctions);
+    //kernelEvaluateImageValidationCompact.setArg(3, populationImage);
+    kernelEvaluateImageValidationCompact.setArg(4, (int)localSizeValid * sizeof(float), nullptr);
+    kernelEvaluateImageValidationCompact.setArg(5, bufferFitness);
+    kernelEvaluateImageValidationCompact.setArg(6, bufferFitnessValidation);
+#elif  COMPACT_RG
+    kernelEvaluateImageHalfCompact = cl::Kernel(program, "evaluateTrainImageHalfCompact", &result);
+    checkError(result);
+    kernelEvaluateImageHalfCompact.setArg(0, bufferDatasetTrain);
+    kernelEvaluateImageHalfCompact.setArg(1, bufferOutputsTrain);
+    kernelEvaluateImageHalfCompact.setArg(2, bufferFunctions);
+    //kernelEvaluateImageHalfCompact.setArg(3, populationImage);
+    kernelEvaluateImageHalfCompact.setArg(4, (int)localSizeTrain * sizeof(float), nullptr);
+    kernelEvaluateImageHalfCompact.setArg(5, bufferFitness);
+    kernelEvaluateImageHalfCompact.setArg(6, bufferFitnessValidation);
+
+    kernelEvaluateImageValidationHalfCompact = cl::Kernel(program, "evaluateValidationImageHalfCompact", &result);
+    checkError(result);
+    kernelEvaluateImageValidationHalfCompact.setArg(0, bufferDatasetValid);
+    kernelEvaluateImageValidationHalfCompact.setArg(1, bufferOutputsValid);
+    kernelEvaluateImageValidationHalfCompact.setArg(2, bufferFunctions);
+    //kernelEvaluateImageValidationHalfCompact.setArg(3, populationImage);
+    kernelEvaluateImageValidationHalfCompact.setArg(4, (int)localSizeValid * sizeof(float), nullptr);
+    kernelEvaluateImageValidationHalfCompact.setArg(5, bufferFitness);
+    kernelEvaluateImageValidationHalfCompact.setArg(6, bufferFitnessValidation);
+#elif  COMPACT_RGBA
+    kernelEvaluateImageQuarterCompact = cl::Kernel(program, "evaluateTrainImageQuarterCompact", &result);
+    checkError(result);
+    kernelEvaluateImageQuarterCompact.setArg(0, bufferDatasetTrain);
+    kernelEvaluateImageQuarterCompact.setArg(1, bufferOutputsTrain);
+    kernelEvaluateImageQuarterCompact.setArg(2, bufferFunctions);
+    //kernelEvaluateImageQuarterCompact.setArg(3, populationImage);
+    kernelEvaluateImageQuarterCompact.setArg(4, (int)localSizeTrain * sizeof(float), nullptr);
+    kernelEvaluateImageQuarterCompact.setArg(5, bufferFitness);
+    kernelEvaluateImageQuarterCompact.setArg(6, bufferFitnessValidation);
+
+    kernelEvaluateImageValidationQuarterCompact = cl::Kernel(program, "evaluateValidationImageQuarterCompact", &result);
+    checkError(result);
+    kernelEvaluateImageValidationQuarterCompact.setArg(0, bufferDatasetValid);
+    kernelEvaluateImageValidationQuarterCompact.setArg(1, bufferOutputsValid);
+    kernelEvaluateImageValidationQuarterCompact.setArg(2, bufferFunctions);
+    //kernelEvaluateImageValidationQuarterCompact.setArg(3, populationImage);
+    kernelEvaluateImageValidationQuarterCompact.setArg(4, (int)localSizeValid * sizeof(float), nullptr);
+    kernelEvaluateImageValidationQuarterCompact.setArg(5, bufferFitness);
+    kernelEvaluateImageValidationQuarterCompact.setArg(6, bufferFitnessValidation);
+#endif
+
+/*
+    kernelEvaluateActive = cl::Kernel(program, "evaluateTrainValidationActive", &result);
+    checkError(result);
+    kernelEvaluateActive.setArg(0, bufferDatasetTrain);
+    kernelEvaluateActive.setArg(1, bufferOutputsTrain);
+    kernelEvaluateActive.setArg(2, bufferDatasetValid);
+    kernelEvaluateActive.setArg(3, bufferOutputsValid);
+    kernelEvaluateActive.setArg(4, bufferFunctions);
+    kernelEvaluateActive.setArg(5, bufferPopulationActive);
+    kernelEvaluateActive.setArg(6, (int)localSizeAval * sizeof(float), nullptr);
+    kernelEvaluateActive.setArg(7, bufferFitness);
+    kernelEvaluateActive.setArg(8, bufferFitnessValidation);
+*/
+
+
+    kernelTest = cl::Kernel(program, "evaluateTest", &result);
+    checkError(result);
+    kernelTest.setArg(0, bufferDatasetTest);
+    kernelTest.setArg(1, bufferOutputsTest);
+    kernelTest.setArg(2, bufferFunctions);
+    kernelTest.setArg(3, bufferBest);
+    kernelTest.setArg(4, (int)localSizeTest * sizeof(float), nullptr);
+    kernelTest.setArg(5, bufferFitness);
+    kernelTest.setArg(6, bufferFitnessValidation);
+
 
     kernelEvolve = cl::Kernel(program, "evolve", &result);
     checkError(result);
@@ -519,7 +565,7 @@ void OCLConfig::transposeDatasets(Dataset* train, Dataset* valid, Dataset* test)
     transposeData(train, &transposeDatasetTrain, &transposeOutputsTrain);
     transposeData(valid, &transposeDatasetValid, &transposeOutputsValid);
     transposeData(test, &transposeDatasetTest, &transposeOutputsTest);
-    transposeDataOut(train, &transposeDatasetOutput);
+    //transposeDataOut(train, &transposeDatasetOutput);
 }
 
 void OCLConfig::writeReadOnlyBufers(Parameters* p, int* seeds){
@@ -527,7 +573,7 @@ void OCLConfig::writeReadOnlyBufers(Parameters* p, int* seeds){
     result = cmdQueue.enqueueWriteBuffer(bufferSeeds, CL_FALSE, 0, NUM_INDIV * maxLocalSize  * sizeof(int), seeds);
     checkError(result);
 
-    cmdQueue.enqueueWriteBuffer(bufferDataOut, CL_FALSE, 0, numPoints * (p->N + p->O) * sizeof(float), transposeDatasetOutput);
+    //cmdQueue.enqueueWriteBuffer(bufferDataOut, CL_FALSE, 0, numPoints * (p->N + p->O) * sizeof(float), transposeDatasetOutput);
 
     cmdQueue.enqueueWriteBuffer(bufferDatasetTrain, CL_FALSE, 0, numPointsTrain * p->N * sizeof(float), transposeDatasetTrain);
     cmdQueue.enqueueWriteBuffer(bufferOutputsTrain, CL_FALSE, 0, numPointsTrain * p->O * sizeof(float), transposeOutputsTrain);
@@ -598,12 +644,12 @@ void OCLConfig::writePopulationBuffer(Chromosome* population){
     int result = cmdQueue.enqueueWriteBuffer(bufferPopulation, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), population);
     checkError(result);
 }
-
+/*
 void OCLConfig::writePopulationActiveBuffer(ActiveChromosome* population){
     int result = cmdQueue.enqueueWriteBuffer(bufferPopulationActive, CL_FALSE, 0, NUM_INDIV * sizeof(ActiveChromosome), population);
     checkError(result);
 }
-
+*/
 void OCLConfig::writePopulationCompactBuffer(CompactChromosome* population){
     int result = cmdQueue.enqueueWriteBuffer(bufferPopulationCompact, CL_FALSE, 0, NUM_INDIV * sizeof(CompactChromosome), population);
     checkError(result);
@@ -618,12 +664,12 @@ void OCLConfig::readPopulationBuffer(Chromosome* population){
     int result = cmdQueue.enqueueReadBuffer(bufferPopulation, CL_FALSE, 0, NUM_INDIV * sizeof(Chromosome), population);
     checkError(result);
 }
-
+/*
 void OCLConfig::readPopulationActiveBuffer(ActiveChromosome* population){
     int result = cmdQueue.enqueueReadBuffer(bufferPopulationActive, CL_FALSE, 0, NUM_INDIV * sizeof(ActiveChromosome), population);
     checkError(result);
 }
-
+*/
 void OCLConfig::readPopulationCompactBuffer(CompactChromosome* population){
     int result = cmdQueue.enqueueReadBuffer(bufferPopulationCompact, CL_FALSE, 0, NUM_INDIV * sizeof(CompactChromosome), population);
     checkError(result);
@@ -745,6 +791,34 @@ void OCLConfig::enqueueEvaluationImageValidationQuarterKernel() {
     checkError(result);
 }
 
+void OCLConfig::enqueueEvaluationImageCompactKernel(){
+    kernelEvaluateImageCompact.setArg(3, populationImage);
+    int result = cmdQueue.enqueueNDRangeKernel(kernelEvaluateImageCompact, cl::NullRange, cl::NDRange(globalSizeTrain), cl::NDRange(localSizeTrain),
+                                               nullptr, &e_tempo_train);
+    checkError(result);
+}
+
+void OCLConfig::enqueueEvaluationImageValidationCompactKernel() {
+    kernelEvaluateImageValidationCompact.setArg(3, populationImage);
+    int result = cmdQueue.enqueueNDRangeKernel(kernelEvaluateImageValidationCompact, cl::NullRange, cl::NDRange(globalSizeValid), cl::NDRange(localSizeValid),
+                                               nullptr, &e_tempo_valid);
+    checkError(result);
+}
+
+void OCLConfig::enqueueEvaluationImageHalfCompactKernel(){
+    kernelEvaluateImageHalfCompact.setArg(3, populationImage);
+    int result = cmdQueue.enqueueNDRangeKernel(kernelEvaluateImageHalfCompact, cl::NullRange, cl::NDRange(globalSizeTrain), cl::NDRange(localSizeTrain),
+                                               nullptr, &e_tempo_train);
+    checkError(result);
+}
+
+void OCLConfig::enqueueEvaluationImageValidationHalfCompactKernel() {
+    kernelEvaluateImageValidationHalfCompact.setArg(3, populationImage);
+    int result = cmdQueue.enqueueNDRangeKernel(kernelEvaluateImageValidationHalfCompact, cl::NullRange, cl::NDRange(globalSizeValid), cl::NDRange(localSizeValid),
+                                               nullptr, &e_tempo_valid);
+    checkError(result);
+}
+
 void OCLConfig::enqueueEvaluationImageQuarterCompactKernel(){
     kernelEvaluateImageQuarterCompact.setArg(3, populationImage);
     int result = cmdQueue.enqueueNDRangeKernel(kernelEvaluateImageQuarterCompact, cl::NullRange, cl::NDRange(globalSizeTrain), cl::NDRange(localSizeTrain),
@@ -804,50 +878,6 @@ void OCLConfig::setupImageBuffers(){
 
 }
 
-void OCLConfig::setupImageBuffersCompact(){
-    image_format.image_channel_data_type = CL_UNSIGNED_INT32;
-    image_format.image_channel_order = CL_R;
-
-    image_desc.image_type = CL_MEM_OBJECT_IMAGE2D_ARRAY;
-    image_desc.image_width = (MAX_ARITY + 2);
-    image_desc.image_height = (MAX_NODES * 2) + 1;
-    image_desc.image_depth = 0;
-    image_desc.image_array_size = NUM_INDIV;
-
-    image_desc.image_row_pitch = 0;
-    image_desc.image_slice_pitch = 0;
-    image_desc.num_mip_levels = 0;
-    image_desc.num_samples = 0;
-    image_desc.buffer = nullptr;
-
-    int result;
-    populationImage = cl::Image2DArray(context, CL_MEM_READ_ONLY,
-                                       image_format,
-                                       image_desc.image_array_size,
-                                       image_desc.image_width,
-                                       image_desc.image_height,
-                                       0,
-                                       0,
-                                       nullptr, &result);
-    checkError(result);
-
-
-    origin[0] = 0;
-    origin[1] = 0;
-    origin[2] = 0;
-
-    imgSize[0] =static_cast<size_t>(image_desc.image_width);
-    imgSize[1] =static_cast<size_t>(image_desc.image_height);
-    imgSize[2] =static_cast<size_t>(image_desc.image_array_size);
-
-    //populationImageObject = new unsigned int[imgSize[0]*imgSize[1]*imgSize[2]];
-
-    populationImageObject = new unsigned int[image_desc.image_width *
-                                             image_desc.image_height *
-                                             image_desc.image_array_size];
-
-}
-
 void OCLConfig::setupImageBuffersHalf(){
     image_format.image_channel_data_type = CL_UNSIGNED_INT32;
     image_format.image_channel_order = CL_RG;
@@ -889,6 +919,50 @@ void OCLConfig::setupImageBuffersHalf(){
     populationImageObjectHalf = new  unsigned int[(image_desc.image_width*2) *
                                              image_desc.image_height *
                                              image_desc.image_array_size];
+
+}
+
+void OCLConfig::setupImageBuffersHalfCompact(){
+    image_format.image_channel_data_type = CL_UNSIGNED_INT32;
+    image_format.image_channel_order = CL_RG;
+
+    image_desc.image_type = CL_MEM_OBJECT_IMAGE2D_ARRAY;
+    image_desc.image_width = (MAX_ARITY + 4)/2;
+    image_desc.image_height = (MAX_NODES * 2) + 1;
+    image_desc.image_depth = 0;
+    image_desc.image_array_size = NUM_INDIV;
+
+    image_desc.image_row_pitch = 0;
+    image_desc.image_slice_pitch = 0;
+    image_desc.num_mip_levels = 0;
+    image_desc.num_samples = 0;
+    image_desc.buffer = nullptr;
+
+    int result;
+    populationImage = cl::Image2DArray(context, CL_MEM_READ_ONLY,
+                                       image_format,
+                                       image_desc.image_array_size,
+                                       image_desc.image_width,
+                                       image_desc.image_height,
+                                       0,
+                                       0,
+                                       nullptr, &result);
+    checkError(result);
+
+
+    origin[0] = 0;
+    origin[1] = 0;
+    origin[2] = 0;
+
+    imgSize[0] =static_cast<size_t>(image_desc.image_width);
+    imgSize[1] =static_cast<size_t>(image_desc.image_height);
+    imgSize[2] =static_cast<size_t>(image_desc.image_array_size);
+
+    //populationImageObject = new unsigned int[imgSize[0]*imgSize[1]*imgSize[2]];
+
+    populationImageObjectHalf = new  unsigned int[(image_desc.image_width*2) *
+                                                     image_desc.image_height *
+                                                     image_desc.image_array_size];
 
 }
 
@@ -941,7 +1015,7 @@ void OCLConfig::setupImageBuffersQuarterCompact(){
     image_format.image_channel_order = CL_RGBA;
 
     image_desc.image_type = CL_MEM_OBJECT_IMAGE2D_ARRAY;
-    image_desc.image_width = (MAX_ARITY + 4)/4;
+    image_desc.image_width = (MAX_ARITY + 8)/4;
     image_desc.image_height = (MAX_NODES * 2) + 1;
     image_desc.image_depth = 0;
     image_desc.image_array_size = NUM_INDIV;
@@ -980,38 +1054,48 @@ void OCLConfig::setupImageBuffersQuarterCompact(){
 
 }
 
-void OCLConfig::writeImageBuffer(ActiveChromosome* population){
+void OCLConfig::setupImageBuffersCompact(){
+    image_format.image_channel_data_type = CL_UNSIGNED_INT32;
+    image_format.image_channel_order = CL_R;
 
-    int index = 0;
+    image_desc.image_type = CL_MEM_OBJECT_IMAGE2D_ARRAY;
+    image_desc.image_width = (MAX_ARITY + 2);
+    image_desc.image_height = (MAX_NODES * 2) + 1;
+    image_desc.image_depth = 0;
+    image_desc.image_array_size = NUM_INDIV;
 
-    for(int i = 0; i < NUM_INDIV; i++ ){
-        //std::cout << index << std::endl;
-        populationImageObject[index++] = population[i].numActiveNodes;
+    image_desc.image_row_pitch = 0;
+    image_desc.image_slice_pitch = 0;
+    image_desc.num_mip_levels = 0;
+    image_desc.num_samples = 0;
+    image_desc.buffer = nullptr;
 
-        for(int j = 0; j < MAX_OUTPUTS; j++){
-            populationImageObject[index++] = population[i].output[j];
-        }
-
-        while(index % image_desc.image_width != 0) index++;
-
-        for(int j = 0; j < MAX_NODES; j++){
-            populationImageObject[index++] = population[i].nodes[j].originalIndex;
-            for(int k = 0; k < MAX_ARITY; k++){
-                populationImageObject[index++] = population[i].nodes[j].inputs[k];
-            }
-            populationImageObject[index++] = population[i].nodes[j].function;
-            for(int k = 0; k < MAX_ARITY; k++){
-                populationImageObject[index++] = *(unsigned int*)&population[i].nodes[j].inputsWeight[k];
-            }
-        }
-
-
-        while(index % image_desc.image_width != 0) index++;
-        //std::cout << index << std::endl;
-    }
-
-    int result = cmdQueue.enqueueWriteImage( populationImage, CL_TRUE, origin, imgSize,0, 0, populationImageObject);
+    int result;
+    populationImage = cl::Image2DArray(context, CL_MEM_READ_ONLY,
+                                       image_format,
+                                       image_desc.image_array_size,
+                                       image_desc.image_width,
+                                       image_desc.image_height,
+                                       0,
+                                       0,
+                                       nullptr, &result);
     checkError(result);
+
+
+    origin[0] = 0;
+    origin[1] = 0;
+    origin[2] = 0;
+
+    imgSize[0] =static_cast<size_t>(image_desc.image_width);
+    imgSize[1] =static_cast<size_t>(image_desc.image_height);
+    imgSize[2] =static_cast<size_t>(image_desc.image_array_size);
+
+    //populationImageObject = new unsigned int[imgSize[0]*imgSize[1]*imgSize[2]];
+
+    populationImageObject = new unsigned int[image_desc.image_width *
+                                             image_desc.image_height *
+                                             image_desc.image_array_size];
+
 }
 
 void OCLConfig::writeImageBuffer(Chromosome* population){
@@ -1095,45 +1179,6 @@ void OCLConfig::writeImageBufferHalf(Chromosome* population){
     checkError(result);
 }
 
-void OCLConfig::writeImageBufferHalf(ActiveChromosome* population){
-
-    int index = 0;
-
-    for(int i = 0; i < NUM_INDIV; i++ ){
-        //std::cout << index << std::endl;
-        populationImageObjectHalf[index++] = population[i].numActiveNodes;
-        populationImageObjectHalf[index++] = population[i].numActiveNodes;
-
-
-        for(int j = 0; j < MAX_OUTPUTS; j++){
-            populationImageObjectHalf[index++] = population[i].output[j];
-        }
-
-        while(index % (image_desc.image_width*2) != 0) index++;
-
-        for(int j = 0; j < MAX_NODES; j++){
-            populationImageObjectHalf[index++] = population[i].nodes[j].originalIndex;
-            populationImageObjectHalf[index++] = population[i].nodes[j].originalIndex;
-            for(int k = 0; k < MAX_ARITY; k++){
-                populationImageObjectHalf[index++] = population[i].nodes[j].inputs[k];
-            }
-            populationImageObjectHalf[index++] = population[i].nodes[j].function;
-            populationImageObjectHalf[index++] = population[i].nodes[j].function;
-            for(int k = 0; k < MAX_ARITY; k++){
-                populationImageObjectHalf[index++] = *(unsigned int*)&population[i].nodes[j].inputsWeight[k];
-            }
-        }
-
-
-        while(index % (image_desc.image_width*2) != 0) index++;
-        //std::cout << index << std::endl;
-    }
-
-    int result = cmdQueue.enqueueWriteImage( populationImage, CL_TRUE, origin, imgSize,0, 0, populationImageObjectHalf);
-    checkError(result);
-}
-
-
 void OCLConfig::writeImageBufferQuarter(Chromosome* population){
 
     int index = 0;
@@ -1190,8 +1235,8 @@ void OCLConfig::writeImageBufferQuarter(Chromosome* population){
 void OCLConfig::writeImageBufferCompact(Chromosome* population){
 
     int index = 0;
-    int cont = 0;
     for(int i = 0; i < NUM_INDIV; i++ ){
+        int cont = 0;
         index = i * (image_desc.image_width) * image_desc.image_height;
 
         unsigned int numActiveNodes = population[i].numActiveNodes;
@@ -1228,34 +1273,44 @@ void OCLConfig::writeImageBufferCompact(Chromosome* population){
 
             while(index % (image_desc.image_width) != 0) populationImageObject[index++] = 0;
 
-            populationImageObject[index++] = 0;
+            if (cont < numActiveNodes) {
+                populationImageObject[index++] =
+                        return_compact_inputs(
+                                population[i].activeNodes[cont],
+                                population[i].activeNodes[cont + 1]
+                        );
+                cont += 2;
+            } else {
+                populationImageObject[index++] = 0;
+            }
+
             populationImageObject[index++] = population[i].nodes[j].function;
 
 
-            for(int k = 0; k < MAX_ARITY; k+=2){
+            for(int k = 0; k < MAX_ARITY; k++){
                 populationImageObject[index++] = (*(unsigned int*)&population[i].nodes[j].inputsWeight[k]);
-                populationImageObject[index++] = (*(unsigned int*)&population[i].nodes[j].inputsWeight[k+1]);
             }
 
             while(index % (image_desc.image_width) != 0){
                 //std::cout << "ERRROOOOOOOOOOO\n";
                 populationImageObject[index++] = 0;
             }
-
+            //std::cout << index << std::endl;
         }
+
     }
 
     int result = cmdQueue.enqueueWriteImage( populationImage, CL_TRUE, origin, imgSize,0, 0, populationImageObject);
     checkError(result);
 }
-/*
+
 void OCLConfig::writeImageBufferQuarterCompact(Chromosome* population){
 
     int index = 0;
-
     for(int i = 0; i < NUM_INDIV; i++ ){
-        index = i * (image_desc.image_width * 4) * image_desc.image_height;
-        //std::cout << index << std::endl;
+        int cont = 0;
+        index = i * (image_desc.image_width * 4 ) * image_desc.image_height;
+
         unsigned int numActiveNodes = population[i].numActiveNodes;
 
         populationImageObjectQuarter[index++] = population[i].numActiveNodes;
@@ -1269,25 +1324,26 @@ void OCLConfig::writeImageBufferQuarterCompact(Chromosome* population){
 
         while(index % (image_desc.image_width * 4) != 0) populationImageObjectQuarter[index++] = 0;
 
-        for(int j = 0; j < MAX_NODES; j++) {
-            if (j % 2 == 0) {
-                populationImageObjectQuarter[index++] =
-                        return_compact_inputs(
-                                population[i].activeNodes[j],
-                                population[i].activeNodes[j + 1]
-                        );
-            }
-        }
-
-        while(index % (image_desc.image_width * 4) != 0) populationImageObjectQuarter[index++] = 0;
-
         for(int j = 0; j < MAX_NODES; j++){
+            //std::cout<< index << " ";
+            for(int l = 0; l < 4; l++){
+                if (cont < numActiveNodes) {
+                    populationImageObjectQuarter[index++] =
+                            return_compact_inputs(
+                                    population[i].activeNodes[cont],
+                                    population[i].activeNodes[cont + 1]
+                            );
+                    cont += 2;
+                } else {
+                    populationImageObjectQuarter[index++] = 0;
+                }
+            }
+
 
             populationImageObjectQuarter[index++] = population[i].nodes[j].maxInputs;
             populationImageObjectQuarter[index++] = population[i].nodes[j].maxInputs;
             populationImageObjectQuarter[index++] = population[i].nodes[j].maxInputs;
             populationImageObjectQuarter[index++] = population[i].nodes[j].maxInputs;
-
 
             for(int k = 0; k < MAX_ARITY; k+=2){
                 populationImageObjectQuarter[index++] =
@@ -1299,18 +1355,34 @@ void OCLConfig::writeImageBufferQuarterCompact(Chromosome* population){
 
             while(index % (image_desc.image_width * 4) != 0) populationImageObjectQuarter[index++] = 0;
 
-            populationImageObjectQuarter[index++] = population[i].nodes[j].function;
-            populationImageObjectQuarter[index++] = population[i].nodes[j].function;
-            populationImageObjectQuarter[index++] = population[i].nodes[j].function;
-            populationImageObjectQuarter[index++] = population[i].nodes[j].function;
-
-
-            for(int k = 0; k < MAX_ARITY; k+=2){
-                populationImageObjectQuarter[index++] = (*(unsigned int*)&population[i].nodes[j].inputsWeight[k]);
-                populationImageObjectQuarter[index++] = (*(unsigned int*)&population[i].nodes[j].inputsWeight[k+1]);
-
+            for(int l = 0; l < 4; l++){
+                if (cont < numActiveNodes) {
+                    populationImageObjectQuarter[index++] =
+                            return_compact_inputs(
+                                    population[i].activeNodes[cont],
+                                    population[i].activeNodes[cont + 1]
+                            );
+                    cont += 2;
+                } else {
+                    populationImageObjectQuarter[index++] = 0;
+                }
             }
 
+            populationImageObjectQuarter[index++] = population[i].nodes[j].function;
+            populationImageObjectQuarter[index++] = population[i].nodes[j].function;
+            populationImageObjectQuarter[index++] = population[i].nodes[j].function;
+            populationImageObjectQuarter[index++] = population[i].nodes[j].function;
+
+
+            for(int k = 0; k < MAX_ARITY; k++){
+                populationImageObjectQuarter[index++] = (*(unsigned int*)&population[i].nodes[j].inputsWeight[k]);
+            }
+
+            while(index % (image_desc.image_width * 4) != 0){
+                //std::cout << "ERRROOOOOOOOOOO\n";
+                populationImageObjectQuarter[index++] = 0;
+            }
+            //std::cout << index << std::endl;
         }
 
     }
@@ -1318,7 +1390,88 @@ void OCLConfig::writeImageBufferQuarterCompact(Chromosome* population){
     int result = cmdQueue.enqueueWriteImage( populationImage, CL_TRUE, origin, imgSize,0, 0, populationImageObjectQuarter);
     checkError(result);
 }
-*/
+
+void OCLConfig::writeImageBufferHalfCompact(Chromosome* population){
+
+    int index = 0;
+    for(int i = 0; i < NUM_INDIV; i++ ){
+        int cont = 0;
+        index = i * (image_desc.image_width * 2 ) * image_desc.image_height;
+
+        unsigned int numActiveNodes = population[i].numActiveNodes;
+
+        populationImageObjectHalf[index++] = population[i].numActiveNodes;
+        populationImageObjectHalf[index++] = population[i].numActiveNodes;
+
+        for(int j = 0; j < MAX_OUTPUTS; j++){
+            populationImageObjectHalf[index++] = population[i].output[j];
+        }
+
+        while(index % (image_desc.image_width * 2) != 0) populationImageObjectHalf[index++] = 0;
+
+        for(int j = 0; j < MAX_NODES; j++){
+            //std::cout<< index << " ";
+            for(int l = 0; l < 2; l++) {
+                if (cont < numActiveNodes) {
+                    populationImageObjectHalf[index++] =
+                            return_compact_inputs(
+                                    population[i].activeNodes[cont],
+                                    population[i].activeNodes[cont + 1]
+                            );
+                    cont += 2;
+                } else {
+                    populationImageObjectHalf[index++] = 0;
+                }
+            }
+
+
+            populationImageObjectHalf[index++] = population[i].nodes[j].maxInputs;
+            populationImageObjectHalf[index++] = population[i].nodes[j].maxInputs;
+
+            for(int k = 0; k < MAX_ARITY; k+=2){
+                populationImageObjectHalf[index++] =
+                        return_compact_inputs(
+                                population[i].nodes[j].inputs[k],
+                                population[i].nodes[j].inputs[k+1]
+                        );
+            }
+
+            while(index % (image_desc.image_width * 2) != 0) populationImageObjectHalf[index++] = 0;
+
+            for(int l = 0; l < 2; l++) {
+                if (cont < numActiveNodes) {
+                    populationImageObjectHalf[index++] =
+                            return_compact_inputs(
+                                    population[i].activeNodes[cont],
+                                    population[i].activeNodes[cont + 1]
+                            );
+                    cont += 2;
+                } else {
+                    populationImageObjectHalf[index++] = 0;
+                }
+            }
+
+            populationImageObjectHalf[index++] = population[i].nodes[j].function;
+            populationImageObjectHalf[index++] = population[i].nodes[j].function;
+
+
+            for(int k = 0; k < MAX_ARITY; k++){
+                populationImageObjectHalf[index++] = (*(unsigned int*)&population[i].nodes[j].inputsWeight[k]);
+            }
+
+            while(index % (image_desc.image_width * 2) != 0){
+                //std::cout << "ERRROOOOOOOOOOO\n";
+                populationImageObjectHalf[index++] = 0;
+            }
+            //std::cout << index << std::endl;
+        }
+
+    }
+
+    int result = cmdQueue.enqueueWriteImage( populationImage, CL_TRUE, origin, imgSize,0, 0, populationImageObjectHalf);
+    checkError(result);
+}
+
 
 
 void OCLConfig::compactChromosome(Chromosome* population, CompactChromosome* compactPopulation){
