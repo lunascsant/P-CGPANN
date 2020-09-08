@@ -14,6 +14,7 @@ link_directories("nvidia\\lib\\Win32")
 
 #include_directories("amd\\include")
 #link_directories("amd\\lib\\x86")
+
 #include_directories("C:\\Program Files (x86)\\OCL_SDK_Light\\include")
 #link_directories("C:\\Program Files (x86)\\OCL_SDK_Light\\lib\\x86")
 
