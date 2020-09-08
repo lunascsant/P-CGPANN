@@ -32,7 +32,8 @@ Chromosome *mutateTopologyProbabilisticActive(Chromosome *c, Parameters *p, int 
 Chromosome *mutateTopologyPoint(Chromosome *c, Parameters *p, int *seed);
 
 
-Chromosome CGP(Dataset* training, Dataset* validation, Parameters* params, int *seeds);
+Chromosome
+CGP(Dataset *training, Dataset *validation, Parameters *params, int *seeds, double *timeIter, double *timeKernel);
 
 Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel);
 

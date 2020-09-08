@@ -447,12 +447,12 @@ void runCircuitLinear(Chromosome* c, Dataset* dataset, int index, int validation
         }
 
         alreadyEvaluated[currentActive] = executeFunction(c, currentActive, &exStack);
+/*
 
-        /* deal with floats becoming NAN */
         if (std::isnan(alreadyEvaluated[currentActive]) != 0) {
             alreadyEvaluated[currentActive] = 0;
         }
-         /* prevent float form going to inf and -inf */
+
         else if (std::isinf(alreadyEvaluated[currentActive]) != 0 ) {
 
             if (alreadyEvaluated[currentActive] > 0) {
@@ -462,7 +462,7 @@ void runCircuitLinear(Chromosome* c, Dataset* dataset, int index, int validation
                 alreadyEvaluated[currentActive] = DBL_MIN;
             }
         }
-
+*/
     }
 
     for( i = 0; i < MAX_OUTPUTS; i++) {
@@ -694,7 +694,8 @@ Chromosome *mutateTopologyPoint(Chromosome *c, Parameters *p, int *seed) {
 
 
 
-Chromosome CGP(Dataset* training, Dataset* validation, Parameters* params, int *seeds) {
+Chromosome
+CGP(Dataset *training, Dataset *validation, Parameters *params, int *seeds, double *timeIter, double *timeKernel) {
     GPTime timeManager(4);
     Chromosome *current_pop;
     current_pop = new Chromosome[NUM_INDIV];
@@ -728,10 +729,12 @@ Chromosome CGP(Dataset* training, Dataset* validation, Parameters* params, int *
 
             //evaluateCircuit(&mutated_best, training);
             //evaluateCircuitValidation(&mutated_best, validation);
-
+            timeManager.getStartTime(Avaliacao_T);
             evaluateCircuitLinear(&mutated_best, training);
             evaluateCircuitValidationLinear(&mutated_best, validation);
+            timeManager.getEndTime(Avaliacao_T);
 
+            (*timeKernel) += timeManager.getElapsedTime(Avaliacao_T);;
 
             if(iterations%100 == 0)
                 std::cout << mutated_best.fitness << " ";
@@ -757,8 +760,11 @@ Chromosome CGP(Dataset* training, Dataset* validation, Parameters* params, int *
             printf("Time: %f\n", timeManager.getTotalTime(Iteracao_T));
 
         }
+
         iterations++;
     }
+    (*timeIter) = timeManager.getTotalTime(Iteracao_T);
+
 
     return best_valid;
 }
@@ -914,7 +920,7 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
     (*timeIter) = timeManager.getTotalTime(Iteracao_T);
     (*timeKernel) = kernelTime;
 
-    ocl->readSeedsBuffer(seeds);
+    //ocl->readSeedsBuffer(seeds);
     ocl->finishCommandQueue();
    /* for(int i = 0; i < NUM_INDIV * ocl->maxLocalSize; i++){
         std::cout << seeds[i] << " ";

@@ -7,12 +7,57 @@
 
 int main(int argc, char** argv) {
     char* datasetFile = argv[1];
-    FILE *f_CGP = fopen("./results/cgpann.txt", "w");
-    FILE *f_CGP_time = fopen("./results/cgpann_time.txt", "w");
-    FILE *f_CGP_timeKernel = fopen("./results/cgpann_timeKernel.txt", "w");
+
+    std::string resultFile;
+    std::string resultFileTime;
+    std::string resultFileTimeKernel;
+
+    #if DEFAULT
+        resultFile = "./results/cgpann_standard.txt";
+        resultFileTime = "./results/cgpann_time_standard.txt";
+        resultFileTimeKernel = "./results/cgpann_timeKernel_standard.txt";
+    #elif COMPACT
+        resultFile = "./results/cgpann_compact.txt";
+        resultFileTime = "./results/cgpann_time_compact.txt";
+        resultFileTimeKernel = "./results/cgpann_timeKernel_compact.txt";
+    #elif IMAGE_R
+        resultFile = "./results/cgpann_img_r.txt";
+        resultFileTime = "./results/cgpann_time_img_r.txt";
+        resultFileTimeKernel = "./results/cgpann_timeKernel_img_r.txt";
+    #elif IMAGE_RG
+        resultFile = "./results/cgpann_img_rg.txt";
+        resultFileTime = "./results/cgpann_time_img_rg.txt";
+        resultFileTimeKernel = "./results/cgpann_timeKernel_img_rg.txt";
+    #elif IMAGE_RGBA
+        resultFile = "./results/cgpann_img_rgba.txt";
+        resultFileTime = "./results/cgpann_time_img_rgba.txt";
+        resultFileTimeKernel = "./results/cgpann_timeKernel_img_rgba.txt";
+    #elif COMPACT_R
+        resultFile = "./results/cgpann_compact_img_r.txt";
+        resultFileTime = "./results/cgpann_time_compact_img_r.txt";
+        resultFileTimeKernel = "./results/cgpann_timeKernel_compact_img_r.txt";
+    #elif COMPACT_RG
+        resultFile = "./results/cgpann_compact_img_rg.txt";
+        resultFileTime = "./results/cgpann_time_compact_img_rg.txt";
+        resultFileTimeKernel = "./results/cgpann_timeKernel_compact_img_rg.txt";
+    #elif  COMPACT_RGBA
+        resultFile = "./results/cgpann_compact_img_rgba.txt";
+        resultFileTime = "./results/cgpann_time_compact_img_rgba.txt";
+        resultFileTimeKernel = "./results/cgpann_timeKernel_compact_img_rgba.txt";
+    #else
+        resultFile = "./results/cgpann.txt";
+        resultFileTime = "./results/cgpann_time.txt";
+        resultFileTimeKernel = "./results/cgpann_timeKernel.txt";
+    #endif
+
+    FILE *f_CGP = fopen(resultFile.c_str(), "w");
+    FILE *f_CGP_time = fopen(resultFileTime.c_str(), "w");
+    FILE *f_CGP_timeKernel = fopen(resultFileTimeKernel.c_str(), "w");
 
 
     fprintf(f_CGP, "i,\tj,\taccuracy\n");
+    //fprintf(f_CGP_time, "i,\tj,\ttime\n");
+    //fprintf(f_CGP_timeKernel, "i,\tj,\ttime\n");
 
     GPTime timeManager(4);
     timeManager.getStartTime(Total_T);
@@ -119,7 +164,7 @@ int main(int argc, char** argv) {
                 std::cout << executionBest.fitness << std::endl;
 
             #else
-                Chromosome executionBest = CGP(trainingData, validationData, params, seeds);
+                Chromosome executionBest = CGP(trainingData, validationData, params, seeds, &timeIter, &timeKernel);
                 //std::cout << "Test execution: " << std::endl;
                 std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
 
@@ -134,8 +179,8 @@ int main(int argc, char** argv) {
             //std::cout << "Evol time  = " << timeManager.getElapsedTime(Evolucao_T) << std::endl;
 
             fprintf(f_CGP, "%d,\t%d,\t%.4f\n", i, j, executionBest.fitness);
-            fprintf(f_CGP_time, "%d,\t%d,\t%.4f\n", i, j, timeIter);
-            fprintf(f_CGP_timeKernel, "%d,\t%d,\t%.4f\n", i, j, timeKernel);
+            fprintf(f_CGP_time, "%d;\t%d;\t%.4f\n", i, j, timeIter);
+            fprintf(f_CGP_timeKernel, "%d;\t%d;\t%.4f\n", i, j, timeKernel);
 
         }
 

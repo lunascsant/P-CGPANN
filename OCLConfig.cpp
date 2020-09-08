@@ -61,11 +61,11 @@ OCLConfig::OCLConfig() {
 
     for(int i = 0; i < platforms.size(); i++){
         devices.emplace_back(std::vector<cl::Device>());
-        platforms[i].getDevices(CL_DEVICE_TYPE_ALL, &devices[i]);
+        platforms[i].getDevices(CL_DEVICE_TYPE_GPU, &devices[i]);
     }
 
     context = cl::Context(devices[GPU_PLATFORM], nullptr, nullptr, nullptr, &result);
-    std::cout << sizeof(context) << std::endl;
+    //std::cout << sizeof(context) << std::endl;
     checkError(result);
 /*
     context.getSupportedImageFormats(CL_MEM_READ_ONLY, CL_MEM_OBJECT_IMAGE2D, &imageFormats);
@@ -79,7 +79,7 @@ OCLConfig::OCLConfig() {
 
     maxLocalSize = cmdQueue.getInfo<CL_QUEUE_DEVICE>().getInfo<CL_DEVICE_MAX_WORK_GROUP_SIZE>();
 //    std::cout << 0xFFFF << std::endl;
-//    printOpenclDeviceInfo();
+    printOpenclDeviceInfo();
 }
 
 void OCLConfig::checkError(cl_int result){
