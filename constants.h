@@ -63,7 +63,7 @@
 #endif // PROB_MUT
 
 
-#define NUM_GENERATIONS 1000
+#define NUM_GENERATIONS 50000
 #define NUM_EVALUATIONS 2.40e+007
 
 
