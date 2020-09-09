@@ -45,7 +45,6 @@
 
 /** Graph parameters */
 #define MAX_NODES 500
-#define MAX_NODES_SIZE (3 * MAX_NODES)
 #define MAX_OUTPUTS 2
 #define MAX_ARITY 20
 
@@ -68,7 +67,6 @@
 #define NUM_EVALUATIONS 2.40e+007
 
 
-#define GPU 1
 #define PARALLEL    1
 
 #define DEFAULT      1
