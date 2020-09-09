@@ -736,7 +736,7 @@ CGP(Dataset *training, Dataset *validation, Parameters *params, int *seeds, doub
 
             (*timeKernel) += timeManager.getElapsedTime(Avaliacao_T);;
 
-            if(iterations%100 == 0)
+            if(iterations%1000 == 0)
                 std::cout << mutated_best.fitness << " ";
             if(mutated_best.fitness >= best_train.fitness){
                 best_train = mutated_best;
@@ -748,14 +748,14 @@ CGP(Dataset *training, Dataset *validation, Parameters *params, int *seeds, doub
 
             //std::cout << mutated_best.fitness << " ";
         }
-        if(iterations%100 == 0)
+        if(iterations%1000 == 0)
             std::cout << std::endl;
         best = best_train;
         //std::cout << "Best fitness  = " << best.fitness << std::endl;
         timeManager.getEndTime(Iteracao_T);
 
         timeManager.getElapsedTime(Iteracao_T);
-        if(iterations%100 == 0){
+        if(iterations%1000 == 0){
             printf("Generation %d:\n", iterations);
             printf("Time: %f\n", timeManager.getTotalTime(Iteracao_T));
 
@@ -891,7 +891,7 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
             population[k].fitness = ocl->fitness[k];
             population[k].fitnessValidation = ocl->fitnessValidation[k];
 
-            if(iterations%100 == 0)
+            if(iterations%1000 == 0)
                 std::cout << population[k].fitness << ","<< population[k].numActiveNodes << " ";
 
             if(population[k].fitness >= best_train.fitness){
@@ -902,14 +902,14 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
                 best_valid = population[k];
             }
         }
-        if(iterations%100 == 0)
+        if(iterations%1000 == 0)
         std::cout << std::endl;
 
         best = best_train;
         timeManager.getEndTime(Iteracao_T);
         timeManager.getElapsedTime(Iteracao_T);
 
-        if(iterations%100 == 0){
+        if(iterations%1000 == 0){
             printf("Generation %d:\n", iterations);
             printf("Time: %f\n", timeManager.getTotalTime(Iteracao_T));
             printf("Kernel Time: %f\n", kernelTime);

@@ -10,48 +10,59 @@ int main(int argc, char** argv) {
 
     std::string resultFile;
     std::string resultFileTime;
+    std::string resultFileTimeIter;
     std::string resultFileTimeKernel;
 
     #if DEFAULT
         resultFile = "./results/cgpann_standard.txt";
         resultFileTime = "./results/cgpann_time_standard.txt";
+        resultFileTimeIter = "./results/cgpann_timeIter_standard.txt";
         resultFileTimeKernel = "./results/cgpann_timeKernel_standard.txt";
     #elif COMPACT
         resultFile = "./results/cgpann_compact.txt";
         resultFileTime = "./results/cgpann_time_compact.txt";
+        resultFileTimeIter = "./results/cgpann_timeIter_compact.txt";
         resultFileTimeKernel = "./results/cgpann_timeKernel_compact.txt";
     #elif IMAGE_R
         resultFile = "./results/cgpann_img_r.txt";
         resultFileTime = "./results/cgpann_time_img_r.txt";
+        resultFileTimeIter = "./results/cgpann_timeIter_img_r.txt";
         resultFileTimeKernel = "./results/cgpann_timeKernel_img_r.txt";
     #elif IMAGE_RG
         resultFile = "./results/cgpann_img_rg.txt";
         resultFileTime = "./results/cgpann_time_img_rg.txt";
+        resultFileTimeIter = "./results/cgpann_timeIter_img_rg.txt";
         resultFileTimeKernel = "./results/cgpann_timeKernel_img_rg.txt";
     #elif IMAGE_RGBA
         resultFile = "./results/cgpann_img_rgba.txt";
         resultFileTime = "./results/cgpann_time_img_rgba.txt";
+        resultFileTimeIter = "./results/cgpann_timeIter_img_rgba.txt";
         resultFileTimeKernel = "./results/cgpann_timeKernel_img_rgba.txt";
     #elif COMPACT_R
         resultFile = "./results/cgpann_compact_img_r.txt";
         resultFileTime = "./results/cgpann_time_compact_img_r.txt";
+        resultFileTimeIter = "./results/cgpann_timeIter_compact_img_r.txt";
         resultFileTimeKernel = "./results/cgpann_timeKernel_compact_img_r.txt";
     #elif COMPACT_RG
         resultFile = "./results/cgpann_compact_img_rg.txt";
         resultFileTime = "./results/cgpann_time_compact_img_rg.txt";
+        resultFileTimeIter = "./results/cgpann_timeIter_compact_img_rg.txt";
         resultFileTimeKernel = "./results/cgpann_timeKernel_compact_img_rg.txt";
     #elif  COMPACT_RGBA
         resultFile = "./results/cgpann_compact_img_rgba.txt";
         resultFileTime = "./results/cgpann_time_compact_img_rgba.txt";
+        resultFileTimeIter = "./results/cgpann_timeIter_compact_img_rgba.txt";
         resultFileTimeKernel = "./results/cgpann_timeKernel_compact_img_rgba.txt";
     #else
         resultFile = "./results/cgpann.txt";
         resultFileTime = "./results/cgpann_time.txt";
+        resultFileTimeIter = "./results/cgpann_timeIter.txt";
         resultFileTimeKernel = "./results/cgpann_timeKernel.txt";
     #endif
 
     FILE *f_CGP = fopen(resultFile.c_str(), "w");
     FILE *f_CGP_time = fopen(resultFileTime.c_str(), "w");
+    FILE *f_CGP_timeIter = fopen(resultFileTimeIter.c_str(), "w");
     FILE *f_CGP_timeKernel = fopen(resultFileTimeKernel.c_str(), "w");
 
 
@@ -140,6 +151,7 @@ int main(int argc, char** argv) {
 
             ocl->transposeDatasets(trainingData, validationData, testData);
             double timeIter = 0;
+            double timeIterTotal = 0;
             double timeKernel = 0;
             timeManager.getStartTime(Evolucao_T);
             #if PARALLEL
@@ -174,12 +186,14 @@ int main(int argc, char** argv) {
                 //std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
             #endif
             timeManager.getEndTime(Evolucao_T);
-            printf("Evol time: %f \n", timeManager.getElapsedTime(Evolucao_T));
+            timeIterTotal = timeManager.getElapsedTime(Evolucao_T);
+            printf("Evol time: %f \n", timeIterTotal);
 
             //std::cout << "Evol time  = " << timeManager.getElapsedTime(Evolucao_T) << std::endl;
 
             fprintf(f_CGP, "%d,\t%d,\t%.4f\n", i, j, executionBest.fitness);
             fprintf(f_CGP_time, "%d;\t%d;\t%.4f\n", i, j, timeIter);
+            fprintf(f_CGP_timeIter, "%d;\t%d;\t%.4f\n", i, j, timeIterTotal);
             fprintf(f_CGP_timeKernel, "%d;\t%d;\t%.4f\n", i, j, timeKernel);
 
         }
