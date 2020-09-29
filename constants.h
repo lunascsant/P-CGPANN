@@ -45,7 +45,7 @@
 
 /** Graph parameters */
 #define MAX_NODES 500
-#define MAX_OUTPUTS 2
+#define MAX_OUTPUTS 4
 #define MAX_ARITY 20
 
 #define TESTVAR MAX_OUTPUTS/2 + MAX_OUTPUTS%2
@@ -67,9 +67,9 @@
 #define NUM_EVALUATIONS 2.40e+007
 
 
-#define PARALLEL    1
+#define PARALLEL    0
 
-#define DEFAULT      1
+#define DEFAULT      0
 #define COMPACT      0
 #define IMAGE_R      0
 #define IMAGE_RG     0

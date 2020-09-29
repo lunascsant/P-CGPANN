@@ -5,29 +5,29 @@ CMakeFiles/P-CGPDE.dir/GPTime.cpp.obj
  C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.cpp
  C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.h
 CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.obj
- ../nvidia/include/CL/cl.h
- ../nvidia/include/CL/cl.hpp
- ../nvidia/include/CL/cl_d3d10.h
- ../nvidia/include/CL/cl_dx9_media_sharing.h
- ../nvidia/include/CL/cl_ext.h
- ../nvidia/include/CL/cl_gl.h
- ../nvidia/include/CL/cl_gl_ext.h
- ../nvidia/include/CL/cl_platform.h
- ../nvidia/include/CL/opencl.h
+ ../amd/include/CL/cl.h
+ ../amd/include/CL/cl.hpp
+ ../amd/include/CL/cl_d3d10.h
+ ../amd/include/CL/cl_dx9_media_sharing.h
+ ../amd/include/CL/cl_ext.h
+ ../amd/include/CL/cl_gl.h
+ ../amd/include/CL/cl_gl_ext.h
+ ../amd/include/CL/cl_platform.h
+ ../amd/include/CL/opencl.h
  C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.cpp
  C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
  C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
  C:/Users/bruno/CLionProjects/P-CGPDE/utils.h
 CMakeFiles/P-CGPDE.dir/cgp.cpp.obj
- ../nvidia/include/CL/cl.h
- ../nvidia/include/CL/cl.hpp
- ../nvidia/include/CL/cl_d3d10.h
- ../nvidia/include/CL/cl_dx9_media_sharing.h
- ../nvidia/include/CL/cl_ext.h
- ../nvidia/include/CL/cl_gl.h
- ../nvidia/include/CL/cl_gl_ext.h
- ../nvidia/include/CL/cl_platform.h
- ../nvidia/include/CL/opencl.h
+ ../amd/include/CL/cl.h
+ ../amd/include/CL/cl.hpp
+ ../amd/include/CL/cl_d3d10.h
+ ../amd/include/CL/cl_dx9_media_sharing.h
+ ../amd/include/CL/cl_ext.h
+ ../amd/include/CL/cl_gl.h
+ ../amd/include/CL/cl_gl_ext.h
+ ../amd/include/CL/cl_platform.h
+ ../amd/include/CL/opencl.h
  C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.h
  C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
  C:/Users/bruno/CLionProjects/P-CGPDE/cgp.cpp
@@ -36,15 +36,15 @@ CMakeFiles/P-CGPDE.dir/cgp.cpp.obj
  C:/Users/bruno/CLionProjects/P-CGPDE/stack.h
  C:/Users/bruno/CLionProjects/P-CGPDE/utils.h
 CMakeFiles/P-CGPDE.dir/main.cpp.obj
- ../nvidia/include/CL/cl.h
- ../nvidia/include/CL/cl.hpp
- ../nvidia/include/CL/cl_d3d10.h
- ../nvidia/include/CL/cl_dx9_media_sharing.h
- ../nvidia/include/CL/cl_ext.h
- ../nvidia/include/CL/cl_gl.h
- ../nvidia/include/CL/cl_gl_ext.h
- ../nvidia/include/CL/cl_platform.h
- ../nvidia/include/CL/opencl.h
+ ../amd/include/CL/cl.h
+ ../amd/include/CL/cl.hpp
+ ../amd/include/CL/cl_d3d10.h
+ ../amd/include/CL/cl_dx9_media_sharing.h
+ ../amd/include/CL/cl_ext.h
+ ../amd/include/CL/cl_gl.h
+ ../amd/include/CL/cl_gl_ext.h
+ ../amd/include/CL/cl_platform.h
+ ../amd/include/CL/opencl.h
  C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.h
  C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
  C:/Users/bruno/CLionProjects/P-CGPDE/cgp.h
@@ -57,15 +57,15 @@ CMakeFiles/P-CGPDE.dir/stack.cpp.obj
  C:/Users/bruno/CLionProjects/P-CGPDE/stack.cpp
  C:/Users/bruno/CLionProjects/P-CGPDE/stack.h
 CMakeFiles/P-CGPDE.dir/utils.cpp.obj
- ../nvidia/include/CL/cl.h
- ../nvidia/include/CL/cl.hpp
- ../nvidia/include/CL/cl_d3d10.h
- ../nvidia/include/CL/cl_dx9_media_sharing.h
- ../nvidia/include/CL/cl_ext.h
- ../nvidia/include/CL/cl_gl.h
- ../nvidia/include/CL/cl_gl_ext.h
- ../nvidia/include/CL/cl_platform.h
- ../nvidia/include/CL/opencl.h
+ ../amd/include/CL/cl.h
+ ../amd/include/CL/cl.hpp
+ ../amd/include/CL/cl_d3d10.h
+ ../amd/include/CL/cl_dx9_media_sharing.h
+ ../amd/include/CL/cl_ext.h
+ ../amd/include/CL/cl_gl.h
+ ../amd/include/CL/cl_gl_ext.h
+ ../amd/include/CL/cl_platform.h
+ ../amd/include/CL/opencl.h
  C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
  C:/Users/bruno/CLionProjects/P-CGPDE/utils.cpp
  C:/Users/bruno/CLionProjects/P-CGPDE/utils.h
