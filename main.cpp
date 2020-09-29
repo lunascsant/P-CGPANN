@@ -127,7 +127,7 @@ int main(int argc, char** argv) {
             seeds[aux] = aux + 55;
         }
 
-        shuffleData(&fullData, indexesData, &seeds[0]);
+        //shuffleData(&fullData, indexesData, &seeds[0]);
         Dataset* folds = generateFolds(&fullData, indexesData, indexesDataInFolds);
         int id;
         //#pragma omp parallel for default(none), private(j, id), shared(i, params, folds, f_CGP, timeManager, seeds, ocl), schedule(dynamic), num_threads(10)
@@ -143,9 +143,9 @@ int main(int argc, char** argv) {
             getIndexes(indexesFolds, KFOLDS, testIndex, &seeds[0]);
             indexesFolds[KFOLDS-1] = testIndex;
 
-            Dataset* trainingData = getSelectedDataset(folds, indexesFolds, 0, 6);
-            Dataset* validationData = getSelectedDataset(folds, indexesFolds, 7, 8);
-            Dataset* testData = getSelectedDataset(folds, indexesFolds, 9, 9);
+            Dataset* trainingData = getSelectedDataset(folds, indexesFolds, 0, 29);
+            Dataset* validationData = getSelectedDataset(folds, indexesFolds, 30, 38);
+            Dataset* testData = getSelectedDataset(folds, indexesFolds, 39, 39);
             //std::cout << "(" << trainSize << " " << validSize << " " << testSize << ")" << std::endl;
             //std::cout << "(" << trainingData->M << " " << validationData->M << " " << testData->M << ")" << std::endl;
 

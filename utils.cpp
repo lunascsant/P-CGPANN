@@ -279,7 +279,7 @@ Dataset* generateFolds(Dataset* data, int* indexesData, int* indexesDataInFolds)
     }
 */
     // allocate memory for the folds data
-    for(i = 0; i < 10; i++) // for each fold
+    for(i = 0; i < KFOLDS; i++) // for each fold
     {
         folds[i].data = new float* [folds[i].M];
         folds[i].output = new float* [folds[i].M];
@@ -291,13 +291,28 @@ Dataset* generateFolds(Dataset* data, int* indexesData, int* indexesDataInFolds)
         }
     }
 
+    int cont = 0;
+    for(k = 0; k < KFOLDS; k++) // for each fold
+    {
+        for (i = 0; i < foldsSize; i++)
+        {
+            for (j = 0; j < data->N; j++) // for each feature
+            {
+                folds[k].data[i][j] = data->data[cont][j];
 
+            }
+            cont++;
+        }
+    }
+
+    /*
     // keep the same class proportion in each fold
-    int counter[10];// k = 10 // = (int*)malloc(10*sizeof(int));
-    for(i = 0; i < 10; i++)
+    int counter[KFOLDS];// k = 10 // = (int*)malloc(10*sizeof(int));
+    for(i = 0; i < KFOLDS; i++)
     {
         counter[i] = 0;
     }
+
 
     k = 0;
     for(i = 0; i < data->O; i++) // for each class
@@ -319,14 +334,14 @@ Dataset* generateFolds(Dataset* data, int* indexesData, int* indexesDataInFolds)
                 indexesDataInFolds[counter[k] + k * foldsSize] = indexesData[j];
 
                 counter[k] = counter[k] + 1;
-                if(k == 9)
+                if(k == KFOLDS - 1)
                     k = 0;
                 else
                     k++;
             }
         }
     }
-
+    */
     return folds;
 }
 

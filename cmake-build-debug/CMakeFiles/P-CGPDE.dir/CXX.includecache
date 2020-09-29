@@ -6,42 +6,36 @@
 
 #IncludeRegexTransform: 
 
-../amd/include/CL/cl.h
+../nvidia/include/CL/cl.h
 OpenCL/cl_platform.h
 -
 CL/cl_platform.h
 -
 
-../amd/include/CL/cl.hpp
-windows.h
--
+../nvidia/include/CL/cl.hpp
 malloc.h
--
-iterator
--
-x86intrin.h
--
-exception
 -
 CL/cl_d3d10.h
 -
 CL/cl_dx9_media_sharing.h
 -
-CL/cl_ext.h
+intrin.h
 -
-OpenGL/OpenGL.h
+CL/cl_ext.h
 -
 OpenCL/opencl.h
 -
-libkern/OSAtomic.h
--
-GL/gl.h
--
 CL/opencl.h
+-
+atomic
 -
 utility
 -
 limits
+-
+iterator
+-
+exception
 -
 vector
 -
@@ -49,14 +43,10 @@ string
 -
 alloca.h
 -
-emmintrin.h
--
-xmmintrin.h
--
 cstring
 -
 
-../amd/include/CL/cl_d3d10.h
+../nvidia/include/CL/cl_d3d10.h
 d3d10.h
 -
 CL/cl.h
@@ -64,7 +54,7 @@ CL/cl.h
 CL/cl_platform.h
 -
 
-../amd/include/CL/cl_dx9_media_sharing.h
+../nvidia/include/CL/cl_dx9_media_sharing.h
 CL/cl.h
 -
 CL/cl_platform.h
@@ -72,7 +62,7 @@ CL/cl_platform.h
 d3d9.h
 -
 
-../amd/include/CL/cl_ext.h
+../nvidia/include/CL/cl_ext.h
 OpenCL/cl.h
 -
 AvailabilityMacros.h
@@ -80,19 +70,19 @@ AvailabilityMacros.h
 CL/cl.h
 -
 
-../amd/include/CL/cl_gl.h
+../nvidia/include/CL/cl_gl.h
 OpenCL/cl.h
 -
 CL/cl.h
 -
 
-../amd/include/CL/cl_gl_ext.h
+../nvidia/include/CL/cl_gl_ext.h
 OpenCL/cl_gl.h
 -
 CL/cl_gl.h
 -
 
-../amd/include/CL/cl_platform.h
+../nvidia/include/CL/cl_platform.h
 AvailabilityMacros.h
 -
 stdint.h
@@ -116,7 +106,7 @@ intrin.h
 immintrin.h
 -
 
-../amd/include/CL/opencl.h
+../nvidia/include/CL/opencl.h
 OpenCL/cl.h
 -
 OpenCL/cl_gl.h

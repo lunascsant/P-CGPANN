@@ -63,13 +63,13 @@
 #endif // PROB_MUT
 
 
-#define NUM_GENERATIONS 50000
+#define NUM_GENERATIONS 1000
 #define NUM_EVALUATIONS 2.40e+007
 
 
-#define PARALLEL    0
+#define PARALLEL    1
 
-#define DEFAULT      0
+#define DEFAULT      1
 #define COMPACT      0
 #define IMAGE_R      0
 #define IMAGE_RG     0
@@ -79,10 +79,10 @@
 #define COMPACT_RGBA 0
 
 
-#define KFOLDS 10
+#define KFOLDS 40
 
-#define TRAIN_FOLDS 7
-#define VALID_FOLDS 2
+#define TRAIN_FOLDS 30 //7 * 4
+#define VALID_FOLDS 9 //2 * 4
 #define TEST_FOLDS 1
 
 /**
