@@ -14,7 +14,12 @@ void newNode(Chromosome* c, Parameters* params, unsigned int index, int* seed){
     /** set node inputs */
     for(int pos = 0; pos < MAX_ARITY; pos++){
         c->nodes[index].inputs[pos] = randomInput(params, index, seed);
+#if RANDOM_WEIGHT
         c->nodes[index].inputsWeight[pos] = randomConnectionWeight(params, seed);
+#else
+        c->nodes[index].inputsWeight[pos] = randomConnectionWeightInterval(params, seed);
+#endif
+
     }
 
     /** set to unactive as default */
@@ -544,7 +549,12 @@ Chromosome *mutateTopologyProbabilistic(Chromosome *c, Parameters *p, int *seed,
                 c->nodes[i].inputs[j] = randomInput(p, i, seed);
             }
             if(type == 0 && randomProb(seed) <= PROB_MUT){
+#if RANDOM_WEIGHT
                 c->nodes[i].inputsWeight[j] = randomConnectionWeight(p, seed);
+#else
+                c->nodes[i].inputsWeight[j] = randomConnectionWeightInterval(p, seed);
+#endif
+
             }
         }
     }
@@ -604,7 +614,13 @@ Chromosome *mutateTopologyProbabilistic2(Chromosome *c, Parameters *p, int *seed
                 c->nodes[i].inputs[j] = randomInput(p, i, &seeds[arrayIndex]);
             }
             if(type == 0 && randomProb(&seeds[arrayIndex]) <= PROB_MUT){
+
+#if RANDOM_WEIGHT
                 c->nodes[i].inputsWeight[j] = randomConnectionWeight(p, &seeds[arrayIndex]);
+#else
+                c->nodes[i].inputsWeight[j] = randomConnectionWeightInterval(p, &seeds[arrayIndex]);
+#endif
+
             }
             if(j == 0) {
                 if(randomProb(&seeds[arrayIndex]) <= PROB_MUT) {
@@ -634,7 +650,12 @@ Chromosome *mutateTopologyProbabilisticActive(Chromosome *c, Parameters *p, int 
                     c->nodes[i].inputs[j] = randomInput(p, i, seed);
                 }
                 if(type == 0 && randomProb(seed) <= PROB_MUT){
+#if RANDOM_WEIGHT
                     c->nodes[i].inputsWeight[j] = randomConnectionWeight(p, seed);
+#else
+                    c->nodes[i].inputsWeight[j] = randomConnectionWeightInterval(p, seed);
+#endif
+
                 }
             }
         }
@@ -939,3 +960,38 @@ Chromosome CGPDE_OUT();
 Chromosome PCGPDE_IN();
 
 Chromosome PCGPDE_OUT();
+
+void printIndividual(Chromosome* c,  FILE *f){
+    fprintf(f, "(%d) (%f) (%f)\n", c->numActiveNodes, c->fitness, c->fitnessValidation);
+    //printf("(%d) (%f) (%f)\n", c->numActiveNodes, c->fitness, c->fitnessValidation);
+
+
+        fprintf(f, "[");
+        //printf("[");
+        for(int j = 0; j < MAX_OUTPUTS; j++){
+            fprintf(f, "%d,", c->output[j]);
+           // printf("%d,", c->output[j]);
+        }
+        fprintf(f, "]\n");
+       // printf("]\n");
+
+    for(int i = 0; i < MAX_NODES; i++){
+        fprintf(f, "(%d) [", c->nodes[i].active);
+        //printf("(%d) [", c->nodes[i].active);
+        for(int j = 0; j < MAX_ARITY; j++){
+            fprintf(f, "%d,", c->nodes[i].inputs[j]);
+           // printf("%d,", c->nodes[i].inputs[j]);
+        }
+        fprintf(f, "]");
+        //printf("]");
+
+        fprintf(f, " [");
+        //printf(" [");
+        for(int j = 0; j < MAX_ARITY; j++){
+            fprintf(f, "%.5f,", c->nodes[i].inputsWeight[j]);
+            //printf("%.5f,", c->nodes[i].inputsWeight[j]);
+        }
+        fprintf(f, "]\n");
+       // printf("]\n");
+    }
+}

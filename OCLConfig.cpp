@@ -331,7 +331,7 @@ void OCLConfig::buildProgram(Parameters* p, Dataset* fullData, std::string sourc
     std::string program_src = setProgramSource(p,fullData) + sourceFile;
     //std::cout << program_src << std::endl;
     program = cl::Program(context, program_src);
-    compileFlags+= R"( -I .\\kernels)";
+    compileFlags+= R"( -I ./kernels)";
     int result = program.build(devices[GPU_PLATFORM], compileFlags.c_str());
 
     if(result != CL_SUCCESS){

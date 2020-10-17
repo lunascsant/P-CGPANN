@@ -63,8 +63,10 @@
 #endif // PROB_MUT
 
 
-#define NUM_GENERATIONS 1000
+#define NUM_GENERATIONS 50000
 #define NUM_EVALUATIONS 2.40e+007
+
+#define RANDOM_WEIGHT 1
 
 
 #define PARALLEL    1
@@ -84,6 +86,9 @@
 #define TRAIN_FOLDS 30 //7 * 4
 #define VALID_FOLDS 9 //2 * 4
 #define TEST_FOLDS 1
+
+
+
 
 /**
  * How the Chromosome is build:

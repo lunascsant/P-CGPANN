@@ -29,6 +29,13 @@ float randomConnectionWeight(Parameters *p, int *seed) {
     return (((float) rand2(seed) / (float) (2147483647) ) * 2 * p->weightRange) - p->weightRange;
 }
 
+float randomConnectionWeightInterval(Parameters *p, int *seed) {
+    float possibleWeights[] = {-1, -0.9, -0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1};
+    int index = (int)(((float) rand2(seed) / (float) 2147483647) * 20);
+    //std::cout << index << std::endl;
+    return possibleWeights[index];
+}
+
 int randomInterval(int inf_bound, int sup_bound, int *seed) {
     return rand2(seed) % (sup_bound - inf_bound + 1) + inf_bound;
 }
@@ -180,17 +187,20 @@ void readDataset(Parameters* params, Dataset* fulldata, char* filename){
         //std::cout << line <<std::endl;
         for(j = 0; j < (N); j++){
             arq >> (fulldata->data)[i][j] ;//= line[j] - '0';
-            //std::cout << (*dataset)[i][j] << " ";
+            //std::cout << (fulldata->data)[i][j] << " ";
         }
+        //std::cout << std::endl;
+        //std::cout << std::endl;
         for(k = 0; j<(N+O); j++, k++){
             arq >> (fulldata->output)[i][k];// = line[j] - '0';
-            //std::cout << (*outputs)[i][k] << " ";
+            //std::cout << (fulldata->output)[i][k] << " ";
         }
         //std::cout << std::endl;
     }
+    std::cout<< "Finished reading dataset: " << i << " " << j << " " << k << " " << std::endl;
+    //arq >> readOps;
 
-    arq >> readOps;
-
+    //std::cout<< " aa" << readOps << std::endl;
 
     params->NUM_FUNCTIONS = 1;
     (params->functionSet) = new unsigned int [params->NUM_FUNCTIONS];
@@ -300,6 +310,10 @@ Dataset* generateFolds(Dataset* data, int* indexesData, int* indexesDataInFolds)
             {
                 folds[k].data[i][j] = data->data[cont][j];
 
+            }
+            for (l = 0; l < data->O; l++)
+            {
+                folds[k].output[i][l] = data->output[cont][l];
             }
             cont++;
         }

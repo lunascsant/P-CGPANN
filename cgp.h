@@ -44,5 +44,6 @@ Chromosome CGPDE_OUT();
 Chromosome PCGPDE_IN();
 Chromosome PCGPDE_OUT();
 
+void printIndividual(Chromosome* c,  FILE *f);
 
 #endif //PCGP_CIRCUIT_H

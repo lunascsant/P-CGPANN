@@ -13,7 +13,10 @@ int main(int argc, char** argv) {
     std::string resultFileTimeIter;
     std::string resultFileTimeKernel;
 
-    #if DEFAULT
+    std::string resultFileModel = "./results/cgpann_model.txt";
+
+
+#if DEFAULT
         resultFile = "./results/cgpann_standard.txt";
         resultFileTime = "./results/cgpann_time_standard.txt";
         resultFileTimeIter = "./results/cgpann_timeIter_standard.txt";
@@ -65,6 +68,8 @@ int main(int argc, char** argv) {
     FILE *f_CGP_timeIter = fopen(resultFileTimeIter.c_str(), "w");
     FILE *f_CGP_timeKernel = fopen(resultFileTimeKernel.c_str(), "w");
 
+    FILE *f_CGP_model = fopen(resultFileModel.c_str(), "w");
+
 
     fprintf(f_CGP, "i,\tj,\taccuracy\n");
     //fprintf(f_CGP_time, "i,\tj,\ttime\n");
@@ -89,7 +94,7 @@ int main(int argc, char** argv) {
     ocl->allocateBuffers(params, trainSize, validSize, testSize);
     ocl->setNDRages();
     ocl->setCompileFlags();
-    ocl->buildProgram(params, &fullData, "kernels\\kernel.cl");
+    ocl->buildProgram(params, &fullData, "kernels/kernel.cl");
     ocl->buildKernels();
 #if IMAGE_R
     ocl->setupImageBuffers();
@@ -122,9 +127,9 @@ int main(int argc, char** argv) {
     }
     int* indexesDataInFolds = new int[fullData.M - (fullData.M % KFOLDS)];// save the indexes given the folds generation
 
-    for(i = 0; i < 3; i++) {
+    for(i = 0; i < 1; i++) {
         for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
-            seeds[aux] = aux + 55;
+            seeds[aux] = aux + i + 55;
         }
 
         //shuffleData(&fullData, indexesData, &seeds[0]);
@@ -189,6 +194,7 @@ int main(int argc, char** argv) {
             timeIterTotal = timeManager.getElapsedTime(Evolucao_T);
             printf("Evol time: %f \n", timeIterTotal);
 
+            printIndividual(&executionBest, f_CGP_model);
             //std::cout << "Evol time  = " << timeManager.getElapsedTime(Evolucao_T) << std::endl;
 
             fprintf(f_CGP, "%d,\t%d,\t%.4f\n", i, j, executionBest.fitness);
