@@ -127,7 +127,7 @@ int main(int argc, char** argv) {
     }
     int* indexesDataInFolds = new int[fullData.M - (fullData.M % KFOLDS)];// save the indexes given the folds generation
 
-    for(i = 0; i < 1; i++) {
+    for(i = 0; i < 3; i++) {
         for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
             seeds[aux] = aux + i + 55;
         }
