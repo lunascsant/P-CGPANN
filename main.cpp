@@ -133,7 +133,9 @@ int main(int argc, char** argv) {
         //#pragma omp parallel for default(none), private(j, id), shared(i, params, folds, f_CGP, timeManager, seeds, ocl), schedule(dynamic), num_threads(10)
         for(j = 0; j < KFOLDS; j++){
             printf("( %d %d )\n", i, j);
-
+            for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
+                seeds[aux] = aux + 55 + i + j;
+            }
             //std::cout << "(" << i << " " << j << ")" << std::endl;
 
             int testIndex = j;

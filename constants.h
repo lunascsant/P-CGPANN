@@ -45,7 +45,7 @@
 
 /** Graph parameters */
 #define MAX_NODES 500
-#define MAX_OUTPUTS 4
+#define MAX_OUTPUTS 2
 #define MAX_ARITY 20
 
 #define TESTVAR MAX_OUTPUTS/2 + MAX_OUTPUTS%2
