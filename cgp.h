@@ -32,8 +32,7 @@ Chromosome *mutateTopologyProbabilisticActive(Chromosome *c, Parameters *p, int 
 Chromosome *mutateTopologyPoint(Chromosome *c, Parameters *p, int *seed);
 
 
-Chromosome
-CGP(Dataset *training, Dataset *validation, Parameters *params, int *seeds, double *timeIter, double *timeKernel);
+Chromosome CGP(Dataset *training, Dataset *validation, Parameters *params, int *seeds, double *timeIter, double *timeKernel);
 
 Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel);
 
@@ -44,6 +43,9 @@ Chromosome CGPDE_OUT();
 Chromosome PCGPDE_IN();
 Chromosome PCGPDE_OUT();
 
-void printIndividual(Chromosome* c,  FILE *f);
+void printIndividual(Chromosome* c,  FILE *f,  FILE *f2, int** matrix);
+
+void evaluateCircuitLinearMatrix(Chromosome* c, Dataset* data, int** matrix);
+void runCircuitLinearMatrix(Chromosome* c, Dataset* dataset, int index, int validation, int** matrix);
 
 #endif //PCGP_CIRCUIT_H

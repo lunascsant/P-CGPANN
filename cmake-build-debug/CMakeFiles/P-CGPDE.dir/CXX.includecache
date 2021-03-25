@@ -132,11 +132,21 @@ iostream
 sys/time.h
 -
 
+C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.cpp
+OCLConfig.h
+C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
+
 C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
 constants.h
 C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
 utils.h
 C:/Users/bruno/CLionProjects/P-CGPDE/utils.h
+
+C:/Users/bruno/CLionProjects/P-CGPDE/cgp.cpp
+cgp.h
+C:/Users/bruno/CLionProjects/P-CGPDE/cgp.h
+GPTime.h
+C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.h
 
 C:/Users/bruno/CLionProjects/P-CGPDE/cgp.h
 utils.h
@@ -160,9 +170,17 @@ C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.h
 OCLConfig.h
 C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.h
 
+C:/Users/bruno/CLionProjects/P-CGPDE/stack.cpp
+stack.h
+C:/Users/bruno/CLionProjects/P-CGPDE/stack.h
+
 C:/Users/bruno/CLionProjects/P-CGPDE/stack.h
 constants.h
 C:/Users/bruno/CLionProjects/P-CGPDE/constants.h
+
+C:/Users/bruno/CLionProjects/P-CGPDE/utils.cpp
+utils.h
+C:/Users/bruno/CLionProjects/P-CGPDE/utils.h
 
 C:/Users/bruno/CLionProjects/P-CGPDE/utils.h
 cstdio

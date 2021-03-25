@@ -63,7 +63,7 @@
 #endif // PROB_MUT
 
 
-#define NUM_GENERATIONS 50000
+#define NUM_GENERATIONS 100
 #define NUM_EVALUATIONS 2.40e+007
 
 #define RANDOM_WEIGHT 0
@@ -71,8 +71,8 @@
 
 #define PARALLEL    1
 
-#define DEFAULT      0
-#define COMPACT      1
+#define DEFAULT      1
+#define COMPACT      0
 #define IMAGE_R      0
 #define IMAGE_RG     0
 #define IMAGE_RGBA   0

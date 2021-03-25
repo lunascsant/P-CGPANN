@@ -137,6 +137,16 @@ void evaluateCircuitLinear(Chromosome* c, Dataset* data) {
     c->fitness = c->fitness / (float) data->M;
 }
 
+void evaluateCircuitLinearMatrix(Chromosome* c, Dataset* data, int** matrix) {
+    int i;
+    c->fitness = 0.0;
+    for(i = 0; i < data->M; i++){
+        runCircuitLinearMatrix(c, data, i, 0, matrix);
+        //setFitness(c, p, out[i], &fitness);
+    }
+    c->fitness = c->fitness / (float) data->M;
+}
+
 void evaluateCircuitValidationLinear(Chromosome* c, Dataset* data) {
     int i;
     c->fitnessValidation = 0.0;
@@ -486,6 +496,71 @@ void runCircuitLinear(Chromosome* c, Dataset* dataset, int index, int validation
         correctClass = (dataset->output[index][i] == 1.0) ? i : correctClass;
 
     }
+
+    if(validation == 1){
+        c->fitnessValidation = (predictedClass == correctClass) ? c->fitnessValidation+1 : c->fitnessValidation+0;
+    } else {
+        c->fitness = (predictedClass == correctClass) ? c->fitness+1 : c->fitness+0;
+    }
+}
+
+void runCircuitLinearMatrix(Chromosome* c, Dataset* dataset, int index, int validation, int** matrix){
+
+    int i, j, currentActive, activeInputs;
+    float maxPredicted = -DBL_MAX;
+    int predictedClass = 0;
+    int correctClass = 0;
+
+    float executionOut[MAX_OUTPUTS];
+    float alreadyEvaluated[MAX_NODES];
+
+    for(i = 0; i < MAX_NODES; i++){
+        alreadyEvaluated[i] = -DBL_MAX;
+    }
+
+    ExStack exStack;
+    exStack.topIndex = -1;
+
+    for(i = 0; i < c->numActiveNodes; i++){
+        currentActive = c->activeNodes[i];
+        activeInputs = c->nodes[currentActive].maxInputs;
+
+        for(j = 0; j < activeInputs; j++){
+            if (c->nodes[currentActive].inputs[j] >= dataset->N) { // se é um outro nó, empilha nó ou o resultado
+                unsigned int refIndex = c->nodes[currentActive].inputs[j] - dataset->N;
+
+                if(alreadyEvaluated[refIndex] > -DBL_MAX) {
+                    pushEx(&exStack, alreadyEvaluated[refIndex]);
+                } else {
+                    printf("ERRO. \n");
+                }
+            } else {
+                pushEx(&exStack, dataset->data[index][c->nodes[currentActive].inputs[j]]);
+            }
+        }
+
+        alreadyEvaluated[currentActive] = executeFunction(c, currentActive, &exStack);
+
+    }
+
+    for( i = 0; i < MAX_OUTPUTS; i++) {
+        unsigned int nodeIndex = c->output[i];
+
+        executionOut[i] = alreadyEvaluated[nodeIndex];
+
+        if(executionOut[i] > maxPredicted) {
+            maxPredicted = executionOut[i];
+            predictedClass = i;
+        } else {
+            maxPredicted = maxPredicted;
+            predictedClass = predictedClass;
+        }
+
+        correctClass = (dataset->output[index][i] == 1.0) ? i : correctClass;
+
+    }
+
+    matrix[correctClass][predictedClass] += 1;
 
     if(validation == 1){
         c->fitnessValidation = (predictedClass == correctClass) ? c->fitnessValidation+1 : c->fitnessValidation+0;
@@ -931,6 +1006,8 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
         timeManager.getElapsedTime(Iteracao_T);
 
         if(iterations%100 == 0){
+            std::cout << best.fitness <<" "<< best.fitnessValidation << std::endl;
+            std::cout << best_valid.fitness <<" "<< best_valid.fitnessValidation << std::endl;
             printf("Generation %d:\n", iterations);
             printf("Time: %f\n", timeManager.getTotalTime(Iteracao_T));
             printf("Kernel Time: %f\n", kernelTime);
@@ -961,7 +1038,7 @@ Chromosome PCGPDE_IN();
 
 Chromosome PCGPDE_OUT();
 
-void printIndividual(Chromosome* c,  FILE *f){
+void printIndividual(Chromosome* c,  FILE *f,  FILE *f2, int** matrix){
     fprintf(f, "(%d) (%f) (%f)\n", c->numActiveNodes, c->fitness, c->fitnessValidation);
     //printf("(%d) (%f) (%f)\n", c->numActiveNodes, c->fitness, c->fitnessValidation);
 
@@ -993,5 +1070,12 @@ void printIndividual(Chromosome* c,  FILE *f){
         }
         fprintf(f, "]\n");
        // printf("]\n");
+    }
+    fprintf(f2, "-----\n");
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4; j++){
+            fprintf(f2, "%d ", matrix[i][j]);
+        }
+        fprintf(f2, "\n");
     }
 }

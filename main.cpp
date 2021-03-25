@@ -8,12 +8,19 @@
 int main(int argc, char** argv) {
     char* datasetFile = argv[1];
 
+    int** matrix;
+    (matrix) = new int* [4];
+    for(int i = 0; i < 4; i++){
+        (matrix)[i] = new int [4];
+    }
+
     std::string resultFile;
     std::string resultFileTime;
     std::string resultFileTimeIter;
     std::string resultFileTimeKernel;
 
     std::string resultFileModel = "./results/cgpann_model.txt";
+    std::string resultFileMatrix = "./results/cgpann_matrix.txt";
 
 
 #if DEFAULT
@@ -69,6 +76,7 @@ int main(int argc, char** argv) {
     FILE *f_CGP_timeKernel = fopen(resultFileTimeKernel.c_str(), "w");
 
     FILE *f_CGP_model = fopen(resultFileModel.c_str(), "w");
+    FILE *f_CGP_matrix = fopen(resultFileMatrix.c_str(), "w");
 
 
     fprintf(f_CGP, "i,\tj,\taccuracy\n");
@@ -127,7 +135,7 @@ int main(int argc, char** argv) {
     }
     int* indexesDataInFolds = new int[fullData.M - (fullData.M % KFOLDS)];// save the indexes given the folds generation
 
-    for(i = 0; i < 3; i++) {
+    for(i = 4; i < 6; i++) {
         for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
             seeds[aux] = aux + i + 55;
         }
@@ -136,7 +144,7 @@ int main(int argc, char** argv) {
         Dataset* folds = generateFolds(&fullData, indexesData, indexesDataInFolds);
         int id;
         //#pragma omp parallel for default(none), private(j, id), shared(i, params, folds, f_CGP, timeManager, seeds, ocl), schedule(dynamic), num_threads(10)
-        for(j = 0; j < KFOLDS; j++){
+        for(j = 0; j < 17; j++){
             printf("( %d %d )\n", i, j);
 
             //std::cout << "(" << i << " " << j << ")" << std::endl;
@@ -175,6 +183,15 @@ int main(int argc, char** argv) {
                 //ocl->readBestBuffer(&executionBest);
                 ocl->readFitnessBuffer();
 
+
+                for(int f = 0; f < 4; f++){
+                    for(int g = 0; g < 4; g++) {
+                        (matrix)[f][g] = 0;
+                    }
+                }
+
+                evaluateCircuitLinearMatrix(&executionBest, testData, matrix);
+
                 executionBest.fitness = ocl->fitness[0];
 
                 ocl->finishCommandQueue();
@@ -185,7 +202,7 @@ int main(int argc, char** argv) {
                 //std::cout << "Test execution: " << std::endl;
                 std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
 
-                evaluateCircuit(&executionBest, testData);
+                evaluateCircuitLinear(&executionBest, testData);
                 printf("Test execution: %f ", executionBest.fitness);
 
                 //std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
@@ -194,7 +211,7 @@ int main(int argc, char** argv) {
             timeIterTotal = timeManager.getElapsedTime(Evolucao_T);
             printf("Evol time: %f \n", timeIterTotal);
 
-            printIndividual(&executionBest, f_CGP_model);
+            printIndividual(&executionBest, f_CGP_model, f_CGP_matrix, matrix);
             //std::cout << "Evol time  = " << timeManager.getElapsedTime(Evolucao_T) << std::endl;
 
             fprintf(f_CGP, "%d,\t%d,\t%.4f\n", i, j, executionBest.fitness);
