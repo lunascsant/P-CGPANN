@@ -109,7 +109,9 @@ void evaluateCircuit(Chromosome* c, Dataset* data) {
         runCircuit(c, data, i, 0);
         //setFitness(c, p, out[i], &fitness);
     }
-    c->fitness = c->fitness / (float) data->M;
+
+    std::cout << "FITNESS INDIVIDUO " << c->fitness << std::endl;
+    // c->fitness = c->fitness / (float) data->M;
 }
 
 void evaluateCircuitValidation(Chromosome* c, Dataset* data) {
@@ -328,6 +330,7 @@ float executeFunction(Chromosome* c, int node, ExStack* exStack){
 
 void runCircuit(Chromosome* c, Dataset* dataset, int index, int validation){
 
+    /*std::cout << "RODANDO UM INDIVIDUO" << std::endl;*/
     int i;
     float maxPredicted = -DBL_MAX;
     int predictedClass = 0;
@@ -389,26 +392,39 @@ void runCircuit(Chromosome* c, Dataset* dataset, int index, int validation){
 
         }
         executionOut[i] = alreadyEvaluated[nodeIndex];//c->nodes[c->output[i]].output;//popEx(&exStack);
+        /*std::cout << "---------------------------" << std::endl;
+        std::cout << "executionOut[i] " << executionOut[i] << std::endl;
+        std::cout << "maxPredicted " << maxPredicted << std::endl;
+        std::cout << "output[i] " << c->output[i] << std::endl;
+        std::cout << "dataset " << dataset->output[index][i] << std::endl;
+        std::cout << "---------------------------" << std::endl;*/
 
-        if(executionOut[i] > maxPredicted) {
+        /*if(executionOut[i] > maxPredicted) {
             maxPredicted = executionOut[i];
             predictedClass = i;
         }
 
         if(dataset->output[index][i] == 1.0) {
             correctClass = i;
+        }*/
+
+        if(dataset->output[index][i] == executionOut[i]) {
+            (c->fitness)++;
         }
 
     }
 
-    if(predictedClass == correctClass) {
+    /*std::cout << "Fitness " << c->fitness << std::endl;*/
+
+    /*if(predictedClass == correctClass) {
         if(validation == 1){
             (c->fitnessValidation)++;
         } else {
             (c->fitness)++;
         }
 
-    }
+    }*/
+    /*std::cout << "RODANDO UM INDIVIDUO" << std::endl;*/
 }
 
 void runCircuitLinear(Chromosome* c, Dataset* dataset, int index, int validation){
@@ -592,7 +608,8 @@ Chromosome *mutateTopologyProbabilistic2(Chromosome *c, Parameters *p, int *seed
 
     for(i = 0; i < MAX_NODES; i++){
         int nodeIndex  = index * 1024 + ((i*MAX_ARITY) % 1024);
-
+        //std::cout << "morreu aqui?  " << i << std::endl;
+        //std::cout << "morreu aqui pq?  " << nodeIndex << std::endl;
         /*if(randomProb(&seeds[nodeIndex]) <= PROB_MUT) {
             c->nodes[i].function = p->functionSet[randomFunction(p, &seeds[nodeIndex])];
             c->nodes[i].maxInputs = getFunctionInputs(c->nodes[i].function);
@@ -603,9 +620,9 @@ Chromosome *mutateTopologyProbabilistic2(Chromosome *c, Parameters *p, int *seed
             if(randomProb(&seeds[arrayIndex]) <= PROB_MUT) {
                 c->nodes[i].inputs[j] = randomInput(p, i, &seeds[arrayIndex]);
             }
-            if(type == 0 && randomProb(&seeds[arrayIndex]) <= PROB_MUT){
+            /*if(type == 0 && randomProb(&seeds[arrayIndex]) <= PROB_MUT){
                 c->nodes[i].inputsWeight[j] = randomConnectionWeight(p, &seeds[arrayIndex]);
-            }
+            }*/
             if(j == 0) {
                 if(randomProb(&seeds[arrayIndex]) <= PROB_MUT) {
                     c->nodes[i].function = p->functionSet[randomFunction(p, &seeds[arrayIndex])];
@@ -626,12 +643,16 @@ Chromosome *mutateTopologyProbabilisticActive(Chromosome *c, Parameters *p, int 
     for(i = 0; i < MAX_NODES; i++){
         if(c->nodes[i].active == 1){
             if(randomProb(seed) <= PROB_MUT) {
+                //std::cout << "ANTES " << c->nodes[i].function << std::endl;
                 c->nodes[i].function = p->functionSet[randomFunction(p, seed)];
-                c->nodes[i].maxInputs = getFunctionInputs(c->nodes[i].function);
+                //c->nodes[i].maxInputs = getFunctionInputs(c->nodes[i].function);
+                //std::cout << "DEPOIS " << c->nodes[i].function << std::endl;
             }
             for(j = 0; j < c->nodes[i].maxInputs; j++) {
                 if(randomProb(seed) <= PROB_MUT) {
+                    //std::cout << "ANTES " << c->nodes[i].inputs[j] << std::endl;
                     c->nodes[i].inputs[j] = randomInput(p, i, seed);
+                    //std::cout << "DEPOIS " << c->nodes[i].inputs[j] << std::endl;
                 }
                 if(type == 0 && randomProb(seed) <= PROB_MUT){
                     c->nodes[i].inputsWeight[j] = randomConnectionWeight(p, seed);
@@ -639,6 +660,37 @@ Chromosome *mutateTopologyProbabilisticActive(Chromosome *c, Parameters *p, int 
             }
         }
     }
+
+    activateNodes(c, p);
+    return  c;
+}
+
+Chromosome *mutateSAM(Chromosome *c, Parameters *p, int *seed) {
+
+    int i, j, inputOrFunction, nodeOrOutput;
+    int activeSelected = 0;
+
+    nodeOrOutput = randomInterval(0, MAX_NODES + p->O - 1, seed);
+
+    if (nodeOrOutput > MAX_NODES - 1) {
+        activeSelected = 1;
+        c->output[0] = randomInterval(0, MAX_NODES - 1, seed);
+    } else {
+        while(activeSelected == 0) {
+            i = randomInterval(0, MAX_NODES - 1, seed);
+            if(c->nodes[i].active == 1) {
+                activeSelected = 1;
+                inputOrFunction = randomInterval(0, 1, seed);
+                if (!inputOrFunction) {
+                    c->nodes[i].function = p->functionSet[randomFunction(p, seed)];
+                } else {
+                    j = randomInterval(0, 1, seed);
+                    c->nodes[i].inputs[j] = randomInput(p, i, seed);
+                }
+            }
+        }
+    }
+
 
     activateNodes(c, p);
     return  c;
@@ -769,48 +821,61 @@ CGP(Dataset *training, Dataset *validation, Parameters *params, int *seeds, doub
     return best_valid;
 }
 
-Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel){
+Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel, std::ofstream& factivel_file){
     GPTime timeManager(4);
     //Chromosome *current_pop;
     //current_pop
 
     Chromosome best;
     Chromosome best_train;
-    Chromosome best_valid;
+    //Chromosome best_valid;
     Chromosome* population = new Chromosome[NUM_INDIV];
     ActiveChromosome* activePopulation = new ActiveChromosome[NUM_INDIV];
     CompactChromosome *compactPopulation = new CompactChromosome[NUM_INDIV];
 
+    int factivel = 0;
 
 
     initializePopulation(population, params, &seeds[0]);
 
     int bestTrain = evaluatePopulation(population, training, 0);
-    int bestValid = evaluatePopulation(population, validation, 1);
+    //int bestValid = evaluatePopulation(population, validation, 1);
     double kernelTime = 0;
     best_train = population[bestTrain];
-    best_valid = population[bestValid];
+    //best_valid = population[bestValid];
     best = best_train;
 
+    if(best.fitness == training->M) {
+        std::cout << "CGP achou o indivíduo factível" << std::endl;
+        printChromosome(&best, params);
+        printFile(&best, params, factivel_file);
+        factivel = 1;
+    }
+
+    std::cout << "Melhor da populacao: " << best.fitness << std::endl;
+    //std::cout << "morreu aqui? 1 " << std::endl;
     ocl->writeReadOnlyBufers(params, seeds);
 
     int iterations = 0;
-    while(stopCriteria(iterations)) {
+    while(stopCriteria(iterations) && (factivel != 1)) {
         timeManager.getStartTime(Iteracao_T);
 
         //std::cout << "Active nodes: " << best.numActiveNodes << ", FitnessTrain: " << best.fitness << ", FitnessValidation: " << best.fitnessValidation  << std::endl;
 
         for(int k = 0; k < NUM_INDIV; k++){
             population[k] = best;
-            mutateTopologyProbabilistic2(&population[k], params, seeds, 0, k);
+            mutateSAM(&population[k], params, seeds);
+            //mutateTopologyPoint(&population[k], params, seeds);
+            //mutateTopologyProbabilistic2(&population[k], params, seeds, 1, k);
         }
+
 
 #if DEFAULT
         ocl->writePopulationBuffer(population);
         ocl->finishCommandQueue();
 
         ocl->enqueueTrainKernel();
-        ocl->enqueueValidationKernel();
+        //ocl->enqueueValidationKernel();
 #elif COMPACT
         ocl->compactChromosome(population, compactPopulation);
         ocl->writePopulationCompactBuffer(compactPopulation);
@@ -859,7 +924,7 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
 
         ocl->finishCommandQueue();
         kernelTime+= ocl->getKernelElapsedTimeTrain();
-        kernelTime+= ocl->getKernelElapsedTimeValid();
+        //kernelTime+= ocl->getKernelElapsedTimeValid();
 
 
         //ocl->writeBestBuffer(&best);
@@ -881,56 +946,106 @@ Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLC
         //ocl->readPopulationBuffer(population);
 
         ocl->readFitnessBuffer();
-        ocl->readFitnessValidationBuffer();
+        //ocl->readFitnessValidationBuffer();
 
         ocl->finishCommandQueue();
+
+        /*for(int k = 0; k < NUM_INDIV; k++){
+            std::cout << "Fitness do " << k << ": " << population[k].fitness << std::endl;
+        }*/
 
 
         for(int k = 0; k < NUM_INDIV; k++){
 
             population[k].fitness = ocl->fitness[k];
-            population[k].fitnessValidation = ocl->fitnessValidation[k];
 
-            if(iterations%1000 == 0)
-                std::cout << population[k].fitness << ","<< population[k].numActiveNodes << " ";
+            //std::cout << "ocl fitness k " << ocl->fitness[k] << std::endl;
+            //population[k].fitnessValidation = ocl->fitnessValidation[k];
+
+
+            /*std::cout << "Fitness de um individuo: ";
+            std::cout << population[k].fitness << std::endl;*/
 
             if(population[k].fitness >= best_train.fitness){
                 best_train = population[k];
+               /* std::cout << "FITNESS best_train" << best_train.fitness << std::endl;
+                std::cout << "FITNESS population[k]" << population[k].fitness << std::endl;*/
             }
 
-            if(population[k].fitnessValidation >= best_valid.fitnessValidation){
+            /*if(population[k].fitnessValidation >= best_valid.fitnessValidation){
                 best_valid = population[k];
-            }
+            }*/
         }
+
         if(iterations%1000 == 0)
-        std::cout << std::endl;
+            std::cout << std::endl;
 
         best = best_train;
+
+       /* std::cout << "FITNESS best_train" << best_train.fitness << std::endl;
+        std::cout << "FITNESS best" << best.fitness << std::endl;*/
+
+        if(best.fitness == training->M) {
+            std::cout << "CGP achou o individuo factivel depois do kernel" << std::endl;
+            std::cout << "Geracao: " << iterations << std::endl;
+            printChromosome(&best, params);
+            printFile(&best, params, factivel_file);
+            factivel = 1;
+            break;
+        }
+
         timeManager.getEndTime(Iteracao_T);
         timeManager.getElapsedTime(Iteracao_T);
 
         if(iterations%1000 == 0){
             printf("Generation %d:\n", iterations);
+            printf("Best fitness: %f\n", best.fitness);
             printf("Time: %f\n", timeManager.getTotalTime(Iteracao_T));
             printf("Kernel Time: %f\n", kernelTime);
         }
         iterations++;
 
     }
+
+
     (*timeIter) = timeManager.getTotalTime(Iteracao_T);
     (*timeKernel) = kernelTime;
 
     //ocl->readSeedsBuffer(seeds);
     ocl->finishCommandQueue();
-   /* for(int i = 0; i < NUM_INDIV * ocl->maxLocalSize; i++){
-        std::cout << seeds[i] << " ";
-    }*/
+    /* for(int i = 0; i < NUM_INDIV * ocl->maxLocalSize; i++){
+         std::cout << seeds[i] << " ";
+     }*/
     std::cout << std::endl;
 
-    return best_valid;
+    //printChromosome(&best, params);
+    return best;
 }
 
+void printChromosome(Chromosome *c, Parameters *p) {
+    for(int i = 0; i < MAX_NODES; i++) {
+       if (c->nodes[i].active) {
+           std::cout <<"---------------- comeco -----------------" << std::endl;
+           std::cout <<"Indice do no " << i + p->N << std::endl;
+           std::cout <<"No: " << std::endl;
+           std::cout <<"Function: " << c->nodes[i].function << std::endl;
+           std::cout <<"Inputs: " << c->nodes[i].inputs[0] << " "
+           << c->nodes[i].inputs[1] << std::endl;
+           std::cout <<"----------------   fim  -----------------" << std::endl;
+       }
+    }
+    std::cout <<"Outputs: " << c->output[0] + p->N << std::endl;
+}
 
+void printFile(Chromosome *c, Parameters *p, std::ofstream& factivel_file) {
+    for(int i = 0; i < MAX_NODES; i++) {
+        if (c->nodes[i].active) {
+            factivel_file << "Node" << i + p->N << " " << c->nodes[i].inputs[0]
+            << " " << c->nodes[i].inputs[1] << " " <<  c->nodes[i].function << "\n";
+        }
+    }
+    factivel_file << "Output " << c->output[0] + p->N << "\n";
+}
 
 Chromosome CGPDE_IN();
 

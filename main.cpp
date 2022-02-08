@@ -1,12 +1,26 @@
 #include <iostream>
 
 #include "cgp.h"
+#include <fstream>
 #include "utils.h"
 #include "GPTime.h"
 #include "OCLConfig.h"
 
+
+
 int main(int argc, char** argv) {
     char* datasetFile = argv[1];
+
+    std::ofstream factivelFile;
+    std::string argSeed = argv[2];
+    std::string nomeArquivo = "factivel_" + argSeed + "_";
+    std::string argPt = argv[3];
+    nomeArquivo = nomeArquivo + argPt + ".txt";
+    factivelFile.open(nomeArquivo, std::ios::out);
+    if (!factivelFile) {
+        std::cout << "Error file" << std::endl;
+        exit(1);
+    }
 
     std::string resultFile;
     std::string resultFileTime;
@@ -65,10 +79,8 @@ int main(int argc, char** argv) {
     FILE *f_CGP_timeIter = fopen(resultFileTimeIter.c_str(), "w");
     FILE *f_CGP_timeKernel = fopen(resultFileTimeKernel.c_str(), "w");
 
-
     fprintf(f_CGP, "i,\tj,\taccuracy\n");
-    //fprintf(f_CGP_time, "i,\tj,\ttime\n");
-    //fprintf(f_CGP_timeKernel, "i,\tj,\ttime\n");
+
 
     GPTime timeManager(4);
     timeManager.getStartTime(Total_T);
@@ -78,11 +90,14 @@ int main(int argc, char** argv) {
 
     Dataset fullData;
     readDataset(params, &fullData, datasetFile);
+    //std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
+    //printDataset(&fullData);
+    //std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
 
     int trainSize, validSize, testSize;
     calculateDatasetsSize(&fullData, &trainSize, &validSize, &testSize);
 
-    int i, j, aux;
+    int i, aux;
 
     /**OPENCL CONFIG */
     OCLConfig* ocl = new OCLConfig();
@@ -106,76 +121,87 @@ int main(int argc, char** argv) {
 #endif
     /**OPENCL CONFIG */
 
+    // O argv[2] será o valor da SEED
     int* seeds;
     seeds = new int [ocl->maxLocalSize * NUM_INDIV];
-    srand(SEED);
+    std::cout << "SEED LIDA" << atoi(argv[2]) << std::endl;
+    srand(atoi(argv[2]));
 
     /*random seeds used in parallel code*/
     for(i = 0; i < ocl->maxLocalSize * NUM_INDIV; i++){
-        seeds[i] = rand();
+        seeds[i] = atoi(argv[2]);
     }
+
+    /*std::cout << "SEED vetor " << std::endl;
+    for(i = 0; i < ocl->maxLocalSize * NUM_INDIV; i++){
+        std::cout << seeds[i] << " ";
+    }
+    std::cout << std::endl;*/
 
 
     int* indexesData = new int[fullData.M];// save the index order given the data shuffle+folds generation
     for(aux = 0; aux < fullData.M; aux++){
         indexesData[aux] = aux;
     }
+
     int* indexesDataInFolds = new int[fullData.M - (fullData.M % KFOLDS)];// save the indexes given the folds generation
 
-    for(i = 0; i < 3; i++) {
-        for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
+    for(i = 0; i < 1; i++) {
+        /*for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
             seeds[aux] = aux + 55;
-        }
+        }*/
 
-        shuffleData(&fullData, indexesData, &seeds[0]);
-        Dataset* folds = generateFolds(&fullData, indexesData, indexesDataInFolds);
+        //shuffleData(&fullData, indexesData, &seeds[0]);
+        //Dataset* folds = generateFolds(&fullData, indexesData, indexesDataInFolds);
         int id;
         //#pragma omp parallel for default(none), private(j, id), shared(i, params, folds, f_CGP, timeManager, seeds, ocl), schedule(dynamic), num_threads(10)
-        for(j = 0; j < KFOLDS; j++){
-            printf("( %d %d )\n", i, j);
-            for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
-                seeds[aux] = aux + 55 + i + j;
-            }
+        //for(j = 0; j < KFOLDS; j++){
+            printf("( %d )\n", i);
+            /*for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
+                seeds[aux] = aux + 55 + i;
+            }*/
             //std::cout << "(" << i << " " << j << ")" << std::endl;
 
-            int testIndex = j;
+            int testIndex = 0;
             int indexesFolds[KFOLDS];
 
             ///return a permutation of the possible indexes for training and validation
-            getIndexes(indexesFolds, KFOLDS, testIndex, &seeds[0]);
-            indexesFolds[KFOLDS-1] = testIndex;
+            //getIndexes(indexesFolds, KFOLDS, testIndex, &seeds[0]);
+            //indexesFolds[KFOLDS-1] = testIndex;
 
-            Dataset* trainingData = getSelectedDataset(folds, indexesFolds, 0, 6);
-            Dataset* validationData = getSelectedDataset(folds, indexesFolds, 7, 8);
-            Dataset* testData = getSelectedDataset(folds, indexesFolds, 9, 9);
+            //Dataset* trainingData = getSelectedDataset(folds, indexesFolds, 0, 0);
+            Dataset* trainingData = &fullData;
+            //Dataset* validationData = getSelectedDataset(folds, indexesFolds, 7, 8);
+            //Dataset* testData = getSelectedDataset(folds, indexesFolds, 9, 9);
             //std::cout << "(" << trainSize << " " << validSize << " " << testSize << ")" << std::endl;
             //std::cout << "(" << trainingData->M << " " << validationData->M << " " << testData->M << ")" << std::endl;
 
-            ocl->transposeDatasets(trainingData, validationData, testData);
+            ocl->transposeDatasets(trainingData);
             double timeIter = 0;
             double timeIterTotal = 0;
             double timeKernel = 0;
             timeManager.getStartTime(Evolucao_T);
             #if PARALLEL
-                Chromosome executionBest = PCGP(trainingData, validationData, params, ocl, seeds, &timeIter, &timeKernel);
+            Chromosome executionBest = PCGP(trainingData, params, ocl, seeds, &timeIter, &timeKernel, factivelFile);
 
-                std::cout << "Test execution: " << std::endl;
+                //std::cout << "Test execution: " << std::endl;
 
-                std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
-                ocl->writeBestBuffer(&executionBest);
+                //std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
+                std::cout << "Fitness do melhor na main: " << executionBest.fitness << std::endl;
+                //ocl->writeBestBuffer(&executionBest);
 
-                ocl->finishCommandQueue();
+                //ocl->finishCommandQueue();
 
-                ocl->enqueueTestKernel();
-                ocl->finishCommandQueue();
+                //ocl->enqueueTestKernel();
+                //ocl->finishCommandQueue();
 
                 //ocl->readBestBuffer(&executionBest);
-                ocl->readFitnessBuffer();
+                //ocl->readFitnessBuffer();
 
-                executionBest.fitness = ocl->fitness[0];
+                //executionBest.fitness = ocl->fitness[0];
 
-                ocl->finishCommandQueue();
-                std::cout << executionBest.fitness << std::endl;
+                //ocl->finishCommandQueue();
+                //std::cout << executionBest.fitness << std::endl;
 
             #else
                 Chromosome executionBest = CGP(trainingData, validationData, params, seeds, &timeIter, &timeKernel);
@@ -193,12 +219,12 @@ int main(int argc, char** argv) {
 
             //std::cout << "Evol time  = " << timeManager.getElapsedTime(Evolucao_T) << std::endl;
 
-            fprintf(f_CGP, "%d,\t%d,\t%.4f\n", i, j, executionBest.fitness);
-            fprintf(f_CGP_time, "%d;\t%d;\t%.4f\n", i, j, timeIter);
-            fprintf(f_CGP_timeIter, "%d;\t%d;\t%.4f\n", i, j, timeIterTotal);
-            fprintf(f_CGP_timeKernel, "%d;\t%d;\t%.4f\n", i, j, timeKernel);
+            fprintf(f_CGP, "%d,\t%d,\t%.4f\n", i, 0, executionBest.fitness);
+            fprintf(f_CGP_time, "%d;\t%d;\t%.4f\n", i, 0, timeIter);
+            fprintf(f_CGP_timeIter, "%d;\t%d;\t%.4f\n", i, 0, timeIterTotal);
+            fprintf(f_CGP_timeKernel, "%d;\t%d;\t%.4f\n", i, 0, timeKernel);
 
-        }
+        //}
 
 
     }
@@ -212,7 +238,7 @@ int main(int argc, char** argv) {
     std::cout << "Total time  = " << timeManager.getElapsedTime(Total_T) << std::endl;
 
 
-
+    factivelFile.close();
     delete params;
 
     return 0;

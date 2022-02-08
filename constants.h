@@ -44,9 +44,9 @@
 #define CONST_PI 3.14159265359
 
 /** Graph parameters */
-#define MAX_NODES 500
-#define MAX_OUTPUTS 2
-#define MAX_ARITY 20
+#define MAX_NODES 100
+#define MAX_OUTPUTS 1
+#define MAX_ARITY 2
 
 #define TESTVAR MAX_OUTPUTS/2 + MAX_OUTPUTS%2
 /** Genetic parameters */
@@ -67,9 +67,9 @@
 #define NUM_EVALUATIONS 2.40e+007
 
 
-#define PARALLEL    0
+#define PARALLEL    1
 
-#define DEFAULT      0
+#define DEFAULT      1
 #define COMPACT      0
 #define IMAGE_R      0
 #define IMAGE_RG     0
@@ -79,10 +79,10 @@
 #define COMPACT_RGBA 0
 
 
-#define KFOLDS 10
+#define KFOLDS 1
 
-#define TRAIN_FOLDS 7
-#define VALID_FOLDS 2
+#define TRAIN_FOLDS 1
+#define VALID_FOLDS 1
 #define TEST_FOLDS 1
 
 /**

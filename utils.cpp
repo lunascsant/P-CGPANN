@@ -192,32 +192,33 @@ void readDataset(Parameters* params, Dataset* fulldata, char* filename){
     arq >> readOps;
 
 
-    params->NUM_FUNCTIONS = 1;
+    params->NUM_FUNCTIONS = 7;
     (params->functionSet) = new unsigned int [params->NUM_FUNCTIONS];
 
     i = 0;
 
-    (params->functionSet)[i++] = SIG;
-    //(params->maxFunctionInputs)[i++] = 2;
-/*
-    (params->functionSet)[i++] = OR;
+    (params->functionSet)[0] = AND;
     //(params->maxFunctionInputs)[i++] = 2;
 
-    (params->functionSet)[i++] = XOR;
+    (params->functionSet)[1] = OR;
     //(params->maxFunctionInputs)[i++] = 2;
 
-    (params->functionSet)[i++] = NAND;
+    (params->functionSet)[2] = XOR;
     //(params->maxFunctionInputs)[i++] = 2;
 
-    (params->functionSet)[i++] = NOR;
+    (params->functionSet)[3] = NAND;
     //(params->maxFunctionInputs)[i++] = 2;
 
-    (params->functionSet)[i++] = XNOR;
+    (params->functionSet)[4] = NOR;
     //(params->maxFunctionInputs)[i++] = 2;
 
-    (params->functionSet)[i++] = NOT;
+    (params->functionSet)[5] = XNOR;
+    //(params->maxFunctionInputs)[i++] = 2;
+
+
+    (params->functionSet)[6] = NOT;
     //(params->maxFunctionInputs)[i++] = 1;
-*/
+
 
 
     params->weightRange = 5;
@@ -249,13 +250,17 @@ bool stopCriteria(unsigned int it){
 
 
 Dataset* generateFolds(Dataset* data, int* indexesData, int* indexesDataInFolds){
+
+    std::cout << "Generating folds... " << std::endl;
     int i, j, k, l, count;
 
     Dataset* folds;
     folds = new Dataset[KFOLDS];
 
     int foldsSize = (int)data->M/KFOLDS;
+    //std::cout << "foldsSize " << foldsSize << std::endl;
     int excessData= data->M % KFOLDS;
+    //std::cout << "excessData " << excessData << std::endl;
 
     for (i = 0; i < KFOLDS; i++)
     {
@@ -279,7 +284,7 @@ Dataset* generateFolds(Dataset* data, int* indexesData, int* indexesDataInFolds)
     }
 */
     // allocate memory for the folds data
-    for(i = 0; i < 10; i++) // for each fold
+    for(i = 0; i < KFOLDS; i++) // for each fold
     {
         folds[i].data = new float* [folds[i].M];
         folds[i].output = new float* [folds[i].M];
@@ -293,19 +298,23 @@ Dataset* generateFolds(Dataset* data, int* indexesData, int* indexesDataInFolds)
 
 
     // keep the same class proportion in each fold
-    int counter[10];// k = 10 // = (int*)malloc(10*sizeof(int));
-    for(i = 0; i < 10; i++)
+    int counter[KFOLDS];// k = 10 // = (int*)malloc(10*sizeof(int));
+    for(i = 0; i < KFOLDS; i++)
     {
         counter[i] = 0;
     }
 
+
+    //printDataset(folds[0]);
     k = 0;
     for(i = 0; i < data->O; i++) // for each class
     {
         for(j = 0; j < data->M - excessData; j++) // for each instance
         {
+            std::cout << "Cheguei aqui... " << data->output[j][i] << std::endl;
             if(data->output[j][i] == 1.0)
             {
+                std::cout << "Entrei" << std::endl;
                 for (l = 0; l < data->N; l++)
                 {
                     folds[k].data[counter[k]][l] = data->data[j][l];
@@ -319,13 +328,14 @@ Dataset* generateFolds(Dataset* data, int* indexesData, int* indexesDataInFolds)
                 indexesDataInFolds[counter[k] + k * foldsSize] = indexesData[j];
 
                 counter[k] = counter[k] + 1;
-                if(k == 9)
+                if(k == (KFOLDS - 1))
                     k = 0;
                 else
                     k++;
             }
         }
     }
+    printDataset(folds);
 
     return folds;
 }

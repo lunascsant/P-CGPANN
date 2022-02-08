@@ -142,8 +142,6 @@ public:
 
 
 
-
-
     void allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int sizeTest);
     void setNDRages();
     void setCompileFlags();
@@ -152,6 +150,7 @@ public:
     void buildKernels();
     void writeReadOnlyBufers(Parameters* p, int* seeds);
     void transposeDatasets(Dataset* train, Dataset* valid, Dataset* test);
+    void transposeDatasets(Dataset* train);
 
     void writeBestBuffer(Chromosome* best);
     void writePopulationBuffer(Chromosome* population);
