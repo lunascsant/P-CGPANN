@@ -1,0 +1,4 @@
+Node21 2 2 11
+Node22 17 21 11
+Node30 22 13 11
+Output 30

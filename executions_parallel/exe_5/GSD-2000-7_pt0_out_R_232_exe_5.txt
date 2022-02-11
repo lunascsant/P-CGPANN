@@ -1,0 +1,5 @@
+Node23 16 0 10
+Node39 8 11 16
+Node93 23 5 17
+Node99 39 93 14
+Output 99

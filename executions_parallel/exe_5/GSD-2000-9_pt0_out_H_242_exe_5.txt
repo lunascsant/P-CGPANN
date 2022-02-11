@@ -1,0 +1,2 @@
+Node24 1 2 10
+Output 24

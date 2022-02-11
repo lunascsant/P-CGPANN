@@ -11,27 +11,53 @@
 int main(int argc, char** argv) {
     char* datasetFile = argv[1];
 
-    std::ofstream factivelFile;
-    std::string argSeed = argv[2];
-    std::string nomeArquivo = "factivel_" + argSeed + "_";
-    std::string argPt = argv[3];
-    nomeArquivo = nomeArquivo + argPt + ".txt";
-    factivelFile.open(nomeArquivo, std::ios::out);
-    if (!factivelFile) {
-        std::cout << "Error file" << std::endl;
-        exit(1);
-    }
+    #if PARALLEL
+        std::ofstream factivelFile;
+        std::string gene = argv[1];
+        gene = gene.substr(0, 20);
+        std::string argSeed = argv[2];
+        std::string argExe = argv[3];
+        std::string nomeArquivo = gene + "_" + argSeed + "_" + argExe;
+        std::string caminhoArquivo = "./executions_parallel/" + argExe + "/" + nomeArquivo + ".txt";
+        factivelFile.open(caminhoArquivo, std::ios::out);
+        if (!factivelFile) {
+            std::cout << "Error file" << std::endl;
+            exit(1);
+        }
 
-    std::string resultFile;
-    std::string resultFileTime;
-    std::string resultFileTimeIter;
-    std::string resultFileTimeKernel;
+        /*std::string resultFile;
+        std::string resultFileTime;
+        std::string resultFileTimeIter;
+        std::string resultFileTimeKernel;*/
+        std::string caminhoArquivoTime = "./time_counting/" + argExe + "/" + nomeArquivo + ".txt";
+        FILE *f_CGP_time_parallel = fopen(caminhoArquivoTime.c_str(), "w");
+    #else
+        std::ofstream factivelFile;
+        std::string gene = argv[1];
+        gene = gene.substr(0, 20);
+        std::string argSeed = argv[2];
+        std::string argExe = argv[3];
+        std::string nomeArquivo = gene + "_" + argSeed + "_" + argExe;
+        std::string caminhoArquivo = "./executions_sequential/" + argExe + "/" + nomeArquivo + ".txt";
+        factivelFile.open(caminhoArquivo, std::ios::out);
+        if (!factivelFile) {
+            std::cout << "Error file" << std::endl;
+            exit(1);
+        }
+
+        /*std::string resultFile;
+        std::string resultFileTime;
+        std::string resultFileTimeIter;
+        std::string resultFileTimeKernel;*/
+        std::string caminhoArquivoTime = "./time_counting_sequential/" + nomeArquivo + ".txt";
+        FILE *f_CGP_time_sequential = fopen(caminhoArquivoTime.c_str(), "w");
+    #endif
 
     #if DEFAULT
-        resultFile = "./results/cgpann_standard.txt";
+        /*resultFile = "./results/cgpann_standard.txt";
         resultFileTime = "./results/cgpann_time_standard.txt";
         resultFileTimeIter = "./results/cgpann_timeIter_standard.txt";
-        resultFileTimeKernel = "./results/cgpann_timeKernel_standard.txt";
+        resultFileTimeKernel = "./results/cgpann_timeKernel_standard.txt";*/
     #elif COMPACT
         resultFile = "./results/cgpann_compact.txt";
         resultFileTime = "./results/cgpann_time_compact.txt";
@@ -74,12 +100,13 @@ int main(int argc, char** argv) {
         resultFileTimeKernel = "./results/cgpann_timeKernel.txt";
     #endif
 
-    FILE *f_CGP = fopen(resultFile.c_str(), "w");
+    /*FILE *f_CGP = fopen(resultFile.c_str(), "w");
     FILE *f_CGP_time = fopen(resultFileTime.c_str(), "w");
     FILE *f_CGP_timeIter = fopen(resultFileTimeIter.c_str(), "w");
-    FILE *f_CGP_timeKernel = fopen(resultFileTimeKernel.c_str(), "w");
+    FILE *f_CGP_timeKernel = fopen(resultFileTimeKernel.c_str(), "w");*/
 
-    fprintf(f_CGP, "i,\tj,\taccuracy\n");
+
+    // fprintf(f_CGP, "i,\tj,\taccuracy\n");
 
 
     GPTime timeManager(4);
@@ -120,6 +147,7 @@ int main(int argc, char** argv) {
     ocl->setupImageBuffersQuarterCompact();
 #endif
     /**OPENCL CONFIG */
+
 
     // O argv[2] será o valor da SEED
     int* seeds;
@@ -204,12 +232,12 @@ int main(int argc, char** argv) {
                 //std::cout << executionBest.fitness << std::endl;
 
             #else
-                Chromosome executionBest = CGP(trainingData, validationData, params, seeds, &timeIter, &timeKernel);
+                Chromosome executionBest = CGP(trainingData, params, seeds, &timeIter, &timeKernel, factivelFile);
                 //std::cout << "Test execution: " << std::endl;
-                std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
+                std::cout << "Melhor na main: " << executionBest.fitness << std::endl;
 
-                evaluateCircuit(&executionBest, testData);
-                printf("Test execution: %f ", executionBest.fitness);
+                /*evaluateCircuit(&executionBest, testData);
+                printf("Test execution: %f ", executionBest.fitness);*/
 
                 //std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
             #endif
@@ -219,10 +247,23 @@ int main(int argc, char** argv) {
 
             //std::cout << "Evol time  = " << timeManager.getElapsedTime(Evolucao_T) << std::endl;
 
-            fprintf(f_CGP, "%d,\t%d,\t%.4f\n", i, 0, executionBest.fitness);
+            /*fprintf(f_CGP, "%d,\t%d,\t%.4f\n", i, 0, executionBest.fitness);
             fprintf(f_CGP_time, "%d;\t%d;\t%.4f\n", i, 0, timeIter);
             fprintf(f_CGP_timeIter, "%d;\t%d;\t%.4f\n", i, 0, timeIterTotal);
-            fprintf(f_CGP_timeKernel, "%d;\t%d;\t%.4f\n", i, 0, timeKernel);
+            fprintf(f_CGP_timeKernel, "%d;\t%d;\t%.4f\n", i, 0, timeKernel);*/
+
+            #if PARALLEL
+                fprintf(f_CGP_time_parallel, "Fitness best: \t%.4f\n", executionBest.fitness);
+                fprintf(f_CGP_time_parallel, "timeIter: \t%.4f\n", timeIter);
+                fprintf(f_CGP_time_parallel, "timeIterTotal: \t%.4f\n", timeIterTotal);
+                fprintf(f_CGP_time_parallel, "timeKernel: \t%.4f\n", timeKernel);
+            #else
+                fprintf(f_CGP_time_sequential, "Fitness best: \t%.4f\n", executionBest.fitness);
+                fprintf(f_CGP_time_sequential, "timeIter: \t%.4f\n", timeIter);
+                fprintf(f_CGP_time_sequential, "timeIterTotal: \t%.4f\n", timeIterTotal);
+                fprintf(f_CGP_time_sequential, "timeKernel: \t%.4f\n", timeKernel);
+            #endif
+
 
         //}
 
@@ -234,6 +275,13 @@ int main(int argc, char** argv) {
 
     //printCircuit(&best, params);
     //std::cout << "Best fitness  = " << executionBest.fitness << std::endl;
+    #if PARALLEL
+        fprintf(f_CGP_time_parallel, "Total time: \t%.4f\n", timeManager.getElapsedTime(Total_T));
+        fprintf(f_CGP_time_parallel, "\n");
+    #else
+        fprintf(f_CGP_time_sequential, "Total time: \t%.4f\n", timeManager.getElapsedTime(Total_T));
+        fprintf(f_CGP_time_sequential, "\n");
+    #endif
 
     std::cout << "Total time  = " << timeManager.getElapsedTime(Total_T) << std::endl;
 

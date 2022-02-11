@@ -1,0 +1,2 @@
+Node26 2 7 11
+Output 26

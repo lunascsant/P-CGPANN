@@ -1,0 +1,2 @@
+Node27 4 5 12
+Output 27

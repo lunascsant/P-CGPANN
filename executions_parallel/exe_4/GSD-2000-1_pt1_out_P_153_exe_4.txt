@@ -1,0 +1,4 @@
+Node30 8 15 15
+Node32 30 4 12
+Node43 32 15 10
+Output 43

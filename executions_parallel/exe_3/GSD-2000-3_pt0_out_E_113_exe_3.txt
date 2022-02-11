@@ -1,0 +1,2 @@
+Node22 7 1 10
+Output 22

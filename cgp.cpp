@@ -110,7 +110,7 @@ void evaluateCircuit(Chromosome* c, Dataset* data) {
         //setFitness(c, p, out[i], &fitness);
     }
 
-    std::cout << "FITNESS INDIVIDUO " << c->fitness << std::endl;
+    //std::cout << "FITNESS INDIVIDUO " << c->fitness << std::endl;
     // c->fitness = c->fitness / (float) data->M;
 }
 
@@ -747,28 +747,39 @@ Chromosome *mutateTopologyPoint(Chromosome *c, Parameters *p, int *seed) {
 
 
 Chromosome
-CGP(Dataset *training, Dataset *validation, Parameters *params, int *seeds, double *timeIter, double *timeKernel) {
+CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double *timeKernel, std::ofstream& factivel_file) {
     GPTime timeManager(4);
     Chromosome *current_pop;
     current_pop = new Chromosome[NUM_INDIV];
 
+    int factivel = 0;
+
     Chromosome best;
     Chromosome best_train;
-    Chromosome best_valid;
+    //Chromosome best_valid;
     Chromosome mutated_best;
 
     initializePopulation(current_pop, params, &seeds[0]);
 
     int bestTrain = evaluatePopulation(current_pop, training, 0);
-    int bestValid = evaluatePopulation(current_pop, validation, 1);
+    //int bestValid = evaluatePopulation(current_pop, validation, 1);
 
 
     best_train = current_pop[bestTrain];
-    best_valid = current_pop[bestValid];
+    //best_valid = current_pop[bestValid];
     best = best_train;
 
+    if(best.fitness == training->M) {
+        std::cout << "CGP achou o indivíduo factivel" << std::endl;
+        printChromosome(&best, params);
+        printFile(&best, params, factivel_file);
+        factivel = 1;
+    }
+
+    std::cout << "Melhor da populacao: " << best.fitness << std::endl;
+
     int iterations = 0;
-    while(stopCriteria(iterations)) {
+    while(stopCriteria(iterations) && (factivel != 1)) {
         timeManager.getStartTime(Iteracao_T);
         //std::cout << "Active nodes: " << best.numActiveNodes << ", FitnessTrain: " << best.fitness << ", FitnessValidation: " << best.fitnessValidation  << std::endl;
 
@@ -777,13 +788,14 @@ CGP(Dataset *training, Dataset *validation, Parameters *params, int *seeds, doub
         for (int i = 0; i < NUM_INDIV; i++){
             mutated_best = best;
             //mutateTopologyProbabilistic(&mutated_best, params, &seeds[i], 0);
-            mutateTopologyProbabilistic2(&mutated_best, params, seeds, 0, i);
+            //mutateTopologyProbabilistic2(&mutated_best, params, seeds, 0, i)
+            mutateSAM(&mutated_best, params, seeds);
 
             //evaluateCircuit(&mutated_best, training);
             //evaluateCircuitValidation(&mutated_best, validation);
             timeManager.getStartTime(Avaliacao_T);
-            evaluateCircuitLinear(&mutated_best, training);
-            evaluateCircuitValidationLinear(&mutated_best, validation);
+            evaluateCircuit(&mutated_best, training);
+            //evaluateCircuitValidationLinear(&mutated_best, validation);
             timeManager.getEndTime(Avaliacao_T);
 
             (*timeKernel) += timeManager.getElapsedTime(Avaliacao_T);;
@@ -794,16 +806,26 @@ CGP(Dataset *training, Dataset *validation, Parameters *params, int *seeds, doub
                 best_train = mutated_best;
             }
 
-            if(mutated_best.fitnessValidation >= best_valid.fitnessValidation){
+            /*if(mutated_best.fitnessValidation >= best_valid.fitnessValidation){
                 best_valid = mutated_best;
             }
-
+*/
             //std::cout << mutated_best.fitness << " ";
         }
         if(iterations%1000 == 0)
             std::cout << std::endl;
         best = best_train;
         //std::cout << "Best fitness  = " << best.fitness << std::endl;
+
+        if(best.fitness == training->M) {
+            std::cout << "CGP achou o individuo factivel" << std::endl;
+            std::cout << "Geracao: " << iterations << std::endl;
+            printChromosome(&best, params);
+            printFile(&best, params, factivel_file);
+            factivel = 1;
+            break;
+        }
+
         timeManager.getEndTime(Iteracao_T);
 
         timeManager.getElapsedTime(Iteracao_T);
@@ -818,7 +840,7 @@ CGP(Dataset *training, Dataset *validation, Parameters *params, int *seeds, doub
     (*timeIter) = timeManager.getTotalTime(Iteracao_T);
 
 
-    return best_valid;
+    return best;
 }
 
 Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel, std::ofstream& factivel_file){

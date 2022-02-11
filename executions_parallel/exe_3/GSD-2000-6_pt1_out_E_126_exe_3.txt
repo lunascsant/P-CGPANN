@@ -1,0 +1,3 @@
+Node34 8 4 10
+Node48 34 13 11
+Output 48

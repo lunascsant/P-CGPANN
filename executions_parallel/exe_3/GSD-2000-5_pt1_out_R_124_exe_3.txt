@@ -1,0 +1,6 @@
+Node26 17 2 17
+Node31 0 5 12
+Node34 26 16 12
+Node42 31 17 14
+Node43 34 42 15
+Output 43

@@ -1,0 +1,2 @@
+Node23 1 4 12
+Output 23

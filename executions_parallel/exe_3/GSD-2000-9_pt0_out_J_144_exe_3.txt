@@ -1,0 +1,2 @@
+Node29 8 6 12
+Output 29

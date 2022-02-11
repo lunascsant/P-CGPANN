@@ -1,0 +1,3 @@
+Node45 1 10 15
+Node87 3 45 16
+Output 87

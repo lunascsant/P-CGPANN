@@ -1,0 +1,3 @@
+Node71 3 8 14
+Node77 71 17 10
+Output 77

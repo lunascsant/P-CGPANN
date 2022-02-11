@@ -1,0 +1,2 @@
+Node42 8 8 10
+Output 42

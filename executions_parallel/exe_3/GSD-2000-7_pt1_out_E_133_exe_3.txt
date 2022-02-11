@@ -1,0 +1,2 @@
+Node20 6 9 10
+Output 20

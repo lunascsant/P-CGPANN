@@ -1,0 +1,2 @@
+Node30 8 0 17
+Output 30

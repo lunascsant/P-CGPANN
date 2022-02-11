@@ -1,0 +1,6 @@
+Fitness best: 	14.0000
+timeIter: 	39.1237
+timeIterTotal: 	39.1347
+timeKernel: 	2625466069.9472
+Total time: 	41.5571
+

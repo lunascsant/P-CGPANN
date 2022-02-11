@@ -1,0 +1,24 @@
+#execution
+echo "Starting first shell script...";
+echo "Dropout 0%";
+bash execution_1.sh;
+bash execution_2.sh;
+bash execution_3.sh;
+bash execution_4.sh;
+bash execution_5.sh;
+bash execution_6.sh;
+bash execution_7.sh;
+bash execution_8.sh;
+bash execution_9.sh;
+bash execution_10.sh;
+bash execution_11.sh;
+bash execution_12.sh;
+bash execution_13.sh;
+bash execution_14.sh;
+bash execution_15.sh;
+bash execution_16.sh;
+bash execution_17.sh;
+bash execution_18.sh;
+bash execution_19.sh;
+bash execution_20.sh;
+echo "Ending first shell script...";

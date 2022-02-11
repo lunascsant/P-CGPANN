@@ -1,0 +1,6 @@
+Node28 9 2 12
+Node30 6 28 17
+Node42 1 30 12
+Node48 42 11 12
+Node98 48 0 15
+Output 98
