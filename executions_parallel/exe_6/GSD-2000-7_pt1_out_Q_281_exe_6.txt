@@ -1,0 +1,4 @@
+Node19 4 17 11
+Node26 19 4 17
+Node40 18 26 14
+Output 40

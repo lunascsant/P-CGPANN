@@ -14,7 +14,11 @@ int main(int argc, char** argv) {
     #if PARALLEL
         std::ofstream factivelFile;
         std::string gene = argv[1];
-        gene = gene.substr(0, 20);
+        if (gene[10] == '0') {
+            gene = gene.substr(0, 21);
+        } else {
+            gene = gene.substr(0, 20);
+        }
         std::string argSeed = argv[2];
         std::string argExe = argv[3];
         std::string nomeArquivo = gene + "_" + argSeed + "_" + argExe;
@@ -32,9 +36,14 @@ int main(int argc, char** argv) {
         std::string caminhoArquivoTime = "./time_counting/" + argExe + "/" + nomeArquivo + ".txt";
         FILE *f_CGP_time_parallel = fopen(caminhoArquivoTime.c_str(), "w");
     #else
+
         std::ofstream factivelFile;
         std::string gene = argv[1];
-        gene = gene.substr(0, 20);
+        if (gene[10] == '0') {
+            gene = gene.substr(0, 21);
+        } else {
+            gene = gene.substr(0, 20);
+        }
         std::string argSeed = argv[2];
         std::string argExe = argv[3];
         std::string nomeArquivo = gene + "_" + argSeed + "_" + argExe;
@@ -234,7 +243,7 @@ int main(int argc, char** argv) {
             #else
                 Chromosome executionBest = CGP(trainingData, params, seeds, &timeIter, &timeKernel, factivelFile);
                 //std::cout << "Test execution: " << std::endl;
-                std::cout << "Melhor na main: " << executionBest.fitness << std::endl;
+                //std::cout << "Melhor na main: " << executionBest.fitness << std::endl;
 
                 /*evaluateCircuit(&executionBest, testData);
                 printf("Test execution: %f ", executionBest.fitness);*/

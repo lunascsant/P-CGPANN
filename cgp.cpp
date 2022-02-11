@@ -770,13 +770,13 @@ CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double 
     best = best_train;
 
     if(best.fitness == training->M) {
-        std::cout << "CGP achou o indivíduo factivel" << std::endl;
-        printChromosome(&best, params);
+        //std::cout << "CGP achou o indivíduo factivel" << std::endl;
+        //printChromosome(&best, params);
         printFile(&best, params, factivel_file);
         factivel = 1;
     }
 
-    std::cout << "Melhor da populacao: " << best.fitness << std::endl;
+    //std::cout << "Melhor da populacao: " << best.fitness << std::endl;
 
     int iterations = 0;
     while(stopCriteria(iterations) && (factivel != 1)) {
@@ -812,14 +812,14 @@ CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double 
 */
             //std::cout << mutated_best.fitness << " ";
         }
-        if(iterations%1000 == 0)
-            std::cout << std::endl;
+        /*if(iterations%1000 == 0)
+            std::cout << std::endl;*/
         best = best_train;
         //std::cout << "Best fitness  = " << best.fitness << std::endl;
 
         if(best.fitness == training->M) {
-            std::cout << "CGP achou o individuo factivel" << std::endl;
-            std::cout << "Geracao: " << iterations << std::endl;
+            //std::cout << "CGP achou o individuo factivel" << std::endl;
+            //std::cout << "Geracao: " << iterations << std::endl;
             printChromosome(&best, params);
             printFile(&best, params, factivel_file);
             factivel = 1;
@@ -829,11 +829,11 @@ CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double 
         timeManager.getEndTime(Iteracao_T);
 
         timeManager.getElapsedTime(Iteracao_T);
-        if(iterations%1000 == 0){
+        /*if(iterations%1000 == 0){
             printf("Generation %d:\n", iterations);
             printf("Time: %f\n", timeManager.getTotalTime(Iteracao_T));
 
-        }
+        }*/
 
         iterations++;
     }
@@ -868,13 +868,13 @@ Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seed
     best = best_train;
 
     if(best.fitness == training->M) {
-        std::cout << "CGP achou o indivíduo factível" << std::endl;
-        printChromosome(&best, params);
+        //std::cout << "CGP achou o indivíduo factível" << std::endl;
+        //printChromosome(&best, params);
         printFile(&best, params, factivel_file);
         factivel = 1;
     }
 
-    std::cout << "Melhor da populacao: " << best.fitness << std::endl;
+    //std::cout << "Melhor da populacao: " << best.fitness << std::endl;
     //std::cout << "morreu aqui? 1 " << std::endl;
     ocl->writeReadOnlyBufers(params, seeds);
 
@@ -999,8 +999,8 @@ Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seed
             }*/
         }
 
-        if(iterations%1000 == 0)
-            std::cout << std::endl;
+        /*if(iterations%1000 == 0)
+            std::cout << std::endl;*/
 
         best = best_train;
 
@@ -1008,9 +1008,9 @@ Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seed
         std::cout << "FITNESS best" << best.fitness << std::endl;*/
 
         if(best.fitness == training->M) {
-            std::cout << "CGP achou o individuo factivel depois do kernel" << std::endl;
-            std::cout << "Geracao: " << iterations << std::endl;
-            printChromosome(&best, params);
+            //std::cout << "CGP achou o individuo factivel depois do kernel" << std::endl;
+            //std::cout << "Geracao: " << iterations << std::endl;
+            //printChromosome(&best, params);
             printFile(&best, params, factivel_file);
             factivel = 1;
             break;
@@ -1019,12 +1019,12 @@ Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seed
         timeManager.getEndTime(Iteracao_T);
         timeManager.getElapsedTime(Iteracao_T);
 
-        if(iterations%1000 == 0){
+        /*if(iterations%1000 == 0){
             printf("Generation %d:\n", iterations);
             printf("Best fitness: %f\n", best.fitness);
             printf("Time: %f\n", timeManager.getTotalTime(Iteracao_T));
             printf("Kernel Time: %f\n", kernelTime);
-        }
+        }*/
         iterations++;
 
     }

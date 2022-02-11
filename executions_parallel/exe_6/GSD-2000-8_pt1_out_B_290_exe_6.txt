@@ -1,0 +1,4 @@
+Node19 13 4 10
+Node23 10 6 16
+Node64 23 19 16
+Output 64
