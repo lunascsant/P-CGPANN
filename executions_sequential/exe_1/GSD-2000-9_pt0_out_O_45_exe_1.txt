@@ -1,3 +1,0 @@
-Node25 11 9 10
-Node30 25 9 11
-Output 30

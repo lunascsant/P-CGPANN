@@ -1,3 +1,0 @@
-Node53 3 5 15
-Node63 53 12 17
-Output 63
