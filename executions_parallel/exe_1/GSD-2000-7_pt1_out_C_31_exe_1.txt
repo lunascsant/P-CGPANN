@@ -1,0 +1,5 @@
+Node22 12 3 11
+Node24 7 22 11
+Node30 24 15 10
+Node72 30 22 12
+Output 72

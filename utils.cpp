@@ -14,24 +14,23 @@ int rand2(int *seed){
 
 
 unsigned int randomInput(Parameters *p, unsigned int index, int *seed) {
-    return (rand() % (p->N + index));
+    return (rand2(seed) % (p->N + index));
 }
 
 unsigned int randomOutputIndex(int* seed){
-    return (rand() % MAX_NODES);
+    return (rand2(seed) % MAX_NODES);
 }
 
 unsigned int randomFunction(Parameters *p, int *seed) {
-    return (rand() % (p->NUM_FUNCTIONS));
+    return (rand2(seed) % (p->NUM_FUNCTIONS));
 }
 
 float randomConnectionWeight(Parameters *p, int *seed) {
-    return 1;
-    //return (((float) rand2(seed) / (float) (2147483647) ) * 2 * p->weightRange) - p->weightRange;
+    return (((float) rand2(seed) / (float) (2147483647) ) * 2 * p->weightRange) - p->weightRange;
 }
 
 int randomInterval(int inf_bound, int sup_bound, int *seed) {
-    return rand() % (sup_bound - inf_bound + 1) + inf_bound;
+    return rand2(seed) % (sup_bound - inf_bound + 1) + inf_bound;
 }
 
 float randomProb(int* seed){
@@ -222,7 +221,7 @@ void readDataset(Parameters* params, Dataset* fulldata, char* filename){
 
 
 
-    params->weightRange = 1;
+    params->weightRange = 5;
 }
 
 void printDataset(Dataset* data){

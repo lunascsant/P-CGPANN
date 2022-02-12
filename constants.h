@@ -5,6 +5,8 @@
 #ifndef PCGP_CONSTANTS_H
 #define PCGP_CONSTANTS_H
 
+#define SEED 10
+
 /** Available node functions */
 #define AND 10
 #define OR 11
@@ -65,7 +67,7 @@
 #define NUM_EVALUATIONS 2.40e+007
 
 
-#define PARALLEL    1
+#define PARALLEL    0
 
 #define DEFAULT      1
 #define COMPACT      0

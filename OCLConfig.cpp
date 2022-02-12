@@ -291,7 +291,7 @@ std::string OCLConfig::setProgramSource(Parameters* p, Dataset* fullData){
     outputString += "};";
 
     std::string program_src =
-            //"#define SEED "  + ToString( SEED ) + "\n" +
+            "#define SEED "  + ToString( SEED ) + "\n" +
             "#define N   " + ToString( p->N ) + "\n" +
             "#define O   " + ToString( p->O ) + "\n" +
             "#define M   " + ToString( numPoints ) + "\n" +
