@@ -33,11 +33,11 @@ Chromosome *mutateSAM(Chromosome *c, Parameters *p, int *seed);
 Chromosome *mutateTopologyPoint(Chromosome *c, Parameters *p, int *seed);
 
 
-Chromosome
-CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double *timeKernel, std::ofstream& factivel_file);
+void
+CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double *timeKernel, std::string caminhoArquivo);
 
 //Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel);
-Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel, std::ofstream& factivel_file);
+void PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel, std::string caminhoArquivo);
 
 void printChromosome(Chromosome *c, Parameters *p);
 void printFile(Chromosome *c, Parameters *p, std::ofstream& factivel_file);
