@@ -142,16 +142,16 @@ public:
 
 
 
-
-
     void allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int sizeTest);
     void setNDRages();
     void setCompileFlags();
     std::string setProgramSource(Parameters* p, Dataset* fullData);
     void buildProgram(Parameters* p, Dataset* fullData, std::string sourceFileStr);
     void buildKernels();
-    void writeReadOnlyBufers(Parameters* p, int* seeds);
+    //void writeReadOnlyBufers(Parameters* p, int* seeds);
+    void writeReadOnlyBufers(Parameters* p);
     void transposeDatasets(Dataset* train, Dataset* valid, Dataset* test);
+    void transposeDatasets(Dataset* train);
 
     void writeBestBuffer(Chromosome* best);
     void writePopulationBuffer(Chromosome* population);

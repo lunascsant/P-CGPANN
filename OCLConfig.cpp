@@ -301,6 +301,13 @@ std::string OCLConfig::setProgramSource(Parameters* p, Dataset* fullData){
             "#define WEIGTH_RANGE    " + ToString(p->weightRange) + "\n" +
             "#define NUM_FUNCTIONS    " + ToString(p->NUM_FUNCTIONS) + "\n" +
             "#define SIG    " + ToString(SIG) + "\n" +
+            "#define NAND    " + ToString(NAND) + "\n" +
+            "#define AND    " + ToString(AND) + "\n" +
+            "#define OR    " + ToString(OR) + "\n" +
+            "#define NOR    " + ToString(NOR) + "\n" +
+            "#define NOT    " + ToString(NOT) + "\n" +
+            "#define XOR    " + ToString(XOR) + "\n" +
+            "#define XNOR    " + ToString(XNOR) + "\n" +
             "#define MAX_NODES     " + ToString( MAX_NODES ) + "\n" +
             "#define MAX_OUTPUTS  " + ToString( MAX_OUTPUTS ) + "\n" +
             "#define NUM_INDIV   " + ToString( NUM_INDIV ) + "\n" +
@@ -568,10 +575,18 @@ void OCLConfig::transposeDatasets(Dataset* train, Dataset* valid, Dataset* test)
     //transposeDataOut(train, &transposeDatasetOutput);
 }
 
-void OCLConfig::writeReadOnlyBufers(Parameters* p, int* seeds){
-    int result;
-    result = cmdQueue.enqueueWriteBuffer(bufferSeeds, CL_FALSE, 0, NUM_INDIV * maxLocalSize  * sizeof(int), seeds);
-    checkError(result);
+void OCLConfig::transposeDatasets(Dataset* train){
+    std::cout << "Transpondo dados..." << std::endl;
+    transposeData(train, &transposeDatasetTrain, &transposeOutputsTrain);
+    //transposeDataOut(train, &transposeDatasetOutput);
+}
+
+
+//void OCLConfig::writeReadOnlyBufers(Parameters* p, int* seeds){
+void OCLConfig::writeReadOnlyBufers(Parameters* p){
+    //int result;
+    //result = cmdQueue.enqueueWriteBuffer(bufferSeeds, CL_FALSE, 0, NUM_INDIV * maxLocalSize  * sizeof(int), seeds);
+    //checkError(result);
 
     //cmdQueue.enqueueWriteBuffer(bufferDataOut, CL_FALSE, 0, numPoints * (p->N + p->O) * sizeof(float), transposeDatasetOutput);
 

@@ -143,6 +143,19 @@ float executeFunction(__global Chromosome* c, int node, ExStack* exStack){
             }
         break;
         #endif
+
+        #ifdef NOT
+            case NOT:
+
+                for(i = 0; i < 1; i++){
+                    if(popExLinear(exStack) == 1){
+                        result = 0;
+                    } else {
+                      result = 1;
+                    }
+                }
+            break;
+        #endif
         
         #ifdef NOR
 
@@ -389,6 +402,19 @@ float executeFunctionLinear(__global Chromosome* c, int node, ExStackLinear* exS
                 }
             }
         break;
+        #endif
+
+        #ifdef NOT
+            case NOT:
+
+                for(i = 0; i < 1; i++){
+                    if(popExLinear(exStack) == 1){
+                        result = 0;
+                    } else {
+                      result = 1;
+                    }
+                }
+            break;
         #endif
         
         #ifdef XOR
@@ -1769,7 +1795,7 @@ void evaluateCircuit(__global Chromosome* c,
             for( i = 0; i < MAX_OUTPUTS; i++) {
                 //unsigned int nodeIndex = c->output[i];
     
-                if(alreadyEvaluated[c->output[i]] > maxPredicted) {
+                /*if(alreadyEvaluated[c->output[i]] > maxPredicted) {
                     maxPredicted = alreadyEvaluated[c->output[i]];
                     predictedClass = i;
                 } else {
@@ -1777,11 +1803,15 @@ void evaluateCircuit(__global Chromosome* c,
                     predictedClass = predictedClass;
                 }
 
-                correctClass = (out[k*LOCAL_SIZE + local_id + (M*i)] == 1.0)? i : correctClass; 
+                correctClass = (out[k*LOCAL_SIZE + local_id + (M*i)] == 1.0)? i : correctClass;*/
+
+                if(out[k*LOCAL_SIZE + local_id + (M*i)] == alreadyEvaluated[c->output[i]]) {
+                  erro += 1;
+                }
             }
 
-            erro += (predictedClass == correctClass)? 1.0 : 0.0;
-
+            /* erro += (predictedClass == correctClass)? 1.0 : 0.0; */
+            /*erro = 1;*/
             
         
         #ifdef NUM_POINTS_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
@@ -1810,7 +1840,8 @@ void evaluateCircuit(__global Chromosome* c,
     barrier(CLK_LOCAL_MEM_FENCE);    
 
     if(local_id == 0){
-        fitness[group_id] = error[0] / M;
+        /* fitness[group_id] = error[0] / M; */
+        fitness[group_id] = error[0];
     }
 }
 
@@ -2048,12 +2079,12 @@ void evaluateCircuitTest(__global Chromosome* c,
 }
 
 void evaluateCircuitTrain(__global Chromosome* c,
-                                    __global float* data, 
-                                    __global float* out, 
+                                    __global float* data,
+                                    __global float* out,
                                     __local float* error,
                                     __global float* fitness) {
-    
-    
+
+
 
     int i, k, j = 0;
     int currentActive, activeInputs;
@@ -2078,7 +2109,7 @@ void evaluateCircuitTrain(__global Chromosome* c,
 
     #else
         for(k = 0; k < ceil( M_TRAIN/ (float)LOCAL_SIZE_TRAIN ) ; k++){
-            
+
             if( k * LOCAL_SIZE_TRAIN + local_id < M_TRAIN){
     #endif
         //printf("c");
@@ -2099,7 +2130,7 @@ void evaluateCircuitTrain(__global Chromosome* c,
                     if (c->nodes[currentActive].inputs[j] >= N) { // se é um outro nó, empilha nó ou o resultado
 
                         pushExLinear(&exStack, alreadyEvaluated[c->nodes[currentActive].inputs[j] - N]);
-                        
+
                     } else {
                         pushExLinear(&exStack, data[k * LOCAL_SIZE_TRAIN + local_id + ( M_TRAIN * c->nodes[currentActive].inputs[j])]);
                     }
@@ -2111,20 +2142,24 @@ void evaluateCircuitTrain(__global Chromosome* c,
 
             for( i = 0; i < MAX_OUTPUTS; i++) {
                 unsigned int nodeIndex = c->output[i];
-    
-                if(alreadyEvaluated[nodeIndex] > maxPredicted) {
+
+                /* if(alreadyEvaluated[nodeIndex] > maxPredicted) {
                     maxPredicted = alreadyEvaluated[nodeIndex];
                     predictedClass = i;
                 } else {
                     maxPredicted = maxPredicted;
                     predictedClass = predictedClass;
-                }
+                } */
 
-                correctClass = (out[k*LOCAL_SIZE_TRAIN + local_id + (M_TRAIN*i)] == 1.0)? i : correctClass; 
+                /* correctClass = (out[k*LOCAL_SIZE_TRAIN + local_id + (M_TRAIN*i)] == 1.0)? i : correctClass; */
+
+                if(out[k*LOCAL_SIZE_TRAIN + local_id + (M_TRAIN*i)] == alreadyEvaluated[c->output[i]]) {
+                   erro += 1.0;
+                }
             }
 
-            erro += (predictedClass == correctClass)? 1.0 : 0.0;
-        
+            /*erro += (predictedClass == correctClass)? 1.0 : 0.0;*/
+
         #ifdef NUM_POINTS_TRAIN_IS_NOT_DIVISIBLE_BY_LOCAL_SIZE
         }
     #endif
@@ -2142,14 +2177,15 @@ void evaluateCircuitTrain(__global Chromosome* c,
         if( local_id < i )
     #else
         /* LOCAL_SIZE is not power of 2, so we need to perform an additional
-        * check to ensure that no access beyond PE's range will occur. */ 
+        * check to ensure that no access beyond PE's range will occur. */
         if( (local_id < i) && (local_id + i < LOCAL_SIZE_TRAIN) )
-    #endif 
+    #endif
            error[local_id] += error[local_id + i];
     }
-        
+
     if(local_id == 0){
-        fitness[group_id] = error[0] / M_TRAIN;
+        /* fitness[group_id] = error[0] / M_TRAIN; */
+        fitness[group_id] = error[0];
     }
 }
 
@@ -6659,9 +6695,10 @@ __kernel void evaluateTrain(__global float* dataset,
                             __global float* fitnessValidation){
 
     int group_id = get_group_id(0);
-    evaluateCircuitTrain(&pop[group_id], dataset, outputs, error, fitness);
-
+    evaluateCircuit(&pop[group_id], dataset, outputs, error, fitness);
 }
+
+
 
 __kernel void evaluateValidation(__global float* dataset,
                             __global float* outputs,

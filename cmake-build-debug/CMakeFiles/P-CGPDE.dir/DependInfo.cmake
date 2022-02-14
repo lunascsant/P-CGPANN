@@ -1,21 +1,19 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/bruno/CLionProjects/P-CGPDE/GPTime.cpp" "C:/Users/bruno/CLionProjects/P-CGPDE/cmake-build-debug/CMakeFiles/P-CGPDE.dir/GPTime.cpp.obj"
-  "C:/Users/bruno/CLionProjects/P-CGPDE/OCLConfig.cpp" "C:/Users/bruno/CLionProjects/P-CGPDE/cmake-build-debug/CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.obj"
-  "C:/Users/bruno/CLionProjects/P-CGPDE/cgp.cpp" "C:/Users/bruno/CLionProjects/P-CGPDE/cmake-build-debug/CMakeFiles/P-CGPDE.dir/cgp.cpp.obj"
-  "C:/Users/bruno/CLionProjects/P-CGPDE/main.cpp" "C:/Users/bruno/CLionProjects/P-CGPDE/cmake-build-debug/CMakeFiles/P-CGPDE.dir/main.cpp.obj"
-  "C:/Users/bruno/CLionProjects/P-CGPDE/stack.cpp" "C:/Users/bruno/CLionProjects/P-CGPDE/cmake-build-debug/CMakeFiles/P-CGPDE.dir/stack.cpp.obj"
-  "C:/Users/bruno/CLionProjects/P-CGPDE/utils.cpp" "C:/Users/bruno/CLionProjects/P-CGPDE/cmake-build-debug/CMakeFiles/P-CGPDE.dir/utils.cpp.obj"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../amd/include"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "E:/PCGPANN2022/P-CGPANN-master/GPTime.cpp" "CMakeFiles/P-CGPDE.dir/GPTime.cpp.obj" "gcc" "CMakeFiles/P-CGPDE.dir/GPTime.cpp.obj.d"
+  "E:/PCGPANN2022/P-CGPANN-master/OCLConfig.cpp" "CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.obj" "gcc" "CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.obj.d"
+  "E:/PCGPANN2022/P-CGPANN-master/cgp.cpp" "CMakeFiles/P-CGPDE.dir/cgp.cpp.obj" "gcc" "CMakeFiles/P-CGPDE.dir/cgp.cpp.obj.d"
+  "E:/PCGPANN2022/P-CGPANN-master/main.cpp" "CMakeFiles/P-CGPDE.dir/main.cpp.obj" "gcc" "CMakeFiles/P-CGPDE.dir/main.cpp.obj.d"
+  "E:/PCGPANN2022/P-CGPANN-master/stack.cpp" "CMakeFiles/P-CGPDE.dir/stack.cpp.obj" "gcc" "CMakeFiles/P-CGPDE.dir/stack.cpp.obj.d"
+  "E:/PCGPANN2022/P-CGPANN-master/utils.cpp" "CMakeFiles/P-CGPDE.dir/utils.cpp.obj" "gcc" "CMakeFiles/P-CGPDE.dir/utils.cpp.obj.d"
   )
 
 # Targets to which this target links.

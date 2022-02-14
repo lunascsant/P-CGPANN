@@ -1,0 +1,3 @@
+Node3 1 2 10
+Node10 0 3 10
+Output 10
