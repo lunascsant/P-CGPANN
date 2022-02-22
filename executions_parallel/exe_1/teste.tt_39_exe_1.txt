@@ -1,6 +1,0 @@
-Node3 0 2 10
-Node4 2 2 14
-Node5 0 1 10
-Node6 4 5 11
-Node10 3 6 10
-Output 10

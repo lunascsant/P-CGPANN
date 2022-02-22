@@ -44,7 +44,7 @@
 #define CONST_PI 3.14159265359
 
 /** Graph parameters */
-#define MAX_NODES 10
+#define MAX_NODES 100
 #define MAX_OUTPUTS 1
 #define MAX_ARITY 2
 
@@ -63,7 +63,7 @@
 #endif // PROB_MUT
 
 
-#define NUM_GENERATIONS 100
+#define NUM_GENERATIONS 50000
 #define NUM_EVALUATIONS 2.40e+007
 
 
@@ -164,7 +164,7 @@ typedef struct
 
     unsigned int NUM_FUNCTIONS;
     unsigned int* functionSet;
-    //unsigned int* maxFunctionInputs;
+   // unsigned int* maxFunctionInputs;
     //unsigned int* inputVariablesSet;
 
     float weightRange;

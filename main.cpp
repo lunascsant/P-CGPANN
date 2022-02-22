@@ -7,7 +7,6 @@
 #include "OCLConfig.h"
 
 
-
 int main(int argc, char** argv) {
     char* datasetFile = argv[1];
 
@@ -23,7 +22,7 @@ int main(int argc, char** argv) {
         std::string argExe = argv[3];
         std::string nomeArquivo = gene + "_" + argSeed + "_" + argExe;
         std::string caminhoArquivo = "./executions_parallel/" + argExe + "/" + nomeArquivo + ".txt";
-        factivelFile.open(caminhoArquivo, std::ios::out);
+        factivelFile.open(caminhoArquivo, std::ios::app);
         if (!factivelFile) {
             std::cout << "Error file" << std::endl;
             exit(1);
@@ -34,7 +33,7 @@ int main(int argc, char** argv) {
         std::string resultFileTimeIter;
         std::string resultFileTimeKernel;*/
         std::string caminhoArquivoTime = "./time_counting/" + argExe + "/" + nomeArquivo + ".txt";
-        FILE *f_CGP_time_parallel = fopen(caminhoArquivoTime.c_str(), "w");
+        FILE *f_CGP_time_parallel = fopen(caminhoArquivoTime.c_str(), "a");
     #else
 
         std::ofstream factivelFile;
@@ -48,7 +47,7 @@ int main(int argc, char** argv) {
         std::string argExe = argv[3];
         std::string nomeArquivo = gene + "_" + argSeed + "_" + argExe;
         std::string caminhoArquivo = "./executions_sequential/" + argExe + "/" + nomeArquivo + ".txt";
-        factivelFile.open(caminhoArquivo, std::ios::out);
+        factivelFile.open(caminhoArquivo, std::ios::app);
         if (!factivelFile) {
             std::cout << "Error file" << std::endl;
             exit(1);
@@ -58,8 +57,8 @@ int main(int argc, char** argv) {
         std::string resultFileTime;
         std::string resultFileTimeIter;
         std::string resultFileTimeKernel;*/
-        std::string caminhoArquivoTime = "./time_counting_sequential/" + nomeArquivo + ".txt";
-        FILE *f_CGP_time_sequential = fopen(caminhoArquivoTime.c_str(), "w");
+        std::string caminhoArquivoTime = "./time_counting_sequential/" + argExe + "/" + nomeArquivo + ".txt";
+        FILE *f_CGP_time_sequential = fopen(caminhoArquivoTime.c_str(), "a");
     #endif
 
     #if DEFAULT
@@ -186,7 +185,7 @@ int main(int argc, char** argv) {
 
     int* indexesDataInFolds = new int[fullData.M - (fullData.M % KFOLDS)];// save the indexes given the folds generation
 
-    for(i = 0; i < 1; i++) {
+    for(i = 0; i < 5; i++) {
         /*for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
             seeds[aux] = aux + 55;
         }*/
@@ -268,12 +267,12 @@ int main(int argc, char** argv) {
                 fprintf(f_CGP_time_parallel, "Fitness best: \t%.4f\n", executionBest.fitness);
                 fprintf(f_CGP_time_parallel, "timeIter: \t%.4f\n", timeIter);
                 fprintf(f_CGP_time_parallel, "timeIterTotal: \t%.4f\n", timeIterTotal);
-                fprintf(f_CGP_time_parallel, "timeKernel: \t%.4f\n", timeKernel);
+                fprintf(f_CGP_time_parallel, "timeKernel: \t%.4f\n\n", timeKernel);
             #else
                 fprintf(f_CGP_time_sequential, "Fitness best: \t%.4f\n", executionBest.fitness);
                 fprintf(f_CGP_time_sequential, "timeIter: \t%.4f\n", timeIter);
                 fprintf(f_CGP_time_sequential, "timeIterTotal: \t%.4f\n", timeIterTotal);
-                fprintf(f_CGP_time_sequential, "timeKernel: \t%.4f\n", timeKernel);
+                fprintf(f_CGP_time_sequential, "timeKernel: \t%.4f\n\n", timeKernel);
             #endif
 
 
@@ -288,9 +287,11 @@ int main(int argc, char** argv) {
     //printCircuit(&best, params);
     //std::cout << "Best fitness  = " << executionBest.fitness << std::endl;
     #if PARALLEL
+        fprintf(f_CGP_time_parallel, "\n");
         fprintf(f_CGP_time_parallel, "Total time: \t%.4f\n", timeManager.getElapsedTime(Total_T));
         fprintf(f_CGP_time_parallel, "\n");
     #else
+        fprintf(f_CGP_time_sequential, "\n");
         fprintf(f_CGP_time_sequential, "Total time: \t%.4f\n", timeManager.getElapsedTime(Total_T));
         fprintf(f_CGP_time_sequential, "\n");
     #endif

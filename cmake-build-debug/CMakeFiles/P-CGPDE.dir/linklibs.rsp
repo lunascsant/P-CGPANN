@@ -1,1 +1,1 @@
-  -LE:/PCGPANN2022/P-CGPANN-master/amd/lib/x86  -lOpenCL -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+  -LC:/Users/lucia/Documents/GitHub/P-CGPANN/amd/lib/x86  -lOpenCL -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

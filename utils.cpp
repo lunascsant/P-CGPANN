@@ -3,6 +3,7 @@
 //
 
 #include "utils.h"
+#include <iostream>
 
 int rand2(int *seed){
     int s  = *seed;
@@ -64,6 +65,7 @@ unsigned int getFunctionInputs(unsigned int function){
         case PI:
         case ONE:
         case ZERO:
+
             return 0;
         case ABS:
         case SQRT:

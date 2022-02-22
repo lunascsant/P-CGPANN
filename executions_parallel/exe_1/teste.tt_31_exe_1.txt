@@ -1,8 +1,0 @@
-Node3 0 2 17
-Node5 1 0 11
-Node7 2 5 12
-Node8 1 0 10
-Node10 3 8 10
-Node11 7 5 15
-Node12 11 10 10
-Output 12
