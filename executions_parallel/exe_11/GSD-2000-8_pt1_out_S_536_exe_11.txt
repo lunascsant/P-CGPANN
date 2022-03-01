@@ -1,0 +1,10 @@
+Node19 6 18 15
+Node21 2 14 16
+Node23 17 7 14
+Node25 23 21 16
+Node28 17 21 12
+Node30 19 28 14
+Node43 30 23 15
+Node45 43 25 17
+Output 45
+

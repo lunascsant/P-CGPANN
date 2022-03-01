@@ -1,0 +1,5 @@
+Node21 4 2 12
+Node36 17 21 10
+Node64 36 8 10
+Output 64
+

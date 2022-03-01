@@ -1,0 +1,4 @@
+Node20 3 7 10
+Node65 20 4 11
+Output 65
+

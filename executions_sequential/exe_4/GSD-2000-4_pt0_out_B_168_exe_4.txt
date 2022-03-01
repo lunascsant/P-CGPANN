@@ -1,0 +1,6 @@
+Node53 5 3 16
+Node89 10 18 14
+Node91 16 53 16
+Node97 91 89 16
+Output 97
+

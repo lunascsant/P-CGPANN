@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
         std::string argExe = argv[3];
         std::string nomeArquivo = gene + "_" + argSeed + "_" + argExe;
         std::string caminhoArquivo = "./executions_parallel/" + argExe + "/" + nomeArquivo + ".txt";
-        factivelFile.open(caminhoArquivo, std::ios::app);
+        factivelFile.open(caminhoArquivo, std::ios::out);
         if (!factivelFile) {
             std::cout << "Error file" << std::endl;
             exit(1);
@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
         std::string resultFileTimeIter;
         std::string resultFileTimeKernel;*/
         std::string caminhoArquivoTime = "./time_counting/" + argExe + "/" + nomeArquivo + ".txt";
-        FILE *f_CGP_time_parallel = fopen(caminhoArquivoTime.c_str(), "a");
+        FILE *f_CGP_time_parallel = fopen(caminhoArquivoTime.c_str(), "w");
     #else
 
         std::ofstream factivelFile;
@@ -47,7 +47,7 @@ int main(int argc, char** argv) {
         std::string argExe = argv[3];
         std::string nomeArquivo = gene + "_" + argSeed + "_" + argExe;
         std::string caminhoArquivo = "./executions_sequential/" + argExe + "/" + nomeArquivo + ".txt";
-        factivelFile.open(caminhoArquivo, std::ios::app);
+        factivelFile.open(caminhoArquivo, std::ios::out);
         if (!factivelFile) {
             std::cout << "Error file" << std::endl;
             exit(1);
@@ -58,7 +58,7 @@ int main(int argc, char** argv) {
         std::string resultFileTimeIter;
         std::string resultFileTimeKernel;*/
         std::string caminhoArquivoTime = "./time_counting_sequential/" + argExe + "/" + nomeArquivo + ".txt";
-        FILE *f_CGP_time_sequential = fopen(caminhoArquivoTime.c_str(), "a");
+        FILE *f_CGP_time_sequential = fopen(caminhoArquivoTime.c_str(), "w");
     #endif
 
     #if DEFAULT
@@ -185,7 +185,7 @@ int main(int argc, char** argv) {
 
     int* indexesDataInFolds = new int[fullData.M - (fullData.M % KFOLDS)];// save the indexes given the folds generation
 
-    for(i = 0; i < 5; i++) {
+    for(i = 0; i < 1; i++) {
         /*for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
             seeds[aux] = aux + 55;
         }*/

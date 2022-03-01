@@ -1,0 +1,6 @@
+Node31 9 12 10
+Node32 10 12 15
+Node64 31 32 15
+Node75 64 7 14
+Output 75
+
