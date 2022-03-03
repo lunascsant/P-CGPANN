@@ -24,7 +24,7 @@ void runCircuit(Chromosome* c, Dataset* dataset, int index, int validation);
 void runCircuitLinear(Chromosome* c, Dataset* dataset, int index, int validation);
 
 void initializePopulation(Chromosome* pop, Parameters* p, int* seed);
-int evaluatePopulation(Chromosome* pop, Dataset* dataset, int validation);
+void evaluatePopulation(Chromosome* pop, Dataset* dataset, int validation, int bestIndex[]);
 
 Chromosome *mutate(Chromosome *c, Parameters *p, int *seed);
 Chromosome *mutateTopologyProbabilistic(Chromosome *c, Parameters *p, int *seed, int type);
@@ -33,11 +33,11 @@ Chromosome *mutateSAM(Chromosome *c, Parameters *p, int *seed);
 Chromosome *mutateTopologyPoint(Chromosome *c, Parameters *p, int *seed);
 
 
-Chromosome
+Chromosome*
 CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double *timeKernel, std::ofstream& factivel_file);
 
 //Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel);
-Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel, std::ofstream& factivel_file);
+Chromosome *PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel, std::ofstream& factivel_file);
 
 void printChromosome(Chromosome *c, Parameters *p);
 void printFile(Chromosome *c, Parameters *p, std::ofstream& factivel_file);

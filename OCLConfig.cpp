@@ -1589,13 +1589,6 @@ double OCLConfig::getKernelElapsedTime(){
 double OCLConfig::getKernelElapsedTimeTrain(){
     e_tempo_train.getProfilingInfo(CL_PROFILING_COMMAND_START, &inicio);
     e_tempo_train.getProfilingInfo(CL_PROFILING_COMMAND_END, &fim);
-    /*std::cout << "vem aqui" << std::endl;
-    std::cout << "inicio: " << inicio << std::endl;
-    std::cout << "teste i: " << teste_i << std::endl;
-    std::cout << "teste f: " << teste_f << std::endl;
-    std::cout << "fim: " << fim << std::endl;
-    std::cout << "elapsed: " << (fim - inicio) << std::endl;
-    std::cout << "elapsed dividido: " << ((fim-inicio)/1.0E9) << std::endl;*/
     return ((fim-inicio)/1.0E9);
 }
 double OCLConfig::getKernelElapsedTimeValid(){

@@ -6,6 +6,17 @@
 #include "GPTime.h"
 #include "OCLConfig.h"
 
+void printFileFiveExe(Chromosome *c, Parameters *p, std::ofstream& factivel_file) {
+    for(int i = 0; i < MAX_NODES; i++) {
+        if (c->nodes[i].active) {
+            factivel_file << "Node" << i + p->N << " " << c->nodes[i].inputs[0]
+            << " " << c->nodes[i].inputs[1] << " " <<  c->nodes[i].function << "\n";
+        }
+    }
+    factivel_file << "Output " << c->output[0] + p->N << "\n";
+    factivel_file << "\n";
+    factivel_file << "\n";
+}
 
 int main(int argc, char** argv) {
     char* datasetFile = argv[1];
@@ -162,7 +173,6 @@ int main(int argc, char** argv) {
     seeds = new int [ocl->maxLocalSize * NUM_INDIV];
     //seeds = new int [1];
 
-    std::cout << "SEED LIDA" << atoi(argv[2]) << std::endl;
     srand(atoi(argv[2]));
 
     /*random seeds used in parallel code*/
@@ -221,12 +231,16 @@ int main(int argc, char** argv) {
             double timeKernel = 0;
             timeManager.getStartTime(Evolucao_T);
             #if PARALLEL
-            Chromosome executionBest = PCGP(trainingData, params, ocl, seeds, &timeIter, &timeKernel, factivelFile);
+            Chromosome* executionBest = PCGP(trainingData, params, ocl, seeds, &timeIter, &timeKernel, factivelFile);
 
+                for(int i = 0; i < NUM_EXECUTIONS; i++) {
+                    std::cout << "Fitness - exe " << i << " : " <<executionBest[i].fitness << std::endl;
+                    printFileFiveExe(&executionBest[i], params, factivelFile);
+                }
                 //std::cout << "Test execution: " << std::endl;
 
                 //std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
-                std::cout << "Fitness do melhor na main: " << executionBest.fitness << std::endl;
+                //std::cout << "Fitness do melhor na main: " << executionBest.fitness << std::endl;
                 //ocl->writeBestBuffer(&executionBest);
 
                 //ocl->finishCommandQueue();
@@ -243,9 +257,14 @@ int main(int argc, char** argv) {
                 //std::cout << executionBest.fitness << std::endl;
 
             #else
-                Chromosome executionBest = CGP(trainingData, params, seeds, &timeIter, &timeKernel, factivelFile);
+                Chromosome* executionBest = CGP(trainingData, params, seeds, &timeIter, &timeKernel, factivelFile);
                 //std::cout << "Test execution: " << std::endl;
                 //std::cout << "Melhor na main: " << executionBest.fitness << std::endl;
+
+                for(int i = 0; i < NUM_EXECUTIONS; i++) {
+                    std::cout << "Fitness - exe " << i << " : " <<executionBest[i].fitness << std::endl;
+                    printFile(&executionBest[i], params, factivelFile);
+                }
 
                 /*evaluateCircuit(&executionBest, testData);
                 printf("Test execution: %f ", executionBest.fitness);*/
@@ -264,12 +283,12 @@ int main(int argc, char** argv) {
             fprintf(f_CGP_timeKernel, "%d;\t%d;\t%.4f\n", i, 0, timeKernel);*/
 
             #if PARALLEL
-                fprintf(f_CGP_time_parallel, "Fitness best: \t%.4f\n", executionBest.fitness);
+                /*fprintf(f_CGP_time_parallel, "Fitness best: \t%.4f\n", executionBest.fitness);*/
                 fprintf(f_CGP_time_parallel, "timeIter: \t%.4f\n", timeIter);
                 fprintf(f_CGP_time_parallel, "timeIterTotal: \t%.4f\n", timeIterTotal);
                 fprintf(f_CGP_time_parallel, "timeKernel: \t%.4f\n\n", timeKernel);
             #else
-                fprintf(f_CGP_time_sequential, "Fitness best: \t%.4f\n", executionBest.fitness);
+                fprintf(f_CGP_time_sequential, "Fitness best: \t%.4f\n", executionBest->fitness);
                 fprintf(f_CGP_time_sequential, "timeIter: \t%.4f\n", timeIter);
                 fprintf(f_CGP_time_sequential, "timeIterTotal: \t%.4f\n", timeIterTotal);
                 fprintf(f_CGP_time_sequential, "timeKernel: \t%.4f\n\n", timeKernel);

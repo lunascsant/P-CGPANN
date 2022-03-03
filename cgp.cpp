@@ -541,12 +541,20 @@ void runCircuitLinear(Chromosome* c, Dataset* dataset, int index, int validation
     }
 }
 
-int evaluatePopulation(Chromosome* pop, Dataset* dataset, int validation){
-    int i, j;
-    float bestFitness = 0;
+void evaluatePopulation(Chromosome* pop, Dataset* dataset, int validation, int bestIndex[]){
+    int i, j, k, l;
+    float bestFitness[NUM_EXECUTIONS];
+    for(k = 0; k < NUM_EXECUTIONS; k++) {
+        bestFitness[k] = 0;
+    }
+
     unsigned int bestActiveNodes = 999;
-    int bestIndex = -1;
-    if(validation == 1 ){
+
+    for(k = 0; k < NUM_EXECUTIONS; k++) {
+        bestIndex[k] = -1;
+    }
+
+    /*if(validation == 1 ){
         for(j = 0; j < NUM_INDIV; j++) {
             evaluateCircuitValidation(&pop[j], dataset);
             if(pop[j].fitnessValidation > bestFitness){
@@ -560,25 +568,31 @@ int evaluatePopulation(Chromosome* pop, Dataset* dataset, int validation){
                     bestIndex = j;
                 }
             }
-        }
-    } else {
-        for(j = 0; j < NUM_INDIV; j++) {
-            evaluateCircuit(&pop[j], dataset);
-            if(pop[j].fitness > bestFitness){
-                bestFitness = pop[j].fitness;
-                bestActiveNodes = pop[j].numActiveNodes;
-                bestIndex = j;
-            } else if (pop[j].fitness == bestFitness) {
-                if(pop[j].numActiveNodes <= bestActiveNodes){
-                    bestFitness = pop[j].fitness;
-                    bestActiveNodes = pop[j].numActiveNodes;
-                    bestIndex = j;
+        }*/
+    //} else {
+    for(j = 0; j < NUM_INDIV; j++) {
+        evaluateCircuit(&pop[j], dataset);
+    }
+
+    int prox = 0;
+    for(l = 0; l < NUM_EXECUTIONS; l++) {
+        for(i = prox; i < prox + NUM_INDIV_POP; i++) {
+            if(pop[i].fitness > bestFitness[l]){
+                bestFitness[l] = pop[i].fitness;
+                bestActiveNodes = pop[i].numActiveNodes;
+                bestIndex[l] = i;
+            } else if (pop[i].fitness == bestFitness[l]) {
+                if(pop[i].numActiveNodes <= bestActiveNodes){
+                    bestFitness[l] = pop[i].fitness;
+                    bestActiveNodes = pop[i].numActiveNodes;
+                    bestIndex[l] = i;
                 }
             }
         }
+        prox = i;
     }
+    //}
 
-    return bestIndex;
 }
 
 
@@ -783,15 +797,15 @@ Chromosome *mutateTopologyPoint(Chromosome *c, Parameters *p, int *seed) {
 
 
 
-Chromosome
+Chromosome*
 CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double *timeKernel, std::ofstream& factivel_file) {
     GPTime timeManager(4);
     Chromosome *current_pop;
     current_pop = new Chromosome[NUM_INDIV];
 
     int factivel = 0;
-    Chromosome best;
-    Chromosome best_train;
+    Chromosome* best = new Chromosome[NUM_EXECUTIONS];
+    Chromosome* best_train = new Chromosome[NUM_EXECUTIONS];
     //Chromosome best_valid;
     Chromosome mutated_best;
 
@@ -804,25 +818,32 @@ CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double 
 
 
 
-    int bestTrain = evaluatePopulation(current_pop, training, 0);
+    int bestTrain[NUM_EXECUTIONS];
+    evaluatePopulation(current_pop, training, 0, bestTrain);
     //int bestValid = evaluatePopulation(current_pop, validation, 1);
 
 
-    best_train = current_pop[bestTrain];
-    //best_valid = current_pop[bestValid];
-    best = best_train;
 
-    if(best.fitness == training->M) {
+    for(int i = 0; i < NUM_EXECUTIONS; i++) {
+        best_train[i] = current_pop[bestTrain[i]];
+    }
+    //best_valid = current_pop[bestValid];
+    for(int i = 0; i < NUM_EXECUTIONS; i++) {
+        best[i] = best_train[i];
+    }
+
+
+    /*if(best.fitness == training->M) {
         //std::cout << "CGP achou o indivíduo factivel" << std::endl;
         //printChromosome(&best, params);
         printFile(&best, params, factivel_file);
         factivel = 1;
-    }
+    }*/
 
     //std::cout << "Melhor da populacao: " << best.fitness << std::endl;
 
     int iterations = 0;
-    while(stopCriteria(iterations) && !factivel) {
+    while(stopCriteria(iterations)) {
 
 
         timeManager.getStartTime(Iteracao_T);
@@ -831,8 +852,12 @@ CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double 
 
         //printCircuit(&best, params);
 
+        int group = -1;
         for (int i = 0; i < NUM_INDIV; i++){
-            mutated_best = best;
+            if(i % NUM_EXECUTIONS == 0)
+                group++;
+
+            mutated_best = best[group];
             //mutateTopologyProbabilistic(&mutated_best, params, &seeds[i], 0);
             //mutateTopologyProbabilistic2(&mutated_best, params, seeds, 0, i)
             mutateSAM(&mutated_best, params, seeds);
@@ -851,8 +876,8 @@ CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double 
             (*timeKernel) += timeManager.getElapsedTime(Avaliacao_T);;
 
 
-            if(mutated_best.fitness >= best_train.fitness){
-                best_train = mutated_best;
+            if(mutated_best.fitness >= best_train[group].fitness){
+                best_train[group] = mutated_best;
             }
 
             /*if(mutated_best.fitnessValidation >= best_valid.fitnessValidation){
@@ -863,10 +888,13 @@ CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double 
         }
         /*if(iterations%1000 == 0)
             std::cout << std::endl;*/
-        best = best_train;
+        for(int j = 0; j < NUM_EXECUTIONS; j++) {
+            best[j] = best_train[j];
+        }
+
         //std::cout << "Best fitness  = " << best.fitness << std::endl;
 
-        if(best.fitness == training->M) {
+        /*if(best.fitness == training->M) {
             //std::cout << "CGP achou o individuo factivel" << std::endl;
             //std::cout << "Geracao: " << iterations << std::endl;
             //printChromosome(&best, params);
@@ -874,7 +902,7 @@ CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double 
             printFile(&best, params, factivel_file);
             factivel = 1;
             break;
-        }
+        }*/
 
         timeManager.getEndTime(Iteracao_T);
 
@@ -889,20 +917,20 @@ CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double 
     }
     (*timeIter) = timeManager.getTotalTime(Iteracao_T);
 
-    if(best.fitness != training->M) {
+    /*if(best.fitness != training->M) {
         factivel_file << "Nao achou factivel\n";
-    }
+    }*/
 
     return best;
 }
 
-Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel, std::ofstream& factivel_file){
+Chromosome* PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel, std::ofstream& factivel_file){
     GPTime timeManager(4);
     //Chromosome *current_pop;
     //current_pop
 
-    Chromosome best;
-    Chromosome best_train;
+    Chromosome* best = new Chromosome[NUM_EXECUTIONS];
+    Chromosome* best_train = new Chromosome[NUM_EXECUTIONS];
     //Chromosome best_valid;
     Chromosome* population = new Chromosome[NUM_INDIV];
     ActiveChromosome* activePopulation = new ActiveChromosome[NUM_INDIV];
@@ -912,26 +940,33 @@ Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seed
 
     initializePopulation(population, params, &seeds[0]);
 
-
     /*std::cout << "PRINT" << std::endl;
     for(int individual = 0; individual < NUM_INDIV; individual++) {
         std::cout << "Individual: " << individual << std::endl;
         printChromosome(&population[individual], params);
     }*/
 
-    int bestTrain = evaluatePopulation(population, training, 0);
+    int bestTrain[NUM_EXECUTIONS];
+
+    evaluatePopulation(population, training, 0, bestTrain);
+
     //int bestValid = evaluatePopulation(population, validation, 1);
     double kernelTime = 0;
-    best_train = population[bestTrain];
-    //best_valid = population[bestValid];
-    best = best_train;
-
-    if(best.fitness == training->M) {
-        //std::cout << "CGP achou o indivíduo factível" << std::endl;
-        //printChromosome(&best, params);
-        printFile(&best, params, factivel_file);
-        factivel = 1;
+    for(int k = 0; k < NUM_EXECUTIONS; k++) {
+        best_train[k] = population[bestTrain[k]];
     }
+
+    //best_valid = population[bestValid];
+    for(int k = 0; k < NUM_EXECUTIONS; k++) {
+        best[k] = best_train[k];
+    }
+
+//    if(best.fitness == training->M) {
+//        //std::cout << "CGP achou o indivíduo factível" << std::endl;
+//        //printChromosome(&best, params);
+//        printFile(&best, params, factivel_file);
+//        factivel = 1;
+//    }
 
     //std::cout << "Melhor da populacao: " << best.fitness << std::endl;
     //std::cout << "morreu aqui? 1 " << std::endl;
@@ -940,14 +975,18 @@ Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seed
     ocl->writeReadOnlyBufers(params);
 
     int iterations = 0;
-    while(stopCriteria(iterations) && !factivel) {
+    while(stopCriteria(iterations)) {
 
         timeManager.getStartTime(Iteracao_T);
 
         //std::cout << "Active nodes: " << best.numActiveNodes << ", FitnessTrain: " << best.fitness << ", FitnessValidation: " << best.fitnessValidation  << std::endl;
 
+        int group = -1;
         for(int k = 0; k < NUM_INDIV; k++){
-            population[k] = best;
+            if(k % NUM_EXECUTIONS == 0) {
+                group++;
+            }
+            population[k] = best[group];
             mutateSAM(&population[k], params, seeds);
         }
 
@@ -1037,10 +1076,10 @@ Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seed
         }*/
 
 
+        group = -1;
         for(int k = 0; k < NUM_INDIV; k++){
 
             population[k].fitness = ocl->fitness[k];
-
             //std::cout << "ocl fitness k " << ocl->fitness[k] << std::endl;
             //population[k].fitnessValidation = ocl->fitnessValidation[k];
 
@@ -1048,8 +1087,12 @@ Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seed
             /*std::cout << "Fitness de um individuo: ";
             std::cout << population[k].fitness << std::endl;*/
 
-            if(population[k].fitness >= best_train.fitness){
-                best_train = population[k];
+            if(k % NUM_EXECUTIONS == 0) {
+                group++;
+            }
+
+            if(population[k].fitness >= best_train[group].fitness){
+                best_train[group] = population[k];
                /* std::cout << "FITNESS best_train" << best_train.fitness << std::endl;
                 std::cout << "FITNESS population[k]" << population[k].fitness << std::endl;*/
             }
@@ -1062,20 +1105,12 @@ Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seed
         /*if(iterations%1000 == 0)
             std::cout << std::endl;*/
 
-        best = best_train;
+        for(int i  = 0; i < NUM_EXECUTIONS; i++) {
+            best[i] = best_train[i];
+        }
 
        /* std::cout << "FITNESS best_train" << best_train.fitness << std::endl;
         std::cout << "FITNESS best" << best.fitness << std::endl;*/
-
-        if(best.fitness == training->M) {
-            //std::cout << "CGP achou o individuo factivel depois do kernel" << std::endl;
-            //std::cout << "Geracao: " << iterations << std::endl;
-            //printChromosome(&best, params);
-            printFile(&best, params, factivel_file);
-            std::cout << "N iteracoes para factivel: " << iterations << std::endl;
-            factivel = 1;
-            break;
-        }
 
         timeManager.getEndTime(Iteracao_T);
         timeManager.getElapsedTime(Iteracao_T);
@@ -1090,7 +1125,6 @@ Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seed
 
     }
 
-
     (*timeIter) = timeManager.getTotalTime(Iteracao_T);
     (*timeKernel) = kernelTime;
 
@@ -1101,9 +1135,6 @@ Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seed
      }*/
     std::cout << std::endl;
 
-    if(best.fitness != training->M) {
-        factivel_file << "Nao achou factivel\n";
-    }
 
     //printChromosome(&best, params);
     return best;
