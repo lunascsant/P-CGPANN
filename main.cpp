@@ -263,7 +263,7 @@ int main(int argc, char** argv) {
 
                 for(int i = 0; i < NUM_EXECUTIONS; i++) {
                     std::cout << "Fitness - exe " << i << " : " <<executionBest[i].fitness << std::endl;
-                    printFile(&executionBest[i], params, factivelFile);
+                    printFileFiveExe(&executionBest[i], params, factivelFile);
                 }
 
                 /*evaluateCircuit(&executionBest, testData);
