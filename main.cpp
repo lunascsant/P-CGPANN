@@ -195,7 +195,9 @@ int main(int argc, char** argv) {
 
     int* indexesDataInFolds = new int[fullData.M - (fullData.M % KFOLDS)];// save the indexes given the folds generation
 
+    std::vector<int> rede;
     for(i = 0; i < 1; i++) {
+        std::vector<int> rede_local;
         /*for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
             seeds[aux] = aux + 55;
         }*/
@@ -237,24 +239,31 @@ int main(int argc, char** argv) {
                     std::cout << "Fitness - exe " << i << " : " <<executionBest[i].fitness << std::endl;
                     printFileFiveExe(&executionBest[i], params, factivelFile);
                 }
-                //std::cout << "Test execution: " << std::endl;
 
-                //std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
-                //std::cout << "Fitness do melhor na main: " << executionBest.fitness << std::endl;
-                //ocl->writeBestBuffer(&executionBest);
+                for(int i = 0; i < NUM_EXECUTIONS; i++) {
+                    for(int j = 0; j < MAX_NODES; j++){
+                        if(executionBest[i].nodes[j].active == 1){
+                            for(int k = 0; k < MAX_ARITY; k++){
+                                if(executionBest[i].nodes[j].inputs[k] < trainingData->N){
+                                    //std::cout << "Input: " << k << " " << executionBest.nodes[j].inputs[k] << std::endl;
+                                    auto search = find(rede_local.begin(), rede_local.end(), executionBest[i].nodes[j].inputs[k]);
+                                    if(search == rede_local.end()){
+                                        rede_local.push_back(executionBest[i].nodes[j].inputs[k]);
+                                    }
+                                }
+                            }
 
-                //ocl->finishCommandQueue();
+                        }
+                    }
 
-                //ocl->enqueueTestKernel();
-                //ocl->finishCommandQueue();
+                    for(int & j : rede_local){
+                        rede.push_back(j);
+                    }
 
-                //ocl->readBestBuffer(&executionBest);
-                //ocl->readFitnessBuffer();
+                    rede_local.clear();
+                }
 
-                //executionBest.fitness = ocl->fitness[0];
 
-                //ocl->finishCommandQueue();
-                //std::cout << executionBest.fitness << std::endl;
 
             #else
                 Chromosome* executionBest = CGP(trainingData, params, seeds, &timeIter, &timeKernel, factivelFile);
@@ -264,6 +273,29 @@ int main(int argc, char** argv) {
                 for(int i = 0; i < NUM_EXECUTIONS; i++) {
                     std::cout << "Fitness - exe " << i << " : " <<executionBest[i].fitness << std::endl;
                     printFileFiveExe(&executionBest[i], params, factivelFile);
+                }
+
+                for(int i = 0; i < NUM_EXECUTIONS; i++) {
+                    for(int j = 0; j < MAX_NODES; j++){
+                        if(executionBest[i].nodes[j].active == 1){
+                            for(int k = 0; k < MAX_ARITY; k++){
+                                if(executionBest[i].nodes[j].inputs[k] < trainingData->N){
+                                    //std::cout << "Input: " << k << " " << executionBest.nodes[j].inputs[k] << std::endl;
+                                    auto search = find(rede_local.begin(), rede_local.end(), executionBest[i].nodes[j].inputs[k]);
+                                    if(search == rede_local.end()){
+                                        rede_local.push_back(executionBest[i].nodes[j].inputs[k]);
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+                    for(int & j : rede_local){
+                        rede.push_back(j);
+                    }
+
+                    rede_local.clear();
                 }
 
                 /*evaluateCircuit(&executionBest, testData);
@@ -303,8 +335,21 @@ int main(int argc, char** argv) {
 
     timeManager.getEndTime(Total_T);
 
-    //printCircuit(&best, params);
-    //std::cout << "Best fitness  = " << executionBest.fitness << std::endl;
+    std::vector<float> counting;
+
+    for(int i = 0; i < fullData.N; i++){
+        float counted = std::count(rede.begin(), rede.end(), i);
+        counting.push_back(counted/NUM_EXECUTIONS);
+    }
+
+    std::cout << "xxxxxx Contagem xxxxxx" << std::endl;
+
+    for(int i = 0; i < counting.size(); i++){
+        std::cout << counting.at(i) << " ";
+    }
+
+    std::cout << std::endl;
+
     #if PARALLEL
         fprintf(f_CGP_time_parallel, "\n");
         fprintf(f_CGP_time_parallel, "Total time: \t%.4f\n", timeManager.getElapsedTime(Total_T));
