@@ -21,18 +21,27 @@ void printFileFiveExe(Chromosome *c, Parameters *p, std::ofstream& factivel_file
 int main(int argc, char** argv) {
     char* datasetFile = argv[1];
 
+    std::string genenames = argv[4];
+
     #if PARALLEL
         std::ofstream factivelFile;
         std::string gene = argv[1];
+        std::string edgesDir;
         if (gene[10] == '0') {
             gene = gene.substr(0, 21);
+            edgesDir = gene.substr(0, 11);
         } else {
             gene = gene.substr(0, 20);
+            edgesDir = gene.substr(0, 10);
         }
+        std::cout << edgesDir << std::endl;
         std::string argSeed = argv[2];
         std::string argExe = argv[3];
+        std::string argPt = argv[5];
+        std::string argCurrentGene = argv[6];
         std::string nomeArquivo = gene + "_" + argSeed + "_" + argExe;
         std::string caminhoArquivo = "./executions_parallel/" + argExe + "/" + nomeArquivo + ".txt";
+        std::string rankedEdgesfile = "./executions_parallel/" + argExe + "/" + edgesDir + "/rankedEdges_" + argPt + "_" + argCurrentGene + ".csv";
         factivelFile.open(caminhoArquivo, std::ios::out);
         if (!factivelFile) {
             std::cout << "Error file" << std::endl;
@@ -49,15 +58,21 @@ int main(int argc, char** argv) {
 
         std::ofstream factivelFile;
         std::string gene = argv[1];
+        std::string edgesDir;
         if (gene[10] == '0') {
             gene = gene.substr(0, 21);
+            edgesDir = gene.substr(0, 11);
         } else {
             gene = gene.substr(0, 20);
+            edgesDir = gene.substr(0, 10);
         }
         std::string argSeed = argv[2];
         std::string argExe = argv[3];
+        std::string argPt = argv[5];
+        std::string argCurrentGene = argv[6];
         std::string nomeArquivo = gene + "_" + argSeed + "_" + argExe;
         std::string caminhoArquivo = "./executions_sequential/" + argExe + "/" + nomeArquivo + ".txt";
+        std::string rankedEdgesfile = "./executions_sequential/" + argExe + "/" + edgesDir + "/rankedEdges_" + argPt + "_" + argCurrentGene + ".csv";
         factivelFile.open(caminhoArquivo, std::ios::out);
         if (!factivelFile) {
             std::cout << "Error file" << std::endl;
@@ -349,6 +364,25 @@ int main(int argc, char** argv) {
     }
 
     std::cout << std::endl;
+
+    std::vector<std::string> geneNames = {};
+    std::string names;
+    std::ifstream FileGeneNames(genenames);
+    int linha = 0;
+    while(std::getline (FileGeneNames, names)) {
+        geneNames.push_back(names);
+        linha++;
+    }
+    FileGeneNames.close();
+
+    std::ofstream rankedEdges;
+    rankedEdges.open(rankedEdgesfile);
+    for(int i = 0; i < geneNames.size(); i++) {
+        if(counting.at(i) != 0) {
+            rankedEdges << geneNames[i] << "\t" << argCurrentGene << "\t" << counting.at(i) << "\n";
+        }
+    }
+    rankedEdges.close();
 
     #if PARALLEL
         fprintf(f_CGP_time_parallel, "\n");

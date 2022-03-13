@@ -1,4 +1,0 @@
-Node24 3 1 15
-Node43 24 7 17
-Output 43
-

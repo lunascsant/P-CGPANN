@@ -1,5 +1,0 @@
-Node31 3 12 12
-Node34 9 4 14
-Node64 34 31 14
-Output 64
-

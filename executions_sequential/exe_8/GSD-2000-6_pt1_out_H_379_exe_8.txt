@@ -1,5 +1,0 @@
-Node37 0 1 11
-Node43 37 7 16
-Node71 43 37 10
-Output 71
-

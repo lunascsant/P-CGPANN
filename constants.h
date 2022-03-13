@@ -44,7 +44,7 @@
 #define CONST_PI 3.14159265359
 
 /** Graph parameters */
-#define MAX_NODES 5
+#define MAX_NODES 500
 #define MAX_OUTPUTS 1
 #define MAX_ARITY 2
 
@@ -64,7 +64,7 @@
 
 #define NUM_INDIV_POP 5
 #define NUM_EXECUTIONS 5
-#define NUM_GENERATIONS 1000
+#define NUM_GENERATIONS 50000
 #define NUM_EVALUATIONS 2.40e+007
 
 

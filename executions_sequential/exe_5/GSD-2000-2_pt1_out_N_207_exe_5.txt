@@ -1,7 +1,0 @@
-Node19 13 12 14
-Node25 3 17 12
-Node28 25 5 12
-Node31 19 28 10
-Node35 4 31 12
-Output 35
-

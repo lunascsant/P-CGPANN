@@ -61,12 +61,15 @@ void activateNodes(Chromosome* c, Parameters* p){
 
     for(i = 0; i < MAX_OUTPUTS; i++) {
         unsigned int nodeIndex = c->output[i];
+        //std::cout << " node index " << nodeIndex << std::endl;
         push(&s, nodeIndex);
 
         while(s.topIndex != -1) {
             unsigned int node = pop(&s);
+            //std::cout << "Morre aqui no node " << node << std::endl;
             if( c->nodes[node].active == 0) {
                 for (j = 0; j < MAX_ARITY; j++) {
+                    //std::cout << "Morre aqui no j " << j << std::endl;
                     if (c->nodes[node].inputs[j] >= p->N) {
                         push(&s, c->nodes[node].inputs[j] - p->N);
                     }
@@ -74,6 +77,7 @@ void activateNodes(Chromosome* c, Parameters* p){
                 c->activeNodes[c->numActiveNodes] = node;
                 c->nodes[node].active = 1;
                 c->numActiveNodes++;
+               // std::cout << "Morre aqui no if" << std::endl;
             }
 
         }
@@ -548,51 +552,91 @@ void evaluatePopulation(Chromosome* pop, Dataset* dataset, int validation, int b
         bestFitness[k] = 0;
     }
 
-    unsigned int bestActiveNodes = 999;
+    unsigned int bestActiveNodes[NUM_EXECUTIONS];
+
+    for(k = 0; k < NUM_EXECUTIONS; k++) {
+        bestActiveNodes[k] = 9999;
+    }
 
     for(k = 0; k < NUM_EXECUTIONS; k++) {
         bestIndex[k] = -1;
     }
 
-    /*if(validation == 1 ){
-        for(j = 0; j < NUM_INDIV; j++) {
-            evaluateCircuitValidation(&pop[j], dataset);
-            if(pop[j].fitnessValidation > bestFitness){
-                bestFitness = pop[j].fitnessValidation;
-                bestActiveNodes = pop[j].numActiveNodes;
-                bestIndex = j;
-            } else if (pop[j].fitnessValidation == bestFitness) {
-                if(pop[j].numActiveNodes <= bestActiveNodes){
-                    bestFitness = pop[j].fitnessValidation;
-                    bestActiveNodes = pop[j].numActiveNodes;
-                    bestIndex = j;
-                }
-            }
-        }*/
-    //} else {
     for(j = 0; j < NUM_INDIV; j++) {
         evaluateCircuit(&pop[j], dataset);
+    }
+    std::cout << std::endl;
+
+    int feasibles[NUM_EXECUTIONS];
+    for(k = 0; k < NUM_EXECUTIONS; k++) {
+        feasibles[k] = 0;
     }
 
     int prox = 0;
     for(l = 0; l < NUM_EXECUTIONS; l++) {
         for(i = prox; i < prox + NUM_INDIV_POP; i++) {
-            if(pop[i].fitness > bestFitness[l]){
-                bestFitness[l] = pop[i].fitness;
-                bestActiveNodes = pop[i].numActiveNodes;
-                bestIndex[l] = i;
-            } else if (pop[i].fitness == bestFitness[l]) {
-                if(pop[i].numActiveNodes <= bestActiveNodes){
-                    bestFitness[l] = pop[i].fitness;
-                    bestActiveNodes = pop[i].numActiveNodes;
-                    bestIndex[l] = i;
-                }
+            if (pop[i].fitness == dataset->M) {
+                feasibles[l] += 1;
             }
         }
         prox = i;
     }
-    //}
 
+    std::vector<int> equalFitness;
+    int indBest = -1;
+
+    prox = 0;
+    for(l = 0; l < NUM_EXECUTIONS; l++) {
+        if(feasibles[l] > 0) {
+            if(feasibles[l] == 1) {
+                for(i = prox; i < prox + NUM_INDIV_POP; i++) {
+                    if(pop[i].fitness == dataset->M){
+                        bestFitness[l] = pop[i].fitness;
+                        bestActiveNodes[l] = pop[i].numActiveNodes;
+                        bestIndex[l] = i;
+                    }
+                }
+            } else if (feasibles[l] > 1) {
+                for(i = prox; i < prox + NUM_INDIV_POP; i++) {
+                    if(pop[i].fitness == dataset->M){
+                        if(pop[i].numActiveNodes < bestActiveNodes[l]) {
+                            bestFitness[l] = pop[i].fitness;
+                            bestActiveNodes[l] = pop[i].numActiveNodes;
+                            bestIndex[l] = i;
+                        }
+                    }
+                }
+            }
+        } else {
+            for(i = prox; i < prox + NUM_INDIV_POP; i++) {
+                if(pop[i].fitness > bestFitness[l]) {
+                    bestFitness[l] = pop[i].fitness;
+                    bestActiveNodes[l] = pop[i].numActiveNodes;
+                    bestIndex[l] = i;
+                    equalFitness.clear();
+                    equalFitness.push_back(i);
+                } else if (pop[i].fitness == bestFitness[l]) {
+                    equalFitness.push_back(i);
+                }
+            }
+
+            if(!equalFitness.empty()) {
+                if(equalFitness.size() == 1) {
+                    bestFitness[l] = pop[i].fitness;
+                    bestActiveNodes[l] = pop[i].numActiveNodes;
+                    bestIndex[l] = i;
+                } else {
+                    indBest = rand() % (equalFitness.size() - 1);
+                    bestFitness[l] = pop[indBest].fitness;
+                    bestActiveNodes[l] = pop[indBest].numActiveNodes;
+                    bestIndex[l] = indBest;
+                }
+            }
+        }
+        prox = i;
+
+        equalFitness.clear();
+    }
 }
 
 
@@ -742,8 +786,8 @@ Chromosome *mutateSAM(Chromosome *c, Parameters *p, int *seed) {
         }
     }
 
-
     activateNodes(c, p);
+
     return  c;
 }
 
@@ -806,180 +850,190 @@ CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double 
     int factivel = 0;
     Chromosome* best = new Chromosome[NUM_EXECUTIONS];
     Chromosome* best_train = new Chromosome[NUM_EXECUTIONS];
-    //Chromosome best_valid;
     Chromosome mutated_best;
 
     initializePopulation(current_pop, params, &seeds[0]);
-    //std::cout << "PRINT" << std::endl;
-    /*for(int individual = 0; individual < NUM_INDIV; individual++){
-        std::cout << "Individual " << individual << std::endl;
-        printChromosome(&current_pop[individual], params);
-    }*/
-
-
 
     int bestTrain[NUM_EXECUTIONS];
     evaluatePopulation(current_pop, training, 0, bestTrain);
-    //int bestValid = evaluatePopulation(current_pop, validation, 1);
 
+    unsigned int bestActiveNodes[NUM_EXECUTIONS];
 
+    for(int k = 0; k < NUM_EXECUTIONS; k++) {
+        bestActiveNodes[k] = 9999;
+    }
+
+    int feasibles[NUM_EXECUTIONS];
+    for(int k = 0; k < NUM_EXECUTIONS; k++) {
+        feasibles[k] = 0;
+    }
 
     for(int i = 0; i < NUM_EXECUTIONS; i++) {
         best_train[i] = current_pop[bestTrain[i]];
     }
-    //best_valid = current_pop[bestValid];
+
     for(int i = 0; i < NUM_EXECUTIONS; i++) {
         best[i] = best_train[i];
     }
 
-
-    /*if(best.fitness == training->M) {
-        //std::cout << "CGP achou o indivíduo factivel" << std::endl;
-        //printChromosome(&best, params);
-        printFile(&best, params, factivel_file);
-        factivel = 1;
-    }*/
-
-    //std::cout << "Melhor da populacao: " << best.fitness << std::endl;
-
+    int prox, it;
+    std::vector<int> equalFitness;
+    int indBest = -1;
     int iterations = 0;
     while(stopCriteria(iterations)) {
-
-
         timeManager.getStartTime(Iteracao_T);
-        //std::cout << "Active nodes: " << best.numActiveNodes << ", FitnessTrain: " << best.fitness << ", FitnessValidation: " << best.fitnessValidation  << std::endl;
 
-
-        //printCircuit(&best, params);
+        //std::cout << "Morre aqui na iteracao " << iterations << std::endl;
 
         int group = -1;
-        for (int i = 0; i < NUM_INDIV; i++){
-            if(i % NUM_EXECUTIONS == 0)
+        for(int k = 0; k < NUM_INDIV; k++){
+            if(k % NUM_EXECUTIONS == 0) {
                 group++;
-
-            mutated_best = best[group];
-            //mutateTopologyProbabilistic(&mutated_best, params, &seeds[i], 0);
-            //mutateTopologyProbabilistic2(&mutated_best, params, seeds, 0, i)
-            mutateSAM(&mutated_best, params, seeds);
-            /*if(iterations >= 0) {
-                std::cout << "mut ind " << i << std::endl;
-                printChromosome(&mutated_best, params);
-            }*/
-            //evaluateCircuit(&mutated_best, training);
-            //evaluateCircuitValidation(&mutated_best, validation);
-            timeManager.getStartTime(Avaliacao_T);
-            evaluateCircuit(&mutated_best, training);
-
-            //evaluateCircuitValidationLinear(&mutated_best, validation);
-            timeManager.getEndTime(Avaliacao_T);
-
-            (*timeKernel) += timeManager.getElapsedTime(Avaliacao_T);;
-
-
-            if(mutated_best.fitness >= best_train[group].fitness){
-                best_train[group] = mutated_best;
             }
+            //std::cout << "Morre aqui no k " << k << std::endl;
+            current_pop[k] = best[group];
+            mutateSAM(&current_pop[k], params, seeds);
 
-            /*if(mutated_best.fitnessValidation >= best_valid.fitnessValidation){
-                best_valid = mutated_best;
-            }
-*/
-            //std::cout << mutated_best.fitness << " ";
         }
-        /*if(iterations%1000 == 0)
-            std::cout << std::endl;*/
+
+        it = 0;
+        prox = 0;
+
+        for(int l = 0; l < NUM_EXECUTIONS; l++) {
+            for(it = prox; it < prox + NUM_INDIV_POP; it++) {
+                timeManager.getStartTime(Avaliacao_T);
+                evaluateCircuit(&current_pop[it], training);
+                timeManager.getEndTime(Avaliacao_T);
+
+                (*timeKernel) += timeManager.getElapsedTime(Avaliacao_T);
+            }
+            prox = it;
+        }
+
+
+        it = 0;
+        prox = 0;
+
+        for(int l = 0; l < NUM_EXECUTIONS; l++) {
+            for(it = prox; it < prox + NUM_INDIV_POP; it++) {
+                if (current_pop[it].fitness == params->M) {
+                    feasibles[l] += 1;
+                }
+            }
+            prox = it;
+        }
+
+        it = 0;
+        prox = 0;
+
+        for(int l = 0; l < NUM_EXECUTIONS; l++) {
+            if(feasibles[l] > 0) {
+                if(feasibles[l] == 1) {
+                    for(it = prox; it < prox + NUM_INDIV_POP; it++) {
+                        if(current_pop[it].fitness == params->M){
+                            best_train[l] = current_pop[it];
+                            bestActiveNodes[l] = current_pop[it].numActiveNodes;
+                        }
+                    }
+                } else if (feasibles[l] > 1) {
+                    for(it = prox; it < prox + NUM_INDIV_POP; it++) {
+                        if(current_pop[it].fitness == params->M){
+                            if(current_pop[it].numActiveNodes < bestActiveNodes[l]) {
+                                best_train[l] = current_pop[it];
+                                bestActiveNodes[l] = current_pop[it].numActiveNodes;
+                            }
+                        }
+                    }
+                }
+            } else {
+                for(it = prox; it < prox + NUM_INDIV_POP; it++) {
+                    if(current_pop[it].fitness > best_train[l].fitness){
+                        best_train[l] = current_pop[it];
+                        bestActiveNodes[l] = current_pop[it].numActiveNodes;
+                        equalFitness.clear();
+                        equalFitness.push_back(it);
+                    } else if (current_pop[it].fitness == best_train[l].fitness) {
+                        equalFitness.push_back(it);
+                    }
+                }
+            }
+
+            equalFitness.clear();
+            prox = it;
+        }
+
+        for(int k = 0; k < NUM_EXECUTIONS; k++) {
+            bestActiveNodes[k] = 9999;
+        }
+
+        for(int k = 0; k < NUM_EXECUTIONS; k++) {
+            feasibles[k] = 0;
+        }
+
+        equalFitness.clear();
+        indBest = -1;
+
         for(int j = 0; j < NUM_EXECUTIONS; j++) {
             best[j] = best_train[j];
         }
 
-        //std::cout << "Best fitness  = " << best.fitness << std::endl;
-
-        /*if(best.fitness == training->M) {
-            //std::cout << "CGP achou o individuo factivel" << std::endl;
-            //std::cout << "Geracao: " << iterations << std::endl;
-            //printChromosome(&best, params);
-            std::cout << "N iteracoes para factivel: " << iterations << std::endl;
-            printFile(&best, params, factivel_file);
-            factivel = 1;
-            break;
-        }*/
 
         timeManager.getEndTime(Iteracao_T);
 
         timeManager.getElapsedTime(Iteracao_T);
-        /*if(iterations%1000 == 0){
-            printf("Generation %d:\n", iterations);
-            printf("Time: %f\n", timeManager.getTotalTime(Iteracao_T));
-
-        }*/
 
         iterations++;
     }
-    (*timeIter) = timeManager.getTotalTime(Iteracao_T);
 
-    /*if(best.fitness != training->M) {
-        factivel_file << "Nao achou factivel\n";
-    }*/
+    (*timeIter) = timeManager.getTotalTime(Iteracao_T);
 
     return best;
 }
 
 Chromosome* PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel, std::ofstream& factivel_file){
     GPTime timeManager(4);
-    //Chromosome *current_pop;
-    //current_pop
 
     Chromosome* best = new Chromosome[NUM_EXECUTIONS];
     Chromosome* best_train = new Chromosome[NUM_EXECUTIONS];
-    //Chromosome best_valid;
     Chromosome* population = new Chromosome[NUM_INDIV];
     ActiveChromosome* activePopulation = new ActiveChromosome[NUM_INDIV];
     CompactChromosome *compactPopulation = new CompactChromosome[NUM_INDIV];
 
-    int factivel = 0;
-
     initializePopulation(population, params, &seeds[0]);
-
-    /*std::cout << "PRINT" << std::endl;
-    for(int individual = 0; individual < NUM_INDIV; individual++) {
-        std::cout << "Individual: " << individual << std::endl;
-        printChromosome(&population[individual], params);
-    }*/
 
     int bestTrain[NUM_EXECUTIONS];
 
     evaluatePopulation(population, training, 0, bestTrain);
 
-    //int bestValid = evaluatePopulation(population, validation, 1);
+    unsigned int bestActiveNodes[NUM_EXECUTIONS];
+
+    for(int k = 0; k < NUM_EXECUTIONS; k++) {
+        bestActiveNodes[k] = 9999;
+    }
+
+    int feasibles[NUM_EXECUTIONS];
+    for(int k = 0; k < NUM_EXECUTIONS; k++) {
+        feasibles[k] = 0;
+    }
+
     double kernelTime = 0;
     for(int k = 0; k < NUM_EXECUTIONS; k++) {
         best_train[k] = population[bestTrain[k]];
     }
 
-    //best_valid = population[bestValid];
     for(int k = 0; k < NUM_EXECUTIONS; k++) {
         best[k] = best_train[k];
     }
 
-//    if(best.fitness == training->M) {
-//        //std::cout << "CGP achou o indivíduo factível" << std::endl;
-//        //printChromosome(&best, params);
-//        printFile(&best, params, factivel_file);
-//        factivel = 1;
-//    }
-
-    //std::cout << "Melhor da populacao: " << best.fitness << std::endl;
-    //std::cout << "morreu aqui? 1 " << std::endl;
-
-    //ocl->writeReadOnlyBufers(params, seeds);
     ocl->writeReadOnlyBufers(params);
 
+    int prox, it;
     int iterations = 0;
+    std::vector<int> equalFitness;
+    int indBest = -1;
+
     while(stopCriteria(iterations)) {
-
         timeManager.getStartTime(Iteracao_T);
-
-        //std::cout << "Active nodes: " << best.numActiveNodes << ", FitnessTrain: " << best.fitness << ", FitnessValidation: " << best.fitnessValidation  << std::endl;
 
         int group = -1;
         for(int k = 0; k < NUM_INDIV; k++){
@@ -1045,72 +1099,88 @@ Chromosome* PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *see
 
         ocl->finishCommandQueue();
         kernelTime+= ocl->getKernelElapsedTimeTrain();
-        //kernelTime+= ocl->getKernelElapsedTimeValid();
 
-
-        //ocl->writeBestBuffer(&best);
-        //ocl->writePopulationBuffer(population);
-
-        //ocl->finishCommandQueue();
-
-        //ocl->enqueueEvolveKernel();
-        //ocl->finishCommandQueue();
-
-        //ocl->readPopulationBuffer(population);
-        //ocl->finishCommandQueue();
-        //for(int k = 0; k < NUM_INDIV; k++){
-        //    activateNodes(&population[k], params);
-        //}
-
-        //copyActiveNodes(population, activePopulation);
-        //ocl->writePopulationActiveBuffer(activePopulation);
-        //ocl->readPopulationBuffer(population);
 
         ocl->readFitnessBuffer();
-        //ocl->readFitnessValidationBuffer();
 
         ocl->finishCommandQueue();
 
-        /*for(int k = 0; k < NUM_INDIV; k++){
-            std::cout << "Fitness do " << k << ": " << population[k].fitness << std::endl;
-        }*/
+        it = 0;
+        prox = 0;
 
-
-        group = -1;
-        for(int k = 0; k < NUM_INDIV; k++){
-
-            population[k].fitness = ocl->fitness[k];
-            //std::cout << "ocl fitness k " << ocl->fitness[k] << std::endl;
-            //population[k].fitnessValidation = ocl->fitnessValidation[k];
-
-
-            /*std::cout << "Fitness de um individuo: ";
-            std::cout << population[k].fitness << std::endl;*/
-
-            if(k % NUM_EXECUTIONS == 0) {
-                group++;
+        for(int l = 0; l < NUM_EXECUTIONS; l++) {
+            for(it = prox; it < prox + NUM_INDIV_POP; it++) {
+                population[it].fitness = ocl->fitness[it];
             }
-
-            if(population[k].fitness >= best_train[group].fitness){
-                best_train[group] = population[k];
-               /* std::cout << "FITNESS best_train" << best_train.fitness << std::endl;
-                std::cout << "FITNESS population[k]" << population[k].fitness << std::endl;*/
-            }
-
-            /*if(population[k].fitnessValidation >= best_valid.fitnessValidation){
-                best_valid = population[k];
-            }*/
+            prox = it;
         }
 
-        /*if(iterations%1000 == 0)
-            std::cout << std::endl;*/
+        it = 0;
+        prox = 0;
+
+        for(int l = 0; l < NUM_EXECUTIONS; l++) {
+            for(it = prox; it < prox + NUM_INDIV_POP; it++) {
+                if (population[it].fitness == params->M) {
+                    feasibles[l] += 1;
+                }
+            }
+            prox = it;
+        }
+
+        it = 0;
+        prox = 0;
+
+        for(int l = 0; l < NUM_EXECUTIONS; l++) {
+            if(feasibles[l] > 0) {
+                if(feasibles[l] == 1) {
+                    for(it = prox; it < prox + NUM_INDIV_POP; it++) {
+                        if(population[it].fitness == params->M){
+                            best_train[l] = population[it];
+                            bestActiveNodes[l] = population[it].numActiveNodes;
+                        }
+                    }
+                } else if (feasibles[l] > 1) {
+                    for(it = prox; it < prox + NUM_INDIV_POP; it++) {
+                        if(population[it].fitness == params->M){
+                            if(population[it].numActiveNodes < bestActiveNodes[l]) {
+                                best_train[l] = population[it];
+                                bestActiveNodes[l] = population[it].numActiveNodes;
+                            }
+                        }
+                    }
+                }
+            } else {
+                for(it = prox; it < prox + NUM_INDIV_POP; it++) {
+                    if(population[it].fitness > best_train[l].fitness){
+                        best_train[l] = population[it];
+                        bestActiveNodes[l] = population[it].numActiveNodes;
+                        equalFitness.clear();
+                        equalFitness.push_back(it);
+                    } else if (population[it].fitness == best_train[l].fitness) {
+                        equalFitness.push_back(it);
+                    }
+                }
+            }
+
+            equalFitness.clear();
+            prox = it;
+        }
+
+        for(int k = 0; k < NUM_EXECUTIONS; k++) {
+            bestActiveNodes[k] = 9999;
+        }
+
+        for(int k = 0; k < NUM_EXECUTIONS; k++) {
+            feasibles[k] = 0;
+        }
+
 
         for(int i  = 0; i < NUM_EXECUTIONS; i++) {
             best[i] = best_train[i];
         }
 
-       /* std::cout << "FITNESS best_train" << best_train.fitness << std::endl;
-        std::cout << "FITNESS best" << best.fitness << std::endl;*/
+        equalFitness.clear();
+        indBest = -1;
 
         timeManager.getEndTime(Iteracao_T);
         timeManager.getElapsedTime(Iteracao_T);

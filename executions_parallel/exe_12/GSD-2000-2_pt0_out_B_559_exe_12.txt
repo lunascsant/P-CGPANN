@@ -1,6 +1,0 @@
-Node20 6 1 12
-Node23 10 7 16
-Node33 20 6 17
-Node40 23 33 16
-Output 40
-
