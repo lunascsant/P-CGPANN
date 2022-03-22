@@ -622,14 +622,14 @@ void evaluatePopulation(Chromosome* pop, Dataset* dataset, int validation, int b
 
             if(!equalFitness.empty()) {
                 if(equalFitness.size() == 1) {
-                    bestFitness[l] = pop[i].fitness;
-                    bestActiveNodes[l] = pop[i].numActiveNodes;
-                    bestIndex[l] = i;
+                    bestFitness[l] = pop[equalFitness.at(0)].fitness;
+                    bestActiveNodes[l] = pop[equalFitness.at(0)].numActiveNodes;
+                    bestIndex[l] = equalFitness.at(0);
                 } else {
                     indBest = rand() % (equalFitness.size() - 1);
-                    bestFitness[l] = pop[indBest].fitness;
-                    bestActiveNodes[l] = pop[indBest].numActiveNodes;
-                    bestIndex[l] = indBest;
+                    bestFitness[l] = pop[equalFitness.at(indBest)].fitness;
+                    bestActiveNodes[l] = pop[equalFitness.at(indBest)].numActiveNodes;
+                    bestIndex[l] = equalFitness.at(indBest);
                 }
             }
         }
@@ -760,7 +760,6 @@ Chromosome *mutateTopologyProbabilisticActive(Chromosome *c, Parameters *p, int 
 }
 
 Chromosome *mutateSAM(Chromosome *c, Parameters *p, int *seed) {
-
     int i, j, inputOrFunction, nodeOrOutput;
     int activeSelected = 0;
 
@@ -787,7 +786,6 @@ Chromosome *mutateSAM(Chromosome *c, Parameters *p, int *seed) {
     }
 
     activateNodes(c, p);
-
     return  c;
 }
 
@@ -956,6 +954,17 @@ CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double 
                         equalFitness.push_back(it);
                     }
                 }
+
+                if(!equalFitness.empty()) {
+                    if(equalFitness.size() == 1) {
+                        bestActiveNodes[l] = current_pop[equalFitness.at(0)].numActiveNodes;
+                        best_train[l] = current_pop[equalFitness.at(0)];
+                    } else {
+                        indBest = rand() % (equalFitness.size() - 1);
+                        bestActiveNodes[l] = current_pop[equalFitness.at(indBest)].numActiveNodes;
+                        best_train[l] = current_pop[equalFitness.at(indBest)];
+                    }
+                }
             }
 
             equalFitness.clear();
@@ -1043,6 +1052,7 @@ Chromosome* PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *see
             population[k] = best[group];
             mutateSAM(&population[k], params, seeds);
         }
+
 
 
 #if DEFAULT
@@ -1158,6 +1168,17 @@ Chromosome* PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *see
                         equalFitness.push_back(it);
                     } else if (population[it].fitness == best_train[l].fitness) {
                         equalFitness.push_back(it);
+                    }
+                }
+
+                if(!equalFitness.empty()) {
+                    if(equalFitness.size() == 1) {
+                        bestActiveNodes[l] = population[equalFitness.at(0)].numActiveNodes;
+                        best_train[l] = population[equalFitness.at(0)];
+                    } else {
+                        indBest = rand() % (equalFitness.size() - 1);
+                        bestActiveNodes[l] = population[equalFitness.at(indBest)].numActiveNodes;
+                        best_train[l] = population[equalFitness.at(indBest)];
                     }
                 }
             }

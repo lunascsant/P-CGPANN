@@ -54,6 +54,7 @@ int main(int argc, char** argv) {
         std::string resultFileTimeKernel;*/
         std::string caminhoArquivoTime = "./time_counting/" + argExe + "/" + nomeArquivo + ".txt";
         FILE *f_CGP_time_parallel = fopen(caminhoArquivoTime.c_str(), "w");
+
     #else
 
         std::ofstream factivelFile;
@@ -251,7 +252,7 @@ int main(int argc, char** argv) {
             Chromosome* executionBest = PCGP(trainingData, params, ocl, seeds, &timeIter, &timeKernel, factivelFile);
 
                 for(int i = 0; i < NUM_EXECUTIONS; i++) {
-                    std::cout << "Fitness - exe " << i << " : " <<executionBest[i].fitness << std::endl;
+                    std::cout << "Fitness - exe " << i << " : " << executionBest[i].fitness << std::endl;
                     printFileFiveExe(&executionBest[i], params, factivelFile);
                 }
 
@@ -365,11 +366,13 @@ int main(int argc, char** argv) {
 
     std::cout << std::endl;
 
-    std::vector<std::string> geneNames = {};
+    std::vector<std::string> geneNames;
     std::string names;
-    std::ifstream FileGeneNames(genenames);
+    std::ifstream FileGeneNames;
+    FileGeneNames.open(genenames, std::ios::in);
     int linha = 0;
-    while(std::getline (FileGeneNames, names)) {
+    while(!FileGeneNames.eof()) {
+        FileGeneNames >> names;
         geneNames.push_back(names);
         linha++;
     }
