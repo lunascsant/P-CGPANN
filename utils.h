@@ -51,7 +51,7 @@ float randomProb(int *seed);
 unsigned int randomOutputIndex(int* seed);
 unsigned int getFunctionInputs(unsigned int function);
 
-void readDataset(Parameters* params, Dataset* fulldata, char* filename);
+void readDataset(Parameters* params, Dataset* fulldata, std::string filename);
 void printDataset(Dataset *data);
 
 

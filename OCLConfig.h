@@ -145,6 +145,7 @@ public:
     void allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int sizeTest);
     void setNDRages();
     void setCompileFlags();
+    void releaseAll();
     std::string setProgramSource(Parameters* p, Dataset* fullData);
     void buildProgram(Parameters* p, Dataset* fullData, std::string sourceFileStr);
     void buildKernels();

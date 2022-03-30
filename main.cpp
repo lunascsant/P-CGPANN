@@ -2,6 +2,7 @@
 
 #include "cgp.h"
 #include <fstream>
+#include <map>
 #include "utils.h"
 #include "GPTime.h"
 #include "OCLConfig.h"
@@ -19,71 +20,62 @@ void printFileFiveExe(Chromosome *c, Parameters *p, std::ofstream& factivel_file
 }
 
 int main(int argc, char** argv) {
-    char* datasetFile = argv[1];
 
-    std::string genenames = argv[4];
+    int newSeed = 0;
+    std::string geneNamesStr = argv[1];
+    std::string argExe = argv[2];
+    std::string argProblemName = argv[3];
+    std::ifstream geneNamesFile(geneNamesStr);
+    std::vector<std::string> geneNames;
+    std::string gene;
+    int numGenes = 0;
+
+    std::string rankedEdgesfile = "./executions_parallel/" + argExe + "/rankedEdges_" + argProblemName + ".csv";
+    std::ofstream rankedEdges;
+    rankedEdges.open(rankedEdgesfile);
+
+    while(std::getline (geneNamesFile, gene)) {
+        geneNames.push_back(gene);
+        numGenes++;
+    }
+
+    geneNamesFile.close();
+
+    std::vector<int> todasRedes;
+
+    for(int t = 0; t < 2; t++) {
+        std::string datasetFile = geneNames.at(t) + "_" + argProblemName + ".txt";
 
     #if PARALLEL
         std::ofstream factivelFile;
-        std::string gene = argv[1];
-        std::string edgesDir;
-        if (gene[10] == '0') {
-            gene = gene.substr(0, 21);
-            edgesDir = gene.substr(0, 11);
-        } else {
-            gene = gene.substr(0, 20);
-            edgesDir = gene.substr(0, 10);
-        }
-        std::cout << edgesDir << std::endl;
-        std::string argSeed = argv[2];
-        std::string argExe = argv[3];
-        std::string argPt = argv[5];
-        std::string argCurrentGene = argv[6];
+        std::string gene = geneNames.at(t);
+
+        newSeed++;
+        std::string argSeed = std::to_string(newSeed);
         std::string nomeArquivo = gene + "_" + argSeed + "_" + argExe;
         std::string caminhoArquivo = "./executions_parallel/" + argExe + "/" + nomeArquivo + ".txt";
-        std::string rankedEdgesfile = "./executions_parallel/" + argExe + "/" + edgesDir + "/rankedEdges_" + argPt + "_" + argCurrentGene + ".csv";
         factivelFile.open(caminhoArquivo, std::ios::out);
         if (!factivelFile) {
             std::cout << "Error file" << std::endl;
             exit(1);
         }
 
-        /*std::string resultFile;
-        std::string resultFileTime;
-        std::string resultFileTimeIter;
-        std::string resultFileTimeKernel;*/
         std::string caminhoArquivoTime = "./time_counting/" + argExe + "/" + nomeArquivo + ".txt";
         FILE *f_CGP_time_parallel = fopen(caminhoArquivoTime.c_str(), "w");
-
     #else
-
         std::ofstream factivelFile;
-        std::string gene = argv[1];
-        std::string edgesDir;
-        if (gene[10] == '0') {
-            gene = gene.substr(0, 21);
-            edgesDir = gene.substr(0, 11);
-        } else {
-            gene = gene.substr(0, 20);
-            edgesDir = gene.substr(0, 10);
-        }
-        std::string argSeed = argv[2];
-        std::string argExe = argv[3];
-        std::string argPt = argv[5];
-        std::string argCurrentGene = argv[6];
+        std::string gene = geneNames.at(t);
+
+        newSeed++;
+        std::string argSeed = std::to_string(newSeed);
         std::string nomeArquivo = gene + "_" + argSeed + "_" + argExe;
         std::string caminhoArquivo = "./executions_sequential/" + argExe + "/" + nomeArquivo + ".txt";
-        std::string rankedEdgesfile = "./executions_sequential/" + argExe + "/" + edgesDir + "/rankedEdges_" + argPt + "_" + argCurrentGene + ".csv";
         factivelFile.open(caminhoArquivo, std::ios::out);
         if (!factivelFile) {
             std::cout << "Error file" << std::endl;
             exit(1);
         }
 
-        /*std::string resultFile;
-        std::string resultFileTime;
-        std::string resultFileTimeIter;
-        std::string resultFileTimeKernel;*/
         std::string caminhoArquivoTime = "./time_counting_sequential/" + argExe + "/" + nomeArquivo + ".txt";
         FILE *f_CGP_time_sequential = fopen(caminhoArquivoTime.c_str(), "w");
     #endif
@@ -135,257 +127,183 @@ int main(int argc, char** argv) {
         resultFileTimeKernel = "./results/cgpann_timeKernel.txt";
     #endif
 
-    /*FILE *f_CGP = fopen(resultFile.c_str(), "w");
-    FILE *f_CGP_time = fopen(resultFileTime.c_str(), "w");
-    FILE *f_CGP_timeIter = fopen(resultFileTimeIter.c_str(), "w");
-    FILE *f_CGP_timeKernel = fopen(resultFileTimeKernel.c_str(), "w");*/
+        /*FILE *f_CGP = fopen(resultFile.c_str(), "w");
+        FILE *f_CGP_time = fopen(resultFileTime.c_str(), "w");
+        FILE *f_CGP_timeIter = fopen(resultFileTimeIter.c_str(), "w");
+        FILE *f_CGP_timeKernel = fopen(resultFileTimeKernel.c_str(), "w");*/
 
 
-    // fprintf(f_CGP, "i,\tj,\taccuracy\n");
+        // fprintf(f_CGP, "i,\tj,\taccuracy\n");
 
 
-    GPTime timeManager(4);
-    timeManager.getStartTime(Total_T);
+        GPTime timeManager(4);
+        timeManager.getStartTime(Total_T);
 
-    Parameters *params;
-    params = new Parameters;
+        Parameters *params;
+        params = new Parameters;
 
-    Dataset fullData;
-    readDataset(params, &fullData, datasetFile);
-    //std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
-    //printDataset(&fullData);
-    //std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
+        Dataset fullData;
+        readDataset(params, &fullData, datasetFile);
+        //std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
+        //printDataset(&fullData);
+        //std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
 
-    int trainSize, validSize, testSize;
-    calculateDatasetsSize(&fullData, &trainSize, &validSize, &testSize);
+        int trainSize, validSize, testSize;
+        calculateDatasetsSize(&fullData, &trainSize, &validSize, &testSize);
 
-    int i, aux;
+        int i;
 
-    /**OPENCL CONFIG */
-    OCLConfig* ocl = new OCLConfig();
-    ocl->allocateBuffers(params, trainSize, validSize, testSize);
-    ocl->setNDRages();
-    ocl->setCompileFlags();
-    ocl->buildProgram(params, &fullData, "kernels\\kernel.cl");
-    ocl->buildKernels();
+        /**OPENCL CONFIG */
+        OCLConfig* ocl = new OCLConfig();
+        ocl->allocateBuffers(params, trainSize, validSize, testSize);
+        ocl->setNDRages();
+        ocl->setCompileFlags();
+        ocl->buildProgram(params, &fullData, "kernels\\kernel.cl");
+        ocl->buildKernels();
 #if IMAGE_R
-    ocl->setupImageBuffers();
+        ocl->setupImageBuffers();
 #elif IMAGE_RG
-    ocl->setupImageBuffersHalf();
+        ocl->setupImageBuffersHalf();
 #elif IMAGE_RGBA
-    ocl->setupImageBuffersQuarter();
+        ocl->setupImageBuffersQuarter();
 #elif  COMPACT_R
-    ocl->setupImageBuffersCompact();
+        ocl->setupImageBuffersCompact();
 #elif  COMPACT_RG
-    ocl->setupImageBuffersHalfCompact();
+        ocl->setupImageBuffersHalfCompact();
 #elif  COMPACT_RGBA
-    ocl->setupImageBuffersQuarterCompact();
+        ocl->setupImageBuffersQuarterCompact();
 #endif
-    /**OPENCL CONFIG */
+        /**OPENCL CONFIG */
 
 
-    // O argv[2] será o valor da SEED
-    int* seeds;
-    seeds = new int [ocl->maxLocalSize * NUM_INDIV];
-    //seeds = new int [1];
+        // O newSeed será o valor da SEED
+        int* seeds;
+        seeds = new int [ocl->maxLocalSize * NUM_INDIV];
+        //seeds = new int [1];
 
-    srand(atoi(argv[2]));
+        srand(newSeed);
 
-    /*random seeds used in parallel code*/
-    for(i = 0; i < ocl->maxLocalSize * NUM_INDIV; i++){
-        seeds[i] = atoi(argv[2]);
-    }
-
-
-    /*std::cout << "SEED vetor " << std::endl;
-    for(i = 0; i < ocl->maxLocalSize * NUM_INDIV; i++){
-        std::cout << seeds[i] << " ";
-    }
-    std::cout << std::endl;*/
-
-
-    int* indexesData = new int[fullData.M];// save the index order given the data shuffle+folds generation
-    for(aux = 0; aux < fullData.M; aux++){
-        indexesData[aux] = aux;
-    }
-
-    int* indexesDataInFolds = new int[fullData.M - (fullData.M % KFOLDS)];// save the indexes given the folds generation
-
-    std::vector<int> rede;
-    for(i = 0; i < 1; i++) {
-        std::vector<int> rede_local;
-        /*for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
-            seeds[aux] = aux + 55;
-        }*/
-
-        //shuffleData(&fullData, indexesData, &seeds[0]);
-        //Dataset* folds = generateFolds(&fullData, indexesData, indexesDataInFolds);
-        int id;
-        //#pragma omp parallel for default(none), private(j, id), shared(i, params, folds, f_CGP, timeManager, seeds, ocl), schedule(dynamic), num_threads(10)
-        //for(j = 0; j < KFOLDS; j++){
-            printf("( %d )\n", i);
-            /*for(aux = 0; aux < ocl->maxLocalSize * NUM_INDIV; aux++){
-                seeds[aux] = aux + 55 + i;
-            }*/
-            //std::cout << "(" << i << " " << j << ")" << std::endl;
-
-            int testIndex = 0;
-            int indexesFolds[KFOLDS];
-
-            ///return a permutation of the possible indexes for training and validation
-            //getIndexes(indexesFolds, KFOLDS, testIndex, &seeds[0]);
-            //indexesFolds[KFOLDS-1] = testIndex;
-
-            //Dataset* trainingData = getSelectedDataset(folds, indexesFolds, 0, 0);
-            Dataset* trainingData = &fullData;
-            //Dataset* validationData = getSelectedDataset(folds, indexesFolds, 7, 8);
-            //Dataset* testData = getSelectedDataset(folds, indexesFolds, 9, 9);
-            //std::cout << "(" << trainSize << " " << validSize << " " << testSize << ")" << std::endl;
-            //std::cout << "(" << trainingData->M << " " << validationData->M << " " << testData->M << ")" << std::endl;
-
-            ocl->transposeDatasets(trainingData);
-            double timeIter = 0;
-            double timeIterTotal = 0;
-            double timeKernel = 0;
-            timeManager.getStartTime(Evolucao_T);
-            #if PARALLEL
-            Chromosome* executionBest = PCGP(trainingData, params, ocl, seeds, &timeIter, &timeKernel, factivelFile);
-
-                for(int i = 0; i < NUM_EXECUTIONS; i++) {
-                    std::cout << "Fitness - exe " << i << " : " << executionBest[i].fitness << std::endl;
-                    printFileFiveExe(&executionBest[i], params, factivelFile);
-                }
-
-                for(int i = 0; i < NUM_EXECUTIONS; i++) {
-                    for(int j = 0; j < MAX_NODES; j++){
-                        if(executionBest[i].nodes[j].active == 1){
-                            for(int k = 0; k < MAX_ARITY; k++){
-                                if(executionBest[i].nodes[j].inputs[k] < trainingData->N){
-                                    //std::cout << "Input: " << k << " " << executionBest.nodes[j].inputs[k] << std::endl;
-                                    auto search = find(rede_local.begin(), rede_local.end(), executionBest[i].nodes[j].inputs[k]);
-                                    if(search == rede_local.end()){
-                                        rede_local.push_back(executionBest[i].nodes[j].inputs[k]);
-                                    }
-                                }
-                            }
-
-                        }
-                    }
-
-                    for(int & j : rede_local){
-                        rede.push_back(j);
-                    }
-
-                    rede_local.clear();
-                }
-
-
-
-            #else
-                Chromosome* executionBest = CGP(trainingData, params, seeds, &timeIter, &timeKernel, factivelFile);
-                //std::cout << "Test execution: " << std::endl;
-                //std::cout << "Melhor na main: " << executionBest.fitness << std::endl;
-
-                for(int i = 0; i < NUM_EXECUTIONS; i++) {
-                    std::cout << "Fitness - exe " << i << " : " <<executionBest[i].fitness << std::endl;
-                    printFileFiveExe(&executionBest[i], params, factivelFile);
-                }
-
-                for(int i = 0; i < NUM_EXECUTIONS; i++) {
-                    for(int j = 0; j < MAX_NODES; j++){
-                        if(executionBest[i].nodes[j].active == 1){
-                            for(int k = 0; k < MAX_ARITY; k++){
-                                if(executionBest[i].nodes[j].inputs[k] < trainingData->N){
-                                    //std::cout << "Input: " << k << " " << executionBest.nodes[j].inputs[k] << std::endl;
-                                    auto search = find(rede_local.begin(), rede_local.end(), executionBest[i].nodes[j].inputs[k]);
-                                    if(search == rede_local.end()){
-                                        rede_local.push_back(executionBest[i].nodes[j].inputs[k]);
-                                    }
-                                }
-                            }
-
-                        }
-                    }
-
-                    for(int & j : rede_local){
-                        rede.push_back(j);
-                    }
-
-                    rede_local.clear();
-                }
-
-                /*evaluateCircuit(&executionBest, testData);
-                printf("Test execution: %f ", executionBest.fitness);*/
-
-                //std::cout << executionBest.fitness << " " << executionBest.fitnessValidation << std::endl;
-            #endif
-            timeManager.getEndTime(Evolucao_T);
-            timeIterTotal = timeManager.getElapsedTime(Evolucao_T);
-            printf("Evol time: %f \n", timeIterTotal);
-
-            //std::cout << "Evol time  = " << timeManager.getElapsedTime(Evolucao_T) << std::endl;
-
-            /*fprintf(f_CGP, "%d,\t%d,\t%.4f\n", i, 0, executionBest.fitness);
-            fprintf(f_CGP_time, "%d;\t%d;\t%.4f\n", i, 0, timeIter);
-            fprintf(f_CGP_timeIter, "%d;\t%d;\t%.4f\n", i, 0, timeIterTotal);
-            fprintf(f_CGP_timeKernel, "%d;\t%d;\t%.4f\n", i, 0, timeKernel);*/
-
-            #if PARALLEL
-                /*fprintf(f_CGP_time_parallel, "Fitness best: \t%.4f\n", executionBest.fitness);*/
-                fprintf(f_CGP_time_parallel, "timeIter: \t%.4f\n", timeIter);
-                fprintf(f_CGP_time_parallel, "timeIterTotal: \t%.4f\n", timeIterTotal);
-                fprintf(f_CGP_time_parallel, "timeKernel: \t%.4f\n\n", timeKernel);
-            #else
-                fprintf(f_CGP_time_sequential, "Fitness best: \t%.4f\n", executionBest->fitness);
-                fprintf(f_CGP_time_sequential, "timeIter: \t%.4f\n", timeIter);
-                fprintf(f_CGP_time_sequential, "timeIterTotal: \t%.4f\n", timeIterTotal);
-                fprintf(f_CGP_time_sequential, "timeKernel: \t%.4f\n\n", timeKernel);
-            #endif
-
-
-        //}
-
-
-    }
-
-
-    timeManager.getEndTime(Total_T);
-
-    std::vector<float> counting;
-
-    for(int i = 0; i < fullData.N; i++){
-        float counted = std::count(rede.begin(), rede.end(), i);
-        counting.push_back(counted/NUM_EXECUTIONS);
-    }
-
-    std::cout << "xxxxxx Contagem xxxxxx" << std::endl;
-
-    for(int i = 0; i < counting.size(); i++){
-        std::cout << counting.at(i) << " ";
-    }
-
-    std::cout << std::endl;
-
-    std::vector<std::string> geneNames;
-    std::string names;
-    std::ifstream FileGeneNames;
-    FileGeneNames.open(genenames, std::ios::in);
-    int linha = 0;
-    while(!FileGeneNames.eof()) {
-        FileGeneNames >> names;
-        geneNames.push_back(names);
-        linha++;
-    }
-    FileGeneNames.close();
-
-    std::ofstream rankedEdges;
-    rankedEdges.open(rankedEdgesfile);
-    for(int i = 0; i < geneNames.size(); i++) {
-        if(counting.at(i) != 0) {
-            rankedEdges << geneNames[i] << "\t" << argCurrentGene << "\t" << counting.at(i) << "\n";
+        /*random seeds used in parallel code*/
+        for(i = 0; i < ocl->maxLocalSize * NUM_INDIV; i++){
+            seeds[i] = newSeed;
         }
-    }
-    rankedEdges.close();
+
+
+
+        std::vector<int> rede;
+
+        std::vector<int> rede_local;
+
+        Dataset* trainingData = &fullData;
+
+        ocl->transposeDatasets(trainingData);
+        double timeIter = 0;
+        double timeIterTotal = 0;
+        double timeKernel = 0;
+        timeManager.getStartTime(Evolucao_T);
+    #if PARALLEL
+        Chromosome* executionBest = PCGP(trainingData, params, ocl, seeds, &timeIter, &timeKernel, factivelFile);
+
+        for(int i = 0; i < NUM_EXECUTIONS; i++) {
+            std::cout << "Fitness - exe " << i << " : " << executionBest[i].fitness << std::endl;
+            printFileFiveExe(&executionBest[i], params, factivelFile);
+        }
+
+        for(int i = 0; i < NUM_EXECUTIONS; i++) {
+            for(int j = 0; j < MAX_NODES; j++){
+                if(executionBest[i].nodes[j].active == 1){
+                    for(int k = 0; k < MAX_ARITY; k++){
+                        if(executionBest[i].nodes[j].inputs[k] < trainingData->N){
+                            //std::cout << "Input: " << k << " " << executionBest.nodes[j].inputs[k] << std::endl;
+                            auto search = find(rede_local.begin(), rede_local.end(), executionBest[i].nodes[j].inputs[k]);
+                            if(search == rede_local.end()){
+                                rede_local.push_back(executionBest[i].nodes[j].inputs[k]);
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            for(int & j : rede_local){
+                rede.push_back(j);
+            }
+
+            rede_local.clear();
+        }
+
+    #else
+        Chromosome* executionBest = CGP(trainingData, params, seeds, &timeIter, &timeKernel, factivelFile);
+
+        for(int i = 0; i < NUM_EXECUTIONS; i++) {
+            std::cout << "Fitness - exe " << i << " : " <<executionBest[i].fitness << std::endl;
+            printFileFiveExe(&executionBest[i], params, factivelFile);
+        }
+
+        for(int i = 0; i < NUM_EXECUTIONS; i++) {
+            for(int j = 0; j < MAX_NODES; j++){
+                if(executionBest[i].nodes[j].active == 1){
+                    for(int k = 0; k < MAX_ARITY; k++){
+                        if(executionBest[i].nodes[j].inputs[k] < trainingData->N){
+                            //std::cout << "Input: " << k << " " << executionBest.nodes[j].inputs[k] << std::endl;
+                            auto search = find(rede_local.begin(), rede_local.end(), executionBest[i].nodes[j].inputs[k]);
+                            if(search == rede_local.end()){
+                                rede_local.push_back(executionBest[i].nodes[j].inputs[k]);
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            for(int & j : rede_local){
+                rede.push_back(j);
+            }
+
+            rede_local.clear();
+        }
+
+    #endif
+        timeManager.getEndTime(Evolucao_T);
+        timeIterTotal = timeManager.getElapsedTime(Evolucao_T);
+        printf("Evol time: %f \n", timeIterTotal);
+
+
+    #if PARALLEL
+        /*fprintf(f_CGP_time_parallel, "Fitness best: \t%.4f\n", executionBest.fitness);*/
+        fprintf(f_CGP_time_parallel, "timeIter: \t%.4f\n", timeIter);
+        fprintf(f_CGP_time_parallel, "timeIterTotal: \t%.4f\n", timeIterTotal);
+        fprintf(f_CGP_time_parallel, "timeKernel: \t%.4f\n\n", timeKernel);
+    #else
+        fprintf(f_CGP_time_sequential, "Fitness best: \t%.4f\n", executionBest->fitness);
+        fprintf(f_CGP_time_sequential, "timeIter: \t%.4f\n", timeIter);
+        fprintf(f_CGP_time_sequential, "timeIterTotal: \t%.4f\n", timeIterTotal);
+        fprintf(f_CGP_time_sequential, "timeKernel: \t%.4f\n\n", timeKernel);
+    #endif
+
+        timeManager.getEndTime(Total_T);
+
+        std::vector<float> counting;
+
+        for(int i = 0; i < fullData.N; i++){
+            float counted = std::count(rede.begin(), rede.end(), i);
+            counting.push_back(counted/NUM_EXECUTIONS);
+        }
+
+        std::cout << "xxxxxx Contagem xxxxxx" << std::endl;
+
+        for(int i = 0; i < counting.size(); i++){
+            std::cout << counting.at(i) << " ";
+        }
+
+        std::cout << std::endl;
+
+        for(int i = 0; i < geneNames.size(); i++) {
+            if(counting.at(i) != 0) {
+                rankedEdges << geneNames[i] << "\t" << gene << "\t" << counting.at(i) << "\n";
+            }
+        }
+
 
     #if PARALLEL
         fprintf(f_CGP_time_parallel, "\n");
@@ -397,11 +315,14 @@ int main(int argc, char** argv) {
         fprintf(f_CGP_time_sequential, "\n");
     #endif
 
-    std::cout << "Total time  = " << timeManager.getElapsedTime(Total_T) << std::endl;
+        std::cout << "Total time  = " << timeManager.getElapsedTime(Total_T) << std::endl;
 
 
-    factivelFile.close();
-    delete params;
+        factivelFile.close();
+        delete params;
+    }
+
+    rankedEdges.close();
 
     return 0;
 }

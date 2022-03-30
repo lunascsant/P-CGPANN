@@ -118,6 +118,11 @@ void OCLConfig::allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int
     int result;
     std::cout << "Allocating buffers... " << std::endl;
 
+    std::cout << "maxLocalSize " << maxLocalSize << std::endl;
+    std::cout << "O " << p->O << std::endl;
+    std::cout << "N " << p->N << std::endl;
+    std::cout << "num functions " << p->NUM_FUNCTIONS << std::endl;
+
     ///Buffers
     bufferSeeds = cl::Buffer(context, CL_MEM_READ_WRITE, NUM_INDIV * maxLocalSize  * sizeof(int), nullptr,  &result);
     checkError(result);
@@ -179,6 +184,26 @@ void OCLConfig::allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int
     (transposeOutputsTest) = new float [numPointsTest * p->O];
 
     //(transposeDatasetOutput) = new float [numPoints * (p->N + p->O)];
+}
+
+void OCLConfig::releaseAll() {
+    /*clReleaseProgram(program);
+    clReleaseContext(context);
+    clReleaseMemObject(bufferSeeds);
+    clReleaseMemObject(bufferDatasetTrain);
+    clReleaseMemObject(bufferOutputsTrain);
+    clReleaseMemObject(bufferDatasetValid);
+    clReleaseMemObject(bufferOutputsValid);
+    clReleaseMemObject(bufferDatasetTest);
+    clReleaseMemObject(bufferOutputsTest);
+    clReleaseMemObject(bufferFunctions);
+    clReleaseMemObject(bufferBest);
+    clReleaseMemObject(bufferPopulation);
+    clReleaseMemObject(bufferPopulationCompact);
+    clReleaseMemObject(bufferFitness);
+    clReleaseMemObject(bufferFitnessValidation);*/
+
+    std::cout << "All buffers released" << std::endl;
 }
 
 void OCLConfig::setNDRages() {

@@ -105,7 +105,7 @@ std::string ToString( double t ){
     std::stringstream ss; ss << std::setprecision(32) << t; return ss.str();
 }
 
-void readDataset(Parameters* params, Dataset* fulldata, char* filename){
+void readDataset(Parameters* params, Dataset* fulldata, std::string filename){
 
     std::fstream arq;
 
@@ -114,7 +114,7 @@ void readDataset(Parameters* params, Dataset* fulldata, char* filename){
     int readOps;
     int info;
 
-    printf("Lendo Dados Arquivo... %s\n",filename);
+    std::cout << "Lendo Dados Arquivo... " << filename << std::endl;
     arq.open(filename, std::fstream::in);
 
     /** Read the dataset size (M) and number of inputs (N) */
