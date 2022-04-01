@@ -68,7 +68,7 @@
 #define NUM_EVALUATIONS 2.40e+007
 
 
-#define PARALLEL    1
+#define PARALLEL    0
 
 #define DEFAULT      1
 #define COMPACT      0
