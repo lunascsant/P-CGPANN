@@ -1,8 +1,8 @@
 Fitness best: 	92.0000
-timeIter: 	80.9883
-timeIterTotal: 	80.9933
-timeKernel: 	74.8634
+timeIter: 	48.0375
+timeIterTotal: 	48.0435
+timeKernel: 	44.3290
 
 
-Total time: 	84.0725
+Total time: 	50.1820
 

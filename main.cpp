@@ -205,10 +205,15 @@ int main(int argc, char** argv) {
 
     for(int i = 0; i < NUM_EXECUTIONS; i++) {
         std::cout << "Fitness - exe " << i << " : " << executionBest[i].fitness << std::endl;
-        printFileFiveExe(&executionBest[i], params, factivelFile);
+        if(executionBest[i].fitness == params->M)
+            printFileFiveExe(&executionBest[i], params, factivelFile);
+        else
+            factivelFile << "Nao factivel\n\n";
     }
 
     for(int i = 0; i < NUM_EXECUTIONS; i++) {
+        if(executionBest[i].fitness != params->M)
+            continue;
         for(int j = 0; j < MAX_NODES; j++){
             if(executionBest[i].nodes[j].active == 1){
                 for(int k = 0; k < MAX_ARITY; k++){
@@ -236,10 +241,15 @@ int main(int argc, char** argv) {
 
     for(int i = 0; i < NUM_EXECUTIONS; i++) {
         std::cout << "Fitness - exe " << i << " : " <<executionBest[i].fitness << std::endl;
-        printFileFiveExe(&executionBest[i], params, factivelFile);
+        if(executionBest[i].fitness == params->M)
+            printFileFiveExe(&executionBest[i], params, factivelFile);
+        else
+            factivelFile << "Nao factivel\n\n";
     }
 
     for(int i = 0; i < NUM_EXECUTIONS; i++) {
+        if(executionBest[i].fitness != params->M)
+            continue;
         for(int j = 0; j < MAX_NODES; j++){
             if(executionBest[i].nodes[j].active == 1){
                 for(int k = 0; k < MAX_ARITY; k++){

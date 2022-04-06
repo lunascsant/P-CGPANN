@@ -1,20 +1,10 @@
-Node573 208 477 17
-Output 573
+Nao factivel
 
+Nao factivel
 
-Node515 157 477 16
-Output 515
+Nao factivel
 
+Nao factivel
 
-Node512 166 477 16
-Output 512
-
-
-Node503 477 208 17
-Output 503
-
-
-Node576 477 208 17
-Output 576
-
+Nao factivel
 
