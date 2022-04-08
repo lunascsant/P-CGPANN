@@ -23,6 +23,7 @@ int main(int argc, char** argv) {
 
     std::string newSeed = argv[5];
     std::string geneNamesStr = argv[1];
+    std::cout << geneNamesStr << std::endl;
     std::string argExe = argv[2];
     std::string argProblemName = argv[3];
     std::ifstream geneNamesFile(geneNamesStr);
@@ -35,6 +36,8 @@ int main(int argc, char** argv) {
         numGenes++;
     }
 
+    std::cout << geneNames.size() << std::endl;
+
     geneNamesFile.close();
 
     std::string currentGene = argv[4];
@@ -43,11 +46,16 @@ int main(int argc, char** argv) {
 
     std::string datasetFile = currentGene + "_" + argProblemName + ".txt";
 
+
+
 #if PARALLEL
 
+    std::string unfeasiblesFile = "./executions_parallel/" + argExe + "/unfeasibles_" + argProblemName + ".txt";
     std::string rankedEdgesfile = "./executions_parallel/" + argExe + "/rankedEdges_" + argProblemName + ".csv";
     std::ofstream rankedEdges;
+    std::ofstream unfeasibles;
     rankedEdges.open(rankedEdgesfile, std::ios_base::app);
+    unfeasibles.open(unfeasiblesFile, std::ios_base::app);
 
     std::ofstream factivelFile;
 
@@ -63,9 +71,12 @@ int main(int argc, char** argv) {
     FILE *f_CGP_time_parallel = fopen(caminhoArquivoTime.c_str(), "w");
 #else
 
+    std::string unfeasiblesFile = "./executions_sequential/" + argExe + "/unfeasibles_" + argProblemName + ".txt";
     std::string rankedEdgesfile = "./executions_sequential/" + argExe + "/rankedEdges_" + argProblemName + ".csv";
     std::ofstream rankedEdges;
+    std::ofstream unfeasibles;
     rankedEdges.open(rankedEdgesfile, std::ios_base::app);
+    unfeasibles.open(unfeasiblesFile, std::ios_base::app);
 
     std::ofstream factivelFile;
 
@@ -190,7 +201,7 @@ int main(int argc, char** argv) {
 
 
     std::vector<int> rede;
-
+    int countUnfeasible;
     std::vector<int> rede_local;
 
     Dataset* trainingData = &fullData;
@@ -211,9 +222,14 @@ int main(int argc, char** argv) {
             factivelFile << "Nao factivel\n\n";
     }
 
+    countUnfeasible = 0;
+
     for(int i = 0; i < NUM_EXECUTIONS; i++) {
-        if(executionBest[i].fitness != params->M)
+        if(executionBest[i].fitness != params->M) {
+            countUnfeasible += 1;
             continue;
+        }
+
         for(int j = 0; j < MAX_NODES; j++){
             if(executionBest[i].nodes[j].active == 1){
                 for(int k = 0; k < MAX_ARITY; k++){
@@ -247,9 +263,14 @@ int main(int argc, char** argv) {
             factivelFile << "Nao factivel\n\n";
     }
 
+    countUnfeasible = 0;
+
     for(int i = 0; i < NUM_EXECUTIONS; i++) {
-        if(executionBest[i].fitness != params->M)
+        if(executionBest[i].fitness != params->M) {
+            countUnfeasible += 1;
             continue;
+        }
+
         for(int j = 0; j < MAX_NODES; j++){
             if(executionBest[i].nodes[j].active == 1){
                 for(int k = 0; k < MAX_ARITY; k++){
@@ -276,7 +297,6 @@ int main(int argc, char** argv) {
     timeManager.getEndTime(Evolucao_T);
     timeIterTotal = timeManager.getElapsedTime(Evolucao_T);
     printf("Evol time: %f \n", timeIterTotal);
-
 
 #if PARALLEL
     /*fprintf(f_CGP_time_parallel, "Fitness best: \t%.4f\n", executionBest.fitness);*/
@@ -311,6 +331,10 @@ int main(int argc, char** argv) {
         if(counting.at(i) != 0) {
             rankedEdges << geneNames[i] << "\t" << currentGene << "\t" << counting.at(i) << "\n";
         }
+    }
+
+    if(countUnfeasible == NUM_EXECUTIONS) {
+        unfeasibles << currentGene << "\n";
     }
 
 

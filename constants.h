@@ -44,7 +44,7 @@
 #define CONST_PI 3.14159265359
 
 /** Graph parameters */
-#define MAX_NODES 100
+#define MAX_NODES 500
 #define MAX_OUTPUTS 1
 #define MAX_ARITY 2
 

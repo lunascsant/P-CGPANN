@@ -760,6 +760,7 @@ Chromosome *mutateTopologyProbabilisticActive(Chromosome *c, Parameters *p, int 
 }
 
 Chromosome *mutateSAM(Chromosome *c, Parameters *p, int *seed) {
+    //std::cout << "inicio mutacao" << std::endl;
     int i, j, inputOrFunction, nodeOrOutput;
     int activeSelected = 0;
 
@@ -771,21 +772,23 @@ Chromosome *mutateSAM(Chromosome *c, Parameters *p, int *seed) {
     } else {
         while(activeSelected == 0) {
             i = randomInterval(0, MAX_NODES - 1, seed);
+            //std::cout << "ind no " << i << " active node " << c->nodes[i].active << std::endl;
             if(c->nodes[i].active == 1) {
                 activeSelected = 1;
-                inputOrFunction = randomInterval(0, 1, seed);
-                if (!inputOrFunction) {
-                    c->nodes[i].function = p->functionSet[randomFunction(p, seed)];
-                    c->nodes[i].maxInputs = getFunctionInputs(c->nodes[i].function);
-                } else {
-                    j = randomInterval(0, 1, seed);
-                    c->nodes[i].inputs[j] = randomInput(p, i, seed);
-                }
+            }
+            inputOrFunction = randomInterval(0, 1, seed);
+            if (!inputOrFunction) {
+                c->nodes[i].function = p->functionSet[randomFunction(p, seed)];
+                c->nodes[i].maxInputs = getFunctionInputs(c->nodes[i].function);
+            } else {
+                j = randomInterval(0, 1, seed);
+                c->nodes[i].inputs[j] = randomInput(p, i, seed);
             }
         }
     }
 
     activateNodes(c, p);
+    //std::cout << "fim mutacao" << std::endl;
     return  c;
 }
 
@@ -1152,6 +1155,8 @@ Chromosome* PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *see
                 } else if (feasibles[l] > 1) {
                     for(it = prox; it < prox + NUM_INDIV_POP; it++) {
                         if(population[it].fitness == params->M){
+                            // resolver escolha aleatoria dps de comparação
+                            // nós ativos
                             if(population[it].numActiveNodes < bestActiveNodes[l]) {
                                 best_train[l] = population[it];
                                 bestActiveNodes[l] = population[it].numActiveNodes;
