@@ -1,2070 +1,759 @@
-./prog_seq 'geneNames_2.txt' 'exe_1' 'TCERG1' 1
-./prog_seq 'geneNames_2.txt' 'exe_1' 'SRRM1' 2
-./prog_seq 'geneNames_2.txt' 'exe_1' 'XRCC5' 3
-./prog_seq 'geneNames_2.txt' 'exe_1' 'RNASE1' 4
-./prog_seq 'geneNames_2.txt' 'exe_1' 'HMGN2' 5
-./prog_seq 'geneNames_2.txt' 'exe_1' 'TCEB2' 6
-./prog_seq 'geneNames_2.txt' 'exe_1' 'IFITM3' 7
-./prog_seq 'geneNames_2.txt' 'exe_1' 'PHB2' 8
-./prog_seq 'geneNames_2.txt' 'exe_1' 'SUB1' 9
-./prog_seq 'geneNames_2.txt' 'exe_1' 'LAMB1' 10
-./prog_seq 'geneNames_2.txt' 'exe_1' 'SNRPD1' 11
-./prog_seq 'geneNames_2.txt' 'exe_1' 'PAPOLA' 12
-./prog_seq 'geneNames_2.txt' 'exe_1' 'POLR2G' 13
-./prog_seq 'geneNames_2.txt' 'exe_1' 'APOC1' 14
-./prog_seq 'geneNames_2.txt' 'exe_1' 'POLR2I' 15
-./prog_seq 'geneNames_2.txt' 'exe_1' 'PTMA' 16
-./prog_seq 'geneNames_2.txt' 'exe_1' 'XRCC6' 17
-./prog_seq 'geneNames_2.txt' 'exe_1' 'EEF1A1' 18
-./prog_seq 'geneNames_2.txt' 'exe_1' 'ZNF638' 19
-./prog_seq 'geneNames_2.txt' 'exe_1' 'SRSF10' 20
-./prog_seq 'geneNames_2.txt' 'exe_1' 'S100A14' 21
-./prog_seq 'geneNames_2.txt' 'exe_1' 'S100A16' 22
-./prog_seq 'geneNames_2.txt' 'exe_1' 'SRSF6' 23
-./prog_seq 'geneNames_2.txt' 'exe_1' 'ENO1' 24
-./prog_seq 'geneNames_2.txt' 'exe_1' 'NPM1' 25
-./prog_seq 'geneNames_2.txt' 'exe_1' 'ILF3' 26
-./prog_seq 'geneNames_2.txt' 'exe_1' 'NONO' 27
-./prog_seq 'geneNames_2.txt' 'exe_1' 'CAMK2D' 28
-./prog_seq 'geneNames_2.txt' 'exe_1' 'HNRNPR' 29
-./prog_seq 'geneNames_2.txt' 'exe_1' 'RBBP7' 30
-./prog_seq 'geneNames_2.txt' 'exe_1' 'SSB' 31
-./prog_seq 'geneNames_2.txt' 'exe_1' 'WFDC2' 32
-./prog_seq 'geneNames_2.txt' 'exe_1' 'KPNA2' 33
-./prog_seq 'geneNames_2.txt' 'exe_1' 'APOA1' 34
-./prog_seq 'geneNames_2.txt' 'exe_1' 'RBM39' 35
-./prog_seq 'geneNames_2.txt' 'exe_1' 'HDAC2' 36
-./prog_seq 'geneNames_2.txt' 'exe_1' 'CNOT7' 37
-./prog_seq 'geneNames_2.txt' 'exe_1' 'SOX4' 38
-./prog_seq 'geneNames_2.txt' 'exe_1' 'HERPUD1' 39
-./prog_seq 'geneNames_2.txt' 'exe_1' 'ANP32E' 40
-./prog_seq 'geneNames_2.txt' 'exe_1' 'THRAP3' 41
-./prog_seq 'geneNames_2.txt' 'exe_1' 'POLR2F' 42
-./prog_seq 'geneNames_2.txt' 'exe_1' 'ACTL6A' 43
-./prog_seq 'geneNames_2.txt' 'exe_1' 'AKR1D1' 44
-./prog_seq 'geneNames_2.txt' 'exe_1' 'HMGN3' 45
-./prog_seq 'geneNames_2.txt' 'exe_1' 'CKS2' 46
-./prog_seq 'geneNames_2.txt' 'exe_1' 'APEX1' 47
-./prog_seq 'geneNames_2.txt' 'exe_1' 'DDX5' 48
-./prog_seq 'geneNames_2.txt' 'exe_1' 'CDK1' 49
-./prog_seq 'geneNames_2.txt' 'exe_1' 'CACYBP' 50
-./prog_seq 'geneNames_2.txt' 'exe_1' 'PON2' 51
-./prog_seq 'geneNames_2.txt' 'exe_1' 'AMZ2' 52
-./prog_seq 'geneNames_2.txt' 'exe_1' 'ANXA3' 53
-./prog_seq 'geneNames_2.txt' 'exe_1' 'APOA2' 54
-./prog_seq 'geneNames_2.txt' 'exe_1' 'UGP2' 55
-./prog_seq 'geneNames_2.txt' 'exe_1' 'GPC3' 56
-./prog_seq 'geneNames_2.txt' 'exe_1' 'PWP1' 57
-./prog_seq 'geneNames_2.txt' 'exe_1' 'CNBP' 58
-./prog_seq 'geneNames_2.txt' 'exe_1' 'MATR3' 59
-./prog_seq 'geneNames_2.txt' 'exe_1' 'SRSF3' 60
-./prog_seq 'geneNames_2.txt' 'exe_1' 'ILF2' 61
-./prog_seq 'geneNames_2.txt' 'exe_1' 'ID2' 62
-./prog_seq 'geneNames_2.txt' 'exe_1' 'CSDE1' 63
-./prog_seq 'geneNames_2.txt' 'exe_1' 'OCIAD2' 64
-./prog_seq 'geneNames_2.txt' 'exe_1' 'STMN1' 65
-./prog_seq 'geneNames_2.txt' 'exe_1' 'RHOBTB3' 66
-./prog_seq 'geneNames_2.txt' 'exe_1' 'RBMX' 67
-./prog_seq 'geneNames_2.txt' 'exe_1' 'BTF3' 68
-./prog_seq 'geneNames_2.txt' 'exe_1' 'SNRPB' 69
-./prog_seq 'geneNames_2.txt' 'exe_2' 'TCERG1' 70
-./prog_seq 'geneNames_2.txt' 'exe_2' 'SRRM1' 71
-./prog_seq 'geneNames_2.txt' 'exe_2' 'XRCC5' 72
-./prog_seq 'geneNames_2.txt' 'exe_2' 'RNASE1' 73
-./prog_seq 'geneNames_2.txt' 'exe_2' 'HMGN2' 74
-./prog_seq 'geneNames_2.txt' 'exe_2' 'TCEB2' 75
-./prog_seq 'geneNames_2.txt' 'exe_2' 'IFITM3' 76
-./prog_seq 'geneNames_2.txt' 'exe_2' 'PHB2' 77
-./prog_seq 'geneNames_2.txt' 'exe_2' 'SUB1' 78
-./prog_seq 'geneNames_2.txt' 'exe_2' 'LAMB1' 79
-./prog_seq 'geneNames_2.txt' 'exe_2' 'SNRPD1' 80
-./prog_seq 'geneNames_2.txt' 'exe_2' 'PAPOLA' 81
-./prog_seq 'geneNames_2.txt' 'exe_2' 'POLR2G' 82
-./prog_seq 'geneNames_2.txt' 'exe_2' 'APOC1' 83
-./prog_seq 'geneNames_2.txt' 'exe_2' 'POLR2I' 84
-./prog_seq 'geneNames_2.txt' 'exe_2' 'PTMA' 85
-./prog_seq 'geneNames_2.txt' 'exe_2' 'XRCC6' 86
-./prog_seq 'geneNames_2.txt' 'exe_2' 'EEF1A1' 87
-./prog_seq 'geneNames_2.txt' 'exe_2' 'ZNF638' 88
-./prog_seq 'geneNames_2.txt' 'exe_2' 'SRSF10' 89
-./prog_seq 'geneNames_2.txt' 'exe_2' 'S100A14' 90
-./prog_seq 'geneNames_2.txt' 'exe_2' 'S100A16' 91
-./prog_seq 'geneNames_2.txt' 'exe_2' 'SRSF6' 92
-./prog_seq 'geneNames_2.txt' 'exe_2' 'ENO1' 93
-./prog_seq 'geneNames_2.txt' 'exe_2' 'NPM1' 94
-./prog_seq 'geneNames_2.txt' 'exe_2' 'ILF3' 95
-./prog_seq 'geneNames_2.txt' 'exe_2' 'NONO' 96
-./prog_seq 'geneNames_2.txt' 'exe_2' 'CAMK2D' 97
-./prog_seq 'geneNames_2.txt' 'exe_2' 'HNRNPR' 98
-./prog_seq 'geneNames_2.txt' 'exe_2' 'RBBP7' 99
-./prog_seq 'geneNames_2.txt' 'exe_2' 'SSB' 100
-./prog_seq 'geneNames_2.txt' 'exe_2' 'WFDC2' 101
-./prog_seq 'geneNames_2.txt' 'exe_2' 'KPNA2' 102
-./prog_seq 'geneNames_2.txt' 'exe_2' 'APOA1' 103
-./prog_seq 'geneNames_2.txt' 'exe_2' 'RBM39' 104
-./prog_seq 'geneNames_2.txt' 'exe_2' 'HDAC2' 105
-./prog_seq 'geneNames_2.txt' 'exe_2' 'CNOT7' 106
-./prog_seq 'geneNames_2.txt' 'exe_2' 'SOX4' 107
-./prog_seq 'geneNames_2.txt' 'exe_2' 'HERPUD1' 108
-./prog_seq 'geneNames_2.txt' 'exe_2' 'ANP32E' 109
-./prog_seq 'geneNames_2.txt' 'exe_2' 'THRAP3' 110
-./prog_seq 'geneNames_2.txt' 'exe_2' 'POLR2F' 111
-./prog_seq 'geneNames_2.txt' 'exe_2' 'ACTL6A' 112
-./prog_seq 'geneNames_2.txt' 'exe_2' 'AKR1D1' 113
-./prog_seq 'geneNames_2.txt' 'exe_2' 'HMGN3' 114
-./prog_seq 'geneNames_2.txt' 'exe_2' 'CKS2' 115
-./prog_seq 'geneNames_2.txt' 'exe_2' 'APEX1' 116
-./prog_seq 'geneNames_2.txt' 'exe_2' 'DDX5' 117
-./prog_seq 'geneNames_2.txt' 'exe_2' 'CDK1' 118
-./prog_seq 'geneNames_2.txt' 'exe_2' 'CACYBP' 119
-./prog_seq 'geneNames_2.txt' 'exe_2' 'PON2' 120
-./prog_seq 'geneNames_2.txt' 'exe_2' 'AMZ2' 121
-./prog_seq 'geneNames_2.txt' 'exe_2' 'ANXA3' 122
-./prog_seq 'geneNames_2.txt' 'exe_2' 'APOA2' 123
-./prog_seq 'geneNames_2.txt' 'exe_2' 'UGP2' 124
-./prog_seq 'geneNames_2.txt' 'exe_2' 'GPC3' 125
-./prog_seq 'geneNames_2.txt' 'exe_2' 'PWP1' 126
-./prog_seq 'geneNames_2.txt' 'exe_2' 'CNBP' 127
-./prog_seq 'geneNames_2.txt' 'exe_2' 'MATR3' 128
-./prog_seq 'geneNames_2.txt' 'exe_2' 'SRSF3' 129
-./prog_seq 'geneNames_2.txt' 'exe_2' 'ILF2' 130
-./prog_seq 'geneNames_2.txt' 'exe_2' 'ID2' 131
-./prog_seq 'geneNames_2.txt' 'exe_2' 'CSDE1' 132
-./prog_seq 'geneNames_2.txt' 'exe_2' 'OCIAD2' 133
-./prog_seq 'geneNames_2.txt' 'exe_2' 'STMN1' 134
-./prog_seq 'geneNames_2.txt' 'exe_2' 'RHOBTB3' 135
-./prog_seq 'geneNames_2.txt' 'exe_2' 'RBMX' 136
-./prog_seq 'geneNames_2.txt' 'exe_2' 'BTF3' 137
-./prog_seq 'geneNames_2.txt' 'exe_2' 'SNRPB' 138
-./prog_seq 'geneNames_2.txt' 'exe_3' 'TCERG1' 139
-./prog_seq 'geneNames_2.txt' 'exe_3' 'SRRM1' 140
-./prog_seq 'geneNames_2.txt' 'exe_3' 'XRCC5' 141
-./prog_seq 'geneNames_2.txt' 'exe_3' 'RNASE1' 142
-./prog_seq 'geneNames_2.txt' 'exe_3' 'HMGN2' 143
-./prog_seq 'geneNames_2.txt' 'exe_3' 'TCEB2' 144
-./prog_seq 'geneNames_2.txt' 'exe_3' 'IFITM3' 145
-./prog_seq 'geneNames_2.txt' 'exe_3' 'PHB2' 146
-./prog_seq 'geneNames_2.txt' 'exe_3' 'SUB1' 147
-./prog_seq 'geneNames_2.txt' 'exe_3' 'LAMB1' 148
-./prog_seq 'geneNames_2.txt' 'exe_3' 'SNRPD1' 149
-./prog_seq 'geneNames_2.txt' 'exe_3' 'PAPOLA' 150
-./prog_seq 'geneNames_2.txt' 'exe_3' 'POLR2G' 151
-./prog_seq 'geneNames_2.txt' 'exe_3' 'APOC1' 152
-./prog_seq 'geneNames_2.txt' 'exe_3' 'POLR2I' 153
-./prog_seq 'geneNames_2.txt' 'exe_3' 'PTMA' 154
-./prog_seq 'geneNames_2.txt' 'exe_3' 'XRCC6' 155
-./prog_seq 'geneNames_2.txt' 'exe_3' 'EEF1A1' 156
-./prog_seq 'geneNames_2.txt' 'exe_3' 'ZNF638' 157
-./prog_seq 'geneNames_2.txt' 'exe_3' 'SRSF10' 158
-./prog_seq 'geneNames_2.txt' 'exe_3' 'S100A14' 159
-./prog_seq 'geneNames_2.txt' 'exe_3' 'S100A16' 160
-./prog_seq 'geneNames_2.txt' 'exe_3' 'SRSF6' 161
-./prog_seq 'geneNames_2.txt' 'exe_3' 'ENO1' 162
-./prog_seq 'geneNames_2.txt' 'exe_3' 'NPM1' 163
-./prog_seq 'geneNames_2.txt' 'exe_3' 'ILF3' 164
-./prog_seq 'geneNames_2.txt' 'exe_3' 'NONO' 165
-./prog_seq 'geneNames_2.txt' 'exe_3' 'CAMK2D' 166
-./prog_seq 'geneNames_2.txt' 'exe_3' 'HNRNPR' 167
-./prog_seq 'geneNames_2.txt' 'exe_3' 'RBBP7' 168
-./prog_seq 'geneNames_2.txt' 'exe_3' 'SSB' 169
-./prog_seq 'geneNames_2.txt' 'exe_3' 'WFDC2' 170
-./prog_seq 'geneNames_2.txt' 'exe_3' 'KPNA2' 171
-./prog_seq 'geneNames_2.txt' 'exe_3' 'APOA1' 172
-./prog_seq 'geneNames_2.txt' 'exe_3' 'RBM39' 173
-./prog_seq 'geneNames_2.txt' 'exe_3' 'HDAC2' 174
-./prog_seq 'geneNames_2.txt' 'exe_3' 'CNOT7' 175
-./prog_seq 'geneNames_2.txt' 'exe_3' 'SOX4' 176
-./prog_seq 'geneNames_2.txt' 'exe_3' 'HERPUD1' 177
-./prog_seq 'geneNames_2.txt' 'exe_3' 'ANP32E' 178
-./prog_seq 'geneNames_2.txt' 'exe_3' 'THRAP3' 179
-./prog_seq 'geneNames_2.txt' 'exe_3' 'POLR2F' 180
-./prog_seq 'geneNames_2.txt' 'exe_3' 'ACTL6A' 181
-./prog_seq 'geneNames_2.txt' 'exe_3' 'AKR1D1' 182
-./prog_seq 'geneNames_2.txt' 'exe_3' 'HMGN3' 183
-./prog_seq 'geneNames_2.txt' 'exe_3' 'CKS2' 184
-./prog_seq 'geneNames_2.txt' 'exe_3' 'APEX1' 185
-./prog_seq 'geneNames_2.txt' 'exe_3' 'DDX5' 186
-./prog_seq 'geneNames_2.txt' 'exe_3' 'CDK1' 187
-./prog_seq 'geneNames_2.txt' 'exe_3' 'CACYBP' 188
-./prog_seq 'geneNames_2.txt' 'exe_3' 'PON2' 189
-./prog_seq 'geneNames_2.txt' 'exe_3' 'AMZ2' 190
-./prog_seq 'geneNames_2.txt' 'exe_3' 'ANXA3' 191
-./prog_seq 'geneNames_2.txt' 'exe_3' 'APOA2' 192
-./prog_seq 'geneNames_2.txt' 'exe_3' 'UGP2' 193
-./prog_seq 'geneNames_2.txt' 'exe_3' 'GPC3' 194
-./prog_seq 'geneNames_2.txt' 'exe_3' 'PWP1' 195
-./prog_seq 'geneNames_2.txt' 'exe_3' 'CNBP' 196
-./prog_seq 'geneNames_2.txt' 'exe_3' 'MATR3' 197
-./prog_seq 'geneNames_2.txt' 'exe_3' 'SRSF3' 198
-./prog_seq 'geneNames_2.txt' 'exe_3' 'ILF2' 199
-./prog_seq 'geneNames_2.txt' 'exe_3' 'ID2' 200
-./prog_seq 'geneNames_2.txt' 'exe_3' 'CSDE1' 201
-./prog_seq 'geneNames_2.txt' 'exe_3' 'OCIAD2' 202
-./prog_seq 'geneNames_2.txt' 'exe_3' 'STMN1' 203
-./prog_seq 'geneNames_2.txt' 'exe_3' 'RHOBTB3' 204
-./prog_seq 'geneNames_2.txt' 'exe_3' 'RBMX' 205
-./prog_seq 'geneNames_2.txt' 'exe_3' 'BTF3' 206
-./prog_seq 'geneNames_2.txt' 'exe_3' 'SNRPB' 207
-./prog_seq 'geneNames_2.txt' 'exe_4' 'TCERG1' 208
-./prog_seq 'geneNames_2.txt' 'exe_4' 'SRRM1' 209
-./prog_seq 'geneNames_2.txt' 'exe_4' 'XRCC5' 210
-./prog_seq 'geneNames_2.txt' 'exe_4' 'RNASE1' 211
-./prog_seq 'geneNames_2.txt' 'exe_4' 'HMGN2' 212
-./prog_seq 'geneNames_2.txt' 'exe_4' 'TCEB2' 213
-./prog_seq 'geneNames_2.txt' 'exe_4' 'IFITM3' 214
-./prog_seq 'geneNames_2.txt' 'exe_4' 'PHB2' 215
-./prog_seq 'geneNames_2.txt' 'exe_4' 'SUB1' 216
-./prog_seq 'geneNames_2.txt' 'exe_4' 'LAMB1' 217
-./prog_seq 'geneNames_2.txt' 'exe_4' 'SNRPD1' 218
-./prog_seq 'geneNames_2.txt' 'exe_4' 'PAPOLA' 219
-./prog_seq 'geneNames_2.txt' 'exe_4' 'POLR2G' 220
-./prog_seq 'geneNames_2.txt' 'exe_4' 'APOC1' 221
-./prog_seq 'geneNames_2.txt' 'exe_4' 'POLR2I' 222
-./prog_seq 'geneNames_2.txt' 'exe_4' 'PTMA' 223
-./prog_seq 'geneNames_2.txt' 'exe_4' 'XRCC6' 224
-./prog_seq 'geneNames_2.txt' 'exe_4' 'EEF1A1' 225
-./prog_seq 'geneNames_2.txt' 'exe_4' 'ZNF638' 226
-./prog_seq 'geneNames_2.txt' 'exe_4' 'SRSF10' 227
-./prog_seq 'geneNames_2.txt' 'exe_4' 'S100A14' 228
-./prog_seq 'geneNames_2.txt' 'exe_4' 'S100A16' 229
-./prog_seq 'geneNames_2.txt' 'exe_4' 'SRSF6' 230
-./prog_seq 'geneNames_2.txt' 'exe_4' 'ENO1' 231
-./prog_seq 'geneNames_2.txt' 'exe_4' 'NPM1' 232
-./prog_seq 'geneNames_2.txt' 'exe_4' 'ILF3' 233
-./prog_seq 'geneNames_2.txt' 'exe_4' 'NONO' 234
-./prog_seq 'geneNames_2.txt' 'exe_4' 'CAMK2D' 235
-./prog_seq 'geneNames_2.txt' 'exe_4' 'HNRNPR' 236
-./prog_seq 'geneNames_2.txt' 'exe_4' 'RBBP7' 237
-./prog_seq 'geneNames_2.txt' 'exe_4' 'SSB' 238
-./prog_seq 'geneNames_2.txt' 'exe_4' 'WFDC2' 239
-./prog_seq 'geneNames_2.txt' 'exe_4' 'KPNA2' 240
-./prog_seq 'geneNames_2.txt' 'exe_4' 'APOA1' 241
-./prog_seq 'geneNames_2.txt' 'exe_4' 'RBM39' 242
-./prog_seq 'geneNames_2.txt' 'exe_4' 'HDAC2' 243
-./prog_seq 'geneNames_2.txt' 'exe_4' 'CNOT7' 244
-./prog_seq 'geneNames_2.txt' 'exe_4' 'SOX4' 245
-./prog_seq 'geneNames_2.txt' 'exe_4' 'HERPUD1' 246
-./prog_seq 'geneNames_2.txt' 'exe_4' 'ANP32E' 247
-./prog_seq 'geneNames_2.txt' 'exe_4' 'THRAP3' 248
-./prog_seq 'geneNames_2.txt' 'exe_4' 'POLR2F' 249
-./prog_seq 'geneNames_2.txt' 'exe_4' 'ACTL6A' 250
-./prog_seq 'geneNames_2.txt' 'exe_4' 'AKR1D1' 251
-./prog_seq 'geneNames_2.txt' 'exe_4' 'HMGN3' 252
-./prog_seq 'geneNames_2.txt' 'exe_4' 'CKS2' 253
-./prog_seq 'geneNames_2.txt' 'exe_4' 'APEX1' 254
-./prog_seq 'geneNames_2.txt' 'exe_4' 'DDX5' 255
-./prog_seq 'geneNames_2.txt' 'exe_4' 'CDK1' 256
-./prog_seq 'geneNames_2.txt' 'exe_4' 'CACYBP' 257
-./prog_seq 'geneNames_2.txt' 'exe_4' 'PON2' 258
-./prog_seq 'geneNames_2.txt' 'exe_4' 'AMZ2' 259
-./prog_seq 'geneNames_2.txt' 'exe_4' 'ANXA3' 260
-./prog_seq 'geneNames_2.txt' 'exe_4' 'APOA2' 261
-./prog_seq 'geneNames_2.txt' 'exe_4' 'UGP2' 262
-./prog_seq 'geneNames_2.txt' 'exe_4' 'GPC3' 263
-./prog_seq 'geneNames_2.txt' 'exe_4' 'PWP1' 264
-./prog_seq 'geneNames_2.txt' 'exe_4' 'CNBP' 265
-./prog_seq 'geneNames_2.txt' 'exe_4' 'MATR3' 266
-./prog_seq 'geneNames_2.txt' 'exe_4' 'SRSF3' 267
-./prog_seq 'geneNames_2.txt' 'exe_4' 'ILF2' 268
-./prog_seq 'geneNames_2.txt' 'exe_4' 'ID2' 269
-./prog_seq 'geneNames_2.txt' 'exe_4' 'CSDE1' 270
-./prog_seq 'geneNames_2.txt' 'exe_4' 'OCIAD2' 271
-./prog_seq 'geneNames_2.txt' 'exe_4' 'STMN1' 272
-./prog_seq 'geneNames_2.txt' 'exe_4' 'RHOBTB3' 273
-./prog_seq 'geneNames_2.txt' 'exe_4' 'RBMX' 274
-./prog_seq 'geneNames_2.txt' 'exe_4' 'BTF3' 275
-./prog_seq 'geneNames_2.txt' 'exe_4' 'SNRPB' 276
-./prog_seq 'geneNames_2.txt' 'exe_5' 'TCERG1' 277
-./prog_seq 'geneNames_2.txt' 'exe_5' 'SRRM1' 278
-./prog_seq 'geneNames_2.txt' 'exe_5' 'XRCC5' 279
-./prog_seq 'geneNames_2.txt' 'exe_5' 'RNASE1' 280
-./prog_seq 'geneNames_2.txt' 'exe_5' 'HMGN2' 281
-./prog_seq 'geneNames_2.txt' 'exe_5' 'TCEB2' 282
-./prog_seq 'geneNames_2.txt' 'exe_5' 'IFITM3' 283
-./prog_seq 'geneNames_2.txt' 'exe_5' 'PHB2' 284
-./prog_seq 'geneNames_2.txt' 'exe_5' 'SUB1' 285
-./prog_seq 'geneNames_2.txt' 'exe_5' 'LAMB1' 286
-./prog_seq 'geneNames_2.txt' 'exe_5' 'SNRPD1' 287
-./prog_seq 'geneNames_2.txt' 'exe_5' 'PAPOLA' 288
-./prog_seq 'geneNames_2.txt' 'exe_5' 'POLR2G' 289
-./prog_seq 'geneNames_2.txt' 'exe_5' 'APOC1' 290
-./prog_seq 'geneNames_2.txt' 'exe_5' 'POLR2I' 291
-./prog_seq 'geneNames_2.txt' 'exe_5' 'PTMA' 292
-./prog_seq 'geneNames_2.txt' 'exe_5' 'XRCC6' 293
-./prog_seq 'geneNames_2.txt' 'exe_5' 'EEF1A1' 294
-./prog_seq 'geneNames_2.txt' 'exe_5' 'ZNF638' 295
-./prog_seq 'geneNames_2.txt' 'exe_5' 'SRSF10' 296
-./prog_seq 'geneNames_2.txt' 'exe_5' 'S100A14' 297
-./prog_seq 'geneNames_2.txt' 'exe_5' 'S100A16' 298
-./prog_seq 'geneNames_2.txt' 'exe_5' 'SRSF6' 299
-./prog_seq 'geneNames_2.txt' 'exe_5' 'ENO1' 300
-./prog_seq 'geneNames_2.txt' 'exe_5' 'NPM1' 301
-./prog_seq 'geneNames_2.txt' 'exe_5' 'ILF3' 302
-./prog_seq 'geneNames_2.txt' 'exe_5' 'NONO' 303
-./prog_seq 'geneNames_2.txt' 'exe_5' 'CAMK2D' 304
-./prog_seq 'geneNames_2.txt' 'exe_5' 'HNRNPR' 305
-./prog_seq 'geneNames_2.txt' 'exe_5' 'RBBP7' 306
-./prog_seq 'geneNames_2.txt' 'exe_5' 'SSB' 307
-./prog_seq 'geneNames_2.txt' 'exe_5' 'WFDC2' 308
-./prog_seq 'geneNames_2.txt' 'exe_5' 'KPNA2' 309
-./prog_seq 'geneNames_2.txt' 'exe_5' 'APOA1' 310
-./prog_seq 'geneNames_2.txt' 'exe_5' 'RBM39' 311
-./prog_seq 'geneNames_2.txt' 'exe_5' 'HDAC2' 312
-./prog_seq 'geneNames_2.txt' 'exe_5' 'CNOT7' 313
-./prog_seq 'geneNames_2.txt' 'exe_5' 'SOX4' 314
-./prog_seq 'geneNames_2.txt' 'exe_5' 'HERPUD1' 315
-./prog_seq 'geneNames_2.txt' 'exe_5' 'ANP32E' 316
-./prog_seq 'geneNames_2.txt' 'exe_5' 'THRAP3' 317
-./prog_seq 'geneNames_2.txt' 'exe_5' 'POLR2F' 318
-./prog_seq 'geneNames_2.txt' 'exe_5' 'ACTL6A' 319
-./prog_seq 'geneNames_2.txt' 'exe_5' 'AKR1D1' 320
-./prog_seq 'geneNames_2.txt' 'exe_5' 'HMGN3' 321
-./prog_seq 'geneNames_2.txt' 'exe_5' 'CKS2' 322
-./prog_seq 'geneNames_2.txt' 'exe_5' 'APEX1' 323
-./prog_seq 'geneNames_2.txt' 'exe_5' 'DDX5' 324
-./prog_seq 'geneNames_2.txt' 'exe_5' 'CDK1' 325
-./prog_seq 'geneNames_2.txt' 'exe_5' 'CACYBP' 326
-./prog_seq 'geneNames_2.txt' 'exe_5' 'PON2' 327
-./prog_seq 'geneNames_2.txt' 'exe_5' 'AMZ2' 328
-./prog_seq 'geneNames_2.txt' 'exe_5' 'ANXA3' 329
-./prog_seq 'geneNames_2.txt' 'exe_5' 'APOA2' 330
-./prog_seq 'geneNames_2.txt' 'exe_5' 'UGP2' 331
-./prog_seq 'geneNames_2.txt' 'exe_5' 'GPC3' 332
-./prog_seq 'geneNames_2.txt' 'exe_5' 'PWP1' 333
-./prog_seq 'geneNames_2.txt' 'exe_5' 'CNBP' 334
-./prog_seq 'geneNames_2.txt' 'exe_5' 'MATR3' 335
-./prog_seq 'geneNames_2.txt' 'exe_5' 'SRSF3' 336
-./prog_seq 'geneNames_2.txt' 'exe_5' 'ILF2' 337
-./prog_seq 'geneNames_2.txt' 'exe_5' 'ID2' 338
-./prog_seq 'geneNames_2.txt' 'exe_5' 'CSDE1' 339
-./prog_seq 'geneNames_2.txt' 'exe_5' 'OCIAD2' 340
-./prog_seq 'geneNames_2.txt' 'exe_5' 'STMN1' 341
-./prog_seq 'geneNames_2.txt' 'exe_5' 'RHOBTB3' 342
-./prog_seq 'geneNames_2.txt' 'exe_5' 'RBMX' 343
-./prog_seq 'geneNames_2.txt' 'exe_5' 'BTF3' 344
-./prog_seq 'geneNames_2.txt' 'exe_5' 'SNRPB' 345
-./prog_seq 'geneNames_2.txt' 'exe_6' 'TCERG1' 346
-./prog_seq 'geneNames_2.txt' 'exe_6' 'SRRM1' 347
-./prog_seq 'geneNames_2.txt' 'exe_6' 'XRCC5' 348
-./prog_seq 'geneNames_2.txt' 'exe_6' 'RNASE1' 349
-./prog_seq 'geneNames_2.txt' 'exe_6' 'HMGN2' 350
-./prog_seq 'geneNames_2.txt' 'exe_6' 'TCEB2' 351
-./prog_seq 'geneNames_2.txt' 'exe_6' 'IFITM3' 352
-./prog_seq 'geneNames_2.txt' 'exe_6' 'PHB2' 353
-./prog_seq 'geneNames_2.txt' 'exe_6' 'SUB1' 354
-./prog_seq 'geneNames_2.txt' 'exe_6' 'LAMB1' 355
-./prog_seq 'geneNames_2.txt' 'exe_6' 'SNRPD1' 356
-./prog_seq 'geneNames_2.txt' 'exe_6' 'PAPOLA' 357
-./prog_seq 'geneNames_2.txt' 'exe_6' 'POLR2G' 358
-./prog_seq 'geneNames_2.txt' 'exe_6' 'APOC1' 359
-./prog_seq 'geneNames_2.txt' 'exe_6' 'POLR2I' 360
-./prog_seq 'geneNames_2.txt' 'exe_6' 'PTMA' 361
-./prog_seq 'geneNames_2.txt' 'exe_6' 'XRCC6' 362
-./prog_seq 'geneNames_2.txt' 'exe_6' 'EEF1A1' 363
-./prog_seq 'geneNames_2.txt' 'exe_6' 'ZNF638' 364
-./prog_seq 'geneNames_2.txt' 'exe_6' 'SRSF10' 365
-./prog_seq 'geneNames_2.txt' 'exe_6' 'S100A14' 366
-./prog_seq 'geneNames_2.txt' 'exe_6' 'S100A16' 367
-./prog_seq 'geneNames_2.txt' 'exe_6' 'SRSF6' 368
-./prog_seq 'geneNames_2.txt' 'exe_6' 'ENO1' 369
-./prog_seq 'geneNames_2.txt' 'exe_6' 'NPM1' 370
-./prog_seq 'geneNames_2.txt' 'exe_6' 'ILF3' 371
-./prog_seq 'geneNames_2.txt' 'exe_6' 'NONO' 372
-./prog_seq 'geneNames_2.txt' 'exe_6' 'CAMK2D' 373
-./prog_seq 'geneNames_2.txt' 'exe_6' 'HNRNPR' 374
-./prog_seq 'geneNames_2.txt' 'exe_6' 'RBBP7' 375
-./prog_seq 'geneNames_2.txt' 'exe_6' 'SSB' 376
-./prog_seq 'geneNames_2.txt' 'exe_6' 'WFDC2' 377
-./prog_seq 'geneNames_2.txt' 'exe_6' 'KPNA2' 378
-./prog_seq 'geneNames_2.txt' 'exe_6' 'APOA1' 379
-./prog_seq 'geneNames_2.txt' 'exe_6' 'RBM39' 380
-./prog_seq 'geneNames_2.txt' 'exe_6' 'HDAC2' 381
-./prog_seq 'geneNames_2.txt' 'exe_6' 'CNOT7' 382
-./prog_seq 'geneNames_2.txt' 'exe_6' 'SOX4' 383
-./prog_seq 'geneNames_2.txt' 'exe_6' 'HERPUD1' 384
-./prog_seq 'geneNames_2.txt' 'exe_6' 'ANP32E' 385
-./prog_seq 'geneNames_2.txt' 'exe_6' 'THRAP3' 386
-./prog_seq 'geneNames_2.txt' 'exe_6' 'POLR2F' 387
-./prog_seq 'geneNames_2.txt' 'exe_6' 'ACTL6A' 388
-./prog_seq 'geneNames_2.txt' 'exe_6' 'AKR1D1' 389
-./prog_seq 'geneNames_2.txt' 'exe_6' 'HMGN3' 390
-./prog_seq 'geneNames_2.txt' 'exe_6' 'CKS2' 391
-./prog_seq 'geneNames_2.txt' 'exe_6' 'APEX1' 392
-./prog_seq 'geneNames_2.txt' 'exe_6' 'DDX5' 393
-./prog_seq 'geneNames_2.txt' 'exe_6' 'CDK1' 394
-./prog_seq 'geneNames_2.txt' 'exe_6' 'CACYBP' 395
-./prog_seq 'geneNames_2.txt' 'exe_6' 'PON2' 396
-./prog_seq 'geneNames_2.txt' 'exe_6' 'AMZ2' 397
-./prog_seq 'geneNames_2.txt' 'exe_6' 'ANXA3' 398
-./prog_seq 'geneNames_2.txt' 'exe_6' 'APOA2' 399
-./prog_seq 'geneNames_2.txt' 'exe_6' 'UGP2' 400
-./prog_seq 'geneNames_2.txt' 'exe_6' 'GPC3' 401
-./prog_seq 'geneNames_2.txt' 'exe_6' 'PWP1' 402
-./prog_seq 'geneNames_2.txt' 'exe_6' 'CNBP' 403
-./prog_seq 'geneNames_2.txt' 'exe_6' 'MATR3' 404
-./prog_seq 'geneNames_2.txt' 'exe_6' 'SRSF3' 405
-./prog_seq 'geneNames_2.txt' 'exe_6' 'ILF2' 406
-./prog_seq 'geneNames_2.txt' 'exe_6' 'ID2' 407
-./prog_seq 'geneNames_2.txt' 'exe_6' 'CSDE1' 408
-./prog_seq 'geneNames_2.txt' 'exe_6' 'OCIAD2' 409
-./prog_seq 'geneNames_2.txt' 'exe_6' 'STMN1' 410
-./prog_seq 'geneNames_2.txt' 'exe_6' 'RHOBTB3' 411
-./prog_seq 'geneNames_2.txt' 'exe_6' 'RBMX' 412
-./prog_seq 'geneNames_2.txt' 'exe_6' 'BTF3' 413
-./prog_seq 'geneNames_2.txt' 'exe_6' 'SNRPB' 414
-./prog_seq 'geneNames_2.txt' 'exe_7' 'TCERG1' 415
-./prog_seq 'geneNames_2.txt' 'exe_7' 'SRRM1' 416
-./prog_seq 'geneNames_2.txt' 'exe_7' 'XRCC5' 417
-./prog_seq 'geneNames_2.txt' 'exe_7' 'RNASE1' 418
-./prog_seq 'geneNames_2.txt' 'exe_7' 'HMGN2' 419
-./prog_seq 'geneNames_2.txt' 'exe_7' 'TCEB2' 420
-./prog_seq 'geneNames_2.txt' 'exe_7' 'IFITM3' 421
-./prog_seq 'geneNames_2.txt' 'exe_7' 'PHB2' 422
-./prog_seq 'geneNames_2.txt' 'exe_7' 'SUB1' 423
-./prog_seq 'geneNames_2.txt' 'exe_7' 'LAMB1' 424
-./prog_seq 'geneNames_2.txt' 'exe_7' 'SNRPD1' 425
-./prog_seq 'geneNames_2.txt' 'exe_7' 'PAPOLA' 426
-./prog_seq 'geneNames_2.txt' 'exe_7' 'POLR2G' 427
-./prog_seq 'geneNames_2.txt' 'exe_7' 'APOC1' 428
-./prog_seq 'geneNames_2.txt' 'exe_7' 'POLR2I' 429
-./prog_seq 'geneNames_2.txt' 'exe_7' 'PTMA' 430
-./prog_seq 'geneNames_2.txt' 'exe_7' 'XRCC6' 431
-./prog_seq 'geneNames_2.txt' 'exe_7' 'EEF1A1' 432
-./prog_seq 'geneNames_2.txt' 'exe_7' 'ZNF638' 433
-./prog_seq 'geneNames_2.txt' 'exe_7' 'SRSF10' 434
-./prog_seq 'geneNames_2.txt' 'exe_7' 'S100A14' 435
-./prog_seq 'geneNames_2.txt' 'exe_7' 'S100A16' 436
-./prog_seq 'geneNames_2.txt' 'exe_7' 'SRSF6' 437
-./prog_seq 'geneNames_2.txt' 'exe_7' 'ENO1' 438
-./prog_seq 'geneNames_2.txt' 'exe_7' 'NPM1' 439
-./prog_seq 'geneNames_2.txt' 'exe_7' 'ILF3' 440
-./prog_seq 'geneNames_2.txt' 'exe_7' 'NONO' 441
-./prog_seq 'geneNames_2.txt' 'exe_7' 'CAMK2D' 442
-./prog_seq 'geneNames_2.txt' 'exe_7' 'HNRNPR' 443
-./prog_seq 'geneNames_2.txt' 'exe_7' 'RBBP7' 444
-./prog_seq 'geneNames_2.txt' 'exe_7' 'SSB' 445
-./prog_seq 'geneNames_2.txt' 'exe_7' 'WFDC2' 446
-./prog_seq 'geneNames_2.txt' 'exe_7' 'KPNA2' 447
-./prog_seq 'geneNames_2.txt' 'exe_7' 'APOA1' 448
-./prog_seq 'geneNames_2.txt' 'exe_7' 'RBM39' 449
-./prog_seq 'geneNames_2.txt' 'exe_7' 'HDAC2' 450
-./prog_seq 'geneNames_2.txt' 'exe_7' 'CNOT7' 451
-./prog_seq 'geneNames_2.txt' 'exe_7' 'SOX4' 452
-./prog_seq 'geneNames_2.txt' 'exe_7' 'HERPUD1' 453
-./prog_seq 'geneNames_2.txt' 'exe_7' 'ANP32E' 454
-./prog_seq 'geneNames_2.txt' 'exe_7' 'THRAP3' 455
-./prog_seq 'geneNames_2.txt' 'exe_7' 'POLR2F' 456
-./prog_seq 'geneNames_2.txt' 'exe_7' 'ACTL6A' 457
-./prog_seq 'geneNames_2.txt' 'exe_7' 'AKR1D1' 458
-./prog_seq 'geneNames_2.txt' 'exe_7' 'HMGN3' 459
-./prog_seq 'geneNames_2.txt' 'exe_7' 'CKS2' 460
-./prog_seq 'geneNames_2.txt' 'exe_7' 'APEX1' 461
-./prog_seq 'geneNames_2.txt' 'exe_7' 'DDX5' 462
-./prog_seq 'geneNames_2.txt' 'exe_7' 'CDK1' 463
-./prog_seq 'geneNames_2.txt' 'exe_7' 'CACYBP' 464
-./prog_seq 'geneNames_2.txt' 'exe_7' 'PON2' 465
-./prog_seq 'geneNames_2.txt' 'exe_7' 'AMZ2' 466
-./prog_seq 'geneNames_2.txt' 'exe_7' 'ANXA3' 467
-./prog_seq 'geneNames_2.txt' 'exe_7' 'APOA2' 468
-./prog_seq 'geneNames_2.txt' 'exe_7' 'UGP2' 469
-./prog_seq 'geneNames_2.txt' 'exe_7' 'GPC3' 470
-./prog_seq 'geneNames_2.txt' 'exe_7' 'PWP1' 471
-./prog_seq 'geneNames_2.txt' 'exe_7' 'CNBP' 472
-./prog_seq 'geneNames_2.txt' 'exe_7' 'MATR3' 473
-./prog_seq 'geneNames_2.txt' 'exe_7' 'SRSF3' 474
-./prog_seq 'geneNames_2.txt' 'exe_7' 'ILF2' 475
-./prog_seq 'geneNames_2.txt' 'exe_7' 'ID2' 476
-./prog_seq 'geneNames_2.txt' 'exe_7' 'CSDE1' 477
-./prog_seq 'geneNames_2.txt' 'exe_7' 'OCIAD2' 478
-./prog_seq 'geneNames_2.txt' 'exe_7' 'STMN1' 479
-./prog_seq 'geneNames_2.txt' 'exe_7' 'RHOBTB3' 480
-./prog_seq 'geneNames_2.txt' 'exe_7' 'RBMX' 481
-./prog_seq 'geneNames_2.txt' 'exe_7' 'BTF3' 482
-./prog_seq 'geneNames_2.txt' 'exe_7' 'SNRPB' 483
-./prog_seq 'geneNames_2.txt' 'exe_8' 'TCERG1' 484
-./prog_seq 'geneNames_2.txt' 'exe_8' 'SRRM1' 485
-./prog_seq 'geneNames_2.txt' 'exe_8' 'XRCC5' 486
-./prog_seq 'geneNames_2.txt' 'exe_8' 'RNASE1' 487
-./prog_seq 'geneNames_2.txt' 'exe_8' 'HMGN2' 488
-./prog_seq 'geneNames_2.txt' 'exe_8' 'TCEB2' 489
-./prog_seq 'geneNames_2.txt' 'exe_8' 'IFITM3' 490
-./prog_seq 'geneNames_2.txt' 'exe_8' 'PHB2' 491
-./prog_seq 'geneNames_2.txt' 'exe_8' 'SUB1' 492
-./prog_seq 'geneNames_2.txt' 'exe_8' 'LAMB1' 493
-./prog_seq 'geneNames_2.txt' 'exe_8' 'SNRPD1' 494
-./prog_seq 'geneNames_2.txt' 'exe_8' 'PAPOLA' 495
-./prog_seq 'geneNames_2.txt' 'exe_8' 'POLR2G' 496
-./prog_seq 'geneNames_2.txt' 'exe_8' 'APOC1' 497
-./prog_seq 'geneNames_2.txt' 'exe_8' 'POLR2I' 498
-./prog_seq 'geneNames_2.txt' 'exe_8' 'PTMA' 499
-./prog_seq 'geneNames_2.txt' 'exe_8' 'XRCC6' 500
-./prog_seq 'geneNames_2.txt' 'exe_8' 'EEF1A1' 501
-./prog_seq 'geneNames_2.txt' 'exe_8' 'ZNF638' 502
-./prog_seq 'geneNames_2.txt' 'exe_8' 'SRSF10' 503
-./prog_seq 'geneNames_2.txt' 'exe_8' 'S100A14' 504
-./prog_seq 'geneNames_2.txt' 'exe_8' 'S100A16' 505
-./prog_seq 'geneNames_2.txt' 'exe_8' 'SRSF6' 506
-./prog_seq 'geneNames_2.txt' 'exe_8' 'ENO1' 507
-./prog_seq 'geneNames_2.txt' 'exe_8' 'NPM1' 508
-./prog_seq 'geneNames_2.txt' 'exe_8' 'ILF3' 509
-./prog_seq 'geneNames_2.txt' 'exe_8' 'NONO' 510
-./prog_seq 'geneNames_2.txt' 'exe_8' 'CAMK2D' 511
-./prog_seq 'geneNames_2.txt' 'exe_8' 'HNRNPR' 512
-./prog_seq 'geneNames_2.txt' 'exe_8' 'RBBP7' 513
-./prog_seq 'geneNames_2.txt' 'exe_8' 'SSB' 514
-./prog_seq 'geneNames_2.txt' 'exe_8' 'WFDC2' 515
-./prog_seq 'geneNames_2.txt' 'exe_8' 'KPNA2' 516
-./prog_seq 'geneNames_2.txt' 'exe_8' 'APOA1' 517
-./prog_seq 'geneNames_2.txt' 'exe_8' 'RBM39' 518
-./prog_seq 'geneNames_2.txt' 'exe_8' 'HDAC2' 519
-./prog_seq 'geneNames_2.txt' 'exe_8' 'CNOT7' 520
-./prog_seq 'geneNames_2.txt' 'exe_8' 'SOX4' 521
-./prog_seq 'geneNames_2.txt' 'exe_8' 'HERPUD1' 522
-./prog_seq 'geneNames_2.txt' 'exe_8' 'ANP32E' 523
-./prog_seq 'geneNames_2.txt' 'exe_8' 'THRAP3' 524
-./prog_seq 'geneNames_2.txt' 'exe_8' 'POLR2F' 525
-./prog_seq 'geneNames_2.txt' 'exe_8' 'ACTL6A' 526
-./prog_seq 'geneNames_2.txt' 'exe_8' 'AKR1D1' 527
-./prog_seq 'geneNames_2.txt' 'exe_8' 'HMGN3' 528
-./prog_seq 'geneNames_2.txt' 'exe_8' 'CKS2' 529
-./prog_seq 'geneNames_2.txt' 'exe_8' 'APEX1' 530
-./prog_seq 'geneNames_2.txt' 'exe_8' 'DDX5' 531
-./prog_seq 'geneNames_2.txt' 'exe_8' 'CDK1' 532
-./prog_seq 'geneNames_2.txt' 'exe_8' 'CACYBP' 533
-./prog_seq 'geneNames_2.txt' 'exe_8' 'PON2' 534
-./prog_seq 'geneNames_2.txt' 'exe_8' 'AMZ2' 535
-./prog_seq 'geneNames_2.txt' 'exe_8' 'ANXA3' 536
-./prog_seq 'geneNames_2.txt' 'exe_8' 'APOA2' 537
-./prog_seq 'geneNames_2.txt' 'exe_8' 'UGP2' 538
-./prog_seq 'geneNames_2.txt' 'exe_8' 'GPC3' 539
-./prog_seq 'geneNames_2.txt' 'exe_8' 'PWP1' 540
-./prog_seq 'geneNames_2.txt' 'exe_8' 'CNBP' 541
-./prog_seq 'geneNames_2.txt' 'exe_8' 'MATR3' 542
-./prog_seq 'geneNames_2.txt' 'exe_8' 'SRSF3' 543
-./prog_seq 'geneNames_2.txt' 'exe_8' 'ILF2' 544
-./prog_seq 'geneNames_2.txt' 'exe_8' 'ID2' 545
-./prog_seq 'geneNames_2.txt' 'exe_8' 'CSDE1' 546
-./prog_seq 'geneNames_2.txt' 'exe_8' 'OCIAD2' 547
-./prog_seq 'geneNames_2.txt' 'exe_8' 'STMN1' 548
-./prog_seq 'geneNames_2.txt' 'exe_8' 'RHOBTB3' 549
-./prog_seq 'geneNames_2.txt' 'exe_8' 'RBMX' 550
-./prog_seq 'geneNames_2.txt' 'exe_8' 'BTF3' 551
-./prog_seq 'geneNames_2.txt' 'exe_8' 'SNRPB' 552
-./prog_seq 'geneNames_2.txt' 'exe_9' 'TCERG1' 553
-./prog_seq 'geneNames_2.txt' 'exe_9' 'SRRM1' 554
-./prog_seq 'geneNames_2.txt' 'exe_9' 'XRCC5' 555
-./prog_seq 'geneNames_2.txt' 'exe_9' 'RNASE1' 556
-./prog_seq 'geneNames_2.txt' 'exe_9' 'HMGN2' 557
-./prog_seq 'geneNames_2.txt' 'exe_9' 'TCEB2' 558
-./prog_seq 'geneNames_2.txt' 'exe_9' 'IFITM3' 559
-./prog_seq 'geneNames_2.txt' 'exe_9' 'PHB2' 560
-./prog_seq 'geneNames_2.txt' 'exe_9' 'SUB1' 561
-./prog_seq 'geneNames_2.txt' 'exe_9' 'LAMB1' 562
-./prog_seq 'geneNames_2.txt' 'exe_9' 'SNRPD1' 563
-./prog_seq 'geneNames_2.txt' 'exe_9' 'PAPOLA' 564
-./prog_seq 'geneNames_2.txt' 'exe_9' 'POLR2G' 565
-./prog_seq 'geneNames_2.txt' 'exe_9' 'APOC1' 566
-./prog_seq 'geneNames_2.txt' 'exe_9' 'POLR2I' 567
-./prog_seq 'geneNames_2.txt' 'exe_9' 'PTMA' 568
-./prog_seq 'geneNames_2.txt' 'exe_9' 'XRCC6' 569
-./prog_seq 'geneNames_2.txt' 'exe_9' 'EEF1A1' 570
-./prog_seq 'geneNames_2.txt' 'exe_9' 'ZNF638' 571
-./prog_seq 'geneNames_2.txt' 'exe_9' 'SRSF10' 572
-./prog_seq 'geneNames_2.txt' 'exe_9' 'S100A14' 573
-./prog_seq 'geneNames_2.txt' 'exe_9' 'S100A16' 574
-./prog_seq 'geneNames_2.txt' 'exe_9' 'SRSF6' 575
-./prog_seq 'geneNames_2.txt' 'exe_9' 'ENO1' 576
-./prog_seq 'geneNames_2.txt' 'exe_9' 'NPM1' 577
-./prog_seq 'geneNames_2.txt' 'exe_9' 'ILF3' 578
-./prog_seq 'geneNames_2.txt' 'exe_9' 'NONO' 579
-./prog_seq 'geneNames_2.txt' 'exe_9' 'CAMK2D' 580
-./prog_seq 'geneNames_2.txt' 'exe_9' 'HNRNPR' 581
-./prog_seq 'geneNames_2.txt' 'exe_9' 'RBBP7' 582
-./prog_seq 'geneNames_2.txt' 'exe_9' 'SSB' 583
-./prog_seq 'geneNames_2.txt' 'exe_9' 'WFDC2' 584
-./prog_seq 'geneNames_2.txt' 'exe_9' 'KPNA2' 585
-./prog_seq 'geneNames_2.txt' 'exe_9' 'APOA1' 586
-./prog_seq 'geneNames_2.txt' 'exe_9' 'RBM39' 587
-./prog_seq 'geneNames_2.txt' 'exe_9' 'HDAC2' 588
-./prog_seq 'geneNames_2.txt' 'exe_9' 'CNOT7' 589
-./prog_seq 'geneNames_2.txt' 'exe_9' 'SOX4' 590
-./prog_seq 'geneNames_2.txt' 'exe_9' 'HERPUD1' 591
-./prog_seq 'geneNames_2.txt' 'exe_9' 'ANP32E' 592
-./prog_seq 'geneNames_2.txt' 'exe_9' 'THRAP3' 593
-./prog_seq 'geneNames_2.txt' 'exe_9' 'POLR2F' 594
-./prog_seq 'geneNames_2.txt' 'exe_9' 'ACTL6A' 595
-./prog_seq 'geneNames_2.txt' 'exe_9' 'AKR1D1' 596
-./prog_seq 'geneNames_2.txt' 'exe_9' 'HMGN3' 597
-./prog_seq 'geneNames_2.txt' 'exe_9' 'CKS2' 598
-./prog_seq 'geneNames_2.txt' 'exe_9' 'APEX1' 599
-./prog_seq 'geneNames_2.txt' 'exe_9' 'DDX5' 600
-./prog_seq 'geneNames_2.txt' 'exe_9' 'CDK1' 601
-./prog_seq 'geneNames_2.txt' 'exe_9' 'CACYBP' 602
-./prog_seq 'geneNames_2.txt' 'exe_9' 'PON2' 603
-./prog_seq 'geneNames_2.txt' 'exe_9' 'AMZ2' 604
-./prog_seq 'geneNames_2.txt' 'exe_9' 'ANXA3' 605
-./prog_seq 'geneNames_2.txt' 'exe_9' 'APOA2' 606
-./prog_seq 'geneNames_2.txt' 'exe_9' 'UGP2' 607
-./prog_seq 'geneNames_2.txt' 'exe_9' 'GPC3' 608
-./prog_seq 'geneNames_2.txt' 'exe_9' 'PWP1' 609
-./prog_seq 'geneNames_2.txt' 'exe_9' 'CNBP' 610
-./prog_seq 'geneNames_2.txt' 'exe_9' 'MATR3' 611
-./prog_seq 'geneNames_2.txt' 'exe_9' 'SRSF3' 612
-./prog_seq 'geneNames_2.txt' 'exe_9' 'ILF2' 613
-./prog_seq 'geneNames_2.txt' 'exe_9' 'ID2' 614
-./prog_seq 'geneNames_2.txt' 'exe_9' 'CSDE1' 615
-./prog_seq 'geneNames_2.txt' 'exe_9' 'OCIAD2' 616
-./prog_seq 'geneNames_2.txt' 'exe_9' 'STMN1' 617
-./prog_seq 'geneNames_2.txt' 'exe_9' 'RHOBTB3' 618
-./prog_seq 'geneNames_2.txt' 'exe_9' 'RBMX' 619
-./prog_seq 'geneNames_2.txt' 'exe_9' 'BTF3' 620
-./prog_seq 'geneNames_2.txt' 'exe_9' 'SNRPB' 621
-./prog_seq 'geneNames_2.txt' 'exe_10' 'TCERG1' 622
-./prog_seq 'geneNames_2.txt' 'exe_10' 'SRRM1' 623
-./prog_seq 'geneNames_2.txt' 'exe_10' 'XRCC5' 624
-./prog_seq 'geneNames_2.txt' 'exe_10' 'RNASE1' 625
-./prog_seq 'geneNames_2.txt' 'exe_10' 'HMGN2' 626
-./prog_seq 'geneNames_2.txt' 'exe_10' 'TCEB2' 627
-./prog_seq 'geneNames_2.txt' 'exe_10' 'IFITM3' 628
-./prog_seq 'geneNames_2.txt' 'exe_10' 'PHB2' 629
-./prog_seq 'geneNames_2.txt' 'exe_10' 'SUB1' 630
-./prog_seq 'geneNames_2.txt' 'exe_10' 'LAMB1' 631
-./prog_seq 'geneNames_2.txt' 'exe_10' 'SNRPD1' 632
-./prog_seq 'geneNames_2.txt' 'exe_10' 'PAPOLA' 633
-./prog_seq 'geneNames_2.txt' 'exe_10' 'POLR2G' 634
-./prog_seq 'geneNames_2.txt' 'exe_10' 'APOC1' 635
-./prog_seq 'geneNames_2.txt' 'exe_10' 'POLR2I' 636
-./prog_seq 'geneNames_2.txt' 'exe_10' 'PTMA' 637
-./prog_seq 'geneNames_2.txt' 'exe_10' 'XRCC6' 638
-./prog_seq 'geneNames_2.txt' 'exe_10' 'EEF1A1' 639
-./prog_seq 'geneNames_2.txt' 'exe_10' 'ZNF638' 640
-./prog_seq 'geneNames_2.txt' 'exe_10' 'SRSF10' 641
-./prog_seq 'geneNames_2.txt' 'exe_10' 'S100A14' 642
-./prog_seq 'geneNames_2.txt' 'exe_10' 'S100A16' 643
-./prog_seq 'geneNames_2.txt' 'exe_10' 'SRSF6' 644
-./prog_seq 'geneNames_2.txt' 'exe_10' 'ENO1' 645
-./prog_seq 'geneNames_2.txt' 'exe_10' 'NPM1' 646
-./prog_seq 'geneNames_2.txt' 'exe_10' 'ILF3' 647
-./prog_seq 'geneNames_2.txt' 'exe_10' 'NONO' 648
-./prog_seq 'geneNames_2.txt' 'exe_10' 'CAMK2D' 649
-./prog_seq 'geneNames_2.txt' 'exe_10' 'HNRNPR' 650
-./prog_seq 'geneNames_2.txt' 'exe_10' 'RBBP7' 651
-./prog_seq 'geneNames_2.txt' 'exe_10' 'SSB' 652
-./prog_seq 'geneNames_2.txt' 'exe_10' 'WFDC2' 653
-./prog_seq 'geneNames_2.txt' 'exe_10' 'KPNA2' 654
-./prog_seq 'geneNames_2.txt' 'exe_10' 'APOA1' 655
-./prog_seq 'geneNames_2.txt' 'exe_10' 'RBM39' 656
-./prog_seq 'geneNames_2.txt' 'exe_10' 'HDAC2' 657
-./prog_seq 'geneNames_2.txt' 'exe_10' 'CNOT7' 658
-./prog_seq 'geneNames_2.txt' 'exe_10' 'SOX4' 659
-./prog_seq 'geneNames_2.txt' 'exe_10' 'HERPUD1' 660
-./prog_seq 'geneNames_2.txt' 'exe_10' 'ANP32E' 661
-./prog_seq 'geneNames_2.txt' 'exe_10' 'THRAP3' 662
-./prog_seq 'geneNames_2.txt' 'exe_10' 'POLR2F' 663
-./prog_seq 'geneNames_2.txt' 'exe_10' 'ACTL6A' 664
-./prog_seq 'geneNames_2.txt' 'exe_10' 'AKR1D1' 665
-./prog_seq 'geneNames_2.txt' 'exe_10' 'HMGN3' 666
-./prog_seq 'geneNames_2.txt' 'exe_10' 'CKS2' 667
-./prog_seq 'geneNames_2.txt' 'exe_10' 'APEX1' 668
-./prog_seq 'geneNames_2.txt' 'exe_10' 'DDX5' 669
-./prog_seq 'geneNames_2.txt' 'exe_10' 'CDK1' 670
-./prog_seq 'geneNames_2.txt' 'exe_10' 'CACYBP' 671
-./prog_seq 'geneNames_2.txt' 'exe_10' 'PON2' 672
-./prog_seq 'geneNames_2.txt' 'exe_10' 'AMZ2' 673
-./prog_seq 'geneNames_2.txt' 'exe_10' 'ANXA3' 674
-./prog_seq 'geneNames_2.txt' 'exe_10' 'APOA2' 675
-./prog_seq 'geneNames_2.txt' 'exe_10' 'UGP2' 676
-./prog_seq 'geneNames_2.txt' 'exe_10' 'GPC3' 677
-./prog_seq 'geneNames_2.txt' 'exe_10' 'PWP1' 678
-./prog_seq 'geneNames_2.txt' 'exe_10' 'CNBP' 679
-./prog_seq 'geneNames_2.txt' 'exe_10' 'MATR3' 680
-./prog_seq 'geneNames_2.txt' 'exe_10' 'SRSF3' 681
-./prog_seq 'geneNames_2.txt' 'exe_10' 'ILF2' 682
-./prog_seq 'geneNames_2.txt' 'exe_10' 'ID2' 683
-./prog_seq 'geneNames_2.txt' 'exe_10' 'CSDE1' 684
-./prog_seq 'geneNames_2.txt' 'exe_10' 'OCIAD2' 685
-./prog_seq 'geneNames_2.txt' 'exe_10' 'STMN1' 686
-./prog_seq 'geneNames_2.txt' 'exe_10' 'RHOBTB3' 687
-./prog_seq 'geneNames_2.txt' 'exe_10' 'RBMX' 688
-./prog_seq 'geneNames_2.txt' 'exe_10' 'BTF3' 689
-./prog_seq 'geneNames_2.txt' 'exe_10' 'SNRPB' 690
-./prog_seq 'geneNames_2.txt' 'exe_11' 'TCERG1' 691
-./prog_seq 'geneNames_2.txt' 'exe_11' 'SRRM1' 692
-./prog_seq 'geneNames_2.txt' 'exe_11' 'XRCC5' 693
-./prog_seq 'geneNames_2.txt' 'exe_11' 'RNASE1' 694
-./prog_seq 'geneNames_2.txt' 'exe_11' 'HMGN2' 695
-./prog_seq 'geneNames_2.txt' 'exe_11' 'TCEB2' 696
-./prog_seq 'geneNames_2.txt' 'exe_11' 'IFITM3' 697
-./prog_seq 'geneNames_2.txt' 'exe_11' 'PHB2' 698
-./prog_seq 'geneNames_2.txt' 'exe_11' 'SUB1' 699
-./prog_seq 'geneNames_2.txt' 'exe_11' 'LAMB1' 700
-./prog_seq 'geneNames_2.txt' 'exe_11' 'SNRPD1' 701
-./prog_seq 'geneNames_2.txt' 'exe_11' 'PAPOLA' 702
-./prog_seq 'geneNames_2.txt' 'exe_11' 'POLR2G' 703
-./prog_seq 'geneNames_2.txt' 'exe_11' 'APOC1' 704
-./prog_seq 'geneNames_2.txt' 'exe_11' 'POLR2I' 705
-./prog_seq 'geneNames_2.txt' 'exe_11' 'PTMA' 706
-./prog_seq 'geneNames_2.txt' 'exe_11' 'XRCC6' 707
-./prog_seq 'geneNames_2.txt' 'exe_11' 'EEF1A1' 708
-./prog_seq 'geneNames_2.txt' 'exe_11' 'ZNF638' 709
-./prog_seq 'geneNames_2.txt' 'exe_11' 'SRSF10' 710
-./prog_seq 'geneNames_2.txt' 'exe_11' 'S100A14' 711
-./prog_seq 'geneNames_2.txt' 'exe_11' 'S100A16' 712
-./prog_seq 'geneNames_2.txt' 'exe_11' 'SRSF6' 713
-./prog_seq 'geneNames_2.txt' 'exe_11' 'ENO1' 714
-./prog_seq 'geneNames_2.txt' 'exe_11' 'NPM1' 715
-./prog_seq 'geneNames_2.txt' 'exe_11' 'ILF3' 716
-./prog_seq 'geneNames_2.txt' 'exe_11' 'NONO' 717
-./prog_seq 'geneNames_2.txt' 'exe_11' 'CAMK2D' 718
-./prog_seq 'geneNames_2.txt' 'exe_11' 'HNRNPR' 719
-./prog_seq 'geneNames_2.txt' 'exe_11' 'RBBP7' 720
-./prog_seq 'geneNames_2.txt' 'exe_11' 'SSB' 721
-./prog_seq 'geneNames_2.txt' 'exe_11' 'WFDC2' 722
-./prog_seq 'geneNames_2.txt' 'exe_11' 'KPNA2' 723
-./prog_seq 'geneNames_2.txt' 'exe_11' 'APOA1' 724
-./prog_seq 'geneNames_2.txt' 'exe_11' 'RBM39' 725
-./prog_seq 'geneNames_2.txt' 'exe_11' 'HDAC2' 726
-./prog_seq 'geneNames_2.txt' 'exe_11' 'CNOT7' 727
-./prog_seq 'geneNames_2.txt' 'exe_11' 'SOX4' 728
-./prog_seq 'geneNames_2.txt' 'exe_11' 'HERPUD1' 729
-./prog_seq 'geneNames_2.txt' 'exe_11' 'ANP32E' 730
-./prog_seq 'geneNames_2.txt' 'exe_11' 'THRAP3' 731
-./prog_seq 'geneNames_2.txt' 'exe_11' 'POLR2F' 732
-./prog_seq 'geneNames_2.txt' 'exe_11' 'ACTL6A' 733
-./prog_seq 'geneNames_2.txt' 'exe_11' 'AKR1D1' 734
-./prog_seq 'geneNames_2.txt' 'exe_11' 'HMGN3' 735
-./prog_seq 'geneNames_2.txt' 'exe_11' 'CKS2' 736
-./prog_seq 'geneNames_2.txt' 'exe_11' 'APEX1' 737
-./prog_seq 'geneNames_2.txt' 'exe_11' 'DDX5' 738
-./prog_seq 'geneNames_2.txt' 'exe_11' 'CDK1' 739
-./prog_seq 'geneNames_2.txt' 'exe_11' 'CACYBP' 740
-./prog_seq 'geneNames_2.txt' 'exe_11' 'PON2' 741
-./prog_seq 'geneNames_2.txt' 'exe_11' 'AMZ2' 742
-./prog_seq 'geneNames_2.txt' 'exe_11' 'ANXA3' 743
-./prog_seq 'geneNames_2.txt' 'exe_11' 'APOA2' 744
-./prog_seq 'geneNames_2.txt' 'exe_11' 'UGP2' 745
-./prog_seq 'geneNames_2.txt' 'exe_11' 'GPC3' 746
-./prog_seq 'geneNames_2.txt' 'exe_11' 'PWP1' 747
-./prog_seq 'geneNames_2.txt' 'exe_11' 'CNBP' 748
-./prog_seq 'geneNames_2.txt' 'exe_11' 'MATR3' 749
-./prog_seq 'geneNames_2.txt' 'exe_11' 'SRSF3' 750
-./prog_seq 'geneNames_2.txt' 'exe_11' 'ILF2' 751
-./prog_seq 'geneNames_2.txt' 'exe_11' 'ID2' 752
-./prog_seq 'geneNames_2.txt' 'exe_11' 'CSDE1' 753
-./prog_seq 'geneNames_2.txt' 'exe_11' 'OCIAD2' 754
-./prog_seq 'geneNames_2.txt' 'exe_11' 'STMN1' 755
-./prog_seq 'geneNames_2.txt' 'exe_11' 'RHOBTB3' 756
-./prog_seq 'geneNames_2.txt' 'exe_11' 'RBMX' 757
-./prog_seq 'geneNames_2.txt' 'exe_11' 'BTF3' 758
-./prog_seq 'geneNames_2.txt' 'exe_11' 'SNRPB' 759
-./prog_seq 'geneNames_2.txt' 'exe_12' 'TCERG1' 760
-./prog_seq 'geneNames_2.txt' 'exe_12' 'SRRM1' 761
-./prog_seq 'geneNames_2.txt' 'exe_12' 'XRCC5' 762
-./prog_seq 'geneNames_2.txt' 'exe_12' 'RNASE1' 763
-./prog_seq 'geneNames_2.txt' 'exe_12' 'HMGN2' 764
-./prog_seq 'geneNames_2.txt' 'exe_12' 'TCEB2' 765
-./prog_seq 'geneNames_2.txt' 'exe_12' 'IFITM3' 766
-./prog_seq 'geneNames_2.txt' 'exe_12' 'PHB2' 767
-./prog_seq 'geneNames_2.txt' 'exe_12' 'SUB1' 768
-./prog_seq 'geneNames_2.txt' 'exe_12' 'LAMB1' 769
-./prog_seq 'geneNames_2.txt' 'exe_12' 'SNRPD1' 770
-./prog_seq 'geneNames_2.txt' 'exe_12' 'PAPOLA' 771
-./prog_seq 'geneNames_2.txt' 'exe_12' 'POLR2G' 772
-./prog_seq 'geneNames_2.txt' 'exe_12' 'APOC1' 773
-./prog_seq 'geneNames_2.txt' 'exe_12' 'POLR2I' 774
-./prog_seq 'geneNames_2.txt' 'exe_12' 'PTMA' 775
-./prog_seq 'geneNames_2.txt' 'exe_12' 'XRCC6' 776
-./prog_seq 'geneNames_2.txt' 'exe_12' 'EEF1A1' 777
-./prog_seq 'geneNames_2.txt' 'exe_12' 'ZNF638' 778
-./prog_seq 'geneNames_2.txt' 'exe_12' 'SRSF10' 779
-./prog_seq 'geneNames_2.txt' 'exe_12' 'S100A14' 780
-./prog_seq 'geneNames_2.txt' 'exe_12' 'S100A16' 781
-./prog_seq 'geneNames_2.txt' 'exe_12' 'SRSF6' 782
-./prog_seq 'geneNames_2.txt' 'exe_12' 'ENO1' 783
-./prog_seq 'geneNames_2.txt' 'exe_12' 'NPM1' 784
-./prog_seq 'geneNames_2.txt' 'exe_12' 'ILF3' 785
-./prog_seq 'geneNames_2.txt' 'exe_12' 'NONO' 786
-./prog_seq 'geneNames_2.txt' 'exe_12' 'CAMK2D' 787
-./prog_seq 'geneNames_2.txt' 'exe_12' 'HNRNPR' 788
-./prog_seq 'geneNames_2.txt' 'exe_12' 'RBBP7' 789
-./prog_seq 'geneNames_2.txt' 'exe_12' 'SSB' 790
-./prog_seq 'geneNames_2.txt' 'exe_12' 'WFDC2' 791
-./prog_seq 'geneNames_2.txt' 'exe_12' 'KPNA2' 792
-./prog_seq 'geneNames_2.txt' 'exe_12' 'APOA1' 793
-./prog_seq 'geneNames_2.txt' 'exe_12' 'RBM39' 794
-./prog_seq 'geneNames_2.txt' 'exe_12' 'HDAC2' 795
-./prog_seq 'geneNames_2.txt' 'exe_12' 'CNOT7' 796
-./prog_seq 'geneNames_2.txt' 'exe_12' 'SOX4' 797
-./prog_seq 'geneNames_2.txt' 'exe_12' 'HERPUD1' 798
-./prog_seq 'geneNames_2.txt' 'exe_12' 'ANP32E' 799
-./prog_seq 'geneNames_2.txt' 'exe_12' 'THRAP3' 800
-./prog_seq 'geneNames_2.txt' 'exe_12' 'POLR2F' 801
-./prog_seq 'geneNames_2.txt' 'exe_12' 'ACTL6A' 802
-./prog_seq 'geneNames_2.txt' 'exe_12' 'AKR1D1' 803
-./prog_seq 'geneNames_2.txt' 'exe_12' 'HMGN3' 804
-./prog_seq 'geneNames_2.txt' 'exe_12' 'CKS2' 805
-./prog_seq 'geneNames_2.txt' 'exe_12' 'APEX1' 806
-./prog_seq 'geneNames_2.txt' 'exe_12' 'DDX5' 807
-./prog_seq 'geneNames_2.txt' 'exe_12' 'CDK1' 808
-./prog_seq 'geneNames_2.txt' 'exe_12' 'CACYBP' 809
-./prog_seq 'geneNames_2.txt' 'exe_12' 'PON2' 810
-./prog_seq 'geneNames_2.txt' 'exe_12' 'AMZ2' 811
-./prog_seq 'geneNames_2.txt' 'exe_12' 'ANXA3' 812
-./prog_seq 'geneNames_2.txt' 'exe_12' 'APOA2' 813
-./prog_seq 'geneNames_2.txt' 'exe_12' 'UGP2' 814
-./prog_seq 'geneNames_2.txt' 'exe_12' 'GPC3' 815
-./prog_seq 'geneNames_2.txt' 'exe_12' 'PWP1' 816
-./prog_seq 'geneNames_2.txt' 'exe_12' 'CNBP' 817
-./prog_seq 'geneNames_2.txt' 'exe_12' 'MATR3' 818
-./prog_seq 'geneNames_2.txt' 'exe_12' 'SRSF3' 819
-./prog_seq 'geneNames_2.txt' 'exe_12' 'ILF2' 820
-./prog_seq 'geneNames_2.txt' 'exe_12' 'ID2' 821
-./prog_seq 'geneNames_2.txt' 'exe_12' 'CSDE1' 822
-./prog_seq 'geneNames_2.txt' 'exe_12' 'OCIAD2' 823
-./prog_seq 'geneNames_2.txt' 'exe_12' 'STMN1' 824
-./prog_seq 'geneNames_2.txt' 'exe_12' 'RHOBTB3' 825
-./prog_seq 'geneNames_2.txt' 'exe_12' 'RBMX' 826
-./prog_seq 'geneNames_2.txt' 'exe_12' 'BTF3' 827
-./prog_seq 'geneNames_2.txt' 'exe_12' 'SNRPB' 828
-./prog_seq 'geneNames_2.txt' 'exe_13' 'TCERG1' 829
-./prog_seq 'geneNames_2.txt' 'exe_13' 'SRRM1' 830
-./prog_seq 'geneNames_2.txt' 'exe_13' 'XRCC5' 831
-./prog_seq 'geneNames_2.txt' 'exe_13' 'RNASE1' 832
-./prog_seq 'geneNames_2.txt' 'exe_13' 'HMGN2' 833
-./prog_seq 'geneNames_2.txt' 'exe_13' 'TCEB2' 834
-./prog_seq 'geneNames_2.txt' 'exe_13' 'IFITM3' 835
-./prog_seq 'geneNames_2.txt' 'exe_13' 'PHB2' 836
-./prog_seq 'geneNames_2.txt' 'exe_13' 'SUB1' 837
-./prog_seq 'geneNames_2.txt' 'exe_13' 'LAMB1' 838
-./prog_seq 'geneNames_2.txt' 'exe_13' 'SNRPD1' 839
-./prog_seq 'geneNames_2.txt' 'exe_13' 'PAPOLA' 840
-./prog_seq 'geneNames_2.txt' 'exe_13' 'POLR2G' 841
-./prog_seq 'geneNames_2.txt' 'exe_13' 'APOC1' 842
-./prog_seq 'geneNames_2.txt' 'exe_13' 'POLR2I' 843
-./prog_seq 'geneNames_2.txt' 'exe_13' 'PTMA' 844
-./prog_seq 'geneNames_2.txt' 'exe_13' 'XRCC6' 845
-./prog_seq 'geneNames_2.txt' 'exe_13' 'EEF1A1' 846
-./prog_seq 'geneNames_2.txt' 'exe_13' 'ZNF638' 847
-./prog_seq 'geneNames_2.txt' 'exe_13' 'SRSF10' 848
-./prog_seq 'geneNames_2.txt' 'exe_13' 'S100A14' 849
-./prog_seq 'geneNames_2.txt' 'exe_13' 'S100A16' 850
-./prog_seq 'geneNames_2.txt' 'exe_13' 'SRSF6' 851
-./prog_seq 'geneNames_2.txt' 'exe_13' 'ENO1' 852
-./prog_seq 'geneNames_2.txt' 'exe_13' 'NPM1' 853
-./prog_seq 'geneNames_2.txt' 'exe_13' 'ILF3' 854
-./prog_seq 'geneNames_2.txt' 'exe_13' 'NONO' 855
-./prog_seq 'geneNames_2.txt' 'exe_13' 'CAMK2D' 856
-./prog_seq 'geneNames_2.txt' 'exe_13' 'HNRNPR' 857
-./prog_seq 'geneNames_2.txt' 'exe_13' 'RBBP7' 858
-./prog_seq 'geneNames_2.txt' 'exe_13' 'SSB' 859
-./prog_seq 'geneNames_2.txt' 'exe_13' 'WFDC2' 860
-./prog_seq 'geneNames_2.txt' 'exe_13' 'KPNA2' 861
-./prog_seq 'geneNames_2.txt' 'exe_13' 'APOA1' 862
-./prog_seq 'geneNames_2.txt' 'exe_13' 'RBM39' 863
-./prog_seq 'geneNames_2.txt' 'exe_13' 'HDAC2' 864
-./prog_seq 'geneNames_2.txt' 'exe_13' 'CNOT7' 865
-./prog_seq 'geneNames_2.txt' 'exe_13' 'SOX4' 866
-./prog_seq 'geneNames_2.txt' 'exe_13' 'HERPUD1' 867
-./prog_seq 'geneNames_2.txt' 'exe_13' 'ANP32E' 868
-./prog_seq 'geneNames_2.txt' 'exe_13' 'THRAP3' 869
-./prog_seq 'geneNames_2.txt' 'exe_13' 'POLR2F' 870
-./prog_seq 'geneNames_2.txt' 'exe_13' 'ACTL6A' 871
-./prog_seq 'geneNames_2.txt' 'exe_13' 'AKR1D1' 872
-./prog_seq 'geneNames_2.txt' 'exe_13' 'HMGN3' 873
-./prog_seq 'geneNames_2.txt' 'exe_13' 'CKS2' 874
-./prog_seq 'geneNames_2.txt' 'exe_13' 'APEX1' 875
-./prog_seq 'geneNames_2.txt' 'exe_13' 'DDX5' 876
-./prog_seq 'geneNames_2.txt' 'exe_13' 'CDK1' 877
-./prog_seq 'geneNames_2.txt' 'exe_13' 'CACYBP' 878
-./prog_seq 'geneNames_2.txt' 'exe_13' 'PON2' 879
-./prog_seq 'geneNames_2.txt' 'exe_13' 'AMZ2' 880
-./prog_seq 'geneNames_2.txt' 'exe_13' 'ANXA3' 881
-./prog_seq 'geneNames_2.txt' 'exe_13' 'APOA2' 882
-./prog_seq 'geneNames_2.txt' 'exe_13' 'UGP2' 883
-./prog_seq 'geneNames_2.txt' 'exe_13' 'GPC3' 884
-./prog_seq 'geneNames_2.txt' 'exe_13' 'PWP1' 885
-./prog_seq 'geneNames_2.txt' 'exe_13' 'CNBP' 886
-./prog_seq 'geneNames_2.txt' 'exe_13' 'MATR3' 887
-./prog_seq 'geneNames_2.txt' 'exe_13' 'SRSF3' 888
-./prog_seq 'geneNames_2.txt' 'exe_13' 'ILF2' 889
-./prog_seq 'geneNames_2.txt' 'exe_13' 'ID2' 890
-./prog_seq 'geneNames_2.txt' 'exe_13' 'CSDE1' 891
-./prog_seq 'geneNames_2.txt' 'exe_13' 'OCIAD2' 892
-./prog_seq 'geneNames_2.txt' 'exe_13' 'STMN1' 893
-./prog_seq 'geneNames_2.txt' 'exe_13' 'RHOBTB3' 894
-./prog_seq 'geneNames_2.txt' 'exe_13' 'RBMX' 895
-./prog_seq 'geneNames_2.txt' 'exe_13' 'BTF3' 896
-./prog_seq 'geneNames_2.txt' 'exe_13' 'SNRPB' 897
-./prog_seq 'geneNames_2.txt' 'exe_14' 'TCERG1' 898
-./prog_seq 'geneNames_2.txt' 'exe_14' 'SRRM1' 899
-./prog_seq 'geneNames_2.txt' 'exe_14' 'XRCC5' 900
-./prog_seq 'geneNames_2.txt' 'exe_14' 'RNASE1' 901
-./prog_seq 'geneNames_2.txt' 'exe_14' 'HMGN2' 902
-./prog_seq 'geneNames_2.txt' 'exe_14' 'TCEB2' 903
-./prog_seq 'geneNames_2.txt' 'exe_14' 'IFITM3' 904
-./prog_seq 'geneNames_2.txt' 'exe_14' 'PHB2' 905
-./prog_seq 'geneNames_2.txt' 'exe_14' 'SUB1' 906
-./prog_seq 'geneNames_2.txt' 'exe_14' 'LAMB1' 907
-./prog_seq 'geneNames_2.txt' 'exe_14' 'SNRPD1' 908
-./prog_seq 'geneNames_2.txt' 'exe_14' 'PAPOLA' 909
-./prog_seq 'geneNames_2.txt' 'exe_14' 'POLR2G' 910
-./prog_seq 'geneNames_2.txt' 'exe_14' 'APOC1' 911
-./prog_seq 'geneNames_2.txt' 'exe_14' 'POLR2I' 912
-./prog_seq 'geneNames_2.txt' 'exe_14' 'PTMA' 913
-./prog_seq 'geneNames_2.txt' 'exe_14' 'XRCC6' 914
-./prog_seq 'geneNames_2.txt' 'exe_14' 'EEF1A1' 915
-./prog_seq 'geneNames_2.txt' 'exe_14' 'ZNF638' 916
-./prog_seq 'geneNames_2.txt' 'exe_14' 'SRSF10' 917
-./prog_seq 'geneNames_2.txt' 'exe_14' 'S100A14' 918
-./prog_seq 'geneNames_2.txt' 'exe_14' 'S100A16' 919
-./prog_seq 'geneNames_2.txt' 'exe_14' 'SRSF6' 920
-./prog_seq 'geneNames_2.txt' 'exe_14' 'ENO1' 921
-./prog_seq 'geneNames_2.txt' 'exe_14' 'NPM1' 922
-./prog_seq 'geneNames_2.txt' 'exe_14' 'ILF3' 923
-./prog_seq 'geneNames_2.txt' 'exe_14' 'NONO' 924
-./prog_seq 'geneNames_2.txt' 'exe_14' 'CAMK2D' 925
-./prog_seq 'geneNames_2.txt' 'exe_14' 'HNRNPR' 926
-./prog_seq 'geneNames_2.txt' 'exe_14' 'RBBP7' 927
-./prog_seq 'geneNames_2.txt' 'exe_14' 'SSB' 928
-./prog_seq 'geneNames_2.txt' 'exe_14' 'WFDC2' 929
-./prog_seq 'geneNames_2.txt' 'exe_14' 'KPNA2' 930
-./prog_seq 'geneNames_2.txt' 'exe_14' 'APOA1' 931
-./prog_seq 'geneNames_2.txt' 'exe_14' 'RBM39' 932
-./prog_seq 'geneNames_2.txt' 'exe_14' 'HDAC2' 933
-./prog_seq 'geneNames_2.txt' 'exe_14' 'CNOT7' 934
-./prog_seq 'geneNames_2.txt' 'exe_14' 'SOX4' 935
-./prog_seq 'geneNames_2.txt' 'exe_14' 'HERPUD1' 936
-./prog_seq 'geneNames_2.txt' 'exe_14' 'ANP32E' 937
-./prog_seq 'geneNames_2.txt' 'exe_14' 'THRAP3' 938
-./prog_seq 'geneNames_2.txt' 'exe_14' 'POLR2F' 939
-./prog_seq 'geneNames_2.txt' 'exe_14' 'ACTL6A' 940
-./prog_seq 'geneNames_2.txt' 'exe_14' 'AKR1D1' 941
-./prog_seq 'geneNames_2.txt' 'exe_14' 'HMGN3' 942
-./prog_seq 'geneNames_2.txt' 'exe_14' 'CKS2' 943
-./prog_seq 'geneNames_2.txt' 'exe_14' 'APEX1' 944
-./prog_seq 'geneNames_2.txt' 'exe_14' 'DDX5' 945
-./prog_seq 'geneNames_2.txt' 'exe_14' 'CDK1' 946
-./prog_seq 'geneNames_2.txt' 'exe_14' 'CACYBP' 947
-./prog_seq 'geneNames_2.txt' 'exe_14' 'PON2' 948
-./prog_seq 'geneNames_2.txt' 'exe_14' 'AMZ2' 949
-./prog_seq 'geneNames_2.txt' 'exe_14' 'ANXA3' 950
-./prog_seq 'geneNames_2.txt' 'exe_14' 'APOA2' 951
-./prog_seq 'geneNames_2.txt' 'exe_14' 'UGP2' 952
-./prog_seq 'geneNames_2.txt' 'exe_14' 'GPC3' 953
-./prog_seq 'geneNames_2.txt' 'exe_14' 'PWP1' 954
-./prog_seq 'geneNames_2.txt' 'exe_14' 'CNBP' 955
-./prog_seq 'geneNames_2.txt' 'exe_14' 'MATR3' 956
-./prog_seq 'geneNames_2.txt' 'exe_14' 'SRSF3' 957
-./prog_seq 'geneNames_2.txt' 'exe_14' 'ILF2' 958
-./prog_seq 'geneNames_2.txt' 'exe_14' 'ID2' 959
-./prog_seq 'geneNames_2.txt' 'exe_14' 'CSDE1' 960
-./prog_seq 'geneNames_2.txt' 'exe_14' 'OCIAD2' 961
-./prog_seq 'geneNames_2.txt' 'exe_14' 'STMN1' 962
-./prog_seq 'geneNames_2.txt' 'exe_14' 'RHOBTB3' 963
-./prog_seq 'geneNames_2.txt' 'exe_14' 'RBMX' 964
-./prog_seq 'geneNames_2.txt' 'exe_14' 'BTF3' 965
-./prog_seq 'geneNames_2.txt' 'exe_14' 'SNRPB' 966
-./prog_seq 'geneNames_2.txt' 'exe_15' 'TCERG1' 967
-./prog_seq 'geneNames_2.txt' 'exe_15' 'SRRM1' 968
-./prog_seq 'geneNames_2.txt' 'exe_15' 'XRCC5' 969
-./prog_seq 'geneNames_2.txt' 'exe_15' 'RNASE1' 970
-./prog_seq 'geneNames_2.txt' 'exe_15' 'HMGN2' 971
-./prog_seq 'geneNames_2.txt' 'exe_15' 'TCEB2' 972
-./prog_seq 'geneNames_2.txt' 'exe_15' 'IFITM3' 973
-./prog_seq 'geneNames_2.txt' 'exe_15' 'PHB2' 974
-./prog_seq 'geneNames_2.txt' 'exe_15' 'SUB1' 975
-./prog_seq 'geneNames_2.txt' 'exe_15' 'LAMB1' 976
-./prog_seq 'geneNames_2.txt' 'exe_15' 'SNRPD1' 977
-./prog_seq 'geneNames_2.txt' 'exe_15' 'PAPOLA' 978
-./prog_seq 'geneNames_2.txt' 'exe_15' 'POLR2G' 979
-./prog_seq 'geneNames_2.txt' 'exe_15' 'APOC1' 980
-./prog_seq 'geneNames_2.txt' 'exe_15' 'POLR2I' 981
-./prog_seq 'geneNames_2.txt' 'exe_15' 'PTMA' 982
-./prog_seq 'geneNames_2.txt' 'exe_15' 'XRCC6' 983
-./prog_seq 'geneNames_2.txt' 'exe_15' 'EEF1A1' 984
-./prog_seq 'geneNames_2.txt' 'exe_15' 'ZNF638' 985
-./prog_seq 'geneNames_2.txt' 'exe_15' 'SRSF10' 986
-./prog_seq 'geneNames_2.txt' 'exe_15' 'S100A14' 987
-./prog_seq 'geneNames_2.txt' 'exe_15' 'S100A16' 988
-./prog_seq 'geneNames_2.txt' 'exe_15' 'SRSF6' 989
-./prog_seq 'geneNames_2.txt' 'exe_15' 'ENO1' 990
-./prog_seq 'geneNames_2.txt' 'exe_15' 'NPM1' 991
-./prog_seq 'geneNames_2.txt' 'exe_15' 'ILF3' 992
-./prog_seq 'geneNames_2.txt' 'exe_15' 'NONO' 993
-./prog_seq 'geneNames_2.txt' 'exe_15' 'CAMK2D' 994
-./prog_seq 'geneNames_2.txt' 'exe_15' 'HNRNPR' 995
-./prog_seq 'geneNames_2.txt' 'exe_15' 'RBBP7' 996
-./prog_seq 'geneNames_2.txt' 'exe_15' 'SSB' 997
-./prog_seq 'geneNames_2.txt' 'exe_15' 'WFDC2' 998
-./prog_seq 'geneNames_2.txt' 'exe_15' 'KPNA2' 999
-./prog_seq 'geneNames_2.txt' 'exe_15' 'APOA1' 1000
-./prog_seq 'geneNames_2.txt' 'exe_15' 'RBM39' 1001
-./prog_seq 'geneNames_2.txt' 'exe_15' 'HDAC2' 1002
-./prog_seq 'geneNames_2.txt' 'exe_15' 'CNOT7' 1003
-./prog_seq 'geneNames_2.txt' 'exe_15' 'SOX4' 1004
-./prog_seq 'geneNames_2.txt' 'exe_15' 'HERPUD1' 1005
-./prog_seq 'geneNames_2.txt' 'exe_15' 'ANP32E' 1006
-./prog_seq 'geneNames_2.txt' 'exe_15' 'THRAP3' 1007
-./prog_seq 'geneNames_2.txt' 'exe_15' 'POLR2F' 1008
-./prog_seq 'geneNames_2.txt' 'exe_15' 'ACTL6A' 1009
-./prog_seq 'geneNames_2.txt' 'exe_15' 'AKR1D1' 1010
-./prog_seq 'geneNames_2.txt' 'exe_15' 'HMGN3' 1011
-./prog_seq 'geneNames_2.txt' 'exe_15' 'CKS2' 1012
-./prog_seq 'geneNames_2.txt' 'exe_15' 'APEX1' 1013
-./prog_seq 'geneNames_2.txt' 'exe_15' 'DDX5' 1014
-./prog_seq 'geneNames_2.txt' 'exe_15' 'CDK1' 1015
-./prog_seq 'geneNames_2.txt' 'exe_15' 'CACYBP' 1016
-./prog_seq 'geneNames_2.txt' 'exe_15' 'PON2' 1017
-./prog_seq 'geneNames_2.txt' 'exe_15' 'AMZ2' 1018
-./prog_seq 'geneNames_2.txt' 'exe_15' 'ANXA3' 1019
-./prog_seq 'geneNames_2.txt' 'exe_15' 'APOA2' 1020
-./prog_seq 'geneNames_2.txt' 'exe_15' 'UGP2' 1021
-./prog_seq 'geneNames_2.txt' 'exe_15' 'GPC3' 1022
-./prog_seq 'geneNames_2.txt' 'exe_15' 'PWP1' 1023
-./prog_seq 'geneNames_2.txt' 'exe_15' 'CNBP' 1024
-./prog_seq 'geneNames_2.txt' 'exe_15' 'MATR3' 1025
-./prog_seq 'geneNames_2.txt' 'exe_15' 'SRSF3' 1026
-./prog_seq 'geneNames_2.txt' 'exe_15' 'ILF2' 1027
-./prog_seq 'geneNames_2.txt' 'exe_15' 'ID2' 1028
-./prog_seq 'geneNames_2.txt' 'exe_15' 'CSDE1' 1029
-./prog_seq 'geneNames_2.txt' 'exe_15' 'OCIAD2' 1030
-./prog_seq 'geneNames_2.txt' 'exe_15' 'STMN1' 1031
-./prog_seq 'geneNames_2.txt' 'exe_15' 'RHOBTB3' 1032
-./prog_seq 'geneNames_2.txt' 'exe_15' 'RBMX' 1033
-./prog_seq 'geneNames_2.txt' 'exe_15' 'BTF3' 1034
-./prog_seq 'geneNames_2.txt' 'exe_15' 'SNRPB' 1035
-./prog_seq 'geneNames_2.txt' 'exe_16' 'TCERG1' 1036
-./prog_seq 'geneNames_2.txt' 'exe_16' 'SRRM1' 1037
-./prog_seq 'geneNames_2.txt' 'exe_16' 'XRCC5' 1038
-./prog_seq 'geneNames_2.txt' 'exe_16' 'RNASE1' 1039
-./prog_seq 'geneNames_2.txt' 'exe_16' 'HMGN2' 1040
-./prog_seq 'geneNames_2.txt' 'exe_16' 'TCEB2' 1041
-./prog_seq 'geneNames_2.txt' 'exe_16' 'IFITM3' 1042
-./prog_seq 'geneNames_2.txt' 'exe_16' 'PHB2' 1043
-./prog_seq 'geneNames_2.txt' 'exe_16' 'SUB1' 1044
-./prog_seq 'geneNames_2.txt' 'exe_16' 'LAMB1' 1045
-./prog_seq 'geneNames_2.txt' 'exe_16' 'SNRPD1' 1046
-./prog_seq 'geneNames_2.txt' 'exe_16' 'PAPOLA' 1047
-./prog_seq 'geneNames_2.txt' 'exe_16' 'POLR2G' 1048
-./prog_seq 'geneNames_2.txt' 'exe_16' 'APOC1' 1049
-./prog_seq 'geneNames_2.txt' 'exe_16' 'POLR2I' 1050
-./prog_seq 'geneNames_2.txt' 'exe_16' 'PTMA' 1051
-./prog_seq 'geneNames_2.txt' 'exe_16' 'XRCC6' 1052
-./prog_seq 'geneNames_2.txt' 'exe_16' 'EEF1A1' 1053
-./prog_seq 'geneNames_2.txt' 'exe_16' 'ZNF638' 1054
-./prog_seq 'geneNames_2.txt' 'exe_16' 'SRSF10' 1055
-./prog_seq 'geneNames_2.txt' 'exe_16' 'S100A14' 1056
-./prog_seq 'geneNames_2.txt' 'exe_16' 'S100A16' 1057
-./prog_seq 'geneNames_2.txt' 'exe_16' 'SRSF6' 1058
-./prog_seq 'geneNames_2.txt' 'exe_16' 'ENO1' 1059
-./prog_seq 'geneNames_2.txt' 'exe_16' 'NPM1' 1060
-./prog_seq 'geneNames_2.txt' 'exe_16' 'ILF3' 1061
-./prog_seq 'geneNames_2.txt' 'exe_16' 'NONO' 1062
-./prog_seq 'geneNames_2.txt' 'exe_16' 'CAMK2D' 1063
-./prog_seq 'geneNames_2.txt' 'exe_16' 'HNRNPR' 1064
-./prog_seq 'geneNames_2.txt' 'exe_16' 'RBBP7' 1065
-./prog_seq 'geneNames_2.txt' 'exe_16' 'SSB' 1066
-./prog_seq 'geneNames_2.txt' 'exe_16' 'WFDC2' 1067
-./prog_seq 'geneNames_2.txt' 'exe_16' 'KPNA2' 1068
-./prog_seq 'geneNames_2.txt' 'exe_16' 'APOA1' 1069
-./prog_seq 'geneNames_2.txt' 'exe_16' 'RBM39' 1070
-./prog_seq 'geneNames_2.txt' 'exe_16' 'HDAC2' 1071
-./prog_seq 'geneNames_2.txt' 'exe_16' 'CNOT7' 1072
-./prog_seq 'geneNames_2.txt' 'exe_16' 'SOX4' 1073
-./prog_seq 'geneNames_2.txt' 'exe_16' 'HERPUD1' 1074
-./prog_seq 'geneNames_2.txt' 'exe_16' 'ANP32E' 1075
-./prog_seq 'geneNames_2.txt' 'exe_16' 'THRAP3' 1076
-./prog_seq 'geneNames_2.txt' 'exe_16' 'POLR2F' 1077
-./prog_seq 'geneNames_2.txt' 'exe_16' 'ACTL6A' 1078
-./prog_seq 'geneNames_2.txt' 'exe_16' 'AKR1D1' 1079
-./prog_seq 'geneNames_2.txt' 'exe_16' 'HMGN3' 1080
-./prog_seq 'geneNames_2.txt' 'exe_16' 'CKS2' 1081
-./prog_seq 'geneNames_2.txt' 'exe_16' 'APEX1' 1082
-./prog_seq 'geneNames_2.txt' 'exe_16' 'DDX5' 1083
-./prog_seq 'geneNames_2.txt' 'exe_16' 'CDK1' 1084
-./prog_seq 'geneNames_2.txt' 'exe_16' 'CACYBP' 1085
-./prog_seq 'geneNames_2.txt' 'exe_16' 'PON2' 1086
-./prog_seq 'geneNames_2.txt' 'exe_16' 'AMZ2' 1087
-./prog_seq 'geneNames_2.txt' 'exe_16' 'ANXA3' 1088
-./prog_seq 'geneNames_2.txt' 'exe_16' 'APOA2' 1089
-./prog_seq 'geneNames_2.txt' 'exe_16' 'UGP2' 1090
-./prog_seq 'geneNames_2.txt' 'exe_16' 'GPC3' 1091
-./prog_seq 'geneNames_2.txt' 'exe_16' 'PWP1' 1092
-./prog_seq 'geneNames_2.txt' 'exe_16' 'CNBP' 1093
-./prog_seq 'geneNames_2.txt' 'exe_16' 'MATR3' 1094
-./prog_seq 'geneNames_2.txt' 'exe_16' 'SRSF3' 1095
-./prog_seq 'geneNames_2.txt' 'exe_16' 'ILF2' 1096
-./prog_seq 'geneNames_2.txt' 'exe_16' 'ID2' 1097
-./prog_seq 'geneNames_2.txt' 'exe_16' 'CSDE1' 1098
-./prog_seq 'geneNames_2.txt' 'exe_16' 'OCIAD2' 1099
-./prog_seq 'geneNames_2.txt' 'exe_16' 'STMN1' 1100
-./prog_seq 'geneNames_2.txt' 'exe_16' 'RHOBTB3' 1101
-./prog_seq 'geneNames_2.txt' 'exe_16' 'RBMX' 1102
-./prog_seq 'geneNames_2.txt' 'exe_16' 'BTF3' 1103
-./prog_seq 'geneNames_2.txt' 'exe_16' 'SNRPB' 1104
-./prog_seq 'geneNames_2.txt' 'exe_17' 'TCERG1' 1105
-./prog_seq 'geneNames_2.txt' 'exe_17' 'SRRM1' 1106
-./prog_seq 'geneNames_2.txt' 'exe_17' 'XRCC5' 1107
-./prog_seq 'geneNames_2.txt' 'exe_17' 'RNASE1' 1108
-./prog_seq 'geneNames_2.txt' 'exe_17' 'HMGN2' 1109
-./prog_seq 'geneNames_2.txt' 'exe_17' 'TCEB2' 1110
-./prog_seq 'geneNames_2.txt' 'exe_17' 'IFITM3' 1111
-./prog_seq 'geneNames_2.txt' 'exe_17' 'PHB2' 1112
-./prog_seq 'geneNames_2.txt' 'exe_17' 'SUB1' 1113
-./prog_seq 'geneNames_2.txt' 'exe_17' 'LAMB1' 1114
-./prog_seq 'geneNames_2.txt' 'exe_17' 'SNRPD1' 1115
-./prog_seq 'geneNames_2.txt' 'exe_17' 'PAPOLA' 1116
-./prog_seq 'geneNames_2.txt' 'exe_17' 'POLR2G' 1117
-./prog_seq 'geneNames_2.txt' 'exe_17' 'APOC1' 1118
-./prog_seq 'geneNames_2.txt' 'exe_17' 'POLR2I' 1119
-./prog_seq 'geneNames_2.txt' 'exe_17' 'PTMA' 1120
-./prog_seq 'geneNames_2.txt' 'exe_17' 'XRCC6' 1121
-./prog_seq 'geneNames_2.txt' 'exe_17' 'EEF1A1' 1122
-./prog_seq 'geneNames_2.txt' 'exe_17' 'ZNF638' 1123
-./prog_seq 'geneNames_2.txt' 'exe_17' 'SRSF10' 1124
-./prog_seq 'geneNames_2.txt' 'exe_17' 'S100A14' 1125
-./prog_seq 'geneNames_2.txt' 'exe_17' 'S100A16' 1126
-./prog_seq 'geneNames_2.txt' 'exe_17' 'SRSF6' 1127
-./prog_seq 'geneNames_2.txt' 'exe_17' 'ENO1' 1128
-./prog_seq 'geneNames_2.txt' 'exe_17' 'NPM1' 1129
-./prog_seq 'geneNames_2.txt' 'exe_17' 'ILF3' 1130
-./prog_seq 'geneNames_2.txt' 'exe_17' 'NONO' 1131
-./prog_seq 'geneNames_2.txt' 'exe_17' 'CAMK2D' 1132
-./prog_seq 'geneNames_2.txt' 'exe_17' 'HNRNPR' 1133
-./prog_seq 'geneNames_2.txt' 'exe_17' 'RBBP7' 1134
-./prog_seq 'geneNames_2.txt' 'exe_17' 'SSB' 1135
-./prog_seq 'geneNames_2.txt' 'exe_17' 'WFDC2' 1136
-./prog_seq 'geneNames_2.txt' 'exe_17' 'KPNA2' 1137
-./prog_seq 'geneNames_2.txt' 'exe_17' 'APOA1' 1138
-./prog_seq 'geneNames_2.txt' 'exe_17' 'RBM39' 1139
-./prog_seq 'geneNames_2.txt' 'exe_17' 'HDAC2' 1140
-./prog_seq 'geneNames_2.txt' 'exe_17' 'CNOT7' 1141
-./prog_seq 'geneNames_2.txt' 'exe_17' 'SOX4' 1142
-./prog_seq 'geneNames_2.txt' 'exe_17' 'HERPUD1' 1143
-./prog_seq 'geneNames_2.txt' 'exe_17' 'ANP32E' 1144
-./prog_seq 'geneNames_2.txt' 'exe_17' 'THRAP3' 1145
-./prog_seq 'geneNames_2.txt' 'exe_17' 'POLR2F' 1146
-./prog_seq 'geneNames_2.txt' 'exe_17' 'ACTL6A' 1147
-./prog_seq 'geneNames_2.txt' 'exe_17' 'AKR1D1' 1148
-./prog_seq 'geneNames_2.txt' 'exe_17' 'HMGN3' 1149
-./prog_seq 'geneNames_2.txt' 'exe_17' 'CKS2' 1150
-./prog_seq 'geneNames_2.txt' 'exe_17' 'APEX1' 1151
-./prog_seq 'geneNames_2.txt' 'exe_17' 'DDX5' 1152
-./prog_seq 'geneNames_2.txt' 'exe_17' 'CDK1' 1153
-./prog_seq 'geneNames_2.txt' 'exe_17' 'CACYBP' 1154
-./prog_seq 'geneNames_2.txt' 'exe_17' 'PON2' 1155
-./prog_seq 'geneNames_2.txt' 'exe_17' 'AMZ2' 1156
-./prog_seq 'geneNames_2.txt' 'exe_17' 'ANXA3' 1157
-./prog_seq 'geneNames_2.txt' 'exe_17' 'APOA2' 1158
-./prog_seq 'geneNames_2.txt' 'exe_17' 'UGP2' 1159
-./prog_seq 'geneNames_2.txt' 'exe_17' 'GPC3' 1160
-./prog_seq 'geneNames_2.txt' 'exe_17' 'PWP1' 1161
-./prog_seq 'geneNames_2.txt' 'exe_17' 'CNBP' 1162
-./prog_seq 'geneNames_2.txt' 'exe_17' 'MATR3' 1163
-./prog_seq 'geneNames_2.txt' 'exe_17' 'SRSF3' 1164
-./prog_seq 'geneNames_2.txt' 'exe_17' 'ILF2' 1165
-./prog_seq 'geneNames_2.txt' 'exe_17' 'ID2' 1166
-./prog_seq 'geneNames_2.txt' 'exe_17' 'CSDE1' 1167
-./prog_seq 'geneNames_2.txt' 'exe_17' 'OCIAD2' 1168
-./prog_seq 'geneNames_2.txt' 'exe_17' 'STMN1' 1169
-./prog_seq 'geneNames_2.txt' 'exe_17' 'RHOBTB3' 1170
-./prog_seq 'geneNames_2.txt' 'exe_17' 'RBMX' 1171
-./prog_seq 'geneNames_2.txt' 'exe_17' 'BTF3' 1172
-./prog_seq 'geneNames_2.txt' 'exe_17' 'SNRPB' 1173
-./prog_seq 'geneNames_2.txt' 'exe_18' 'TCERG1' 1174
-./prog_seq 'geneNames_2.txt' 'exe_18' 'SRRM1' 1175
-./prog_seq 'geneNames_2.txt' 'exe_18' 'XRCC5' 1176
-./prog_seq 'geneNames_2.txt' 'exe_18' 'RNASE1' 1177
-./prog_seq 'geneNames_2.txt' 'exe_18' 'HMGN2' 1178
-./prog_seq 'geneNames_2.txt' 'exe_18' 'TCEB2' 1179
-./prog_seq 'geneNames_2.txt' 'exe_18' 'IFITM3' 1180
-./prog_seq 'geneNames_2.txt' 'exe_18' 'PHB2' 1181
-./prog_seq 'geneNames_2.txt' 'exe_18' 'SUB1' 1182
-./prog_seq 'geneNames_2.txt' 'exe_18' 'LAMB1' 1183
-./prog_seq 'geneNames_2.txt' 'exe_18' 'SNRPD1' 1184
-./prog_seq 'geneNames_2.txt' 'exe_18' 'PAPOLA' 1185
-./prog_seq 'geneNames_2.txt' 'exe_18' 'POLR2G' 1186
-./prog_seq 'geneNames_2.txt' 'exe_18' 'APOC1' 1187
-./prog_seq 'geneNames_2.txt' 'exe_18' 'POLR2I' 1188
-./prog_seq 'geneNames_2.txt' 'exe_18' 'PTMA' 1189
-./prog_seq 'geneNames_2.txt' 'exe_18' 'XRCC6' 1190
-./prog_seq 'geneNames_2.txt' 'exe_18' 'EEF1A1' 1191
-./prog_seq 'geneNames_2.txt' 'exe_18' 'ZNF638' 1192
-./prog_seq 'geneNames_2.txt' 'exe_18' 'SRSF10' 1193
-./prog_seq 'geneNames_2.txt' 'exe_18' 'S100A14' 1194
-./prog_seq 'geneNames_2.txt' 'exe_18' 'S100A16' 1195
-./prog_seq 'geneNames_2.txt' 'exe_18' 'SRSF6' 1196
-./prog_seq 'geneNames_2.txt' 'exe_18' 'ENO1' 1197
-./prog_seq 'geneNames_2.txt' 'exe_18' 'NPM1' 1198
-./prog_seq 'geneNames_2.txt' 'exe_18' 'ILF3' 1199
-./prog_seq 'geneNames_2.txt' 'exe_18' 'NONO' 1200
-./prog_seq 'geneNames_2.txt' 'exe_18' 'CAMK2D' 1201
-./prog_seq 'geneNames_2.txt' 'exe_18' 'HNRNPR' 1202
-./prog_seq 'geneNames_2.txt' 'exe_18' 'RBBP7' 1203
-./prog_seq 'geneNames_2.txt' 'exe_18' 'SSB' 1204
-./prog_seq 'geneNames_2.txt' 'exe_18' 'WFDC2' 1205
-./prog_seq 'geneNames_2.txt' 'exe_18' 'KPNA2' 1206
-./prog_seq 'geneNames_2.txt' 'exe_18' 'APOA1' 1207
-./prog_seq 'geneNames_2.txt' 'exe_18' 'RBM39' 1208
-./prog_seq 'geneNames_2.txt' 'exe_18' 'HDAC2' 1209
-./prog_seq 'geneNames_2.txt' 'exe_18' 'CNOT7' 1210
-./prog_seq 'geneNames_2.txt' 'exe_18' 'SOX4' 1211
-./prog_seq 'geneNames_2.txt' 'exe_18' 'HERPUD1' 1212
-./prog_seq 'geneNames_2.txt' 'exe_18' 'ANP32E' 1213
-./prog_seq 'geneNames_2.txt' 'exe_18' 'THRAP3' 1214
-./prog_seq 'geneNames_2.txt' 'exe_18' 'POLR2F' 1215
-./prog_seq 'geneNames_2.txt' 'exe_18' 'ACTL6A' 1216
-./prog_seq 'geneNames_2.txt' 'exe_18' 'AKR1D1' 1217
-./prog_seq 'geneNames_2.txt' 'exe_18' 'HMGN3' 1218
-./prog_seq 'geneNames_2.txt' 'exe_18' 'CKS2' 1219
-./prog_seq 'geneNames_2.txt' 'exe_18' 'APEX1' 1220
-./prog_seq 'geneNames_2.txt' 'exe_18' 'DDX5' 1221
-./prog_seq 'geneNames_2.txt' 'exe_18' 'CDK1' 1222
-./prog_seq 'geneNames_2.txt' 'exe_18' 'CACYBP' 1223
-./prog_seq 'geneNames_2.txt' 'exe_18' 'PON2' 1224
-./prog_seq 'geneNames_2.txt' 'exe_18' 'AMZ2' 1225
-./prog_seq 'geneNames_2.txt' 'exe_18' 'ANXA3' 1226
-./prog_seq 'geneNames_2.txt' 'exe_18' 'APOA2' 1227
-./prog_seq 'geneNames_2.txt' 'exe_18' 'UGP2' 1228
-./prog_seq 'geneNames_2.txt' 'exe_18' 'GPC3' 1229
-./prog_seq 'geneNames_2.txt' 'exe_18' 'PWP1' 1230
-./prog_seq 'geneNames_2.txt' 'exe_18' 'CNBP' 1231
-./prog_seq 'geneNames_2.txt' 'exe_18' 'MATR3' 1232
-./prog_seq 'geneNames_2.txt' 'exe_18' 'SRSF3' 1233
-./prog_seq 'geneNames_2.txt' 'exe_18' 'ILF2' 1234
-./prog_seq 'geneNames_2.txt' 'exe_18' 'ID2' 1235
-./prog_seq 'geneNames_2.txt' 'exe_18' 'CSDE1' 1236
-./prog_seq 'geneNames_2.txt' 'exe_18' 'OCIAD2' 1237
-./prog_seq 'geneNames_2.txt' 'exe_18' 'STMN1' 1238
-./prog_seq 'geneNames_2.txt' 'exe_18' 'RHOBTB3' 1239
-./prog_seq 'geneNames_2.txt' 'exe_18' 'RBMX' 1240
-./prog_seq 'geneNames_2.txt' 'exe_18' 'BTF3' 1241
-./prog_seq 'geneNames_2.txt' 'exe_18' 'SNRPB' 1242
-./prog_seq 'geneNames_2.txt' 'exe_19' 'TCERG1' 1243
-./prog_seq 'geneNames_2.txt' 'exe_19' 'SRRM1' 1244
-./prog_seq 'geneNames_2.txt' 'exe_19' 'XRCC5' 1245
-./prog_seq 'geneNames_2.txt' 'exe_19' 'RNASE1' 1246
-./prog_seq 'geneNames_2.txt' 'exe_19' 'HMGN2' 1247
-./prog_seq 'geneNames_2.txt' 'exe_19' 'TCEB2' 1248
-./prog_seq 'geneNames_2.txt' 'exe_19' 'IFITM3' 1249
-./prog_seq 'geneNames_2.txt' 'exe_19' 'PHB2' 1250
-./prog_seq 'geneNames_2.txt' 'exe_19' 'SUB1' 1251
-./prog_seq 'geneNames_2.txt' 'exe_19' 'LAMB1' 1252
-./prog_seq 'geneNames_2.txt' 'exe_19' 'SNRPD1' 1253
-./prog_seq 'geneNames_2.txt' 'exe_19' 'PAPOLA' 1254
-./prog_seq 'geneNames_2.txt' 'exe_19' 'POLR2G' 1255
-./prog_seq 'geneNames_2.txt' 'exe_19' 'APOC1' 1256
-./prog_seq 'geneNames_2.txt' 'exe_19' 'POLR2I' 1257
-./prog_seq 'geneNames_2.txt' 'exe_19' 'PTMA' 1258
-./prog_seq 'geneNames_2.txt' 'exe_19' 'XRCC6' 1259
-./prog_seq 'geneNames_2.txt' 'exe_19' 'EEF1A1' 1260
-./prog_seq 'geneNames_2.txt' 'exe_19' 'ZNF638' 1261
-./prog_seq 'geneNames_2.txt' 'exe_19' 'SRSF10' 1262
-./prog_seq 'geneNames_2.txt' 'exe_19' 'S100A14' 1263
-./prog_seq 'geneNames_2.txt' 'exe_19' 'S100A16' 1264
-./prog_seq 'geneNames_2.txt' 'exe_19' 'SRSF6' 1265
-./prog_seq 'geneNames_2.txt' 'exe_19' 'ENO1' 1266
-./prog_seq 'geneNames_2.txt' 'exe_19' 'NPM1' 1267
-./prog_seq 'geneNames_2.txt' 'exe_19' 'ILF3' 1268
-./prog_seq 'geneNames_2.txt' 'exe_19' 'NONO' 1269
-./prog_seq 'geneNames_2.txt' 'exe_19' 'CAMK2D' 1270
-./prog_seq 'geneNames_2.txt' 'exe_19' 'HNRNPR' 1271
-./prog_seq 'geneNames_2.txt' 'exe_19' 'RBBP7' 1272
-./prog_seq 'geneNames_2.txt' 'exe_19' 'SSB' 1273
-./prog_seq 'geneNames_2.txt' 'exe_19' 'WFDC2' 1274
-./prog_seq 'geneNames_2.txt' 'exe_19' 'KPNA2' 1275
-./prog_seq 'geneNames_2.txt' 'exe_19' 'APOA1' 1276
-./prog_seq 'geneNames_2.txt' 'exe_19' 'RBM39' 1277
-./prog_seq 'geneNames_2.txt' 'exe_19' 'HDAC2' 1278
-./prog_seq 'geneNames_2.txt' 'exe_19' 'CNOT7' 1279
-./prog_seq 'geneNames_2.txt' 'exe_19' 'SOX4' 1280
-./prog_seq 'geneNames_2.txt' 'exe_19' 'HERPUD1' 1281
-./prog_seq 'geneNames_2.txt' 'exe_19' 'ANP32E' 1282
-./prog_seq 'geneNames_2.txt' 'exe_19' 'THRAP3' 1283
-./prog_seq 'geneNames_2.txt' 'exe_19' 'POLR2F' 1284
-./prog_seq 'geneNames_2.txt' 'exe_19' 'ACTL6A' 1285
-./prog_seq 'geneNames_2.txt' 'exe_19' 'AKR1D1' 1286
-./prog_seq 'geneNames_2.txt' 'exe_19' 'HMGN3' 1287
-./prog_seq 'geneNames_2.txt' 'exe_19' 'CKS2' 1288
-./prog_seq 'geneNames_2.txt' 'exe_19' 'APEX1' 1289
-./prog_seq 'geneNames_2.txt' 'exe_19' 'DDX5' 1290
-./prog_seq 'geneNames_2.txt' 'exe_19' 'CDK1' 1291
-./prog_seq 'geneNames_2.txt' 'exe_19' 'CACYBP' 1292
-./prog_seq 'geneNames_2.txt' 'exe_19' 'PON2' 1293
-./prog_seq 'geneNames_2.txt' 'exe_19' 'AMZ2' 1294
-./prog_seq 'geneNames_2.txt' 'exe_19' 'ANXA3' 1295
-./prog_seq 'geneNames_2.txt' 'exe_19' 'APOA2' 1296
-./prog_seq 'geneNames_2.txt' 'exe_19' 'UGP2' 1297
-./prog_seq 'geneNames_2.txt' 'exe_19' 'GPC3' 1298
-./prog_seq 'geneNames_2.txt' 'exe_19' 'PWP1' 1299
-./prog_seq 'geneNames_2.txt' 'exe_19' 'CNBP' 1300
-./prog_seq 'geneNames_2.txt' 'exe_19' 'MATR3' 1301
-./prog_seq 'geneNames_2.txt' 'exe_19' 'SRSF3' 1302
-./prog_seq 'geneNames_2.txt' 'exe_19' 'ILF2' 1303
-./prog_seq 'geneNames_2.txt' 'exe_19' 'ID2' 1304
-./prog_seq 'geneNames_2.txt' 'exe_19' 'CSDE1' 1305
-./prog_seq 'geneNames_2.txt' 'exe_19' 'OCIAD2' 1306
-./prog_seq 'geneNames_2.txt' 'exe_19' 'STMN1' 1307
-./prog_seq 'geneNames_2.txt' 'exe_19' 'RHOBTB3' 1308
-./prog_seq 'geneNames_2.txt' 'exe_19' 'RBMX' 1309
-./prog_seq 'geneNames_2.txt' 'exe_19' 'BTF3' 1310
-./prog_seq 'geneNames_2.txt' 'exe_19' 'SNRPB' 1311
-./prog_seq 'geneNames_2.txt' 'exe_20' 'TCERG1' 1312
-./prog_seq 'geneNames_2.txt' 'exe_20' 'SRRM1' 1313
-./prog_seq 'geneNames_2.txt' 'exe_20' 'XRCC5' 1314
-./prog_seq 'geneNames_2.txt' 'exe_20' 'RNASE1' 1315
-./prog_seq 'geneNames_2.txt' 'exe_20' 'HMGN2' 1316
-./prog_seq 'geneNames_2.txt' 'exe_20' 'TCEB2' 1317
-./prog_seq 'geneNames_2.txt' 'exe_20' 'IFITM3' 1318
-./prog_seq 'geneNames_2.txt' 'exe_20' 'PHB2' 1319
-./prog_seq 'geneNames_2.txt' 'exe_20' 'SUB1' 1320
-./prog_seq 'geneNames_2.txt' 'exe_20' 'LAMB1' 1321
-./prog_seq 'geneNames_2.txt' 'exe_20' 'SNRPD1' 1322
-./prog_seq 'geneNames_2.txt' 'exe_20' 'PAPOLA' 1323
-./prog_seq 'geneNames_2.txt' 'exe_20' 'POLR2G' 1324
-./prog_seq 'geneNames_2.txt' 'exe_20' 'APOC1' 1325
-./prog_seq 'geneNames_2.txt' 'exe_20' 'POLR2I' 1326
-./prog_seq 'geneNames_2.txt' 'exe_20' 'PTMA' 1327
-./prog_seq 'geneNames_2.txt' 'exe_20' 'XRCC6' 1328
-./prog_seq 'geneNames_2.txt' 'exe_20' 'EEF1A1' 1329
-./prog_seq 'geneNames_2.txt' 'exe_20' 'ZNF638' 1330
-./prog_seq 'geneNames_2.txt' 'exe_20' 'SRSF10' 1331
-./prog_seq 'geneNames_2.txt' 'exe_20' 'S100A14' 1332
-./prog_seq 'geneNames_2.txt' 'exe_20' 'S100A16' 1333
-./prog_seq 'geneNames_2.txt' 'exe_20' 'SRSF6' 1334
-./prog_seq 'geneNames_2.txt' 'exe_20' 'ENO1' 1335
-./prog_seq 'geneNames_2.txt' 'exe_20' 'NPM1' 1336
-./prog_seq 'geneNames_2.txt' 'exe_20' 'ILF3' 1337
-./prog_seq 'geneNames_2.txt' 'exe_20' 'NONO' 1338
-./prog_seq 'geneNames_2.txt' 'exe_20' 'CAMK2D' 1339
-./prog_seq 'geneNames_2.txt' 'exe_20' 'HNRNPR' 1340
-./prog_seq 'geneNames_2.txt' 'exe_20' 'RBBP7' 1341
-./prog_seq 'geneNames_2.txt' 'exe_20' 'SSB' 1342
-./prog_seq 'geneNames_2.txt' 'exe_20' 'WFDC2' 1343
-./prog_seq 'geneNames_2.txt' 'exe_20' 'KPNA2' 1344
-./prog_seq 'geneNames_2.txt' 'exe_20' 'APOA1' 1345
-./prog_seq 'geneNames_2.txt' 'exe_20' 'RBM39' 1346
-./prog_seq 'geneNames_2.txt' 'exe_20' 'HDAC2' 1347
-./prog_seq 'geneNames_2.txt' 'exe_20' 'CNOT7' 1348
-./prog_seq 'geneNames_2.txt' 'exe_20' 'SOX4' 1349
-./prog_seq 'geneNames_2.txt' 'exe_20' 'HERPUD1' 1350
-./prog_seq 'geneNames_2.txt' 'exe_20' 'ANP32E' 1351
-./prog_seq 'geneNames_2.txt' 'exe_20' 'THRAP3' 1352
-./prog_seq 'geneNames_2.txt' 'exe_20' 'POLR2F' 1353
-./prog_seq 'geneNames_2.txt' 'exe_20' 'ACTL6A' 1354
-./prog_seq 'geneNames_2.txt' 'exe_20' 'AKR1D1' 1355
-./prog_seq 'geneNames_2.txt' 'exe_20' 'HMGN3' 1356
-./prog_seq 'geneNames_2.txt' 'exe_20' 'CKS2' 1357
-./prog_seq 'geneNames_2.txt' 'exe_20' 'APEX1' 1358
-./prog_seq 'geneNames_2.txt' 'exe_20' 'DDX5' 1359
-./prog_seq 'geneNames_2.txt' 'exe_20' 'CDK1' 1360
-./prog_seq 'geneNames_2.txt' 'exe_20' 'CACYBP' 1361
-./prog_seq 'geneNames_2.txt' 'exe_20' 'PON2' 1362
-./prog_seq 'geneNames_2.txt' 'exe_20' 'AMZ2' 1363
-./prog_seq 'geneNames_2.txt' 'exe_20' 'ANXA3' 1364
-./prog_seq 'geneNames_2.txt' 'exe_20' 'APOA2' 1365
-./prog_seq 'geneNames_2.txt' 'exe_20' 'UGP2' 1366
-./prog_seq 'geneNames_2.txt' 'exe_20' 'GPC3' 1367
-./prog_seq 'geneNames_2.txt' 'exe_20' 'PWP1' 1368
-./prog_seq 'geneNames_2.txt' 'exe_20' 'CNBP' 1369
-./prog_seq 'geneNames_2.txt' 'exe_20' 'MATR3' 1370
-./prog_seq 'geneNames_2.txt' 'exe_20' 'SRSF3' 1371
-./prog_seq 'geneNames_2.txt' 'exe_20' 'ILF2' 1372
-./prog_seq 'geneNames_2.txt' 'exe_20' 'ID2' 1373
-./prog_seq 'geneNames_2.txt' 'exe_20' 'CSDE1' 1374
-./prog_seq 'geneNames_2.txt' 'exe_20' 'OCIAD2' 1375
-./prog_seq 'geneNames_2.txt' 'exe_20' 'STMN1' 1376
-./prog_seq 'geneNames_2.txt' 'exe_20' 'RHOBTB3' 1377
-./prog_seq 'geneNames_2.txt' 'exe_20' 'RBMX' 1378
-./prog_seq 'geneNames_2.txt' 'exe_20' 'BTF3' 1379
-./prog_seq 'geneNames_2.txt' 'exe_20' 'SNRPB' 1380
-./prog_seq 'geneNames_2.txt' 'exe_21' 'TCERG1' 1381
-./prog_seq 'geneNames_2.txt' 'exe_21' 'SRRM1' 1382
-./prog_seq 'geneNames_2.txt' 'exe_21' 'XRCC5' 1383
-./prog_seq 'geneNames_2.txt' 'exe_21' 'RNASE1' 1384
-./prog_seq 'geneNames_2.txt' 'exe_21' 'HMGN2' 1385
-./prog_seq 'geneNames_2.txt' 'exe_21' 'TCEB2' 1386
-./prog_seq 'geneNames_2.txt' 'exe_21' 'IFITM3' 1387
-./prog_seq 'geneNames_2.txt' 'exe_21' 'PHB2' 1388
-./prog_seq 'geneNames_2.txt' 'exe_21' 'SUB1' 1389
-./prog_seq 'geneNames_2.txt' 'exe_21' 'LAMB1' 1390
-./prog_seq 'geneNames_2.txt' 'exe_21' 'SNRPD1' 1391
-./prog_seq 'geneNames_2.txt' 'exe_21' 'PAPOLA' 1392
-./prog_seq 'geneNames_2.txt' 'exe_21' 'POLR2G' 1393
-./prog_seq 'geneNames_2.txt' 'exe_21' 'APOC1' 1394
-./prog_seq 'geneNames_2.txt' 'exe_21' 'POLR2I' 1395
-./prog_seq 'geneNames_2.txt' 'exe_21' 'PTMA' 1396
-./prog_seq 'geneNames_2.txt' 'exe_21' 'XRCC6' 1397
-./prog_seq 'geneNames_2.txt' 'exe_21' 'EEF1A1' 1398
-./prog_seq 'geneNames_2.txt' 'exe_21' 'ZNF638' 1399
-./prog_seq 'geneNames_2.txt' 'exe_21' 'SRSF10' 1400
-./prog_seq 'geneNames_2.txt' 'exe_21' 'S100A14' 1401
-./prog_seq 'geneNames_2.txt' 'exe_21' 'S100A16' 1402
-./prog_seq 'geneNames_2.txt' 'exe_21' 'SRSF6' 1403
-./prog_seq 'geneNames_2.txt' 'exe_21' 'ENO1' 1404
-./prog_seq 'geneNames_2.txt' 'exe_21' 'NPM1' 1405
-./prog_seq 'geneNames_2.txt' 'exe_21' 'ILF3' 1406
-./prog_seq 'geneNames_2.txt' 'exe_21' 'NONO' 1407
-./prog_seq 'geneNames_2.txt' 'exe_21' 'CAMK2D' 1408
-./prog_seq 'geneNames_2.txt' 'exe_21' 'HNRNPR' 1409
-./prog_seq 'geneNames_2.txt' 'exe_21' 'RBBP7' 1410
-./prog_seq 'geneNames_2.txt' 'exe_21' 'SSB' 1411
-./prog_seq 'geneNames_2.txt' 'exe_21' 'WFDC2' 1412
-./prog_seq 'geneNames_2.txt' 'exe_21' 'KPNA2' 1413
-./prog_seq 'geneNames_2.txt' 'exe_21' 'APOA1' 1414
-./prog_seq 'geneNames_2.txt' 'exe_21' 'RBM39' 1415
-./prog_seq 'geneNames_2.txt' 'exe_21' 'HDAC2' 1416
-./prog_seq 'geneNames_2.txt' 'exe_21' 'CNOT7' 1417
-./prog_seq 'geneNames_2.txt' 'exe_21' 'SOX4' 1418
-./prog_seq 'geneNames_2.txt' 'exe_21' 'HERPUD1' 1419
-./prog_seq 'geneNames_2.txt' 'exe_21' 'ANP32E' 1420
-./prog_seq 'geneNames_2.txt' 'exe_21' 'THRAP3' 1421
-./prog_seq 'geneNames_2.txt' 'exe_21' 'POLR2F' 1422
-./prog_seq 'geneNames_2.txt' 'exe_21' 'ACTL6A' 1423
-./prog_seq 'geneNames_2.txt' 'exe_21' 'AKR1D1' 1424
-./prog_seq 'geneNames_2.txt' 'exe_21' 'HMGN3' 1425
-./prog_seq 'geneNames_2.txt' 'exe_21' 'CKS2' 1426
-./prog_seq 'geneNames_2.txt' 'exe_21' 'APEX1' 1427
-./prog_seq 'geneNames_2.txt' 'exe_21' 'DDX5' 1428
-./prog_seq 'geneNames_2.txt' 'exe_21' 'CDK1' 1429
-./prog_seq 'geneNames_2.txt' 'exe_21' 'CACYBP' 1430
-./prog_seq 'geneNames_2.txt' 'exe_21' 'PON2' 1431
-./prog_seq 'geneNames_2.txt' 'exe_21' 'AMZ2' 1432
-./prog_seq 'geneNames_2.txt' 'exe_21' 'ANXA3' 1433
-./prog_seq 'geneNames_2.txt' 'exe_21' 'APOA2' 1434
-./prog_seq 'geneNames_2.txt' 'exe_21' 'UGP2' 1435
-./prog_seq 'geneNames_2.txt' 'exe_21' 'GPC3' 1436
-./prog_seq 'geneNames_2.txt' 'exe_21' 'PWP1' 1437
-./prog_seq 'geneNames_2.txt' 'exe_21' 'CNBP' 1438
-./prog_seq 'geneNames_2.txt' 'exe_21' 'MATR3' 1439
-./prog_seq 'geneNames_2.txt' 'exe_21' 'SRSF3' 1440
-./prog_seq 'geneNames_2.txt' 'exe_21' 'ILF2' 1441
-./prog_seq 'geneNames_2.txt' 'exe_21' 'ID2' 1442
-./prog_seq 'geneNames_2.txt' 'exe_21' 'CSDE1' 1443
-./prog_seq 'geneNames_2.txt' 'exe_21' 'OCIAD2' 1444
-./prog_seq 'geneNames_2.txt' 'exe_21' 'STMN1' 1445
-./prog_seq 'geneNames_2.txt' 'exe_21' 'RHOBTB3' 1446
-./prog_seq 'geneNames_2.txt' 'exe_21' 'RBMX' 1447
-./prog_seq 'geneNames_2.txt' 'exe_21' 'BTF3' 1448
-./prog_seq 'geneNames_2.txt' 'exe_21' 'SNRPB' 1449
-./prog_seq 'geneNames_2.txt' 'exe_22' 'TCERG1' 1450
-./prog_seq 'geneNames_2.txt' 'exe_22' 'SRRM1' 1451
-./prog_seq 'geneNames_2.txt' 'exe_22' 'XRCC5' 1452
-./prog_seq 'geneNames_2.txt' 'exe_22' 'RNASE1' 1453
-./prog_seq 'geneNames_2.txt' 'exe_22' 'HMGN2' 1454
-./prog_seq 'geneNames_2.txt' 'exe_22' 'TCEB2' 1455
-./prog_seq 'geneNames_2.txt' 'exe_22' 'IFITM3' 1456
-./prog_seq 'geneNames_2.txt' 'exe_22' 'PHB2' 1457
-./prog_seq 'geneNames_2.txt' 'exe_22' 'SUB1' 1458
-./prog_seq 'geneNames_2.txt' 'exe_22' 'LAMB1' 1459
-./prog_seq 'geneNames_2.txt' 'exe_22' 'SNRPD1' 1460
-./prog_seq 'geneNames_2.txt' 'exe_22' 'PAPOLA' 1461
-./prog_seq 'geneNames_2.txt' 'exe_22' 'POLR2G' 1462
-./prog_seq 'geneNames_2.txt' 'exe_22' 'APOC1' 1463
-./prog_seq 'geneNames_2.txt' 'exe_22' 'POLR2I' 1464
-./prog_seq 'geneNames_2.txt' 'exe_22' 'PTMA' 1465
-./prog_seq 'geneNames_2.txt' 'exe_22' 'XRCC6' 1466
-./prog_seq 'geneNames_2.txt' 'exe_22' 'EEF1A1' 1467
-./prog_seq 'geneNames_2.txt' 'exe_22' 'ZNF638' 1468
-./prog_seq 'geneNames_2.txt' 'exe_22' 'SRSF10' 1469
-./prog_seq 'geneNames_2.txt' 'exe_22' 'S100A14' 1470
-./prog_seq 'geneNames_2.txt' 'exe_22' 'S100A16' 1471
-./prog_seq 'geneNames_2.txt' 'exe_22' 'SRSF6' 1472
-./prog_seq 'geneNames_2.txt' 'exe_22' 'ENO1' 1473
-./prog_seq 'geneNames_2.txt' 'exe_22' 'NPM1' 1474
-./prog_seq 'geneNames_2.txt' 'exe_22' 'ILF3' 1475
-./prog_seq 'geneNames_2.txt' 'exe_22' 'NONO' 1476
-./prog_seq 'geneNames_2.txt' 'exe_22' 'CAMK2D' 1477
-./prog_seq 'geneNames_2.txt' 'exe_22' 'HNRNPR' 1478
-./prog_seq 'geneNames_2.txt' 'exe_22' 'RBBP7' 1479
-./prog_seq 'geneNames_2.txt' 'exe_22' 'SSB' 1480
-./prog_seq 'geneNames_2.txt' 'exe_22' 'WFDC2' 1481
-./prog_seq 'geneNames_2.txt' 'exe_22' 'KPNA2' 1482
-./prog_seq 'geneNames_2.txt' 'exe_22' 'APOA1' 1483
-./prog_seq 'geneNames_2.txt' 'exe_22' 'RBM39' 1484
-./prog_seq 'geneNames_2.txt' 'exe_22' 'HDAC2' 1485
-./prog_seq 'geneNames_2.txt' 'exe_22' 'CNOT7' 1486
-./prog_seq 'geneNames_2.txt' 'exe_22' 'SOX4' 1487
-./prog_seq 'geneNames_2.txt' 'exe_22' 'HERPUD1' 1488
-./prog_seq 'geneNames_2.txt' 'exe_22' 'ANP32E' 1489
-./prog_seq 'geneNames_2.txt' 'exe_22' 'THRAP3' 1490
-./prog_seq 'geneNames_2.txt' 'exe_22' 'POLR2F' 1491
-./prog_seq 'geneNames_2.txt' 'exe_22' 'ACTL6A' 1492
-./prog_seq 'geneNames_2.txt' 'exe_22' 'AKR1D1' 1493
-./prog_seq 'geneNames_2.txt' 'exe_22' 'HMGN3' 1494
-./prog_seq 'geneNames_2.txt' 'exe_22' 'CKS2' 1495
-./prog_seq 'geneNames_2.txt' 'exe_22' 'APEX1' 1496
-./prog_seq 'geneNames_2.txt' 'exe_22' 'DDX5' 1497
-./prog_seq 'geneNames_2.txt' 'exe_22' 'CDK1' 1498
-./prog_seq 'geneNames_2.txt' 'exe_22' 'CACYBP' 1499
-./prog_seq 'geneNames_2.txt' 'exe_22' 'PON2' 1500
-./prog_seq 'geneNames_2.txt' 'exe_22' 'AMZ2' 1501
-./prog_seq 'geneNames_2.txt' 'exe_22' 'ANXA3' 1502
-./prog_seq 'geneNames_2.txt' 'exe_22' 'APOA2' 1503
-./prog_seq 'geneNames_2.txt' 'exe_22' 'UGP2' 1504
-./prog_seq 'geneNames_2.txt' 'exe_22' 'GPC3' 1505
-./prog_seq 'geneNames_2.txt' 'exe_22' 'PWP1' 1506
-./prog_seq 'geneNames_2.txt' 'exe_22' 'CNBP' 1507
-./prog_seq 'geneNames_2.txt' 'exe_22' 'MATR3' 1508
-./prog_seq 'geneNames_2.txt' 'exe_22' 'SRSF3' 1509
-./prog_seq 'geneNames_2.txt' 'exe_22' 'ILF2' 1510
-./prog_seq 'geneNames_2.txt' 'exe_22' 'ID2' 1511
-./prog_seq 'geneNames_2.txt' 'exe_22' 'CSDE1' 1512
-./prog_seq 'geneNames_2.txt' 'exe_22' 'OCIAD2' 1513
-./prog_seq 'geneNames_2.txt' 'exe_22' 'STMN1' 1514
-./prog_seq 'geneNames_2.txt' 'exe_22' 'RHOBTB3' 1515
-./prog_seq 'geneNames_2.txt' 'exe_22' 'RBMX' 1516
-./prog_seq 'geneNames_2.txt' 'exe_22' 'BTF3' 1517
-./prog_seq 'geneNames_2.txt' 'exe_22' 'SNRPB' 1518
-./prog_seq 'geneNames_2.txt' 'exe_23' 'TCERG1' 1519
-./prog_seq 'geneNames_2.txt' 'exe_23' 'SRRM1' 1520
-./prog_seq 'geneNames_2.txt' 'exe_23' 'XRCC5' 1521
-./prog_seq 'geneNames_2.txt' 'exe_23' 'RNASE1' 1522
-./prog_seq 'geneNames_2.txt' 'exe_23' 'HMGN2' 1523
-./prog_seq 'geneNames_2.txt' 'exe_23' 'TCEB2' 1524
-./prog_seq 'geneNames_2.txt' 'exe_23' 'IFITM3' 1525
-./prog_seq 'geneNames_2.txt' 'exe_23' 'PHB2' 1526
-./prog_seq 'geneNames_2.txt' 'exe_23' 'SUB1' 1527
-./prog_seq 'geneNames_2.txt' 'exe_23' 'LAMB1' 1528
-./prog_seq 'geneNames_2.txt' 'exe_23' 'SNRPD1' 1529
-./prog_seq 'geneNames_2.txt' 'exe_23' 'PAPOLA' 1530
-./prog_seq 'geneNames_2.txt' 'exe_23' 'POLR2G' 1531
-./prog_seq 'geneNames_2.txt' 'exe_23' 'APOC1' 1532
-./prog_seq 'geneNames_2.txt' 'exe_23' 'POLR2I' 1533
-./prog_seq 'geneNames_2.txt' 'exe_23' 'PTMA' 1534
-./prog_seq 'geneNames_2.txt' 'exe_23' 'XRCC6' 1535
-./prog_seq 'geneNames_2.txt' 'exe_23' 'EEF1A1' 1536
-./prog_seq 'geneNames_2.txt' 'exe_23' 'ZNF638' 1537
-./prog_seq 'geneNames_2.txt' 'exe_23' 'SRSF10' 1538
-./prog_seq 'geneNames_2.txt' 'exe_23' 'S100A14' 1539
-./prog_seq 'geneNames_2.txt' 'exe_23' 'S100A16' 1540
-./prog_seq 'geneNames_2.txt' 'exe_23' 'SRSF6' 1541
-./prog_seq 'geneNames_2.txt' 'exe_23' 'ENO1' 1542
-./prog_seq 'geneNames_2.txt' 'exe_23' 'NPM1' 1543
-./prog_seq 'geneNames_2.txt' 'exe_23' 'ILF3' 1544
-./prog_seq 'geneNames_2.txt' 'exe_23' 'NONO' 1545
-./prog_seq 'geneNames_2.txt' 'exe_23' 'CAMK2D' 1546
-./prog_seq 'geneNames_2.txt' 'exe_23' 'HNRNPR' 1547
-./prog_seq 'geneNames_2.txt' 'exe_23' 'RBBP7' 1548
-./prog_seq 'geneNames_2.txt' 'exe_23' 'SSB' 1549
-./prog_seq 'geneNames_2.txt' 'exe_23' 'WFDC2' 1550
-./prog_seq 'geneNames_2.txt' 'exe_23' 'KPNA2' 1551
-./prog_seq 'geneNames_2.txt' 'exe_23' 'APOA1' 1552
-./prog_seq 'geneNames_2.txt' 'exe_23' 'RBM39' 1553
-./prog_seq 'geneNames_2.txt' 'exe_23' 'HDAC2' 1554
-./prog_seq 'geneNames_2.txt' 'exe_23' 'CNOT7' 1555
-./prog_seq 'geneNames_2.txt' 'exe_23' 'SOX4' 1556
-./prog_seq 'geneNames_2.txt' 'exe_23' 'HERPUD1' 1557
-./prog_seq 'geneNames_2.txt' 'exe_23' 'ANP32E' 1558
-./prog_seq 'geneNames_2.txt' 'exe_23' 'THRAP3' 1559
-./prog_seq 'geneNames_2.txt' 'exe_23' 'POLR2F' 1560
-./prog_seq 'geneNames_2.txt' 'exe_23' 'ACTL6A' 1561
-./prog_seq 'geneNames_2.txt' 'exe_23' 'AKR1D1' 1562
-./prog_seq 'geneNames_2.txt' 'exe_23' 'HMGN3' 1563
-./prog_seq 'geneNames_2.txt' 'exe_23' 'CKS2' 1564
-./prog_seq 'geneNames_2.txt' 'exe_23' 'APEX1' 1565
-./prog_seq 'geneNames_2.txt' 'exe_23' 'DDX5' 1566
-./prog_seq 'geneNames_2.txt' 'exe_23' 'CDK1' 1567
-./prog_seq 'geneNames_2.txt' 'exe_23' 'CACYBP' 1568
-./prog_seq 'geneNames_2.txt' 'exe_23' 'PON2' 1569
-./prog_seq 'geneNames_2.txt' 'exe_23' 'AMZ2' 1570
-./prog_seq 'geneNames_2.txt' 'exe_23' 'ANXA3' 1571
-./prog_seq 'geneNames_2.txt' 'exe_23' 'APOA2' 1572
-./prog_seq 'geneNames_2.txt' 'exe_23' 'UGP2' 1573
-./prog_seq 'geneNames_2.txt' 'exe_23' 'GPC3' 1574
-./prog_seq 'geneNames_2.txt' 'exe_23' 'PWP1' 1575
-./prog_seq 'geneNames_2.txt' 'exe_23' 'CNBP' 1576
-./prog_seq 'geneNames_2.txt' 'exe_23' 'MATR3' 1577
-./prog_seq 'geneNames_2.txt' 'exe_23' 'SRSF3' 1578
-./prog_seq 'geneNames_2.txt' 'exe_23' 'ILF2' 1579
-./prog_seq 'geneNames_2.txt' 'exe_23' 'ID2' 1580
-./prog_seq 'geneNames_2.txt' 'exe_23' 'CSDE1' 1581
-./prog_seq 'geneNames_2.txt' 'exe_23' 'OCIAD2' 1582
-./prog_seq 'geneNames_2.txt' 'exe_23' 'STMN1' 1583
-./prog_seq 'geneNames_2.txt' 'exe_23' 'RHOBTB3' 1584
-./prog_seq 'geneNames_2.txt' 'exe_23' 'RBMX' 1585
-./prog_seq 'geneNames_2.txt' 'exe_23' 'BTF3' 1586
-./prog_seq 'geneNames_2.txt' 'exe_23' 'SNRPB' 1587
-./prog_seq 'geneNames_2.txt' 'exe_24' 'TCERG1' 1588
-./prog_seq 'geneNames_2.txt' 'exe_24' 'SRRM1' 1589
-./prog_seq 'geneNames_2.txt' 'exe_24' 'XRCC5' 1590
-./prog_seq 'geneNames_2.txt' 'exe_24' 'RNASE1' 1591
-./prog_seq 'geneNames_2.txt' 'exe_24' 'HMGN2' 1592
-./prog_seq 'geneNames_2.txt' 'exe_24' 'TCEB2' 1593
-./prog_seq 'geneNames_2.txt' 'exe_24' 'IFITM3' 1594
-./prog_seq 'geneNames_2.txt' 'exe_24' 'PHB2' 1595
-./prog_seq 'geneNames_2.txt' 'exe_24' 'SUB1' 1596
-./prog_seq 'geneNames_2.txt' 'exe_24' 'LAMB1' 1597
-./prog_seq 'geneNames_2.txt' 'exe_24' 'SNRPD1' 1598
-./prog_seq 'geneNames_2.txt' 'exe_24' 'PAPOLA' 1599
-./prog_seq 'geneNames_2.txt' 'exe_24' 'POLR2G' 1600
-./prog_seq 'geneNames_2.txt' 'exe_24' 'APOC1' 1601
-./prog_seq 'geneNames_2.txt' 'exe_24' 'POLR2I' 1602
-./prog_seq 'geneNames_2.txt' 'exe_24' 'PTMA' 1603
-./prog_seq 'geneNames_2.txt' 'exe_24' 'XRCC6' 1604
-./prog_seq 'geneNames_2.txt' 'exe_24' 'EEF1A1' 1605
-./prog_seq 'geneNames_2.txt' 'exe_24' 'ZNF638' 1606
-./prog_seq 'geneNames_2.txt' 'exe_24' 'SRSF10' 1607
-./prog_seq 'geneNames_2.txt' 'exe_24' 'S100A14' 1608
-./prog_seq 'geneNames_2.txt' 'exe_24' 'S100A16' 1609
-./prog_seq 'geneNames_2.txt' 'exe_24' 'SRSF6' 1610
-./prog_seq 'geneNames_2.txt' 'exe_24' 'ENO1' 1611
-./prog_seq 'geneNames_2.txt' 'exe_24' 'NPM1' 1612
-./prog_seq 'geneNames_2.txt' 'exe_24' 'ILF3' 1613
-./prog_seq 'geneNames_2.txt' 'exe_24' 'NONO' 1614
-./prog_seq 'geneNames_2.txt' 'exe_24' 'CAMK2D' 1615
-./prog_seq 'geneNames_2.txt' 'exe_24' 'HNRNPR' 1616
-./prog_seq 'geneNames_2.txt' 'exe_24' 'RBBP7' 1617
-./prog_seq 'geneNames_2.txt' 'exe_24' 'SSB' 1618
-./prog_seq 'geneNames_2.txt' 'exe_24' 'WFDC2' 1619
-./prog_seq 'geneNames_2.txt' 'exe_24' 'KPNA2' 1620
-./prog_seq 'geneNames_2.txt' 'exe_24' 'APOA1' 1621
-./prog_seq 'geneNames_2.txt' 'exe_24' 'RBM39' 1622
-./prog_seq 'geneNames_2.txt' 'exe_24' 'HDAC2' 1623
-./prog_seq 'geneNames_2.txt' 'exe_24' 'CNOT7' 1624
-./prog_seq 'geneNames_2.txt' 'exe_24' 'SOX4' 1625
-./prog_seq 'geneNames_2.txt' 'exe_24' 'HERPUD1' 1626
-./prog_seq 'geneNames_2.txt' 'exe_24' 'ANP32E' 1627
-./prog_seq 'geneNames_2.txt' 'exe_24' 'THRAP3' 1628
-./prog_seq 'geneNames_2.txt' 'exe_24' 'POLR2F' 1629
-./prog_seq 'geneNames_2.txt' 'exe_24' 'ACTL6A' 1630
-./prog_seq 'geneNames_2.txt' 'exe_24' 'AKR1D1' 1631
-./prog_seq 'geneNames_2.txt' 'exe_24' 'HMGN3' 1632
-./prog_seq 'geneNames_2.txt' 'exe_24' 'CKS2' 1633
-./prog_seq 'geneNames_2.txt' 'exe_24' 'APEX1' 1634
-./prog_seq 'geneNames_2.txt' 'exe_24' 'DDX5' 1635
-./prog_seq 'geneNames_2.txt' 'exe_24' 'CDK1' 1636
-./prog_seq 'geneNames_2.txt' 'exe_24' 'CACYBP' 1637
-./prog_seq 'geneNames_2.txt' 'exe_24' 'PON2' 1638
-./prog_seq 'geneNames_2.txt' 'exe_24' 'AMZ2' 1639
-./prog_seq 'geneNames_2.txt' 'exe_24' 'ANXA3' 1640
-./prog_seq 'geneNames_2.txt' 'exe_24' 'APOA2' 1641
-./prog_seq 'geneNames_2.txt' 'exe_24' 'UGP2' 1642
-./prog_seq 'geneNames_2.txt' 'exe_24' 'GPC3' 1643
-./prog_seq 'geneNames_2.txt' 'exe_24' 'PWP1' 1644
-./prog_seq 'geneNames_2.txt' 'exe_24' 'CNBP' 1645
-./prog_seq 'geneNames_2.txt' 'exe_24' 'MATR3' 1646
-./prog_seq 'geneNames_2.txt' 'exe_24' 'SRSF3' 1647
-./prog_seq 'geneNames_2.txt' 'exe_24' 'ILF2' 1648
-./prog_seq 'geneNames_2.txt' 'exe_24' 'ID2' 1649
-./prog_seq 'geneNames_2.txt' 'exe_24' 'CSDE1' 1650
-./prog_seq 'geneNames_2.txt' 'exe_24' 'OCIAD2' 1651
-./prog_seq 'geneNames_2.txt' 'exe_24' 'STMN1' 1652
-./prog_seq 'geneNames_2.txt' 'exe_24' 'RHOBTB3' 1653
-./prog_seq 'geneNames_2.txt' 'exe_24' 'RBMX' 1654
-./prog_seq 'geneNames_2.txt' 'exe_24' 'BTF3' 1655
-./prog_seq 'geneNames_2.txt' 'exe_24' 'SNRPB' 1656
-./prog_seq 'geneNames_2.txt' 'exe_25' 'TCERG1' 1657
-./prog_seq 'geneNames_2.txt' 'exe_25' 'SRRM1' 1658
-./prog_seq 'geneNames_2.txt' 'exe_25' 'XRCC5' 1659
-./prog_seq 'geneNames_2.txt' 'exe_25' 'RNASE1' 1660
-./prog_seq 'geneNames_2.txt' 'exe_25' 'HMGN2' 1661
-./prog_seq 'geneNames_2.txt' 'exe_25' 'TCEB2' 1662
-./prog_seq 'geneNames_2.txt' 'exe_25' 'IFITM3' 1663
-./prog_seq 'geneNames_2.txt' 'exe_25' 'PHB2' 1664
-./prog_seq 'geneNames_2.txt' 'exe_25' 'SUB1' 1665
-./prog_seq 'geneNames_2.txt' 'exe_25' 'LAMB1' 1666
-./prog_seq 'geneNames_2.txt' 'exe_25' 'SNRPD1' 1667
-./prog_seq 'geneNames_2.txt' 'exe_25' 'PAPOLA' 1668
-./prog_seq 'geneNames_2.txt' 'exe_25' 'POLR2G' 1669
-./prog_seq 'geneNames_2.txt' 'exe_25' 'APOC1' 1670
-./prog_seq 'geneNames_2.txt' 'exe_25' 'POLR2I' 1671
-./prog_seq 'geneNames_2.txt' 'exe_25' 'PTMA' 1672
-./prog_seq 'geneNames_2.txt' 'exe_25' 'XRCC6' 1673
-./prog_seq 'geneNames_2.txt' 'exe_25' 'EEF1A1' 1674
-./prog_seq 'geneNames_2.txt' 'exe_25' 'ZNF638' 1675
-./prog_seq 'geneNames_2.txt' 'exe_25' 'SRSF10' 1676
-./prog_seq 'geneNames_2.txt' 'exe_25' 'S100A14' 1677
-./prog_seq 'geneNames_2.txt' 'exe_25' 'S100A16' 1678
-./prog_seq 'geneNames_2.txt' 'exe_25' 'SRSF6' 1679
-./prog_seq 'geneNames_2.txt' 'exe_25' 'ENO1' 1680
-./prog_seq 'geneNames_2.txt' 'exe_25' 'NPM1' 1681
-./prog_seq 'geneNames_2.txt' 'exe_25' 'ILF3' 1682
-./prog_seq 'geneNames_2.txt' 'exe_25' 'NONO' 1683
-./prog_seq 'geneNames_2.txt' 'exe_25' 'CAMK2D' 1684
-./prog_seq 'geneNames_2.txt' 'exe_25' 'HNRNPR' 1685
-./prog_seq 'geneNames_2.txt' 'exe_25' 'RBBP7' 1686
-./prog_seq 'geneNames_2.txt' 'exe_25' 'SSB' 1687
-./prog_seq 'geneNames_2.txt' 'exe_25' 'WFDC2' 1688
-./prog_seq 'geneNames_2.txt' 'exe_25' 'KPNA2' 1689
-./prog_seq 'geneNames_2.txt' 'exe_25' 'APOA1' 1690
-./prog_seq 'geneNames_2.txt' 'exe_25' 'RBM39' 1691
-./prog_seq 'geneNames_2.txt' 'exe_25' 'HDAC2' 1692
-./prog_seq 'geneNames_2.txt' 'exe_25' 'CNOT7' 1693
-./prog_seq 'geneNames_2.txt' 'exe_25' 'SOX4' 1694
-./prog_seq 'geneNames_2.txt' 'exe_25' 'HERPUD1' 1695
-./prog_seq 'geneNames_2.txt' 'exe_25' 'ANP32E' 1696
-./prog_seq 'geneNames_2.txt' 'exe_25' 'THRAP3' 1697
-./prog_seq 'geneNames_2.txt' 'exe_25' 'POLR2F' 1698
-./prog_seq 'geneNames_2.txt' 'exe_25' 'ACTL6A' 1699
-./prog_seq 'geneNames_2.txt' 'exe_25' 'AKR1D1' 1700
-./prog_seq 'geneNames_2.txt' 'exe_25' 'HMGN3' 1701
-./prog_seq 'geneNames_2.txt' 'exe_25' 'CKS2' 1702
-./prog_seq 'geneNames_2.txt' 'exe_25' 'APEX1' 1703
-./prog_seq 'geneNames_2.txt' 'exe_25' 'DDX5' 1704
-./prog_seq 'geneNames_2.txt' 'exe_25' 'CDK1' 1705
-./prog_seq 'geneNames_2.txt' 'exe_25' 'CACYBP' 1706
-./prog_seq 'geneNames_2.txt' 'exe_25' 'PON2' 1707
-./prog_seq 'geneNames_2.txt' 'exe_25' 'AMZ2' 1708
-./prog_seq 'geneNames_2.txt' 'exe_25' 'ANXA3' 1709
-./prog_seq 'geneNames_2.txt' 'exe_25' 'APOA2' 1710
-./prog_seq 'geneNames_2.txt' 'exe_25' 'UGP2' 1711
-./prog_seq 'geneNames_2.txt' 'exe_25' 'GPC3' 1712
-./prog_seq 'geneNames_2.txt' 'exe_25' 'PWP1' 1713
-./prog_seq 'geneNames_2.txt' 'exe_25' 'CNBP' 1714
-./prog_seq 'geneNames_2.txt' 'exe_25' 'MATR3' 1715
-./prog_seq 'geneNames_2.txt' 'exe_25' 'SRSF3' 1716
-./prog_seq 'geneNames_2.txt' 'exe_25' 'ILF2' 1717
-./prog_seq 'geneNames_2.txt' 'exe_25' 'ID2' 1718
-./prog_seq 'geneNames_2.txt' 'exe_25' 'CSDE1' 1719
-./prog_seq 'geneNames_2.txt' 'exe_25' 'OCIAD2' 1720
-./prog_seq 'geneNames_2.txt' 'exe_25' 'STMN1' 1721
-./prog_seq 'geneNames_2.txt' 'exe_25' 'RHOBTB3' 1722
-./prog_seq 'geneNames_2.txt' 'exe_25' 'RBMX' 1723
-./prog_seq 'geneNames_2.txt' 'exe_25' 'BTF3' 1724
-./prog_seq 'geneNames_2.txt' 'exe_25' 'SNRPB' 1725
-./prog_seq 'geneNames_2.txt' 'exe_26' 'TCERG1' 1726
-./prog_seq 'geneNames_2.txt' 'exe_26' 'SRRM1' 1727
-./prog_seq 'geneNames_2.txt' 'exe_26' 'XRCC5' 1728
-./prog_seq 'geneNames_2.txt' 'exe_26' 'RNASE1' 1729
-./prog_seq 'geneNames_2.txt' 'exe_26' 'HMGN2' 1730
-./prog_seq 'geneNames_2.txt' 'exe_26' 'TCEB2' 1731
-./prog_seq 'geneNames_2.txt' 'exe_26' 'IFITM3' 1732
-./prog_seq 'geneNames_2.txt' 'exe_26' 'PHB2' 1733
-./prog_seq 'geneNames_2.txt' 'exe_26' 'SUB1' 1734
-./prog_seq 'geneNames_2.txt' 'exe_26' 'LAMB1' 1735
-./prog_seq 'geneNames_2.txt' 'exe_26' 'SNRPD1' 1736
-./prog_seq 'geneNames_2.txt' 'exe_26' 'PAPOLA' 1737
-./prog_seq 'geneNames_2.txt' 'exe_26' 'POLR2G' 1738
-./prog_seq 'geneNames_2.txt' 'exe_26' 'APOC1' 1739
-./prog_seq 'geneNames_2.txt' 'exe_26' 'POLR2I' 1740
-./prog_seq 'geneNames_2.txt' 'exe_26' 'PTMA' 1741
-./prog_seq 'geneNames_2.txt' 'exe_26' 'XRCC6' 1742
-./prog_seq 'geneNames_2.txt' 'exe_26' 'EEF1A1' 1743
-./prog_seq 'geneNames_2.txt' 'exe_26' 'ZNF638' 1744
-./prog_seq 'geneNames_2.txt' 'exe_26' 'SRSF10' 1745
-./prog_seq 'geneNames_2.txt' 'exe_26' 'S100A14' 1746
-./prog_seq 'geneNames_2.txt' 'exe_26' 'S100A16' 1747
-./prog_seq 'geneNames_2.txt' 'exe_26' 'SRSF6' 1748
-./prog_seq 'geneNames_2.txt' 'exe_26' 'ENO1' 1749
-./prog_seq 'geneNames_2.txt' 'exe_26' 'NPM1' 1750
-./prog_seq 'geneNames_2.txt' 'exe_26' 'ILF3' 1751
-./prog_seq 'geneNames_2.txt' 'exe_26' 'NONO' 1752
-./prog_seq 'geneNames_2.txt' 'exe_26' 'CAMK2D' 1753
-./prog_seq 'geneNames_2.txt' 'exe_26' 'HNRNPR' 1754
-./prog_seq 'geneNames_2.txt' 'exe_26' 'RBBP7' 1755
-./prog_seq 'geneNames_2.txt' 'exe_26' 'SSB' 1756
-./prog_seq 'geneNames_2.txt' 'exe_26' 'WFDC2' 1757
-./prog_seq 'geneNames_2.txt' 'exe_26' 'KPNA2' 1758
-./prog_seq 'geneNames_2.txt' 'exe_26' 'APOA1' 1759
-./prog_seq 'geneNames_2.txt' 'exe_26' 'RBM39' 1760
-./prog_seq 'geneNames_2.txt' 'exe_26' 'HDAC2' 1761
-./prog_seq 'geneNames_2.txt' 'exe_26' 'CNOT7' 1762
-./prog_seq 'geneNames_2.txt' 'exe_26' 'SOX4' 1763
-./prog_seq 'geneNames_2.txt' 'exe_26' 'HERPUD1' 1764
-./prog_seq 'geneNames_2.txt' 'exe_26' 'ANP32E' 1765
-./prog_seq 'geneNames_2.txt' 'exe_26' 'THRAP3' 1766
-./prog_seq 'geneNames_2.txt' 'exe_26' 'POLR2F' 1767
-./prog_seq 'geneNames_2.txt' 'exe_26' 'ACTL6A' 1768
-./prog_seq 'geneNames_2.txt' 'exe_26' 'AKR1D1' 1769
-./prog_seq 'geneNames_2.txt' 'exe_26' 'HMGN3' 1770
-./prog_seq 'geneNames_2.txt' 'exe_26' 'CKS2' 1771
-./prog_seq 'geneNames_2.txt' 'exe_26' 'APEX1' 1772
-./prog_seq 'geneNames_2.txt' 'exe_26' 'DDX5' 1773
-./prog_seq 'geneNames_2.txt' 'exe_26' 'CDK1' 1774
-./prog_seq 'geneNames_2.txt' 'exe_26' 'CACYBP' 1775
-./prog_seq 'geneNames_2.txt' 'exe_26' 'PON2' 1776
-./prog_seq 'geneNames_2.txt' 'exe_26' 'AMZ2' 1777
-./prog_seq 'geneNames_2.txt' 'exe_26' 'ANXA3' 1778
-./prog_seq 'geneNames_2.txt' 'exe_26' 'APOA2' 1779
-./prog_seq 'geneNames_2.txt' 'exe_26' 'UGP2' 1780
-./prog_seq 'geneNames_2.txt' 'exe_26' 'GPC3' 1781
-./prog_seq 'geneNames_2.txt' 'exe_26' 'PWP1' 1782
-./prog_seq 'geneNames_2.txt' 'exe_26' 'CNBP' 1783
-./prog_seq 'geneNames_2.txt' 'exe_26' 'MATR3' 1784
-./prog_seq 'geneNames_2.txt' 'exe_26' 'SRSF3' 1785
-./prog_seq 'geneNames_2.txt' 'exe_26' 'ILF2' 1786
-./prog_seq 'geneNames_2.txt' 'exe_26' 'ID2' 1787
-./prog_seq 'geneNames_2.txt' 'exe_26' 'CSDE1' 1788
-./prog_seq 'geneNames_2.txt' 'exe_26' 'OCIAD2' 1789
-./prog_seq 'geneNames_2.txt' 'exe_26' 'STMN1' 1790
-./prog_seq 'geneNames_2.txt' 'exe_26' 'RHOBTB3' 1791
-./prog_seq 'geneNames_2.txt' 'exe_26' 'RBMX' 1792
-./prog_seq 'geneNames_2.txt' 'exe_26' 'BTF3' 1793
-./prog_seq 'geneNames_2.txt' 'exe_26' 'SNRPB' 1794
-./prog_seq 'geneNames_2.txt' 'exe_27' 'TCERG1' 1795
-./prog_seq 'geneNames_2.txt' 'exe_27' 'SRRM1' 1796
-./prog_seq 'geneNames_2.txt' 'exe_27' 'XRCC5' 1797
-./prog_seq 'geneNames_2.txt' 'exe_27' 'RNASE1' 1798
-./prog_seq 'geneNames_2.txt' 'exe_27' 'HMGN2' 1799
-./prog_seq 'geneNames_2.txt' 'exe_27' 'TCEB2' 1800
-./prog_seq 'geneNames_2.txt' 'exe_27' 'IFITM3' 1801
-./prog_seq 'geneNames_2.txt' 'exe_27' 'PHB2' 1802
-./prog_seq 'geneNames_2.txt' 'exe_27' 'SUB1' 1803
-./prog_seq 'geneNames_2.txt' 'exe_27' 'LAMB1' 1804
-./prog_seq 'geneNames_2.txt' 'exe_27' 'SNRPD1' 1805
-./prog_seq 'geneNames_2.txt' 'exe_27' 'PAPOLA' 1806
-./prog_seq 'geneNames_2.txt' 'exe_27' 'POLR2G' 1807
-./prog_seq 'geneNames_2.txt' 'exe_27' 'APOC1' 1808
-./prog_seq 'geneNames_2.txt' 'exe_27' 'POLR2I' 1809
-./prog_seq 'geneNames_2.txt' 'exe_27' 'PTMA' 1810
-./prog_seq 'geneNames_2.txt' 'exe_27' 'XRCC6' 1811
-./prog_seq 'geneNames_2.txt' 'exe_27' 'EEF1A1' 1812
-./prog_seq 'geneNames_2.txt' 'exe_27' 'ZNF638' 1813
-./prog_seq 'geneNames_2.txt' 'exe_27' 'SRSF10' 1814
-./prog_seq 'geneNames_2.txt' 'exe_27' 'S100A14' 1815
-./prog_seq 'geneNames_2.txt' 'exe_27' 'S100A16' 1816
-./prog_seq 'geneNames_2.txt' 'exe_27' 'SRSF6' 1817
-./prog_seq 'geneNames_2.txt' 'exe_27' 'ENO1' 1818
-./prog_seq 'geneNames_2.txt' 'exe_27' 'NPM1' 1819
-./prog_seq 'geneNames_2.txt' 'exe_27' 'ILF3' 1820
-./prog_seq 'geneNames_2.txt' 'exe_27' 'NONO' 1821
-./prog_seq 'geneNames_2.txt' 'exe_27' 'CAMK2D' 1822
-./prog_seq 'geneNames_2.txt' 'exe_27' 'HNRNPR' 1823
-./prog_seq 'geneNames_2.txt' 'exe_27' 'RBBP7' 1824
-./prog_seq 'geneNames_2.txt' 'exe_27' 'SSB' 1825
-./prog_seq 'geneNames_2.txt' 'exe_27' 'WFDC2' 1826
-./prog_seq 'geneNames_2.txt' 'exe_27' 'KPNA2' 1827
-./prog_seq 'geneNames_2.txt' 'exe_27' 'APOA1' 1828
-./prog_seq 'geneNames_2.txt' 'exe_27' 'RBM39' 1829
-./prog_seq 'geneNames_2.txt' 'exe_27' 'HDAC2' 1830
-./prog_seq 'geneNames_2.txt' 'exe_27' 'CNOT7' 1831
-./prog_seq 'geneNames_2.txt' 'exe_27' 'SOX4' 1832
-./prog_seq 'geneNames_2.txt' 'exe_27' 'HERPUD1' 1833
-./prog_seq 'geneNames_2.txt' 'exe_27' 'ANP32E' 1834
-./prog_seq 'geneNames_2.txt' 'exe_27' 'THRAP3' 1835
-./prog_seq 'geneNames_2.txt' 'exe_27' 'POLR2F' 1836
-./prog_seq 'geneNames_2.txt' 'exe_27' 'ACTL6A' 1837
-./prog_seq 'geneNames_2.txt' 'exe_27' 'AKR1D1' 1838
-./prog_seq 'geneNames_2.txt' 'exe_27' 'HMGN3' 1839
-./prog_seq 'geneNames_2.txt' 'exe_27' 'CKS2' 1840
-./prog_seq 'geneNames_2.txt' 'exe_27' 'APEX1' 1841
-./prog_seq 'geneNames_2.txt' 'exe_27' 'DDX5' 1842
-./prog_seq 'geneNames_2.txt' 'exe_27' 'CDK1' 1843
-./prog_seq 'geneNames_2.txt' 'exe_27' 'CACYBP' 1844
-./prog_seq 'geneNames_2.txt' 'exe_27' 'PON2' 1845
-./prog_seq 'geneNames_2.txt' 'exe_27' 'AMZ2' 1846
-./prog_seq 'geneNames_2.txt' 'exe_27' 'ANXA3' 1847
-./prog_seq 'geneNames_2.txt' 'exe_27' 'APOA2' 1848
-./prog_seq 'geneNames_2.txt' 'exe_27' 'UGP2' 1849
-./prog_seq 'geneNames_2.txt' 'exe_27' 'GPC3' 1850
-./prog_seq 'geneNames_2.txt' 'exe_27' 'PWP1' 1851
-./prog_seq 'geneNames_2.txt' 'exe_27' 'CNBP' 1852
-./prog_seq 'geneNames_2.txt' 'exe_27' 'MATR3' 1853
-./prog_seq 'geneNames_2.txt' 'exe_27' 'SRSF3' 1854
-./prog_seq 'geneNames_2.txt' 'exe_27' 'ILF2' 1855
-./prog_seq 'geneNames_2.txt' 'exe_27' 'ID2' 1856
-./prog_seq 'geneNames_2.txt' 'exe_27' 'CSDE1' 1857
-./prog_seq 'geneNames_2.txt' 'exe_27' 'OCIAD2' 1858
-./prog_seq 'geneNames_2.txt' 'exe_27' 'STMN1' 1859
-./prog_seq 'geneNames_2.txt' 'exe_27' 'RHOBTB3' 1860
-./prog_seq 'geneNames_2.txt' 'exe_27' 'RBMX' 1861
-./prog_seq 'geneNames_2.txt' 'exe_27' 'BTF3' 1862
-./prog_seq 'geneNames_2.txt' 'exe_27' 'SNRPB' 1863
-./prog_seq 'geneNames_2.txt' 'exe_28' 'TCERG1' 1864
-./prog_seq 'geneNames_2.txt' 'exe_28' 'SRRM1' 1865
-./prog_seq 'geneNames_2.txt' 'exe_28' 'XRCC5' 1866
-./prog_seq 'geneNames_2.txt' 'exe_28' 'RNASE1' 1867
-./prog_seq 'geneNames_2.txt' 'exe_28' 'HMGN2' 1868
-./prog_seq 'geneNames_2.txt' 'exe_28' 'TCEB2' 1869
-./prog_seq 'geneNames_2.txt' 'exe_28' 'IFITM3' 1870
-./prog_seq 'geneNames_2.txt' 'exe_28' 'PHB2' 1871
-./prog_seq 'geneNames_2.txt' 'exe_28' 'SUB1' 1872
-./prog_seq 'geneNames_2.txt' 'exe_28' 'LAMB1' 1873
-./prog_seq 'geneNames_2.txt' 'exe_28' 'SNRPD1' 1874
-./prog_seq 'geneNames_2.txt' 'exe_28' 'PAPOLA' 1875
-./prog_seq 'geneNames_2.txt' 'exe_28' 'POLR2G' 1876
-./prog_seq 'geneNames_2.txt' 'exe_28' 'APOC1' 1877
-./prog_seq 'geneNames_2.txt' 'exe_28' 'POLR2I' 1878
-./prog_seq 'geneNames_2.txt' 'exe_28' 'PTMA' 1879
-./prog_seq 'geneNames_2.txt' 'exe_28' 'XRCC6' 1880
-./prog_seq 'geneNames_2.txt' 'exe_28' 'EEF1A1' 1881
-./prog_seq 'geneNames_2.txt' 'exe_28' 'ZNF638' 1882
-./prog_seq 'geneNames_2.txt' 'exe_28' 'SRSF10' 1883
-./prog_seq 'geneNames_2.txt' 'exe_28' 'S100A14' 1884
-./prog_seq 'geneNames_2.txt' 'exe_28' 'S100A16' 1885
-./prog_seq 'geneNames_2.txt' 'exe_28' 'SRSF6' 1886
-./prog_seq 'geneNames_2.txt' 'exe_28' 'ENO1' 1887
-./prog_seq 'geneNames_2.txt' 'exe_28' 'NPM1' 1888
-./prog_seq 'geneNames_2.txt' 'exe_28' 'ILF3' 1889
-./prog_seq 'geneNames_2.txt' 'exe_28' 'NONO' 1890
-./prog_seq 'geneNames_2.txt' 'exe_28' 'CAMK2D' 1891
-./prog_seq 'geneNames_2.txt' 'exe_28' 'HNRNPR' 1892
-./prog_seq 'geneNames_2.txt' 'exe_28' 'RBBP7' 1893
-./prog_seq 'geneNames_2.txt' 'exe_28' 'SSB' 1894
-./prog_seq 'geneNames_2.txt' 'exe_28' 'WFDC2' 1895
-./prog_seq 'geneNames_2.txt' 'exe_28' 'KPNA2' 1896
-./prog_seq 'geneNames_2.txt' 'exe_28' 'APOA1' 1897
-./prog_seq 'geneNames_2.txt' 'exe_28' 'RBM39' 1898
-./prog_seq 'geneNames_2.txt' 'exe_28' 'HDAC2' 1899
-./prog_seq 'geneNames_2.txt' 'exe_28' 'CNOT7' 1900
-./prog_seq 'geneNames_2.txt' 'exe_28' 'SOX4' 1901
-./prog_seq 'geneNames_2.txt' 'exe_28' 'HERPUD1' 1902
-./prog_seq 'geneNames_2.txt' 'exe_28' 'ANP32E' 1903
-./prog_seq 'geneNames_2.txt' 'exe_28' 'THRAP3' 1904
-./prog_seq 'geneNames_2.txt' 'exe_28' 'POLR2F' 1905
-./prog_seq 'geneNames_2.txt' 'exe_28' 'ACTL6A' 1906
-./prog_seq 'geneNames_2.txt' 'exe_28' 'AKR1D1' 1907
-./prog_seq 'geneNames_2.txt' 'exe_28' 'HMGN3' 1908
-./prog_seq 'geneNames_2.txt' 'exe_28' 'CKS2' 1909
-./prog_seq 'geneNames_2.txt' 'exe_28' 'APEX1' 1910
-./prog_seq 'geneNames_2.txt' 'exe_28' 'DDX5' 1911
-./prog_seq 'geneNames_2.txt' 'exe_28' 'CDK1' 1912
-./prog_seq 'geneNames_2.txt' 'exe_28' 'CACYBP' 1913
-./prog_seq 'geneNames_2.txt' 'exe_28' 'PON2' 1914
-./prog_seq 'geneNames_2.txt' 'exe_28' 'AMZ2' 1915
-./prog_seq 'geneNames_2.txt' 'exe_28' 'ANXA3' 1916
-./prog_seq 'geneNames_2.txt' 'exe_28' 'APOA2' 1917
-./prog_seq 'geneNames_2.txt' 'exe_28' 'UGP2' 1918
-./prog_seq 'geneNames_2.txt' 'exe_28' 'GPC3' 1919
-./prog_seq 'geneNames_2.txt' 'exe_28' 'PWP1' 1920
-./prog_seq 'geneNames_2.txt' 'exe_28' 'CNBP' 1921
-./prog_seq 'geneNames_2.txt' 'exe_28' 'MATR3' 1922
-./prog_seq 'geneNames_2.txt' 'exe_28' 'SRSF3' 1923
-./prog_seq 'geneNames_2.txt' 'exe_28' 'ILF2' 1924
-./prog_seq 'geneNames_2.txt' 'exe_28' 'ID2' 1925
-./prog_seq 'geneNames_2.txt' 'exe_28' 'CSDE1' 1926
-./prog_seq 'geneNames_2.txt' 'exe_28' 'OCIAD2' 1927
-./prog_seq 'geneNames_2.txt' 'exe_28' 'STMN1' 1928
-./prog_seq 'geneNames_2.txt' 'exe_28' 'RHOBTB3' 1929
-./prog_seq 'geneNames_2.txt' 'exe_28' 'RBMX' 1930
-./prog_seq 'geneNames_2.txt' 'exe_28' 'BTF3' 1931
-./prog_seq 'geneNames_2.txt' 'exe_28' 'SNRPB' 1932
-./prog_seq 'geneNames_2.txt' 'exe_29' 'TCERG1' 1933
-./prog_seq 'geneNames_2.txt' 'exe_29' 'SRRM1' 1934
-./prog_seq 'geneNames_2.txt' 'exe_29' 'XRCC5' 1935
-./prog_seq 'geneNames_2.txt' 'exe_29' 'RNASE1' 1936
-./prog_seq 'geneNames_2.txt' 'exe_29' 'HMGN2' 1937
-./prog_seq 'geneNames_2.txt' 'exe_29' 'TCEB2' 1938
-./prog_seq 'geneNames_2.txt' 'exe_29' 'IFITM3' 1939
-./prog_seq 'geneNames_2.txt' 'exe_29' 'PHB2' 1940
-./prog_seq 'geneNames_2.txt' 'exe_29' 'SUB1' 1941
-./prog_seq 'geneNames_2.txt' 'exe_29' 'LAMB1' 1942
-./prog_seq 'geneNames_2.txt' 'exe_29' 'SNRPD1' 1943
-./prog_seq 'geneNames_2.txt' 'exe_29' 'PAPOLA' 1944
-./prog_seq 'geneNames_2.txt' 'exe_29' 'POLR2G' 1945
-./prog_seq 'geneNames_2.txt' 'exe_29' 'APOC1' 1946
-./prog_seq 'geneNames_2.txt' 'exe_29' 'POLR2I' 1947
-./prog_seq 'geneNames_2.txt' 'exe_29' 'PTMA' 1948
-./prog_seq 'geneNames_2.txt' 'exe_29' 'XRCC6' 1949
-./prog_seq 'geneNames_2.txt' 'exe_29' 'EEF1A1' 1950
-./prog_seq 'geneNames_2.txt' 'exe_29' 'ZNF638' 1951
-./prog_seq 'geneNames_2.txt' 'exe_29' 'SRSF10' 1952
-./prog_seq 'geneNames_2.txt' 'exe_29' 'S100A14' 1953
-./prog_seq 'geneNames_2.txt' 'exe_29' 'S100A16' 1954
-./prog_seq 'geneNames_2.txt' 'exe_29' 'SRSF6' 1955
-./prog_seq 'geneNames_2.txt' 'exe_29' 'ENO1' 1956
-./prog_seq 'geneNames_2.txt' 'exe_29' 'NPM1' 1957
-./prog_seq 'geneNames_2.txt' 'exe_29' 'ILF3' 1958
-./prog_seq 'geneNames_2.txt' 'exe_29' 'NONO' 1959
-./prog_seq 'geneNames_2.txt' 'exe_29' 'CAMK2D' 1960
-./prog_seq 'geneNames_2.txt' 'exe_29' 'HNRNPR' 1961
-./prog_seq 'geneNames_2.txt' 'exe_29' 'RBBP7' 1962
-./prog_seq 'geneNames_2.txt' 'exe_29' 'SSB' 1963
-./prog_seq 'geneNames_2.txt' 'exe_29' 'WFDC2' 1964
-./prog_seq 'geneNames_2.txt' 'exe_29' 'KPNA2' 1965
-./prog_seq 'geneNames_2.txt' 'exe_29' 'APOA1' 1966
-./prog_seq 'geneNames_2.txt' 'exe_29' 'RBM39' 1967
-./prog_seq 'geneNames_2.txt' 'exe_29' 'HDAC2' 1968
-./prog_seq 'geneNames_2.txt' 'exe_29' 'CNOT7' 1969
-./prog_seq 'geneNames_2.txt' 'exe_29' 'SOX4' 1970
-./prog_seq 'geneNames_2.txt' 'exe_29' 'HERPUD1' 1971
-./prog_seq 'geneNames_2.txt' 'exe_29' 'ANP32E' 1972
-./prog_seq 'geneNames_2.txt' 'exe_29' 'THRAP3' 1973
-./prog_seq 'geneNames_2.txt' 'exe_29' 'POLR2F' 1974
-./prog_seq 'geneNames_2.txt' 'exe_29' 'ACTL6A' 1975
-./prog_seq 'geneNames_2.txt' 'exe_29' 'AKR1D1' 1976
-./prog_seq 'geneNames_2.txt' 'exe_29' 'HMGN3' 1977
-./prog_seq 'geneNames_2.txt' 'exe_29' 'CKS2' 1978
-./prog_seq 'geneNames_2.txt' 'exe_29' 'APEX1' 1979
-./prog_seq 'geneNames_2.txt' 'exe_29' 'DDX5' 1980
-./prog_seq 'geneNames_2.txt' 'exe_29' 'CDK1' 1981
-./prog_seq 'geneNames_2.txt' 'exe_29' 'CACYBP' 1982
-./prog_seq 'geneNames_2.txt' 'exe_29' 'PON2' 1983
-./prog_seq 'geneNames_2.txt' 'exe_29' 'AMZ2' 1984
-./prog_seq 'geneNames_2.txt' 'exe_29' 'ANXA3' 1985
-./prog_seq 'geneNames_2.txt' 'exe_29' 'APOA2' 1986
-./prog_seq 'geneNames_2.txt' 'exe_29' 'UGP2' 1987
-./prog_seq 'geneNames_2.txt' 'exe_29' 'GPC3' 1988
-./prog_seq 'geneNames_2.txt' 'exe_29' 'PWP1' 1989
-./prog_seq 'geneNames_2.txt' 'exe_29' 'CNBP' 1990
-./prog_seq 'geneNames_2.txt' 'exe_29' 'MATR3' 1991
-./prog_seq 'geneNames_2.txt' 'exe_29' 'SRSF3' 1992
-./prog_seq 'geneNames_2.txt' 'exe_29' 'ILF2' 1993
-./prog_seq 'geneNames_2.txt' 'exe_29' 'ID2' 1994
-./prog_seq 'geneNames_2.txt' 'exe_29' 'CSDE1' 1995
-./prog_seq 'geneNames_2.txt' 'exe_29' 'OCIAD2' 1996
-./prog_seq 'geneNames_2.txt' 'exe_29' 'STMN1' 1997
-./prog_seq 'geneNames_2.txt' 'exe_29' 'RHOBTB3' 1998
-./prog_seq 'geneNames_2.txt' 'exe_29' 'RBMX' 1999
-./prog_seq 'geneNames_2.txt' 'exe_29' 'BTF3' 2000
-./prog_seq 'geneNames_2.txt' 'exe_29' 'SNRPB' 2001
-./prog_seq 'geneNames_2.txt' 'exe_30' 'TCERG1' 2002
-./prog_seq 'geneNames_2.txt' 'exe_30' 'SRRM1' 2003
-./prog_seq 'geneNames_2.txt' 'exe_30' 'XRCC5' 2004
-./prog_seq 'geneNames_2.txt' 'exe_30' 'RNASE1' 2005
-./prog_seq 'geneNames_2.txt' 'exe_30' 'HMGN2' 2006
-./prog_seq 'geneNames_2.txt' 'exe_30' 'TCEB2' 2007
-./prog_seq 'geneNames_2.txt' 'exe_30' 'IFITM3' 2008
-./prog_seq 'geneNames_2.txt' 'exe_30' 'PHB2' 2009
-./prog_seq 'geneNames_2.txt' 'exe_30' 'SUB1' 2010
-./prog_seq 'geneNames_2.txt' 'exe_30' 'LAMB1' 2011
-./prog_seq 'geneNames_2.txt' 'exe_30' 'SNRPD1' 2012
-./prog_seq 'geneNames_2.txt' 'exe_30' 'PAPOLA' 2013
-./prog_seq 'geneNames_2.txt' 'exe_30' 'POLR2G' 2014
-./prog_seq 'geneNames_2.txt' 'exe_30' 'APOC1' 2015
-./prog_seq 'geneNames_2.txt' 'exe_30' 'POLR2I' 2016
-./prog_seq 'geneNames_2.txt' 'exe_30' 'PTMA' 2017
-./prog_seq 'geneNames_2.txt' 'exe_30' 'XRCC6' 2018
-./prog_seq 'geneNames_2.txt' 'exe_30' 'EEF1A1' 2019
-./prog_seq 'geneNames_2.txt' 'exe_30' 'ZNF638' 2020
-./prog_seq 'geneNames_2.txt' 'exe_30' 'SRSF10' 2021
-./prog_seq 'geneNames_2.txt' 'exe_30' 'S100A14' 2022
-./prog_seq 'geneNames_2.txt' 'exe_30' 'S100A16' 2023
-./prog_seq 'geneNames_2.txt' 'exe_30' 'SRSF6' 2024
-./prog_seq 'geneNames_2.txt' 'exe_30' 'ENO1' 2025
-./prog_seq 'geneNames_2.txt' 'exe_30' 'NPM1' 2026
-./prog_seq 'geneNames_2.txt' 'exe_30' 'ILF3' 2027
-./prog_seq 'geneNames_2.txt' 'exe_30' 'NONO' 2028
-./prog_seq 'geneNames_2.txt' 'exe_30' 'CAMK2D' 2029
-./prog_seq 'geneNames_2.txt' 'exe_30' 'HNRNPR' 2030
-./prog_seq 'geneNames_2.txt' 'exe_30' 'RBBP7' 2031
-./prog_seq 'geneNames_2.txt' 'exe_30' 'SSB' 2032
-./prog_seq 'geneNames_2.txt' 'exe_30' 'WFDC2' 2033
-./prog_seq 'geneNames_2.txt' 'exe_30' 'KPNA2' 2034
-./prog_seq 'geneNames_2.txt' 'exe_30' 'APOA1' 2035
-./prog_seq 'geneNames_2.txt' 'exe_30' 'RBM39' 2036
-./prog_seq 'geneNames_2.txt' 'exe_30' 'HDAC2' 2037
-./prog_seq 'geneNames_2.txt' 'exe_30' 'CNOT7' 2038
-./prog_seq 'geneNames_2.txt' 'exe_30' 'SOX4' 2039
-./prog_seq 'geneNames_2.txt' 'exe_30' 'HERPUD1' 2040
-./prog_seq 'geneNames_2.txt' 'exe_30' 'ANP32E' 2041
-./prog_seq 'geneNames_2.txt' 'exe_30' 'THRAP3' 2042
-./prog_seq 'geneNames_2.txt' 'exe_30' 'POLR2F' 2043
-./prog_seq 'geneNames_2.txt' 'exe_30' 'ACTL6A' 2044
-./prog_seq 'geneNames_2.txt' 'exe_30' 'AKR1D1' 2045
-./prog_seq 'geneNames_2.txt' 'exe_30' 'HMGN3' 2046
-./prog_seq 'geneNames_2.txt' 'exe_30' 'CKS2' 2047
-./prog_seq 'geneNames_2.txt' 'exe_30' 'APEX1' 2048
-./prog_seq 'geneNames_2.txt' 'exe_30' 'DDX5' 2049
-./prog_seq 'geneNames_2.txt' 'exe_30' 'CDK1' 2050
-./prog_seq 'geneNames_2.txt' 'exe_30' 'CACYBP' 2051
-./prog_seq 'geneNames_2.txt' 'exe_30' 'PON2' 2052
-./prog_seq 'geneNames_2.txt' 'exe_30' 'AMZ2' 2053
-./prog_seq 'geneNames_2.txt' 'exe_30' 'ANXA3' 2054
-./prog_seq 'geneNames_2.txt' 'exe_30' 'APOA2' 2055
-./prog_seq 'geneNames_2.txt' 'exe_30' 'UGP2' 2056
-./prog_seq 'geneNames_2.txt' 'exe_30' 'GPC3' 2057
-./prog_seq 'geneNames_2.txt' 'exe_30' 'PWP1' 2058
-./prog_seq 'geneNames_2.txt' 'exe_30' 'CNBP' 2059
-./prog_seq 'geneNames_2.txt' 'exe_30' 'MATR3' 2060
-./prog_seq 'geneNames_2.txt' 'exe_30' 'SRSF3' 2061
-./prog_seq 'geneNames_2.txt' 'exe_30' 'ILF2' 2062
-./prog_seq 'geneNames_2.txt' 'exe_30' 'ID2' 2063
-./prog_seq 'geneNames_2.txt' 'exe_30' 'CSDE1' 2064
-./prog_seq 'geneNames_2.txt' 'exe_30' 'OCIAD2' 2065
-./prog_seq 'geneNames_2.txt' 'exe_30' 'STMN1' 2066
-./prog_seq 'geneNames_2.txt' 'exe_30' 'RHOBTB3' 2067
-./prog_seq 'geneNames_2.txt' 'exe_30' 'RBMX' 2068
-./prog_seq 'geneNames_2.txt' 'exe_30' 'BTF3' 2069
-./prog_seq 'geneNames_2.txt' 'exe_30' 'SNRPB' 2070
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'TCERG1' 1
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'SRRM1' 2
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'XRCC5' 3
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'RNASE1' 4
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'HMGN2' 5
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'TCEB2' 6
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'IFITM3' 7
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'PHB2' 8
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'SUB1' 9
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'LAMB1' 10
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'SNRPD1' 11
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'PAPOLA' 12
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'POLR2G' 13
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'APOC1' 14
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'POLR2I' 15
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'PTMA' 16
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'XRCC6' 17
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'EEF1A1' 18
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'ZNF638' 19
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'SRSF10' 20
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'S100A14' 21
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'S100A16' 22
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'SRSF6' 23
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'ENO1' 24
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'NPM1' 25
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'ILF3' 26
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'NONO' 27
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'CAMK2D' 28
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'HNRNPR' 29
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'RBBP7' 30
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'SSB' 31
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'WFDC2' 32
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'KPNA2' 33
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'APOA1' 34
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'RBM39' 35
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'HDAC2' 36
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'CNOT7' 37
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'SOX4' 38
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'HERPUD1' 39
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'ANP32E' 40
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'THRAP3' 41
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'POLR2F' 42
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'ACTL6A' 43
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'AKR1D1' 44
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'HMGN3' 45
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'CKS2' 46
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'APEX1' 47
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'DDX5' 48
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'CDK1' 49
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'CACYBP' 50
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'PON2' 51
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'AMZ2' 52
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'ANXA3' 53
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'APOA2' 54
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'UGP2' 55
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'GPC3' 56
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'PWP1' 57
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'CNBP' 58
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'MATR3' 59
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'SRSF3' 60
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'ILF2' 61
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'ID2' 62
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'CSDE1' 63
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'OCIAD2' 64
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'STMN1' 65
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'RHOBTB3' 66
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'RBMX' 67
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'BTF3' 68
+./prog_seq 'geneNames_2.txt' 'exe_1' 'hHep' 'SNRPB' 69
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'TCERG1' 70
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'SRRM1' 71
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'XRCC5' 72
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'RNASE1' 73
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'HMGN2' 74
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'TCEB2' 75
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'IFITM3' 76
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'PHB2' 77
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'SUB1' 78
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'LAMB1' 79
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'SNRPD1' 80
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'PAPOLA' 81
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'POLR2G' 82
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'APOC1' 83
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'POLR2I' 84
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'PTMA' 85
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'XRCC6' 86
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'EEF1A1' 87
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'ZNF638' 88
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'SRSF10' 89
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'S100A14' 90
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'S100A16' 91
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'SRSF6' 92
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'ENO1' 93
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'NPM1' 94
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'ILF3' 95
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'NONO' 96
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'CAMK2D' 97
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'HNRNPR' 98
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'RBBP7' 99
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'SSB' 100
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'WFDC2' 101
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'KPNA2' 102
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'APOA1' 103
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'RBM39' 104
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'HDAC2' 105
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'CNOT7' 106
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'SOX4' 107
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'HERPUD1' 108
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'ANP32E' 109
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'THRAP3' 110
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'POLR2F' 111
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'ACTL6A' 112
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'AKR1D1' 113
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'HMGN3' 114
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'CKS2' 115
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'APEX1' 116
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'DDX5' 117
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'CDK1' 118
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'CACYBP' 119
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'PON2' 120
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'AMZ2' 121
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'ANXA3' 122
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'APOA2' 123
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'UGP2' 124
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'GPC3' 125
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'PWP1' 126
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'CNBP' 127
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'MATR3' 128
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'SRSF3' 129
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'ILF2' 130
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'ID2' 131
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'CSDE1' 132
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'OCIAD2' 133
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'STMN1' 134
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'RHOBTB3' 135
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'RBMX' 136
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'BTF3' 137
+./prog_seq 'geneNames_2.txt' 'exe_2' 'hHep' 'SNRPB' 138
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'TCERG1' 139
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'SRRM1' 140
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'XRCC5' 141
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'RNASE1' 142
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'HMGN2' 143
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'TCEB2' 144
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'IFITM3' 145
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'PHB2' 146
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'SUB1' 147
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'LAMB1' 148
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'SNRPD1' 149
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'PAPOLA' 150
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'POLR2G' 151
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'APOC1' 152
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'POLR2I' 153
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'PTMA' 154
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'XRCC6' 155
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'EEF1A1' 156
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'ZNF638' 157
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'SRSF10' 158
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'S100A14' 159
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'S100A16' 160
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'SRSF6' 161
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'ENO1' 162
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'NPM1' 163
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'ILF3' 164
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'NONO' 165
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'CAMK2D' 166
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'HNRNPR' 167
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'RBBP7' 168
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'SSB' 169
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'WFDC2' 170
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'KPNA2' 171
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'APOA1' 172
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'RBM39' 173
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'HDAC2' 174
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'CNOT7' 175
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'SOX4' 176
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'HERPUD1' 177
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'ANP32E' 178
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'THRAP3' 179
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'POLR2F' 180
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'ACTL6A' 181
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'AKR1D1' 182
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'HMGN3' 183
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'CKS2' 184
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'APEX1' 185
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'DDX5' 186
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'CDK1' 187
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'CACYBP' 188
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'PON2' 189
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'AMZ2' 190
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'ANXA3' 191
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'APOA2' 192
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'UGP2' 193
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'GPC3' 194
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'PWP1' 195
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'CNBP' 196
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'MATR3' 197
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'SRSF3' 198
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'ILF2' 199
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'ID2' 200
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'CSDE1' 201
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'OCIAD2' 202
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'STMN1' 203
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'RHOBTB3' 204
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'RBMX' 205
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'BTF3' 206
+./prog_seq 'geneNames_2.txt' 'exe_3' 'hHep' 'SNRPB' 207
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'TCERG1' 208
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'SRRM1' 209
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'XRCC5' 210
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'RNASE1' 211
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'HMGN2' 212
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'TCEB2' 213
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'IFITM3' 214
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'PHB2' 215
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'SUB1' 216
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'LAMB1' 217
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'SNRPD1' 218
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'PAPOLA' 219
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'POLR2G' 220
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'APOC1' 221
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'POLR2I' 222
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'PTMA' 223
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'XRCC6' 224
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'EEF1A1' 225
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'ZNF638' 226
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'SRSF10' 227
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'S100A14' 228
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'S100A16' 229
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'SRSF6' 230
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'ENO1' 231
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'NPM1' 232
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'ILF3' 233
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'NONO' 234
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'CAMK2D' 235
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'HNRNPR' 236
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'RBBP7' 237
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'SSB' 238
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'WFDC2' 239
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'KPNA2' 240
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'APOA1' 241
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'RBM39' 242
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'HDAC2' 243
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'CNOT7' 244
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'SOX4' 245
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'HERPUD1' 246
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'ANP32E' 247
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'THRAP3' 248
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'POLR2F' 249
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'ACTL6A' 250
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'AKR1D1' 251
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'HMGN3' 252
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'CKS2' 253
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'APEX1' 254
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'DDX5' 255
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'CDK1' 256
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'CACYBP' 257
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'PON2' 258
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'AMZ2' 259
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'ANXA3' 260
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'APOA2' 261
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'UGP2' 262
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'GPC3' 263
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'PWP1' 264
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'CNBP' 265
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'MATR3' 266
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'SRSF3' 267
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'ILF2' 268
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'ID2' 269
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'CSDE1' 270
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'OCIAD2' 271
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'STMN1' 272
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'RHOBTB3' 273
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'RBMX' 274
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'BTF3' 275
+./prog_seq 'geneNames_2.txt' 'exe_4' 'hHep' 'SNRPB' 276
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'TCERG1' 277
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'SRRM1' 278
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'XRCC5' 279
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'RNASE1' 280
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'HMGN2' 281
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'TCEB2' 282
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'IFITM3' 283
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'PHB2' 284
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'SUB1' 285
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'LAMB1' 286
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'SNRPD1' 287
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'PAPOLA' 288
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'POLR2G' 289
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'APOC1' 290
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'POLR2I' 291
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'PTMA' 292
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'XRCC6' 293
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'EEF1A1' 294
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'ZNF638' 295
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'SRSF10' 296
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'S100A14' 297
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'S100A16' 298
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'SRSF6' 299
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'ENO1' 300
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'NPM1' 301
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'ILF3' 302
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'NONO' 303
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'CAMK2D' 304
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'HNRNPR' 305
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'RBBP7' 306
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'SSB' 307
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'WFDC2' 308
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'KPNA2' 309
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'APOA1' 310
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'RBM39' 311
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'HDAC2' 312
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'CNOT7' 313
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'SOX4' 314
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'HERPUD1' 315
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'ANP32E' 316
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'THRAP3' 317
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'POLR2F' 318
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'ACTL6A' 319
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'AKR1D1' 320
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'HMGN3' 321
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'CKS2' 322
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'APEX1' 323
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'DDX5' 324
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'CDK1' 325
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'CACYBP' 326
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'PON2' 327
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'AMZ2' 328
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'ANXA3' 329
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'APOA2' 330
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'UGP2' 331
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'GPC3' 332
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'PWP1' 333
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'CNBP' 334
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'MATR3' 335
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'SRSF3' 336
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'ILF2' 337
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'ID2' 338
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'CSDE1' 339
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'OCIAD2' 340
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'STMN1' 341
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'RHOBTB3' 342
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'RBMX' 343
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'BTF3' 344
+./prog_seq 'geneNames_2.txt' 'exe_5' 'hHep' 'SNRPB' 345
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'TCERG1' 346
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'SRRM1' 347
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'XRCC5' 348
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'RNASE1' 349
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'HMGN2' 350
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'TCEB2' 351
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'IFITM3' 352
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'PHB2' 353
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'SUB1' 354
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'LAMB1' 355
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'SNRPD1' 356
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'PAPOLA' 357
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'POLR2G' 358
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'APOC1' 359
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'POLR2I' 360
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'PTMA' 361
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'XRCC6' 362
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'EEF1A1' 363
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'ZNF638' 364
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'SRSF10' 365
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'S100A14' 366
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'S100A16' 367
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'SRSF6' 368
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'ENO1' 369
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'NPM1' 370
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'ILF3' 371
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'NONO' 372
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'CAMK2D' 373
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'HNRNPR' 374
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'RBBP7' 375
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'SSB' 376
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'WFDC2' 377
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'KPNA2' 378
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'APOA1' 379
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'RBM39' 380
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'HDAC2' 381
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'CNOT7' 382
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'SOX4' 383
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'HERPUD1' 384
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'ANP32E' 385
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'THRAP3' 386
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'POLR2F' 387
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'ACTL6A' 388
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'AKR1D1' 389
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'HMGN3' 390
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'CKS2' 391
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'APEX1' 392
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'DDX5' 393
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'CDK1' 394
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'CACYBP' 395
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'PON2' 396
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'AMZ2' 397
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'ANXA3' 398
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'APOA2' 399
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'UGP2' 400
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'GPC3' 401
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'PWP1' 402
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'CNBP' 403
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'MATR3' 404
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'SRSF3' 405
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'ILF2' 406
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'ID2' 407
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'CSDE1' 408
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'OCIAD2' 409
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'STMN1' 410
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'RHOBTB3' 411
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'RBMX' 412
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'BTF3' 413
+./prog_seq 'geneNames_2.txt' 'exe_6' 'hHep' 'SNRPB' 414
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'TCERG1' 415
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'SRRM1' 416
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'XRCC5' 417
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'RNASE1' 418
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'HMGN2' 419
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'TCEB2' 420
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'IFITM3' 421
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'PHB2' 422
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'SUB1' 423
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'LAMB1' 424
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'SNRPD1' 425
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'PAPOLA' 426
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'POLR2G' 427
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'APOC1' 428
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'POLR2I' 429
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'PTMA' 430
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'XRCC6' 431
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'EEF1A1' 432
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'ZNF638' 433
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'SRSF10' 434
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'S100A14' 435
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'S100A16' 436
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'SRSF6' 437
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'ENO1' 438
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'NPM1' 439
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'ILF3' 440
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'NONO' 441
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'CAMK2D' 442
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'HNRNPR' 443
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'RBBP7' 444
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'SSB' 445
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'WFDC2' 446
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'KPNA2' 447
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'APOA1' 448
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'RBM39' 449
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'HDAC2' 450
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'CNOT7' 451
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'SOX4' 452
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'HERPUD1' 453
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'ANP32E' 454
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'THRAP3' 455
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'POLR2F' 456
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'ACTL6A' 457
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'AKR1D1' 458
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'HMGN3' 459
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'CKS2' 460
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'APEX1' 461
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'DDX5' 462
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'CDK1' 463
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'CACYBP' 464
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'PON2' 465
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'AMZ2' 466
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'ANXA3' 467
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'APOA2' 468
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'UGP2' 469
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'GPC3' 470
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'PWP1' 471
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'CNBP' 472
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'MATR3' 473
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'SRSF3' 474
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'ILF2' 475
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'ID2' 476
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'CSDE1' 477
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'OCIAD2' 478
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'STMN1' 479
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'RHOBTB3' 480
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'RBMX' 481
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'BTF3' 482
+./prog_seq 'geneNames_2.txt' 'exe_7' 'hHep' 'SNRPB' 483
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'TCERG1' 484
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'SRRM1' 485
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'XRCC5' 486
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'RNASE1' 487
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'HMGN2' 488
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'TCEB2' 489
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'IFITM3' 490
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'PHB2' 491
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'SUB1' 492
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'LAMB1' 493
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'SNRPD1' 494
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'PAPOLA' 495
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'POLR2G' 496
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'APOC1' 497
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'POLR2I' 498
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'PTMA' 499
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'XRCC6' 500
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'EEF1A1' 501
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'ZNF638' 502
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'SRSF10' 503
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'S100A14' 504
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'S100A16' 505
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'SRSF6' 506
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'ENO1' 507
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'NPM1' 508
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'ILF3' 509
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'NONO' 510
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'CAMK2D' 511
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'HNRNPR' 512
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'RBBP7' 513
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'SSB' 514
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'WFDC2' 515
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'KPNA2' 516
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'APOA1' 517
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'RBM39' 518
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'HDAC2' 519
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'CNOT7' 520
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'SOX4' 521
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'HERPUD1' 522
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'ANP32E' 523
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'THRAP3' 524
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'POLR2F' 525
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'ACTL6A' 526
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'AKR1D1' 527
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'HMGN3' 528
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'CKS2' 529
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'APEX1' 530
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'DDX5' 531
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'CDK1' 532
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'CACYBP' 533
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'PON2' 534
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'AMZ2' 535
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'ANXA3' 536
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'APOA2' 537
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'UGP2' 538
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'GPC3' 539
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'PWP1' 540
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'CNBP' 541
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'MATR3' 542
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'SRSF3' 543
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'ILF2' 544
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'ID2' 545
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'CSDE1' 546
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'OCIAD2' 547
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'STMN1' 548
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'RHOBTB3' 549
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'RBMX' 550
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'BTF3' 551
+./prog_seq 'geneNames_2.txt' 'exe_8' 'hHep' 'SNRPB' 552
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'TCERG1' 553
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'SRRM1' 554
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'XRCC5' 555
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'RNASE1' 556
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'HMGN2' 557
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'TCEB2' 558
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'IFITM3' 559
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'PHB2' 560
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'SUB1' 561
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'LAMB1' 562
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'SNRPD1' 563
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'PAPOLA' 564
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'POLR2G' 565
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'APOC1' 566
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'POLR2I' 567
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'PTMA' 568
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'XRCC6' 569
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'EEF1A1' 570
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'ZNF638' 571
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'SRSF10' 572
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'S100A14' 573
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'S100A16' 574
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'SRSF6' 575
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'ENO1' 576
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'NPM1' 577
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'ILF3' 578
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'NONO' 579
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'CAMK2D' 580
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'HNRNPR' 581
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'RBBP7' 582
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'SSB' 583
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'WFDC2' 584
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'KPNA2' 585
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'APOA1' 586
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'RBM39' 587
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'HDAC2' 588
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'CNOT7' 589
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'SOX4' 590
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'HERPUD1' 591
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'ANP32E' 592
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'THRAP3' 593
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'POLR2F' 594
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'ACTL6A' 595
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'AKR1D1' 596
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'HMGN3' 597
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'CKS2' 598
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'APEX1' 599
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'DDX5' 600
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'CDK1' 601
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'CACYBP' 602
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'PON2' 603
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'AMZ2' 604
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'ANXA3' 605
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'APOA2' 606
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'UGP2' 607
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'GPC3' 608
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'PWP1' 609
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'CNBP' 610
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'MATR3' 611
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'SRSF3' 612
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'ILF2' 613
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'ID2' 614
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'CSDE1' 615
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'OCIAD2' 616
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'STMN1' 617
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'RHOBTB3' 618
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'RBMX' 619
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'BTF3' 620
+./prog_seq 'geneNames_2.txt' 'exe_9' 'hHep' 'SNRPB' 621
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'TCERG1' 622
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'SRRM1' 623
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'XRCC5' 624
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'RNASE1' 625
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'HMGN2' 626
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'TCEB2' 627
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'IFITM3' 628
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'PHB2' 629
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'SUB1' 630
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'LAMB1' 631
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'SNRPD1' 632
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'PAPOLA' 633
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'POLR2G' 634
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'APOC1' 635
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'POLR2I' 636
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'PTMA' 637
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'XRCC6' 638
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'EEF1A1' 639
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'ZNF638' 640
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'SRSF10' 641
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'S100A14' 642
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'S100A16' 643
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'SRSF6' 644
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'ENO1' 645
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'NPM1' 646
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'ILF3' 647
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'NONO' 648
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'CAMK2D' 649
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'HNRNPR' 650
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'RBBP7' 651
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'SSB' 652
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'WFDC2' 653
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'KPNA2' 654
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'APOA1' 655
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'RBM39' 656
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'HDAC2' 657
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'CNOT7' 658
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'SOX4' 659
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'HERPUD1' 660
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'ANP32E' 661
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'THRAP3' 662
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'POLR2F' 663
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'ACTL6A' 664
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'AKR1D1' 665
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'HMGN3' 666
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'CKS2' 667
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'APEX1' 668
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'DDX5' 669
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'CDK1' 670
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'CACYBP' 671
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'PON2' 672
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'AMZ2' 673
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'ANXA3' 674
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'APOA2' 675
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'UGP2' 676
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'GPC3' 677
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'PWP1' 678
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'CNBP' 679
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'MATR3' 680
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'SRSF3' 681
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'ILF2' 682
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'ID2' 683
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'CSDE1' 684
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'OCIAD2' 685
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'STMN1' 686
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'RHOBTB3' 687
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'RBMX' 688
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'BTF3' 689
+./prog_seq 'geneNames_2.txt' 'exe_10' 'hHep' 'SNRPB' 690
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'TCERG1' 691
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'SRRM1' 692
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'XRCC5' 693
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'RNASE1' 694
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'HMGN2' 695
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'TCEB2' 696
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'IFITM3' 697
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'PHB2' 698
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'SUB1' 699
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'LAMB1' 700
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'SNRPD1' 701
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'PAPOLA' 702
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'POLR2G' 703
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'APOC1' 704
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'POLR2I' 705
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'PTMA' 706
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'XRCC6' 707
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'EEF1A1' 708
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'ZNF638' 709
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'SRSF10' 710
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'S100A14' 711
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'S100A16' 712
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'SRSF6' 713
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'ENO1' 714
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'NPM1' 715
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'ILF3' 716
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'NONO' 717
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'CAMK2D' 718
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'HNRNPR' 719
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'RBBP7' 720
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'SSB' 721
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'WFDC2' 722
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'KPNA2' 723
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'APOA1' 724
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'RBM39' 725
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'HDAC2' 726
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'CNOT7' 727
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'SOX4' 728
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'HERPUD1' 729
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'ANP32E' 730
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'THRAP3' 731
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'POLR2F' 732
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'ACTL6A' 733
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'AKR1D1' 734
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'HMGN3' 735
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'CKS2' 736
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'APEX1' 737
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'DDX5' 738
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'CDK1' 739
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'CACYBP' 740
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'PON2' 741
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'AMZ2' 742
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'ANXA3' 743
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'APOA2' 744
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'UGP2' 745
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'GPC3' 746
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'PWP1' 747
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'CNBP' 748
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'MATR3' 749
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'SRSF3' 750
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'ILF2' 751
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'ID2' 752
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'CSDE1' 753
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'OCIAD2' 754
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'STMN1' 755
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'RHOBTB3' 756
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'RBMX' 757
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'BTF3' 758
+./prog_seq 'geneNames_2.txt' 'exe_11' 'hHep' 'SNRPB' 759

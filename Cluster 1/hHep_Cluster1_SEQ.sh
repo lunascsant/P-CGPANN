@@ -1,6900 +1,2530 @@
-./prog_seq 'geneNames_1.txt' 'exe_1' 'AEBP1' 1
-./prog_seq 'geneNames_1.txt' 'exe_1' 'PIM2' 2
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TADA3' 3
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ESRG' 4
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ETV4' 5
-./prog_seq 'geneNames_1.txt' 'exe_1' 'THY1' 6
-./prog_seq 'geneNames_1.txt' 'exe_1' 'VEZF1' 7
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ING1' 8
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TNFAIP3' 9
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TCF3' 10
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TP53' 11
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZNF397' 12
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ELF1' 13
-./prog_seq 'geneNames_1.txt' 'exe_1' 'NRIP1' 14
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZFP36' 15
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TRIM25' 16
-./prog_seq 'geneNames_1.txt' 'exe_1' 'NR2F6' 17
-./prog_seq 'geneNames_1.txt' 'exe_1' 'HCFC1' 18
-./prog_seq 'geneNames_1.txt' 'exe_1' 'DDX54' 19
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ESPL1' 20
-./prog_seq 'geneNames_1.txt' 'exe_1' 'PDCD11' 21
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZNRD1' 22
-./prog_seq 'geneNames_1.txt' 'exe_1' 'SMAD3' 23
-./prog_seq 'geneNames_1.txt' 'exe_1' 'SIRT1' 24
-./prog_seq 'geneNames_1.txt' 'exe_1' 'HMGA2' 25
-./prog_seq 'geneNames_1.txt' 'exe_1' 'EGF' 26
-./prog_seq 'geneNames_1.txt' 'exe_1' 'HIST1H1E' 27
-./prog_seq 'geneNames_1.txt' 'exe_1' 'BTG1' 28
-./prog_seq 'geneNames_1.txt' 'exe_1' 'LHX1' 29
-./prog_seq 'geneNames_1.txt' 'exe_1' 'NFIB' 30
-./prog_seq 'geneNames_1.txt' 'exe_1' 'CDX2' 31
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ETV1' 32
-./prog_seq 'geneNames_1.txt' 'exe_1' 'BCOR' 33
-./prog_seq 'geneNames_1.txt' 'exe_1' 'HIF1AN' 34
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ETV5' 35
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TCF19' 36
-./prog_seq 'geneNames_1.txt' 'exe_1' 'CEBPD' 37
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZIC3' 38
-./prog_seq 'geneNames_1.txt' 'exe_1' 'BMP2' 39
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ELAVL2' 40
-./prog_seq 'geneNames_1.txt' 'exe_1' 'MED14' 41
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZNF354A' 42
-./prog_seq 'geneNames_1.txt' 'exe_1' 'BRIP1' 43
-./prog_seq 'geneNames_1.txt' 'exe_1' 'MAF' 44
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZBTB16' 45
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TEAD2' 46
-./prog_seq 'geneNames_1.txt' 'exe_1' 'NR5A2' 47
-./prog_seq 'geneNames_1.txt' 'exe_1' 'JUN' 48
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZNF300' 49
-./prog_seq 'geneNames_1.txt' 'exe_1' 'EPAS1' 50
-./prog_seq 'geneNames_1.txt' 'exe_1' 'NOTCH3' 51
-./prog_seq 'geneNames_1.txt' 'exe_1' 'MYC' 52
-./prog_seq 'geneNames_1.txt' 'exe_1' 'PAWR' 53
-./prog_seq 'geneNames_1.txt' 'exe_1' 'CREG1' 54
-./prog_seq 'geneNames_1.txt' 'exe_1' 'FOSB' 55
-./prog_seq 'geneNames_1.txt' 'exe_1' 'GLI1' 56
-./prog_seq 'geneNames_1.txt' 'exe_1' 'PRDM14' 57
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TFE3' 58
-./prog_seq 'geneNames_1.txt' 'exe_1' 'MAFF' 59
-./prog_seq 'geneNames_1.txt' 'exe_1' 'MED20' 60
-./prog_seq 'geneNames_1.txt' 'exe_1' 'E2F5' 61
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TRIM22' 62
-./prog_seq 'geneNames_1.txt' 'exe_1' 'WDR5' 63
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZNF217' 64
-./prog_seq 'geneNames_1.txt' 'exe_1' 'PEG3' 65
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZHX1' 66
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TARDBP' 67
-./prog_seq 'geneNames_1.txt' 'exe_1' 'SNAPC1' 68
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZBTB3' 69
-./prog_seq 'geneNames_1.txt' 'exe_1' 'NFATC2' 70
-./prog_seq 'geneNames_1.txt' 'exe_1' 'SALL3' 71
-./prog_seq 'geneNames_1.txt' 'exe_1' 'MAPK1' 72
-./prog_seq 'geneNames_1.txt' 'exe_1' 'MEIS3' 73
-./prog_seq 'geneNames_1.txt' 'exe_1' 'CHAF1A' 74
-./prog_seq 'geneNames_1.txt' 'exe_1' 'DAXX' 75
-./prog_seq 'geneNames_1.txt' 'exe_1' 'E2F8' 76
-./prog_seq 'geneNames_1.txt' 'exe_1' 'GATA5' 77
-./prog_seq 'geneNames_1.txt' 'exe_1' 'RFX5' 78
-./prog_seq 'geneNames_1.txt' 'exe_1' 'HINFP' 79
-./prog_seq 'geneNames_1.txt' 'exe_1' 'MLXIPL' 80
-./prog_seq 'geneNames_1.txt' 'exe_1' 'SSBP2' 81
-./prog_seq 'geneNames_1.txt' 'exe_1' 'RREB1' 82
-./prog_seq 'geneNames_1.txt' 'exe_1' 'SMARCD2' 83
-./prog_seq 'geneNames_1.txt' 'exe_1' 'HDGF' 84
-./prog_seq 'geneNames_1.txt' 'exe_1' 'MEF2C' 85
-./prog_seq 'geneNames_1.txt' 'exe_1' 'SSBP3' 86
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TAF5' 87
-./prog_seq 'geneNames_1.txt' 'exe_1' 'SRF' 88
-./prog_seq 'geneNames_1.txt' 'exe_1' 'HIPK2' 89
-./prog_seq 'geneNames_1.txt' 'exe_1' 'EOMES' 90
-./prog_seq 'geneNames_1.txt' 'exe_1' 'NCOA1' 91
-./prog_seq 'geneNames_1.txt' 'exe_1' 'CREB3L3' 92
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ELL2' 93
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TOPORS' 94
-./prog_seq 'geneNames_1.txt' 'exe_1' 'BTG2' 95
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ING5' 96
-./prog_seq 'geneNames_1.txt' 'exe_1' 'HNF1B' 97
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TCF4' 98
-./prog_seq 'geneNames_1.txt' 'exe_1' 'IRF9' 99
-./prog_seq 'geneNames_1.txt' 'exe_1' 'JARID2' 100
-./prog_seq 'geneNames_1.txt' 'exe_1' 'HNRNPAB' 101
-./prog_seq 'geneNames_1.txt' 'exe_1' 'RARG' 102
-./prog_seq 'geneNames_1.txt' 'exe_1' 'GMEB1' 103
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZNF107' 104
-./prog_seq 'geneNames_1.txt' 'exe_1' 'GATAD2B' 105
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ARID3B' 106
-./prog_seq 'geneNames_1.txt' 'exe_1' 'WBP11' 107
-./prog_seq 'geneNames_1.txt' 'exe_1' 'NCOA6' 108
-./prog_seq 'geneNames_1.txt' 'exe_1' 'GLI2' 109
-./prog_seq 'geneNames_1.txt' 'exe_1' 'FOSL1' 110
-./prog_seq 'geneNames_1.txt' 'exe_1' 'E2F4' 111
-./prog_seq 'geneNames_1.txt' 'exe_1' 'MXD1' 112
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TBL1X' 113
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZSCAN21' 114
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TRIM27' 115
-./prog_seq 'geneNames_1.txt' 'exe_1' 'EGFR' 116
-./prog_seq 'geneNames_1.txt' 'exe_1' 'THAP11' 117
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TFAP2C' 118
-./prog_seq 'geneNames_1.txt' 'exe_1' 'LDB2' 119
-./prog_seq 'geneNames_1.txt' 'exe_1' 'AES' 120
-./prog_seq 'geneNames_1.txt' 'exe_1' 'FOXA1' 121
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZBTB24' 122
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TAF1A' 123
-./prog_seq 'geneNames_1.txt' 'exe_1' 'BCL11B' 124
-./prog_seq 'geneNames_1.txt' 'exe_1' 'PITX1' 125
-./prog_seq 'geneNames_1.txt' 'exe_1' 'MCM2' 126
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZNF670' 127
-./prog_seq 'geneNames_1.txt' 'exe_1' 'GLIS3' 128
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TEAD4' 129
-./prog_seq 'geneNames_1.txt' 'exe_1' 'NR1I3' 130
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZNF202' 131
-./prog_seq 'geneNames_1.txt' 'exe_1' 'REST' 132
-./prog_seq 'geneNames_1.txt' 'exe_1' 'JUND' 133
-./prog_seq 'geneNames_1.txt' 'exe_1' 'CREB3L4' 134
-./prog_seq 'geneNames_1.txt' 'exe_1' 'DDX20' 135
-./prog_seq 'geneNames_1.txt' 'exe_1' 'HDAC1' 136
-./prog_seq 'geneNames_1.txt' 'exe_1' 'CTDSPL' 137
-./prog_seq 'geneNames_1.txt' 'exe_1' 'RNF2' 138
-./prog_seq 'geneNames_1.txt' 'exe_1' 'CNTRL' 139
-./prog_seq 'geneNames_1.txt' 'exe_1' 'HNRNPUL1' 140
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ATF3' 141
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZNF227' 142
-./prog_seq 'geneNames_1.txt' 'exe_1' 'EZH2' 143
-./prog_seq 'geneNames_1.txt' 'exe_1' 'SP100' 144
-./prog_seq 'geneNames_1.txt' 'exe_1' 'CEBPA' 145
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZFP64' 146
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ASXL1' 147
-./prog_seq 'geneNames_1.txt' 'exe_1' 'THAP1' 148
-./prog_seq 'geneNames_1.txt' 'exe_1' 'FOXA2' 149
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZIC2' 150
-./prog_seq 'geneNames_1.txt' 'exe_1' 'KLF5' 151
-./prog_seq 'geneNames_1.txt' 'exe_1' 'FOSL2' 152
-./prog_seq 'geneNames_1.txt' 'exe_1' 'PIAS2' 153
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TFDP1' 154
-./prog_seq 'geneNames_1.txt' 'exe_1' 'FHL2' 155
-./prog_seq 'geneNames_1.txt' 'exe_1' 'DRAP1' 156
-./prog_seq 'geneNames_1.txt' 'exe_1' 'JAG1' 157
-./prog_seq 'geneNames_1.txt' 'exe_1' 'GTF3C4' 158
-./prog_seq 'geneNames_1.txt' 'exe_1' 'RUNX1T1' 159
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TAF6' 160
-./prog_seq 'geneNames_1.txt' 'exe_1' 'NR2F2' 161
-./prog_seq 'geneNames_1.txt' 'exe_1' 'AHR' 162
-./prog_seq 'geneNames_1.txt' 'exe_1' 'SEC14L2' 163
-./prog_seq 'geneNames_1.txt' 'exe_1' 'SERTAD3' 164
-./prog_seq 'geneNames_1.txt' 'exe_1' 'SIRT2' 165
-./prog_seq 'geneNames_1.txt' 'exe_1' 'NEIL2' 166
-./prog_seq 'geneNames_1.txt' 'exe_1' 'AATF' 167
-./prog_seq 'geneNames_1.txt' 'exe_1' 'MCM8' 168
-./prog_seq 'geneNames_1.txt' 'exe_1' 'MYBBP1A' 169
-./prog_seq 'geneNames_1.txt' 'exe_1' 'UHRF1' 170
-./prog_seq 'geneNames_1.txt' 'exe_1' 'GPM6B' 171
-./prog_seq 'geneNames_1.txt' 'exe_1' 'FOXH1' 172
-./prog_seq 'geneNames_1.txt' 'exe_1' 'FOXO1' 173
-./prog_seq 'geneNames_1.txt' 'exe_1' 'BDP1' 174
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ETS1' 175
-./prog_seq 'geneNames_1.txt' 'exe_1' 'POU2F1' 176
-./prog_seq 'geneNames_1.txt' 'exe_1' 'PLAGL2' 177
-./prog_seq 'geneNames_1.txt' 'exe_1' 'JAZF1' 178
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZNHIT3' 179
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZNF675' 180
-./prog_seq 'geneNames_1.txt' 'exe_1' 'MYCN' 181
-./prog_seq 'geneNames_1.txt' 'exe_1' 'U2AF1' 182
-./prog_seq 'geneNames_1.txt' 'exe_1' 'MAZ' 183
-./prog_seq 'geneNames_1.txt' 'exe_1' 'NANOG' 184
-./prog_seq 'geneNames_1.txt' 'exe_1' 'KDM4C' 185
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TFDP2' 186
-./prog_seq 'geneNames_1.txt' 'exe_1' 'GATA6' 187
-./prog_seq 'geneNames_1.txt' 'exe_1' 'THRB' 188
-./prog_seq 'geneNames_1.txt' 'exe_1' 'CCND1' 189
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TCOF1' 190
-./prog_seq 'geneNames_1.txt' 'exe_1' 'DR1' 191
-./prog_seq 'geneNames_1.txt' 'exe_1' 'PPARA' 192
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZNF398' 193
-./prog_seq 'geneNames_1.txt' 'exe_1' 'KLF3' 194
-./prog_seq 'geneNames_1.txt' 'exe_1' 'BCL11A' 195
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TTF2' 196
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZNF33A' 197
-./prog_seq 'geneNames_1.txt' 'exe_1' 'E2F7' 198
-./prog_seq 'geneNames_1.txt' 'exe_1' 'HTATSF1' 199
-./prog_seq 'geneNames_1.txt' 'exe_1' 'HIF3A' 200
-./prog_seq 'geneNames_1.txt' 'exe_1' 'PCGF6' 201
-./prog_seq 'geneNames_1.txt' 'exe_1' 'PIAS3' 202
-./prog_seq 'geneNames_1.txt' 'exe_1' 'POLR1E' 203
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZNF74' 204
-./prog_seq 'geneNames_1.txt' 'exe_1' 'PTRF' 205
-./prog_seq 'geneNames_1.txt' 'exe_1' 'SP4' 206
-./prog_seq 'geneNames_1.txt' 'exe_1' 'HNF4A' 207
-./prog_seq 'geneNames_1.txt' 'exe_1' 'CHD8' 208
-./prog_seq 'geneNames_1.txt' 'exe_1' 'NR3C1' 209
-./prog_seq 'geneNames_1.txt' 'exe_1' 'PBX1' 210
-./prog_seq 'geneNames_1.txt' 'exe_1' 'EHMT2' 211
-./prog_seq 'geneNames_1.txt' 'exe_1' 'FOXM1' 212
-./prog_seq 'geneNames_1.txt' 'exe_1' 'GRHL1' 213
-./prog_seq 'geneNames_1.txt' 'exe_1' 'SCD5' 214
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ZFHX3' 215
-./prog_seq 'geneNames_1.txt' 'exe_1' 'DOT1L' 216
-./prog_seq 'geneNames_1.txt' 'exe_1' 'E2F3' 217
-./prog_seq 'geneNames_1.txt' 'exe_1' 'GTF3C5' 218
-./prog_seq 'geneNames_1.txt' 'exe_1' 'POU5F1' 219
-./prog_seq 'geneNames_1.txt' 'exe_1' 'POLR3D' 220
-./prog_seq 'geneNames_1.txt' 'exe_1' 'SOX2' 221
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TCF7L1' 222
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TCFL5' 223
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TIMELESS' 224
-./prog_seq 'geneNames_1.txt' 'exe_1' 'BMPR1A' 225
-./prog_seq 'geneNames_1.txt' 'exe_1' 'ANKRD1' 226
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TRERF1' 227
-./prog_seq 'geneNames_1.txt' 'exe_1' 'GTF2H2' 228
-./prog_seq 'geneNames_1.txt' 'exe_1' 'IRF1' 229
-./prog_seq 'geneNames_1.txt' 'exe_1' 'TBX3' 230
-./prog_seq 'geneNames_1.txt' 'exe_2' 'AEBP1' 231
-./prog_seq 'geneNames_1.txt' 'exe_2' 'PIM2' 232
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TADA3' 233
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ESRG' 234
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ETV4' 235
-./prog_seq 'geneNames_1.txt' 'exe_2' 'THY1' 236
-./prog_seq 'geneNames_1.txt' 'exe_2' 'VEZF1' 237
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ING1' 238
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TNFAIP3' 239
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TCF3' 240
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TP53' 241
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZNF397' 242
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ELF1' 243
-./prog_seq 'geneNames_1.txt' 'exe_2' 'NRIP1' 244
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZFP36' 245
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TRIM25' 246
-./prog_seq 'geneNames_1.txt' 'exe_2' 'NR2F6' 247
-./prog_seq 'geneNames_1.txt' 'exe_2' 'HCFC1' 248
-./prog_seq 'geneNames_1.txt' 'exe_2' 'DDX54' 249
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ESPL1' 250
-./prog_seq 'geneNames_1.txt' 'exe_2' 'PDCD11' 251
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZNRD1' 252
-./prog_seq 'geneNames_1.txt' 'exe_2' 'SMAD3' 253
-./prog_seq 'geneNames_1.txt' 'exe_2' 'SIRT1' 254
-./prog_seq 'geneNames_1.txt' 'exe_2' 'HMGA2' 255
-./prog_seq 'geneNames_1.txt' 'exe_2' 'EGF' 256
-./prog_seq 'geneNames_1.txt' 'exe_2' 'HIST1H1E' 257
-./prog_seq 'geneNames_1.txt' 'exe_2' 'BTG1' 258
-./prog_seq 'geneNames_1.txt' 'exe_2' 'LHX1' 259
-./prog_seq 'geneNames_1.txt' 'exe_2' 'NFIB' 260
-./prog_seq 'geneNames_1.txt' 'exe_2' 'CDX2' 261
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ETV1' 262
-./prog_seq 'geneNames_1.txt' 'exe_2' 'BCOR' 263
-./prog_seq 'geneNames_1.txt' 'exe_2' 'HIF1AN' 264
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ETV5' 265
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TCF19' 266
-./prog_seq 'geneNames_1.txt' 'exe_2' 'CEBPD' 267
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZIC3' 268
-./prog_seq 'geneNames_1.txt' 'exe_2' 'BMP2' 269
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ELAVL2' 270
-./prog_seq 'geneNames_1.txt' 'exe_2' 'MED14' 271
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZNF354A' 272
-./prog_seq 'geneNames_1.txt' 'exe_2' 'BRIP1' 273
-./prog_seq 'geneNames_1.txt' 'exe_2' 'MAF' 274
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZBTB16' 275
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TEAD2' 276
-./prog_seq 'geneNames_1.txt' 'exe_2' 'NR5A2' 277
-./prog_seq 'geneNames_1.txt' 'exe_2' 'JUN' 278
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZNF300' 279
-./prog_seq 'geneNames_1.txt' 'exe_2' 'EPAS1' 280
-./prog_seq 'geneNames_1.txt' 'exe_2' 'NOTCH3' 281
-./prog_seq 'geneNames_1.txt' 'exe_2' 'MYC' 282
-./prog_seq 'geneNames_1.txt' 'exe_2' 'PAWR' 283
-./prog_seq 'geneNames_1.txt' 'exe_2' 'CREG1' 284
-./prog_seq 'geneNames_1.txt' 'exe_2' 'FOSB' 285
-./prog_seq 'geneNames_1.txt' 'exe_2' 'GLI1' 286
-./prog_seq 'geneNames_1.txt' 'exe_2' 'PRDM14' 287
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TFE3' 288
-./prog_seq 'geneNames_1.txt' 'exe_2' 'MAFF' 289
-./prog_seq 'geneNames_1.txt' 'exe_2' 'MED20' 290
-./prog_seq 'geneNames_1.txt' 'exe_2' 'E2F5' 291
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TRIM22' 292
-./prog_seq 'geneNames_1.txt' 'exe_2' 'WDR5' 293
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZNF217' 294
-./prog_seq 'geneNames_1.txt' 'exe_2' 'PEG3' 295
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZHX1' 296
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TARDBP' 297
-./prog_seq 'geneNames_1.txt' 'exe_2' 'SNAPC1' 298
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZBTB3' 299
-./prog_seq 'geneNames_1.txt' 'exe_2' 'NFATC2' 300
-./prog_seq 'geneNames_1.txt' 'exe_2' 'SALL3' 301
-./prog_seq 'geneNames_1.txt' 'exe_2' 'MAPK1' 302
-./prog_seq 'geneNames_1.txt' 'exe_2' 'MEIS3' 303
-./prog_seq 'geneNames_1.txt' 'exe_2' 'CHAF1A' 304
-./prog_seq 'geneNames_1.txt' 'exe_2' 'DAXX' 305
-./prog_seq 'geneNames_1.txt' 'exe_2' 'E2F8' 306
-./prog_seq 'geneNames_1.txt' 'exe_2' 'GATA5' 307
-./prog_seq 'geneNames_1.txt' 'exe_2' 'RFX5' 308
-./prog_seq 'geneNames_1.txt' 'exe_2' 'HINFP' 309
-./prog_seq 'geneNames_1.txt' 'exe_2' 'MLXIPL' 310
-./prog_seq 'geneNames_1.txt' 'exe_2' 'SSBP2' 311
-./prog_seq 'geneNames_1.txt' 'exe_2' 'RREB1' 312
-./prog_seq 'geneNames_1.txt' 'exe_2' 'SMARCD2' 313
-./prog_seq 'geneNames_1.txt' 'exe_2' 'HDGF' 314
-./prog_seq 'geneNames_1.txt' 'exe_2' 'MEF2C' 315
-./prog_seq 'geneNames_1.txt' 'exe_2' 'SSBP3' 316
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TAF5' 317
-./prog_seq 'geneNames_1.txt' 'exe_2' 'SRF' 318
-./prog_seq 'geneNames_1.txt' 'exe_2' 'HIPK2' 319
-./prog_seq 'geneNames_1.txt' 'exe_2' 'EOMES' 320
-./prog_seq 'geneNames_1.txt' 'exe_2' 'NCOA1' 321
-./prog_seq 'geneNames_1.txt' 'exe_2' 'CREB3L3' 322
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ELL2' 323
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TOPORS' 324
-./prog_seq 'geneNames_1.txt' 'exe_2' 'BTG2' 325
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ING5' 326
-./prog_seq 'geneNames_1.txt' 'exe_2' 'HNF1B' 327
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TCF4' 328
-./prog_seq 'geneNames_1.txt' 'exe_2' 'IRF9' 329
-./prog_seq 'geneNames_1.txt' 'exe_2' 'JARID2' 330
-./prog_seq 'geneNames_1.txt' 'exe_2' 'HNRNPAB' 331
-./prog_seq 'geneNames_1.txt' 'exe_2' 'RARG' 332
-./prog_seq 'geneNames_1.txt' 'exe_2' 'GMEB1' 333
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZNF107' 334
-./prog_seq 'geneNames_1.txt' 'exe_2' 'GATAD2B' 335
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ARID3B' 336
-./prog_seq 'geneNames_1.txt' 'exe_2' 'WBP11' 337
-./prog_seq 'geneNames_1.txt' 'exe_2' 'NCOA6' 338
-./prog_seq 'geneNames_1.txt' 'exe_2' 'GLI2' 339
-./prog_seq 'geneNames_1.txt' 'exe_2' 'FOSL1' 340
-./prog_seq 'geneNames_1.txt' 'exe_2' 'E2F4' 341
-./prog_seq 'geneNames_1.txt' 'exe_2' 'MXD1' 342
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TBL1X' 343
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZSCAN21' 344
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TRIM27' 345
-./prog_seq 'geneNames_1.txt' 'exe_2' 'EGFR' 346
-./prog_seq 'geneNames_1.txt' 'exe_2' 'THAP11' 347
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TFAP2C' 348
-./prog_seq 'geneNames_1.txt' 'exe_2' 'LDB2' 349
-./prog_seq 'geneNames_1.txt' 'exe_2' 'AES' 350
-./prog_seq 'geneNames_1.txt' 'exe_2' 'FOXA1' 351
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZBTB24' 352
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TAF1A' 353
-./prog_seq 'geneNames_1.txt' 'exe_2' 'BCL11B' 354
-./prog_seq 'geneNames_1.txt' 'exe_2' 'PITX1' 355
-./prog_seq 'geneNames_1.txt' 'exe_2' 'MCM2' 356
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZNF670' 357
-./prog_seq 'geneNames_1.txt' 'exe_2' 'GLIS3' 358
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TEAD4' 359
-./prog_seq 'geneNames_1.txt' 'exe_2' 'NR1I3' 360
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZNF202' 361
-./prog_seq 'geneNames_1.txt' 'exe_2' 'REST' 362
-./prog_seq 'geneNames_1.txt' 'exe_2' 'JUND' 363
-./prog_seq 'geneNames_1.txt' 'exe_2' 'CREB3L4' 364
-./prog_seq 'geneNames_1.txt' 'exe_2' 'DDX20' 365
-./prog_seq 'geneNames_1.txt' 'exe_2' 'HDAC1' 366
-./prog_seq 'geneNames_1.txt' 'exe_2' 'CTDSPL' 367
-./prog_seq 'geneNames_1.txt' 'exe_2' 'RNF2' 368
-./prog_seq 'geneNames_1.txt' 'exe_2' 'CNTRL' 369
-./prog_seq 'geneNames_1.txt' 'exe_2' 'HNRNPUL1' 370
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ATF3' 371
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZNF227' 372
-./prog_seq 'geneNames_1.txt' 'exe_2' 'EZH2' 373
-./prog_seq 'geneNames_1.txt' 'exe_2' 'SP100' 374
-./prog_seq 'geneNames_1.txt' 'exe_2' 'CEBPA' 375
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZFP64' 376
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ASXL1' 377
-./prog_seq 'geneNames_1.txt' 'exe_2' 'THAP1' 378
-./prog_seq 'geneNames_1.txt' 'exe_2' 'FOXA2' 379
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZIC2' 380
-./prog_seq 'geneNames_1.txt' 'exe_2' 'KLF5' 381
-./prog_seq 'geneNames_1.txt' 'exe_2' 'FOSL2' 382
-./prog_seq 'geneNames_1.txt' 'exe_2' 'PIAS2' 383
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TFDP1' 384
-./prog_seq 'geneNames_1.txt' 'exe_2' 'FHL2' 385
-./prog_seq 'geneNames_1.txt' 'exe_2' 'DRAP1' 386
-./prog_seq 'geneNames_1.txt' 'exe_2' 'JAG1' 387
-./prog_seq 'geneNames_1.txt' 'exe_2' 'GTF3C4' 388
-./prog_seq 'geneNames_1.txt' 'exe_2' 'RUNX1T1' 389
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TAF6' 390
-./prog_seq 'geneNames_1.txt' 'exe_2' 'NR2F2' 391
-./prog_seq 'geneNames_1.txt' 'exe_2' 'AHR' 392
-./prog_seq 'geneNames_1.txt' 'exe_2' 'SEC14L2' 393
-./prog_seq 'geneNames_1.txt' 'exe_2' 'SERTAD3' 394
-./prog_seq 'geneNames_1.txt' 'exe_2' 'SIRT2' 395
-./prog_seq 'geneNames_1.txt' 'exe_2' 'NEIL2' 396
-./prog_seq 'geneNames_1.txt' 'exe_2' 'AATF' 397
-./prog_seq 'geneNames_1.txt' 'exe_2' 'MCM8' 398
-./prog_seq 'geneNames_1.txt' 'exe_2' 'MYBBP1A' 399
-./prog_seq 'geneNames_1.txt' 'exe_2' 'UHRF1' 400
-./prog_seq 'geneNames_1.txt' 'exe_2' 'GPM6B' 401
-./prog_seq 'geneNames_1.txt' 'exe_2' 'FOXH1' 402
-./prog_seq 'geneNames_1.txt' 'exe_2' 'FOXO1' 403
-./prog_seq 'geneNames_1.txt' 'exe_2' 'BDP1' 404
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ETS1' 405
-./prog_seq 'geneNames_1.txt' 'exe_2' 'POU2F1' 406
-./prog_seq 'geneNames_1.txt' 'exe_2' 'PLAGL2' 407
-./prog_seq 'geneNames_1.txt' 'exe_2' 'JAZF1' 408
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZNHIT3' 409
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZNF675' 410
-./prog_seq 'geneNames_1.txt' 'exe_2' 'MYCN' 411
-./prog_seq 'geneNames_1.txt' 'exe_2' 'U2AF1' 412
-./prog_seq 'geneNames_1.txt' 'exe_2' 'MAZ' 413
-./prog_seq 'geneNames_1.txt' 'exe_2' 'NANOG' 414
-./prog_seq 'geneNames_1.txt' 'exe_2' 'KDM4C' 415
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TFDP2' 416
-./prog_seq 'geneNames_1.txt' 'exe_2' 'GATA6' 417
-./prog_seq 'geneNames_1.txt' 'exe_2' 'THRB' 418
-./prog_seq 'geneNames_1.txt' 'exe_2' 'CCND1' 419
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TCOF1' 420
-./prog_seq 'geneNames_1.txt' 'exe_2' 'DR1' 421
-./prog_seq 'geneNames_1.txt' 'exe_2' 'PPARA' 422
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZNF398' 423
-./prog_seq 'geneNames_1.txt' 'exe_2' 'KLF3' 424
-./prog_seq 'geneNames_1.txt' 'exe_2' 'BCL11A' 425
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TTF2' 426
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZNF33A' 427
-./prog_seq 'geneNames_1.txt' 'exe_2' 'E2F7' 428
-./prog_seq 'geneNames_1.txt' 'exe_2' 'HTATSF1' 429
-./prog_seq 'geneNames_1.txt' 'exe_2' 'HIF3A' 430
-./prog_seq 'geneNames_1.txt' 'exe_2' 'PCGF6' 431
-./prog_seq 'geneNames_1.txt' 'exe_2' 'PIAS3' 432
-./prog_seq 'geneNames_1.txt' 'exe_2' 'POLR1E' 433
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZNF74' 434
-./prog_seq 'geneNames_1.txt' 'exe_2' 'PTRF' 435
-./prog_seq 'geneNames_1.txt' 'exe_2' 'SP4' 436
-./prog_seq 'geneNames_1.txt' 'exe_2' 'HNF4A' 437
-./prog_seq 'geneNames_1.txt' 'exe_2' 'CHD8' 438
-./prog_seq 'geneNames_1.txt' 'exe_2' 'NR3C1' 439
-./prog_seq 'geneNames_1.txt' 'exe_2' 'PBX1' 440
-./prog_seq 'geneNames_1.txt' 'exe_2' 'EHMT2' 441
-./prog_seq 'geneNames_1.txt' 'exe_2' 'FOXM1' 442
-./prog_seq 'geneNames_1.txt' 'exe_2' 'GRHL1' 443
-./prog_seq 'geneNames_1.txt' 'exe_2' 'SCD5' 444
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ZFHX3' 445
-./prog_seq 'geneNames_1.txt' 'exe_2' 'DOT1L' 446
-./prog_seq 'geneNames_1.txt' 'exe_2' 'E2F3' 447
-./prog_seq 'geneNames_1.txt' 'exe_2' 'GTF3C5' 448
-./prog_seq 'geneNames_1.txt' 'exe_2' 'POU5F1' 449
-./prog_seq 'geneNames_1.txt' 'exe_2' 'POLR3D' 450
-./prog_seq 'geneNames_1.txt' 'exe_2' 'SOX2' 451
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TCF7L1' 452
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TCFL5' 453
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TIMELESS' 454
-./prog_seq 'geneNames_1.txt' 'exe_2' 'BMPR1A' 455
-./prog_seq 'geneNames_1.txt' 'exe_2' 'ANKRD1' 456
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TRERF1' 457
-./prog_seq 'geneNames_1.txt' 'exe_2' 'GTF2H2' 458
-./prog_seq 'geneNames_1.txt' 'exe_2' 'IRF1' 459
-./prog_seq 'geneNames_1.txt' 'exe_2' 'TBX3' 460
-./prog_seq 'geneNames_1.txt' 'exe_3' 'AEBP1' 461
-./prog_seq 'geneNames_1.txt' 'exe_3' 'PIM2' 462
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TADA3' 463
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ESRG' 464
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ETV4' 465
-./prog_seq 'geneNames_1.txt' 'exe_3' 'THY1' 466
-./prog_seq 'geneNames_1.txt' 'exe_3' 'VEZF1' 467
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ING1' 468
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TNFAIP3' 469
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TCF3' 470
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TP53' 471
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZNF397' 472
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ELF1' 473
-./prog_seq 'geneNames_1.txt' 'exe_3' 'NRIP1' 474
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZFP36' 475
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TRIM25' 476
-./prog_seq 'geneNames_1.txt' 'exe_3' 'NR2F6' 477
-./prog_seq 'geneNames_1.txt' 'exe_3' 'HCFC1' 478
-./prog_seq 'geneNames_1.txt' 'exe_3' 'DDX54' 479
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ESPL1' 480
-./prog_seq 'geneNames_1.txt' 'exe_3' 'PDCD11' 481
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZNRD1' 482
-./prog_seq 'geneNames_1.txt' 'exe_3' 'SMAD3' 483
-./prog_seq 'geneNames_1.txt' 'exe_3' 'SIRT1' 484
-./prog_seq 'geneNames_1.txt' 'exe_3' 'HMGA2' 485
-./prog_seq 'geneNames_1.txt' 'exe_3' 'EGF' 486
-./prog_seq 'geneNames_1.txt' 'exe_3' 'HIST1H1E' 487
-./prog_seq 'geneNames_1.txt' 'exe_3' 'BTG1' 488
-./prog_seq 'geneNames_1.txt' 'exe_3' 'LHX1' 489
-./prog_seq 'geneNames_1.txt' 'exe_3' 'NFIB' 490
-./prog_seq 'geneNames_1.txt' 'exe_3' 'CDX2' 491
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ETV1' 492
-./prog_seq 'geneNames_1.txt' 'exe_3' 'BCOR' 493
-./prog_seq 'geneNames_1.txt' 'exe_3' 'HIF1AN' 494
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ETV5' 495
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TCF19' 496
-./prog_seq 'geneNames_1.txt' 'exe_3' 'CEBPD' 497
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZIC3' 498
-./prog_seq 'geneNames_1.txt' 'exe_3' 'BMP2' 499
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ELAVL2' 500
-./prog_seq 'geneNames_1.txt' 'exe_3' 'MED14' 501
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZNF354A' 502
-./prog_seq 'geneNames_1.txt' 'exe_3' 'BRIP1' 503
-./prog_seq 'geneNames_1.txt' 'exe_3' 'MAF' 504
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZBTB16' 505
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TEAD2' 506
-./prog_seq 'geneNames_1.txt' 'exe_3' 'NR5A2' 507
-./prog_seq 'geneNames_1.txt' 'exe_3' 'JUN' 508
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZNF300' 509
-./prog_seq 'geneNames_1.txt' 'exe_3' 'EPAS1' 510
-./prog_seq 'geneNames_1.txt' 'exe_3' 'NOTCH3' 511
-./prog_seq 'geneNames_1.txt' 'exe_3' 'MYC' 512
-./prog_seq 'geneNames_1.txt' 'exe_3' 'PAWR' 513
-./prog_seq 'geneNames_1.txt' 'exe_3' 'CREG1' 514
-./prog_seq 'geneNames_1.txt' 'exe_3' 'FOSB' 515
-./prog_seq 'geneNames_1.txt' 'exe_3' 'GLI1' 516
-./prog_seq 'geneNames_1.txt' 'exe_3' 'PRDM14' 517
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TFE3' 518
-./prog_seq 'geneNames_1.txt' 'exe_3' 'MAFF' 519
-./prog_seq 'geneNames_1.txt' 'exe_3' 'MED20' 520
-./prog_seq 'geneNames_1.txt' 'exe_3' 'E2F5' 521
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TRIM22' 522
-./prog_seq 'geneNames_1.txt' 'exe_3' 'WDR5' 523
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZNF217' 524
-./prog_seq 'geneNames_1.txt' 'exe_3' 'PEG3' 525
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZHX1' 526
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TARDBP' 527
-./prog_seq 'geneNames_1.txt' 'exe_3' 'SNAPC1' 528
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZBTB3' 529
-./prog_seq 'geneNames_1.txt' 'exe_3' 'NFATC2' 530
-./prog_seq 'geneNames_1.txt' 'exe_3' 'SALL3' 531
-./prog_seq 'geneNames_1.txt' 'exe_3' 'MAPK1' 532
-./prog_seq 'geneNames_1.txt' 'exe_3' 'MEIS3' 533
-./prog_seq 'geneNames_1.txt' 'exe_3' 'CHAF1A' 534
-./prog_seq 'geneNames_1.txt' 'exe_3' 'DAXX' 535
-./prog_seq 'geneNames_1.txt' 'exe_3' 'E2F8' 536
-./prog_seq 'geneNames_1.txt' 'exe_3' 'GATA5' 537
-./prog_seq 'geneNames_1.txt' 'exe_3' 'RFX5' 538
-./prog_seq 'geneNames_1.txt' 'exe_3' 'HINFP' 539
-./prog_seq 'geneNames_1.txt' 'exe_3' 'MLXIPL' 540
-./prog_seq 'geneNames_1.txt' 'exe_3' 'SSBP2' 541
-./prog_seq 'geneNames_1.txt' 'exe_3' 'RREB1' 542
-./prog_seq 'geneNames_1.txt' 'exe_3' 'SMARCD2' 543
-./prog_seq 'geneNames_1.txt' 'exe_3' 'HDGF' 544
-./prog_seq 'geneNames_1.txt' 'exe_3' 'MEF2C' 545
-./prog_seq 'geneNames_1.txt' 'exe_3' 'SSBP3' 546
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TAF5' 547
-./prog_seq 'geneNames_1.txt' 'exe_3' 'SRF' 548
-./prog_seq 'geneNames_1.txt' 'exe_3' 'HIPK2' 549
-./prog_seq 'geneNames_1.txt' 'exe_3' 'EOMES' 550
-./prog_seq 'geneNames_1.txt' 'exe_3' 'NCOA1' 551
-./prog_seq 'geneNames_1.txt' 'exe_3' 'CREB3L3' 552
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ELL2' 553
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TOPORS' 554
-./prog_seq 'geneNames_1.txt' 'exe_3' 'BTG2' 555
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ING5' 556
-./prog_seq 'geneNames_1.txt' 'exe_3' 'HNF1B' 557
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TCF4' 558
-./prog_seq 'geneNames_1.txt' 'exe_3' 'IRF9' 559
-./prog_seq 'geneNames_1.txt' 'exe_3' 'JARID2' 560
-./prog_seq 'geneNames_1.txt' 'exe_3' 'HNRNPAB' 561
-./prog_seq 'geneNames_1.txt' 'exe_3' 'RARG' 562
-./prog_seq 'geneNames_1.txt' 'exe_3' 'GMEB1' 563
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZNF107' 564
-./prog_seq 'geneNames_1.txt' 'exe_3' 'GATAD2B' 565
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ARID3B' 566
-./prog_seq 'geneNames_1.txt' 'exe_3' 'WBP11' 567
-./prog_seq 'geneNames_1.txt' 'exe_3' 'NCOA6' 568
-./prog_seq 'geneNames_1.txt' 'exe_3' 'GLI2' 569
-./prog_seq 'geneNames_1.txt' 'exe_3' 'FOSL1' 570
-./prog_seq 'geneNames_1.txt' 'exe_3' 'E2F4' 571
-./prog_seq 'geneNames_1.txt' 'exe_3' 'MXD1' 572
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TBL1X' 573
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZSCAN21' 574
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TRIM27' 575
-./prog_seq 'geneNames_1.txt' 'exe_3' 'EGFR' 576
-./prog_seq 'geneNames_1.txt' 'exe_3' 'THAP11' 577
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TFAP2C' 578
-./prog_seq 'geneNames_1.txt' 'exe_3' 'LDB2' 579
-./prog_seq 'geneNames_1.txt' 'exe_3' 'AES' 580
-./prog_seq 'geneNames_1.txt' 'exe_3' 'FOXA1' 581
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZBTB24' 582
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TAF1A' 583
-./prog_seq 'geneNames_1.txt' 'exe_3' 'BCL11B' 584
-./prog_seq 'geneNames_1.txt' 'exe_3' 'PITX1' 585
-./prog_seq 'geneNames_1.txt' 'exe_3' 'MCM2' 586
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZNF670' 587
-./prog_seq 'geneNames_1.txt' 'exe_3' 'GLIS3' 588
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TEAD4' 589
-./prog_seq 'geneNames_1.txt' 'exe_3' 'NR1I3' 590
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZNF202' 591
-./prog_seq 'geneNames_1.txt' 'exe_3' 'REST' 592
-./prog_seq 'geneNames_1.txt' 'exe_3' 'JUND' 593
-./prog_seq 'geneNames_1.txt' 'exe_3' 'CREB3L4' 594
-./prog_seq 'geneNames_1.txt' 'exe_3' 'DDX20' 595
-./prog_seq 'geneNames_1.txt' 'exe_3' 'HDAC1' 596
-./prog_seq 'geneNames_1.txt' 'exe_3' 'CTDSPL' 597
-./prog_seq 'geneNames_1.txt' 'exe_3' 'RNF2' 598
-./prog_seq 'geneNames_1.txt' 'exe_3' 'CNTRL' 599
-./prog_seq 'geneNames_1.txt' 'exe_3' 'HNRNPUL1' 600
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ATF3' 601
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZNF227' 602
-./prog_seq 'geneNames_1.txt' 'exe_3' 'EZH2' 603
-./prog_seq 'geneNames_1.txt' 'exe_3' 'SP100' 604
-./prog_seq 'geneNames_1.txt' 'exe_3' 'CEBPA' 605
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZFP64' 606
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ASXL1' 607
-./prog_seq 'geneNames_1.txt' 'exe_3' 'THAP1' 608
-./prog_seq 'geneNames_1.txt' 'exe_3' 'FOXA2' 609
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZIC2' 610
-./prog_seq 'geneNames_1.txt' 'exe_3' 'KLF5' 611
-./prog_seq 'geneNames_1.txt' 'exe_3' 'FOSL2' 612
-./prog_seq 'geneNames_1.txt' 'exe_3' 'PIAS2' 613
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TFDP1' 614
-./prog_seq 'geneNames_1.txt' 'exe_3' 'FHL2' 615
-./prog_seq 'geneNames_1.txt' 'exe_3' 'DRAP1' 616
-./prog_seq 'geneNames_1.txt' 'exe_3' 'JAG1' 617
-./prog_seq 'geneNames_1.txt' 'exe_3' 'GTF3C4' 618
-./prog_seq 'geneNames_1.txt' 'exe_3' 'RUNX1T1' 619
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TAF6' 620
-./prog_seq 'geneNames_1.txt' 'exe_3' 'NR2F2' 621
-./prog_seq 'geneNames_1.txt' 'exe_3' 'AHR' 622
-./prog_seq 'geneNames_1.txt' 'exe_3' 'SEC14L2' 623
-./prog_seq 'geneNames_1.txt' 'exe_3' 'SERTAD3' 624
-./prog_seq 'geneNames_1.txt' 'exe_3' 'SIRT2' 625
-./prog_seq 'geneNames_1.txt' 'exe_3' 'NEIL2' 626
-./prog_seq 'geneNames_1.txt' 'exe_3' 'AATF' 627
-./prog_seq 'geneNames_1.txt' 'exe_3' 'MCM8' 628
-./prog_seq 'geneNames_1.txt' 'exe_3' 'MYBBP1A' 629
-./prog_seq 'geneNames_1.txt' 'exe_3' 'UHRF1' 630
-./prog_seq 'geneNames_1.txt' 'exe_3' 'GPM6B' 631
-./prog_seq 'geneNames_1.txt' 'exe_3' 'FOXH1' 632
-./prog_seq 'geneNames_1.txt' 'exe_3' 'FOXO1' 633
-./prog_seq 'geneNames_1.txt' 'exe_3' 'BDP1' 634
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ETS1' 635
-./prog_seq 'geneNames_1.txt' 'exe_3' 'POU2F1' 636
-./prog_seq 'geneNames_1.txt' 'exe_3' 'PLAGL2' 637
-./prog_seq 'geneNames_1.txt' 'exe_3' 'JAZF1' 638
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZNHIT3' 639
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZNF675' 640
-./prog_seq 'geneNames_1.txt' 'exe_3' 'MYCN' 641
-./prog_seq 'geneNames_1.txt' 'exe_3' 'U2AF1' 642
-./prog_seq 'geneNames_1.txt' 'exe_3' 'MAZ' 643
-./prog_seq 'geneNames_1.txt' 'exe_3' 'NANOG' 644
-./prog_seq 'geneNames_1.txt' 'exe_3' 'KDM4C' 645
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TFDP2' 646
-./prog_seq 'geneNames_1.txt' 'exe_3' 'GATA6' 647
-./prog_seq 'geneNames_1.txt' 'exe_3' 'THRB' 648
-./prog_seq 'geneNames_1.txt' 'exe_3' 'CCND1' 649
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TCOF1' 650
-./prog_seq 'geneNames_1.txt' 'exe_3' 'DR1' 651
-./prog_seq 'geneNames_1.txt' 'exe_3' 'PPARA' 652
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZNF398' 653
-./prog_seq 'geneNames_1.txt' 'exe_3' 'KLF3' 654
-./prog_seq 'geneNames_1.txt' 'exe_3' 'BCL11A' 655
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TTF2' 656
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZNF33A' 657
-./prog_seq 'geneNames_1.txt' 'exe_3' 'E2F7' 658
-./prog_seq 'geneNames_1.txt' 'exe_3' 'HTATSF1' 659
-./prog_seq 'geneNames_1.txt' 'exe_3' 'HIF3A' 660
-./prog_seq 'geneNames_1.txt' 'exe_3' 'PCGF6' 661
-./prog_seq 'geneNames_1.txt' 'exe_3' 'PIAS3' 662
-./prog_seq 'geneNames_1.txt' 'exe_3' 'POLR1E' 663
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZNF74' 664
-./prog_seq 'geneNames_1.txt' 'exe_3' 'PTRF' 665
-./prog_seq 'geneNames_1.txt' 'exe_3' 'SP4' 666
-./prog_seq 'geneNames_1.txt' 'exe_3' 'HNF4A' 667
-./prog_seq 'geneNames_1.txt' 'exe_3' 'CHD8' 668
-./prog_seq 'geneNames_1.txt' 'exe_3' 'NR3C1' 669
-./prog_seq 'geneNames_1.txt' 'exe_3' 'PBX1' 670
-./prog_seq 'geneNames_1.txt' 'exe_3' 'EHMT2' 671
-./prog_seq 'geneNames_1.txt' 'exe_3' 'FOXM1' 672
-./prog_seq 'geneNames_1.txt' 'exe_3' 'GRHL1' 673
-./prog_seq 'geneNames_1.txt' 'exe_3' 'SCD5' 674
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ZFHX3' 675
-./prog_seq 'geneNames_1.txt' 'exe_3' 'DOT1L' 676
-./prog_seq 'geneNames_1.txt' 'exe_3' 'E2F3' 677
-./prog_seq 'geneNames_1.txt' 'exe_3' 'GTF3C5' 678
-./prog_seq 'geneNames_1.txt' 'exe_3' 'POU5F1' 679
-./prog_seq 'geneNames_1.txt' 'exe_3' 'POLR3D' 680
-./prog_seq 'geneNames_1.txt' 'exe_3' 'SOX2' 681
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TCF7L1' 682
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TCFL5' 683
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TIMELESS' 684
-./prog_seq 'geneNames_1.txt' 'exe_3' 'BMPR1A' 685
-./prog_seq 'geneNames_1.txt' 'exe_3' 'ANKRD1' 686
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TRERF1' 687
-./prog_seq 'geneNames_1.txt' 'exe_3' 'GTF2H2' 688
-./prog_seq 'geneNames_1.txt' 'exe_3' 'IRF1' 689
-./prog_seq 'geneNames_1.txt' 'exe_3' 'TBX3' 690
-./prog_seq 'geneNames_1.txt' 'exe_4' 'AEBP1' 691
-./prog_seq 'geneNames_1.txt' 'exe_4' 'PIM2' 692
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TADA3' 693
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ESRG' 694
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ETV4' 695
-./prog_seq 'geneNames_1.txt' 'exe_4' 'THY1' 696
-./prog_seq 'geneNames_1.txt' 'exe_4' 'VEZF1' 697
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ING1' 698
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TNFAIP3' 699
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TCF3' 700
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TP53' 701
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZNF397' 702
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ELF1' 703
-./prog_seq 'geneNames_1.txt' 'exe_4' 'NRIP1' 704
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZFP36' 705
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TRIM25' 706
-./prog_seq 'geneNames_1.txt' 'exe_4' 'NR2F6' 707
-./prog_seq 'geneNames_1.txt' 'exe_4' 'HCFC1' 708
-./prog_seq 'geneNames_1.txt' 'exe_4' 'DDX54' 709
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ESPL1' 710
-./prog_seq 'geneNames_1.txt' 'exe_4' 'PDCD11' 711
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZNRD1' 712
-./prog_seq 'geneNames_1.txt' 'exe_4' 'SMAD3' 713
-./prog_seq 'geneNames_1.txt' 'exe_4' 'SIRT1' 714
-./prog_seq 'geneNames_1.txt' 'exe_4' 'HMGA2' 715
-./prog_seq 'geneNames_1.txt' 'exe_4' 'EGF' 716
-./prog_seq 'geneNames_1.txt' 'exe_4' 'HIST1H1E' 717
-./prog_seq 'geneNames_1.txt' 'exe_4' 'BTG1' 718
-./prog_seq 'geneNames_1.txt' 'exe_4' 'LHX1' 719
-./prog_seq 'geneNames_1.txt' 'exe_4' 'NFIB' 720
-./prog_seq 'geneNames_1.txt' 'exe_4' 'CDX2' 721
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ETV1' 722
-./prog_seq 'geneNames_1.txt' 'exe_4' 'BCOR' 723
-./prog_seq 'geneNames_1.txt' 'exe_4' 'HIF1AN' 724
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ETV5' 725
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TCF19' 726
-./prog_seq 'geneNames_1.txt' 'exe_4' 'CEBPD' 727
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZIC3' 728
-./prog_seq 'geneNames_1.txt' 'exe_4' 'BMP2' 729
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ELAVL2' 730
-./prog_seq 'geneNames_1.txt' 'exe_4' 'MED14' 731
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZNF354A' 732
-./prog_seq 'geneNames_1.txt' 'exe_4' 'BRIP1' 733
-./prog_seq 'geneNames_1.txt' 'exe_4' 'MAF' 734
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZBTB16' 735
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TEAD2' 736
-./prog_seq 'geneNames_1.txt' 'exe_4' 'NR5A2' 737
-./prog_seq 'geneNames_1.txt' 'exe_4' 'JUN' 738
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZNF300' 739
-./prog_seq 'geneNames_1.txt' 'exe_4' 'EPAS1' 740
-./prog_seq 'geneNames_1.txt' 'exe_4' 'NOTCH3' 741
-./prog_seq 'geneNames_1.txt' 'exe_4' 'MYC' 742
-./prog_seq 'geneNames_1.txt' 'exe_4' 'PAWR' 743
-./prog_seq 'geneNames_1.txt' 'exe_4' 'CREG1' 744
-./prog_seq 'geneNames_1.txt' 'exe_4' 'FOSB' 745
-./prog_seq 'geneNames_1.txt' 'exe_4' 'GLI1' 746
-./prog_seq 'geneNames_1.txt' 'exe_4' 'PRDM14' 747
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TFE3' 748
-./prog_seq 'geneNames_1.txt' 'exe_4' 'MAFF' 749
-./prog_seq 'geneNames_1.txt' 'exe_4' 'MED20' 750
-./prog_seq 'geneNames_1.txt' 'exe_4' 'E2F5' 751
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TRIM22' 752
-./prog_seq 'geneNames_1.txt' 'exe_4' 'WDR5' 753
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZNF217' 754
-./prog_seq 'geneNames_1.txt' 'exe_4' 'PEG3' 755
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZHX1' 756
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TARDBP' 757
-./prog_seq 'geneNames_1.txt' 'exe_4' 'SNAPC1' 758
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZBTB3' 759
-./prog_seq 'geneNames_1.txt' 'exe_4' 'NFATC2' 760
-./prog_seq 'geneNames_1.txt' 'exe_4' 'SALL3' 761
-./prog_seq 'geneNames_1.txt' 'exe_4' 'MAPK1' 762
-./prog_seq 'geneNames_1.txt' 'exe_4' 'MEIS3' 763
-./prog_seq 'geneNames_1.txt' 'exe_4' 'CHAF1A' 764
-./prog_seq 'geneNames_1.txt' 'exe_4' 'DAXX' 765
-./prog_seq 'geneNames_1.txt' 'exe_4' 'E2F8' 766
-./prog_seq 'geneNames_1.txt' 'exe_4' 'GATA5' 767
-./prog_seq 'geneNames_1.txt' 'exe_4' 'RFX5' 768
-./prog_seq 'geneNames_1.txt' 'exe_4' 'HINFP' 769
-./prog_seq 'geneNames_1.txt' 'exe_4' 'MLXIPL' 770
-./prog_seq 'geneNames_1.txt' 'exe_4' 'SSBP2' 771
-./prog_seq 'geneNames_1.txt' 'exe_4' 'RREB1' 772
-./prog_seq 'geneNames_1.txt' 'exe_4' 'SMARCD2' 773
-./prog_seq 'geneNames_1.txt' 'exe_4' 'HDGF' 774
-./prog_seq 'geneNames_1.txt' 'exe_4' 'MEF2C' 775
-./prog_seq 'geneNames_1.txt' 'exe_4' 'SSBP3' 776
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TAF5' 777
-./prog_seq 'geneNames_1.txt' 'exe_4' 'SRF' 778
-./prog_seq 'geneNames_1.txt' 'exe_4' 'HIPK2' 779
-./prog_seq 'geneNames_1.txt' 'exe_4' 'EOMES' 780
-./prog_seq 'geneNames_1.txt' 'exe_4' 'NCOA1' 781
-./prog_seq 'geneNames_1.txt' 'exe_4' 'CREB3L3' 782
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ELL2' 783
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TOPORS' 784
-./prog_seq 'geneNames_1.txt' 'exe_4' 'BTG2' 785
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ING5' 786
-./prog_seq 'geneNames_1.txt' 'exe_4' 'HNF1B' 787
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TCF4' 788
-./prog_seq 'geneNames_1.txt' 'exe_4' 'IRF9' 789
-./prog_seq 'geneNames_1.txt' 'exe_4' 'JARID2' 790
-./prog_seq 'geneNames_1.txt' 'exe_4' 'HNRNPAB' 791
-./prog_seq 'geneNames_1.txt' 'exe_4' 'RARG' 792
-./prog_seq 'geneNames_1.txt' 'exe_4' 'GMEB1' 793
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZNF107' 794
-./prog_seq 'geneNames_1.txt' 'exe_4' 'GATAD2B' 795
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ARID3B' 796
-./prog_seq 'geneNames_1.txt' 'exe_4' 'WBP11' 797
-./prog_seq 'geneNames_1.txt' 'exe_4' 'NCOA6' 798
-./prog_seq 'geneNames_1.txt' 'exe_4' 'GLI2' 799
-./prog_seq 'geneNames_1.txt' 'exe_4' 'FOSL1' 800
-./prog_seq 'geneNames_1.txt' 'exe_4' 'E2F4' 801
-./prog_seq 'geneNames_1.txt' 'exe_4' 'MXD1' 802
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TBL1X' 803
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZSCAN21' 804
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TRIM27' 805
-./prog_seq 'geneNames_1.txt' 'exe_4' 'EGFR' 806
-./prog_seq 'geneNames_1.txt' 'exe_4' 'THAP11' 807
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TFAP2C' 808
-./prog_seq 'geneNames_1.txt' 'exe_4' 'LDB2' 809
-./prog_seq 'geneNames_1.txt' 'exe_4' 'AES' 810
-./prog_seq 'geneNames_1.txt' 'exe_4' 'FOXA1' 811
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZBTB24' 812
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TAF1A' 813
-./prog_seq 'geneNames_1.txt' 'exe_4' 'BCL11B' 814
-./prog_seq 'geneNames_1.txt' 'exe_4' 'PITX1' 815
-./prog_seq 'geneNames_1.txt' 'exe_4' 'MCM2' 816
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZNF670' 817
-./prog_seq 'geneNames_1.txt' 'exe_4' 'GLIS3' 818
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TEAD4' 819
-./prog_seq 'geneNames_1.txt' 'exe_4' 'NR1I3' 820
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZNF202' 821
-./prog_seq 'geneNames_1.txt' 'exe_4' 'REST' 822
-./prog_seq 'geneNames_1.txt' 'exe_4' 'JUND' 823
-./prog_seq 'geneNames_1.txt' 'exe_4' 'CREB3L4' 824
-./prog_seq 'geneNames_1.txt' 'exe_4' 'DDX20' 825
-./prog_seq 'geneNames_1.txt' 'exe_4' 'HDAC1' 826
-./prog_seq 'geneNames_1.txt' 'exe_4' 'CTDSPL' 827
-./prog_seq 'geneNames_1.txt' 'exe_4' 'RNF2' 828
-./prog_seq 'geneNames_1.txt' 'exe_4' 'CNTRL' 829
-./prog_seq 'geneNames_1.txt' 'exe_4' 'HNRNPUL1' 830
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ATF3' 831
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZNF227' 832
-./prog_seq 'geneNames_1.txt' 'exe_4' 'EZH2' 833
-./prog_seq 'geneNames_1.txt' 'exe_4' 'SP100' 834
-./prog_seq 'geneNames_1.txt' 'exe_4' 'CEBPA' 835
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZFP64' 836
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ASXL1' 837
-./prog_seq 'geneNames_1.txt' 'exe_4' 'THAP1' 838
-./prog_seq 'geneNames_1.txt' 'exe_4' 'FOXA2' 839
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZIC2' 840
-./prog_seq 'geneNames_1.txt' 'exe_4' 'KLF5' 841
-./prog_seq 'geneNames_1.txt' 'exe_4' 'FOSL2' 842
-./prog_seq 'geneNames_1.txt' 'exe_4' 'PIAS2' 843
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TFDP1' 844
-./prog_seq 'geneNames_1.txt' 'exe_4' 'FHL2' 845
-./prog_seq 'geneNames_1.txt' 'exe_4' 'DRAP1' 846
-./prog_seq 'geneNames_1.txt' 'exe_4' 'JAG1' 847
-./prog_seq 'geneNames_1.txt' 'exe_4' 'GTF3C4' 848
-./prog_seq 'geneNames_1.txt' 'exe_4' 'RUNX1T1' 849
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TAF6' 850
-./prog_seq 'geneNames_1.txt' 'exe_4' 'NR2F2' 851
-./prog_seq 'geneNames_1.txt' 'exe_4' 'AHR' 852
-./prog_seq 'geneNames_1.txt' 'exe_4' 'SEC14L2' 853
-./prog_seq 'geneNames_1.txt' 'exe_4' 'SERTAD3' 854
-./prog_seq 'geneNames_1.txt' 'exe_4' 'SIRT2' 855
-./prog_seq 'geneNames_1.txt' 'exe_4' 'NEIL2' 856
-./prog_seq 'geneNames_1.txt' 'exe_4' 'AATF' 857
-./prog_seq 'geneNames_1.txt' 'exe_4' 'MCM8' 858
-./prog_seq 'geneNames_1.txt' 'exe_4' 'MYBBP1A' 859
-./prog_seq 'geneNames_1.txt' 'exe_4' 'UHRF1' 860
-./prog_seq 'geneNames_1.txt' 'exe_4' 'GPM6B' 861
-./prog_seq 'geneNames_1.txt' 'exe_4' 'FOXH1' 862
-./prog_seq 'geneNames_1.txt' 'exe_4' 'FOXO1' 863
-./prog_seq 'geneNames_1.txt' 'exe_4' 'BDP1' 864
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ETS1' 865
-./prog_seq 'geneNames_1.txt' 'exe_4' 'POU2F1' 866
-./prog_seq 'geneNames_1.txt' 'exe_4' 'PLAGL2' 867
-./prog_seq 'geneNames_1.txt' 'exe_4' 'JAZF1' 868
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZNHIT3' 869
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZNF675' 870
-./prog_seq 'geneNames_1.txt' 'exe_4' 'MYCN' 871
-./prog_seq 'geneNames_1.txt' 'exe_4' 'U2AF1' 872
-./prog_seq 'geneNames_1.txt' 'exe_4' 'MAZ' 873
-./prog_seq 'geneNames_1.txt' 'exe_4' 'NANOG' 874
-./prog_seq 'geneNames_1.txt' 'exe_4' 'KDM4C' 875
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TFDP2' 876
-./prog_seq 'geneNames_1.txt' 'exe_4' 'GATA6' 877
-./prog_seq 'geneNames_1.txt' 'exe_4' 'THRB' 878
-./prog_seq 'geneNames_1.txt' 'exe_4' 'CCND1' 879
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TCOF1' 880
-./prog_seq 'geneNames_1.txt' 'exe_4' 'DR1' 881
-./prog_seq 'geneNames_1.txt' 'exe_4' 'PPARA' 882
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZNF398' 883
-./prog_seq 'geneNames_1.txt' 'exe_4' 'KLF3' 884
-./prog_seq 'geneNames_1.txt' 'exe_4' 'BCL11A' 885
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TTF2' 886
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZNF33A' 887
-./prog_seq 'geneNames_1.txt' 'exe_4' 'E2F7' 888
-./prog_seq 'geneNames_1.txt' 'exe_4' 'HTATSF1' 889
-./prog_seq 'geneNames_1.txt' 'exe_4' 'HIF3A' 890
-./prog_seq 'geneNames_1.txt' 'exe_4' 'PCGF6' 891
-./prog_seq 'geneNames_1.txt' 'exe_4' 'PIAS3' 892
-./prog_seq 'geneNames_1.txt' 'exe_4' 'POLR1E' 893
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZNF74' 894
-./prog_seq 'geneNames_1.txt' 'exe_4' 'PTRF' 895
-./prog_seq 'geneNames_1.txt' 'exe_4' 'SP4' 896
-./prog_seq 'geneNames_1.txt' 'exe_4' 'HNF4A' 897
-./prog_seq 'geneNames_1.txt' 'exe_4' 'CHD8' 898
-./prog_seq 'geneNames_1.txt' 'exe_4' 'NR3C1' 899
-./prog_seq 'geneNames_1.txt' 'exe_4' 'PBX1' 900
-./prog_seq 'geneNames_1.txt' 'exe_4' 'EHMT2' 901
-./prog_seq 'geneNames_1.txt' 'exe_4' 'FOXM1' 902
-./prog_seq 'geneNames_1.txt' 'exe_4' 'GRHL1' 903
-./prog_seq 'geneNames_1.txt' 'exe_4' 'SCD5' 904
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ZFHX3' 905
-./prog_seq 'geneNames_1.txt' 'exe_4' 'DOT1L' 906
-./prog_seq 'geneNames_1.txt' 'exe_4' 'E2F3' 907
-./prog_seq 'geneNames_1.txt' 'exe_4' 'GTF3C5' 908
-./prog_seq 'geneNames_1.txt' 'exe_4' 'POU5F1' 909
-./prog_seq 'geneNames_1.txt' 'exe_4' 'POLR3D' 910
-./prog_seq 'geneNames_1.txt' 'exe_4' 'SOX2' 911
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TCF7L1' 912
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TCFL5' 913
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TIMELESS' 914
-./prog_seq 'geneNames_1.txt' 'exe_4' 'BMPR1A' 915
-./prog_seq 'geneNames_1.txt' 'exe_4' 'ANKRD1' 916
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TRERF1' 917
-./prog_seq 'geneNames_1.txt' 'exe_4' 'GTF2H2' 918
-./prog_seq 'geneNames_1.txt' 'exe_4' 'IRF1' 919
-./prog_seq 'geneNames_1.txt' 'exe_4' 'TBX3' 920
-./prog_seq 'geneNames_1.txt' 'exe_5' 'AEBP1' 921
-./prog_seq 'geneNames_1.txt' 'exe_5' 'PIM2' 922
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TADA3' 923
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ESRG' 924
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ETV4' 925
-./prog_seq 'geneNames_1.txt' 'exe_5' 'THY1' 926
-./prog_seq 'geneNames_1.txt' 'exe_5' 'VEZF1' 927
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ING1' 928
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TNFAIP3' 929
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TCF3' 930
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TP53' 931
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZNF397' 932
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ELF1' 933
-./prog_seq 'geneNames_1.txt' 'exe_5' 'NRIP1' 934
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZFP36' 935
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TRIM25' 936
-./prog_seq 'geneNames_1.txt' 'exe_5' 'NR2F6' 937
-./prog_seq 'geneNames_1.txt' 'exe_5' 'HCFC1' 938
-./prog_seq 'geneNames_1.txt' 'exe_5' 'DDX54' 939
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ESPL1' 940
-./prog_seq 'geneNames_1.txt' 'exe_5' 'PDCD11' 941
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZNRD1' 942
-./prog_seq 'geneNames_1.txt' 'exe_5' 'SMAD3' 943
-./prog_seq 'geneNames_1.txt' 'exe_5' 'SIRT1' 944
-./prog_seq 'geneNames_1.txt' 'exe_5' 'HMGA2' 945
-./prog_seq 'geneNames_1.txt' 'exe_5' 'EGF' 946
-./prog_seq 'geneNames_1.txt' 'exe_5' 'HIST1H1E' 947
-./prog_seq 'geneNames_1.txt' 'exe_5' 'BTG1' 948
-./prog_seq 'geneNames_1.txt' 'exe_5' 'LHX1' 949
-./prog_seq 'geneNames_1.txt' 'exe_5' 'NFIB' 950
-./prog_seq 'geneNames_1.txt' 'exe_5' 'CDX2' 951
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ETV1' 952
-./prog_seq 'geneNames_1.txt' 'exe_5' 'BCOR' 953
-./prog_seq 'geneNames_1.txt' 'exe_5' 'HIF1AN' 954
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ETV5' 955
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TCF19' 956
-./prog_seq 'geneNames_1.txt' 'exe_5' 'CEBPD' 957
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZIC3' 958
-./prog_seq 'geneNames_1.txt' 'exe_5' 'BMP2' 959
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ELAVL2' 960
-./prog_seq 'geneNames_1.txt' 'exe_5' 'MED14' 961
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZNF354A' 962
-./prog_seq 'geneNames_1.txt' 'exe_5' 'BRIP1' 963
-./prog_seq 'geneNames_1.txt' 'exe_5' 'MAF' 964
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZBTB16' 965
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TEAD2' 966
-./prog_seq 'geneNames_1.txt' 'exe_5' 'NR5A2' 967
-./prog_seq 'geneNames_1.txt' 'exe_5' 'JUN' 968
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZNF300' 969
-./prog_seq 'geneNames_1.txt' 'exe_5' 'EPAS1' 970
-./prog_seq 'geneNames_1.txt' 'exe_5' 'NOTCH3' 971
-./prog_seq 'geneNames_1.txt' 'exe_5' 'MYC' 972
-./prog_seq 'geneNames_1.txt' 'exe_5' 'PAWR' 973
-./prog_seq 'geneNames_1.txt' 'exe_5' 'CREG1' 974
-./prog_seq 'geneNames_1.txt' 'exe_5' 'FOSB' 975
-./prog_seq 'geneNames_1.txt' 'exe_5' 'GLI1' 976
-./prog_seq 'geneNames_1.txt' 'exe_5' 'PRDM14' 977
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TFE3' 978
-./prog_seq 'geneNames_1.txt' 'exe_5' 'MAFF' 979
-./prog_seq 'geneNames_1.txt' 'exe_5' 'MED20' 980
-./prog_seq 'geneNames_1.txt' 'exe_5' 'E2F5' 981
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TRIM22' 982
-./prog_seq 'geneNames_1.txt' 'exe_5' 'WDR5' 983
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZNF217' 984
-./prog_seq 'geneNames_1.txt' 'exe_5' 'PEG3' 985
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZHX1' 986
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TARDBP' 987
-./prog_seq 'geneNames_1.txt' 'exe_5' 'SNAPC1' 988
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZBTB3' 989
-./prog_seq 'geneNames_1.txt' 'exe_5' 'NFATC2' 990
-./prog_seq 'geneNames_1.txt' 'exe_5' 'SALL3' 991
-./prog_seq 'geneNames_1.txt' 'exe_5' 'MAPK1' 992
-./prog_seq 'geneNames_1.txt' 'exe_5' 'MEIS3' 993
-./prog_seq 'geneNames_1.txt' 'exe_5' 'CHAF1A' 994
-./prog_seq 'geneNames_1.txt' 'exe_5' 'DAXX' 995
-./prog_seq 'geneNames_1.txt' 'exe_5' 'E2F8' 996
-./prog_seq 'geneNames_1.txt' 'exe_5' 'GATA5' 997
-./prog_seq 'geneNames_1.txt' 'exe_5' 'RFX5' 998
-./prog_seq 'geneNames_1.txt' 'exe_5' 'HINFP' 999
-./prog_seq 'geneNames_1.txt' 'exe_5' 'MLXIPL' 1000
-./prog_seq 'geneNames_1.txt' 'exe_5' 'SSBP2' 1001
-./prog_seq 'geneNames_1.txt' 'exe_5' 'RREB1' 1002
-./prog_seq 'geneNames_1.txt' 'exe_5' 'SMARCD2' 1003
-./prog_seq 'geneNames_1.txt' 'exe_5' 'HDGF' 1004
-./prog_seq 'geneNames_1.txt' 'exe_5' 'MEF2C' 1005
-./prog_seq 'geneNames_1.txt' 'exe_5' 'SSBP3' 1006
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TAF5' 1007
-./prog_seq 'geneNames_1.txt' 'exe_5' 'SRF' 1008
-./prog_seq 'geneNames_1.txt' 'exe_5' 'HIPK2' 1009
-./prog_seq 'geneNames_1.txt' 'exe_5' 'EOMES' 1010
-./prog_seq 'geneNames_1.txt' 'exe_5' 'NCOA1' 1011
-./prog_seq 'geneNames_1.txt' 'exe_5' 'CREB3L3' 1012
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ELL2' 1013
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TOPORS' 1014
-./prog_seq 'geneNames_1.txt' 'exe_5' 'BTG2' 1015
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ING5' 1016
-./prog_seq 'geneNames_1.txt' 'exe_5' 'HNF1B' 1017
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TCF4' 1018
-./prog_seq 'geneNames_1.txt' 'exe_5' 'IRF9' 1019
-./prog_seq 'geneNames_1.txt' 'exe_5' 'JARID2' 1020
-./prog_seq 'geneNames_1.txt' 'exe_5' 'HNRNPAB' 1021
-./prog_seq 'geneNames_1.txt' 'exe_5' 'RARG' 1022
-./prog_seq 'geneNames_1.txt' 'exe_5' 'GMEB1' 1023
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZNF107' 1024
-./prog_seq 'geneNames_1.txt' 'exe_5' 'GATAD2B' 1025
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ARID3B' 1026
-./prog_seq 'geneNames_1.txt' 'exe_5' 'WBP11' 1027
-./prog_seq 'geneNames_1.txt' 'exe_5' 'NCOA6' 1028
-./prog_seq 'geneNames_1.txt' 'exe_5' 'GLI2' 1029
-./prog_seq 'geneNames_1.txt' 'exe_5' 'FOSL1' 1030
-./prog_seq 'geneNames_1.txt' 'exe_5' 'E2F4' 1031
-./prog_seq 'geneNames_1.txt' 'exe_5' 'MXD1' 1032
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TBL1X' 1033
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZSCAN21' 1034
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TRIM27' 1035
-./prog_seq 'geneNames_1.txt' 'exe_5' 'EGFR' 1036
-./prog_seq 'geneNames_1.txt' 'exe_5' 'THAP11' 1037
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TFAP2C' 1038
-./prog_seq 'geneNames_1.txt' 'exe_5' 'LDB2' 1039
-./prog_seq 'geneNames_1.txt' 'exe_5' 'AES' 1040
-./prog_seq 'geneNames_1.txt' 'exe_5' 'FOXA1' 1041
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZBTB24' 1042
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TAF1A' 1043
-./prog_seq 'geneNames_1.txt' 'exe_5' 'BCL11B' 1044
-./prog_seq 'geneNames_1.txt' 'exe_5' 'PITX1' 1045
-./prog_seq 'geneNames_1.txt' 'exe_5' 'MCM2' 1046
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZNF670' 1047
-./prog_seq 'geneNames_1.txt' 'exe_5' 'GLIS3' 1048
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TEAD4' 1049
-./prog_seq 'geneNames_1.txt' 'exe_5' 'NR1I3' 1050
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZNF202' 1051
-./prog_seq 'geneNames_1.txt' 'exe_5' 'REST' 1052
-./prog_seq 'geneNames_1.txt' 'exe_5' 'JUND' 1053
-./prog_seq 'geneNames_1.txt' 'exe_5' 'CREB3L4' 1054
-./prog_seq 'geneNames_1.txt' 'exe_5' 'DDX20' 1055
-./prog_seq 'geneNames_1.txt' 'exe_5' 'HDAC1' 1056
-./prog_seq 'geneNames_1.txt' 'exe_5' 'CTDSPL' 1057
-./prog_seq 'geneNames_1.txt' 'exe_5' 'RNF2' 1058
-./prog_seq 'geneNames_1.txt' 'exe_5' 'CNTRL' 1059
-./prog_seq 'geneNames_1.txt' 'exe_5' 'HNRNPUL1' 1060
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ATF3' 1061
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZNF227' 1062
-./prog_seq 'geneNames_1.txt' 'exe_5' 'EZH2' 1063
-./prog_seq 'geneNames_1.txt' 'exe_5' 'SP100' 1064
-./prog_seq 'geneNames_1.txt' 'exe_5' 'CEBPA' 1065
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZFP64' 1066
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ASXL1' 1067
-./prog_seq 'geneNames_1.txt' 'exe_5' 'THAP1' 1068
-./prog_seq 'geneNames_1.txt' 'exe_5' 'FOXA2' 1069
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZIC2' 1070
-./prog_seq 'geneNames_1.txt' 'exe_5' 'KLF5' 1071
-./prog_seq 'geneNames_1.txt' 'exe_5' 'FOSL2' 1072
-./prog_seq 'geneNames_1.txt' 'exe_5' 'PIAS2' 1073
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TFDP1' 1074
-./prog_seq 'geneNames_1.txt' 'exe_5' 'FHL2' 1075
-./prog_seq 'geneNames_1.txt' 'exe_5' 'DRAP1' 1076
-./prog_seq 'geneNames_1.txt' 'exe_5' 'JAG1' 1077
-./prog_seq 'geneNames_1.txt' 'exe_5' 'GTF3C4' 1078
-./prog_seq 'geneNames_1.txt' 'exe_5' 'RUNX1T1' 1079
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TAF6' 1080
-./prog_seq 'geneNames_1.txt' 'exe_5' 'NR2F2' 1081
-./prog_seq 'geneNames_1.txt' 'exe_5' 'AHR' 1082
-./prog_seq 'geneNames_1.txt' 'exe_5' 'SEC14L2' 1083
-./prog_seq 'geneNames_1.txt' 'exe_5' 'SERTAD3' 1084
-./prog_seq 'geneNames_1.txt' 'exe_5' 'SIRT2' 1085
-./prog_seq 'geneNames_1.txt' 'exe_5' 'NEIL2' 1086
-./prog_seq 'geneNames_1.txt' 'exe_5' 'AATF' 1087
-./prog_seq 'geneNames_1.txt' 'exe_5' 'MCM8' 1088
-./prog_seq 'geneNames_1.txt' 'exe_5' 'MYBBP1A' 1089
-./prog_seq 'geneNames_1.txt' 'exe_5' 'UHRF1' 1090
-./prog_seq 'geneNames_1.txt' 'exe_5' 'GPM6B' 1091
-./prog_seq 'geneNames_1.txt' 'exe_5' 'FOXH1' 1092
-./prog_seq 'geneNames_1.txt' 'exe_5' 'FOXO1' 1093
-./prog_seq 'geneNames_1.txt' 'exe_5' 'BDP1' 1094
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ETS1' 1095
-./prog_seq 'geneNames_1.txt' 'exe_5' 'POU2F1' 1096
-./prog_seq 'geneNames_1.txt' 'exe_5' 'PLAGL2' 1097
-./prog_seq 'geneNames_1.txt' 'exe_5' 'JAZF1' 1098
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZNHIT3' 1099
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZNF675' 1100
-./prog_seq 'geneNames_1.txt' 'exe_5' 'MYCN' 1101
-./prog_seq 'geneNames_1.txt' 'exe_5' 'U2AF1' 1102
-./prog_seq 'geneNames_1.txt' 'exe_5' 'MAZ' 1103
-./prog_seq 'geneNames_1.txt' 'exe_5' 'NANOG' 1104
-./prog_seq 'geneNames_1.txt' 'exe_5' 'KDM4C' 1105
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TFDP2' 1106
-./prog_seq 'geneNames_1.txt' 'exe_5' 'GATA6' 1107
-./prog_seq 'geneNames_1.txt' 'exe_5' 'THRB' 1108
-./prog_seq 'geneNames_1.txt' 'exe_5' 'CCND1' 1109
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TCOF1' 1110
-./prog_seq 'geneNames_1.txt' 'exe_5' 'DR1' 1111
-./prog_seq 'geneNames_1.txt' 'exe_5' 'PPARA' 1112
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZNF398' 1113
-./prog_seq 'geneNames_1.txt' 'exe_5' 'KLF3' 1114
-./prog_seq 'geneNames_1.txt' 'exe_5' 'BCL11A' 1115
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TTF2' 1116
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZNF33A' 1117
-./prog_seq 'geneNames_1.txt' 'exe_5' 'E2F7' 1118
-./prog_seq 'geneNames_1.txt' 'exe_5' 'HTATSF1' 1119
-./prog_seq 'geneNames_1.txt' 'exe_5' 'HIF3A' 1120
-./prog_seq 'geneNames_1.txt' 'exe_5' 'PCGF6' 1121
-./prog_seq 'geneNames_1.txt' 'exe_5' 'PIAS3' 1122
-./prog_seq 'geneNames_1.txt' 'exe_5' 'POLR1E' 1123
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZNF74' 1124
-./prog_seq 'geneNames_1.txt' 'exe_5' 'PTRF' 1125
-./prog_seq 'geneNames_1.txt' 'exe_5' 'SP4' 1126
-./prog_seq 'geneNames_1.txt' 'exe_5' 'HNF4A' 1127
-./prog_seq 'geneNames_1.txt' 'exe_5' 'CHD8' 1128
-./prog_seq 'geneNames_1.txt' 'exe_5' 'NR3C1' 1129
-./prog_seq 'geneNames_1.txt' 'exe_5' 'PBX1' 1130
-./prog_seq 'geneNames_1.txt' 'exe_5' 'EHMT2' 1131
-./prog_seq 'geneNames_1.txt' 'exe_5' 'FOXM1' 1132
-./prog_seq 'geneNames_1.txt' 'exe_5' 'GRHL1' 1133
-./prog_seq 'geneNames_1.txt' 'exe_5' 'SCD5' 1134
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ZFHX3' 1135
-./prog_seq 'geneNames_1.txt' 'exe_5' 'DOT1L' 1136
-./prog_seq 'geneNames_1.txt' 'exe_5' 'E2F3' 1137
-./prog_seq 'geneNames_1.txt' 'exe_5' 'GTF3C5' 1138
-./prog_seq 'geneNames_1.txt' 'exe_5' 'POU5F1' 1139
-./prog_seq 'geneNames_1.txt' 'exe_5' 'POLR3D' 1140
-./prog_seq 'geneNames_1.txt' 'exe_5' 'SOX2' 1141
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TCF7L1' 1142
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TCFL5' 1143
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TIMELESS' 1144
-./prog_seq 'geneNames_1.txt' 'exe_5' 'BMPR1A' 1145
-./prog_seq 'geneNames_1.txt' 'exe_5' 'ANKRD1' 1146
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TRERF1' 1147
-./prog_seq 'geneNames_1.txt' 'exe_5' 'GTF2H2' 1148
-./prog_seq 'geneNames_1.txt' 'exe_5' 'IRF1' 1149
-./prog_seq 'geneNames_1.txt' 'exe_5' 'TBX3' 1150
-./prog_seq 'geneNames_1.txt' 'exe_6' 'AEBP1' 1151
-./prog_seq 'geneNames_1.txt' 'exe_6' 'PIM2' 1152
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TADA3' 1153
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ESRG' 1154
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ETV4' 1155
-./prog_seq 'geneNames_1.txt' 'exe_6' 'THY1' 1156
-./prog_seq 'geneNames_1.txt' 'exe_6' 'VEZF1' 1157
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ING1' 1158
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TNFAIP3' 1159
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TCF3' 1160
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TP53' 1161
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZNF397' 1162
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ELF1' 1163
-./prog_seq 'geneNames_1.txt' 'exe_6' 'NRIP1' 1164
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZFP36' 1165
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TRIM25' 1166
-./prog_seq 'geneNames_1.txt' 'exe_6' 'NR2F6' 1167
-./prog_seq 'geneNames_1.txt' 'exe_6' 'HCFC1' 1168
-./prog_seq 'geneNames_1.txt' 'exe_6' 'DDX54' 1169
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ESPL1' 1170
-./prog_seq 'geneNames_1.txt' 'exe_6' 'PDCD11' 1171
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZNRD1' 1172
-./prog_seq 'geneNames_1.txt' 'exe_6' 'SMAD3' 1173
-./prog_seq 'geneNames_1.txt' 'exe_6' 'SIRT1' 1174
-./prog_seq 'geneNames_1.txt' 'exe_6' 'HMGA2' 1175
-./prog_seq 'geneNames_1.txt' 'exe_6' 'EGF' 1176
-./prog_seq 'geneNames_1.txt' 'exe_6' 'HIST1H1E' 1177
-./prog_seq 'geneNames_1.txt' 'exe_6' 'BTG1' 1178
-./prog_seq 'geneNames_1.txt' 'exe_6' 'LHX1' 1179
-./prog_seq 'geneNames_1.txt' 'exe_6' 'NFIB' 1180
-./prog_seq 'geneNames_1.txt' 'exe_6' 'CDX2' 1181
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ETV1' 1182
-./prog_seq 'geneNames_1.txt' 'exe_6' 'BCOR' 1183
-./prog_seq 'geneNames_1.txt' 'exe_6' 'HIF1AN' 1184
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ETV5' 1185
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TCF19' 1186
-./prog_seq 'geneNames_1.txt' 'exe_6' 'CEBPD' 1187
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZIC3' 1188
-./prog_seq 'geneNames_1.txt' 'exe_6' 'BMP2' 1189
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ELAVL2' 1190
-./prog_seq 'geneNames_1.txt' 'exe_6' 'MED14' 1191
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZNF354A' 1192
-./prog_seq 'geneNames_1.txt' 'exe_6' 'BRIP1' 1193
-./prog_seq 'geneNames_1.txt' 'exe_6' 'MAF' 1194
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZBTB16' 1195
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TEAD2' 1196
-./prog_seq 'geneNames_1.txt' 'exe_6' 'NR5A2' 1197
-./prog_seq 'geneNames_1.txt' 'exe_6' 'JUN' 1198
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZNF300' 1199
-./prog_seq 'geneNames_1.txt' 'exe_6' 'EPAS1' 1200
-./prog_seq 'geneNames_1.txt' 'exe_6' 'NOTCH3' 1201
-./prog_seq 'geneNames_1.txt' 'exe_6' 'MYC' 1202
-./prog_seq 'geneNames_1.txt' 'exe_6' 'PAWR' 1203
-./prog_seq 'geneNames_1.txt' 'exe_6' 'CREG1' 1204
-./prog_seq 'geneNames_1.txt' 'exe_6' 'FOSB' 1205
-./prog_seq 'geneNames_1.txt' 'exe_6' 'GLI1' 1206
-./prog_seq 'geneNames_1.txt' 'exe_6' 'PRDM14' 1207
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TFE3' 1208
-./prog_seq 'geneNames_1.txt' 'exe_6' 'MAFF' 1209
-./prog_seq 'geneNames_1.txt' 'exe_6' 'MED20' 1210
-./prog_seq 'geneNames_1.txt' 'exe_6' 'E2F5' 1211
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TRIM22' 1212
-./prog_seq 'geneNames_1.txt' 'exe_6' 'WDR5' 1213
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZNF217' 1214
-./prog_seq 'geneNames_1.txt' 'exe_6' 'PEG3' 1215
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZHX1' 1216
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TARDBP' 1217
-./prog_seq 'geneNames_1.txt' 'exe_6' 'SNAPC1' 1218
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZBTB3' 1219
-./prog_seq 'geneNames_1.txt' 'exe_6' 'NFATC2' 1220
-./prog_seq 'geneNames_1.txt' 'exe_6' 'SALL3' 1221
-./prog_seq 'geneNames_1.txt' 'exe_6' 'MAPK1' 1222
-./prog_seq 'geneNames_1.txt' 'exe_6' 'MEIS3' 1223
-./prog_seq 'geneNames_1.txt' 'exe_6' 'CHAF1A' 1224
-./prog_seq 'geneNames_1.txt' 'exe_6' 'DAXX' 1225
-./prog_seq 'geneNames_1.txt' 'exe_6' 'E2F8' 1226
-./prog_seq 'geneNames_1.txt' 'exe_6' 'GATA5' 1227
-./prog_seq 'geneNames_1.txt' 'exe_6' 'RFX5' 1228
-./prog_seq 'geneNames_1.txt' 'exe_6' 'HINFP' 1229
-./prog_seq 'geneNames_1.txt' 'exe_6' 'MLXIPL' 1230
-./prog_seq 'geneNames_1.txt' 'exe_6' 'SSBP2' 1231
-./prog_seq 'geneNames_1.txt' 'exe_6' 'RREB1' 1232
-./prog_seq 'geneNames_1.txt' 'exe_6' 'SMARCD2' 1233
-./prog_seq 'geneNames_1.txt' 'exe_6' 'HDGF' 1234
-./prog_seq 'geneNames_1.txt' 'exe_6' 'MEF2C' 1235
-./prog_seq 'geneNames_1.txt' 'exe_6' 'SSBP3' 1236
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TAF5' 1237
-./prog_seq 'geneNames_1.txt' 'exe_6' 'SRF' 1238
-./prog_seq 'geneNames_1.txt' 'exe_6' 'HIPK2' 1239
-./prog_seq 'geneNames_1.txt' 'exe_6' 'EOMES' 1240
-./prog_seq 'geneNames_1.txt' 'exe_6' 'NCOA1' 1241
-./prog_seq 'geneNames_1.txt' 'exe_6' 'CREB3L3' 1242
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ELL2' 1243
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TOPORS' 1244
-./prog_seq 'geneNames_1.txt' 'exe_6' 'BTG2' 1245
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ING5' 1246
-./prog_seq 'geneNames_1.txt' 'exe_6' 'HNF1B' 1247
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TCF4' 1248
-./prog_seq 'geneNames_1.txt' 'exe_6' 'IRF9' 1249
-./prog_seq 'geneNames_1.txt' 'exe_6' 'JARID2' 1250
-./prog_seq 'geneNames_1.txt' 'exe_6' 'HNRNPAB' 1251
-./prog_seq 'geneNames_1.txt' 'exe_6' 'RARG' 1252
-./prog_seq 'geneNames_1.txt' 'exe_6' 'GMEB1' 1253
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZNF107' 1254
-./prog_seq 'geneNames_1.txt' 'exe_6' 'GATAD2B' 1255
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ARID3B' 1256
-./prog_seq 'geneNames_1.txt' 'exe_6' 'WBP11' 1257
-./prog_seq 'geneNames_1.txt' 'exe_6' 'NCOA6' 1258
-./prog_seq 'geneNames_1.txt' 'exe_6' 'GLI2' 1259
-./prog_seq 'geneNames_1.txt' 'exe_6' 'FOSL1' 1260
-./prog_seq 'geneNames_1.txt' 'exe_6' 'E2F4' 1261
-./prog_seq 'geneNames_1.txt' 'exe_6' 'MXD1' 1262
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TBL1X' 1263
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZSCAN21' 1264
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TRIM27' 1265
-./prog_seq 'geneNames_1.txt' 'exe_6' 'EGFR' 1266
-./prog_seq 'geneNames_1.txt' 'exe_6' 'THAP11' 1267
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TFAP2C' 1268
-./prog_seq 'geneNames_1.txt' 'exe_6' 'LDB2' 1269
-./prog_seq 'geneNames_1.txt' 'exe_6' 'AES' 1270
-./prog_seq 'geneNames_1.txt' 'exe_6' 'FOXA1' 1271
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZBTB24' 1272
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TAF1A' 1273
-./prog_seq 'geneNames_1.txt' 'exe_6' 'BCL11B' 1274
-./prog_seq 'geneNames_1.txt' 'exe_6' 'PITX1' 1275
-./prog_seq 'geneNames_1.txt' 'exe_6' 'MCM2' 1276
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZNF670' 1277
-./prog_seq 'geneNames_1.txt' 'exe_6' 'GLIS3' 1278
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TEAD4' 1279
-./prog_seq 'geneNames_1.txt' 'exe_6' 'NR1I3' 1280
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZNF202' 1281
-./prog_seq 'geneNames_1.txt' 'exe_6' 'REST' 1282
-./prog_seq 'geneNames_1.txt' 'exe_6' 'JUND' 1283
-./prog_seq 'geneNames_1.txt' 'exe_6' 'CREB3L4' 1284
-./prog_seq 'geneNames_1.txt' 'exe_6' 'DDX20' 1285
-./prog_seq 'geneNames_1.txt' 'exe_6' 'HDAC1' 1286
-./prog_seq 'geneNames_1.txt' 'exe_6' 'CTDSPL' 1287
-./prog_seq 'geneNames_1.txt' 'exe_6' 'RNF2' 1288
-./prog_seq 'geneNames_1.txt' 'exe_6' 'CNTRL' 1289
-./prog_seq 'geneNames_1.txt' 'exe_6' 'HNRNPUL1' 1290
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ATF3' 1291
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZNF227' 1292
-./prog_seq 'geneNames_1.txt' 'exe_6' 'EZH2' 1293
-./prog_seq 'geneNames_1.txt' 'exe_6' 'SP100' 1294
-./prog_seq 'geneNames_1.txt' 'exe_6' 'CEBPA' 1295
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZFP64' 1296
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ASXL1' 1297
-./prog_seq 'geneNames_1.txt' 'exe_6' 'THAP1' 1298
-./prog_seq 'geneNames_1.txt' 'exe_6' 'FOXA2' 1299
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZIC2' 1300
-./prog_seq 'geneNames_1.txt' 'exe_6' 'KLF5' 1301
-./prog_seq 'geneNames_1.txt' 'exe_6' 'FOSL2' 1302
-./prog_seq 'geneNames_1.txt' 'exe_6' 'PIAS2' 1303
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TFDP1' 1304
-./prog_seq 'geneNames_1.txt' 'exe_6' 'FHL2' 1305
-./prog_seq 'geneNames_1.txt' 'exe_6' 'DRAP1' 1306
-./prog_seq 'geneNames_1.txt' 'exe_6' 'JAG1' 1307
-./prog_seq 'geneNames_1.txt' 'exe_6' 'GTF3C4' 1308
-./prog_seq 'geneNames_1.txt' 'exe_6' 'RUNX1T1' 1309
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TAF6' 1310
-./prog_seq 'geneNames_1.txt' 'exe_6' 'NR2F2' 1311
-./prog_seq 'geneNames_1.txt' 'exe_6' 'AHR' 1312
-./prog_seq 'geneNames_1.txt' 'exe_6' 'SEC14L2' 1313
-./prog_seq 'geneNames_1.txt' 'exe_6' 'SERTAD3' 1314
-./prog_seq 'geneNames_1.txt' 'exe_6' 'SIRT2' 1315
-./prog_seq 'geneNames_1.txt' 'exe_6' 'NEIL2' 1316
-./prog_seq 'geneNames_1.txt' 'exe_6' 'AATF' 1317
-./prog_seq 'geneNames_1.txt' 'exe_6' 'MCM8' 1318
-./prog_seq 'geneNames_1.txt' 'exe_6' 'MYBBP1A' 1319
-./prog_seq 'geneNames_1.txt' 'exe_6' 'UHRF1' 1320
-./prog_seq 'geneNames_1.txt' 'exe_6' 'GPM6B' 1321
-./prog_seq 'geneNames_1.txt' 'exe_6' 'FOXH1' 1322
-./prog_seq 'geneNames_1.txt' 'exe_6' 'FOXO1' 1323
-./prog_seq 'geneNames_1.txt' 'exe_6' 'BDP1' 1324
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ETS1' 1325
-./prog_seq 'geneNames_1.txt' 'exe_6' 'POU2F1' 1326
-./prog_seq 'geneNames_1.txt' 'exe_6' 'PLAGL2' 1327
-./prog_seq 'geneNames_1.txt' 'exe_6' 'JAZF1' 1328
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZNHIT3' 1329
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZNF675' 1330
-./prog_seq 'geneNames_1.txt' 'exe_6' 'MYCN' 1331
-./prog_seq 'geneNames_1.txt' 'exe_6' 'U2AF1' 1332
-./prog_seq 'geneNames_1.txt' 'exe_6' 'MAZ' 1333
-./prog_seq 'geneNames_1.txt' 'exe_6' 'NANOG' 1334
-./prog_seq 'geneNames_1.txt' 'exe_6' 'KDM4C' 1335
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TFDP2' 1336
-./prog_seq 'geneNames_1.txt' 'exe_6' 'GATA6' 1337
-./prog_seq 'geneNames_1.txt' 'exe_6' 'THRB' 1338
-./prog_seq 'geneNames_1.txt' 'exe_6' 'CCND1' 1339
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TCOF1' 1340
-./prog_seq 'geneNames_1.txt' 'exe_6' 'DR1' 1341
-./prog_seq 'geneNames_1.txt' 'exe_6' 'PPARA' 1342
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZNF398' 1343
-./prog_seq 'geneNames_1.txt' 'exe_6' 'KLF3' 1344
-./prog_seq 'geneNames_1.txt' 'exe_6' 'BCL11A' 1345
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TTF2' 1346
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZNF33A' 1347
-./prog_seq 'geneNames_1.txt' 'exe_6' 'E2F7' 1348
-./prog_seq 'geneNames_1.txt' 'exe_6' 'HTATSF1' 1349
-./prog_seq 'geneNames_1.txt' 'exe_6' 'HIF3A' 1350
-./prog_seq 'geneNames_1.txt' 'exe_6' 'PCGF6' 1351
-./prog_seq 'geneNames_1.txt' 'exe_6' 'PIAS3' 1352
-./prog_seq 'geneNames_1.txt' 'exe_6' 'POLR1E' 1353
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZNF74' 1354
-./prog_seq 'geneNames_1.txt' 'exe_6' 'PTRF' 1355
-./prog_seq 'geneNames_1.txt' 'exe_6' 'SP4' 1356
-./prog_seq 'geneNames_1.txt' 'exe_6' 'HNF4A' 1357
-./prog_seq 'geneNames_1.txt' 'exe_6' 'CHD8' 1358
-./prog_seq 'geneNames_1.txt' 'exe_6' 'NR3C1' 1359
-./prog_seq 'geneNames_1.txt' 'exe_6' 'PBX1' 1360
-./prog_seq 'geneNames_1.txt' 'exe_6' 'EHMT2' 1361
-./prog_seq 'geneNames_1.txt' 'exe_6' 'FOXM1' 1362
-./prog_seq 'geneNames_1.txt' 'exe_6' 'GRHL1' 1363
-./prog_seq 'geneNames_1.txt' 'exe_6' 'SCD5' 1364
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ZFHX3' 1365
-./prog_seq 'geneNames_1.txt' 'exe_6' 'DOT1L' 1366
-./prog_seq 'geneNames_1.txt' 'exe_6' 'E2F3' 1367
-./prog_seq 'geneNames_1.txt' 'exe_6' 'GTF3C5' 1368
-./prog_seq 'geneNames_1.txt' 'exe_6' 'POU5F1' 1369
-./prog_seq 'geneNames_1.txt' 'exe_6' 'POLR3D' 1370
-./prog_seq 'geneNames_1.txt' 'exe_6' 'SOX2' 1371
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TCF7L1' 1372
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TCFL5' 1373
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TIMELESS' 1374
-./prog_seq 'geneNames_1.txt' 'exe_6' 'BMPR1A' 1375
-./prog_seq 'geneNames_1.txt' 'exe_6' 'ANKRD1' 1376
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TRERF1' 1377
-./prog_seq 'geneNames_1.txt' 'exe_6' 'GTF2H2' 1378
-./prog_seq 'geneNames_1.txt' 'exe_6' 'IRF1' 1379
-./prog_seq 'geneNames_1.txt' 'exe_6' 'TBX3' 1380
-./prog_seq 'geneNames_1.txt' 'exe_7' 'AEBP1' 1381
-./prog_seq 'geneNames_1.txt' 'exe_7' 'PIM2' 1382
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TADA3' 1383
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ESRG' 1384
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ETV4' 1385
-./prog_seq 'geneNames_1.txt' 'exe_7' 'THY1' 1386
-./prog_seq 'geneNames_1.txt' 'exe_7' 'VEZF1' 1387
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ING1' 1388
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TNFAIP3' 1389
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TCF3' 1390
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TP53' 1391
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZNF397' 1392
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ELF1' 1393
-./prog_seq 'geneNames_1.txt' 'exe_7' 'NRIP1' 1394
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZFP36' 1395
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TRIM25' 1396
-./prog_seq 'geneNames_1.txt' 'exe_7' 'NR2F6' 1397
-./prog_seq 'geneNames_1.txt' 'exe_7' 'HCFC1' 1398
-./prog_seq 'geneNames_1.txt' 'exe_7' 'DDX54' 1399
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ESPL1' 1400
-./prog_seq 'geneNames_1.txt' 'exe_7' 'PDCD11' 1401
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZNRD1' 1402
-./prog_seq 'geneNames_1.txt' 'exe_7' 'SMAD3' 1403
-./prog_seq 'geneNames_1.txt' 'exe_7' 'SIRT1' 1404
-./prog_seq 'geneNames_1.txt' 'exe_7' 'HMGA2' 1405
-./prog_seq 'geneNames_1.txt' 'exe_7' 'EGF' 1406
-./prog_seq 'geneNames_1.txt' 'exe_7' 'HIST1H1E' 1407
-./prog_seq 'geneNames_1.txt' 'exe_7' 'BTG1' 1408
-./prog_seq 'geneNames_1.txt' 'exe_7' 'LHX1' 1409
-./prog_seq 'geneNames_1.txt' 'exe_7' 'NFIB' 1410
-./prog_seq 'geneNames_1.txt' 'exe_7' 'CDX2' 1411
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ETV1' 1412
-./prog_seq 'geneNames_1.txt' 'exe_7' 'BCOR' 1413
-./prog_seq 'geneNames_1.txt' 'exe_7' 'HIF1AN' 1414
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ETV5' 1415
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TCF19' 1416
-./prog_seq 'geneNames_1.txt' 'exe_7' 'CEBPD' 1417
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZIC3' 1418
-./prog_seq 'geneNames_1.txt' 'exe_7' 'BMP2' 1419
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ELAVL2' 1420
-./prog_seq 'geneNames_1.txt' 'exe_7' 'MED14' 1421
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZNF354A' 1422
-./prog_seq 'geneNames_1.txt' 'exe_7' 'BRIP1' 1423
-./prog_seq 'geneNames_1.txt' 'exe_7' 'MAF' 1424
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZBTB16' 1425
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TEAD2' 1426
-./prog_seq 'geneNames_1.txt' 'exe_7' 'NR5A2' 1427
-./prog_seq 'geneNames_1.txt' 'exe_7' 'JUN' 1428
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZNF300' 1429
-./prog_seq 'geneNames_1.txt' 'exe_7' 'EPAS1' 1430
-./prog_seq 'geneNames_1.txt' 'exe_7' 'NOTCH3' 1431
-./prog_seq 'geneNames_1.txt' 'exe_7' 'MYC' 1432
-./prog_seq 'geneNames_1.txt' 'exe_7' 'PAWR' 1433
-./prog_seq 'geneNames_1.txt' 'exe_7' 'CREG1' 1434
-./prog_seq 'geneNames_1.txt' 'exe_7' 'FOSB' 1435
-./prog_seq 'geneNames_1.txt' 'exe_7' 'GLI1' 1436
-./prog_seq 'geneNames_1.txt' 'exe_7' 'PRDM14' 1437
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TFE3' 1438
-./prog_seq 'geneNames_1.txt' 'exe_7' 'MAFF' 1439
-./prog_seq 'geneNames_1.txt' 'exe_7' 'MED20' 1440
-./prog_seq 'geneNames_1.txt' 'exe_7' 'E2F5' 1441
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TRIM22' 1442
-./prog_seq 'geneNames_1.txt' 'exe_7' 'WDR5' 1443
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZNF217' 1444
-./prog_seq 'geneNames_1.txt' 'exe_7' 'PEG3' 1445
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZHX1' 1446
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TARDBP' 1447
-./prog_seq 'geneNames_1.txt' 'exe_7' 'SNAPC1' 1448
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZBTB3' 1449
-./prog_seq 'geneNames_1.txt' 'exe_7' 'NFATC2' 1450
-./prog_seq 'geneNames_1.txt' 'exe_7' 'SALL3' 1451
-./prog_seq 'geneNames_1.txt' 'exe_7' 'MAPK1' 1452
-./prog_seq 'geneNames_1.txt' 'exe_7' 'MEIS3' 1453
-./prog_seq 'geneNames_1.txt' 'exe_7' 'CHAF1A' 1454
-./prog_seq 'geneNames_1.txt' 'exe_7' 'DAXX' 1455
-./prog_seq 'geneNames_1.txt' 'exe_7' 'E2F8' 1456
-./prog_seq 'geneNames_1.txt' 'exe_7' 'GATA5' 1457
-./prog_seq 'geneNames_1.txt' 'exe_7' 'RFX5' 1458
-./prog_seq 'geneNames_1.txt' 'exe_7' 'HINFP' 1459
-./prog_seq 'geneNames_1.txt' 'exe_7' 'MLXIPL' 1460
-./prog_seq 'geneNames_1.txt' 'exe_7' 'SSBP2' 1461
-./prog_seq 'geneNames_1.txt' 'exe_7' 'RREB1' 1462
-./prog_seq 'geneNames_1.txt' 'exe_7' 'SMARCD2' 1463
-./prog_seq 'geneNames_1.txt' 'exe_7' 'HDGF' 1464
-./prog_seq 'geneNames_1.txt' 'exe_7' 'MEF2C' 1465
-./prog_seq 'geneNames_1.txt' 'exe_7' 'SSBP3' 1466
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TAF5' 1467
-./prog_seq 'geneNames_1.txt' 'exe_7' 'SRF' 1468
-./prog_seq 'geneNames_1.txt' 'exe_7' 'HIPK2' 1469
-./prog_seq 'geneNames_1.txt' 'exe_7' 'EOMES' 1470
-./prog_seq 'geneNames_1.txt' 'exe_7' 'NCOA1' 1471
-./prog_seq 'geneNames_1.txt' 'exe_7' 'CREB3L3' 1472
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ELL2' 1473
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TOPORS' 1474
-./prog_seq 'geneNames_1.txt' 'exe_7' 'BTG2' 1475
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ING5' 1476
-./prog_seq 'geneNames_1.txt' 'exe_7' 'HNF1B' 1477
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TCF4' 1478
-./prog_seq 'geneNames_1.txt' 'exe_7' 'IRF9' 1479
-./prog_seq 'geneNames_1.txt' 'exe_7' 'JARID2' 1480
-./prog_seq 'geneNames_1.txt' 'exe_7' 'HNRNPAB' 1481
-./prog_seq 'geneNames_1.txt' 'exe_7' 'RARG' 1482
-./prog_seq 'geneNames_1.txt' 'exe_7' 'GMEB1' 1483
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZNF107' 1484
-./prog_seq 'geneNames_1.txt' 'exe_7' 'GATAD2B' 1485
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ARID3B' 1486
-./prog_seq 'geneNames_1.txt' 'exe_7' 'WBP11' 1487
-./prog_seq 'geneNames_1.txt' 'exe_7' 'NCOA6' 1488
-./prog_seq 'geneNames_1.txt' 'exe_7' 'GLI2' 1489
-./prog_seq 'geneNames_1.txt' 'exe_7' 'FOSL1' 1490
-./prog_seq 'geneNames_1.txt' 'exe_7' 'E2F4' 1491
-./prog_seq 'geneNames_1.txt' 'exe_7' 'MXD1' 1492
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TBL1X' 1493
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZSCAN21' 1494
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TRIM27' 1495
-./prog_seq 'geneNames_1.txt' 'exe_7' 'EGFR' 1496
-./prog_seq 'geneNames_1.txt' 'exe_7' 'THAP11' 1497
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TFAP2C' 1498
-./prog_seq 'geneNames_1.txt' 'exe_7' 'LDB2' 1499
-./prog_seq 'geneNames_1.txt' 'exe_7' 'AES' 1500
-./prog_seq 'geneNames_1.txt' 'exe_7' 'FOXA1' 1501
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZBTB24' 1502
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TAF1A' 1503
-./prog_seq 'geneNames_1.txt' 'exe_7' 'BCL11B' 1504
-./prog_seq 'geneNames_1.txt' 'exe_7' 'PITX1' 1505
-./prog_seq 'geneNames_1.txt' 'exe_7' 'MCM2' 1506
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZNF670' 1507
-./prog_seq 'geneNames_1.txt' 'exe_7' 'GLIS3' 1508
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TEAD4' 1509
-./prog_seq 'geneNames_1.txt' 'exe_7' 'NR1I3' 1510
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZNF202' 1511
-./prog_seq 'geneNames_1.txt' 'exe_7' 'REST' 1512
-./prog_seq 'geneNames_1.txt' 'exe_7' 'JUND' 1513
-./prog_seq 'geneNames_1.txt' 'exe_7' 'CREB3L4' 1514
-./prog_seq 'geneNames_1.txt' 'exe_7' 'DDX20' 1515
-./prog_seq 'geneNames_1.txt' 'exe_7' 'HDAC1' 1516
-./prog_seq 'geneNames_1.txt' 'exe_7' 'CTDSPL' 1517
-./prog_seq 'geneNames_1.txt' 'exe_7' 'RNF2' 1518
-./prog_seq 'geneNames_1.txt' 'exe_7' 'CNTRL' 1519
-./prog_seq 'geneNames_1.txt' 'exe_7' 'HNRNPUL1' 1520
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ATF3' 1521
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZNF227' 1522
-./prog_seq 'geneNames_1.txt' 'exe_7' 'EZH2' 1523
-./prog_seq 'geneNames_1.txt' 'exe_7' 'SP100' 1524
-./prog_seq 'geneNames_1.txt' 'exe_7' 'CEBPA' 1525
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZFP64' 1526
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ASXL1' 1527
-./prog_seq 'geneNames_1.txt' 'exe_7' 'THAP1' 1528
-./prog_seq 'geneNames_1.txt' 'exe_7' 'FOXA2' 1529
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZIC2' 1530
-./prog_seq 'geneNames_1.txt' 'exe_7' 'KLF5' 1531
-./prog_seq 'geneNames_1.txt' 'exe_7' 'FOSL2' 1532
-./prog_seq 'geneNames_1.txt' 'exe_7' 'PIAS2' 1533
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TFDP1' 1534
-./prog_seq 'geneNames_1.txt' 'exe_7' 'FHL2' 1535
-./prog_seq 'geneNames_1.txt' 'exe_7' 'DRAP1' 1536
-./prog_seq 'geneNames_1.txt' 'exe_7' 'JAG1' 1537
-./prog_seq 'geneNames_1.txt' 'exe_7' 'GTF3C4' 1538
-./prog_seq 'geneNames_1.txt' 'exe_7' 'RUNX1T1' 1539
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TAF6' 1540
-./prog_seq 'geneNames_1.txt' 'exe_7' 'NR2F2' 1541
-./prog_seq 'geneNames_1.txt' 'exe_7' 'AHR' 1542
-./prog_seq 'geneNames_1.txt' 'exe_7' 'SEC14L2' 1543
-./prog_seq 'geneNames_1.txt' 'exe_7' 'SERTAD3' 1544
-./prog_seq 'geneNames_1.txt' 'exe_7' 'SIRT2' 1545
-./prog_seq 'geneNames_1.txt' 'exe_7' 'NEIL2' 1546
-./prog_seq 'geneNames_1.txt' 'exe_7' 'AATF' 1547
-./prog_seq 'geneNames_1.txt' 'exe_7' 'MCM8' 1548
-./prog_seq 'geneNames_1.txt' 'exe_7' 'MYBBP1A' 1549
-./prog_seq 'geneNames_1.txt' 'exe_7' 'UHRF1' 1550
-./prog_seq 'geneNames_1.txt' 'exe_7' 'GPM6B' 1551
-./prog_seq 'geneNames_1.txt' 'exe_7' 'FOXH1' 1552
-./prog_seq 'geneNames_1.txt' 'exe_7' 'FOXO1' 1553
-./prog_seq 'geneNames_1.txt' 'exe_7' 'BDP1' 1554
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ETS1' 1555
-./prog_seq 'geneNames_1.txt' 'exe_7' 'POU2F1' 1556
-./prog_seq 'geneNames_1.txt' 'exe_7' 'PLAGL2' 1557
-./prog_seq 'geneNames_1.txt' 'exe_7' 'JAZF1' 1558
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZNHIT3' 1559
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZNF675' 1560
-./prog_seq 'geneNames_1.txt' 'exe_7' 'MYCN' 1561
-./prog_seq 'geneNames_1.txt' 'exe_7' 'U2AF1' 1562
-./prog_seq 'geneNames_1.txt' 'exe_7' 'MAZ' 1563
-./prog_seq 'geneNames_1.txt' 'exe_7' 'NANOG' 1564
-./prog_seq 'geneNames_1.txt' 'exe_7' 'KDM4C' 1565
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TFDP2' 1566
-./prog_seq 'geneNames_1.txt' 'exe_7' 'GATA6' 1567
-./prog_seq 'geneNames_1.txt' 'exe_7' 'THRB' 1568
-./prog_seq 'geneNames_1.txt' 'exe_7' 'CCND1' 1569
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TCOF1' 1570
-./prog_seq 'geneNames_1.txt' 'exe_7' 'DR1' 1571
-./prog_seq 'geneNames_1.txt' 'exe_7' 'PPARA' 1572
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZNF398' 1573
-./prog_seq 'geneNames_1.txt' 'exe_7' 'KLF3' 1574
-./prog_seq 'geneNames_1.txt' 'exe_7' 'BCL11A' 1575
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TTF2' 1576
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZNF33A' 1577
-./prog_seq 'geneNames_1.txt' 'exe_7' 'E2F7' 1578
-./prog_seq 'geneNames_1.txt' 'exe_7' 'HTATSF1' 1579
-./prog_seq 'geneNames_1.txt' 'exe_7' 'HIF3A' 1580
-./prog_seq 'geneNames_1.txt' 'exe_7' 'PCGF6' 1581
-./prog_seq 'geneNames_1.txt' 'exe_7' 'PIAS3' 1582
-./prog_seq 'geneNames_1.txt' 'exe_7' 'POLR1E' 1583
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZNF74' 1584
-./prog_seq 'geneNames_1.txt' 'exe_7' 'PTRF' 1585
-./prog_seq 'geneNames_1.txt' 'exe_7' 'SP4' 1586
-./prog_seq 'geneNames_1.txt' 'exe_7' 'HNF4A' 1587
-./prog_seq 'geneNames_1.txt' 'exe_7' 'CHD8' 1588
-./prog_seq 'geneNames_1.txt' 'exe_7' 'NR3C1' 1589
-./prog_seq 'geneNames_1.txt' 'exe_7' 'PBX1' 1590
-./prog_seq 'geneNames_1.txt' 'exe_7' 'EHMT2' 1591
-./prog_seq 'geneNames_1.txt' 'exe_7' 'FOXM1' 1592
-./prog_seq 'geneNames_1.txt' 'exe_7' 'GRHL1' 1593
-./prog_seq 'geneNames_1.txt' 'exe_7' 'SCD5' 1594
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ZFHX3' 1595
-./prog_seq 'geneNames_1.txt' 'exe_7' 'DOT1L' 1596
-./prog_seq 'geneNames_1.txt' 'exe_7' 'E2F3' 1597
-./prog_seq 'geneNames_1.txt' 'exe_7' 'GTF3C5' 1598
-./prog_seq 'geneNames_1.txt' 'exe_7' 'POU5F1' 1599
-./prog_seq 'geneNames_1.txt' 'exe_7' 'POLR3D' 1600
-./prog_seq 'geneNames_1.txt' 'exe_7' 'SOX2' 1601
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TCF7L1' 1602
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TCFL5' 1603
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TIMELESS' 1604
-./prog_seq 'geneNames_1.txt' 'exe_7' 'BMPR1A' 1605
-./prog_seq 'geneNames_1.txt' 'exe_7' 'ANKRD1' 1606
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TRERF1' 1607
-./prog_seq 'geneNames_1.txt' 'exe_7' 'GTF2H2' 1608
-./prog_seq 'geneNames_1.txt' 'exe_7' 'IRF1' 1609
-./prog_seq 'geneNames_1.txt' 'exe_7' 'TBX3' 1610
-./prog_seq 'geneNames_1.txt' 'exe_8' 'AEBP1' 1611
-./prog_seq 'geneNames_1.txt' 'exe_8' 'PIM2' 1612
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TADA3' 1613
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ESRG' 1614
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ETV4' 1615
-./prog_seq 'geneNames_1.txt' 'exe_8' 'THY1' 1616
-./prog_seq 'geneNames_1.txt' 'exe_8' 'VEZF1' 1617
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ING1' 1618
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TNFAIP3' 1619
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TCF3' 1620
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TP53' 1621
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZNF397' 1622
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ELF1' 1623
-./prog_seq 'geneNames_1.txt' 'exe_8' 'NRIP1' 1624
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZFP36' 1625
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TRIM25' 1626
-./prog_seq 'geneNames_1.txt' 'exe_8' 'NR2F6' 1627
-./prog_seq 'geneNames_1.txt' 'exe_8' 'HCFC1' 1628
-./prog_seq 'geneNames_1.txt' 'exe_8' 'DDX54' 1629
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ESPL1' 1630
-./prog_seq 'geneNames_1.txt' 'exe_8' 'PDCD11' 1631
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZNRD1' 1632
-./prog_seq 'geneNames_1.txt' 'exe_8' 'SMAD3' 1633
-./prog_seq 'geneNames_1.txt' 'exe_8' 'SIRT1' 1634
-./prog_seq 'geneNames_1.txt' 'exe_8' 'HMGA2' 1635
-./prog_seq 'geneNames_1.txt' 'exe_8' 'EGF' 1636
-./prog_seq 'geneNames_1.txt' 'exe_8' 'HIST1H1E' 1637
-./prog_seq 'geneNames_1.txt' 'exe_8' 'BTG1' 1638
-./prog_seq 'geneNames_1.txt' 'exe_8' 'LHX1' 1639
-./prog_seq 'geneNames_1.txt' 'exe_8' 'NFIB' 1640
-./prog_seq 'geneNames_1.txt' 'exe_8' 'CDX2' 1641
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ETV1' 1642
-./prog_seq 'geneNames_1.txt' 'exe_8' 'BCOR' 1643
-./prog_seq 'geneNames_1.txt' 'exe_8' 'HIF1AN' 1644
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ETV5' 1645
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TCF19' 1646
-./prog_seq 'geneNames_1.txt' 'exe_8' 'CEBPD' 1647
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZIC3' 1648
-./prog_seq 'geneNames_1.txt' 'exe_8' 'BMP2' 1649
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ELAVL2' 1650
-./prog_seq 'geneNames_1.txt' 'exe_8' 'MED14' 1651
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZNF354A' 1652
-./prog_seq 'geneNames_1.txt' 'exe_8' 'BRIP1' 1653
-./prog_seq 'geneNames_1.txt' 'exe_8' 'MAF' 1654
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZBTB16' 1655
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TEAD2' 1656
-./prog_seq 'geneNames_1.txt' 'exe_8' 'NR5A2' 1657
-./prog_seq 'geneNames_1.txt' 'exe_8' 'JUN' 1658
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZNF300' 1659
-./prog_seq 'geneNames_1.txt' 'exe_8' 'EPAS1' 1660
-./prog_seq 'geneNames_1.txt' 'exe_8' 'NOTCH3' 1661
-./prog_seq 'geneNames_1.txt' 'exe_8' 'MYC' 1662
-./prog_seq 'geneNames_1.txt' 'exe_8' 'PAWR' 1663
-./prog_seq 'geneNames_1.txt' 'exe_8' 'CREG1' 1664
-./prog_seq 'geneNames_1.txt' 'exe_8' 'FOSB' 1665
-./prog_seq 'geneNames_1.txt' 'exe_8' 'GLI1' 1666
-./prog_seq 'geneNames_1.txt' 'exe_8' 'PRDM14' 1667
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TFE3' 1668
-./prog_seq 'geneNames_1.txt' 'exe_8' 'MAFF' 1669
-./prog_seq 'geneNames_1.txt' 'exe_8' 'MED20' 1670
-./prog_seq 'geneNames_1.txt' 'exe_8' 'E2F5' 1671
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TRIM22' 1672
-./prog_seq 'geneNames_1.txt' 'exe_8' 'WDR5' 1673
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZNF217' 1674
-./prog_seq 'geneNames_1.txt' 'exe_8' 'PEG3' 1675
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZHX1' 1676
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TARDBP' 1677
-./prog_seq 'geneNames_1.txt' 'exe_8' 'SNAPC1' 1678
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZBTB3' 1679
-./prog_seq 'geneNames_1.txt' 'exe_8' 'NFATC2' 1680
-./prog_seq 'geneNames_1.txt' 'exe_8' 'SALL3' 1681
-./prog_seq 'geneNames_1.txt' 'exe_8' 'MAPK1' 1682
-./prog_seq 'geneNames_1.txt' 'exe_8' 'MEIS3' 1683
-./prog_seq 'geneNames_1.txt' 'exe_8' 'CHAF1A' 1684
-./prog_seq 'geneNames_1.txt' 'exe_8' 'DAXX' 1685
-./prog_seq 'geneNames_1.txt' 'exe_8' 'E2F8' 1686
-./prog_seq 'geneNames_1.txt' 'exe_8' 'GATA5' 1687
-./prog_seq 'geneNames_1.txt' 'exe_8' 'RFX5' 1688
-./prog_seq 'geneNames_1.txt' 'exe_8' 'HINFP' 1689
-./prog_seq 'geneNames_1.txt' 'exe_8' 'MLXIPL' 1690
-./prog_seq 'geneNames_1.txt' 'exe_8' 'SSBP2' 1691
-./prog_seq 'geneNames_1.txt' 'exe_8' 'RREB1' 1692
-./prog_seq 'geneNames_1.txt' 'exe_8' 'SMARCD2' 1693
-./prog_seq 'geneNames_1.txt' 'exe_8' 'HDGF' 1694
-./prog_seq 'geneNames_1.txt' 'exe_8' 'MEF2C' 1695
-./prog_seq 'geneNames_1.txt' 'exe_8' 'SSBP3' 1696
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TAF5' 1697
-./prog_seq 'geneNames_1.txt' 'exe_8' 'SRF' 1698
-./prog_seq 'geneNames_1.txt' 'exe_8' 'HIPK2' 1699
-./prog_seq 'geneNames_1.txt' 'exe_8' 'EOMES' 1700
-./prog_seq 'geneNames_1.txt' 'exe_8' 'NCOA1' 1701
-./prog_seq 'geneNames_1.txt' 'exe_8' 'CREB3L3' 1702
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ELL2' 1703
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TOPORS' 1704
-./prog_seq 'geneNames_1.txt' 'exe_8' 'BTG2' 1705
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ING5' 1706
-./prog_seq 'geneNames_1.txt' 'exe_8' 'HNF1B' 1707
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TCF4' 1708
-./prog_seq 'geneNames_1.txt' 'exe_8' 'IRF9' 1709
-./prog_seq 'geneNames_1.txt' 'exe_8' 'JARID2' 1710
-./prog_seq 'geneNames_1.txt' 'exe_8' 'HNRNPAB' 1711
-./prog_seq 'geneNames_1.txt' 'exe_8' 'RARG' 1712
-./prog_seq 'geneNames_1.txt' 'exe_8' 'GMEB1' 1713
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZNF107' 1714
-./prog_seq 'geneNames_1.txt' 'exe_8' 'GATAD2B' 1715
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ARID3B' 1716
-./prog_seq 'geneNames_1.txt' 'exe_8' 'WBP11' 1717
-./prog_seq 'geneNames_1.txt' 'exe_8' 'NCOA6' 1718
-./prog_seq 'geneNames_1.txt' 'exe_8' 'GLI2' 1719
-./prog_seq 'geneNames_1.txt' 'exe_8' 'FOSL1' 1720
-./prog_seq 'geneNames_1.txt' 'exe_8' 'E2F4' 1721
-./prog_seq 'geneNames_1.txt' 'exe_8' 'MXD1' 1722
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TBL1X' 1723
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZSCAN21' 1724
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TRIM27' 1725
-./prog_seq 'geneNames_1.txt' 'exe_8' 'EGFR' 1726
-./prog_seq 'geneNames_1.txt' 'exe_8' 'THAP11' 1727
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TFAP2C' 1728
-./prog_seq 'geneNames_1.txt' 'exe_8' 'LDB2' 1729
-./prog_seq 'geneNames_1.txt' 'exe_8' 'AES' 1730
-./prog_seq 'geneNames_1.txt' 'exe_8' 'FOXA1' 1731
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZBTB24' 1732
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TAF1A' 1733
-./prog_seq 'geneNames_1.txt' 'exe_8' 'BCL11B' 1734
-./prog_seq 'geneNames_1.txt' 'exe_8' 'PITX1' 1735
-./prog_seq 'geneNames_1.txt' 'exe_8' 'MCM2' 1736
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZNF670' 1737
-./prog_seq 'geneNames_1.txt' 'exe_8' 'GLIS3' 1738
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TEAD4' 1739
-./prog_seq 'geneNames_1.txt' 'exe_8' 'NR1I3' 1740
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZNF202' 1741
-./prog_seq 'geneNames_1.txt' 'exe_8' 'REST' 1742
-./prog_seq 'geneNames_1.txt' 'exe_8' 'JUND' 1743
-./prog_seq 'geneNames_1.txt' 'exe_8' 'CREB3L4' 1744
-./prog_seq 'geneNames_1.txt' 'exe_8' 'DDX20' 1745
-./prog_seq 'geneNames_1.txt' 'exe_8' 'HDAC1' 1746
-./prog_seq 'geneNames_1.txt' 'exe_8' 'CTDSPL' 1747
-./prog_seq 'geneNames_1.txt' 'exe_8' 'RNF2' 1748
-./prog_seq 'geneNames_1.txt' 'exe_8' 'CNTRL' 1749
-./prog_seq 'geneNames_1.txt' 'exe_8' 'HNRNPUL1' 1750
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ATF3' 1751
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZNF227' 1752
-./prog_seq 'geneNames_1.txt' 'exe_8' 'EZH2' 1753
-./prog_seq 'geneNames_1.txt' 'exe_8' 'SP100' 1754
-./prog_seq 'geneNames_1.txt' 'exe_8' 'CEBPA' 1755
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZFP64' 1756
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ASXL1' 1757
-./prog_seq 'geneNames_1.txt' 'exe_8' 'THAP1' 1758
-./prog_seq 'geneNames_1.txt' 'exe_8' 'FOXA2' 1759
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZIC2' 1760
-./prog_seq 'geneNames_1.txt' 'exe_8' 'KLF5' 1761
-./prog_seq 'geneNames_1.txt' 'exe_8' 'FOSL2' 1762
-./prog_seq 'geneNames_1.txt' 'exe_8' 'PIAS2' 1763
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TFDP1' 1764
-./prog_seq 'geneNames_1.txt' 'exe_8' 'FHL2' 1765
-./prog_seq 'geneNames_1.txt' 'exe_8' 'DRAP1' 1766
-./prog_seq 'geneNames_1.txt' 'exe_8' 'JAG1' 1767
-./prog_seq 'geneNames_1.txt' 'exe_8' 'GTF3C4' 1768
-./prog_seq 'geneNames_1.txt' 'exe_8' 'RUNX1T1' 1769
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TAF6' 1770
-./prog_seq 'geneNames_1.txt' 'exe_8' 'NR2F2' 1771
-./prog_seq 'geneNames_1.txt' 'exe_8' 'AHR' 1772
-./prog_seq 'geneNames_1.txt' 'exe_8' 'SEC14L2' 1773
-./prog_seq 'geneNames_1.txt' 'exe_8' 'SERTAD3' 1774
-./prog_seq 'geneNames_1.txt' 'exe_8' 'SIRT2' 1775
-./prog_seq 'geneNames_1.txt' 'exe_8' 'NEIL2' 1776
-./prog_seq 'geneNames_1.txt' 'exe_8' 'AATF' 1777
-./prog_seq 'geneNames_1.txt' 'exe_8' 'MCM8' 1778
-./prog_seq 'geneNames_1.txt' 'exe_8' 'MYBBP1A' 1779
-./prog_seq 'geneNames_1.txt' 'exe_8' 'UHRF1' 1780
-./prog_seq 'geneNames_1.txt' 'exe_8' 'GPM6B' 1781
-./prog_seq 'geneNames_1.txt' 'exe_8' 'FOXH1' 1782
-./prog_seq 'geneNames_1.txt' 'exe_8' 'FOXO1' 1783
-./prog_seq 'geneNames_1.txt' 'exe_8' 'BDP1' 1784
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ETS1' 1785
-./prog_seq 'geneNames_1.txt' 'exe_8' 'POU2F1' 1786
-./prog_seq 'geneNames_1.txt' 'exe_8' 'PLAGL2' 1787
-./prog_seq 'geneNames_1.txt' 'exe_8' 'JAZF1' 1788
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZNHIT3' 1789
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZNF675' 1790
-./prog_seq 'geneNames_1.txt' 'exe_8' 'MYCN' 1791
-./prog_seq 'geneNames_1.txt' 'exe_8' 'U2AF1' 1792
-./prog_seq 'geneNames_1.txt' 'exe_8' 'MAZ' 1793
-./prog_seq 'geneNames_1.txt' 'exe_8' 'NANOG' 1794
-./prog_seq 'geneNames_1.txt' 'exe_8' 'KDM4C' 1795
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TFDP2' 1796
-./prog_seq 'geneNames_1.txt' 'exe_8' 'GATA6' 1797
-./prog_seq 'geneNames_1.txt' 'exe_8' 'THRB' 1798
-./prog_seq 'geneNames_1.txt' 'exe_8' 'CCND1' 1799
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TCOF1' 1800
-./prog_seq 'geneNames_1.txt' 'exe_8' 'DR1' 1801
-./prog_seq 'geneNames_1.txt' 'exe_8' 'PPARA' 1802
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZNF398' 1803
-./prog_seq 'geneNames_1.txt' 'exe_8' 'KLF3' 1804
-./prog_seq 'geneNames_1.txt' 'exe_8' 'BCL11A' 1805
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TTF2' 1806
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZNF33A' 1807
-./prog_seq 'geneNames_1.txt' 'exe_8' 'E2F7' 1808
-./prog_seq 'geneNames_1.txt' 'exe_8' 'HTATSF1' 1809
-./prog_seq 'geneNames_1.txt' 'exe_8' 'HIF3A' 1810
-./prog_seq 'geneNames_1.txt' 'exe_8' 'PCGF6' 1811
-./prog_seq 'geneNames_1.txt' 'exe_8' 'PIAS3' 1812
-./prog_seq 'geneNames_1.txt' 'exe_8' 'POLR1E' 1813
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZNF74' 1814
-./prog_seq 'geneNames_1.txt' 'exe_8' 'PTRF' 1815
-./prog_seq 'geneNames_1.txt' 'exe_8' 'SP4' 1816
-./prog_seq 'geneNames_1.txt' 'exe_8' 'HNF4A' 1817
-./prog_seq 'geneNames_1.txt' 'exe_8' 'CHD8' 1818
-./prog_seq 'geneNames_1.txt' 'exe_8' 'NR3C1' 1819
-./prog_seq 'geneNames_1.txt' 'exe_8' 'PBX1' 1820
-./prog_seq 'geneNames_1.txt' 'exe_8' 'EHMT2' 1821
-./prog_seq 'geneNames_1.txt' 'exe_8' 'FOXM1' 1822
-./prog_seq 'geneNames_1.txt' 'exe_8' 'GRHL1' 1823
-./prog_seq 'geneNames_1.txt' 'exe_8' 'SCD5' 1824
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ZFHX3' 1825
-./prog_seq 'geneNames_1.txt' 'exe_8' 'DOT1L' 1826
-./prog_seq 'geneNames_1.txt' 'exe_8' 'E2F3' 1827
-./prog_seq 'geneNames_1.txt' 'exe_8' 'GTF3C5' 1828
-./prog_seq 'geneNames_1.txt' 'exe_8' 'POU5F1' 1829
-./prog_seq 'geneNames_1.txt' 'exe_8' 'POLR3D' 1830
-./prog_seq 'geneNames_1.txt' 'exe_8' 'SOX2' 1831
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TCF7L1' 1832
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TCFL5' 1833
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TIMELESS' 1834
-./prog_seq 'geneNames_1.txt' 'exe_8' 'BMPR1A' 1835
-./prog_seq 'geneNames_1.txt' 'exe_8' 'ANKRD1' 1836
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TRERF1' 1837
-./prog_seq 'geneNames_1.txt' 'exe_8' 'GTF2H2' 1838
-./prog_seq 'geneNames_1.txt' 'exe_8' 'IRF1' 1839
-./prog_seq 'geneNames_1.txt' 'exe_8' 'TBX3' 1840
-./prog_seq 'geneNames_1.txt' 'exe_9' 'AEBP1' 1841
-./prog_seq 'geneNames_1.txt' 'exe_9' 'PIM2' 1842
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TADA3' 1843
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ESRG' 1844
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ETV4' 1845
-./prog_seq 'geneNames_1.txt' 'exe_9' 'THY1' 1846
-./prog_seq 'geneNames_1.txt' 'exe_9' 'VEZF1' 1847
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ING1' 1848
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TNFAIP3' 1849
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TCF3' 1850
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TP53' 1851
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZNF397' 1852
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ELF1' 1853
-./prog_seq 'geneNames_1.txt' 'exe_9' 'NRIP1' 1854
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZFP36' 1855
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TRIM25' 1856
-./prog_seq 'geneNames_1.txt' 'exe_9' 'NR2F6' 1857
-./prog_seq 'geneNames_1.txt' 'exe_9' 'HCFC1' 1858
-./prog_seq 'geneNames_1.txt' 'exe_9' 'DDX54' 1859
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ESPL1' 1860
-./prog_seq 'geneNames_1.txt' 'exe_9' 'PDCD11' 1861
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZNRD1' 1862
-./prog_seq 'geneNames_1.txt' 'exe_9' 'SMAD3' 1863
-./prog_seq 'geneNames_1.txt' 'exe_9' 'SIRT1' 1864
-./prog_seq 'geneNames_1.txt' 'exe_9' 'HMGA2' 1865
-./prog_seq 'geneNames_1.txt' 'exe_9' 'EGF' 1866
-./prog_seq 'geneNames_1.txt' 'exe_9' 'HIST1H1E' 1867
-./prog_seq 'geneNames_1.txt' 'exe_9' 'BTG1' 1868
-./prog_seq 'geneNames_1.txt' 'exe_9' 'LHX1' 1869
-./prog_seq 'geneNames_1.txt' 'exe_9' 'NFIB' 1870
-./prog_seq 'geneNames_1.txt' 'exe_9' 'CDX2' 1871
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ETV1' 1872
-./prog_seq 'geneNames_1.txt' 'exe_9' 'BCOR' 1873
-./prog_seq 'geneNames_1.txt' 'exe_9' 'HIF1AN' 1874
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ETV5' 1875
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TCF19' 1876
-./prog_seq 'geneNames_1.txt' 'exe_9' 'CEBPD' 1877
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZIC3' 1878
-./prog_seq 'geneNames_1.txt' 'exe_9' 'BMP2' 1879
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ELAVL2' 1880
-./prog_seq 'geneNames_1.txt' 'exe_9' 'MED14' 1881
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZNF354A' 1882
-./prog_seq 'geneNames_1.txt' 'exe_9' 'BRIP1' 1883
-./prog_seq 'geneNames_1.txt' 'exe_9' 'MAF' 1884
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZBTB16' 1885
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TEAD2' 1886
-./prog_seq 'geneNames_1.txt' 'exe_9' 'NR5A2' 1887
-./prog_seq 'geneNames_1.txt' 'exe_9' 'JUN' 1888
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZNF300' 1889
-./prog_seq 'geneNames_1.txt' 'exe_9' 'EPAS1' 1890
-./prog_seq 'geneNames_1.txt' 'exe_9' 'NOTCH3' 1891
-./prog_seq 'geneNames_1.txt' 'exe_9' 'MYC' 1892
-./prog_seq 'geneNames_1.txt' 'exe_9' 'PAWR' 1893
-./prog_seq 'geneNames_1.txt' 'exe_9' 'CREG1' 1894
-./prog_seq 'geneNames_1.txt' 'exe_9' 'FOSB' 1895
-./prog_seq 'geneNames_1.txt' 'exe_9' 'GLI1' 1896
-./prog_seq 'geneNames_1.txt' 'exe_9' 'PRDM14' 1897
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TFE3' 1898
-./prog_seq 'geneNames_1.txt' 'exe_9' 'MAFF' 1899
-./prog_seq 'geneNames_1.txt' 'exe_9' 'MED20' 1900
-./prog_seq 'geneNames_1.txt' 'exe_9' 'E2F5' 1901
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TRIM22' 1902
-./prog_seq 'geneNames_1.txt' 'exe_9' 'WDR5' 1903
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZNF217' 1904
-./prog_seq 'geneNames_1.txt' 'exe_9' 'PEG3' 1905
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZHX1' 1906
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TARDBP' 1907
-./prog_seq 'geneNames_1.txt' 'exe_9' 'SNAPC1' 1908
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZBTB3' 1909
-./prog_seq 'geneNames_1.txt' 'exe_9' 'NFATC2' 1910
-./prog_seq 'geneNames_1.txt' 'exe_9' 'SALL3' 1911
-./prog_seq 'geneNames_1.txt' 'exe_9' 'MAPK1' 1912
-./prog_seq 'geneNames_1.txt' 'exe_9' 'MEIS3' 1913
-./prog_seq 'geneNames_1.txt' 'exe_9' 'CHAF1A' 1914
-./prog_seq 'geneNames_1.txt' 'exe_9' 'DAXX' 1915
-./prog_seq 'geneNames_1.txt' 'exe_9' 'E2F8' 1916
-./prog_seq 'geneNames_1.txt' 'exe_9' 'GATA5' 1917
-./prog_seq 'geneNames_1.txt' 'exe_9' 'RFX5' 1918
-./prog_seq 'geneNames_1.txt' 'exe_9' 'HINFP' 1919
-./prog_seq 'geneNames_1.txt' 'exe_9' 'MLXIPL' 1920
-./prog_seq 'geneNames_1.txt' 'exe_9' 'SSBP2' 1921
-./prog_seq 'geneNames_1.txt' 'exe_9' 'RREB1' 1922
-./prog_seq 'geneNames_1.txt' 'exe_9' 'SMARCD2' 1923
-./prog_seq 'geneNames_1.txt' 'exe_9' 'HDGF' 1924
-./prog_seq 'geneNames_1.txt' 'exe_9' 'MEF2C' 1925
-./prog_seq 'geneNames_1.txt' 'exe_9' 'SSBP3' 1926
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TAF5' 1927
-./prog_seq 'geneNames_1.txt' 'exe_9' 'SRF' 1928
-./prog_seq 'geneNames_1.txt' 'exe_9' 'HIPK2' 1929
-./prog_seq 'geneNames_1.txt' 'exe_9' 'EOMES' 1930
-./prog_seq 'geneNames_1.txt' 'exe_9' 'NCOA1' 1931
-./prog_seq 'geneNames_1.txt' 'exe_9' 'CREB3L3' 1932
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ELL2' 1933
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TOPORS' 1934
-./prog_seq 'geneNames_1.txt' 'exe_9' 'BTG2' 1935
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ING5' 1936
-./prog_seq 'geneNames_1.txt' 'exe_9' 'HNF1B' 1937
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TCF4' 1938
-./prog_seq 'geneNames_1.txt' 'exe_9' 'IRF9' 1939
-./prog_seq 'geneNames_1.txt' 'exe_9' 'JARID2' 1940
-./prog_seq 'geneNames_1.txt' 'exe_9' 'HNRNPAB' 1941
-./prog_seq 'geneNames_1.txt' 'exe_9' 'RARG' 1942
-./prog_seq 'geneNames_1.txt' 'exe_9' 'GMEB1' 1943
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZNF107' 1944
-./prog_seq 'geneNames_1.txt' 'exe_9' 'GATAD2B' 1945
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ARID3B' 1946
-./prog_seq 'geneNames_1.txt' 'exe_9' 'WBP11' 1947
-./prog_seq 'geneNames_1.txt' 'exe_9' 'NCOA6' 1948
-./prog_seq 'geneNames_1.txt' 'exe_9' 'GLI2' 1949
-./prog_seq 'geneNames_1.txt' 'exe_9' 'FOSL1' 1950
-./prog_seq 'geneNames_1.txt' 'exe_9' 'E2F4' 1951
-./prog_seq 'geneNames_1.txt' 'exe_9' 'MXD1' 1952
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TBL1X' 1953
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZSCAN21' 1954
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TRIM27' 1955
-./prog_seq 'geneNames_1.txt' 'exe_9' 'EGFR' 1956
-./prog_seq 'geneNames_1.txt' 'exe_9' 'THAP11' 1957
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TFAP2C' 1958
-./prog_seq 'geneNames_1.txt' 'exe_9' 'LDB2' 1959
-./prog_seq 'geneNames_1.txt' 'exe_9' 'AES' 1960
-./prog_seq 'geneNames_1.txt' 'exe_9' 'FOXA1' 1961
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZBTB24' 1962
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TAF1A' 1963
-./prog_seq 'geneNames_1.txt' 'exe_9' 'BCL11B' 1964
-./prog_seq 'geneNames_1.txt' 'exe_9' 'PITX1' 1965
-./prog_seq 'geneNames_1.txt' 'exe_9' 'MCM2' 1966
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZNF670' 1967
-./prog_seq 'geneNames_1.txt' 'exe_9' 'GLIS3' 1968
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TEAD4' 1969
-./prog_seq 'geneNames_1.txt' 'exe_9' 'NR1I3' 1970
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZNF202' 1971
-./prog_seq 'geneNames_1.txt' 'exe_9' 'REST' 1972
-./prog_seq 'geneNames_1.txt' 'exe_9' 'JUND' 1973
-./prog_seq 'geneNames_1.txt' 'exe_9' 'CREB3L4' 1974
-./prog_seq 'geneNames_1.txt' 'exe_9' 'DDX20' 1975
-./prog_seq 'geneNames_1.txt' 'exe_9' 'HDAC1' 1976
-./prog_seq 'geneNames_1.txt' 'exe_9' 'CTDSPL' 1977
-./prog_seq 'geneNames_1.txt' 'exe_9' 'RNF2' 1978
-./prog_seq 'geneNames_1.txt' 'exe_9' 'CNTRL' 1979
-./prog_seq 'geneNames_1.txt' 'exe_9' 'HNRNPUL1' 1980
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ATF3' 1981
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZNF227' 1982
-./prog_seq 'geneNames_1.txt' 'exe_9' 'EZH2' 1983
-./prog_seq 'geneNames_1.txt' 'exe_9' 'SP100' 1984
-./prog_seq 'geneNames_1.txt' 'exe_9' 'CEBPA' 1985
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZFP64' 1986
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ASXL1' 1987
-./prog_seq 'geneNames_1.txt' 'exe_9' 'THAP1' 1988
-./prog_seq 'geneNames_1.txt' 'exe_9' 'FOXA2' 1989
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZIC2' 1990
-./prog_seq 'geneNames_1.txt' 'exe_9' 'KLF5' 1991
-./prog_seq 'geneNames_1.txt' 'exe_9' 'FOSL2' 1992
-./prog_seq 'geneNames_1.txt' 'exe_9' 'PIAS2' 1993
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TFDP1' 1994
-./prog_seq 'geneNames_1.txt' 'exe_9' 'FHL2' 1995
-./prog_seq 'geneNames_1.txt' 'exe_9' 'DRAP1' 1996
-./prog_seq 'geneNames_1.txt' 'exe_9' 'JAG1' 1997
-./prog_seq 'geneNames_1.txt' 'exe_9' 'GTF3C4' 1998
-./prog_seq 'geneNames_1.txt' 'exe_9' 'RUNX1T1' 1999
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TAF6' 2000
-./prog_seq 'geneNames_1.txt' 'exe_9' 'NR2F2' 2001
-./prog_seq 'geneNames_1.txt' 'exe_9' 'AHR' 2002
-./prog_seq 'geneNames_1.txt' 'exe_9' 'SEC14L2' 2003
-./prog_seq 'geneNames_1.txt' 'exe_9' 'SERTAD3' 2004
-./prog_seq 'geneNames_1.txt' 'exe_9' 'SIRT2' 2005
-./prog_seq 'geneNames_1.txt' 'exe_9' 'NEIL2' 2006
-./prog_seq 'geneNames_1.txt' 'exe_9' 'AATF' 2007
-./prog_seq 'geneNames_1.txt' 'exe_9' 'MCM8' 2008
-./prog_seq 'geneNames_1.txt' 'exe_9' 'MYBBP1A' 2009
-./prog_seq 'geneNames_1.txt' 'exe_9' 'UHRF1' 2010
-./prog_seq 'geneNames_1.txt' 'exe_9' 'GPM6B' 2011
-./prog_seq 'geneNames_1.txt' 'exe_9' 'FOXH1' 2012
-./prog_seq 'geneNames_1.txt' 'exe_9' 'FOXO1' 2013
-./prog_seq 'geneNames_1.txt' 'exe_9' 'BDP1' 2014
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ETS1' 2015
-./prog_seq 'geneNames_1.txt' 'exe_9' 'POU2F1' 2016
-./prog_seq 'geneNames_1.txt' 'exe_9' 'PLAGL2' 2017
-./prog_seq 'geneNames_1.txt' 'exe_9' 'JAZF1' 2018
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZNHIT3' 2019
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZNF675' 2020
-./prog_seq 'geneNames_1.txt' 'exe_9' 'MYCN' 2021
-./prog_seq 'geneNames_1.txt' 'exe_9' 'U2AF1' 2022
-./prog_seq 'geneNames_1.txt' 'exe_9' 'MAZ' 2023
-./prog_seq 'geneNames_1.txt' 'exe_9' 'NANOG' 2024
-./prog_seq 'geneNames_1.txt' 'exe_9' 'KDM4C' 2025
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TFDP2' 2026
-./prog_seq 'geneNames_1.txt' 'exe_9' 'GATA6' 2027
-./prog_seq 'geneNames_1.txt' 'exe_9' 'THRB' 2028
-./prog_seq 'geneNames_1.txt' 'exe_9' 'CCND1' 2029
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TCOF1' 2030
-./prog_seq 'geneNames_1.txt' 'exe_9' 'DR1' 2031
-./prog_seq 'geneNames_1.txt' 'exe_9' 'PPARA' 2032
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZNF398' 2033
-./prog_seq 'geneNames_1.txt' 'exe_9' 'KLF3' 2034
-./prog_seq 'geneNames_1.txt' 'exe_9' 'BCL11A' 2035
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TTF2' 2036
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZNF33A' 2037
-./prog_seq 'geneNames_1.txt' 'exe_9' 'E2F7' 2038
-./prog_seq 'geneNames_1.txt' 'exe_9' 'HTATSF1' 2039
-./prog_seq 'geneNames_1.txt' 'exe_9' 'HIF3A' 2040
-./prog_seq 'geneNames_1.txt' 'exe_9' 'PCGF6' 2041
-./prog_seq 'geneNames_1.txt' 'exe_9' 'PIAS3' 2042
-./prog_seq 'geneNames_1.txt' 'exe_9' 'POLR1E' 2043
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZNF74' 2044
-./prog_seq 'geneNames_1.txt' 'exe_9' 'PTRF' 2045
-./prog_seq 'geneNames_1.txt' 'exe_9' 'SP4' 2046
-./prog_seq 'geneNames_1.txt' 'exe_9' 'HNF4A' 2047
-./prog_seq 'geneNames_1.txt' 'exe_9' 'CHD8' 2048
-./prog_seq 'geneNames_1.txt' 'exe_9' 'NR3C1' 2049
-./prog_seq 'geneNames_1.txt' 'exe_9' 'PBX1' 2050
-./prog_seq 'geneNames_1.txt' 'exe_9' 'EHMT2' 2051
-./prog_seq 'geneNames_1.txt' 'exe_9' 'FOXM1' 2052
-./prog_seq 'geneNames_1.txt' 'exe_9' 'GRHL1' 2053
-./prog_seq 'geneNames_1.txt' 'exe_9' 'SCD5' 2054
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ZFHX3' 2055
-./prog_seq 'geneNames_1.txt' 'exe_9' 'DOT1L' 2056
-./prog_seq 'geneNames_1.txt' 'exe_9' 'E2F3' 2057
-./prog_seq 'geneNames_1.txt' 'exe_9' 'GTF3C5' 2058
-./prog_seq 'geneNames_1.txt' 'exe_9' 'POU5F1' 2059
-./prog_seq 'geneNames_1.txt' 'exe_9' 'POLR3D' 2060
-./prog_seq 'geneNames_1.txt' 'exe_9' 'SOX2' 2061
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TCF7L1' 2062
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TCFL5' 2063
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TIMELESS' 2064
-./prog_seq 'geneNames_1.txt' 'exe_9' 'BMPR1A' 2065
-./prog_seq 'geneNames_1.txt' 'exe_9' 'ANKRD1' 2066
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TRERF1' 2067
-./prog_seq 'geneNames_1.txt' 'exe_9' 'GTF2H2' 2068
-./prog_seq 'geneNames_1.txt' 'exe_9' 'IRF1' 2069
-./prog_seq 'geneNames_1.txt' 'exe_9' 'TBX3' 2070
-./prog_seq 'geneNames_1.txt' 'exe_10' 'AEBP1' 2071
-./prog_seq 'geneNames_1.txt' 'exe_10' 'PIM2' 2072
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TADA3' 2073
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ESRG' 2074
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ETV4' 2075
-./prog_seq 'geneNames_1.txt' 'exe_10' 'THY1' 2076
-./prog_seq 'geneNames_1.txt' 'exe_10' 'VEZF1' 2077
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ING1' 2078
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TNFAIP3' 2079
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TCF3' 2080
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TP53' 2081
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZNF397' 2082
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ELF1' 2083
-./prog_seq 'geneNames_1.txt' 'exe_10' 'NRIP1' 2084
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZFP36' 2085
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TRIM25' 2086
-./prog_seq 'geneNames_1.txt' 'exe_10' 'NR2F6' 2087
-./prog_seq 'geneNames_1.txt' 'exe_10' 'HCFC1' 2088
-./prog_seq 'geneNames_1.txt' 'exe_10' 'DDX54' 2089
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ESPL1' 2090
-./prog_seq 'geneNames_1.txt' 'exe_10' 'PDCD11' 2091
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZNRD1' 2092
-./prog_seq 'geneNames_1.txt' 'exe_10' 'SMAD3' 2093
-./prog_seq 'geneNames_1.txt' 'exe_10' 'SIRT1' 2094
-./prog_seq 'geneNames_1.txt' 'exe_10' 'HMGA2' 2095
-./prog_seq 'geneNames_1.txt' 'exe_10' 'EGF' 2096
-./prog_seq 'geneNames_1.txt' 'exe_10' 'HIST1H1E' 2097
-./prog_seq 'geneNames_1.txt' 'exe_10' 'BTG1' 2098
-./prog_seq 'geneNames_1.txt' 'exe_10' 'LHX1' 2099
-./prog_seq 'geneNames_1.txt' 'exe_10' 'NFIB' 2100
-./prog_seq 'geneNames_1.txt' 'exe_10' 'CDX2' 2101
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ETV1' 2102
-./prog_seq 'geneNames_1.txt' 'exe_10' 'BCOR' 2103
-./prog_seq 'geneNames_1.txt' 'exe_10' 'HIF1AN' 2104
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ETV5' 2105
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TCF19' 2106
-./prog_seq 'geneNames_1.txt' 'exe_10' 'CEBPD' 2107
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZIC3' 2108
-./prog_seq 'geneNames_1.txt' 'exe_10' 'BMP2' 2109
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ELAVL2' 2110
-./prog_seq 'geneNames_1.txt' 'exe_10' 'MED14' 2111
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZNF354A' 2112
-./prog_seq 'geneNames_1.txt' 'exe_10' 'BRIP1' 2113
-./prog_seq 'geneNames_1.txt' 'exe_10' 'MAF' 2114
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZBTB16' 2115
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TEAD2' 2116
-./prog_seq 'geneNames_1.txt' 'exe_10' 'NR5A2' 2117
-./prog_seq 'geneNames_1.txt' 'exe_10' 'JUN' 2118
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZNF300' 2119
-./prog_seq 'geneNames_1.txt' 'exe_10' 'EPAS1' 2120
-./prog_seq 'geneNames_1.txt' 'exe_10' 'NOTCH3' 2121
-./prog_seq 'geneNames_1.txt' 'exe_10' 'MYC' 2122
-./prog_seq 'geneNames_1.txt' 'exe_10' 'PAWR' 2123
-./prog_seq 'geneNames_1.txt' 'exe_10' 'CREG1' 2124
-./prog_seq 'geneNames_1.txt' 'exe_10' 'FOSB' 2125
-./prog_seq 'geneNames_1.txt' 'exe_10' 'GLI1' 2126
-./prog_seq 'geneNames_1.txt' 'exe_10' 'PRDM14' 2127
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TFE3' 2128
-./prog_seq 'geneNames_1.txt' 'exe_10' 'MAFF' 2129
-./prog_seq 'geneNames_1.txt' 'exe_10' 'MED20' 2130
-./prog_seq 'geneNames_1.txt' 'exe_10' 'E2F5' 2131
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TRIM22' 2132
-./prog_seq 'geneNames_1.txt' 'exe_10' 'WDR5' 2133
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZNF217' 2134
-./prog_seq 'geneNames_1.txt' 'exe_10' 'PEG3' 2135
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZHX1' 2136
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TARDBP' 2137
-./prog_seq 'geneNames_1.txt' 'exe_10' 'SNAPC1' 2138
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZBTB3' 2139
-./prog_seq 'geneNames_1.txt' 'exe_10' 'NFATC2' 2140
-./prog_seq 'geneNames_1.txt' 'exe_10' 'SALL3' 2141
-./prog_seq 'geneNames_1.txt' 'exe_10' 'MAPK1' 2142
-./prog_seq 'geneNames_1.txt' 'exe_10' 'MEIS3' 2143
-./prog_seq 'geneNames_1.txt' 'exe_10' 'CHAF1A' 2144
-./prog_seq 'geneNames_1.txt' 'exe_10' 'DAXX' 2145
-./prog_seq 'geneNames_1.txt' 'exe_10' 'E2F8' 2146
-./prog_seq 'geneNames_1.txt' 'exe_10' 'GATA5' 2147
-./prog_seq 'geneNames_1.txt' 'exe_10' 'RFX5' 2148
-./prog_seq 'geneNames_1.txt' 'exe_10' 'HINFP' 2149
-./prog_seq 'geneNames_1.txt' 'exe_10' 'MLXIPL' 2150
-./prog_seq 'geneNames_1.txt' 'exe_10' 'SSBP2' 2151
-./prog_seq 'geneNames_1.txt' 'exe_10' 'RREB1' 2152
-./prog_seq 'geneNames_1.txt' 'exe_10' 'SMARCD2' 2153
-./prog_seq 'geneNames_1.txt' 'exe_10' 'HDGF' 2154
-./prog_seq 'geneNames_1.txt' 'exe_10' 'MEF2C' 2155
-./prog_seq 'geneNames_1.txt' 'exe_10' 'SSBP3' 2156
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TAF5' 2157
-./prog_seq 'geneNames_1.txt' 'exe_10' 'SRF' 2158
-./prog_seq 'geneNames_1.txt' 'exe_10' 'HIPK2' 2159
-./prog_seq 'geneNames_1.txt' 'exe_10' 'EOMES' 2160
-./prog_seq 'geneNames_1.txt' 'exe_10' 'NCOA1' 2161
-./prog_seq 'geneNames_1.txt' 'exe_10' 'CREB3L3' 2162
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ELL2' 2163
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TOPORS' 2164
-./prog_seq 'geneNames_1.txt' 'exe_10' 'BTG2' 2165
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ING5' 2166
-./prog_seq 'geneNames_1.txt' 'exe_10' 'HNF1B' 2167
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TCF4' 2168
-./prog_seq 'geneNames_1.txt' 'exe_10' 'IRF9' 2169
-./prog_seq 'geneNames_1.txt' 'exe_10' 'JARID2' 2170
-./prog_seq 'geneNames_1.txt' 'exe_10' 'HNRNPAB' 2171
-./prog_seq 'geneNames_1.txt' 'exe_10' 'RARG' 2172
-./prog_seq 'geneNames_1.txt' 'exe_10' 'GMEB1' 2173
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZNF107' 2174
-./prog_seq 'geneNames_1.txt' 'exe_10' 'GATAD2B' 2175
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ARID3B' 2176
-./prog_seq 'geneNames_1.txt' 'exe_10' 'WBP11' 2177
-./prog_seq 'geneNames_1.txt' 'exe_10' 'NCOA6' 2178
-./prog_seq 'geneNames_1.txt' 'exe_10' 'GLI2' 2179
-./prog_seq 'geneNames_1.txt' 'exe_10' 'FOSL1' 2180
-./prog_seq 'geneNames_1.txt' 'exe_10' 'E2F4' 2181
-./prog_seq 'geneNames_1.txt' 'exe_10' 'MXD1' 2182
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TBL1X' 2183
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZSCAN21' 2184
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TRIM27' 2185
-./prog_seq 'geneNames_1.txt' 'exe_10' 'EGFR' 2186
-./prog_seq 'geneNames_1.txt' 'exe_10' 'THAP11' 2187
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TFAP2C' 2188
-./prog_seq 'geneNames_1.txt' 'exe_10' 'LDB2' 2189
-./prog_seq 'geneNames_1.txt' 'exe_10' 'AES' 2190
-./prog_seq 'geneNames_1.txt' 'exe_10' 'FOXA1' 2191
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZBTB24' 2192
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TAF1A' 2193
-./prog_seq 'geneNames_1.txt' 'exe_10' 'BCL11B' 2194
-./prog_seq 'geneNames_1.txt' 'exe_10' 'PITX1' 2195
-./prog_seq 'geneNames_1.txt' 'exe_10' 'MCM2' 2196
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZNF670' 2197
-./prog_seq 'geneNames_1.txt' 'exe_10' 'GLIS3' 2198
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TEAD4' 2199
-./prog_seq 'geneNames_1.txt' 'exe_10' 'NR1I3' 2200
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZNF202' 2201
-./prog_seq 'geneNames_1.txt' 'exe_10' 'REST' 2202
-./prog_seq 'geneNames_1.txt' 'exe_10' 'JUND' 2203
-./prog_seq 'geneNames_1.txt' 'exe_10' 'CREB3L4' 2204
-./prog_seq 'geneNames_1.txt' 'exe_10' 'DDX20' 2205
-./prog_seq 'geneNames_1.txt' 'exe_10' 'HDAC1' 2206
-./prog_seq 'geneNames_1.txt' 'exe_10' 'CTDSPL' 2207
-./prog_seq 'geneNames_1.txt' 'exe_10' 'RNF2' 2208
-./prog_seq 'geneNames_1.txt' 'exe_10' 'CNTRL' 2209
-./prog_seq 'geneNames_1.txt' 'exe_10' 'HNRNPUL1' 2210
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ATF3' 2211
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZNF227' 2212
-./prog_seq 'geneNames_1.txt' 'exe_10' 'EZH2' 2213
-./prog_seq 'geneNames_1.txt' 'exe_10' 'SP100' 2214
-./prog_seq 'geneNames_1.txt' 'exe_10' 'CEBPA' 2215
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZFP64' 2216
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ASXL1' 2217
-./prog_seq 'geneNames_1.txt' 'exe_10' 'THAP1' 2218
-./prog_seq 'geneNames_1.txt' 'exe_10' 'FOXA2' 2219
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZIC2' 2220
-./prog_seq 'geneNames_1.txt' 'exe_10' 'KLF5' 2221
-./prog_seq 'geneNames_1.txt' 'exe_10' 'FOSL2' 2222
-./prog_seq 'geneNames_1.txt' 'exe_10' 'PIAS2' 2223
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TFDP1' 2224
-./prog_seq 'geneNames_1.txt' 'exe_10' 'FHL2' 2225
-./prog_seq 'geneNames_1.txt' 'exe_10' 'DRAP1' 2226
-./prog_seq 'geneNames_1.txt' 'exe_10' 'JAG1' 2227
-./prog_seq 'geneNames_1.txt' 'exe_10' 'GTF3C4' 2228
-./prog_seq 'geneNames_1.txt' 'exe_10' 'RUNX1T1' 2229
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TAF6' 2230
-./prog_seq 'geneNames_1.txt' 'exe_10' 'NR2F2' 2231
-./prog_seq 'geneNames_1.txt' 'exe_10' 'AHR' 2232
-./prog_seq 'geneNames_1.txt' 'exe_10' 'SEC14L2' 2233
-./prog_seq 'geneNames_1.txt' 'exe_10' 'SERTAD3' 2234
-./prog_seq 'geneNames_1.txt' 'exe_10' 'SIRT2' 2235
-./prog_seq 'geneNames_1.txt' 'exe_10' 'NEIL2' 2236
-./prog_seq 'geneNames_1.txt' 'exe_10' 'AATF' 2237
-./prog_seq 'geneNames_1.txt' 'exe_10' 'MCM8' 2238
-./prog_seq 'geneNames_1.txt' 'exe_10' 'MYBBP1A' 2239
-./prog_seq 'geneNames_1.txt' 'exe_10' 'UHRF1' 2240
-./prog_seq 'geneNames_1.txt' 'exe_10' 'GPM6B' 2241
-./prog_seq 'geneNames_1.txt' 'exe_10' 'FOXH1' 2242
-./prog_seq 'geneNames_1.txt' 'exe_10' 'FOXO1' 2243
-./prog_seq 'geneNames_1.txt' 'exe_10' 'BDP1' 2244
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ETS1' 2245
-./prog_seq 'geneNames_1.txt' 'exe_10' 'POU2F1' 2246
-./prog_seq 'geneNames_1.txt' 'exe_10' 'PLAGL2' 2247
-./prog_seq 'geneNames_1.txt' 'exe_10' 'JAZF1' 2248
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZNHIT3' 2249
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZNF675' 2250
-./prog_seq 'geneNames_1.txt' 'exe_10' 'MYCN' 2251
-./prog_seq 'geneNames_1.txt' 'exe_10' 'U2AF1' 2252
-./prog_seq 'geneNames_1.txt' 'exe_10' 'MAZ' 2253
-./prog_seq 'geneNames_1.txt' 'exe_10' 'NANOG' 2254
-./prog_seq 'geneNames_1.txt' 'exe_10' 'KDM4C' 2255
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TFDP2' 2256
-./prog_seq 'geneNames_1.txt' 'exe_10' 'GATA6' 2257
-./prog_seq 'geneNames_1.txt' 'exe_10' 'THRB' 2258
-./prog_seq 'geneNames_1.txt' 'exe_10' 'CCND1' 2259
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TCOF1' 2260
-./prog_seq 'geneNames_1.txt' 'exe_10' 'DR1' 2261
-./prog_seq 'geneNames_1.txt' 'exe_10' 'PPARA' 2262
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZNF398' 2263
-./prog_seq 'geneNames_1.txt' 'exe_10' 'KLF3' 2264
-./prog_seq 'geneNames_1.txt' 'exe_10' 'BCL11A' 2265
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TTF2' 2266
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZNF33A' 2267
-./prog_seq 'geneNames_1.txt' 'exe_10' 'E2F7' 2268
-./prog_seq 'geneNames_1.txt' 'exe_10' 'HTATSF1' 2269
-./prog_seq 'geneNames_1.txt' 'exe_10' 'HIF3A' 2270
-./prog_seq 'geneNames_1.txt' 'exe_10' 'PCGF6' 2271
-./prog_seq 'geneNames_1.txt' 'exe_10' 'PIAS3' 2272
-./prog_seq 'geneNames_1.txt' 'exe_10' 'POLR1E' 2273
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZNF74' 2274
-./prog_seq 'geneNames_1.txt' 'exe_10' 'PTRF' 2275
-./prog_seq 'geneNames_1.txt' 'exe_10' 'SP4' 2276
-./prog_seq 'geneNames_1.txt' 'exe_10' 'HNF4A' 2277
-./prog_seq 'geneNames_1.txt' 'exe_10' 'CHD8' 2278
-./prog_seq 'geneNames_1.txt' 'exe_10' 'NR3C1' 2279
-./prog_seq 'geneNames_1.txt' 'exe_10' 'PBX1' 2280
-./prog_seq 'geneNames_1.txt' 'exe_10' 'EHMT2' 2281
-./prog_seq 'geneNames_1.txt' 'exe_10' 'FOXM1' 2282
-./prog_seq 'geneNames_1.txt' 'exe_10' 'GRHL1' 2283
-./prog_seq 'geneNames_1.txt' 'exe_10' 'SCD5' 2284
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ZFHX3' 2285
-./prog_seq 'geneNames_1.txt' 'exe_10' 'DOT1L' 2286
-./prog_seq 'geneNames_1.txt' 'exe_10' 'E2F3' 2287
-./prog_seq 'geneNames_1.txt' 'exe_10' 'GTF3C5' 2288
-./prog_seq 'geneNames_1.txt' 'exe_10' 'POU5F1' 2289
-./prog_seq 'geneNames_1.txt' 'exe_10' 'POLR3D' 2290
-./prog_seq 'geneNames_1.txt' 'exe_10' 'SOX2' 2291
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TCF7L1' 2292
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TCFL5' 2293
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TIMELESS' 2294
-./prog_seq 'geneNames_1.txt' 'exe_10' 'BMPR1A' 2295
-./prog_seq 'geneNames_1.txt' 'exe_10' 'ANKRD1' 2296
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TRERF1' 2297
-./prog_seq 'geneNames_1.txt' 'exe_10' 'GTF2H2' 2298
-./prog_seq 'geneNames_1.txt' 'exe_10' 'IRF1' 2299
-./prog_seq 'geneNames_1.txt' 'exe_10' 'TBX3' 2300
-./prog_seq 'geneNames_1.txt' 'exe_11' 'AEBP1' 2301
-./prog_seq 'geneNames_1.txt' 'exe_11' 'PIM2' 2302
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TADA3' 2303
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ESRG' 2304
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ETV4' 2305
-./prog_seq 'geneNames_1.txt' 'exe_11' 'THY1' 2306
-./prog_seq 'geneNames_1.txt' 'exe_11' 'VEZF1' 2307
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ING1' 2308
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TNFAIP3' 2309
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TCF3' 2310
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TP53' 2311
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZNF397' 2312
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ELF1' 2313
-./prog_seq 'geneNames_1.txt' 'exe_11' 'NRIP1' 2314
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZFP36' 2315
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TRIM25' 2316
-./prog_seq 'geneNames_1.txt' 'exe_11' 'NR2F6' 2317
-./prog_seq 'geneNames_1.txt' 'exe_11' 'HCFC1' 2318
-./prog_seq 'geneNames_1.txt' 'exe_11' 'DDX54' 2319
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ESPL1' 2320
-./prog_seq 'geneNames_1.txt' 'exe_11' 'PDCD11' 2321
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZNRD1' 2322
-./prog_seq 'geneNames_1.txt' 'exe_11' 'SMAD3' 2323
-./prog_seq 'geneNames_1.txt' 'exe_11' 'SIRT1' 2324
-./prog_seq 'geneNames_1.txt' 'exe_11' 'HMGA2' 2325
-./prog_seq 'geneNames_1.txt' 'exe_11' 'EGF' 2326
-./prog_seq 'geneNames_1.txt' 'exe_11' 'HIST1H1E' 2327
-./prog_seq 'geneNames_1.txt' 'exe_11' 'BTG1' 2328
-./prog_seq 'geneNames_1.txt' 'exe_11' 'LHX1' 2329
-./prog_seq 'geneNames_1.txt' 'exe_11' 'NFIB' 2330
-./prog_seq 'geneNames_1.txt' 'exe_11' 'CDX2' 2331
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ETV1' 2332
-./prog_seq 'geneNames_1.txt' 'exe_11' 'BCOR' 2333
-./prog_seq 'geneNames_1.txt' 'exe_11' 'HIF1AN' 2334
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ETV5' 2335
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TCF19' 2336
-./prog_seq 'geneNames_1.txt' 'exe_11' 'CEBPD' 2337
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZIC3' 2338
-./prog_seq 'geneNames_1.txt' 'exe_11' 'BMP2' 2339
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ELAVL2' 2340
-./prog_seq 'geneNames_1.txt' 'exe_11' 'MED14' 2341
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZNF354A' 2342
-./prog_seq 'geneNames_1.txt' 'exe_11' 'BRIP1' 2343
-./prog_seq 'geneNames_1.txt' 'exe_11' 'MAF' 2344
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZBTB16' 2345
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TEAD2' 2346
-./prog_seq 'geneNames_1.txt' 'exe_11' 'NR5A2' 2347
-./prog_seq 'geneNames_1.txt' 'exe_11' 'JUN' 2348
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZNF300' 2349
-./prog_seq 'geneNames_1.txt' 'exe_11' 'EPAS1' 2350
-./prog_seq 'geneNames_1.txt' 'exe_11' 'NOTCH3' 2351
-./prog_seq 'geneNames_1.txt' 'exe_11' 'MYC' 2352
-./prog_seq 'geneNames_1.txt' 'exe_11' 'PAWR' 2353
-./prog_seq 'geneNames_1.txt' 'exe_11' 'CREG1' 2354
-./prog_seq 'geneNames_1.txt' 'exe_11' 'FOSB' 2355
-./prog_seq 'geneNames_1.txt' 'exe_11' 'GLI1' 2356
-./prog_seq 'geneNames_1.txt' 'exe_11' 'PRDM14' 2357
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TFE3' 2358
-./prog_seq 'geneNames_1.txt' 'exe_11' 'MAFF' 2359
-./prog_seq 'geneNames_1.txt' 'exe_11' 'MED20' 2360
-./prog_seq 'geneNames_1.txt' 'exe_11' 'E2F5' 2361
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TRIM22' 2362
-./prog_seq 'geneNames_1.txt' 'exe_11' 'WDR5' 2363
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZNF217' 2364
-./prog_seq 'geneNames_1.txt' 'exe_11' 'PEG3' 2365
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZHX1' 2366
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TARDBP' 2367
-./prog_seq 'geneNames_1.txt' 'exe_11' 'SNAPC1' 2368
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZBTB3' 2369
-./prog_seq 'geneNames_1.txt' 'exe_11' 'NFATC2' 2370
-./prog_seq 'geneNames_1.txt' 'exe_11' 'SALL3' 2371
-./prog_seq 'geneNames_1.txt' 'exe_11' 'MAPK1' 2372
-./prog_seq 'geneNames_1.txt' 'exe_11' 'MEIS3' 2373
-./prog_seq 'geneNames_1.txt' 'exe_11' 'CHAF1A' 2374
-./prog_seq 'geneNames_1.txt' 'exe_11' 'DAXX' 2375
-./prog_seq 'geneNames_1.txt' 'exe_11' 'E2F8' 2376
-./prog_seq 'geneNames_1.txt' 'exe_11' 'GATA5' 2377
-./prog_seq 'geneNames_1.txt' 'exe_11' 'RFX5' 2378
-./prog_seq 'geneNames_1.txt' 'exe_11' 'HINFP' 2379
-./prog_seq 'geneNames_1.txt' 'exe_11' 'MLXIPL' 2380
-./prog_seq 'geneNames_1.txt' 'exe_11' 'SSBP2' 2381
-./prog_seq 'geneNames_1.txt' 'exe_11' 'RREB1' 2382
-./prog_seq 'geneNames_1.txt' 'exe_11' 'SMARCD2' 2383
-./prog_seq 'geneNames_1.txt' 'exe_11' 'HDGF' 2384
-./prog_seq 'geneNames_1.txt' 'exe_11' 'MEF2C' 2385
-./prog_seq 'geneNames_1.txt' 'exe_11' 'SSBP3' 2386
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TAF5' 2387
-./prog_seq 'geneNames_1.txt' 'exe_11' 'SRF' 2388
-./prog_seq 'geneNames_1.txt' 'exe_11' 'HIPK2' 2389
-./prog_seq 'geneNames_1.txt' 'exe_11' 'EOMES' 2390
-./prog_seq 'geneNames_1.txt' 'exe_11' 'NCOA1' 2391
-./prog_seq 'geneNames_1.txt' 'exe_11' 'CREB3L3' 2392
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ELL2' 2393
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TOPORS' 2394
-./prog_seq 'geneNames_1.txt' 'exe_11' 'BTG2' 2395
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ING5' 2396
-./prog_seq 'geneNames_1.txt' 'exe_11' 'HNF1B' 2397
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TCF4' 2398
-./prog_seq 'geneNames_1.txt' 'exe_11' 'IRF9' 2399
-./prog_seq 'geneNames_1.txt' 'exe_11' 'JARID2' 2400
-./prog_seq 'geneNames_1.txt' 'exe_11' 'HNRNPAB' 2401
-./prog_seq 'geneNames_1.txt' 'exe_11' 'RARG' 2402
-./prog_seq 'geneNames_1.txt' 'exe_11' 'GMEB1' 2403
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZNF107' 2404
-./prog_seq 'geneNames_1.txt' 'exe_11' 'GATAD2B' 2405
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ARID3B' 2406
-./prog_seq 'geneNames_1.txt' 'exe_11' 'WBP11' 2407
-./prog_seq 'geneNames_1.txt' 'exe_11' 'NCOA6' 2408
-./prog_seq 'geneNames_1.txt' 'exe_11' 'GLI2' 2409
-./prog_seq 'geneNames_1.txt' 'exe_11' 'FOSL1' 2410
-./prog_seq 'geneNames_1.txt' 'exe_11' 'E2F4' 2411
-./prog_seq 'geneNames_1.txt' 'exe_11' 'MXD1' 2412
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TBL1X' 2413
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZSCAN21' 2414
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TRIM27' 2415
-./prog_seq 'geneNames_1.txt' 'exe_11' 'EGFR' 2416
-./prog_seq 'geneNames_1.txt' 'exe_11' 'THAP11' 2417
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TFAP2C' 2418
-./prog_seq 'geneNames_1.txt' 'exe_11' 'LDB2' 2419
-./prog_seq 'geneNames_1.txt' 'exe_11' 'AES' 2420
-./prog_seq 'geneNames_1.txt' 'exe_11' 'FOXA1' 2421
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZBTB24' 2422
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TAF1A' 2423
-./prog_seq 'geneNames_1.txt' 'exe_11' 'BCL11B' 2424
-./prog_seq 'geneNames_1.txt' 'exe_11' 'PITX1' 2425
-./prog_seq 'geneNames_1.txt' 'exe_11' 'MCM2' 2426
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZNF670' 2427
-./prog_seq 'geneNames_1.txt' 'exe_11' 'GLIS3' 2428
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TEAD4' 2429
-./prog_seq 'geneNames_1.txt' 'exe_11' 'NR1I3' 2430
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZNF202' 2431
-./prog_seq 'geneNames_1.txt' 'exe_11' 'REST' 2432
-./prog_seq 'geneNames_1.txt' 'exe_11' 'JUND' 2433
-./prog_seq 'geneNames_1.txt' 'exe_11' 'CREB3L4' 2434
-./prog_seq 'geneNames_1.txt' 'exe_11' 'DDX20' 2435
-./prog_seq 'geneNames_1.txt' 'exe_11' 'HDAC1' 2436
-./prog_seq 'geneNames_1.txt' 'exe_11' 'CTDSPL' 2437
-./prog_seq 'geneNames_1.txt' 'exe_11' 'RNF2' 2438
-./prog_seq 'geneNames_1.txt' 'exe_11' 'CNTRL' 2439
-./prog_seq 'geneNames_1.txt' 'exe_11' 'HNRNPUL1' 2440
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ATF3' 2441
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZNF227' 2442
-./prog_seq 'geneNames_1.txt' 'exe_11' 'EZH2' 2443
-./prog_seq 'geneNames_1.txt' 'exe_11' 'SP100' 2444
-./prog_seq 'geneNames_1.txt' 'exe_11' 'CEBPA' 2445
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZFP64' 2446
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ASXL1' 2447
-./prog_seq 'geneNames_1.txt' 'exe_11' 'THAP1' 2448
-./prog_seq 'geneNames_1.txt' 'exe_11' 'FOXA2' 2449
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZIC2' 2450
-./prog_seq 'geneNames_1.txt' 'exe_11' 'KLF5' 2451
-./prog_seq 'geneNames_1.txt' 'exe_11' 'FOSL2' 2452
-./prog_seq 'geneNames_1.txt' 'exe_11' 'PIAS2' 2453
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TFDP1' 2454
-./prog_seq 'geneNames_1.txt' 'exe_11' 'FHL2' 2455
-./prog_seq 'geneNames_1.txt' 'exe_11' 'DRAP1' 2456
-./prog_seq 'geneNames_1.txt' 'exe_11' 'JAG1' 2457
-./prog_seq 'geneNames_1.txt' 'exe_11' 'GTF3C4' 2458
-./prog_seq 'geneNames_1.txt' 'exe_11' 'RUNX1T1' 2459
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TAF6' 2460
-./prog_seq 'geneNames_1.txt' 'exe_11' 'NR2F2' 2461
-./prog_seq 'geneNames_1.txt' 'exe_11' 'AHR' 2462
-./prog_seq 'geneNames_1.txt' 'exe_11' 'SEC14L2' 2463
-./prog_seq 'geneNames_1.txt' 'exe_11' 'SERTAD3' 2464
-./prog_seq 'geneNames_1.txt' 'exe_11' 'SIRT2' 2465
-./prog_seq 'geneNames_1.txt' 'exe_11' 'NEIL2' 2466
-./prog_seq 'geneNames_1.txt' 'exe_11' 'AATF' 2467
-./prog_seq 'geneNames_1.txt' 'exe_11' 'MCM8' 2468
-./prog_seq 'geneNames_1.txt' 'exe_11' 'MYBBP1A' 2469
-./prog_seq 'geneNames_1.txt' 'exe_11' 'UHRF1' 2470
-./prog_seq 'geneNames_1.txt' 'exe_11' 'GPM6B' 2471
-./prog_seq 'geneNames_1.txt' 'exe_11' 'FOXH1' 2472
-./prog_seq 'geneNames_1.txt' 'exe_11' 'FOXO1' 2473
-./prog_seq 'geneNames_1.txt' 'exe_11' 'BDP1' 2474
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ETS1' 2475
-./prog_seq 'geneNames_1.txt' 'exe_11' 'POU2F1' 2476
-./prog_seq 'geneNames_1.txt' 'exe_11' 'PLAGL2' 2477
-./prog_seq 'geneNames_1.txt' 'exe_11' 'JAZF1' 2478
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZNHIT3' 2479
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZNF675' 2480
-./prog_seq 'geneNames_1.txt' 'exe_11' 'MYCN' 2481
-./prog_seq 'geneNames_1.txt' 'exe_11' 'U2AF1' 2482
-./prog_seq 'geneNames_1.txt' 'exe_11' 'MAZ' 2483
-./prog_seq 'geneNames_1.txt' 'exe_11' 'NANOG' 2484
-./prog_seq 'geneNames_1.txt' 'exe_11' 'KDM4C' 2485
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TFDP2' 2486
-./prog_seq 'geneNames_1.txt' 'exe_11' 'GATA6' 2487
-./prog_seq 'geneNames_1.txt' 'exe_11' 'THRB' 2488
-./prog_seq 'geneNames_1.txt' 'exe_11' 'CCND1' 2489
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TCOF1' 2490
-./prog_seq 'geneNames_1.txt' 'exe_11' 'DR1' 2491
-./prog_seq 'geneNames_1.txt' 'exe_11' 'PPARA' 2492
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZNF398' 2493
-./prog_seq 'geneNames_1.txt' 'exe_11' 'KLF3' 2494
-./prog_seq 'geneNames_1.txt' 'exe_11' 'BCL11A' 2495
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TTF2' 2496
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZNF33A' 2497
-./prog_seq 'geneNames_1.txt' 'exe_11' 'E2F7' 2498
-./prog_seq 'geneNames_1.txt' 'exe_11' 'HTATSF1' 2499
-./prog_seq 'geneNames_1.txt' 'exe_11' 'HIF3A' 2500
-./prog_seq 'geneNames_1.txt' 'exe_11' 'PCGF6' 2501
-./prog_seq 'geneNames_1.txt' 'exe_11' 'PIAS3' 2502
-./prog_seq 'geneNames_1.txt' 'exe_11' 'POLR1E' 2503
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZNF74' 2504
-./prog_seq 'geneNames_1.txt' 'exe_11' 'PTRF' 2505
-./prog_seq 'geneNames_1.txt' 'exe_11' 'SP4' 2506
-./prog_seq 'geneNames_1.txt' 'exe_11' 'HNF4A' 2507
-./prog_seq 'geneNames_1.txt' 'exe_11' 'CHD8' 2508
-./prog_seq 'geneNames_1.txt' 'exe_11' 'NR3C1' 2509
-./prog_seq 'geneNames_1.txt' 'exe_11' 'PBX1' 2510
-./prog_seq 'geneNames_1.txt' 'exe_11' 'EHMT2' 2511
-./prog_seq 'geneNames_1.txt' 'exe_11' 'FOXM1' 2512
-./prog_seq 'geneNames_1.txt' 'exe_11' 'GRHL1' 2513
-./prog_seq 'geneNames_1.txt' 'exe_11' 'SCD5' 2514
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ZFHX3' 2515
-./prog_seq 'geneNames_1.txt' 'exe_11' 'DOT1L' 2516
-./prog_seq 'geneNames_1.txt' 'exe_11' 'E2F3' 2517
-./prog_seq 'geneNames_1.txt' 'exe_11' 'GTF3C5' 2518
-./prog_seq 'geneNames_1.txt' 'exe_11' 'POU5F1' 2519
-./prog_seq 'geneNames_1.txt' 'exe_11' 'POLR3D' 2520
-./prog_seq 'geneNames_1.txt' 'exe_11' 'SOX2' 2521
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TCF7L1' 2522
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TCFL5' 2523
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TIMELESS' 2524
-./prog_seq 'geneNames_1.txt' 'exe_11' 'BMPR1A' 2525
-./prog_seq 'geneNames_1.txt' 'exe_11' 'ANKRD1' 2526
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TRERF1' 2527
-./prog_seq 'geneNames_1.txt' 'exe_11' 'GTF2H2' 2528
-./prog_seq 'geneNames_1.txt' 'exe_11' 'IRF1' 2529
-./prog_seq 'geneNames_1.txt' 'exe_11' 'TBX3' 2530
-./prog_seq 'geneNames_1.txt' 'exe_12' 'AEBP1' 2531
-./prog_seq 'geneNames_1.txt' 'exe_12' 'PIM2' 2532
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TADA3' 2533
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ESRG' 2534
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ETV4' 2535
-./prog_seq 'geneNames_1.txt' 'exe_12' 'THY1' 2536
-./prog_seq 'geneNames_1.txt' 'exe_12' 'VEZF1' 2537
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ING1' 2538
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TNFAIP3' 2539
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TCF3' 2540
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TP53' 2541
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZNF397' 2542
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ELF1' 2543
-./prog_seq 'geneNames_1.txt' 'exe_12' 'NRIP1' 2544
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZFP36' 2545
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TRIM25' 2546
-./prog_seq 'geneNames_1.txt' 'exe_12' 'NR2F6' 2547
-./prog_seq 'geneNames_1.txt' 'exe_12' 'HCFC1' 2548
-./prog_seq 'geneNames_1.txt' 'exe_12' 'DDX54' 2549
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ESPL1' 2550
-./prog_seq 'geneNames_1.txt' 'exe_12' 'PDCD11' 2551
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZNRD1' 2552
-./prog_seq 'geneNames_1.txt' 'exe_12' 'SMAD3' 2553
-./prog_seq 'geneNames_1.txt' 'exe_12' 'SIRT1' 2554
-./prog_seq 'geneNames_1.txt' 'exe_12' 'HMGA2' 2555
-./prog_seq 'geneNames_1.txt' 'exe_12' 'EGF' 2556
-./prog_seq 'geneNames_1.txt' 'exe_12' 'HIST1H1E' 2557
-./prog_seq 'geneNames_1.txt' 'exe_12' 'BTG1' 2558
-./prog_seq 'geneNames_1.txt' 'exe_12' 'LHX1' 2559
-./prog_seq 'geneNames_1.txt' 'exe_12' 'NFIB' 2560
-./prog_seq 'geneNames_1.txt' 'exe_12' 'CDX2' 2561
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ETV1' 2562
-./prog_seq 'geneNames_1.txt' 'exe_12' 'BCOR' 2563
-./prog_seq 'geneNames_1.txt' 'exe_12' 'HIF1AN' 2564
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ETV5' 2565
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TCF19' 2566
-./prog_seq 'geneNames_1.txt' 'exe_12' 'CEBPD' 2567
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZIC3' 2568
-./prog_seq 'geneNames_1.txt' 'exe_12' 'BMP2' 2569
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ELAVL2' 2570
-./prog_seq 'geneNames_1.txt' 'exe_12' 'MED14' 2571
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZNF354A' 2572
-./prog_seq 'geneNames_1.txt' 'exe_12' 'BRIP1' 2573
-./prog_seq 'geneNames_1.txt' 'exe_12' 'MAF' 2574
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZBTB16' 2575
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TEAD2' 2576
-./prog_seq 'geneNames_1.txt' 'exe_12' 'NR5A2' 2577
-./prog_seq 'geneNames_1.txt' 'exe_12' 'JUN' 2578
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZNF300' 2579
-./prog_seq 'geneNames_1.txt' 'exe_12' 'EPAS1' 2580
-./prog_seq 'geneNames_1.txt' 'exe_12' 'NOTCH3' 2581
-./prog_seq 'geneNames_1.txt' 'exe_12' 'MYC' 2582
-./prog_seq 'geneNames_1.txt' 'exe_12' 'PAWR' 2583
-./prog_seq 'geneNames_1.txt' 'exe_12' 'CREG1' 2584
-./prog_seq 'geneNames_1.txt' 'exe_12' 'FOSB' 2585
-./prog_seq 'geneNames_1.txt' 'exe_12' 'GLI1' 2586
-./prog_seq 'geneNames_1.txt' 'exe_12' 'PRDM14' 2587
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TFE3' 2588
-./prog_seq 'geneNames_1.txt' 'exe_12' 'MAFF' 2589
-./prog_seq 'geneNames_1.txt' 'exe_12' 'MED20' 2590
-./prog_seq 'geneNames_1.txt' 'exe_12' 'E2F5' 2591
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TRIM22' 2592
-./prog_seq 'geneNames_1.txt' 'exe_12' 'WDR5' 2593
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZNF217' 2594
-./prog_seq 'geneNames_1.txt' 'exe_12' 'PEG3' 2595
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZHX1' 2596
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TARDBP' 2597
-./prog_seq 'geneNames_1.txt' 'exe_12' 'SNAPC1' 2598
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZBTB3' 2599
-./prog_seq 'geneNames_1.txt' 'exe_12' 'NFATC2' 2600
-./prog_seq 'geneNames_1.txt' 'exe_12' 'SALL3' 2601
-./prog_seq 'geneNames_1.txt' 'exe_12' 'MAPK1' 2602
-./prog_seq 'geneNames_1.txt' 'exe_12' 'MEIS3' 2603
-./prog_seq 'geneNames_1.txt' 'exe_12' 'CHAF1A' 2604
-./prog_seq 'geneNames_1.txt' 'exe_12' 'DAXX' 2605
-./prog_seq 'geneNames_1.txt' 'exe_12' 'E2F8' 2606
-./prog_seq 'geneNames_1.txt' 'exe_12' 'GATA5' 2607
-./prog_seq 'geneNames_1.txt' 'exe_12' 'RFX5' 2608
-./prog_seq 'geneNames_1.txt' 'exe_12' 'HINFP' 2609
-./prog_seq 'geneNames_1.txt' 'exe_12' 'MLXIPL' 2610
-./prog_seq 'geneNames_1.txt' 'exe_12' 'SSBP2' 2611
-./prog_seq 'geneNames_1.txt' 'exe_12' 'RREB1' 2612
-./prog_seq 'geneNames_1.txt' 'exe_12' 'SMARCD2' 2613
-./prog_seq 'geneNames_1.txt' 'exe_12' 'HDGF' 2614
-./prog_seq 'geneNames_1.txt' 'exe_12' 'MEF2C' 2615
-./prog_seq 'geneNames_1.txt' 'exe_12' 'SSBP3' 2616
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TAF5' 2617
-./prog_seq 'geneNames_1.txt' 'exe_12' 'SRF' 2618
-./prog_seq 'geneNames_1.txt' 'exe_12' 'HIPK2' 2619
-./prog_seq 'geneNames_1.txt' 'exe_12' 'EOMES' 2620
-./prog_seq 'geneNames_1.txt' 'exe_12' 'NCOA1' 2621
-./prog_seq 'geneNames_1.txt' 'exe_12' 'CREB3L3' 2622
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ELL2' 2623
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TOPORS' 2624
-./prog_seq 'geneNames_1.txt' 'exe_12' 'BTG2' 2625
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ING5' 2626
-./prog_seq 'geneNames_1.txt' 'exe_12' 'HNF1B' 2627
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TCF4' 2628
-./prog_seq 'geneNames_1.txt' 'exe_12' 'IRF9' 2629
-./prog_seq 'geneNames_1.txt' 'exe_12' 'JARID2' 2630
-./prog_seq 'geneNames_1.txt' 'exe_12' 'HNRNPAB' 2631
-./prog_seq 'geneNames_1.txt' 'exe_12' 'RARG' 2632
-./prog_seq 'geneNames_1.txt' 'exe_12' 'GMEB1' 2633
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZNF107' 2634
-./prog_seq 'geneNames_1.txt' 'exe_12' 'GATAD2B' 2635
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ARID3B' 2636
-./prog_seq 'geneNames_1.txt' 'exe_12' 'WBP11' 2637
-./prog_seq 'geneNames_1.txt' 'exe_12' 'NCOA6' 2638
-./prog_seq 'geneNames_1.txt' 'exe_12' 'GLI2' 2639
-./prog_seq 'geneNames_1.txt' 'exe_12' 'FOSL1' 2640
-./prog_seq 'geneNames_1.txt' 'exe_12' 'E2F4' 2641
-./prog_seq 'geneNames_1.txt' 'exe_12' 'MXD1' 2642
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TBL1X' 2643
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZSCAN21' 2644
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TRIM27' 2645
-./prog_seq 'geneNames_1.txt' 'exe_12' 'EGFR' 2646
-./prog_seq 'geneNames_1.txt' 'exe_12' 'THAP11' 2647
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TFAP2C' 2648
-./prog_seq 'geneNames_1.txt' 'exe_12' 'LDB2' 2649
-./prog_seq 'geneNames_1.txt' 'exe_12' 'AES' 2650
-./prog_seq 'geneNames_1.txt' 'exe_12' 'FOXA1' 2651
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZBTB24' 2652
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TAF1A' 2653
-./prog_seq 'geneNames_1.txt' 'exe_12' 'BCL11B' 2654
-./prog_seq 'geneNames_1.txt' 'exe_12' 'PITX1' 2655
-./prog_seq 'geneNames_1.txt' 'exe_12' 'MCM2' 2656
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZNF670' 2657
-./prog_seq 'geneNames_1.txt' 'exe_12' 'GLIS3' 2658
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TEAD4' 2659
-./prog_seq 'geneNames_1.txt' 'exe_12' 'NR1I3' 2660
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZNF202' 2661
-./prog_seq 'geneNames_1.txt' 'exe_12' 'REST' 2662
-./prog_seq 'geneNames_1.txt' 'exe_12' 'JUND' 2663
-./prog_seq 'geneNames_1.txt' 'exe_12' 'CREB3L4' 2664
-./prog_seq 'geneNames_1.txt' 'exe_12' 'DDX20' 2665
-./prog_seq 'geneNames_1.txt' 'exe_12' 'HDAC1' 2666
-./prog_seq 'geneNames_1.txt' 'exe_12' 'CTDSPL' 2667
-./prog_seq 'geneNames_1.txt' 'exe_12' 'RNF2' 2668
-./prog_seq 'geneNames_1.txt' 'exe_12' 'CNTRL' 2669
-./prog_seq 'geneNames_1.txt' 'exe_12' 'HNRNPUL1' 2670
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ATF3' 2671
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZNF227' 2672
-./prog_seq 'geneNames_1.txt' 'exe_12' 'EZH2' 2673
-./prog_seq 'geneNames_1.txt' 'exe_12' 'SP100' 2674
-./prog_seq 'geneNames_1.txt' 'exe_12' 'CEBPA' 2675
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZFP64' 2676
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ASXL1' 2677
-./prog_seq 'geneNames_1.txt' 'exe_12' 'THAP1' 2678
-./prog_seq 'geneNames_1.txt' 'exe_12' 'FOXA2' 2679
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZIC2' 2680
-./prog_seq 'geneNames_1.txt' 'exe_12' 'KLF5' 2681
-./prog_seq 'geneNames_1.txt' 'exe_12' 'FOSL2' 2682
-./prog_seq 'geneNames_1.txt' 'exe_12' 'PIAS2' 2683
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TFDP1' 2684
-./prog_seq 'geneNames_1.txt' 'exe_12' 'FHL2' 2685
-./prog_seq 'geneNames_1.txt' 'exe_12' 'DRAP1' 2686
-./prog_seq 'geneNames_1.txt' 'exe_12' 'JAG1' 2687
-./prog_seq 'geneNames_1.txt' 'exe_12' 'GTF3C4' 2688
-./prog_seq 'geneNames_1.txt' 'exe_12' 'RUNX1T1' 2689
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TAF6' 2690
-./prog_seq 'geneNames_1.txt' 'exe_12' 'NR2F2' 2691
-./prog_seq 'geneNames_1.txt' 'exe_12' 'AHR' 2692
-./prog_seq 'geneNames_1.txt' 'exe_12' 'SEC14L2' 2693
-./prog_seq 'geneNames_1.txt' 'exe_12' 'SERTAD3' 2694
-./prog_seq 'geneNames_1.txt' 'exe_12' 'SIRT2' 2695
-./prog_seq 'geneNames_1.txt' 'exe_12' 'NEIL2' 2696
-./prog_seq 'geneNames_1.txt' 'exe_12' 'AATF' 2697
-./prog_seq 'geneNames_1.txt' 'exe_12' 'MCM8' 2698
-./prog_seq 'geneNames_1.txt' 'exe_12' 'MYBBP1A' 2699
-./prog_seq 'geneNames_1.txt' 'exe_12' 'UHRF1' 2700
-./prog_seq 'geneNames_1.txt' 'exe_12' 'GPM6B' 2701
-./prog_seq 'geneNames_1.txt' 'exe_12' 'FOXH1' 2702
-./prog_seq 'geneNames_1.txt' 'exe_12' 'FOXO1' 2703
-./prog_seq 'geneNames_1.txt' 'exe_12' 'BDP1' 2704
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ETS1' 2705
-./prog_seq 'geneNames_1.txt' 'exe_12' 'POU2F1' 2706
-./prog_seq 'geneNames_1.txt' 'exe_12' 'PLAGL2' 2707
-./prog_seq 'geneNames_1.txt' 'exe_12' 'JAZF1' 2708
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZNHIT3' 2709
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZNF675' 2710
-./prog_seq 'geneNames_1.txt' 'exe_12' 'MYCN' 2711
-./prog_seq 'geneNames_1.txt' 'exe_12' 'U2AF1' 2712
-./prog_seq 'geneNames_1.txt' 'exe_12' 'MAZ' 2713
-./prog_seq 'geneNames_1.txt' 'exe_12' 'NANOG' 2714
-./prog_seq 'geneNames_1.txt' 'exe_12' 'KDM4C' 2715
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TFDP2' 2716
-./prog_seq 'geneNames_1.txt' 'exe_12' 'GATA6' 2717
-./prog_seq 'geneNames_1.txt' 'exe_12' 'THRB' 2718
-./prog_seq 'geneNames_1.txt' 'exe_12' 'CCND1' 2719
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TCOF1' 2720
-./prog_seq 'geneNames_1.txt' 'exe_12' 'DR1' 2721
-./prog_seq 'geneNames_1.txt' 'exe_12' 'PPARA' 2722
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZNF398' 2723
-./prog_seq 'geneNames_1.txt' 'exe_12' 'KLF3' 2724
-./prog_seq 'geneNames_1.txt' 'exe_12' 'BCL11A' 2725
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TTF2' 2726
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZNF33A' 2727
-./prog_seq 'geneNames_1.txt' 'exe_12' 'E2F7' 2728
-./prog_seq 'geneNames_1.txt' 'exe_12' 'HTATSF1' 2729
-./prog_seq 'geneNames_1.txt' 'exe_12' 'HIF3A' 2730
-./prog_seq 'geneNames_1.txt' 'exe_12' 'PCGF6' 2731
-./prog_seq 'geneNames_1.txt' 'exe_12' 'PIAS3' 2732
-./prog_seq 'geneNames_1.txt' 'exe_12' 'POLR1E' 2733
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZNF74' 2734
-./prog_seq 'geneNames_1.txt' 'exe_12' 'PTRF' 2735
-./prog_seq 'geneNames_1.txt' 'exe_12' 'SP4' 2736
-./prog_seq 'geneNames_1.txt' 'exe_12' 'HNF4A' 2737
-./prog_seq 'geneNames_1.txt' 'exe_12' 'CHD8' 2738
-./prog_seq 'geneNames_1.txt' 'exe_12' 'NR3C1' 2739
-./prog_seq 'geneNames_1.txt' 'exe_12' 'PBX1' 2740
-./prog_seq 'geneNames_1.txt' 'exe_12' 'EHMT2' 2741
-./prog_seq 'geneNames_1.txt' 'exe_12' 'FOXM1' 2742
-./prog_seq 'geneNames_1.txt' 'exe_12' 'GRHL1' 2743
-./prog_seq 'geneNames_1.txt' 'exe_12' 'SCD5' 2744
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ZFHX3' 2745
-./prog_seq 'geneNames_1.txt' 'exe_12' 'DOT1L' 2746
-./prog_seq 'geneNames_1.txt' 'exe_12' 'E2F3' 2747
-./prog_seq 'geneNames_1.txt' 'exe_12' 'GTF3C5' 2748
-./prog_seq 'geneNames_1.txt' 'exe_12' 'POU5F1' 2749
-./prog_seq 'geneNames_1.txt' 'exe_12' 'POLR3D' 2750
-./prog_seq 'geneNames_1.txt' 'exe_12' 'SOX2' 2751
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TCF7L1' 2752
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TCFL5' 2753
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TIMELESS' 2754
-./prog_seq 'geneNames_1.txt' 'exe_12' 'BMPR1A' 2755
-./prog_seq 'geneNames_1.txt' 'exe_12' 'ANKRD1' 2756
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TRERF1' 2757
-./prog_seq 'geneNames_1.txt' 'exe_12' 'GTF2H2' 2758
-./prog_seq 'geneNames_1.txt' 'exe_12' 'IRF1' 2759
-./prog_seq 'geneNames_1.txt' 'exe_12' 'TBX3' 2760
-./prog_seq 'geneNames_1.txt' 'exe_13' 'AEBP1' 2761
-./prog_seq 'geneNames_1.txt' 'exe_13' 'PIM2' 2762
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TADA3' 2763
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ESRG' 2764
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ETV4' 2765
-./prog_seq 'geneNames_1.txt' 'exe_13' 'THY1' 2766
-./prog_seq 'geneNames_1.txt' 'exe_13' 'VEZF1' 2767
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ING1' 2768
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TNFAIP3' 2769
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TCF3' 2770
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TP53' 2771
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZNF397' 2772
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ELF1' 2773
-./prog_seq 'geneNames_1.txt' 'exe_13' 'NRIP1' 2774
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZFP36' 2775
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TRIM25' 2776
-./prog_seq 'geneNames_1.txt' 'exe_13' 'NR2F6' 2777
-./prog_seq 'geneNames_1.txt' 'exe_13' 'HCFC1' 2778
-./prog_seq 'geneNames_1.txt' 'exe_13' 'DDX54' 2779
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ESPL1' 2780
-./prog_seq 'geneNames_1.txt' 'exe_13' 'PDCD11' 2781
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZNRD1' 2782
-./prog_seq 'geneNames_1.txt' 'exe_13' 'SMAD3' 2783
-./prog_seq 'geneNames_1.txt' 'exe_13' 'SIRT1' 2784
-./prog_seq 'geneNames_1.txt' 'exe_13' 'HMGA2' 2785
-./prog_seq 'geneNames_1.txt' 'exe_13' 'EGF' 2786
-./prog_seq 'geneNames_1.txt' 'exe_13' 'HIST1H1E' 2787
-./prog_seq 'geneNames_1.txt' 'exe_13' 'BTG1' 2788
-./prog_seq 'geneNames_1.txt' 'exe_13' 'LHX1' 2789
-./prog_seq 'geneNames_1.txt' 'exe_13' 'NFIB' 2790
-./prog_seq 'geneNames_1.txt' 'exe_13' 'CDX2' 2791
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ETV1' 2792
-./prog_seq 'geneNames_1.txt' 'exe_13' 'BCOR' 2793
-./prog_seq 'geneNames_1.txt' 'exe_13' 'HIF1AN' 2794
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ETV5' 2795
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TCF19' 2796
-./prog_seq 'geneNames_1.txt' 'exe_13' 'CEBPD' 2797
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZIC3' 2798
-./prog_seq 'geneNames_1.txt' 'exe_13' 'BMP2' 2799
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ELAVL2' 2800
-./prog_seq 'geneNames_1.txt' 'exe_13' 'MED14' 2801
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZNF354A' 2802
-./prog_seq 'geneNames_1.txt' 'exe_13' 'BRIP1' 2803
-./prog_seq 'geneNames_1.txt' 'exe_13' 'MAF' 2804
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZBTB16' 2805
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TEAD2' 2806
-./prog_seq 'geneNames_1.txt' 'exe_13' 'NR5A2' 2807
-./prog_seq 'geneNames_1.txt' 'exe_13' 'JUN' 2808
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZNF300' 2809
-./prog_seq 'geneNames_1.txt' 'exe_13' 'EPAS1' 2810
-./prog_seq 'geneNames_1.txt' 'exe_13' 'NOTCH3' 2811
-./prog_seq 'geneNames_1.txt' 'exe_13' 'MYC' 2812
-./prog_seq 'geneNames_1.txt' 'exe_13' 'PAWR' 2813
-./prog_seq 'geneNames_1.txt' 'exe_13' 'CREG1' 2814
-./prog_seq 'geneNames_1.txt' 'exe_13' 'FOSB' 2815
-./prog_seq 'geneNames_1.txt' 'exe_13' 'GLI1' 2816
-./prog_seq 'geneNames_1.txt' 'exe_13' 'PRDM14' 2817
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TFE3' 2818
-./prog_seq 'geneNames_1.txt' 'exe_13' 'MAFF' 2819
-./prog_seq 'geneNames_1.txt' 'exe_13' 'MED20' 2820
-./prog_seq 'geneNames_1.txt' 'exe_13' 'E2F5' 2821
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TRIM22' 2822
-./prog_seq 'geneNames_1.txt' 'exe_13' 'WDR5' 2823
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZNF217' 2824
-./prog_seq 'geneNames_1.txt' 'exe_13' 'PEG3' 2825
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZHX1' 2826
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TARDBP' 2827
-./prog_seq 'geneNames_1.txt' 'exe_13' 'SNAPC1' 2828
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZBTB3' 2829
-./prog_seq 'geneNames_1.txt' 'exe_13' 'NFATC2' 2830
-./prog_seq 'geneNames_1.txt' 'exe_13' 'SALL3' 2831
-./prog_seq 'geneNames_1.txt' 'exe_13' 'MAPK1' 2832
-./prog_seq 'geneNames_1.txt' 'exe_13' 'MEIS3' 2833
-./prog_seq 'geneNames_1.txt' 'exe_13' 'CHAF1A' 2834
-./prog_seq 'geneNames_1.txt' 'exe_13' 'DAXX' 2835
-./prog_seq 'geneNames_1.txt' 'exe_13' 'E2F8' 2836
-./prog_seq 'geneNames_1.txt' 'exe_13' 'GATA5' 2837
-./prog_seq 'geneNames_1.txt' 'exe_13' 'RFX5' 2838
-./prog_seq 'geneNames_1.txt' 'exe_13' 'HINFP' 2839
-./prog_seq 'geneNames_1.txt' 'exe_13' 'MLXIPL' 2840
-./prog_seq 'geneNames_1.txt' 'exe_13' 'SSBP2' 2841
-./prog_seq 'geneNames_1.txt' 'exe_13' 'RREB1' 2842
-./prog_seq 'geneNames_1.txt' 'exe_13' 'SMARCD2' 2843
-./prog_seq 'geneNames_1.txt' 'exe_13' 'HDGF' 2844
-./prog_seq 'geneNames_1.txt' 'exe_13' 'MEF2C' 2845
-./prog_seq 'geneNames_1.txt' 'exe_13' 'SSBP3' 2846
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TAF5' 2847
-./prog_seq 'geneNames_1.txt' 'exe_13' 'SRF' 2848
-./prog_seq 'geneNames_1.txt' 'exe_13' 'HIPK2' 2849
-./prog_seq 'geneNames_1.txt' 'exe_13' 'EOMES' 2850
-./prog_seq 'geneNames_1.txt' 'exe_13' 'NCOA1' 2851
-./prog_seq 'geneNames_1.txt' 'exe_13' 'CREB3L3' 2852
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ELL2' 2853
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TOPORS' 2854
-./prog_seq 'geneNames_1.txt' 'exe_13' 'BTG2' 2855
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ING5' 2856
-./prog_seq 'geneNames_1.txt' 'exe_13' 'HNF1B' 2857
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TCF4' 2858
-./prog_seq 'geneNames_1.txt' 'exe_13' 'IRF9' 2859
-./prog_seq 'geneNames_1.txt' 'exe_13' 'JARID2' 2860
-./prog_seq 'geneNames_1.txt' 'exe_13' 'HNRNPAB' 2861
-./prog_seq 'geneNames_1.txt' 'exe_13' 'RARG' 2862
-./prog_seq 'geneNames_1.txt' 'exe_13' 'GMEB1' 2863
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZNF107' 2864
-./prog_seq 'geneNames_1.txt' 'exe_13' 'GATAD2B' 2865
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ARID3B' 2866
-./prog_seq 'geneNames_1.txt' 'exe_13' 'WBP11' 2867
-./prog_seq 'geneNames_1.txt' 'exe_13' 'NCOA6' 2868
-./prog_seq 'geneNames_1.txt' 'exe_13' 'GLI2' 2869
-./prog_seq 'geneNames_1.txt' 'exe_13' 'FOSL1' 2870
-./prog_seq 'geneNames_1.txt' 'exe_13' 'E2F4' 2871
-./prog_seq 'geneNames_1.txt' 'exe_13' 'MXD1' 2872
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TBL1X' 2873
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZSCAN21' 2874
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TRIM27' 2875
-./prog_seq 'geneNames_1.txt' 'exe_13' 'EGFR' 2876
-./prog_seq 'geneNames_1.txt' 'exe_13' 'THAP11' 2877
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TFAP2C' 2878
-./prog_seq 'geneNames_1.txt' 'exe_13' 'LDB2' 2879
-./prog_seq 'geneNames_1.txt' 'exe_13' 'AES' 2880
-./prog_seq 'geneNames_1.txt' 'exe_13' 'FOXA1' 2881
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZBTB24' 2882
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TAF1A' 2883
-./prog_seq 'geneNames_1.txt' 'exe_13' 'BCL11B' 2884
-./prog_seq 'geneNames_1.txt' 'exe_13' 'PITX1' 2885
-./prog_seq 'geneNames_1.txt' 'exe_13' 'MCM2' 2886
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZNF670' 2887
-./prog_seq 'geneNames_1.txt' 'exe_13' 'GLIS3' 2888
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TEAD4' 2889
-./prog_seq 'geneNames_1.txt' 'exe_13' 'NR1I3' 2890
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZNF202' 2891
-./prog_seq 'geneNames_1.txt' 'exe_13' 'REST' 2892
-./prog_seq 'geneNames_1.txt' 'exe_13' 'JUND' 2893
-./prog_seq 'geneNames_1.txt' 'exe_13' 'CREB3L4' 2894
-./prog_seq 'geneNames_1.txt' 'exe_13' 'DDX20' 2895
-./prog_seq 'geneNames_1.txt' 'exe_13' 'HDAC1' 2896
-./prog_seq 'geneNames_1.txt' 'exe_13' 'CTDSPL' 2897
-./prog_seq 'geneNames_1.txt' 'exe_13' 'RNF2' 2898
-./prog_seq 'geneNames_1.txt' 'exe_13' 'CNTRL' 2899
-./prog_seq 'geneNames_1.txt' 'exe_13' 'HNRNPUL1' 2900
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ATF3' 2901
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZNF227' 2902
-./prog_seq 'geneNames_1.txt' 'exe_13' 'EZH2' 2903
-./prog_seq 'geneNames_1.txt' 'exe_13' 'SP100' 2904
-./prog_seq 'geneNames_1.txt' 'exe_13' 'CEBPA' 2905
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZFP64' 2906
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ASXL1' 2907
-./prog_seq 'geneNames_1.txt' 'exe_13' 'THAP1' 2908
-./prog_seq 'geneNames_1.txt' 'exe_13' 'FOXA2' 2909
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZIC2' 2910
-./prog_seq 'geneNames_1.txt' 'exe_13' 'KLF5' 2911
-./prog_seq 'geneNames_1.txt' 'exe_13' 'FOSL2' 2912
-./prog_seq 'geneNames_1.txt' 'exe_13' 'PIAS2' 2913
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TFDP1' 2914
-./prog_seq 'geneNames_1.txt' 'exe_13' 'FHL2' 2915
-./prog_seq 'geneNames_1.txt' 'exe_13' 'DRAP1' 2916
-./prog_seq 'geneNames_1.txt' 'exe_13' 'JAG1' 2917
-./prog_seq 'geneNames_1.txt' 'exe_13' 'GTF3C4' 2918
-./prog_seq 'geneNames_1.txt' 'exe_13' 'RUNX1T1' 2919
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TAF6' 2920
-./prog_seq 'geneNames_1.txt' 'exe_13' 'NR2F2' 2921
-./prog_seq 'geneNames_1.txt' 'exe_13' 'AHR' 2922
-./prog_seq 'geneNames_1.txt' 'exe_13' 'SEC14L2' 2923
-./prog_seq 'geneNames_1.txt' 'exe_13' 'SERTAD3' 2924
-./prog_seq 'geneNames_1.txt' 'exe_13' 'SIRT2' 2925
-./prog_seq 'geneNames_1.txt' 'exe_13' 'NEIL2' 2926
-./prog_seq 'geneNames_1.txt' 'exe_13' 'AATF' 2927
-./prog_seq 'geneNames_1.txt' 'exe_13' 'MCM8' 2928
-./prog_seq 'geneNames_1.txt' 'exe_13' 'MYBBP1A' 2929
-./prog_seq 'geneNames_1.txt' 'exe_13' 'UHRF1' 2930
-./prog_seq 'geneNames_1.txt' 'exe_13' 'GPM6B' 2931
-./prog_seq 'geneNames_1.txt' 'exe_13' 'FOXH1' 2932
-./prog_seq 'geneNames_1.txt' 'exe_13' 'FOXO1' 2933
-./prog_seq 'geneNames_1.txt' 'exe_13' 'BDP1' 2934
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ETS1' 2935
-./prog_seq 'geneNames_1.txt' 'exe_13' 'POU2F1' 2936
-./prog_seq 'geneNames_1.txt' 'exe_13' 'PLAGL2' 2937
-./prog_seq 'geneNames_1.txt' 'exe_13' 'JAZF1' 2938
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZNHIT3' 2939
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZNF675' 2940
-./prog_seq 'geneNames_1.txt' 'exe_13' 'MYCN' 2941
-./prog_seq 'geneNames_1.txt' 'exe_13' 'U2AF1' 2942
-./prog_seq 'geneNames_1.txt' 'exe_13' 'MAZ' 2943
-./prog_seq 'geneNames_1.txt' 'exe_13' 'NANOG' 2944
-./prog_seq 'geneNames_1.txt' 'exe_13' 'KDM4C' 2945
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TFDP2' 2946
-./prog_seq 'geneNames_1.txt' 'exe_13' 'GATA6' 2947
-./prog_seq 'geneNames_1.txt' 'exe_13' 'THRB' 2948
-./prog_seq 'geneNames_1.txt' 'exe_13' 'CCND1' 2949
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TCOF1' 2950
-./prog_seq 'geneNames_1.txt' 'exe_13' 'DR1' 2951
-./prog_seq 'geneNames_1.txt' 'exe_13' 'PPARA' 2952
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZNF398' 2953
-./prog_seq 'geneNames_1.txt' 'exe_13' 'KLF3' 2954
-./prog_seq 'geneNames_1.txt' 'exe_13' 'BCL11A' 2955
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TTF2' 2956
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZNF33A' 2957
-./prog_seq 'geneNames_1.txt' 'exe_13' 'E2F7' 2958
-./prog_seq 'geneNames_1.txt' 'exe_13' 'HTATSF1' 2959
-./prog_seq 'geneNames_1.txt' 'exe_13' 'HIF3A' 2960
-./prog_seq 'geneNames_1.txt' 'exe_13' 'PCGF6' 2961
-./prog_seq 'geneNames_1.txt' 'exe_13' 'PIAS3' 2962
-./prog_seq 'geneNames_1.txt' 'exe_13' 'POLR1E' 2963
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZNF74' 2964
-./prog_seq 'geneNames_1.txt' 'exe_13' 'PTRF' 2965
-./prog_seq 'geneNames_1.txt' 'exe_13' 'SP4' 2966
-./prog_seq 'geneNames_1.txt' 'exe_13' 'HNF4A' 2967
-./prog_seq 'geneNames_1.txt' 'exe_13' 'CHD8' 2968
-./prog_seq 'geneNames_1.txt' 'exe_13' 'NR3C1' 2969
-./prog_seq 'geneNames_1.txt' 'exe_13' 'PBX1' 2970
-./prog_seq 'geneNames_1.txt' 'exe_13' 'EHMT2' 2971
-./prog_seq 'geneNames_1.txt' 'exe_13' 'FOXM1' 2972
-./prog_seq 'geneNames_1.txt' 'exe_13' 'GRHL1' 2973
-./prog_seq 'geneNames_1.txt' 'exe_13' 'SCD5' 2974
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ZFHX3' 2975
-./prog_seq 'geneNames_1.txt' 'exe_13' 'DOT1L' 2976
-./prog_seq 'geneNames_1.txt' 'exe_13' 'E2F3' 2977
-./prog_seq 'geneNames_1.txt' 'exe_13' 'GTF3C5' 2978
-./prog_seq 'geneNames_1.txt' 'exe_13' 'POU5F1' 2979
-./prog_seq 'geneNames_1.txt' 'exe_13' 'POLR3D' 2980
-./prog_seq 'geneNames_1.txt' 'exe_13' 'SOX2' 2981
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TCF7L1' 2982
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TCFL5' 2983
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TIMELESS' 2984
-./prog_seq 'geneNames_1.txt' 'exe_13' 'BMPR1A' 2985
-./prog_seq 'geneNames_1.txt' 'exe_13' 'ANKRD1' 2986
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TRERF1' 2987
-./prog_seq 'geneNames_1.txt' 'exe_13' 'GTF2H2' 2988
-./prog_seq 'geneNames_1.txt' 'exe_13' 'IRF1' 2989
-./prog_seq 'geneNames_1.txt' 'exe_13' 'TBX3' 2990
-./prog_seq 'geneNames_1.txt' 'exe_14' 'AEBP1' 2991
-./prog_seq 'geneNames_1.txt' 'exe_14' 'PIM2' 2992
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TADA3' 2993
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ESRG' 2994
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ETV4' 2995
-./prog_seq 'geneNames_1.txt' 'exe_14' 'THY1' 2996
-./prog_seq 'geneNames_1.txt' 'exe_14' 'VEZF1' 2997
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ING1' 2998
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TNFAIP3' 2999
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TCF3' 3000
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TP53' 3001
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZNF397' 3002
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ELF1' 3003
-./prog_seq 'geneNames_1.txt' 'exe_14' 'NRIP1' 3004
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZFP36' 3005
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TRIM25' 3006
-./prog_seq 'geneNames_1.txt' 'exe_14' 'NR2F6' 3007
-./prog_seq 'geneNames_1.txt' 'exe_14' 'HCFC1' 3008
-./prog_seq 'geneNames_1.txt' 'exe_14' 'DDX54' 3009
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ESPL1' 3010
-./prog_seq 'geneNames_1.txt' 'exe_14' 'PDCD11' 3011
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZNRD1' 3012
-./prog_seq 'geneNames_1.txt' 'exe_14' 'SMAD3' 3013
-./prog_seq 'geneNames_1.txt' 'exe_14' 'SIRT1' 3014
-./prog_seq 'geneNames_1.txt' 'exe_14' 'HMGA2' 3015
-./prog_seq 'geneNames_1.txt' 'exe_14' 'EGF' 3016
-./prog_seq 'geneNames_1.txt' 'exe_14' 'HIST1H1E' 3017
-./prog_seq 'geneNames_1.txt' 'exe_14' 'BTG1' 3018
-./prog_seq 'geneNames_1.txt' 'exe_14' 'LHX1' 3019
-./prog_seq 'geneNames_1.txt' 'exe_14' 'NFIB' 3020
-./prog_seq 'geneNames_1.txt' 'exe_14' 'CDX2' 3021
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ETV1' 3022
-./prog_seq 'geneNames_1.txt' 'exe_14' 'BCOR' 3023
-./prog_seq 'geneNames_1.txt' 'exe_14' 'HIF1AN' 3024
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ETV5' 3025
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TCF19' 3026
-./prog_seq 'geneNames_1.txt' 'exe_14' 'CEBPD' 3027
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZIC3' 3028
-./prog_seq 'geneNames_1.txt' 'exe_14' 'BMP2' 3029
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ELAVL2' 3030
-./prog_seq 'geneNames_1.txt' 'exe_14' 'MED14' 3031
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZNF354A' 3032
-./prog_seq 'geneNames_1.txt' 'exe_14' 'BRIP1' 3033
-./prog_seq 'geneNames_1.txt' 'exe_14' 'MAF' 3034
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZBTB16' 3035
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TEAD2' 3036
-./prog_seq 'geneNames_1.txt' 'exe_14' 'NR5A2' 3037
-./prog_seq 'geneNames_1.txt' 'exe_14' 'JUN' 3038
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZNF300' 3039
-./prog_seq 'geneNames_1.txt' 'exe_14' 'EPAS1' 3040
-./prog_seq 'geneNames_1.txt' 'exe_14' 'NOTCH3' 3041
-./prog_seq 'geneNames_1.txt' 'exe_14' 'MYC' 3042
-./prog_seq 'geneNames_1.txt' 'exe_14' 'PAWR' 3043
-./prog_seq 'geneNames_1.txt' 'exe_14' 'CREG1' 3044
-./prog_seq 'geneNames_1.txt' 'exe_14' 'FOSB' 3045
-./prog_seq 'geneNames_1.txt' 'exe_14' 'GLI1' 3046
-./prog_seq 'geneNames_1.txt' 'exe_14' 'PRDM14' 3047
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TFE3' 3048
-./prog_seq 'geneNames_1.txt' 'exe_14' 'MAFF' 3049
-./prog_seq 'geneNames_1.txt' 'exe_14' 'MED20' 3050
-./prog_seq 'geneNames_1.txt' 'exe_14' 'E2F5' 3051
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TRIM22' 3052
-./prog_seq 'geneNames_1.txt' 'exe_14' 'WDR5' 3053
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZNF217' 3054
-./prog_seq 'geneNames_1.txt' 'exe_14' 'PEG3' 3055
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZHX1' 3056
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TARDBP' 3057
-./prog_seq 'geneNames_1.txt' 'exe_14' 'SNAPC1' 3058
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZBTB3' 3059
-./prog_seq 'geneNames_1.txt' 'exe_14' 'NFATC2' 3060
-./prog_seq 'geneNames_1.txt' 'exe_14' 'SALL3' 3061
-./prog_seq 'geneNames_1.txt' 'exe_14' 'MAPK1' 3062
-./prog_seq 'geneNames_1.txt' 'exe_14' 'MEIS3' 3063
-./prog_seq 'geneNames_1.txt' 'exe_14' 'CHAF1A' 3064
-./prog_seq 'geneNames_1.txt' 'exe_14' 'DAXX' 3065
-./prog_seq 'geneNames_1.txt' 'exe_14' 'E2F8' 3066
-./prog_seq 'geneNames_1.txt' 'exe_14' 'GATA5' 3067
-./prog_seq 'geneNames_1.txt' 'exe_14' 'RFX5' 3068
-./prog_seq 'geneNames_1.txt' 'exe_14' 'HINFP' 3069
-./prog_seq 'geneNames_1.txt' 'exe_14' 'MLXIPL' 3070
-./prog_seq 'geneNames_1.txt' 'exe_14' 'SSBP2' 3071
-./prog_seq 'geneNames_1.txt' 'exe_14' 'RREB1' 3072
-./prog_seq 'geneNames_1.txt' 'exe_14' 'SMARCD2' 3073
-./prog_seq 'geneNames_1.txt' 'exe_14' 'HDGF' 3074
-./prog_seq 'geneNames_1.txt' 'exe_14' 'MEF2C' 3075
-./prog_seq 'geneNames_1.txt' 'exe_14' 'SSBP3' 3076
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TAF5' 3077
-./prog_seq 'geneNames_1.txt' 'exe_14' 'SRF' 3078
-./prog_seq 'geneNames_1.txt' 'exe_14' 'HIPK2' 3079
-./prog_seq 'geneNames_1.txt' 'exe_14' 'EOMES' 3080
-./prog_seq 'geneNames_1.txt' 'exe_14' 'NCOA1' 3081
-./prog_seq 'geneNames_1.txt' 'exe_14' 'CREB3L3' 3082
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ELL2' 3083
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TOPORS' 3084
-./prog_seq 'geneNames_1.txt' 'exe_14' 'BTG2' 3085
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ING5' 3086
-./prog_seq 'geneNames_1.txt' 'exe_14' 'HNF1B' 3087
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TCF4' 3088
-./prog_seq 'geneNames_1.txt' 'exe_14' 'IRF9' 3089
-./prog_seq 'geneNames_1.txt' 'exe_14' 'JARID2' 3090
-./prog_seq 'geneNames_1.txt' 'exe_14' 'HNRNPAB' 3091
-./prog_seq 'geneNames_1.txt' 'exe_14' 'RARG' 3092
-./prog_seq 'geneNames_1.txt' 'exe_14' 'GMEB1' 3093
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZNF107' 3094
-./prog_seq 'geneNames_1.txt' 'exe_14' 'GATAD2B' 3095
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ARID3B' 3096
-./prog_seq 'geneNames_1.txt' 'exe_14' 'WBP11' 3097
-./prog_seq 'geneNames_1.txt' 'exe_14' 'NCOA6' 3098
-./prog_seq 'geneNames_1.txt' 'exe_14' 'GLI2' 3099
-./prog_seq 'geneNames_1.txt' 'exe_14' 'FOSL1' 3100
-./prog_seq 'geneNames_1.txt' 'exe_14' 'E2F4' 3101
-./prog_seq 'geneNames_1.txt' 'exe_14' 'MXD1' 3102
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TBL1X' 3103
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZSCAN21' 3104
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TRIM27' 3105
-./prog_seq 'geneNames_1.txt' 'exe_14' 'EGFR' 3106
-./prog_seq 'geneNames_1.txt' 'exe_14' 'THAP11' 3107
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TFAP2C' 3108
-./prog_seq 'geneNames_1.txt' 'exe_14' 'LDB2' 3109
-./prog_seq 'geneNames_1.txt' 'exe_14' 'AES' 3110
-./prog_seq 'geneNames_1.txt' 'exe_14' 'FOXA1' 3111
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZBTB24' 3112
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TAF1A' 3113
-./prog_seq 'geneNames_1.txt' 'exe_14' 'BCL11B' 3114
-./prog_seq 'geneNames_1.txt' 'exe_14' 'PITX1' 3115
-./prog_seq 'geneNames_1.txt' 'exe_14' 'MCM2' 3116
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZNF670' 3117
-./prog_seq 'geneNames_1.txt' 'exe_14' 'GLIS3' 3118
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TEAD4' 3119
-./prog_seq 'geneNames_1.txt' 'exe_14' 'NR1I3' 3120
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZNF202' 3121
-./prog_seq 'geneNames_1.txt' 'exe_14' 'REST' 3122
-./prog_seq 'geneNames_1.txt' 'exe_14' 'JUND' 3123
-./prog_seq 'geneNames_1.txt' 'exe_14' 'CREB3L4' 3124
-./prog_seq 'geneNames_1.txt' 'exe_14' 'DDX20' 3125
-./prog_seq 'geneNames_1.txt' 'exe_14' 'HDAC1' 3126
-./prog_seq 'geneNames_1.txt' 'exe_14' 'CTDSPL' 3127
-./prog_seq 'geneNames_1.txt' 'exe_14' 'RNF2' 3128
-./prog_seq 'geneNames_1.txt' 'exe_14' 'CNTRL' 3129
-./prog_seq 'geneNames_1.txt' 'exe_14' 'HNRNPUL1' 3130
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ATF3' 3131
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZNF227' 3132
-./prog_seq 'geneNames_1.txt' 'exe_14' 'EZH2' 3133
-./prog_seq 'geneNames_1.txt' 'exe_14' 'SP100' 3134
-./prog_seq 'geneNames_1.txt' 'exe_14' 'CEBPA' 3135
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZFP64' 3136
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ASXL1' 3137
-./prog_seq 'geneNames_1.txt' 'exe_14' 'THAP1' 3138
-./prog_seq 'geneNames_1.txt' 'exe_14' 'FOXA2' 3139
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZIC2' 3140
-./prog_seq 'geneNames_1.txt' 'exe_14' 'KLF5' 3141
-./prog_seq 'geneNames_1.txt' 'exe_14' 'FOSL2' 3142
-./prog_seq 'geneNames_1.txt' 'exe_14' 'PIAS2' 3143
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TFDP1' 3144
-./prog_seq 'geneNames_1.txt' 'exe_14' 'FHL2' 3145
-./prog_seq 'geneNames_1.txt' 'exe_14' 'DRAP1' 3146
-./prog_seq 'geneNames_1.txt' 'exe_14' 'JAG1' 3147
-./prog_seq 'geneNames_1.txt' 'exe_14' 'GTF3C4' 3148
-./prog_seq 'geneNames_1.txt' 'exe_14' 'RUNX1T1' 3149
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TAF6' 3150
-./prog_seq 'geneNames_1.txt' 'exe_14' 'NR2F2' 3151
-./prog_seq 'geneNames_1.txt' 'exe_14' 'AHR' 3152
-./prog_seq 'geneNames_1.txt' 'exe_14' 'SEC14L2' 3153
-./prog_seq 'geneNames_1.txt' 'exe_14' 'SERTAD3' 3154
-./prog_seq 'geneNames_1.txt' 'exe_14' 'SIRT2' 3155
-./prog_seq 'geneNames_1.txt' 'exe_14' 'NEIL2' 3156
-./prog_seq 'geneNames_1.txt' 'exe_14' 'AATF' 3157
-./prog_seq 'geneNames_1.txt' 'exe_14' 'MCM8' 3158
-./prog_seq 'geneNames_1.txt' 'exe_14' 'MYBBP1A' 3159
-./prog_seq 'geneNames_1.txt' 'exe_14' 'UHRF1' 3160
-./prog_seq 'geneNames_1.txt' 'exe_14' 'GPM6B' 3161
-./prog_seq 'geneNames_1.txt' 'exe_14' 'FOXH1' 3162
-./prog_seq 'geneNames_1.txt' 'exe_14' 'FOXO1' 3163
-./prog_seq 'geneNames_1.txt' 'exe_14' 'BDP1' 3164
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ETS1' 3165
-./prog_seq 'geneNames_1.txt' 'exe_14' 'POU2F1' 3166
-./prog_seq 'geneNames_1.txt' 'exe_14' 'PLAGL2' 3167
-./prog_seq 'geneNames_1.txt' 'exe_14' 'JAZF1' 3168
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZNHIT3' 3169
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZNF675' 3170
-./prog_seq 'geneNames_1.txt' 'exe_14' 'MYCN' 3171
-./prog_seq 'geneNames_1.txt' 'exe_14' 'U2AF1' 3172
-./prog_seq 'geneNames_1.txt' 'exe_14' 'MAZ' 3173
-./prog_seq 'geneNames_1.txt' 'exe_14' 'NANOG' 3174
-./prog_seq 'geneNames_1.txt' 'exe_14' 'KDM4C' 3175
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TFDP2' 3176
-./prog_seq 'geneNames_1.txt' 'exe_14' 'GATA6' 3177
-./prog_seq 'geneNames_1.txt' 'exe_14' 'THRB' 3178
-./prog_seq 'geneNames_1.txt' 'exe_14' 'CCND1' 3179
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TCOF1' 3180
-./prog_seq 'geneNames_1.txt' 'exe_14' 'DR1' 3181
-./prog_seq 'geneNames_1.txt' 'exe_14' 'PPARA' 3182
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZNF398' 3183
-./prog_seq 'geneNames_1.txt' 'exe_14' 'KLF3' 3184
-./prog_seq 'geneNames_1.txt' 'exe_14' 'BCL11A' 3185
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TTF2' 3186
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZNF33A' 3187
-./prog_seq 'geneNames_1.txt' 'exe_14' 'E2F7' 3188
-./prog_seq 'geneNames_1.txt' 'exe_14' 'HTATSF1' 3189
-./prog_seq 'geneNames_1.txt' 'exe_14' 'HIF3A' 3190
-./prog_seq 'geneNames_1.txt' 'exe_14' 'PCGF6' 3191
-./prog_seq 'geneNames_1.txt' 'exe_14' 'PIAS3' 3192
-./prog_seq 'geneNames_1.txt' 'exe_14' 'POLR1E' 3193
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZNF74' 3194
-./prog_seq 'geneNames_1.txt' 'exe_14' 'PTRF' 3195
-./prog_seq 'geneNames_1.txt' 'exe_14' 'SP4' 3196
-./prog_seq 'geneNames_1.txt' 'exe_14' 'HNF4A' 3197
-./prog_seq 'geneNames_1.txt' 'exe_14' 'CHD8' 3198
-./prog_seq 'geneNames_1.txt' 'exe_14' 'NR3C1' 3199
-./prog_seq 'geneNames_1.txt' 'exe_14' 'PBX1' 3200
-./prog_seq 'geneNames_1.txt' 'exe_14' 'EHMT2' 3201
-./prog_seq 'geneNames_1.txt' 'exe_14' 'FOXM1' 3202
-./prog_seq 'geneNames_1.txt' 'exe_14' 'GRHL1' 3203
-./prog_seq 'geneNames_1.txt' 'exe_14' 'SCD5' 3204
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ZFHX3' 3205
-./prog_seq 'geneNames_1.txt' 'exe_14' 'DOT1L' 3206
-./prog_seq 'geneNames_1.txt' 'exe_14' 'E2F3' 3207
-./prog_seq 'geneNames_1.txt' 'exe_14' 'GTF3C5' 3208
-./prog_seq 'geneNames_1.txt' 'exe_14' 'POU5F1' 3209
-./prog_seq 'geneNames_1.txt' 'exe_14' 'POLR3D' 3210
-./prog_seq 'geneNames_1.txt' 'exe_14' 'SOX2' 3211
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TCF7L1' 3212
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TCFL5' 3213
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TIMELESS' 3214
-./prog_seq 'geneNames_1.txt' 'exe_14' 'BMPR1A' 3215
-./prog_seq 'geneNames_1.txt' 'exe_14' 'ANKRD1' 3216
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TRERF1' 3217
-./prog_seq 'geneNames_1.txt' 'exe_14' 'GTF2H2' 3218
-./prog_seq 'geneNames_1.txt' 'exe_14' 'IRF1' 3219
-./prog_seq 'geneNames_1.txt' 'exe_14' 'TBX3' 3220
-./prog_seq 'geneNames_1.txt' 'exe_15' 'AEBP1' 3221
-./prog_seq 'geneNames_1.txt' 'exe_15' 'PIM2' 3222
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TADA3' 3223
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ESRG' 3224
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ETV4' 3225
-./prog_seq 'geneNames_1.txt' 'exe_15' 'THY1' 3226
-./prog_seq 'geneNames_1.txt' 'exe_15' 'VEZF1' 3227
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ING1' 3228
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TNFAIP3' 3229
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TCF3' 3230
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TP53' 3231
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZNF397' 3232
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ELF1' 3233
-./prog_seq 'geneNames_1.txt' 'exe_15' 'NRIP1' 3234
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZFP36' 3235
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TRIM25' 3236
-./prog_seq 'geneNames_1.txt' 'exe_15' 'NR2F6' 3237
-./prog_seq 'geneNames_1.txt' 'exe_15' 'HCFC1' 3238
-./prog_seq 'geneNames_1.txt' 'exe_15' 'DDX54' 3239
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ESPL1' 3240
-./prog_seq 'geneNames_1.txt' 'exe_15' 'PDCD11' 3241
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZNRD1' 3242
-./prog_seq 'geneNames_1.txt' 'exe_15' 'SMAD3' 3243
-./prog_seq 'geneNames_1.txt' 'exe_15' 'SIRT1' 3244
-./prog_seq 'geneNames_1.txt' 'exe_15' 'HMGA2' 3245
-./prog_seq 'geneNames_1.txt' 'exe_15' 'EGF' 3246
-./prog_seq 'geneNames_1.txt' 'exe_15' 'HIST1H1E' 3247
-./prog_seq 'geneNames_1.txt' 'exe_15' 'BTG1' 3248
-./prog_seq 'geneNames_1.txt' 'exe_15' 'LHX1' 3249
-./prog_seq 'geneNames_1.txt' 'exe_15' 'NFIB' 3250
-./prog_seq 'geneNames_1.txt' 'exe_15' 'CDX2' 3251
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ETV1' 3252
-./prog_seq 'geneNames_1.txt' 'exe_15' 'BCOR' 3253
-./prog_seq 'geneNames_1.txt' 'exe_15' 'HIF1AN' 3254
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ETV5' 3255
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TCF19' 3256
-./prog_seq 'geneNames_1.txt' 'exe_15' 'CEBPD' 3257
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZIC3' 3258
-./prog_seq 'geneNames_1.txt' 'exe_15' 'BMP2' 3259
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ELAVL2' 3260
-./prog_seq 'geneNames_1.txt' 'exe_15' 'MED14' 3261
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZNF354A' 3262
-./prog_seq 'geneNames_1.txt' 'exe_15' 'BRIP1' 3263
-./prog_seq 'geneNames_1.txt' 'exe_15' 'MAF' 3264
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZBTB16' 3265
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TEAD2' 3266
-./prog_seq 'geneNames_1.txt' 'exe_15' 'NR5A2' 3267
-./prog_seq 'geneNames_1.txt' 'exe_15' 'JUN' 3268
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZNF300' 3269
-./prog_seq 'geneNames_1.txt' 'exe_15' 'EPAS1' 3270
-./prog_seq 'geneNames_1.txt' 'exe_15' 'NOTCH3' 3271
-./prog_seq 'geneNames_1.txt' 'exe_15' 'MYC' 3272
-./prog_seq 'geneNames_1.txt' 'exe_15' 'PAWR' 3273
-./prog_seq 'geneNames_1.txt' 'exe_15' 'CREG1' 3274
-./prog_seq 'geneNames_1.txt' 'exe_15' 'FOSB' 3275
-./prog_seq 'geneNames_1.txt' 'exe_15' 'GLI1' 3276
-./prog_seq 'geneNames_1.txt' 'exe_15' 'PRDM14' 3277
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TFE3' 3278
-./prog_seq 'geneNames_1.txt' 'exe_15' 'MAFF' 3279
-./prog_seq 'geneNames_1.txt' 'exe_15' 'MED20' 3280
-./prog_seq 'geneNames_1.txt' 'exe_15' 'E2F5' 3281
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TRIM22' 3282
-./prog_seq 'geneNames_1.txt' 'exe_15' 'WDR5' 3283
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZNF217' 3284
-./prog_seq 'geneNames_1.txt' 'exe_15' 'PEG3' 3285
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZHX1' 3286
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TARDBP' 3287
-./prog_seq 'geneNames_1.txt' 'exe_15' 'SNAPC1' 3288
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZBTB3' 3289
-./prog_seq 'geneNames_1.txt' 'exe_15' 'NFATC2' 3290
-./prog_seq 'geneNames_1.txt' 'exe_15' 'SALL3' 3291
-./prog_seq 'geneNames_1.txt' 'exe_15' 'MAPK1' 3292
-./prog_seq 'geneNames_1.txt' 'exe_15' 'MEIS3' 3293
-./prog_seq 'geneNames_1.txt' 'exe_15' 'CHAF1A' 3294
-./prog_seq 'geneNames_1.txt' 'exe_15' 'DAXX' 3295
-./prog_seq 'geneNames_1.txt' 'exe_15' 'E2F8' 3296
-./prog_seq 'geneNames_1.txt' 'exe_15' 'GATA5' 3297
-./prog_seq 'geneNames_1.txt' 'exe_15' 'RFX5' 3298
-./prog_seq 'geneNames_1.txt' 'exe_15' 'HINFP' 3299
-./prog_seq 'geneNames_1.txt' 'exe_15' 'MLXIPL' 3300
-./prog_seq 'geneNames_1.txt' 'exe_15' 'SSBP2' 3301
-./prog_seq 'geneNames_1.txt' 'exe_15' 'RREB1' 3302
-./prog_seq 'geneNames_1.txt' 'exe_15' 'SMARCD2' 3303
-./prog_seq 'geneNames_1.txt' 'exe_15' 'HDGF' 3304
-./prog_seq 'geneNames_1.txt' 'exe_15' 'MEF2C' 3305
-./prog_seq 'geneNames_1.txt' 'exe_15' 'SSBP3' 3306
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TAF5' 3307
-./prog_seq 'geneNames_1.txt' 'exe_15' 'SRF' 3308
-./prog_seq 'geneNames_1.txt' 'exe_15' 'HIPK2' 3309
-./prog_seq 'geneNames_1.txt' 'exe_15' 'EOMES' 3310
-./prog_seq 'geneNames_1.txt' 'exe_15' 'NCOA1' 3311
-./prog_seq 'geneNames_1.txt' 'exe_15' 'CREB3L3' 3312
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ELL2' 3313
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TOPORS' 3314
-./prog_seq 'geneNames_1.txt' 'exe_15' 'BTG2' 3315
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ING5' 3316
-./prog_seq 'geneNames_1.txt' 'exe_15' 'HNF1B' 3317
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TCF4' 3318
-./prog_seq 'geneNames_1.txt' 'exe_15' 'IRF9' 3319
-./prog_seq 'geneNames_1.txt' 'exe_15' 'JARID2' 3320
-./prog_seq 'geneNames_1.txt' 'exe_15' 'HNRNPAB' 3321
-./prog_seq 'geneNames_1.txt' 'exe_15' 'RARG' 3322
-./prog_seq 'geneNames_1.txt' 'exe_15' 'GMEB1' 3323
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZNF107' 3324
-./prog_seq 'geneNames_1.txt' 'exe_15' 'GATAD2B' 3325
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ARID3B' 3326
-./prog_seq 'geneNames_1.txt' 'exe_15' 'WBP11' 3327
-./prog_seq 'geneNames_1.txt' 'exe_15' 'NCOA6' 3328
-./prog_seq 'geneNames_1.txt' 'exe_15' 'GLI2' 3329
-./prog_seq 'geneNames_1.txt' 'exe_15' 'FOSL1' 3330
-./prog_seq 'geneNames_1.txt' 'exe_15' 'E2F4' 3331
-./prog_seq 'geneNames_1.txt' 'exe_15' 'MXD1' 3332
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TBL1X' 3333
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZSCAN21' 3334
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TRIM27' 3335
-./prog_seq 'geneNames_1.txt' 'exe_15' 'EGFR' 3336
-./prog_seq 'geneNames_1.txt' 'exe_15' 'THAP11' 3337
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TFAP2C' 3338
-./prog_seq 'geneNames_1.txt' 'exe_15' 'LDB2' 3339
-./prog_seq 'geneNames_1.txt' 'exe_15' 'AES' 3340
-./prog_seq 'geneNames_1.txt' 'exe_15' 'FOXA1' 3341
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZBTB24' 3342
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TAF1A' 3343
-./prog_seq 'geneNames_1.txt' 'exe_15' 'BCL11B' 3344
-./prog_seq 'geneNames_1.txt' 'exe_15' 'PITX1' 3345
-./prog_seq 'geneNames_1.txt' 'exe_15' 'MCM2' 3346
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZNF670' 3347
-./prog_seq 'geneNames_1.txt' 'exe_15' 'GLIS3' 3348
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TEAD4' 3349
-./prog_seq 'geneNames_1.txt' 'exe_15' 'NR1I3' 3350
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZNF202' 3351
-./prog_seq 'geneNames_1.txt' 'exe_15' 'REST' 3352
-./prog_seq 'geneNames_1.txt' 'exe_15' 'JUND' 3353
-./prog_seq 'geneNames_1.txt' 'exe_15' 'CREB3L4' 3354
-./prog_seq 'geneNames_1.txt' 'exe_15' 'DDX20' 3355
-./prog_seq 'geneNames_1.txt' 'exe_15' 'HDAC1' 3356
-./prog_seq 'geneNames_1.txt' 'exe_15' 'CTDSPL' 3357
-./prog_seq 'geneNames_1.txt' 'exe_15' 'RNF2' 3358
-./prog_seq 'geneNames_1.txt' 'exe_15' 'CNTRL' 3359
-./prog_seq 'geneNames_1.txt' 'exe_15' 'HNRNPUL1' 3360
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ATF3' 3361
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZNF227' 3362
-./prog_seq 'geneNames_1.txt' 'exe_15' 'EZH2' 3363
-./prog_seq 'geneNames_1.txt' 'exe_15' 'SP100' 3364
-./prog_seq 'geneNames_1.txt' 'exe_15' 'CEBPA' 3365
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZFP64' 3366
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ASXL1' 3367
-./prog_seq 'geneNames_1.txt' 'exe_15' 'THAP1' 3368
-./prog_seq 'geneNames_1.txt' 'exe_15' 'FOXA2' 3369
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZIC2' 3370
-./prog_seq 'geneNames_1.txt' 'exe_15' 'KLF5' 3371
-./prog_seq 'geneNames_1.txt' 'exe_15' 'FOSL2' 3372
-./prog_seq 'geneNames_1.txt' 'exe_15' 'PIAS2' 3373
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TFDP1' 3374
-./prog_seq 'geneNames_1.txt' 'exe_15' 'FHL2' 3375
-./prog_seq 'geneNames_1.txt' 'exe_15' 'DRAP1' 3376
-./prog_seq 'geneNames_1.txt' 'exe_15' 'JAG1' 3377
-./prog_seq 'geneNames_1.txt' 'exe_15' 'GTF3C4' 3378
-./prog_seq 'geneNames_1.txt' 'exe_15' 'RUNX1T1' 3379
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TAF6' 3380
-./prog_seq 'geneNames_1.txt' 'exe_15' 'NR2F2' 3381
-./prog_seq 'geneNames_1.txt' 'exe_15' 'AHR' 3382
-./prog_seq 'geneNames_1.txt' 'exe_15' 'SEC14L2' 3383
-./prog_seq 'geneNames_1.txt' 'exe_15' 'SERTAD3' 3384
-./prog_seq 'geneNames_1.txt' 'exe_15' 'SIRT2' 3385
-./prog_seq 'geneNames_1.txt' 'exe_15' 'NEIL2' 3386
-./prog_seq 'geneNames_1.txt' 'exe_15' 'AATF' 3387
-./prog_seq 'geneNames_1.txt' 'exe_15' 'MCM8' 3388
-./prog_seq 'geneNames_1.txt' 'exe_15' 'MYBBP1A' 3389
-./prog_seq 'geneNames_1.txt' 'exe_15' 'UHRF1' 3390
-./prog_seq 'geneNames_1.txt' 'exe_15' 'GPM6B' 3391
-./prog_seq 'geneNames_1.txt' 'exe_15' 'FOXH1' 3392
-./prog_seq 'geneNames_1.txt' 'exe_15' 'FOXO1' 3393
-./prog_seq 'geneNames_1.txt' 'exe_15' 'BDP1' 3394
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ETS1' 3395
-./prog_seq 'geneNames_1.txt' 'exe_15' 'POU2F1' 3396
-./prog_seq 'geneNames_1.txt' 'exe_15' 'PLAGL2' 3397
-./prog_seq 'geneNames_1.txt' 'exe_15' 'JAZF1' 3398
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZNHIT3' 3399
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZNF675' 3400
-./prog_seq 'geneNames_1.txt' 'exe_15' 'MYCN' 3401
-./prog_seq 'geneNames_1.txt' 'exe_15' 'U2AF1' 3402
-./prog_seq 'geneNames_1.txt' 'exe_15' 'MAZ' 3403
-./prog_seq 'geneNames_1.txt' 'exe_15' 'NANOG' 3404
-./prog_seq 'geneNames_1.txt' 'exe_15' 'KDM4C' 3405
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TFDP2' 3406
-./prog_seq 'geneNames_1.txt' 'exe_15' 'GATA6' 3407
-./prog_seq 'geneNames_1.txt' 'exe_15' 'THRB' 3408
-./prog_seq 'geneNames_1.txt' 'exe_15' 'CCND1' 3409
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TCOF1' 3410
-./prog_seq 'geneNames_1.txt' 'exe_15' 'DR1' 3411
-./prog_seq 'geneNames_1.txt' 'exe_15' 'PPARA' 3412
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZNF398' 3413
-./prog_seq 'geneNames_1.txt' 'exe_15' 'KLF3' 3414
-./prog_seq 'geneNames_1.txt' 'exe_15' 'BCL11A' 3415
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TTF2' 3416
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZNF33A' 3417
-./prog_seq 'geneNames_1.txt' 'exe_15' 'E2F7' 3418
-./prog_seq 'geneNames_1.txt' 'exe_15' 'HTATSF1' 3419
-./prog_seq 'geneNames_1.txt' 'exe_15' 'HIF3A' 3420
-./prog_seq 'geneNames_1.txt' 'exe_15' 'PCGF6' 3421
-./prog_seq 'geneNames_1.txt' 'exe_15' 'PIAS3' 3422
-./prog_seq 'geneNames_1.txt' 'exe_15' 'POLR1E' 3423
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZNF74' 3424
-./prog_seq 'geneNames_1.txt' 'exe_15' 'PTRF' 3425
-./prog_seq 'geneNames_1.txt' 'exe_15' 'SP4' 3426
-./prog_seq 'geneNames_1.txt' 'exe_15' 'HNF4A' 3427
-./prog_seq 'geneNames_1.txt' 'exe_15' 'CHD8' 3428
-./prog_seq 'geneNames_1.txt' 'exe_15' 'NR3C1' 3429
-./prog_seq 'geneNames_1.txt' 'exe_15' 'PBX1' 3430
-./prog_seq 'geneNames_1.txt' 'exe_15' 'EHMT2' 3431
-./prog_seq 'geneNames_1.txt' 'exe_15' 'FOXM1' 3432
-./prog_seq 'geneNames_1.txt' 'exe_15' 'GRHL1' 3433
-./prog_seq 'geneNames_1.txt' 'exe_15' 'SCD5' 3434
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ZFHX3' 3435
-./prog_seq 'geneNames_1.txt' 'exe_15' 'DOT1L' 3436
-./prog_seq 'geneNames_1.txt' 'exe_15' 'E2F3' 3437
-./prog_seq 'geneNames_1.txt' 'exe_15' 'GTF3C5' 3438
-./prog_seq 'geneNames_1.txt' 'exe_15' 'POU5F1' 3439
-./prog_seq 'geneNames_1.txt' 'exe_15' 'POLR3D' 3440
-./prog_seq 'geneNames_1.txt' 'exe_15' 'SOX2' 3441
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TCF7L1' 3442
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TCFL5' 3443
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TIMELESS' 3444
-./prog_seq 'geneNames_1.txt' 'exe_15' 'BMPR1A' 3445
-./prog_seq 'geneNames_1.txt' 'exe_15' 'ANKRD1' 3446
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TRERF1' 3447
-./prog_seq 'geneNames_1.txt' 'exe_15' 'GTF2H2' 3448
-./prog_seq 'geneNames_1.txt' 'exe_15' 'IRF1' 3449
-./prog_seq 'geneNames_1.txt' 'exe_15' 'TBX3' 3450
-./prog_seq 'geneNames_1.txt' 'exe_16' 'AEBP1' 3451
-./prog_seq 'geneNames_1.txt' 'exe_16' 'PIM2' 3452
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TADA3' 3453
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ESRG' 3454
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ETV4' 3455
-./prog_seq 'geneNames_1.txt' 'exe_16' 'THY1' 3456
-./prog_seq 'geneNames_1.txt' 'exe_16' 'VEZF1' 3457
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ING1' 3458
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TNFAIP3' 3459
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TCF3' 3460
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TP53' 3461
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZNF397' 3462
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ELF1' 3463
-./prog_seq 'geneNames_1.txt' 'exe_16' 'NRIP1' 3464
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZFP36' 3465
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TRIM25' 3466
-./prog_seq 'geneNames_1.txt' 'exe_16' 'NR2F6' 3467
-./prog_seq 'geneNames_1.txt' 'exe_16' 'HCFC1' 3468
-./prog_seq 'geneNames_1.txt' 'exe_16' 'DDX54' 3469
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ESPL1' 3470
-./prog_seq 'geneNames_1.txt' 'exe_16' 'PDCD11' 3471
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZNRD1' 3472
-./prog_seq 'geneNames_1.txt' 'exe_16' 'SMAD3' 3473
-./prog_seq 'geneNames_1.txt' 'exe_16' 'SIRT1' 3474
-./prog_seq 'geneNames_1.txt' 'exe_16' 'HMGA2' 3475
-./prog_seq 'geneNames_1.txt' 'exe_16' 'EGF' 3476
-./prog_seq 'geneNames_1.txt' 'exe_16' 'HIST1H1E' 3477
-./prog_seq 'geneNames_1.txt' 'exe_16' 'BTG1' 3478
-./prog_seq 'geneNames_1.txt' 'exe_16' 'LHX1' 3479
-./prog_seq 'geneNames_1.txt' 'exe_16' 'NFIB' 3480
-./prog_seq 'geneNames_1.txt' 'exe_16' 'CDX2' 3481
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ETV1' 3482
-./prog_seq 'geneNames_1.txt' 'exe_16' 'BCOR' 3483
-./prog_seq 'geneNames_1.txt' 'exe_16' 'HIF1AN' 3484
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ETV5' 3485
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TCF19' 3486
-./prog_seq 'geneNames_1.txt' 'exe_16' 'CEBPD' 3487
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZIC3' 3488
-./prog_seq 'geneNames_1.txt' 'exe_16' 'BMP2' 3489
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ELAVL2' 3490
-./prog_seq 'geneNames_1.txt' 'exe_16' 'MED14' 3491
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZNF354A' 3492
-./prog_seq 'geneNames_1.txt' 'exe_16' 'BRIP1' 3493
-./prog_seq 'geneNames_1.txt' 'exe_16' 'MAF' 3494
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZBTB16' 3495
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TEAD2' 3496
-./prog_seq 'geneNames_1.txt' 'exe_16' 'NR5A2' 3497
-./prog_seq 'geneNames_1.txt' 'exe_16' 'JUN' 3498
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZNF300' 3499
-./prog_seq 'geneNames_1.txt' 'exe_16' 'EPAS1' 3500
-./prog_seq 'geneNames_1.txt' 'exe_16' 'NOTCH3' 3501
-./prog_seq 'geneNames_1.txt' 'exe_16' 'MYC' 3502
-./prog_seq 'geneNames_1.txt' 'exe_16' 'PAWR' 3503
-./prog_seq 'geneNames_1.txt' 'exe_16' 'CREG1' 3504
-./prog_seq 'geneNames_1.txt' 'exe_16' 'FOSB' 3505
-./prog_seq 'geneNames_1.txt' 'exe_16' 'GLI1' 3506
-./prog_seq 'geneNames_1.txt' 'exe_16' 'PRDM14' 3507
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TFE3' 3508
-./prog_seq 'geneNames_1.txt' 'exe_16' 'MAFF' 3509
-./prog_seq 'geneNames_1.txt' 'exe_16' 'MED20' 3510
-./prog_seq 'geneNames_1.txt' 'exe_16' 'E2F5' 3511
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TRIM22' 3512
-./prog_seq 'geneNames_1.txt' 'exe_16' 'WDR5' 3513
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZNF217' 3514
-./prog_seq 'geneNames_1.txt' 'exe_16' 'PEG3' 3515
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZHX1' 3516
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TARDBP' 3517
-./prog_seq 'geneNames_1.txt' 'exe_16' 'SNAPC1' 3518
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZBTB3' 3519
-./prog_seq 'geneNames_1.txt' 'exe_16' 'NFATC2' 3520
-./prog_seq 'geneNames_1.txt' 'exe_16' 'SALL3' 3521
-./prog_seq 'geneNames_1.txt' 'exe_16' 'MAPK1' 3522
-./prog_seq 'geneNames_1.txt' 'exe_16' 'MEIS3' 3523
-./prog_seq 'geneNames_1.txt' 'exe_16' 'CHAF1A' 3524
-./prog_seq 'geneNames_1.txt' 'exe_16' 'DAXX' 3525
-./prog_seq 'geneNames_1.txt' 'exe_16' 'E2F8' 3526
-./prog_seq 'geneNames_1.txt' 'exe_16' 'GATA5' 3527
-./prog_seq 'geneNames_1.txt' 'exe_16' 'RFX5' 3528
-./prog_seq 'geneNames_1.txt' 'exe_16' 'HINFP' 3529
-./prog_seq 'geneNames_1.txt' 'exe_16' 'MLXIPL' 3530
-./prog_seq 'geneNames_1.txt' 'exe_16' 'SSBP2' 3531
-./prog_seq 'geneNames_1.txt' 'exe_16' 'RREB1' 3532
-./prog_seq 'geneNames_1.txt' 'exe_16' 'SMARCD2' 3533
-./prog_seq 'geneNames_1.txt' 'exe_16' 'HDGF' 3534
-./prog_seq 'geneNames_1.txt' 'exe_16' 'MEF2C' 3535
-./prog_seq 'geneNames_1.txt' 'exe_16' 'SSBP3' 3536
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TAF5' 3537
-./prog_seq 'geneNames_1.txt' 'exe_16' 'SRF' 3538
-./prog_seq 'geneNames_1.txt' 'exe_16' 'HIPK2' 3539
-./prog_seq 'geneNames_1.txt' 'exe_16' 'EOMES' 3540
-./prog_seq 'geneNames_1.txt' 'exe_16' 'NCOA1' 3541
-./prog_seq 'geneNames_1.txt' 'exe_16' 'CREB3L3' 3542
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ELL2' 3543
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TOPORS' 3544
-./prog_seq 'geneNames_1.txt' 'exe_16' 'BTG2' 3545
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ING5' 3546
-./prog_seq 'geneNames_1.txt' 'exe_16' 'HNF1B' 3547
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TCF4' 3548
-./prog_seq 'geneNames_1.txt' 'exe_16' 'IRF9' 3549
-./prog_seq 'geneNames_1.txt' 'exe_16' 'JARID2' 3550
-./prog_seq 'geneNames_1.txt' 'exe_16' 'HNRNPAB' 3551
-./prog_seq 'geneNames_1.txt' 'exe_16' 'RARG' 3552
-./prog_seq 'geneNames_1.txt' 'exe_16' 'GMEB1' 3553
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZNF107' 3554
-./prog_seq 'geneNames_1.txt' 'exe_16' 'GATAD2B' 3555
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ARID3B' 3556
-./prog_seq 'geneNames_1.txt' 'exe_16' 'WBP11' 3557
-./prog_seq 'geneNames_1.txt' 'exe_16' 'NCOA6' 3558
-./prog_seq 'geneNames_1.txt' 'exe_16' 'GLI2' 3559
-./prog_seq 'geneNames_1.txt' 'exe_16' 'FOSL1' 3560
-./prog_seq 'geneNames_1.txt' 'exe_16' 'E2F4' 3561
-./prog_seq 'geneNames_1.txt' 'exe_16' 'MXD1' 3562
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TBL1X' 3563
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZSCAN21' 3564
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TRIM27' 3565
-./prog_seq 'geneNames_1.txt' 'exe_16' 'EGFR' 3566
-./prog_seq 'geneNames_1.txt' 'exe_16' 'THAP11' 3567
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TFAP2C' 3568
-./prog_seq 'geneNames_1.txt' 'exe_16' 'LDB2' 3569
-./prog_seq 'geneNames_1.txt' 'exe_16' 'AES' 3570
-./prog_seq 'geneNames_1.txt' 'exe_16' 'FOXA1' 3571
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZBTB24' 3572
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TAF1A' 3573
-./prog_seq 'geneNames_1.txt' 'exe_16' 'BCL11B' 3574
-./prog_seq 'geneNames_1.txt' 'exe_16' 'PITX1' 3575
-./prog_seq 'geneNames_1.txt' 'exe_16' 'MCM2' 3576
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZNF670' 3577
-./prog_seq 'geneNames_1.txt' 'exe_16' 'GLIS3' 3578
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TEAD4' 3579
-./prog_seq 'geneNames_1.txt' 'exe_16' 'NR1I3' 3580
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZNF202' 3581
-./prog_seq 'geneNames_1.txt' 'exe_16' 'REST' 3582
-./prog_seq 'geneNames_1.txt' 'exe_16' 'JUND' 3583
-./prog_seq 'geneNames_1.txt' 'exe_16' 'CREB3L4' 3584
-./prog_seq 'geneNames_1.txt' 'exe_16' 'DDX20' 3585
-./prog_seq 'geneNames_1.txt' 'exe_16' 'HDAC1' 3586
-./prog_seq 'geneNames_1.txt' 'exe_16' 'CTDSPL' 3587
-./prog_seq 'geneNames_1.txt' 'exe_16' 'RNF2' 3588
-./prog_seq 'geneNames_1.txt' 'exe_16' 'CNTRL' 3589
-./prog_seq 'geneNames_1.txt' 'exe_16' 'HNRNPUL1' 3590
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ATF3' 3591
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZNF227' 3592
-./prog_seq 'geneNames_1.txt' 'exe_16' 'EZH2' 3593
-./prog_seq 'geneNames_1.txt' 'exe_16' 'SP100' 3594
-./prog_seq 'geneNames_1.txt' 'exe_16' 'CEBPA' 3595
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZFP64' 3596
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ASXL1' 3597
-./prog_seq 'geneNames_1.txt' 'exe_16' 'THAP1' 3598
-./prog_seq 'geneNames_1.txt' 'exe_16' 'FOXA2' 3599
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZIC2' 3600
-./prog_seq 'geneNames_1.txt' 'exe_16' 'KLF5' 3601
-./prog_seq 'geneNames_1.txt' 'exe_16' 'FOSL2' 3602
-./prog_seq 'geneNames_1.txt' 'exe_16' 'PIAS2' 3603
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TFDP1' 3604
-./prog_seq 'geneNames_1.txt' 'exe_16' 'FHL2' 3605
-./prog_seq 'geneNames_1.txt' 'exe_16' 'DRAP1' 3606
-./prog_seq 'geneNames_1.txt' 'exe_16' 'JAG1' 3607
-./prog_seq 'geneNames_1.txt' 'exe_16' 'GTF3C4' 3608
-./prog_seq 'geneNames_1.txt' 'exe_16' 'RUNX1T1' 3609
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TAF6' 3610
-./prog_seq 'geneNames_1.txt' 'exe_16' 'NR2F2' 3611
-./prog_seq 'geneNames_1.txt' 'exe_16' 'AHR' 3612
-./prog_seq 'geneNames_1.txt' 'exe_16' 'SEC14L2' 3613
-./prog_seq 'geneNames_1.txt' 'exe_16' 'SERTAD3' 3614
-./prog_seq 'geneNames_1.txt' 'exe_16' 'SIRT2' 3615
-./prog_seq 'geneNames_1.txt' 'exe_16' 'NEIL2' 3616
-./prog_seq 'geneNames_1.txt' 'exe_16' 'AATF' 3617
-./prog_seq 'geneNames_1.txt' 'exe_16' 'MCM8' 3618
-./prog_seq 'geneNames_1.txt' 'exe_16' 'MYBBP1A' 3619
-./prog_seq 'geneNames_1.txt' 'exe_16' 'UHRF1' 3620
-./prog_seq 'geneNames_1.txt' 'exe_16' 'GPM6B' 3621
-./prog_seq 'geneNames_1.txt' 'exe_16' 'FOXH1' 3622
-./prog_seq 'geneNames_1.txt' 'exe_16' 'FOXO1' 3623
-./prog_seq 'geneNames_1.txt' 'exe_16' 'BDP1' 3624
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ETS1' 3625
-./prog_seq 'geneNames_1.txt' 'exe_16' 'POU2F1' 3626
-./prog_seq 'geneNames_1.txt' 'exe_16' 'PLAGL2' 3627
-./prog_seq 'geneNames_1.txt' 'exe_16' 'JAZF1' 3628
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZNHIT3' 3629
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZNF675' 3630
-./prog_seq 'geneNames_1.txt' 'exe_16' 'MYCN' 3631
-./prog_seq 'geneNames_1.txt' 'exe_16' 'U2AF1' 3632
-./prog_seq 'geneNames_1.txt' 'exe_16' 'MAZ' 3633
-./prog_seq 'geneNames_1.txt' 'exe_16' 'NANOG' 3634
-./prog_seq 'geneNames_1.txt' 'exe_16' 'KDM4C' 3635
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TFDP2' 3636
-./prog_seq 'geneNames_1.txt' 'exe_16' 'GATA6' 3637
-./prog_seq 'geneNames_1.txt' 'exe_16' 'THRB' 3638
-./prog_seq 'geneNames_1.txt' 'exe_16' 'CCND1' 3639
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TCOF1' 3640
-./prog_seq 'geneNames_1.txt' 'exe_16' 'DR1' 3641
-./prog_seq 'geneNames_1.txt' 'exe_16' 'PPARA' 3642
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZNF398' 3643
-./prog_seq 'geneNames_1.txt' 'exe_16' 'KLF3' 3644
-./prog_seq 'geneNames_1.txt' 'exe_16' 'BCL11A' 3645
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TTF2' 3646
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZNF33A' 3647
-./prog_seq 'geneNames_1.txt' 'exe_16' 'E2F7' 3648
-./prog_seq 'geneNames_1.txt' 'exe_16' 'HTATSF1' 3649
-./prog_seq 'geneNames_1.txt' 'exe_16' 'HIF3A' 3650
-./prog_seq 'geneNames_1.txt' 'exe_16' 'PCGF6' 3651
-./prog_seq 'geneNames_1.txt' 'exe_16' 'PIAS3' 3652
-./prog_seq 'geneNames_1.txt' 'exe_16' 'POLR1E' 3653
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZNF74' 3654
-./prog_seq 'geneNames_1.txt' 'exe_16' 'PTRF' 3655
-./prog_seq 'geneNames_1.txt' 'exe_16' 'SP4' 3656
-./prog_seq 'geneNames_1.txt' 'exe_16' 'HNF4A' 3657
-./prog_seq 'geneNames_1.txt' 'exe_16' 'CHD8' 3658
-./prog_seq 'geneNames_1.txt' 'exe_16' 'NR3C1' 3659
-./prog_seq 'geneNames_1.txt' 'exe_16' 'PBX1' 3660
-./prog_seq 'geneNames_1.txt' 'exe_16' 'EHMT2' 3661
-./prog_seq 'geneNames_1.txt' 'exe_16' 'FOXM1' 3662
-./prog_seq 'geneNames_1.txt' 'exe_16' 'GRHL1' 3663
-./prog_seq 'geneNames_1.txt' 'exe_16' 'SCD5' 3664
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ZFHX3' 3665
-./prog_seq 'geneNames_1.txt' 'exe_16' 'DOT1L' 3666
-./prog_seq 'geneNames_1.txt' 'exe_16' 'E2F3' 3667
-./prog_seq 'geneNames_1.txt' 'exe_16' 'GTF3C5' 3668
-./prog_seq 'geneNames_1.txt' 'exe_16' 'POU5F1' 3669
-./prog_seq 'geneNames_1.txt' 'exe_16' 'POLR3D' 3670
-./prog_seq 'geneNames_1.txt' 'exe_16' 'SOX2' 3671
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TCF7L1' 3672
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TCFL5' 3673
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TIMELESS' 3674
-./prog_seq 'geneNames_1.txt' 'exe_16' 'BMPR1A' 3675
-./prog_seq 'geneNames_1.txt' 'exe_16' 'ANKRD1' 3676
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TRERF1' 3677
-./prog_seq 'geneNames_1.txt' 'exe_16' 'GTF2H2' 3678
-./prog_seq 'geneNames_1.txt' 'exe_16' 'IRF1' 3679
-./prog_seq 'geneNames_1.txt' 'exe_16' 'TBX3' 3680
-./prog_seq 'geneNames_1.txt' 'exe_17' 'AEBP1' 3681
-./prog_seq 'geneNames_1.txt' 'exe_17' 'PIM2' 3682
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TADA3' 3683
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ESRG' 3684
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ETV4' 3685
-./prog_seq 'geneNames_1.txt' 'exe_17' 'THY1' 3686
-./prog_seq 'geneNames_1.txt' 'exe_17' 'VEZF1' 3687
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ING1' 3688
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TNFAIP3' 3689
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TCF3' 3690
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TP53' 3691
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZNF397' 3692
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ELF1' 3693
-./prog_seq 'geneNames_1.txt' 'exe_17' 'NRIP1' 3694
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZFP36' 3695
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TRIM25' 3696
-./prog_seq 'geneNames_1.txt' 'exe_17' 'NR2F6' 3697
-./prog_seq 'geneNames_1.txt' 'exe_17' 'HCFC1' 3698
-./prog_seq 'geneNames_1.txt' 'exe_17' 'DDX54' 3699
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ESPL1' 3700
-./prog_seq 'geneNames_1.txt' 'exe_17' 'PDCD11' 3701
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZNRD1' 3702
-./prog_seq 'geneNames_1.txt' 'exe_17' 'SMAD3' 3703
-./prog_seq 'geneNames_1.txt' 'exe_17' 'SIRT1' 3704
-./prog_seq 'geneNames_1.txt' 'exe_17' 'HMGA2' 3705
-./prog_seq 'geneNames_1.txt' 'exe_17' 'EGF' 3706
-./prog_seq 'geneNames_1.txt' 'exe_17' 'HIST1H1E' 3707
-./prog_seq 'geneNames_1.txt' 'exe_17' 'BTG1' 3708
-./prog_seq 'geneNames_1.txt' 'exe_17' 'LHX1' 3709
-./prog_seq 'geneNames_1.txt' 'exe_17' 'NFIB' 3710
-./prog_seq 'geneNames_1.txt' 'exe_17' 'CDX2' 3711
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ETV1' 3712
-./prog_seq 'geneNames_1.txt' 'exe_17' 'BCOR' 3713
-./prog_seq 'geneNames_1.txt' 'exe_17' 'HIF1AN' 3714
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ETV5' 3715
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TCF19' 3716
-./prog_seq 'geneNames_1.txt' 'exe_17' 'CEBPD' 3717
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZIC3' 3718
-./prog_seq 'geneNames_1.txt' 'exe_17' 'BMP2' 3719
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ELAVL2' 3720
-./prog_seq 'geneNames_1.txt' 'exe_17' 'MED14' 3721
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZNF354A' 3722
-./prog_seq 'geneNames_1.txt' 'exe_17' 'BRIP1' 3723
-./prog_seq 'geneNames_1.txt' 'exe_17' 'MAF' 3724
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZBTB16' 3725
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TEAD2' 3726
-./prog_seq 'geneNames_1.txt' 'exe_17' 'NR5A2' 3727
-./prog_seq 'geneNames_1.txt' 'exe_17' 'JUN' 3728
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZNF300' 3729
-./prog_seq 'geneNames_1.txt' 'exe_17' 'EPAS1' 3730
-./prog_seq 'geneNames_1.txt' 'exe_17' 'NOTCH3' 3731
-./prog_seq 'geneNames_1.txt' 'exe_17' 'MYC' 3732
-./prog_seq 'geneNames_1.txt' 'exe_17' 'PAWR' 3733
-./prog_seq 'geneNames_1.txt' 'exe_17' 'CREG1' 3734
-./prog_seq 'geneNames_1.txt' 'exe_17' 'FOSB' 3735
-./prog_seq 'geneNames_1.txt' 'exe_17' 'GLI1' 3736
-./prog_seq 'geneNames_1.txt' 'exe_17' 'PRDM14' 3737
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TFE3' 3738
-./prog_seq 'geneNames_1.txt' 'exe_17' 'MAFF' 3739
-./prog_seq 'geneNames_1.txt' 'exe_17' 'MED20' 3740
-./prog_seq 'geneNames_1.txt' 'exe_17' 'E2F5' 3741
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TRIM22' 3742
-./prog_seq 'geneNames_1.txt' 'exe_17' 'WDR5' 3743
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZNF217' 3744
-./prog_seq 'geneNames_1.txt' 'exe_17' 'PEG3' 3745
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZHX1' 3746
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TARDBP' 3747
-./prog_seq 'geneNames_1.txt' 'exe_17' 'SNAPC1' 3748
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZBTB3' 3749
-./prog_seq 'geneNames_1.txt' 'exe_17' 'NFATC2' 3750
-./prog_seq 'geneNames_1.txt' 'exe_17' 'SALL3' 3751
-./prog_seq 'geneNames_1.txt' 'exe_17' 'MAPK1' 3752
-./prog_seq 'geneNames_1.txt' 'exe_17' 'MEIS3' 3753
-./prog_seq 'geneNames_1.txt' 'exe_17' 'CHAF1A' 3754
-./prog_seq 'geneNames_1.txt' 'exe_17' 'DAXX' 3755
-./prog_seq 'geneNames_1.txt' 'exe_17' 'E2F8' 3756
-./prog_seq 'geneNames_1.txt' 'exe_17' 'GATA5' 3757
-./prog_seq 'geneNames_1.txt' 'exe_17' 'RFX5' 3758
-./prog_seq 'geneNames_1.txt' 'exe_17' 'HINFP' 3759
-./prog_seq 'geneNames_1.txt' 'exe_17' 'MLXIPL' 3760
-./prog_seq 'geneNames_1.txt' 'exe_17' 'SSBP2' 3761
-./prog_seq 'geneNames_1.txt' 'exe_17' 'RREB1' 3762
-./prog_seq 'geneNames_1.txt' 'exe_17' 'SMARCD2' 3763
-./prog_seq 'geneNames_1.txt' 'exe_17' 'HDGF' 3764
-./prog_seq 'geneNames_1.txt' 'exe_17' 'MEF2C' 3765
-./prog_seq 'geneNames_1.txt' 'exe_17' 'SSBP3' 3766
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TAF5' 3767
-./prog_seq 'geneNames_1.txt' 'exe_17' 'SRF' 3768
-./prog_seq 'geneNames_1.txt' 'exe_17' 'HIPK2' 3769
-./prog_seq 'geneNames_1.txt' 'exe_17' 'EOMES' 3770
-./prog_seq 'geneNames_1.txt' 'exe_17' 'NCOA1' 3771
-./prog_seq 'geneNames_1.txt' 'exe_17' 'CREB3L3' 3772
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ELL2' 3773
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TOPORS' 3774
-./prog_seq 'geneNames_1.txt' 'exe_17' 'BTG2' 3775
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ING5' 3776
-./prog_seq 'geneNames_1.txt' 'exe_17' 'HNF1B' 3777
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TCF4' 3778
-./prog_seq 'geneNames_1.txt' 'exe_17' 'IRF9' 3779
-./prog_seq 'geneNames_1.txt' 'exe_17' 'JARID2' 3780
-./prog_seq 'geneNames_1.txt' 'exe_17' 'HNRNPAB' 3781
-./prog_seq 'geneNames_1.txt' 'exe_17' 'RARG' 3782
-./prog_seq 'geneNames_1.txt' 'exe_17' 'GMEB1' 3783
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZNF107' 3784
-./prog_seq 'geneNames_1.txt' 'exe_17' 'GATAD2B' 3785
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ARID3B' 3786
-./prog_seq 'geneNames_1.txt' 'exe_17' 'WBP11' 3787
-./prog_seq 'geneNames_1.txt' 'exe_17' 'NCOA6' 3788
-./prog_seq 'geneNames_1.txt' 'exe_17' 'GLI2' 3789
-./prog_seq 'geneNames_1.txt' 'exe_17' 'FOSL1' 3790
-./prog_seq 'geneNames_1.txt' 'exe_17' 'E2F4' 3791
-./prog_seq 'geneNames_1.txt' 'exe_17' 'MXD1' 3792
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TBL1X' 3793
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZSCAN21' 3794
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TRIM27' 3795
-./prog_seq 'geneNames_1.txt' 'exe_17' 'EGFR' 3796
-./prog_seq 'geneNames_1.txt' 'exe_17' 'THAP11' 3797
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TFAP2C' 3798
-./prog_seq 'geneNames_1.txt' 'exe_17' 'LDB2' 3799
-./prog_seq 'geneNames_1.txt' 'exe_17' 'AES' 3800
-./prog_seq 'geneNames_1.txt' 'exe_17' 'FOXA1' 3801
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZBTB24' 3802
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TAF1A' 3803
-./prog_seq 'geneNames_1.txt' 'exe_17' 'BCL11B' 3804
-./prog_seq 'geneNames_1.txt' 'exe_17' 'PITX1' 3805
-./prog_seq 'geneNames_1.txt' 'exe_17' 'MCM2' 3806
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZNF670' 3807
-./prog_seq 'geneNames_1.txt' 'exe_17' 'GLIS3' 3808
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TEAD4' 3809
-./prog_seq 'geneNames_1.txt' 'exe_17' 'NR1I3' 3810
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZNF202' 3811
-./prog_seq 'geneNames_1.txt' 'exe_17' 'REST' 3812
-./prog_seq 'geneNames_1.txt' 'exe_17' 'JUND' 3813
-./prog_seq 'geneNames_1.txt' 'exe_17' 'CREB3L4' 3814
-./prog_seq 'geneNames_1.txt' 'exe_17' 'DDX20' 3815
-./prog_seq 'geneNames_1.txt' 'exe_17' 'HDAC1' 3816
-./prog_seq 'geneNames_1.txt' 'exe_17' 'CTDSPL' 3817
-./prog_seq 'geneNames_1.txt' 'exe_17' 'RNF2' 3818
-./prog_seq 'geneNames_1.txt' 'exe_17' 'CNTRL' 3819
-./prog_seq 'geneNames_1.txt' 'exe_17' 'HNRNPUL1' 3820
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ATF3' 3821
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZNF227' 3822
-./prog_seq 'geneNames_1.txt' 'exe_17' 'EZH2' 3823
-./prog_seq 'geneNames_1.txt' 'exe_17' 'SP100' 3824
-./prog_seq 'geneNames_1.txt' 'exe_17' 'CEBPA' 3825
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZFP64' 3826
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ASXL1' 3827
-./prog_seq 'geneNames_1.txt' 'exe_17' 'THAP1' 3828
-./prog_seq 'geneNames_1.txt' 'exe_17' 'FOXA2' 3829
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZIC2' 3830
-./prog_seq 'geneNames_1.txt' 'exe_17' 'KLF5' 3831
-./prog_seq 'geneNames_1.txt' 'exe_17' 'FOSL2' 3832
-./prog_seq 'geneNames_1.txt' 'exe_17' 'PIAS2' 3833
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TFDP1' 3834
-./prog_seq 'geneNames_1.txt' 'exe_17' 'FHL2' 3835
-./prog_seq 'geneNames_1.txt' 'exe_17' 'DRAP1' 3836
-./prog_seq 'geneNames_1.txt' 'exe_17' 'JAG1' 3837
-./prog_seq 'geneNames_1.txt' 'exe_17' 'GTF3C4' 3838
-./prog_seq 'geneNames_1.txt' 'exe_17' 'RUNX1T1' 3839
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TAF6' 3840
-./prog_seq 'geneNames_1.txt' 'exe_17' 'NR2F2' 3841
-./prog_seq 'geneNames_1.txt' 'exe_17' 'AHR' 3842
-./prog_seq 'geneNames_1.txt' 'exe_17' 'SEC14L2' 3843
-./prog_seq 'geneNames_1.txt' 'exe_17' 'SERTAD3' 3844
-./prog_seq 'geneNames_1.txt' 'exe_17' 'SIRT2' 3845
-./prog_seq 'geneNames_1.txt' 'exe_17' 'NEIL2' 3846
-./prog_seq 'geneNames_1.txt' 'exe_17' 'AATF' 3847
-./prog_seq 'geneNames_1.txt' 'exe_17' 'MCM8' 3848
-./prog_seq 'geneNames_1.txt' 'exe_17' 'MYBBP1A' 3849
-./prog_seq 'geneNames_1.txt' 'exe_17' 'UHRF1' 3850
-./prog_seq 'geneNames_1.txt' 'exe_17' 'GPM6B' 3851
-./prog_seq 'geneNames_1.txt' 'exe_17' 'FOXH1' 3852
-./prog_seq 'geneNames_1.txt' 'exe_17' 'FOXO1' 3853
-./prog_seq 'geneNames_1.txt' 'exe_17' 'BDP1' 3854
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ETS1' 3855
-./prog_seq 'geneNames_1.txt' 'exe_17' 'POU2F1' 3856
-./prog_seq 'geneNames_1.txt' 'exe_17' 'PLAGL2' 3857
-./prog_seq 'geneNames_1.txt' 'exe_17' 'JAZF1' 3858
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZNHIT3' 3859
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZNF675' 3860
-./prog_seq 'geneNames_1.txt' 'exe_17' 'MYCN' 3861
-./prog_seq 'geneNames_1.txt' 'exe_17' 'U2AF1' 3862
-./prog_seq 'geneNames_1.txt' 'exe_17' 'MAZ' 3863
-./prog_seq 'geneNames_1.txt' 'exe_17' 'NANOG' 3864
-./prog_seq 'geneNames_1.txt' 'exe_17' 'KDM4C' 3865
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TFDP2' 3866
-./prog_seq 'geneNames_1.txt' 'exe_17' 'GATA6' 3867
-./prog_seq 'geneNames_1.txt' 'exe_17' 'THRB' 3868
-./prog_seq 'geneNames_1.txt' 'exe_17' 'CCND1' 3869
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TCOF1' 3870
-./prog_seq 'geneNames_1.txt' 'exe_17' 'DR1' 3871
-./prog_seq 'geneNames_1.txt' 'exe_17' 'PPARA' 3872
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZNF398' 3873
-./prog_seq 'geneNames_1.txt' 'exe_17' 'KLF3' 3874
-./prog_seq 'geneNames_1.txt' 'exe_17' 'BCL11A' 3875
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TTF2' 3876
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZNF33A' 3877
-./prog_seq 'geneNames_1.txt' 'exe_17' 'E2F7' 3878
-./prog_seq 'geneNames_1.txt' 'exe_17' 'HTATSF1' 3879
-./prog_seq 'geneNames_1.txt' 'exe_17' 'HIF3A' 3880
-./prog_seq 'geneNames_1.txt' 'exe_17' 'PCGF6' 3881
-./prog_seq 'geneNames_1.txt' 'exe_17' 'PIAS3' 3882
-./prog_seq 'geneNames_1.txt' 'exe_17' 'POLR1E' 3883
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZNF74' 3884
-./prog_seq 'geneNames_1.txt' 'exe_17' 'PTRF' 3885
-./prog_seq 'geneNames_1.txt' 'exe_17' 'SP4' 3886
-./prog_seq 'geneNames_1.txt' 'exe_17' 'HNF4A' 3887
-./prog_seq 'geneNames_1.txt' 'exe_17' 'CHD8' 3888
-./prog_seq 'geneNames_1.txt' 'exe_17' 'NR3C1' 3889
-./prog_seq 'geneNames_1.txt' 'exe_17' 'PBX1' 3890
-./prog_seq 'geneNames_1.txt' 'exe_17' 'EHMT2' 3891
-./prog_seq 'geneNames_1.txt' 'exe_17' 'FOXM1' 3892
-./prog_seq 'geneNames_1.txt' 'exe_17' 'GRHL1' 3893
-./prog_seq 'geneNames_1.txt' 'exe_17' 'SCD5' 3894
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ZFHX3' 3895
-./prog_seq 'geneNames_1.txt' 'exe_17' 'DOT1L' 3896
-./prog_seq 'geneNames_1.txt' 'exe_17' 'E2F3' 3897
-./prog_seq 'geneNames_1.txt' 'exe_17' 'GTF3C5' 3898
-./prog_seq 'geneNames_1.txt' 'exe_17' 'POU5F1' 3899
-./prog_seq 'geneNames_1.txt' 'exe_17' 'POLR3D' 3900
-./prog_seq 'geneNames_1.txt' 'exe_17' 'SOX2' 3901
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TCF7L1' 3902
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TCFL5' 3903
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TIMELESS' 3904
-./prog_seq 'geneNames_1.txt' 'exe_17' 'BMPR1A' 3905
-./prog_seq 'geneNames_1.txt' 'exe_17' 'ANKRD1' 3906
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TRERF1' 3907
-./prog_seq 'geneNames_1.txt' 'exe_17' 'GTF2H2' 3908
-./prog_seq 'geneNames_1.txt' 'exe_17' 'IRF1' 3909
-./prog_seq 'geneNames_1.txt' 'exe_17' 'TBX3' 3910
-./prog_seq 'geneNames_1.txt' 'exe_18' 'AEBP1' 3911
-./prog_seq 'geneNames_1.txt' 'exe_18' 'PIM2' 3912
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TADA3' 3913
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ESRG' 3914
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ETV4' 3915
-./prog_seq 'geneNames_1.txt' 'exe_18' 'THY1' 3916
-./prog_seq 'geneNames_1.txt' 'exe_18' 'VEZF1' 3917
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ING1' 3918
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TNFAIP3' 3919
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TCF3' 3920
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TP53' 3921
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZNF397' 3922
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ELF1' 3923
-./prog_seq 'geneNames_1.txt' 'exe_18' 'NRIP1' 3924
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZFP36' 3925
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TRIM25' 3926
-./prog_seq 'geneNames_1.txt' 'exe_18' 'NR2F6' 3927
-./prog_seq 'geneNames_1.txt' 'exe_18' 'HCFC1' 3928
-./prog_seq 'geneNames_1.txt' 'exe_18' 'DDX54' 3929
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ESPL1' 3930
-./prog_seq 'geneNames_1.txt' 'exe_18' 'PDCD11' 3931
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZNRD1' 3932
-./prog_seq 'geneNames_1.txt' 'exe_18' 'SMAD3' 3933
-./prog_seq 'geneNames_1.txt' 'exe_18' 'SIRT1' 3934
-./prog_seq 'geneNames_1.txt' 'exe_18' 'HMGA2' 3935
-./prog_seq 'geneNames_1.txt' 'exe_18' 'EGF' 3936
-./prog_seq 'geneNames_1.txt' 'exe_18' 'HIST1H1E' 3937
-./prog_seq 'geneNames_1.txt' 'exe_18' 'BTG1' 3938
-./prog_seq 'geneNames_1.txt' 'exe_18' 'LHX1' 3939
-./prog_seq 'geneNames_1.txt' 'exe_18' 'NFIB' 3940
-./prog_seq 'geneNames_1.txt' 'exe_18' 'CDX2' 3941
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ETV1' 3942
-./prog_seq 'geneNames_1.txt' 'exe_18' 'BCOR' 3943
-./prog_seq 'geneNames_1.txt' 'exe_18' 'HIF1AN' 3944
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ETV5' 3945
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TCF19' 3946
-./prog_seq 'geneNames_1.txt' 'exe_18' 'CEBPD' 3947
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZIC3' 3948
-./prog_seq 'geneNames_1.txt' 'exe_18' 'BMP2' 3949
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ELAVL2' 3950
-./prog_seq 'geneNames_1.txt' 'exe_18' 'MED14' 3951
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZNF354A' 3952
-./prog_seq 'geneNames_1.txt' 'exe_18' 'BRIP1' 3953
-./prog_seq 'geneNames_1.txt' 'exe_18' 'MAF' 3954
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZBTB16' 3955
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TEAD2' 3956
-./prog_seq 'geneNames_1.txt' 'exe_18' 'NR5A2' 3957
-./prog_seq 'geneNames_1.txt' 'exe_18' 'JUN' 3958
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZNF300' 3959
-./prog_seq 'geneNames_1.txt' 'exe_18' 'EPAS1' 3960
-./prog_seq 'geneNames_1.txt' 'exe_18' 'NOTCH3' 3961
-./prog_seq 'geneNames_1.txt' 'exe_18' 'MYC' 3962
-./prog_seq 'geneNames_1.txt' 'exe_18' 'PAWR' 3963
-./prog_seq 'geneNames_1.txt' 'exe_18' 'CREG1' 3964
-./prog_seq 'geneNames_1.txt' 'exe_18' 'FOSB' 3965
-./prog_seq 'geneNames_1.txt' 'exe_18' 'GLI1' 3966
-./prog_seq 'geneNames_1.txt' 'exe_18' 'PRDM14' 3967
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TFE3' 3968
-./prog_seq 'geneNames_1.txt' 'exe_18' 'MAFF' 3969
-./prog_seq 'geneNames_1.txt' 'exe_18' 'MED20' 3970
-./prog_seq 'geneNames_1.txt' 'exe_18' 'E2F5' 3971
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TRIM22' 3972
-./prog_seq 'geneNames_1.txt' 'exe_18' 'WDR5' 3973
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZNF217' 3974
-./prog_seq 'geneNames_1.txt' 'exe_18' 'PEG3' 3975
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZHX1' 3976
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TARDBP' 3977
-./prog_seq 'geneNames_1.txt' 'exe_18' 'SNAPC1' 3978
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZBTB3' 3979
-./prog_seq 'geneNames_1.txt' 'exe_18' 'NFATC2' 3980
-./prog_seq 'geneNames_1.txt' 'exe_18' 'SALL3' 3981
-./prog_seq 'geneNames_1.txt' 'exe_18' 'MAPK1' 3982
-./prog_seq 'geneNames_1.txt' 'exe_18' 'MEIS3' 3983
-./prog_seq 'geneNames_1.txt' 'exe_18' 'CHAF1A' 3984
-./prog_seq 'geneNames_1.txt' 'exe_18' 'DAXX' 3985
-./prog_seq 'geneNames_1.txt' 'exe_18' 'E2F8' 3986
-./prog_seq 'geneNames_1.txt' 'exe_18' 'GATA5' 3987
-./prog_seq 'geneNames_1.txt' 'exe_18' 'RFX5' 3988
-./prog_seq 'geneNames_1.txt' 'exe_18' 'HINFP' 3989
-./prog_seq 'geneNames_1.txt' 'exe_18' 'MLXIPL' 3990
-./prog_seq 'geneNames_1.txt' 'exe_18' 'SSBP2' 3991
-./prog_seq 'geneNames_1.txt' 'exe_18' 'RREB1' 3992
-./prog_seq 'geneNames_1.txt' 'exe_18' 'SMARCD2' 3993
-./prog_seq 'geneNames_1.txt' 'exe_18' 'HDGF' 3994
-./prog_seq 'geneNames_1.txt' 'exe_18' 'MEF2C' 3995
-./prog_seq 'geneNames_1.txt' 'exe_18' 'SSBP3' 3996
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TAF5' 3997
-./prog_seq 'geneNames_1.txt' 'exe_18' 'SRF' 3998
-./prog_seq 'geneNames_1.txt' 'exe_18' 'HIPK2' 3999
-./prog_seq 'geneNames_1.txt' 'exe_18' 'EOMES' 4000
-./prog_seq 'geneNames_1.txt' 'exe_18' 'NCOA1' 4001
-./prog_seq 'geneNames_1.txt' 'exe_18' 'CREB3L3' 4002
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ELL2' 4003
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TOPORS' 4004
-./prog_seq 'geneNames_1.txt' 'exe_18' 'BTG2' 4005
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ING5' 4006
-./prog_seq 'geneNames_1.txt' 'exe_18' 'HNF1B' 4007
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TCF4' 4008
-./prog_seq 'geneNames_1.txt' 'exe_18' 'IRF9' 4009
-./prog_seq 'geneNames_1.txt' 'exe_18' 'JARID2' 4010
-./prog_seq 'geneNames_1.txt' 'exe_18' 'HNRNPAB' 4011
-./prog_seq 'geneNames_1.txt' 'exe_18' 'RARG' 4012
-./prog_seq 'geneNames_1.txt' 'exe_18' 'GMEB1' 4013
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZNF107' 4014
-./prog_seq 'geneNames_1.txt' 'exe_18' 'GATAD2B' 4015
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ARID3B' 4016
-./prog_seq 'geneNames_1.txt' 'exe_18' 'WBP11' 4017
-./prog_seq 'geneNames_1.txt' 'exe_18' 'NCOA6' 4018
-./prog_seq 'geneNames_1.txt' 'exe_18' 'GLI2' 4019
-./prog_seq 'geneNames_1.txt' 'exe_18' 'FOSL1' 4020
-./prog_seq 'geneNames_1.txt' 'exe_18' 'E2F4' 4021
-./prog_seq 'geneNames_1.txt' 'exe_18' 'MXD1' 4022
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TBL1X' 4023
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZSCAN21' 4024
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TRIM27' 4025
-./prog_seq 'geneNames_1.txt' 'exe_18' 'EGFR' 4026
-./prog_seq 'geneNames_1.txt' 'exe_18' 'THAP11' 4027
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TFAP2C' 4028
-./prog_seq 'geneNames_1.txt' 'exe_18' 'LDB2' 4029
-./prog_seq 'geneNames_1.txt' 'exe_18' 'AES' 4030
-./prog_seq 'geneNames_1.txt' 'exe_18' 'FOXA1' 4031
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZBTB24' 4032
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TAF1A' 4033
-./prog_seq 'geneNames_1.txt' 'exe_18' 'BCL11B' 4034
-./prog_seq 'geneNames_1.txt' 'exe_18' 'PITX1' 4035
-./prog_seq 'geneNames_1.txt' 'exe_18' 'MCM2' 4036
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZNF670' 4037
-./prog_seq 'geneNames_1.txt' 'exe_18' 'GLIS3' 4038
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TEAD4' 4039
-./prog_seq 'geneNames_1.txt' 'exe_18' 'NR1I3' 4040
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZNF202' 4041
-./prog_seq 'geneNames_1.txt' 'exe_18' 'REST' 4042
-./prog_seq 'geneNames_1.txt' 'exe_18' 'JUND' 4043
-./prog_seq 'geneNames_1.txt' 'exe_18' 'CREB3L4' 4044
-./prog_seq 'geneNames_1.txt' 'exe_18' 'DDX20' 4045
-./prog_seq 'geneNames_1.txt' 'exe_18' 'HDAC1' 4046
-./prog_seq 'geneNames_1.txt' 'exe_18' 'CTDSPL' 4047
-./prog_seq 'geneNames_1.txt' 'exe_18' 'RNF2' 4048
-./prog_seq 'geneNames_1.txt' 'exe_18' 'CNTRL' 4049
-./prog_seq 'geneNames_1.txt' 'exe_18' 'HNRNPUL1' 4050
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ATF3' 4051
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZNF227' 4052
-./prog_seq 'geneNames_1.txt' 'exe_18' 'EZH2' 4053
-./prog_seq 'geneNames_1.txt' 'exe_18' 'SP100' 4054
-./prog_seq 'geneNames_1.txt' 'exe_18' 'CEBPA' 4055
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZFP64' 4056
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ASXL1' 4057
-./prog_seq 'geneNames_1.txt' 'exe_18' 'THAP1' 4058
-./prog_seq 'geneNames_1.txt' 'exe_18' 'FOXA2' 4059
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZIC2' 4060
-./prog_seq 'geneNames_1.txt' 'exe_18' 'KLF5' 4061
-./prog_seq 'geneNames_1.txt' 'exe_18' 'FOSL2' 4062
-./prog_seq 'geneNames_1.txt' 'exe_18' 'PIAS2' 4063
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TFDP1' 4064
-./prog_seq 'geneNames_1.txt' 'exe_18' 'FHL2' 4065
-./prog_seq 'geneNames_1.txt' 'exe_18' 'DRAP1' 4066
-./prog_seq 'geneNames_1.txt' 'exe_18' 'JAG1' 4067
-./prog_seq 'geneNames_1.txt' 'exe_18' 'GTF3C4' 4068
-./prog_seq 'geneNames_1.txt' 'exe_18' 'RUNX1T1' 4069
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TAF6' 4070
-./prog_seq 'geneNames_1.txt' 'exe_18' 'NR2F2' 4071
-./prog_seq 'geneNames_1.txt' 'exe_18' 'AHR' 4072
-./prog_seq 'geneNames_1.txt' 'exe_18' 'SEC14L2' 4073
-./prog_seq 'geneNames_1.txt' 'exe_18' 'SERTAD3' 4074
-./prog_seq 'geneNames_1.txt' 'exe_18' 'SIRT2' 4075
-./prog_seq 'geneNames_1.txt' 'exe_18' 'NEIL2' 4076
-./prog_seq 'geneNames_1.txt' 'exe_18' 'AATF' 4077
-./prog_seq 'geneNames_1.txt' 'exe_18' 'MCM8' 4078
-./prog_seq 'geneNames_1.txt' 'exe_18' 'MYBBP1A' 4079
-./prog_seq 'geneNames_1.txt' 'exe_18' 'UHRF1' 4080
-./prog_seq 'geneNames_1.txt' 'exe_18' 'GPM6B' 4081
-./prog_seq 'geneNames_1.txt' 'exe_18' 'FOXH1' 4082
-./prog_seq 'geneNames_1.txt' 'exe_18' 'FOXO1' 4083
-./prog_seq 'geneNames_1.txt' 'exe_18' 'BDP1' 4084
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ETS1' 4085
-./prog_seq 'geneNames_1.txt' 'exe_18' 'POU2F1' 4086
-./prog_seq 'geneNames_1.txt' 'exe_18' 'PLAGL2' 4087
-./prog_seq 'geneNames_1.txt' 'exe_18' 'JAZF1' 4088
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZNHIT3' 4089
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZNF675' 4090
-./prog_seq 'geneNames_1.txt' 'exe_18' 'MYCN' 4091
-./prog_seq 'geneNames_1.txt' 'exe_18' 'U2AF1' 4092
-./prog_seq 'geneNames_1.txt' 'exe_18' 'MAZ' 4093
-./prog_seq 'geneNames_1.txt' 'exe_18' 'NANOG' 4094
-./prog_seq 'geneNames_1.txt' 'exe_18' 'KDM4C' 4095
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TFDP2' 4096
-./prog_seq 'geneNames_1.txt' 'exe_18' 'GATA6' 4097
-./prog_seq 'geneNames_1.txt' 'exe_18' 'THRB' 4098
-./prog_seq 'geneNames_1.txt' 'exe_18' 'CCND1' 4099
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TCOF1' 4100
-./prog_seq 'geneNames_1.txt' 'exe_18' 'DR1' 4101
-./prog_seq 'geneNames_1.txt' 'exe_18' 'PPARA' 4102
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZNF398' 4103
-./prog_seq 'geneNames_1.txt' 'exe_18' 'KLF3' 4104
-./prog_seq 'geneNames_1.txt' 'exe_18' 'BCL11A' 4105
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TTF2' 4106
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZNF33A' 4107
-./prog_seq 'geneNames_1.txt' 'exe_18' 'E2F7' 4108
-./prog_seq 'geneNames_1.txt' 'exe_18' 'HTATSF1' 4109
-./prog_seq 'geneNames_1.txt' 'exe_18' 'HIF3A' 4110
-./prog_seq 'geneNames_1.txt' 'exe_18' 'PCGF6' 4111
-./prog_seq 'geneNames_1.txt' 'exe_18' 'PIAS3' 4112
-./prog_seq 'geneNames_1.txt' 'exe_18' 'POLR1E' 4113
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZNF74' 4114
-./prog_seq 'geneNames_1.txt' 'exe_18' 'PTRF' 4115
-./prog_seq 'geneNames_1.txt' 'exe_18' 'SP4' 4116
-./prog_seq 'geneNames_1.txt' 'exe_18' 'HNF4A' 4117
-./prog_seq 'geneNames_1.txt' 'exe_18' 'CHD8' 4118
-./prog_seq 'geneNames_1.txt' 'exe_18' 'NR3C1' 4119
-./prog_seq 'geneNames_1.txt' 'exe_18' 'PBX1' 4120
-./prog_seq 'geneNames_1.txt' 'exe_18' 'EHMT2' 4121
-./prog_seq 'geneNames_1.txt' 'exe_18' 'FOXM1' 4122
-./prog_seq 'geneNames_1.txt' 'exe_18' 'GRHL1' 4123
-./prog_seq 'geneNames_1.txt' 'exe_18' 'SCD5' 4124
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ZFHX3' 4125
-./prog_seq 'geneNames_1.txt' 'exe_18' 'DOT1L' 4126
-./prog_seq 'geneNames_1.txt' 'exe_18' 'E2F3' 4127
-./prog_seq 'geneNames_1.txt' 'exe_18' 'GTF3C5' 4128
-./prog_seq 'geneNames_1.txt' 'exe_18' 'POU5F1' 4129
-./prog_seq 'geneNames_1.txt' 'exe_18' 'POLR3D' 4130
-./prog_seq 'geneNames_1.txt' 'exe_18' 'SOX2' 4131
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TCF7L1' 4132
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TCFL5' 4133
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TIMELESS' 4134
-./prog_seq 'geneNames_1.txt' 'exe_18' 'BMPR1A' 4135
-./prog_seq 'geneNames_1.txt' 'exe_18' 'ANKRD1' 4136
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TRERF1' 4137
-./prog_seq 'geneNames_1.txt' 'exe_18' 'GTF2H2' 4138
-./prog_seq 'geneNames_1.txt' 'exe_18' 'IRF1' 4139
-./prog_seq 'geneNames_1.txt' 'exe_18' 'TBX3' 4140
-./prog_seq 'geneNames_1.txt' 'exe_19' 'AEBP1' 4141
-./prog_seq 'geneNames_1.txt' 'exe_19' 'PIM2' 4142
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TADA3' 4143
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ESRG' 4144
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ETV4' 4145
-./prog_seq 'geneNames_1.txt' 'exe_19' 'THY1' 4146
-./prog_seq 'geneNames_1.txt' 'exe_19' 'VEZF1' 4147
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ING1' 4148
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TNFAIP3' 4149
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TCF3' 4150
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TP53' 4151
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZNF397' 4152
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ELF1' 4153
-./prog_seq 'geneNames_1.txt' 'exe_19' 'NRIP1' 4154
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZFP36' 4155
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TRIM25' 4156
-./prog_seq 'geneNames_1.txt' 'exe_19' 'NR2F6' 4157
-./prog_seq 'geneNames_1.txt' 'exe_19' 'HCFC1' 4158
-./prog_seq 'geneNames_1.txt' 'exe_19' 'DDX54' 4159
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ESPL1' 4160
-./prog_seq 'geneNames_1.txt' 'exe_19' 'PDCD11' 4161
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZNRD1' 4162
-./prog_seq 'geneNames_1.txt' 'exe_19' 'SMAD3' 4163
-./prog_seq 'geneNames_1.txt' 'exe_19' 'SIRT1' 4164
-./prog_seq 'geneNames_1.txt' 'exe_19' 'HMGA2' 4165
-./prog_seq 'geneNames_1.txt' 'exe_19' 'EGF' 4166
-./prog_seq 'geneNames_1.txt' 'exe_19' 'HIST1H1E' 4167
-./prog_seq 'geneNames_1.txt' 'exe_19' 'BTG1' 4168
-./prog_seq 'geneNames_1.txt' 'exe_19' 'LHX1' 4169
-./prog_seq 'geneNames_1.txt' 'exe_19' 'NFIB' 4170
-./prog_seq 'geneNames_1.txt' 'exe_19' 'CDX2' 4171
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ETV1' 4172
-./prog_seq 'geneNames_1.txt' 'exe_19' 'BCOR' 4173
-./prog_seq 'geneNames_1.txt' 'exe_19' 'HIF1AN' 4174
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ETV5' 4175
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TCF19' 4176
-./prog_seq 'geneNames_1.txt' 'exe_19' 'CEBPD' 4177
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZIC3' 4178
-./prog_seq 'geneNames_1.txt' 'exe_19' 'BMP2' 4179
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ELAVL2' 4180
-./prog_seq 'geneNames_1.txt' 'exe_19' 'MED14' 4181
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZNF354A' 4182
-./prog_seq 'geneNames_1.txt' 'exe_19' 'BRIP1' 4183
-./prog_seq 'geneNames_1.txt' 'exe_19' 'MAF' 4184
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZBTB16' 4185
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TEAD2' 4186
-./prog_seq 'geneNames_1.txt' 'exe_19' 'NR5A2' 4187
-./prog_seq 'geneNames_1.txt' 'exe_19' 'JUN' 4188
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZNF300' 4189
-./prog_seq 'geneNames_1.txt' 'exe_19' 'EPAS1' 4190
-./prog_seq 'geneNames_1.txt' 'exe_19' 'NOTCH3' 4191
-./prog_seq 'geneNames_1.txt' 'exe_19' 'MYC' 4192
-./prog_seq 'geneNames_1.txt' 'exe_19' 'PAWR' 4193
-./prog_seq 'geneNames_1.txt' 'exe_19' 'CREG1' 4194
-./prog_seq 'geneNames_1.txt' 'exe_19' 'FOSB' 4195
-./prog_seq 'geneNames_1.txt' 'exe_19' 'GLI1' 4196
-./prog_seq 'geneNames_1.txt' 'exe_19' 'PRDM14' 4197
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TFE3' 4198
-./prog_seq 'geneNames_1.txt' 'exe_19' 'MAFF' 4199
-./prog_seq 'geneNames_1.txt' 'exe_19' 'MED20' 4200
-./prog_seq 'geneNames_1.txt' 'exe_19' 'E2F5' 4201
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TRIM22' 4202
-./prog_seq 'geneNames_1.txt' 'exe_19' 'WDR5' 4203
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZNF217' 4204
-./prog_seq 'geneNames_1.txt' 'exe_19' 'PEG3' 4205
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZHX1' 4206
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TARDBP' 4207
-./prog_seq 'geneNames_1.txt' 'exe_19' 'SNAPC1' 4208
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZBTB3' 4209
-./prog_seq 'geneNames_1.txt' 'exe_19' 'NFATC2' 4210
-./prog_seq 'geneNames_1.txt' 'exe_19' 'SALL3' 4211
-./prog_seq 'geneNames_1.txt' 'exe_19' 'MAPK1' 4212
-./prog_seq 'geneNames_1.txt' 'exe_19' 'MEIS3' 4213
-./prog_seq 'geneNames_1.txt' 'exe_19' 'CHAF1A' 4214
-./prog_seq 'geneNames_1.txt' 'exe_19' 'DAXX' 4215
-./prog_seq 'geneNames_1.txt' 'exe_19' 'E2F8' 4216
-./prog_seq 'geneNames_1.txt' 'exe_19' 'GATA5' 4217
-./prog_seq 'geneNames_1.txt' 'exe_19' 'RFX5' 4218
-./prog_seq 'geneNames_1.txt' 'exe_19' 'HINFP' 4219
-./prog_seq 'geneNames_1.txt' 'exe_19' 'MLXIPL' 4220
-./prog_seq 'geneNames_1.txt' 'exe_19' 'SSBP2' 4221
-./prog_seq 'geneNames_1.txt' 'exe_19' 'RREB1' 4222
-./prog_seq 'geneNames_1.txt' 'exe_19' 'SMARCD2' 4223
-./prog_seq 'geneNames_1.txt' 'exe_19' 'HDGF' 4224
-./prog_seq 'geneNames_1.txt' 'exe_19' 'MEF2C' 4225
-./prog_seq 'geneNames_1.txt' 'exe_19' 'SSBP3' 4226
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TAF5' 4227
-./prog_seq 'geneNames_1.txt' 'exe_19' 'SRF' 4228
-./prog_seq 'geneNames_1.txt' 'exe_19' 'HIPK2' 4229
-./prog_seq 'geneNames_1.txt' 'exe_19' 'EOMES' 4230
-./prog_seq 'geneNames_1.txt' 'exe_19' 'NCOA1' 4231
-./prog_seq 'geneNames_1.txt' 'exe_19' 'CREB3L3' 4232
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ELL2' 4233
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TOPORS' 4234
-./prog_seq 'geneNames_1.txt' 'exe_19' 'BTG2' 4235
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ING5' 4236
-./prog_seq 'geneNames_1.txt' 'exe_19' 'HNF1B' 4237
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TCF4' 4238
-./prog_seq 'geneNames_1.txt' 'exe_19' 'IRF9' 4239
-./prog_seq 'geneNames_1.txt' 'exe_19' 'JARID2' 4240
-./prog_seq 'geneNames_1.txt' 'exe_19' 'HNRNPAB' 4241
-./prog_seq 'geneNames_1.txt' 'exe_19' 'RARG' 4242
-./prog_seq 'geneNames_1.txt' 'exe_19' 'GMEB1' 4243
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZNF107' 4244
-./prog_seq 'geneNames_1.txt' 'exe_19' 'GATAD2B' 4245
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ARID3B' 4246
-./prog_seq 'geneNames_1.txt' 'exe_19' 'WBP11' 4247
-./prog_seq 'geneNames_1.txt' 'exe_19' 'NCOA6' 4248
-./prog_seq 'geneNames_1.txt' 'exe_19' 'GLI2' 4249
-./prog_seq 'geneNames_1.txt' 'exe_19' 'FOSL1' 4250
-./prog_seq 'geneNames_1.txt' 'exe_19' 'E2F4' 4251
-./prog_seq 'geneNames_1.txt' 'exe_19' 'MXD1' 4252
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TBL1X' 4253
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZSCAN21' 4254
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TRIM27' 4255
-./prog_seq 'geneNames_1.txt' 'exe_19' 'EGFR' 4256
-./prog_seq 'geneNames_1.txt' 'exe_19' 'THAP11' 4257
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TFAP2C' 4258
-./prog_seq 'geneNames_1.txt' 'exe_19' 'LDB2' 4259
-./prog_seq 'geneNames_1.txt' 'exe_19' 'AES' 4260
-./prog_seq 'geneNames_1.txt' 'exe_19' 'FOXA1' 4261
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZBTB24' 4262
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TAF1A' 4263
-./prog_seq 'geneNames_1.txt' 'exe_19' 'BCL11B' 4264
-./prog_seq 'geneNames_1.txt' 'exe_19' 'PITX1' 4265
-./prog_seq 'geneNames_1.txt' 'exe_19' 'MCM2' 4266
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZNF670' 4267
-./prog_seq 'geneNames_1.txt' 'exe_19' 'GLIS3' 4268
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TEAD4' 4269
-./prog_seq 'geneNames_1.txt' 'exe_19' 'NR1I3' 4270
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZNF202' 4271
-./prog_seq 'geneNames_1.txt' 'exe_19' 'REST' 4272
-./prog_seq 'geneNames_1.txt' 'exe_19' 'JUND' 4273
-./prog_seq 'geneNames_1.txt' 'exe_19' 'CREB3L4' 4274
-./prog_seq 'geneNames_1.txt' 'exe_19' 'DDX20' 4275
-./prog_seq 'geneNames_1.txt' 'exe_19' 'HDAC1' 4276
-./prog_seq 'geneNames_1.txt' 'exe_19' 'CTDSPL' 4277
-./prog_seq 'geneNames_1.txt' 'exe_19' 'RNF2' 4278
-./prog_seq 'geneNames_1.txt' 'exe_19' 'CNTRL' 4279
-./prog_seq 'geneNames_1.txt' 'exe_19' 'HNRNPUL1' 4280
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ATF3' 4281
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZNF227' 4282
-./prog_seq 'geneNames_1.txt' 'exe_19' 'EZH2' 4283
-./prog_seq 'geneNames_1.txt' 'exe_19' 'SP100' 4284
-./prog_seq 'geneNames_1.txt' 'exe_19' 'CEBPA' 4285
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZFP64' 4286
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ASXL1' 4287
-./prog_seq 'geneNames_1.txt' 'exe_19' 'THAP1' 4288
-./prog_seq 'geneNames_1.txt' 'exe_19' 'FOXA2' 4289
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZIC2' 4290
-./prog_seq 'geneNames_1.txt' 'exe_19' 'KLF5' 4291
-./prog_seq 'geneNames_1.txt' 'exe_19' 'FOSL2' 4292
-./prog_seq 'geneNames_1.txt' 'exe_19' 'PIAS2' 4293
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TFDP1' 4294
-./prog_seq 'geneNames_1.txt' 'exe_19' 'FHL2' 4295
-./prog_seq 'geneNames_1.txt' 'exe_19' 'DRAP1' 4296
-./prog_seq 'geneNames_1.txt' 'exe_19' 'JAG1' 4297
-./prog_seq 'geneNames_1.txt' 'exe_19' 'GTF3C4' 4298
-./prog_seq 'geneNames_1.txt' 'exe_19' 'RUNX1T1' 4299
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TAF6' 4300
-./prog_seq 'geneNames_1.txt' 'exe_19' 'NR2F2' 4301
-./prog_seq 'geneNames_1.txt' 'exe_19' 'AHR' 4302
-./prog_seq 'geneNames_1.txt' 'exe_19' 'SEC14L2' 4303
-./prog_seq 'geneNames_1.txt' 'exe_19' 'SERTAD3' 4304
-./prog_seq 'geneNames_1.txt' 'exe_19' 'SIRT2' 4305
-./prog_seq 'geneNames_1.txt' 'exe_19' 'NEIL2' 4306
-./prog_seq 'geneNames_1.txt' 'exe_19' 'AATF' 4307
-./prog_seq 'geneNames_1.txt' 'exe_19' 'MCM8' 4308
-./prog_seq 'geneNames_1.txt' 'exe_19' 'MYBBP1A' 4309
-./prog_seq 'geneNames_1.txt' 'exe_19' 'UHRF1' 4310
-./prog_seq 'geneNames_1.txt' 'exe_19' 'GPM6B' 4311
-./prog_seq 'geneNames_1.txt' 'exe_19' 'FOXH1' 4312
-./prog_seq 'geneNames_1.txt' 'exe_19' 'FOXO1' 4313
-./prog_seq 'geneNames_1.txt' 'exe_19' 'BDP1' 4314
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ETS1' 4315
-./prog_seq 'geneNames_1.txt' 'exe_19' 'POU2F1' 4316
-./prog_seq 'geneNames_1.txt' 'exe_19' 'PLAGL2' 4317
-./prog_seq 'geneNames_1.txt' 'exe_19' 'JAZF1' 4318
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZNHIT3' 4319
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZNF675' 4320
-./prog_seq 'geneNames_1.txt' 'exe_19' 'MYCN' 4321
-./prog_seq 'geneNames_1.txt' 'exe_19' 'U2AF1' 4322
-./prog_seq 'geneNames_1.txt' 'exe_19' 'MAZ' 4323
-./prog_seq 'geneNames_1.txt' 'exe_19' 'NANOG' 4324
-./prog_seq 'geneNames_1.txt' 'exe_19' 'KDM4C' 4325
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TFDP2' 4326
-./prog_seq 'geneNames_1.txt' 'exe_19' 'GATA6' 4327
-./prog_seq 'geneNames_1.txt' 'exe_19' 'THRB' 4328
-./prog_seq 'geneNames_1.txt' 'exe_19' 'CCND1' 4329
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TCOF1' 4330
-./prog_seq 'geneNames_1.txt' 'exe_19' 'DR1' 4331
-./prog_seq 'geneNames_1.txt' 'exe_19' 'PPARA' 4332
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZNF398' 4333
-./prog_seq 'geneNames_1.txt' 'exe_19' 'KLF3' 4334
-./prog_seq 'geneNames_1.txt' 'exe_19' 'BCL11A' 4335
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TTF2' 4336
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZNF33A' 4337
-./prog_seq 'geneNames_1.txt' 'exe_19' 'E2F7' 4338
-./prog_seq 'geneNames_1.txt' 'exe_19' 'HTATSF1' 4339
-./prog_seq 'geneNames_1.txt' 'exe_19' 'HIF3A' 4340
-./prog_seq 'geneNames_1.txt' 'exe_19' 'PCGF6' 4341
-./prog_seq 'geneNames_1.txt' 'exe_19' 'PIAS3' 4342
-./prog_seq 'geneNames_1.txt' 'exe_19' 'POLR1E' 4343
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZNF74' 4344
-./prog_seq 'geneNames_1.txt' 'exe_19' 'PTRF' 4345
-./prog_seq 'geneNames_1.txt' 'exe_19' 'SP4' 4346
-./prog_seq 'geneNames_1.txt' 'exe_19' 'HNF4A' 4347
-./prog_seq 'geneNames_1.txt' 'exe_19' 'CHD8' 4348
-./prog_seq 'geneNames_1.txt' 'exe_19' 'NR3C1' 4349
-./prog_seq 'geneNames_1.txt' 'exe_19' 'PBX1' 4350
-./prog_seq 'geneNames_1.txt' 'exe_19' 'EHMT2' 4351
-./prog_seq 'geneNames_1.txt' 'exe_19' 'FOXM1' 4352
-./prog_seq 'geneNames_1.txt' 'exe_19' 'GRHL1' 4353
-./prog_seq 'geneNames_1.txt' 'exe_19' 'SCD5' 4354
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ZFHX3' 4355
-./prog_seq 'geneNames_1.txt' 'exe_19' 'DOT1L' 4356
-./prog_seq 'geneNames_1.txt' 'exe_19' 'E2F3' 4357
-./prog_seq 'geneNames_1.txt' 'exe_19' 'GTF3C5' 4358
-./prog_seq 'geneNames_1.txt' 'exe_19' 'POU5F1' 4359
-./prog_seq 'geneNames_1.txt' 'exe_19' 'POLR3D' 4360
-./prog_seq 'geneNames_1.txt' 'exe_19' 'SOX2' 4361
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TCF7L1' 4362
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TCFL5' 4363
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TIMELESS' 4364
-./prog_seq 'geneNames_1.txt' 'exe_19' 'BMPR1A' 4365
-./prog_seq 'geneNames_1.txt' 'exe_19' 'ANKRD1' 4366
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TRERF1' 4367
-./prog_seq 'geneNames_1.txt' 'exe_19' 'GTF2H2' 4368
-./prog_seq 'geneNames_1.txt' 'exe_19' 'IRF1' 4369
-./prog_seq 'geneNames_1.txt' 'exe_19' 'TBX3' 4370
-./prog_seq 'geneNames_1.txt' 'exe_20' 'AEBP1' 4371
-./prog_seq 'geneNames_1.txt' 'exe_20' 'PIM2' 4372
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TADA3' 4373
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ESRG' 4374
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ETV4' 4375
-./prog_seq 'geneNames_1.txt' 'exe_20' 'THY1' 4376
-./prog_seq 'geneNames_1.txt' 'exe_20' 'VEZF1' 4377
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ING1' 4378
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TNFAIP3' 4379
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TCF3' 4380
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TP53' 4381
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZNF397' 4382
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ELF1' 4383
-./prog_seq 'geneNames_1.txt' 'exe_20' 'NRIP1' 4384
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZFP36' 4385
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TRIM25' 4386
-./prog_seq 'geneNames_1.txt' 'exe_20' 'NR2F6' 4387
-./prog_seq 'geneNames_1.txt' 'exe_20' 'HCFC1' 4388
-./prog_seq 'geneNames_1.txt' 'exe_20' 'DDX54' 4389
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ESPL1' 4390
-./prog_seq 'geneNames_1.txt' 'exe_20' 'PDCD11' 4391
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZNRD1' 4392
-./prog_seq 'geneNames_1.txt' 'exe_20' 'SMAD3' 4393
-./prog_seq 'geneNames_1.txt' 'exe_20' 'SIRT1' 4394
-./prog_seq 'geneNames_1.txt' 'exe_20' 'HMGA2' 4395
-./prog_seq 'geneNames_1.txt' 'exe_20' 'EGF' 4396
-./prog_seq 'geneNames_1.txt' 'exe_20' 'HIST1H1E' 4397
-./prog_seq 'geneNames_1.txt' 'exe_20' 'BTG1' 4398
-./prog_seq 'geneNames_1.txt' 'exe_20' 'LHX1' 4399
-./prog_seq 'geneNames_1.txt' 'exe_20' 'NFIB' 4400
-./prog_seq 'geneNames_1.txt' 'exe_20' 'CDX2' 4401
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ETV1' 4402
-./prog_seq 'geneNames_1.txt' 'exe_20' 'BCOR' 4403
-./prog_seq 'geneNames_1.txt' 'exe_20' 'HIF1AN' 4404
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ETV5' 4405
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TCF19' 4406
-./prog_seq 'geneNames_1.txt' 'exe_20' 'CEBPD' 4407
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZIC3' 4408
-./prog_seq 'geneNames_1.txt' 'exe_20' 'BMP2' 4409
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ELAVL2' 4410
-./prog_seq 'geneNames_1.txt' 'exe_20' 'MED14' 4411
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZNF354A' 4412
-./prog_seq 'geneNames_1.txt' 'exe_20' 'BRIP1' 4413
-./prog_seq 'geneNames_1.txt' 'exe_20' 'MAF' 4414
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZBTB16' 4415
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TEAD2' 4416
-./prog_seq 'geneNames_1.txt' 'exe_20' 'NR5A2' 4417
-./prog_seq 'geneNames_1.txt' 'exe_20' 'JUN' 4418
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZNF300' 4419
-./prog_seq 'geneNames_1.txt' 'exe_20' 'EPAS1' 4420
-./prog_seq 'geneNames_1.txt' 'exe_20' 'NOTCH3' 4421
-./prog_seq 'geneNames_1.txt' 'exe_20' 'MYC' 4422
-./prog_seq 'geneNames_1.txt' 'exe_20' 'PAWR' 4423
-./prog_seq 'geneNames_1.txt' 'exe_20' 'CREG1' 4424
-./prog_seq 'geneNames_1.txt' 'exe_20' 'FOSB' 4425
-./prog_seq 'geneNames_1.txt' 'exe_20' 'GLI1' 4426
-./prog_seq 'geneNames_1.txt' 'exe_20' 'PRDM14' 4427
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TFE3' 4428
-./prog_seq 'geneNames_1.txt' 'exe_20' 'MAFF' 4429
-./prog_seq 'geneNames_1.txt' 'exe_20' 'MED20' 4430
-./prog_seq 'geneNames_1.txt' 'exe_20' 'E2F5' 4431
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TRIM22' 4432
-./prog_seq 'geneNames_1.txt' 'exe_20' 'WDR5' 4433
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZNF217' 4434
-./prog_seq 'geneNames_1.txt' 'exe_20' 'PEG3' 4435
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZHX1' 4436
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TARDBP' 4437
-./prog_seq 'geneNames_1.txt' 'exe_20' 'SNAPC1' 4438
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZBTB3' 4439
-./prog_seq 'geneNames_1.txt' 'exe_20' 'NFATC2' 4440
-./prog_seq 'geneNames_1.txt' 'exe_20' 'SALL3' 4441
-./prog_seq 'geneNames_1.txt' 'exe_20' 'MAPK1' 4442
-./prog_seq 'geneNames_1.txt' 'exe_20' 'MEIS3' 4443
-./prog_seq 'geneNames_1.txt' 'exe_20' 'CHAF1A' 4444
-./prog_seq 'geneNames_1.txt' 'exe_20' 'DAXX' 4445
-./prog_seq 'geneNames_1.txt' 'exe_20' 'E2F8' 4446
-./prog_seq 'geneNames_1.txt' 'exe_20' 'GATA5' 4447
-./prog_seq 'geneNames_1.txt' 'exe_20' 'RFX5' 4448
-./prog_seq 'geneNames_1.txt' 'exe_20' 'HINFP' 4449
-./prog_seq 'geneNames_1.txt' 'exe_20' 'MLXIPL' 4450
-./prog_seq 'geneNames_1.txt' 'exe_20' 'SSBP2' 4451
-./prog_seq 'geneNames_1.txt' 'exe_20' 'RREB1' 4452
-./prog_seq 'geneNames_1.txt' 'exe_20' 'SMARCD2' 4453
-./prog_seq 'geneNames_1.txt' 'exe_20' 'HDGF' 4454
-./prog_seq 'geneNames_1.txt' 'exe_20' 'MEF2C' 4455
-./prog_seq 'geneNames_1.txt' 'exe_20' 'SSBP3' 4456
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TAF5' 4457
-./prog_seq 'geneNames_1.txt' 'exe_20' 'SRF' 4458
-./prog_seq 'geneNames_1.txt' 'exe_20' 'HIPK2' 4459
-./prog_seq 'geneNames_1.txt' 'exe_20' 'EOMES' 4460
-./prog_seq 'geneNames_1.txt' 'exe_20' 'NCOA1' 4461
-./prog_seq 'geneNames_1.txt' 'exe_20' 'CREB3L3' 4462
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ELL2' 4463
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TOPORS' 4464
-./prog_seq 'geneNames_1.txt' 'exe_20' 'BTG2' 4465
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ING5' 4466
-./prog_seq 'geneNames_1.txt' 'exe_20' 'HNF1B' 4467
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TCF4' 4468
-./prog_seq 'geneNames_1.txt' 'exe_20' 'IRF9' 4469
-./prog_seq 'geneNames_1.txt' 'exe_20' 'JARID2' 4470
-./prog_seq 'geneNames_1.txt' 'exe_20' 'HNRNPAB' 4471
-./prog_seq 'geneNames_1.txt' 'exe_20' 'RARG' 4472
-./prog_seq 'geneNames_1.txt' 'exe_20' 'GMEB1' 4473
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZNF107' 4474
-./prog_seq 'geneNames_1.txt' 'exe_20' 'GATAD2B' 4475
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ARID3B' 4476
-./prog_seq 'geneNames_1.txt' 'exe_20' 'WBP11' 4477
-./prog_seq 'geneNames_1.txt' 'exe_20' 'NCOA6' 4478
-./prog_seq 'geneNames_1.txt' 'exe_20' 'GLI2' 4479
-./prog_seq 'geneNames_1.txt' 'exe_20' 'FOSL1' 4480
-./prog_seq 'geneNames_1.txt' 'exe_20' 'E2F4' 4481
-./prog_seq 'geneNames_1.txt' 'exe_20' 'MXD1' 4482
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TBL1X' 4483
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZSCAN21' 4484
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TRIM27' 4485
-./prog_seq 'geneNames_1.txt' 'exe_20' 'EGFR' 4486
-./prog_seq 'geneNames_1.txt' 'exe_20' 'THAP11' 4487
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TFAP2C' 4488
-./prog_seq 'geneNames_1.txt' 'exe_20' 'LDB2' 4489
-./prog_seq 'geneNames_1.txt' 'exe_20' 'AES' 4490
-./prog_seq 'geneNames_1.txt' 'exe_20' 'FOXA1' 4491
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZBTB24' 4492
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TAF1A' 4493
-./prog_seq 'geneNames_1.txt' 'exe_20' 'BCL11B' 4494
-./prog_seq 'geneNames_1.txt' 'exe_20' 'PITX1' 4495
-./prog_seq 'geneNames_1.txt' 'exe_20' 'MCM2' 4496
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZNF670' 4497
-./prog_seq 'geneNames_1.txt' 'exe_20' 'GLIS3' 4498
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TEAD4' 4499
-./prog_seq 'geneNames_1.txt' 'exe_20' 'NR1I3' 4500
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZNF202' 4501
-./prog_seq 'geneNames_1.txt' 'exe_20' 'REST' 4502
-./prog_seq 'geneNames_1.txt' 'exe_20' 'JUND' 4503
-./prog_seq 'geneNames_1.txt' 'exe_20' 'CREB3L4' 4504
-./prog_seq 'geneNames_1.txt' 'exe_20' 'DDX20' 4505
-./prog_seq 'geneNames_1.txt' 'exe_20' 'HDAC1' 4506
-./prog_seq 'geneNames_1.txt' 'exe_20' 'CTDSPL' 4507
-./prog_seq 'geneNames_1.txt' 'exe_20' 'RNF2' 4508
-./prog_seq 'geneNames_1.txt' 'exe_20' 'CNTRL' 4509
-./prog_seq 'geneNames_1.txt' 'exe_20' 'HNRNPUL1' 4510
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ATF3' 4511
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZNF227' 4512
-./prog_seq 'geneNames_1.txt' 'exe_20' 'EZH2' 4513
-./prog_seq 'geneNames_1.txt' 'exe_20' 'SP100' 4514
-./prog_seq 'geneNames_1.txt' 'exe_20' 'CEBPA' 4515
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZFP64' 4516
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ASXL1' 4517
-./prog_seq 'geneNames_1.txt' 'exe_20' 'THAP1' 4518
-./prog_seq 'geneNames_1.txt' 'exe_20' 'FOXA2' 4519
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZIC2' 4520
-./prog_seq 'geneNames_1.txt' 'exe_20' 'KLF5' 4521
-./prog_seq 'geneNames_1.txt' 'exe_20' 'FOSL2' 4522
-./prog_seq 'geneNames_1.txt' 'exe_20' 'PIAS2' 4523
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TFDP1' 4524
-./prog_seq 'geneNames_1.txt' 'exe_20' 'FHL2' 4525
-./prog_seq 'geneNames_1.txt' 'exe_20' 'DRAP1' 4526
-./prog_seq 'geneNames_1.txt' 'exe_20' 'JAG1' 4527
-./prog_seq 'geneNames_1.txt' 'exe_20' 'GTF3C4' 4528
-./prog_seq 'geneNames_1.txt' 'exe_20' 'RUNX1T1' 4529
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TAF6' 4530
-./prog_seq 'geneNames_1.txt' 'exe_20' 'NR2F2' 4531
-./prog_seq 'geneNames_1.txt' 'exe_20' 'AHR' 4532
-./prog_seq 'geneNames_1.txt' 'exe_20' 'SEC14L2' 4533
-./prog_seq 'geneNames_1.txt' 'exe_20' 'SERTAD3' 4534
-./prog_seq 'geneNames_1.txt' 'exe_20' 'SIRT2' 4535
-./prog_seq 'geneNames_1.txt' 'exe_20' 'NEIL2' 4536
-./prog_seq 'geneNames_1.txt' 'exe_20' 'AATF' 4537
-./prog_seq 'geneNames_1.txt' 'exe_20' 'MCM8' 4538
-./prog_seq 'geneNames_1.txt' 'exe_20' 'MYBBP1A' 4539
-./prog_seq 'geneNames_1.txt' 'exe_20' 'UHRF1' 4540
-./prog_seq 'geneNames_1.txt' 'exe_20' 'GPM6B' 4541
-./prog_seq 'geneNames_1.txt' 'exe_20' 'FOXH1' 4542
-./prog_seq 'geneNames_1.txt' 'exe_20' 'FOXO1' 4543
-./prog_seq 'geneNames_1.txt' 'exe_20' 'BDP1' 4544
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ETS1' 4545
-./prog_seq 'geneNames_1.txt' 'exe_20' 'POU2F1' 4546
-./prog_seq 'geneNames_1.txt' 'exe_20' 'PLAGL2' 4547
-./prog_seq 'geneNames_1.txt' 'exe_20' 'JAZF1' 4548
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZNHIT3' 4549
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZNF675' 4550
-./prog_seq 'geneNames_1.txt' 'exe_20' 'MYCN' 4551
-./prog_seq 'geneNames_1.txt' 'exe_20' 'U2AF1' 4552
-./prog_seq 'geneNames_1.txt' 'exe_20' 'MAZ' 4553
-./prog_seq 'geneNames_1.txt' 'exe_20' 'NANOG' 4554
-./prog_seq 'geneNames_1.txt' 'exe_20' 'KDM4C' 4555
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TFDP2' 4556
-./prog_seq 'geneNames_1.txt' 'exe_20' 'GATA6' 4557
-./prog_seq 'geneNames_1.txt' 'exe_20' 'THRB' 4558
-./prog_seq 'geneNames_1.txt' 'exe_20' 'CCND1' 4559
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TCOF1' 4560
-./prog_seq 'geneNames_1.txt' 'exe_20' 'DR1' 4561
-./prog_seq 'geneNames_1.txt' 'exe_20' 'PPARA' 4562
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZNF398' 4563
-./prog_seq 'geneNames_1.txt' 'exe_20' 'KLF3' 4564
-./prog_seq 'geneNames_1.txt' 'exe_20' 'BCL11A' 4565
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TTF2' 4566
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZNF33A' 4567
-./prog_seq 'geneNames_1.txt' 'exe_20' 'E2F7' 4568
-./prog_seq 'geneNames_1.txt' 'exe_20' 'HTATSF1' 4569
-./prog_seq 'geneNames_1.txt' 'exe_20' 'HIF3A' 4570
-./prog_seq 'geneNames_1.txt' 'exe_20' 'PCGF6' 4571
-./prog_seq 'geneNames_1.txt' 'exe_20' 'PIAS3' 4572
-./prog_seq 'geneNames_1.txt' 'exe_20' 'POLR1E' 4573
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZNF74' 4574
-./prog_seq 'geneNames_1.txt' 'exe_20' 'PTRF' 4575
-./prog_seq 'geneNames_1.txt' 'exe_20' 'SP4' 4576
-./prog_seq 'geneNames_1.txt' 'exe_20' 'HNF4A' 4577
-./prog_seq 'geneNames_1.txt' 'exe_20' 'CHD8' 4578
-./prog_seq 'geneNames_1.txt' 'exe_20' 'NR3C1' 4579
-./prog_seq 'geneNames_1.txt' 'exe_20' 'PBX1' 4580
-./prog_seq 'geneNames_1.txt' 'exe_20' 'EHMT2' 4581
-./prog_seq 'geneNames_1.txt' 'exe_20' 'FOXM1' 4582
-./prog_seq 'geneNames_1.txt' 'exe_20' 'GRHL1' 4583
-./prog_seq 'geneNames_1.txt' 'exe_20' 'SCD5' 4584
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ZFHX3' 4585
-./prog_seq 'geneNames_1.txt' 'exe_20' 'DOT1L' 4586
-./prog_seq 'geneNames_1.txt' 'exe_20' 'E2F3' 4587
-./prog_seq 'geneNames_1.txt' 'exe_20' 'GTF3C5' 4588
-./prog_seq 'geneNames_1.txt' 'exe_20' 'POU5F1' 4589
-./prog_seq 'geneNames_1.txt' 'exe_20' 'POLR3D' 4590
-./prog_seq 'geneNames_1.txt' 'exe_20' 'SOX2' 4591
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TCF7L1' 4592
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TCFL5' 4593
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TIMELESS' 4594
-./prog_seq 'geneNames_1.txt' 'exe_20' 'BMPR1A' 4595
-./prog_seq 'geneNames_1.txt' 'exe_20' 'ANKRD1' 4596
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TRERF1' 4597
-./prog_seq 'geneNames_1.txt' 'exe_20' 'GTF2H2' 4598
-./prog_seq 'geneNames_1.txt' 'exe_20' 'IRF1' 4599
-./prog_seq 'geneNames_1.txt' 'exe_20' 'TBX3' 4600
-./prog_seq 'geneNames_1.txt' 'exe_21' 'AEBP1' 4601
-./prog_seq 'geneNames_1.txt' 'exe_21' 'PIM2' 4602
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TADA3' 4603
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ESRG' 4604
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ETV4' 4605
-./prog_seq 'geneNames_1.txt' 'exe_21' 'THY1' 4606
-./prog_seq 'geneNames_1.txt' 'exe_21' 'VEZF1' 4607
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ING1' 4608
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TNFAIP3' 4609
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TCF3' 4610
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TP53' 4611
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZNF397' 4612
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ELF1' 4613
-./prog_seq 'geneNames_1.txt' 'exe_21' 'NRIP1' 4614
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZFP36' 4615
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TRIM25' 4616
-./prog_seq 'geneNames_1.txt' 'exe_21' 'NR2F6' 4617
-./prog_seq 'geneNames_1.txt' 'exe_21' 'HCFC1' 4618
-./prog_seq 'geneNames_1.txt' 'exe_21' 'DDX54' 4619
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ESPL1' 4620
-./prog_seq 'geneNames_1.txt' 'exe_21' 'PDCD11' 4621
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZNRD1' 4622
-./prog_seq 'geneNames_1.txt' 'exe_21' 'SMAD3' 4623
-./prog_seq 'geneNames_1.txt' 'exe_21' 'SIRT1' 4624
-./prog_seq 'geneNames_1.txt' 'exe_21' 'HMGA2' 4625
-./prog_seq 'geneNames_1.txt' 'exe_21' 'EGF' 4626
-./prog_seq 'geneNames_1.txt' 'exe_21' 'HIST1H1E' 4627
-./prog_seq 'geneNames_1.txt' 'exe_21' 'BTG1' 4628
-./prog_seq 'geneNames_1.txt' 'exe_21' 'LHX1' 4629
-./prog_seq 'geneNames_1.txt' 'exe_21' 'NFIB' 4630
-./prog_seq 'geneNames_1.txt' 'exe_21' 'CDX2' 4631
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ETV1' 4632
-./prog_seq 'geneNames_1.txt' 'exe_21' 'BCOR' 4633
-./prog_seq 'geneNames_1.txt' 'exe_21' 'HIF1AN' 4634
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ETV5' 4635
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TCF19' 4636
-./prog_seq 'geneNames_1.txt' 'exe_21' 'CEBPD' 4637
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZIC3' 4638
-./prog_seq 'geneNames_1.txt' 'exe_21' 'BMP2' 4639
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ELAVL2' 4640
-./prog_seq 'geneNames_1.txt' 'exe_21' 'MED14' 4641
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZNF354A' 4642
-./prog_seq 'geneNames_1.txt' 'exe_21' 'BRIP1' 4643
-./prog_seq 'geneNames_1.txt' 'exe_21' 'MAF' 4644
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZBTB16' 4645
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TEAD2' 4646
-./prog_seq 'geneNames_1.txt' 'exe_21' 'NR5A2' 4647
-./prog_seq 'geneNames_1.txt' 'exe_21' 'JUN' 4648
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZNF300' 4649
-./prog_seq 'geneNames_1.txt' 'exe_21' 'EPAS1' 4650
-./prog_seq 'geneNames_1.txt' 'exe_21' 'NOTCH3' 4651
-./prog_seq 'geneNames_1.txt' 'exe_21' 'MYC' 4652
-./prog_seq 'geneNames_1.txt' 'exe_21' 'PAWR' 4653
-./prog_seq 'geneNames_1.txt' 'exe_21' 'CREG1' 4654
-./prog_seq 'geneNames_1.txt' 'exe_21' 'FOSB' 4655
-./prog_seq 'geneNames_1.txt' 'exe_21' 'GLI1' 4656
-./prog_seq 'geneNames_1.txt' 'exe_21' 'PRDM14' 4657
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TFE3' 4658
-./prog_seq 'geneNames_1.txt' 'exe_21' 'MAFF' 4659
-./prog_seq 'geneNames_1.txt' 'exe_21' 'MED20' 4660
-./prog_seq 'geneNames_1.txt' 'exe_21' 'E2F5' 4661
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TRIM22' 4662
-./prog_seq 'geneNames_1.txt' 'exe_21' 'WDR5' 4663
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZNF217' 4664
-./prog_seq 'geneNames_1.txt' 'exe_21' 'PEG3' 4665
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZHX1' 4666
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TARDBP' 4667
-./prog_seq 'geneNames_1.txt' 'exe_21' 'SNAPC1' 4668
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZBTB3' 4669
-./prog_seq 'geneNames_1.txt' 'exe_21' 'NFATC2' 4670
-./prog_seq 'geneNames_1.txt' 'exe_21' 'SALL3' 4671
-./prog_seq 'geneNames_1.txt' 'exe_21' 'MAPK1' 4672
-./prog_seq 'geneNames_1.txt' 'exe_21' 'MEIS3' 4673
-./prog_seq 'geneNames_1.txt' 'exe_21' 'CHAF1A' 4674
-./prog_seq 'geneNames_1.txt' 'exe_21' 'DAXX' 4675
-./prog_seq 'geneNames_1.txt' 'exe_21' 'E2F8' 4676
-./prog_seq 'geneNames_1.txt' 'exe_21' 'GATA5' 4677
-./prog_seq 'geneNames_1.txt' 'exe_21' 'RFX5' 4678
-./prog_seq 'geneNames_1.txt' 'exe_21' 'HINFP' 4679
-./prog_seq 'geneNames_1.txt' 'exe_21' 'MLXIPL' 4680
-./prog_seq 'geneNames_1.txt' 'exe_21' 'SSBP2' 4681
-./prog_seq 'geneNames_1.txt' 'exe_21' 'RREB1' 4682
-./prog_seq 'geneNames_1.txt' 'exe_21' 'SMARCD2' 4683
-./prog_seq 'geneNames_1.txt' 'exe_21' 'HDGF' 4684
-./prog_seq 'geneNames_1.txt' 'exe_21' 'MEF2C' 4685
-./prog_seq 'geneNames_1.txt' 'exe_21' 'SSBP3' 4686
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TAF5' 4687
-./prog_seq 'geneNames_1.txt' 'exe_21' 'SRF' 4688
-./prog_seq 'geneNames_1.txt' 'exe_21' 'HIPK2' 4689
-./prog_seq 'geneNames_1.txt' 'exe_21' 'EOMES' 4690
-./prog_seq 'geneNames_1.txt' 'exe_21' 'NCOA1' 4691
-./prog_seq 'geneNames_1.txt' 'exe_21' 'CREB3L3' 4692
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ELL2' 4693
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TOPORS' 4694
-./prog_seq 'geneNames_1.txt' 'exe_21' 'BTG2' 4695
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ING5' 4696
-./prog_seq 'geneNames_1.txt' 'exe_21' 'HNF1B' 4697
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TCF4' 4698
-./prog_seq 'geneNames_1.txt' 'exe_21' 'IRF9' 4699
-./prog_seq 'geneNames_1.txt' 'exe_21' 'JARID2' 4700
-./prog_seq 'geneNames_1.txt' 'exe_21' 'HNRNPAB' 4701
-./prog_seq 'geneNames_1.txt' 'exe_21' 'RARG' 4702
-./prog_seq 'geneNames_1.txt' 'exe_21' 'GMEB1' 4703
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZNF107' 4704
-./prog_seq 'geneNames_1.txt' 'exe_21' 'GATAD2B' 4705
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ARID3B' 4706
-./prog_seq 'geneNames_1.txt' 'exe_21' 'WBP11' 4707
-./prog_seq 'geneNames_1.txt' 'exe_21' 'NCOA6' 4708
-./prog_seq 'geneNames_1.txt' 'exe_21' 'GLI2' 4709
-./prog_seq 'geneNames_1.txt' 'exe_21' 'FOSL1' 4710
-./prog_seq 'geneNames_1.txt' 'exe_21' 'E2F4' 4711
-./prog_seq 'geneNames_1.txt' 'exe_21' 'MXD1' 4712
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TBL1X' 4713
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZSCAN21' 4714
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TRIM27' 4715
-./prog_seq 'geneNames_1.txt' 'exe_21' 'EGFR' 4716
-./prog_seq 'geneNames_1.txt' 'exe_21' 'THAP11' 4717
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TFAP2C' 4718
-./prog_seq 'geneNames_1.txt' 'exe_21' 'LDB2' 4719
-./prog_seq 'geneNames_1.txt' 'exe_21' 'AES' 4720
-./prog_seq 'geneNames_1.txt' 'exe_21' 'FOXA1' 4721
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZBTB24' 4722
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TAF1A' 4723
-./prog_seq 'geneNames_1.txt' 'exe_21' 'BCL11B' 4724
-./prog_seq 'geneNames_1.txt' 'exe_21' 'PITX1' 4725
-./prog_seq 'geneNames_1.txt' 'exe_21' 'MCM2' 4726
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZNF670' 4727
-./prog_seq 'geneNames_1.txt' 'exe_21' 'GLIS3' 4728
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TEAD4' 4729
-./prog_seq 'geneNames_1.txt' 'exe_21' 'NR1I3' 4730
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZNF202' 4731
-./prog_seq 'geneNames_1.txt' 'exe_21' 'REST' 4732
-./prog_seq 'geneNames_1.txt' 'exe_21' 'JUND' 4733
-./prog_seq 'geneNames_1.txt' 'exe_21' 'CREB3L4' 4734
-./prog_seq 'geneNames_1.txt' 'exe_21' 'DDX20' 4735
-./prog_seq 'geneNames_1.txt' 'exe_21' 'HDAC1' 4736
-./prog_seq 'geneNames_1.txt' 'exe_21' 'CTDSPL' 4737
-./prog_seq 'geneNames_1.txt' 'exe_21' 'RNF2' 4738
-./prog_seq 'geneNames_1.txt' 'exe_21' 'CNTRL' 4739
-./prog_seq 'geneNames_1.txt' 'exe_21' 'HNRNPUL1' 4740
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ATF3' 4741
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZNF227' 4742
-./prog_seq 'geneNames_1.txt' 'exe_21' 'EZH2' 4743
-./prog_seq 'geneNames_1.txt' 'exe_21' 'SP100' 4744
-./prog_seq 'geneNames_1.txt' 'exe_21' 'CEBPA' 4745
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZFP64' 4746
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ASXL1' 4747
-./prog_seq 'geneNames_1.txt' 'exe_21' 'THAP1' 4748
-./prog_seq 'geneNames_1.txt' 'exe_21' 'FOXA2' 4749
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZIC2' 4750
-./prog_seq 'geneNames_1.txt' 'exe_21' 'KLF5' 4751
-./prog_seq 'geneNames_1.txt' 'exe_21' 'FOSL2' 4752
-./prog_seq 'geneNames_1.txt' 'exe_21' 'PIAS2' 4753
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TFDP1' 4754
-./prog_seq 'geneNames_1.txt' 'exe_21' 'FHL2' 4755
-./prog_seq 'geneNames_1.txt' 'exe_21' 'DRAP1' 4756
-./prog_seq 'geneNames_1.txt' 'exe_21' 'JAG1' 4757
-./prog_seq 'geneNames_1.txt' 'exe_21' 'GTF3C4' 4758
-./prog_seq 'geneNames_1.txt' 'exe_21' 'RUNX1T1' 4759
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TAF6' 4760
-./prog_seq 'geneNames_1.txt' 'exe_21' 'NR2F2' 4761
-./prog_seq 'geneNames_1.txt' 'exe_21' 'AHR' 4762
-./prog_seq 'geneNames_1.txt' 'exe_21' 'SEC14L2' 4763
-./prog_seq 'geneNames_1.txt' 'exe_21' 'SERTAD3' 4764
-./prog_seq 'geneNames_1.txt' 'exe_21' 'SIRT2' 4765
-./prog_seq 'geneNames_1.txt' 'exe_21' 'NEIL2' 4766
-./prog_seq 'geneNames_1.txt' 'exe_21' 'AATF' 4767
-./prog_seq 'geneNames_1.txt' 'exe_21' 'MCM8' 4768
-./prog_seq 'geneNames_1.txt' 'exe_21' 'MYBBP1A' 4769
-./prog_seq 'geneNames_1.txt' 'exe_21' 'UHRF1' 4770
-./prog_seq 'geneNames_1.txt' 'exe_21' 'GPM6B' 4771
-./prog_seq 'geneNames_1.txt' 'exe_21' 'FOXH1' 4772
-./prog_seq 'geneNames_1.txt' 'exe_21' 'FOXO1' 4773
-./prog_seq 'geneNames_1.txt' 'exe_21' 'BDP1' 4774
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ETS1' 4775
-./prog_seq 'geneNames_1.txt' 'exe_21' 'POU2F1' 4776
-./prog_seq 'geneNames_1.txt' 'exe_21' 'PLAGL2' 4777
-./prog_seq 'geneNames_1.txt' 'exe_21' 'JAZF1' 4778
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZNHIT3' 4779
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZNF675' 4780
-./prog_seq 'geneNames_1.txt' 'exe_21' 'MYCN' 4781
-./prog_seq 'geneNames_1.txt' 'exe_21' 'U2AF1' 4782
-./prog_seq 'geneNames_1.txt' 'exe_21' 'MAZ' 4783
-./prog_seq 'geneNames_1.txt' 'exe_21' 'NANOG' 4784
-./prog_seq 'geneNames_1.txt' 'exe_21' 'KDM4C' 4785
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TFDP2' 4786
-./prog_seq 'geneNames_1.txt' 'exe_21' 'GATA6' 4787
-./prog_seq 'geneNames_1.txt' 'exe_21' 'THRB' 4788
-./prog_seq 'geneNames_1.txt' 'exe_21' 'CCND1' 4789
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TCOF1' 4790
-./prog_seq 'geneNames_1.txt' 'exe_21' 'DR1' 4791
-./prog_seq 'geneNames_1.txt' 'exe_21' 'PPARA' 4792
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZNF398' 4793
-./prog_seq 'geneNames_1.txt' 'exe_21' 'KLF3' 4794
-./prog_seq 'geneNames_1.txt' 'exe_21' 'BCL11A' 4795
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TTF2' 4796
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZNF33A' 4797
-./prog_seq 'geneNames_1.txt' 'exe_21' 'E2F7' 4798
-./prog_seq 'geneNames_1.txt' 'exe_21' 'HTATSF1' 4799
-./prog_seq 'geneNames_1.txt' 'exe_21' 'HIF3A' 4800
-./prog_seq 'geneNames_1.txt' 'exe_21' 'PCGF6' 4801
-./prog_seq 'geneNames_1.txt' 'exe_21' 'PIAS3' 4802
-./prog_seq 'geneNames_1.txt' 'exe_21' 'POLR1E' 4803
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZNF74' 4804
-./prog_seq 'geneNames_1.txt' 'exe_21' 'PTRF' 4805
-./prog_seq 'geneNames_1.txt' 'exe_21' 'SP4' 4806
-./prog_seq 'geneNames_1.txt' 'exe_21' 'HNF4A' 4807
-./prog_seq 'geneNames_1.txt' 'exe_21' 'CHD8' 4808
-./prog_seq 'geneNames_1.txt' 'exe_21' 'NR3C1' 4809
-./prog_seq 'geneNames_1.txt' 'exe_21' 'PBX1' 4810
-./prog_seq 'geneNames_1.txt' 'exe_21' 'EHMT2' 4811
-./prog_seq 'geneNames_1.txt' 'exe_21' 'FOXM1' 4812
-./prog_seq 'geneNames_1.txt' 'exe_21' 'GRHL1' 4813
-./prog_seq 'geneNames_1.txt' 'exe_21' 'SCD5' 4814
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ZFHX3' 4815
-./prog_seq 'geneNames_1.txt' 'exe_21' 'DOT1L' 4816
-./prog_seq 'geneNames_1.txt' 'exe_21' 'E2F3' 4817
-./prog_seq 'geneNames_1.txt' 'exe_21' 'GTF3C5' 4818
-./prog_seq 'geneNames_1.txt' 'exe_21' 'POU5F1' 4819
-./prog_seq 'geneNames_1.txt' 'exe_21' 'POLR3D' 4820
-./prog_seq 'geneNames_1.txt' 'exe_21' 'SOX2' 4821
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TCF7L1' 4822
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TCFL5' 4823
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TIMELESS' 4824
-./prog_seq 'geneNames_1.txt' 'exe_21' 'BMPR1A' 4825
-./prog_seq 'geneNames_1.txt' 'exe_21' 'ANKRD1' 4826
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TRERF1' 4827
-./prog_seq 'geneNames_1.txt' 'exe_21' 'GTF2H2' 4828
-./prog_seq 'geneNames_1.txt' 'exe_21' 'IRF1' 4829
-./prog_seq 'geneNames_1.txt' 'exe_21' 'TBX3' 4830
-./prog_seq 'geneNames_1.txt' 'exe_22' 'AEBP1' 4831
-./prog_seq 'geneNames_1.txt' 'exe_22' 'PIM2' 4832
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TADA3' 4833
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ESRG' 4834
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ETV4' 4835
-./prog_seq 'geneNames_1.txt' 'exe_22' 'THY1' 4836
-./prog_seq 'geneNames_1.txt' 'exe_22' 'VEZF1' 4837
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ING1' 4838
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TNFAIP3' 4839
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TCF3' 4840
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TP53' 4841
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZNF397' 4842
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ELF1' 4843
-./prog_seq 'geneNames_1.txt' 'exe_22' 'NRIP1' 4844
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZFP36' 4845
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TRIM25' 4846
-./prog_seq 'geneNames_1.txt' 'exe_22' 'NR2F6' 4847
-./prog_seq 'geneNames_1.txt' 'exe_22' 'HCFC1' 4848
-./prog_seq 'geneNames_1.txt' 'exe_22' 'DDX54' 4849
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ESPL1' 4850
-./prog_seq 'geneNames_1.txt' 'exe_22' 'PDCD11' 4851
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZNRD1' 4852
-./prog_seq 'geneNames_1.txt' 'exe_22' 'SMAD3' 4853
-./prog_seq 'geneNames_1.txt' 'exe_22' 'SIRT1' 4854
-./prog_seq 'geneNames_1.txt' 'exe_22' 'HMGA2' 4855
-./prog_seq 'geneNames_1.txt' 'exe_22' 'EGF' 4856
-./prog_seq 'geneNames_1.txt' 'exe_22' 'HIST1H1E' 4857
-./prog_seq 'geneNames_1.txt' 'exe_22' 'BTG1' 4858
-./prog_seq 'geneNames_1.txt' 'exe_22' 'LHX1' 4859
-./prog_seq 'geneNames_1.txt' 'exe_22' 'NFIB' 4860
-./prog_seq 'geneNames_1.txt' 'exe_22' 'CDX2' 4861
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ETV1' 4862
-./prog_seq 'geneNames_1.txt' 'exe_22' 'BCOR' 4863
-./prog_seq 'geneNames_1.txt' 'exe_22' 'HIF1AN' 4864
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ETV5' 4865
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TCF19' 4866
-./prog_seq 'geneNames_1.txt' 'exe_22' 'CEBPD' 4867
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZIC3' 4868
-./prog_seq 'geneNames_1.txt' 'exe_22' 'BMP2' 4869
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ELAVL2' 4870
-./prog_seq 'geneNames_1.txt' 'exe_22' 'MED14' 4871
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZNF354A' 4872
-./prog_seq 'geneNames_1.txt' 'exe_22' 'BRIP1' 4873
-./prog_seq 'geneNames_1.txt' 'exe_22' 'MAF' 4874
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZBTB16' 4875
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TEAD2' 4876
-./prog_seq 'geneNames_1.txt' 'exe_22' 'NR5A2' 4877
-./prog_seq 'geneNames_1.txt' 'exe_22' 'JUN' 4878
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZNF300' 4879
-./prog_seq 'geneNames_1.txt' 'exe_22' 'EPAS1' 4880
-./prog_seq 'geneNames_1.txt' 'exe_22' 'NOTCH3' 4881
-./prog_seq 'geneNames_1.txt' 'exe_22' 'MYC' 4882
-./prog_seq 'geneNames_1.txt' 'exe_22' 'PAWR' 4883
-./prog_seq 'geneNames_1.txt' 'exe_22' 'CREG1' 4884
-./prog_seq 'geneNames_1.txt' 'exe_22' 'FOSB' 4885
-./prog_seq 'geneNames_1.txt' 'exe_22' 'GLI1' 4886
-./prog_seq 'geneNames_1.txt' 'exe_22' 'PRDM14' 4887
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TFE3' 4888
-./prog_seq 'geneNames_1.txt' 'exe_22' 'MAFF' 4889
-./prog_seq 'geneNames_1.txt' 'exe_22' 'MED20' 4890
-./prog_seq 'geneNames_1.txt' 'exe_22' 'E2F5' 4891
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TRIM22' 4892
-./prog_seq 'geneNames_1.txt' 'exe_22' 'WDR5' 4893
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZNF217' 4894
-./prog_seq 'geneNames_1.txt' 'exe_22' 'PEG3' 4895
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZHX1' 4896
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TARDBP' 4897
-./prog_seq 'geneNames_1.txt' 'exe_22' 'SNAPC1' 4898
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZBTB3' 4899
-./prog_seq 'geneNames_1.txt' 'exe_22' 'NFATC2' 4900
-./prog_seq 'geneNames_1.txt' 'exe_22' 'SALL3' 4901
-./prog_seq 'geneNames_1.txt' 'exe_22' 'MAPK1' 4902
-./prog_seq 'geneNames_1.txt' 'exe_22' 'MEIS3' 4903
-./prog_seq 'geneNames_1.txt' 'exe_22' 'CHAF1A' 4904
-./prog_seq 'geneNames_1.txt' 'exe_22' 'DAXX' 4905
-./prog_seq 'geneNames_1.txt' 'exe_22' 'E2F8' 4906
-./prog_seq 'geneNames_1.txt' 'exe_22' 'GATA5' 4907
-./prog_seq 'geneNames_1.txt' 'exe_22' 'RFX5' 4908
-./prog_seq 'geneNames_1.txt' 'exe_22' 'HINFP' 4909
-./prog_seq 'geneNames_1.txt' 'exe_22' 'MLXIPL' 4910
-./prog_seq 'geneNames_1.txt' 'exe_22' 'SSBP2' 4911
-./prog_seq 'geneNames_1.txt' 'exe_22' 'RREB1' 4912
-./prog_seq 'geneNames_1.txt' 'exe_22' 'SMARCD2' 4913
-./prog_seq 'geneNames_1.txt' 'exe_22' 'HDGF' 4914
-./prog_seq 'geneNames_1.txt' 'exe_22' 'MEF2C' 4915
-./prog_seq 'geneNames_1.txt' 'exe_22' 'SSBP3' 4916
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TAF5' 4917
-./prog_seq 'geneNames_1.txt' 'exe_22' 'SRF' 4918
-./prog_seq 'geneNames_1.txt' 'exe_22' 'HIPK2' 4919
-./prog_seq 'geneNames_1.txt' 'exe_22' 'EOMES' 4920
-./prog_seq 'geneNames_1.txt' 'exe_22' 'NCOA1' 4921
-./prog_seq 'geneNames_1.txt' 'exe_22' 'CREB3L3' 4922
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ELL2' 4923
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TOPORS' 4924
-./prog_seq 'geneNames_1.txt' 'exe_22' 'BTG2' 4925
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ING5' 4926
-./prog_seq 'geneNames_1.txt' 'exe_22' 'HNF1B' 4927
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TCF4' 4928
-./prog_seq 'geneNames_1.txt' 'exe_22' 'IRF9' 4929
-./prog_seq 'geneNames_1.txt' 'exe_22' 'JARID2' 4930
-./prog_seq 'geneNames_1.txt' 'exe_22' 'HNRNPAB' 4931
-./prog_seq 'geneNames_1.txt' 'exe_22' 'RARG' 4932
-./prog_seq 'geneNames_1.txt' 'exe_22' 'GMEB1' 4933
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZNF107' 4934
-./prog_seq 'geneNames_1.txt' 'exe_22' 'GATAD2B' 4935
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ARID3B' 4936
-./prog_seq 'geneNames_1.txt' 'exe_22' 'WBP11' 4937
-./prog_seq 'geneNames_1.txt' 'exe_22' 'NCOA6' 4938
-./prog_seq 'geneNames_1.txt' 'exe_22' 'GLI2' 4939
-./prog_seq 'geneNames_1.txt' 'exe_22' 'FOSL1' 4940
-./prog_seq 'geneNames_1.txt' 'exe_22' 'E2F4' 4941
-./prog_seq 'geneNames_1.txt' 'exe_22' 'MXD1' 4942
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TBL1X' 4943
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZSCAN21' 4944
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TRIM27' 4945
-./prog_seq 'geneNames_1.txt' 'exe_22' 'EGFR' 4946
-./prog_seq 'geneNames_1.txt' 'exe_22' 'THAP11' 4947
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TFAP2C' 4948
-./prog_seq 'geneNames_1.txt' 'exe_22' 'LDB2' 4949
-./prog_seq 'geneNames_1.txt' 'exe_22' 'AES' 4950
-./prog_seq 'geneNames_1.txt' 'exe_22' 'FOXA1' 4951
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZBTB24' 4952
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TAF1A' 4953
-./prog_seq 'geneNames_1.txt' 'exe_22' 'BCL11B' 4954
-./prog_seq 'geneNames_1.txt' 'exe_22' 'PITX1' 4955
-./prog_seq 'geneNames_1.txt' 'exe_22' 'MCM2' 4956
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZNF670' 4957
-./prog_seq 'geneNames_1.txt' 'exe_22' 'GLIS3' 4958
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TEAD4' 4959
-./prog_seq 'geneNames_1.txt' 'exe_22' 'NR1I3' 4960
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZNF202' 4961
-./prog_seq 'geneNames_1.txt' 'exe_22' 'REST' 4962
-./prog_seq 'geneNames_1.txt' 'exe_22' 'JUND' 4963
-./prog_seq 'geneNames_1.txt' 'exe_22' 'CREB3L4' 4964
-./prog_seq 'geneNames_1.txt' 'exe_22' 'DDX20' 4965
-./prog_seq 'geneNames_1.txt' 'exe_22' 'HDAC1' 4966
-./prog_seq 'geneNames_1.txt' 'exe_22' 'CTDSPL' 4967
-./prog_seq 'geneNames_1.txt' 'exe_22' 'RNF2' 4968
-./prog_seq 'geneNames_1.txt' 'exe_22' 'CNTRL' 4969
-./prog_seq 'geneNames_1.txt' 'exe_22' 'HNRNPUL1' 4970
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ATF3' 4971
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZNF227' 4972
-./prog_seq 'geneNames_1.txt' 'exe_22' 'EZH2' 4973
-./prog_seq 'geneNames_1.txt' 'exe_22' 'SP100' 4974
-./prog_seq 'geneNames_1.txt' 'exe_22' 'CEBPA' 4975
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZFP64' 4976
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ASXL1' 4977
-./prog_seq 'geneNames_1.txt' 'exe_22' 'THAP1' 4978
-./prog_seq 'geneNames_1.txt' 'exe_22' 'FOXA2' 4979
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZIC2' 4980
-./prog_seq 'geneNames_1.txt' 'exe_22' 'KLF5' 4981
-./prog_seq 'geneNames_1.txt' 'exe_22' 'FOSL2' 4982
-./prog_seq 'geneNames_1.txt' 'exe_22' 'PIAS2' 4983
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TFDP1' 4984
-./prog_seq 'geneNames_1.txt' 'exe_22' 'FHL2' 4985
-./prog_seq 'geneNames_1.txt' 'exe_22' 'DRAP1' 4986
-./prog_seq 'geneNames_1.txt' 'exe_22' 'JAG1' 4987
-./prog_seq 'geneNames_1.txt' 'exe_22' 'GTF3C4' 4988
-./prog_seq 'geneNames_1.txt' 'exe_22' 'RUNX1T1' 4989
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TAF6' 4990
-./prog_seq 'geneNames_1.txt' 'exe_22' 'NR2F2' 4991
-./prog_seq 'geneNames_1.txt' 'exe_22' 'AHR' 4992
-./prog_seq 'geneNames_1.txt' 'exe_22' 'SEC14L2' 4993
-./prog_seq 'geneNames_1.txt' 'exe_22' 'SERTAD3' 4994
-./prog_seq 'geneNames_1.txt' 'exe_22' 'SIRT2' 4995
-./prog_seq 'geneNames_1.txt' 'exe_22' 'NEIL2' 4996
-./prog_seq 'geneNames_1.txt' 'exe_22' 'AATF' 4997
-./prog_seq 'geneNames_1.txt' 'exe_22' 'MCM8' 4998
-./prog_seq 'geneNames_1.txt' 'exe_22' 'MYBBP1A' 4999
-./prog_seq 'geneNames_1.txt' 'exe_22' 'UHRF1' 5000
-./prog_seq 'geneNames_1.txt' 'exe_22' 'GPM6B' 5001
-./prog_seq 'geneNames_1.txt' 'exe_22' 'FOXH1' 5002
-./prog_seq 'geneNames_1.txt' 'exe_22' 'FOXO1' 5003
-./prog_seq 'geneNames_1.txt' 'exe_22' 'BDP1' 5004
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ETS1' 5005
-./prog_seq 'geneNames_1.txt' 'exe_22' 'POU2F1' 5006
-./prog_seq 'geneNames_1.txt' 'exe_22' 'PLAGL2' 5007
-./prog_seq 'geneNames_1.txt' 'exe_22' 'JAZF1' 5008
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZNHIT3' 5009
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZNF675' 5010
-./prog_seq 'geneNames_1.txt' 'exe_22' 'MYCN' 5011
-./prog_seq 'geneNames_1.txt' 'exe_22' 'U2AF1' 5012
-./prog_seq 'geneNames_1.txt' 'exe_22' 'MAZ' 5013
-./prog_seq 'geneNames_1.txt' 'exe_22' 'NANOG' 5014
-./prog_seq 'geneNames_1.txt' 'exe_22' 'KDM4C' 5015
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TFDP2' 5016
-./prog_seq 'geneNames_1.txt' 'exe_22' 'GATA6' 5017
-./prog_seq 'geneNames_1.txt' 'exe_22' 'THRB' 5018
-./prog_seq 'geneNames_1.txt' 'exe_22' 'CCND1' 5019
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TCOF1' 5020
-./prog_seq 'geneNames_1.txt' 'exe_22' 'DR1' 5021
-./prog_seq 'geneNames_1.txt' 'exe_22' 'PPARA' 5022
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZNF398' 5023
-./prog_seq 'geneNames_1.txt' 'exe_22' 'KLF3' 5024
-./prog_seq 'geneNames_1.txt' 'exe_22' 'BCL11A' 5025
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TTF2' 5026
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZNF33A' 5027
-./prog_seq 'geneNames_1.txt' 'exe_22' 'E2F7' 5028
-./prog_seq 'geneNames_1.txt' 'exe_22' 'HTATSF1' 5029
-./prog_seq 'geneNames_1.txt' 'exe_22' 'HIF3A' 5030
-./prog_seq 'geneNames_1.txt' 'exe_22' 'PCGF6' 5031
-./prog_seq 'geneNames_1.txt' 'exe_22' 'PIAS3' 5032
-./prog_seq 'geneNames_1.txt' 'exe_22' 'POLR1E' 5033
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZNF74' 5034
-./prog_seq 'geneNames_1.txt' 'exe_22' 'PTRF' 5035
-./prog_seq 'geneNames_1.txt' 'exe_22' 'SP4' 5036
-./prog_seq 'geneNames_1.txt' 'exe_22' 'HNF4A' 5037
-./prog_seq 'geneNames_1.txt' 'exe_22' 'CHD8' 5038
-./prog_seq 'geneNames_1.txt' 'exe_22' 'NR3C1' 5039
-./prog_seq 'geneNames_1.txt' 'exe_22' 'PBX1' 5040
-./prog_seq 'geneNames_1.txt' 'exe_22' 'EHMT2' 5041
-./prog_seq 'geneNames_1.txt' 'exe_22' 'FOXM1' 5042
-./prog_seq 'geneNames_1.txt' 'exe_22' 'GRHL1' 5043
-./prog_seq 'geneNames_1.txt' 'exe_22' 'SCD5' 5044
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ZFHX3' 5045
-./prog_seq 'geneNames_1.txt' 'exe_22' 'DOT1L' 5046
-./prog_seq 'geneNames_1.txt' 'exe_22' 'E2F3' 5047
-./prog_seq 'geneNames_1.txt' 'exe_22' 'GTF3C5' 5048
-./prog_seq 'geneNames_1.txt' 'exe_22' 'POU5F1' 5049
-./prog_seq 'geneNames_1.txt' 'exe_22' 'POLR3D' 5050
-./prog_seq 'geneNames_1.txt' 'exe_22' 'SOX2' 5051
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TCF7L1' 5052
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TCFL5' 5053
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TIMELESS' 5054
-./prog_seq 'geneNames_1.txt' 'exe_22' 'BMPR1A' 5055
-./prog_seq 'geneNames_1.txt' 'exe_22' 'ANKRD1' 5056
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TRERF1' 5057
-./prog_seq 'geneNames_1.txt' 'exe_22' 'GTF2H2' 5058
-./prog_seq 'geneNames_1.txt' 'exe_22' 'IRF1' 5059
-./prog_seq 'geneNames_1.txt' 'exe_22' 'TBX3' 5060
-./prog_seq 'geneNames_1.txt' 'exe_23' 'AEBP1' 5061
-./prog_seq 'geneNames_1.txt' 'exe_23' 'PIM2' 5062
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TADA3' 5063
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ESRG' 5064
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ETV4' 5065
-./prog_seq 'geneNames_1.txt' 'exe_23' 'THY1' 5066
-./prog_seq 'geneNames_1.txt' 'exe_23' 'VEZF1' 5067
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ING1' 5068
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TNFAIP3' 5069
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TCF3' 5070
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TP53' 5071
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZNF397' 5072
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ELF1' 5073
-./prog_seq 'geneNames_1.txt' 'exe_23' 'NRIP1' 5074
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZFP36' 5075
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TRIM25' 5076
-./prog_seq 'geneNames_1.txt' 'exe_23' 'NR2F6' 5077
-./prog_seq 'geneNames_1.txt' 'exe_23' 'HCFC1' 5078
-./prog_seq 'geneNames_1.txt' 'exe_23' 'DDX54' 5079
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ESPL1' 5080
-./prog_seq 'geneNames_1.txt' 'exe_23' 'PDCD11' 5081
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZNRD1' 5082
-./prog_seq 'geneNames_1.txt' 'exe_23' 'SMAD3' 5083
-./prog_seq 'geneNames_1.txt' 'exe_23' 'SIRT1' 5084
-./prog_seq 'geneNames_1.txt' 'exe_23' 'HMGA2' 5085
-./prog_seq 'geneNames_1.txt' 'exe_23' 'EGF' 5086
-./prog_seq 'geneNames_1.txt' 'exe_23' 'HIST1H1E' 5087
-./prog_seq 'geneNames_1.txt' 'exe_23' 'BTG1' 5088
-./prog_seq 'geneNames_1.txt' 'exe_23' 'LHX1' 5089
-./prog_seq 'geneNames_1.txt' 'exe_23' 'NFIB' 5090
-./prog_seq 'geneNames_1.txt' 'exe_23' 'CDX2' 5091
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ETV1' 5092
-./prog_seq 'geneNames_1.txt' 'exe_23' 'BCOR' 5093
-./prog_seq 'geneNames_1.txt' 'exe_23' 'HIF1AN' 5094
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ETV5' 5095
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TCF19' 5096
-./prog_seq 'geneNames_1.txt' 'exe_23' 'CEBPD' 5097
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZIC3' 5098
-./prog_seq 'geneNames_1.txt' 'exe_23' 'BMP2' 5099
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ELAVL2' 5100
-./prog_seq 'geneNames_1.txt' 'exe_23' 'MED14' 5101
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZNF354A' 5102
-./prog_seq 'geneNames_1.txt' 'exe_23' 'BRIP1' 5103
-./prog_seq 'geneNames_1.txt' 'exe_23' 'MAF' 5104
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZBTB16' 5105
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TEAD2' 5106
-./prog_seq 'geneNames_1.txt' 'exe_23' 'NR5A2' 5107
-./prog_seq 'geneNames_1.txt' 'exe_23' 'JUN' 5108
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZNF300' 5109
-./prog_seq 'geneNames_1.txt' 'exe_23' 'EPAS1' 5110
-./prog_seq 'geneNames_1.txt' 'exe_23' 'NOTCH3' 5111
-./prog_seq 'geneNames_1.txt' 'exe_23' 'MYC' 5112
-./prog_seq 'geneNames_1.txt' 'exe_23' 'PAWR' 5113
-./prog_seq 'geneNames_1.txt' 'exe_23' 'CREG1' 5114
-./prog_seq 'geneNames_1.txt' 'exe_23' 'FOSB' 5115
-./prog_seq 'geneNames_1.txt' 'exe_23' 'GLI1' 5116
-./prog_seq 'geneNames_1.txt' 'exe_23' 'PRDM14' 5117
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TFE3' 5118
-./prog_seq 'geneNames_1.txt' 'exe_23' 'MAFF' 5119
-./prog_seq 'geneNames_1.txt' 'exe_23' 'MED20' 5120
-./prog_seq 'geneNames_1.txt' 'exe_23' 'E2F5' 5121
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TRIM22' 5122
-./prog_seq 'geneNames_1.txt' 'exe_23' 'WDR5' 5123
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZNF217' 5124
-./prog_seq 'geneNames_1.txt' 'exe_23' 'PEG3' 5125
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZHX1' 5126
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TARDBP' 5127
-./prog_seq 'geneNames_1.txt' 'exe_23' 'SNAPC1' 5128
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZBTB3' 5129
-./prog_seq 'geneNames_1.txt' 'exe_23' 'NFATC2' 5130
-./prog_seq 'geneNames_1.txt' 'exe_23' 'SALL3' 5131
-./prog_seq 'geneNames_1.txt' 'exe_23' 'MAPK1' 5132
-./prog_seq 'geneNames_1.txt' 'exe_23' 'MEIS3' 5133
-./prog_seq 'geneNames_1.txt' 'exe_23' 'CHAF1A' 5134
-./prog_seq 'geneNames_1.txt' 'exe_23' 'DAXX' 5135
-./prog_seq 'geneNames_1.txt' 'exe_23' 'E2F8' 5136
-./prog_seq 'geneNames_1.txt' 'exe_23' 'GATA5' 5137
-./prog_seq 'geneNames_1.txt' 'exe_23' 'RFX5' 5138
-./prog_seq 'geneNames_1.txt' 'exe_23' 'HINFP' 5139
-./prog_seq 'geneNames_1.txt' 'exe_23' 'MLXIPL' 5140
-./prog_seq 'geneNames_1.txt' 'exe_23' 'SSBP2' 5141
-./prog_seq 'geneNames_1.txt' 'exe_23' 'RREB1' 5142
-./prog_seq 'geneNames_1.txt' 'exe_23' 'SMARCD2' 5143
-./prog_seq 'geneNames_1.txt' 'exe_23' 'HDGF' 5144
-./prog_seq 'geneNames_1.txt' 'exe_23' 'MEF2C' 5145
-./prog_seq 'geneNames_1.txt' 'exe_23' 'SSBP3' 5146
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TAF5' 5147
-./prog_seq 'geneNames_1.txt' 'exe_23' 'SRF' 5148
-./prog_seq 'geneNames_1.txt' 'exe_23' 'HIPK2' 5149
-./prog_seq 'geneNames_1.txt' 'exe_23' 'EOMES' 5150
-./prog_seq 'geneNames_1.txt' 'exe_23' 'NCOA1' 5151
-./prog_seq 'geneNames_1.txt' 'exe_23' 'CREB3L3' 5152
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ELL2' 5153
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TOPORS' 5154
-./prog_seq 'geneNames_1.txt' 'exe_23' 'BTG2' 5155
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ING5' 5156
-./prog_seq 'geneNames_1.txt' 'exe_23' 'HNF1B' 5157
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TCF4' 5158
-./prog_seq 'geneNames_1.txt' 'exe_23' 'IRF9' 5159
-./prog_seq 'geneNames_1.txt' 'exe_23' 'JARID2' 5160
-./prog_seq 'geneNames_1.txt' 'exe_23' 'HNRNPAB' 5161
-./prog_seq 'geneNames_1.txt' 'exe_23' 'RARG' 5162
-./prog_seq 'geneNames_1.txt' 'exe_23' 'GMEB1' 5163
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZNF107' 5164
-./prog_seq 'geneNames_1.txt' 'exe_23' 'GATAD2B' 5165
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ARID3B' 5166
-./prog_seq 'geneNames_1.txt' 'exe_23' 'WBP11' 5167
-./prog_seq 'geneNames_1.txt' 'exe_23' 'NCOA6' 5168
-./prog_seq 'geneNames_1.txt' 'exe_23' 'GLI2' 5169
-./prog_seq 'geneNames_1.txt' 'exe_23' 'FOSL1' 5170
-./prog_seq 'geneNames_1.txt' 'exe_23' 'E2F4' 5171
-./prog_seq 'geneNames_1.txt' 'exe_23' 'MXD1' 5172
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TBL1X' 5173
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZSCAN21' 5174
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TRIM27' 5175
-./prog_seq 'geneNames_1.txt' 'exe_23' 'EGFR' 5176
-./prog_seq 'geneNames_1.txt' 'exe_23' 'THAP11' 5177
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TFAP2C' 5178
-./prog_seq 'geneNames_1.txt' 'exe_23' 'LDB2' 5179
-./prog_seq 'geneNames_1.txt' 'exe_23' 'AES' 5180
-./prog_seq 'geneNames_1.txt' 'exe_23' 'FOXA1' 5181
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZBTB24' 5182
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TAF1A' 5183
-./prog_seq 'geneNames_1.txt' 'exe_23' 'BCL11B' 5184
-./prog_seq 'geneNames_1.txt' 'exe_23' 'PITX1' 5185
-./prog_seq 'geneNames_1.txt' 'exe_23' 'MCM2' 5186
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZNF670' 5187
-./prog_seq 'geneNames_1.txt' 'exe_23' 'GLIS3' 5188
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TEAD4' 5189
-./prog_seq 'geneNames_1.txt' 'exe_23' 'NR1I3' 5190
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZNF202' 5191
-./prog_seq 'geneNames_1.txt' 'exe_23' 'REST' 5192
-./prog_seq 'geneNames_1.txt' 'exe_23' 'JUND' 5193
-./prog_seq 'geneNames_1.txt' 'exe_23' 'CREB3L4' 5194
-./prog_seq 'geneNames_1.txt' 'exe_23' 'DDX20' 5195
-./prog_seq 'geneNames_1.txt' 'exe_23' 'HDAC1' 5196
-./prog_seq 'geneNames_1.txt' 'exe_23' 'CTDSPL' 5197
-./prog_seq 'geneNames_1.txt' 'exe_23' 'RNF2' 5198
-./prog_seq 'geneNames_1.txt' 'exe_23' 'CNTRL' 5199
-./prog_seq 'geneNames_1.txt' 'exe_23' 'HNRNPUL1' 5200
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ATF3' 5201
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZNF227' 5202
-./prog_seq 'geneNames_1.txt' 'exe_23' 'EZH2' 5203
-./prog_seq 'geneNames_1.txt' 'exe_23' 'SP100' 5204
-./prog_seq 'geneNames_1.txt' 'exe_23' 'CEBPA' 5205
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZFP64' 5206
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ASXL1' 5207
-./prog_seq 'geneNames_1.txt' 'exe_23' 'THAP1' 5208
-./prog_seq 'geneNames_1.txt' 'exe_23' 'FOXA2' 5209
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZIC2' 5210
-./prog_seq 'geneNames_1.txt' 'exe_23' 'KLF5' 5211
-./prog_seq 'geneNames_1.txt' 'exe_23' 'FOSL2' 5212
-./prog_seq 'geneNames_1.txt' 'exe_23' 'PIAS2' 5213
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TFDP1' 5214
-./prog_seq 'geneNames_1.txt' 'exe_23' 'FHL2' 5215
-./prog_seq 'geneNames_1.txt' 'exe_23' 'DRAP1' 5216
-./prog_seq 'geneNames_1.txt' 'exe_23' 'JAG1' 5217
-./prog_seq 'geneNames_1.txt' 'exe_23' 'GTF3C4' 5218
-./prog_seq 'geneNames_1.txt' 'exe_23' 'RUNX1T1' 5219
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TAF6' 5220
-./prog_seq 'geneNames_1.txt' 'exe_23' 'NR2F2' 5221
-./prog_seq 'geneNames_1.txt' 'exe_23' 'AHR' 5222
-./prog_seq 'geneNames_1.txt' 'exe_23' 'SEC14L2' 5223
-./prog_seq 'geneNames_1.txt' 'exe_23' 'SERTAD3' 5224
-./prog_seq 'geneNames_1.txt' 'exe_23' 'SIRT2' 5225
-./prog_seq 'geneNames_1.txt' 'exe_23' 'NEIL2' 5226
-./prog_seq 'geneNames_1.txt' 'exe_23' 'AATF' 5227
-./prog_seq 'geneNames_1.txt' 'exe_23' 'MCM8' 5228
-./prog_seq 'geneNames_1.txt' 'exe_23' 'MYBBP1A' 5229
-./prog_seq 'geneNames_1.txt' 'exe_23' 'UHRF1' 5230
-./prog_seq 'geneNames_1.txt' 'exe_23' 'GPM6B' 5231
-./prog_seq 'geneNames_1.txt' 'exe_23' 'FOXH1' 5232
-./prog_seq 'geneNames_1.txt' 'exe_23' 'FOXO1' 5233
-./prog_seq 'geneNames_1.txt' 'exe_23' 'BDP1' 5234
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ETS1' 5235
-./prog_seq 'geneNames_1.txt' 'exe_23' 'POU2F1' 5236
-./prog_seq 'geneNames_1.txt' 'exe_23' 'PLAGL2' 5237
-./prog_seq 'geneNames_1.txt' 'exe_23' 'JAZF1' 5238
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZNHIT3' 5239
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZNF675' 5240
-./prog_seq 'geneNames_1.txt' 'exe_23' 'MYCN' 5241
-./prog_seq 'geneNames_1.txt' 'exe_23' 'U2AF1' 5242
-./prog_seq 'geneNames_1.txt' 'exe_23' 'MAZ' 5243
-./prog_seq 'geneNames_1.txt' 'exe_23' 'NANOG' 5244
-./prog_seq 'geneNames_1.txt' 'exe_23' 'KDM4C' 5245
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TFDP2' 5246
-./prog_seq 'geneNames_1.txt' 'exe_23' 'GATA6' 5247
-./prog_seq 'geneNames_1.txt' 'exe_23' 'THRB' 5248
-./prog_seq 'geneNames_1.txt' 'exe_23' 'CCND1' 5249
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TCOF1' 5250
-./prog_seq 'geneNames_1.txt' 'exe_23' 'DR1' 5251
-./prog_seq 'geneNames_1.txt' 'exe_23' 'PPARA' 5252
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZNF398' 5253
-./prog_seq 'geneNames_1.txt' 'exe_23' 'KLF3' 5254
-./prog_seq 'geneNames_1.txt' 'exe_23' 'BCL11A' 5255
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TTF2' 5256
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZNF33A' 5257
-./prog_seq 'geneNames_1.txt' 'exe_23' 'E2F7' 5258
-./prog_seq 'geneNames_1.txt' 'exe_23' 'HTATSF1' 5259
-./prog_seq 'geneNames_1.txt' 'exe_23' 'HIF3A' 5260
-./prog_seq 'geneNames_1.txt' 'exe_23' 'PCGF6' 5261
-./prog_seq 'geneNames_1.txt' 'exe_23' 'PIAS3' 5262
-./prog_seq 'geneNames_1.txt' 'exe_23' 'POLR1E' 5263
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZNF74' 5264
-./prog_seq 'geneNames_1.txt' 'exe_23' 'PTRF' 5265
-./prog_seq 'geneNames_1.txt' 'exe_23' 'SP4' 5266
-./prog_seq 'geneNames_1.txt' 'exe_23' 'HNF4A' 5267
-./prog_seq 'geneNames_1.txt' 'exe_23' 'CHD8' 5268
-./prog_seq 'geneNames_1.txt' 'exe_23' 'NR3C1' 5269
-./prog_seq 'geneNames_1.txt' 'exe_23' 'PBX1' 5270
-./prog_seq 'geneNames_1.txt' 'exe_23' 'EHMT2' 5271
-./prog_seq 'geneNames_1.txt' 'exe_23' 'FOXM1' 5272
-./prog_seq 'geneNames_1.txt' 'exe_23' 'GRHL1' 5273
-./prog_seq 'geneNames_1.txt' 'exe_23' 'SCD5' 5274
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ZFHX3' 5275
-./prog_seq 'geneNames_1.txt' 'exe_23' 'DOT1L' 5276
-./prog_seq 'geneNames_1.txt' 'exe_23' 'E2F3' 5277
-./prog_seq 'geneNames_1.txt' 'exe_23' 'GTF3C5' 5278
-./prog_seq 'geneNames_1.txt' 'exe_23' 'POU5F1' 5279
-./prog_seq 'geneNames_1.txt' 'exe_23' 'POLR3D' 5280
-./prog_seq 'geneNames_1.txt' 'exe_23' 'SOX2' 5281
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TCF7L1' 5282
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TCFL5' 5283
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TIMELESS' 5284
-./prog_seq 'geneNames_1.txt' 'exe_23' 'BMPR1A' 5285
-./prog_seq 'geneNames_1.txt' 'exe_23' 'ANKRD1' 5286
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TRERF1' 5287
-./prog_seq 'geneNames_1.txt' 'exe_23' 'GTF2H2' 5288
-./prog_seq 'geneNames_1.txt' 'exe_23' 'IRF1' 5289
-./prog_seq 'geneNames_1.txt' 'exe_23' 'TBX3' 5290
-./prog_seq 'geneNames_1.txt' 'exe_24' 'AEBP1' 5291
-./prog_seq 'geneNames_1.txt' 'exe_24' 'PIM2' 5292
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TADA3' 5293
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ESRG' 5294
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ETV4' 5295
-./prog_seq 'geneNames_1.txt' 'exe_24' 'THY1' 5296
-./prog_seq 'geneNames_1.txt' 'exe_24' 'VEZF1' 5297
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ING1' 5298
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TNFAIP3' 5299
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TCF3' 5300
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TP53' 5301
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZNF397' 5302
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ELF1' 5303
-./prog_seq 'geneNames_1.txt' 'exe_24' 'NRIP1' 5304
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZFP36' 5305
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TRIM25' 5306
-./prog_seq 'geneNames_1.txt' 'exe_24' 'NR2F6' 5307
-./prog_seq 'geneNames_1.txt' 'exe_24' 'HCFC1' 5308
-./prog_seq 'geneNames_1.txt' 'exe_24' 'DDX54' 5309
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ESPL1' 5310
-./prog_seq 'geneNames_1.txt' 'exe_24' 'PDCD11' 5311
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZNRD1' 5312
-./prog_seq 'geneNames_1.txt' 'exe_24' 'SMAD3' 5313
-./prog_seq 'geneNames_1.txt' 'exe_24' 'SIRT1' 5314
-./prog_seq 'geneNames_1.txt' 'exe_24' 'HMGA2' 5315
-./prog_seq 'geneNames_1.txt' 'exe_24' 'EGF' 5316
-./prog_seq 'geneNames_1.txt' 'exe_24' 'HIST1H1E' 5317
-./prog_seq 'geneNames_1.txt' 'exe_24' 'BTG1' 5318
-./prog_seq 'geneNames_1.txt' 'exe_24' 'LHX1' 5319
-./prog_seq 'geneNames_1.txt' 'exe_24' 'NFIB' 5320
-./prog_seq 'geneNames_1.txt' 'exe_24' 'CDX2' 5321
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ETV1' 5322
-./prog_seq 'geneNames_1.txt' 'exe_24' 'BCOR' 5323
-./prog_seq 'geneNames_1.txt' 'exe_24' 'HIF1AN' 5324
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ETV5' 5325
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TCF19' 5326
-./prog_seq 'geneNames_1.txt' 'exe_24' 'CEBPD' 5327
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZIC3' 5328
-./prog_seq 'geneNames_1.txt' 'exe_24' 'BMP2' 5329
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ELAVL2' 5330
-./prog_seq 'geneNames_1.txt' 'exe_24' 'MED14' 5331
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZNF354A' 5332
-./prog_seq 'geneNames_1.txt' 'exe_24' 'BRIP1' 5333
-./prog_seq 'geneNames_1.txt' 'exe_24' 'MAF' 5334
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZBTB16' 5335
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TEAD2' 5336
-./prog_seq 'geneNames_1.txt' 'exe_24' 'NR5A2' 5337
-./prog_seq 'geneNames_1.txt' 'exe_24' 'JUN' 5338
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZNF300' 5339
-./prog_seq 'geneNames_1.txt' 'exe_24' 'EPAS1' 5340
-./prog_seq 'geneNames_1.txt' 'exe_24' 'NOTCH3' 5341
-./prog_seq 'geneNames_1.txt' 'exe_24' 'MYC' 5342
-./prog_seq 'geneNames_1.txt' 'exe_24' 'PAWR' 5343
-./prog_seq 'geneNames_1.txt' 'exe_24' 'CREG1' 5344
-./prog_seq 'geneNames_1.txt' 'exe_24' 'FOSB' 5345
-./prog_seq 'geneNames_1.txt' 'exe_24' 'GLI1' 5346
-./prog_seq 'geneNames_1.txt' 'exe_24' 'PRDM14' 5347
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TFE3' 5348
-./prog_seq 'geneNames_1.txt' 'exe_24' 'MAFF' 5349
-./prog_seq 'geneNames_1.txt' 'exe_24' 'MED20' 5350
-./prog_seq 'geneNames_1.txt' 'exe_24' 'E2F5' 5351
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TRIM22' 5352
-./prog_seq 'geneNames_1.txt' 'exe_24' 'WDR5' 5353
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZNF217' 5354
-./prog_seq 'geneNames_1.txt' 'exe_24' 'PEG3' 5355
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZHX1' 5356
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TARDBP' 5357
-./prog_seq 'geneNames_1.txt' 'exe_24' 'SNAPC1' 5358
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZBTB3' 5359
-./prog_seq 'geneNames_1.txt' 'exe_24' 'NFATC2' 5360
-./prog_seq 'geneNames_1.txt' 'exe_24' 'SALL3' 5361
-./prog_seq 'geneNames_1.txt' 'exe_24' 'MAPK1' 5362
-./prog_seq 'geneNames_1.txt' 'exe_24' 'MEIS3' 5363
-./prog_seq 'geneNames_1.txt' 'exe_24' 'CHAF1A' 5364
-./prog_seq 'geneNames_1.txt' 'exe_24' 'DAXX' 5365
-./prog_seq 'geneNames_1.txt' 'exe_24' 'E2F8' 5366
-./prog_seq 'geneNames_1.txt' 'exe_24' 'GATA5' 5367
-./prog_seq 'geneNames_1.txt' 'exe_24' 'RFX5' 5368
-./prog_seq 'geneNames_1.txt' 'exe_24' 'HINFP' 5369
-./prog_seq 'geneNames_1.txt' 'exe_24' 'MLXIPL' 5370
-./prog_seq 'geneNames_1.txt' 'exe_24' 'SSBP2' 5371
-./prog_seq 'geneNames_1.txt' 'exe_24' 'RREB1' 5372
-./prog_seq 'geneNames_1.txt' 'exe_24' 'SMARCD2' 5373
-./prog_seq 'geneNames_1.txt' 'exe_24' 'HDGF' 5374
-./prog_seq 'geneNames_1.txt' 'exe_24' 'MEF2C' 5375
-./prog_seq 'geneNames_1.txt' 'exe_24' 'SSBP3' 5376
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TAF5' 5377
-./prog_seq 'geneNames_1.txt' 'exe_24' 'SRF' 5378
-./prog_seq 'geneNames_1.txt' 'exe_24' 'HIPK2' 5379
-./prog_seq 'geneNames_1.txt' 'exe_24' 'EOMES' 5380
-./prog_seq 'geneNames_1.txt' 'exe_24' 'NCOA1' 5381
-./prog_seq 'geneNames_1.txt' 'exe_24' 'CREB3L3' 5382
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ELL2' 5383
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TOPORS' 5384
-./prog_seq 'geneNames_1.txt' 'exe_24' 'BTG2' 5385
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ING5' 5386
-./prog_seq 'geneNames_1.txt' 'exe_24' 'HNF1B' 5387
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TCF4' 5388
-./prog_seq 'geneNames_1.txt' 'exe_24' 'IRF9' 5389
-./prog_seq 'geneNames_1.txt' 'exe_24' 'JARID2' 5390
-./prog_seq 'geneNames_1.txt' 'exe_24' 'HNRNPAB' 5391
-./prog_seq 'geneNames_1.txt' 'exe_24' 'RARG' 5392
-./prog_seq 'geneNames_1.txt' 'exe_24' 'GMEB1' 5393
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZNF107' 5394
-./prog_seq 'geneNames_1.txt' 'exe_24' 'GATAD2B' 5395
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ARID3B' 5396
-./prog_seq 'geneNames_1.txt' 'exe_24' 'WBP11' 5397
-./prog_seq 'geneNames_1.txt' 'exe_24' 'NCOA6' 5398
-./prog_seq 'geneNames_1.txt' 'exe_24' 'GLI2' 5399
-./prog_seq 'geneNames_1.txt' 'exe_24' 'FOSL1' 5400
-./prog_seq 'geneNames_1.txt' 'exe_24' 'E2F4' 5401
-./prog_seq 'geneNames_1.txt' 'exe_24' 'MXD1' 5402
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TBL1X' 5403
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZSCAN21' 5404
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TRIM27' 5405
-./prog_seq 'geneNames_1.txt' 'exe_24' 'EGFR' 5406
-./prog_seq 'geneNames_1.txt' 'exe_24' 'THAP11' 5407
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TFAP2C' 5408
-./prog_seq 'geneNames_1.txt' 'exe_24' 'LDB2' 5409
-./prog_seq 'geneNames_1.txt' 'exe_24' 'AES' 5410
-./prog_seq 'geneNames_1.txt' 'exe_24' 'FOXA1' 5411
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZBTB24' 5412
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TAF1A' 5413
-./prog_seq 'geneNames_1.txt' 'exe_24' 'BCL11B' 5414
-./prog_seq 'geneNames_1.txt' 'exe_24' 'PITX1' 5415
-./prog_seq 'geneNames_1.txt' 'exe_24' 'MCM2' 5416
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZNF670' 5417
-./prog_seq 'geneNames_1.txt' 'exe_24' 'GLIS3' 5418
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TEAD4' 5419
-./prog_seq 'geneNames_1.txt' 'exe_24' 'NR1I3' 5420
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZNF202' 5421
-./prog_seq 'geneNames_1.txt' 'exe_24' 'REST' 5422
-./prog_seq 'geneNames_1.txt' 'exe_24' 'JUND' 5423
-./prog_seq 'geneNames_1.txt' 'exe_24' 'CREB3L4' 5424
-./prog_seq 'geneNames_1.txt' 'exe_24' 'DDX20' 5425
-./prog_seq 'geneNames_1.txt' 'exe_24' 'HDAC1' 5426
-./prog_seq 'geneNames_1.txt' 'exe_24' 'CTDSPL' 5427
-./prog_seq 'geneNames_1.txt' 'exe_24' 'RNF2' 5428
-./prog_seq 'geneNames_1.txt' 'exe_24' 'CNTRL' 5429
-./prog_seq 'geneNames_1.txt' 'exe_24' 'HNRNPUL1' 5430
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ATF3' 5431
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZNF227' 5432
-./prog_seq 'geneNames_1.txt' 'exe_24' 'EZH2' 5433
-./prog_seq 'geneNames_1.txt' 'exe_24' 'SP100' 5434
-./prog_seq 'geneNames_1.txt' 'exe_24' 'CEBPA' 5435
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZFP64' 5436
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ASXL1' 5437
-./prog_seq 'geneNames_1.txt' 'exe_24' 'THAP1' 5438
-./prog_seq 'geneNames_1.txt' 'exe_24' 'FOXA2' 5439
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZIC2' 5440
-./prog_seq 'geneNames_1.txt' 'exe_24' 'KLF5' 5441
-./prog_seq 'geneNames_1.txt' 'exe_24' 'FOSL2' 5442
-./prog_seq 'geneNames_1.txt' 'exe_24' 'PIAS2' 5443
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TFDP1' 5444
-./prog_seq 'geneNames_1.txt' 'exe_24' 'FHL2' 5445
-./prog_seq 'geneNames_1.txt' 'exe_24' 'DRAP1' 5446
-./prog_seq 'geneNames_1.txt' 'exe_24' 'JAG1' 5447
-./prog_seq 'geneNames_1.txt' 'exe_24' 'GTF3C4' 5448
-./prog_seq 'geneNames_1.txt' 'exe_24' 'RUNX1T1' 5449
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TAF6' 5450
-./prog_seq 'geneNames_1.txt' 'exe_24' 'NR2F2' 5451
-./prog_seq 'geneNames_1.txt' 'exe_24' 'AHR' 5452
-./prog_seq 'geneNames_1.txt' 'exe_24' 'SEC14L2' 5453
-./prog_seq 'geneNames_1.txt' 'exe_24' 'SERTAD3' 5454
-./prog_seq 'geneNames_1.txt' 'exe_24' 'SIRT2' 5455
-./prog_seq 'geneNames_1.txt' 'exe_24' 'NEIL2' 5456
-./prog_seq 'geneNames_1.txt' 'exe_24' 'AATF' 5457
-./prog_seq 'geneNames_1.txt' 'exe_24' 'MCM8' 5458
-./prog_seq 'geneNames_1.txt' 'exe_24' 'MYBBP1A' 5459
-./prog_seq 'geneNames_1.txt' 'exe_24' 'UHRF1' 5460
-./prog_seq 'geneNames_1.txt' 'exe_24' 'GPM6B' 5461
-./prog_seq 'geneNames_1.txt' 'exe_24' 'FOXH1' 5462
-./prog_seq 'geneNames_1.txt' 'exe_24' 'FOXO1' 5463
-./prog_seq 'geneNames_1.txt' 'exe_24' 'BDP1' 5464
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ETS1' 5465
-./prog_seq 'geneNames_1.txt' 'exe_24' 'POU2F1' 5466
-./prog_seq 'geneNames_1.txt' 'exe_24' 'PLAGL2' 5467
-./prog_seq 'geneNames_1.txt' 'exe_24' 'JAZF1' 5468
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZNHIT3' 5469
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZNF675' 5470
-./prog_seq 'geneNames_1.txt' 'exe_24' 'MYCN' 5471
-./prog_seq 'geneNames_1.txt' 'exe_24' 'U2AF1' 5472
-./prog_seq 'geneNames_1.txt' 'exe_24' 'MAZ' 5473
-./prog_seq 'geneNames_1.txt' 'exe_24' 'NANOG' 5474
-./prog_seq 'geneNames_1.txt' 'exe_24' 'KDM4C' 5475
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TFDP2' 5476
-./prog_seq 'geneNames_1.txt' 'exe_24' 'GATA6' 5477
-./prog_seq 'geneNames_1.txt' 'exe_24' 'THRB' 5478
-./prog_seq 'geneNames_1.txt' 'exe_24' 'CCND1' 5479
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TCOF1' 5480
-./prog_seq 'geneNames_1.txt' 'exe_24' 'DR1' 5481
-./prog_seq 'geneNames_1.txt' 'exe_24' 'PPARA' 5482
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZNF398' 5483
-./prog_seq 'geneNames_1.txt' 'exe_24' 'KLF3' 5484
-./prog_seq 'geneNames_1.txt' 'exe_24' 'BCL11A' 5485
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TTF2' 5486
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZNF33A' 5487
-./prog_seq 'geneNames_1.txt' 'exe_24' 'E2F7' 5488
-./prog_seq 'geneNames_1.txt' 'exe_24' 'HTATSF1' 5489
-./prog_seq 'geneNames_1.txt' 'exe_24' 'HIF3A' 5490
-./prog_seq 'geneNames_1.txt' 'exe_24' 'PCGF6' 5491
-./prog_seq 'geneNames_1.txt' 'exe_24' 'PIAS3' 5492
-./prog_seq 'geneNames_1.txt' 'exe_24' 'POLR1E' 5493
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZNF74' 5494
-./prog_seq 'geneNames_1.txt' 'exe_24' 'PTRF' 5495
-./prog_seq 'geneNames_1.txt' 'exe_24' 'SP4' 5496
-./prog_seq 'geneNames_1.txt' 'exe_24' 'HNF4A' 5497
-./prog_seq 'geneNames_1.txt' 'exe_24' 'CHD8' 5498
-./prog_seq 'geneNames_1.txt' 'exe_24' 'NR3C1' 5499
-./prog_seq 'geneNames_1.txt' 'exe_24' 'PBX1' 5500
-./prog_seq 'geneNames_1.txt' 'exe_24' 'EHMT2' 5501
-./prog_seq 'geneNames_1.txt' 'exe_24' 'FOXM1' 5502
-./prog_seq 'geneNames_1.txt' 'exe_24' 'GRHL1' 5503
-./prog_seq 'geneNames_1.txt' 'exe_24' 'SCD5' 5504
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ZFHX3' 5505
-./prog_seq 'geneNames_1.txt' 'exe_24' 'DOT1L' 5506
-./prog_seq 'geneNames_1.txt' 'exe_24' 'E2F3' 5507
-./prog_seq 'geneNames_1.txt' 'exe_24' 'GTF3C5' 5508
-./prog_seq 'geneNames_1.txt' 'exe_24' 'POU5F1' 5509
-./prog_seq 'geneNames_1.txt' 'exe_24' 'POLR3D' 5510
-./prog_seq 'geneNames_1.txt' 'exe_24' 'SOX2' 5511
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TCF7L1' 5512
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TCFL5' 5513
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TIMELESS' 5514
-./prog_seq 'geneNames_1.txt' 'exe_24' 'BMPR1A' 5515
-./prog_seq 'geneNames_1.txt' 'exe_24' 'ANKRD1' 5516
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TRERF1' 5517
-./prog_seq 'geneNames_1.txt' 'exe_24' 'GTF2H2' 5518
-./prog_seq 'geneNames_1.txt' 'exe_24' 'IRF1' 5519
-./prog_seq 'geneNames_1.txt' 'exe_24' 'TBX3' 5520
-./prog_seq 'geneNames_1.txt' 'exe_25' 'AEBP1' 5521
-./prog_seq 'geneNames_1.txt' 'exe_25' 'PIM2' 5522
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TADA3' 5523
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ESRG' 5524
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ETV4' 5525
-./prog_seq 'geneNames_1.txt' 'exe_25' 'THY1' 5526
-./prog_seq 'geneNames_1.txt' 'exe_25' 'VEZF1' 5527
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ING1' 5528
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TNFAIP3' 5529
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TCF3' 5530
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TP53' 5531
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZNF397' 5532
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ELF1' 5533
-./prog_seq 'geneNames_1.txt' 'exe_25' 'NRIP1' 5534
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZFP36' 5535
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TRIM25' 5536
-./prog_seq 'geneNames_1.txt' 'exe_25' 'NR2F6' 5537
-./prog_seq 'geneNames_1.txt' 'exe_25' 'HCFC1' 5538
-./prog_seq 'geneNames_1.txt' 'exe_25' 'DDX54' 5539
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ESPL1' 5540
-./prog_seq 'geneNames_1.txt' 'exe_25' 'PDCD11' 5541
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZNRD1' 5542
-./prog_seq 'geneNames_1.txt' 'exe_25' 'SMAD3' 5543
-./prog_seq 'geneNames_1.txt' 'exe_25' 'SIRT1' 5544
-./prog_seq 'geneNames_1.txt' 'exe_25' 'HMGA2' 5545
-./prog_seq 'geneNames_1.txt' 'exe_25' 'EGF' 5546
-./prog_seq 'geneNames_1.txt' 'exe_25' 'HIST1H1E' 5547
-./prog_seq 'geneNames_1.txt' 'exe_25' 'BTG1' 5548
-./prog_seq 'geneNames_1.txt' 'exe_25' 'LHX1' 5549
-./prog_seq 'geneNames_1.txt' 'exe_25' 'NFIB' 5550
-./prog_seq 'geneNames_1.txt' 'exe_25' 'CDX2' 5551
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ETV1' 5552
-./prog_seq 'geneNames_1.txt' 'exe_25' 'BCOR' 5553
-./prog_seq 'geneNames_1.txt' 'exe_25' 'HIF1AN' 5554
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ETV5' 5555
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TCF19' 5556
-./prog_seq 'geneNames_1.txt' 'exe_25' 'CEBPD' 5557
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZIC3' 5558
-./prog_seq 'geneNames_1.txt' 'exe_25' 'BMP2' 5559
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ELAVL2' 5560
-./prog_seq 'geneNames_1.txt' 'exe_25' 'MED14' 5561
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZNF354A' 5562
-./prog_seq 'geneNames_1.txt' 'exe_25' 'BRIP1' 5563
-./prog_seq 'geneNames_1.txt' 'exe_25' 'MAF' 5564
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZBTB16' 5565
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TEAD2' 5566
-./prog_seq 'geneNames_1.txt' 'exe_25' 'NR5A2' 5567
-./prog_seq 'geneNames_1.txt' 'exe_25' 'JUN' 5568
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZNF300' 5569
-./prog_seq 'geneNames_1.txt' 'exe_25' 'EPAS1' 5570
-./prog_seq 'geneNames_1.txt' 'exe_25' 'NOTCH3' 5571
-./prog_seq 'geneNames_1.txt' 'exe_25' 'MYC' 5572
-./prog_seq 'geneNames_1.txt' 'exe_25' 'PAWR' 5573
-./prog_seq 'geneNames_1.txt' 'exe_25' 'CREG1' 5574
-./prog_seq 'geneNames_1.txt' 'exe_25' 'FOSB' 5575
-./prog_seq 'geneNames_1.txt' 'exe_25' 'GLI1' 5576
-./prog_seq 'geneNames_1.txt' 'exe_25' 'PRDM14' 5577
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TFE3' 5578
-./prog_seq 'geneNames_1.txt' 'exe_25' 'MAFF' 5579
-./prog_seq 'geneNames_1.txt' 'exe_25' 'MED20' 5580
-./prog_seq 'geneNames_1.txt' 'exe_25' 'E2F5' 5581
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TRIM22' 5582
-./prog_seq 'geneNames_1.txt' 'exe_25' 'WDR5' 5583
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZNF217' 5584
-./prog_seq 'geneNames_1.txt' 'exe_25' 'PEG3' 5585
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZHX1' 5586
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TARDBP' 5587
-./prog_seq 'geneNames_1.txt' 'exe_25' 'SNAPC1' 5588
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZBTB3' 5589
-./prog_seq 'geneNames_1.txt' 'exe_25' 'NFATC2' 5590
-./prog_seq 'geneNames_1.txt' 'exe_25' 'SALL3' 5591
-./prog_seq 'geneNames_1.txt' 'exe_25' 'MAPK1' 5592
-./prog_seq 'geneNames_1.txt' 'exe_25' 'MEIS3' 5593
-./prog_seq 'geneNames_1.txt' 'exe_25' 'CHAF1A' 5594
-./prog_seq 'geneNames_1.txt' 'exe_25' 'DAXX' 5595
-./prog_seq 'geneNames_1.txt' 'exe_25' 'E2F8' 5596
-./prog_seq 'geneNames_1.txt' 'exe_25' 'GATA5' 5597
-./prog_seq 'geneNames_1.txt' 'exe_25' 'RFX5' 5598
-./prog_seq 'geneNames_1.txt' 'exe_25' 'HINFP' 5599
-./prog_seq 'geneNames_1.txt' 'exe_25' 'MLXIPL' 5600
-./prog_seq 'geneNames_1.txt' 'exe_25' 'SSBP2' 5601
-./prog_seq 'geneNames_1.txt' 'exe_25' 'RREB1' 5602
-./prog_seq 'geneNames_1.txt' 'exe_25' 'SMARCD2' 5603
-./prog_seq 'geneNames_1.txt' 'exe_25' 'HDGF' 5604
-./prog_seq 'geneNames_1.txt' 'exe_25' 'MEF2C' 5605
-./prog_seq 'geneNames_1.txt' 'exe_25' 'SSBP3' 5606
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TAF5' 5607
-./prog_seq 'geneNames_1.txt' 'exe_25' 'SRF' 5608
-./prog_seq 'geneNames_1.txt' 'exe_25' 'HIPK2' 5609
-./prog_seq 'geneNames_1.txt' 'exe_25' 'EOMES' 5610
-./prog_seq 'geneNames_1.txt' 'exe_25' 'NCOA1' 5611
-./prog_seq 'geneNames_1.txt' 'exe_25' 'CREB3L3' 5612
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ELL2' 5613
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TOPORS' 5614
-./prog_seq 'geneNames_1.txt' 'exe_25' 'BTG2' 5615
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ING5' 5616
-./prog_seq 'geneNames_1.txt' 'exe_25' 'HNF1B' 5617
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TCF4' 5618
-./prog_seq 'geneNames_1.txt' 'exe_25' 'IRF9' 5619
-./prog_seq 'geneNames_1.txt' 'exe_25' 'JARID2' 5620
-./prog_seq 'geneNames_1.txt' 'exe_25' 'HNRNPAB' 5621
-./prog_seq 'geneNames_1.txt' 'exe_25' 'RARG' 5622
-./prog_seq 'geneNames_1.txt' 'exe_25' 'GMEB1' 5623
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZNF107' 5624
-./prog_seq 'geneNames_1.txt' 'exe_25' 'GATAD2B' 5625
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ARID3B' 5626
-./prog_seq 'geneNames_1.txt' 'exe_25' 'WBP11' 5627
-./prog_seq 'geneNames_1.txt' 'exe_25' 'NCOA6' 5628
-./prog_seq 'geneNames_1.txt' 'exe_25' 'GLI2' 5629
-./prog_seq 'geneNames_1.txt' 'exe_25' 'FOSL1' 5630
-./prog_seq 'geneNames_1.txt' 'exe_25' 'E2F4' 5631
-./prog_seq 'geneNames_1.txt' 'exe_25' 'MXD1' 5632
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TBL1X' 5633
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZSCAN21' 5634
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TRIM27' 5635
-./prog_seq 'geneNames_1.txt' 'exe_25' 'EGFR' 5636
-./prog_seq 'geneNames_1.txt' 'exe_25' 'THAP11' 5637
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TFAP2C' 5638
-./prog_seq 'geneNames_1.txt' 'exe_25' 'LDB2' 5639
-./prog_seq 'geneNames_1.txt' 'exe_25' 'AES' 5640
-./prog_seq 'geneNames_1.txt' 'exe_25' 'FOXA1' 5641
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZBTB24' 5642
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TAF1A' 5643
-./prog_seq 'geneNames_1.txt' 'exe_25' 'BCL11B' 5644
-./prog_seq 'geneNames_1.txt' 'exe_25' 'PITX1' 5645
-./prog_seq 'geneNames_1.txt' 'exe_25' 'MCM2' 5646
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZNF670' 5647
-./prog_seq 'geneNames_1.txt' 'exe_25' 'GLIS3' 5648
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TEAD4' 5649
-./prog_seq 'geneNames_1.txt' 'exe_25' 'NR1I3' 5650
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZNF202' 5651
-./prog_seq 'geneNames_1.txt' 'exe_25' 'REST' 5652
-./prog_seq 'geneNames_1.txt' 'exe_25' 'JUND' 5653
-./prog_seq 'geneNames_1.txt' 'exe_25' 'CREB3L4' 5654
-./prog_seq 'geneNames_1.txt' 'exe_25' 'DDX20' 5655
-./prog_seq 'geneNames_1.txt' 'exe_25' 'HDAC1' 5656
-./prog_seq 'geneNames_1.txt' 'exe_25' 'CTDSPL' 5657
-./prog_seq 'geneNames_1.txt' 'exe_25' 'RNF2' 5658
-./prog_seq 'geneNames_1.txt' 'exe_25' 'CNTRL' 5659
-./prog_seq 'geneNames_1.txt' 'exe_25' 'HNRNPUL1' 5660
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ATF3' 5661
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZNF227' 5662
-./prog_seq 'geneNames_1.txt' 'exe_25' 'EZH2' 5663
-./prog_seq 'geneNames_1.txt' 'exe_25' 'SP100' 5664
-./prog_seq 'geneNames_1.txt' 'exe_25' 'CEBPA' 5665
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZFP64' 5666
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ASXL1' 5667
-./prog_seq 'geneNames_1.txt' 'exe_25' 'THAP1' 5668
-./prog_seq 'geneNames_1.txt' 'exe_25' 'FOXA2' 5669
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZIC2' 5670
-./prog_seq 'geneNames_1.txt' 'exe_25' 'KLF5' 5671
-./prog_seq 'geneNames_1.txt' 'exe_25' 'FOSL2' 5672
-./prog_seq 'geneNames_1.txt' 'exe_25' 'PIAS2' 5673
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TFDP1' 5674
-./prog_seq 'geneNames_1.txt' 'exe_25' 'FHL2' 5675
-./prog_seq 'geneNames_1.txt' 'exe_25' 'DRAP1' 5676
-./prog_seq 'geneNames_1.txt' 'exe_25' 'JAG1' 5677
-./prog_seq 'geneNames_1.txt' 'exe_25' 'GTF3C4' 5678
-./prog_seq 'geneNames_1.txt' 'exe_25' 'RUNX1T1' 5679
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TAF6' 5680
-./prog_seq 'geneNames_1.txt' 'exe_25' 'NR2F2' 5681
-./prog_seq 'geneNames_1.txt' 'exe_25' 'AHR' 5682
-./prog_seq 'geneNames_1.txt' 'exe_25' 'SEC14L2' 5683
-./prog_seq 'geneNames_1.txt' 'exe_25' 'SERTAD3' 5684
-./prog_seq 'geneNames_1.txt' 'exe_25' 'SIRT2' 5685
-./prog_seq 'geneNames_1.txt' 'exe_25' 'NEIL2' 5686
-./prog_seq 'geneNames_1.txt' 'exe_25' 'AATF' 5687
-./prog_seq 'geneNames_1.txt' 'exe_25' 'MCM8' 5688
-./prog_seq 'geneNames_1.txt' 'exe_25' 'MYBBP1A' 5689
-./prog_seq 'geneNames_1.txt' 'exe_25' 'UHRF1' 5690
-./prog_seq 'geneNames_1.txt' 'exe_25' 'GPM6B' 5691
-./prog_seq 'geneNames_1.txt' 'exe_25' 'FOXH1' 5692
-./prog_seq 'geneNames_1.txt' 'exe_25' 'FOXO1' 5693
-./prog_seq 'geneNames_1.txt' 'exe_25' 'BDP1' 5694
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ETS1' 5695
-./prog_seq 'geneNames_1.txt' 'exe_25' 'POU2F1' 5696
-./prog_seq 'geneNames_1.txt' 'exe_25' 'PLAGL2' 5697
-./prog_seq 'geneNames_1.txt' 'exe_25' 'JAZF1' 5698
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZNHIT3' 5699
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZNF675' 5700
-./prog_seq 'geneNames_1.txt' 'exe_25' 'MYCN' 5701
-./prog_seq 'geneNames_1.txt' 'exe_25' 'U2AF1' 5702
-./prog_seq 'geneNames_1.txt' 'exe_25' 'MAZ' 5703
-./prog_seq 'geneNames_1.txt' 'exe_25' 'NANOG' 5704
-./prog_seq 'geneNames_1.txt' 'exe_25' 'KDM4C' 5705
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TFDP2' 5706
-./prog_seq 'geneNames_1.txt' 'exe_25' 'GATA6' 5707
-./prog_seq 'geneNames_1.txt' 'exe_25' 'THRB' 5708
-./prog_seq 'geneNames_1.txt' 'exe_25' 'CCND1' 5709
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TCOF1' 5710
-./prog_seq 'geneNames_1.txt' 'exe_25' 'DR1' 5711
-./prog_seq 'geneNames_1.txt' 'exe_25' 'PPARA' 5712
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZNF398' 5713
-./prog_seq 'geneNames_1.txt' 'exe_25' 'KLF3' 5714
-./prog_seq 'geneNames_1.txt' 'exe_25' 'BCL11A' 5715
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TTF2' 5716
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZNF33A' 5717
-./prog_seq 'geneNames_1.txt' 'exe_25' 'E2F7' 5718
-./prog_seq 'geneNames_1.txt' 'exe_25' 'HTATSF1' 5719
-./prog_seq 'geneNames_1.txt' 'exe_25' 'HIF3A' 5720
-./prog_seq 'geneNames_1.txt' 'exe_25' 'PCGF6' 5721
-./prog_seq 'geneNames_1.txt' 'exe_25' 'PIAS3' 5722
-./prog_seq 'geneNames_1.txt' 'exe_25' 'POLR1E' 5723
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZNF74' 5724
-./prog_seq 'geneNames_1.txt' 'exe_25' 'PTRF' 5725
-./prog_seq 'geneNames_1.txt' 'exe_25' 'SP4' 5726
-./prog_seq 'geneNames_1.txt' 'exe_25' 'HNF4A' 5727
-./prog_seq 'geneNames_1.txt' 'exe_25' 'CHD8' 5728
-./prog_seq 'geneNames_1.txt' 'exe_25' 'NR3C1' 5729
-./prog_seq 'geneNames_1.txt' 'exe_25' 'PBX1' 5730
-./prog_seq 'geneNames_1.txt' 'exe_25' 'EHMT2' 5731
-./prog_seq 'geneNames_1.txt' 'exe_25' 'FOXM1' 5732
-./prog_seq 'geneNames_1.txt' 'exe_25' 'GRHL1' 5733
-./prog_seq 'geneNames_1.txt' 'exe_25' 'SCD5' 5734
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ZFHX3' 5735
-./prog_seq 'geneNames_1.txt' 'exe_25' 'DOT1L' 5736
-./prog_seq 'geneNames_1.txt' 'exe_25' 'E2F3' 5737
-./prog_seq 'geneNames_1.txt' 'exe_25' 'GTF3C5' 5738
-./prog_seq 'geneNames_1.txt' 'exe_25' 'POU5F1' 5739
-./prog_seq 'geneNames_1.txt' 'exe_25' 'POLR3D' 5740
-./prog_seq 'geneNames_1.txt' 'exe_25' 'SOX2' 5741
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TCF7L1' 5742
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TCFL5' 5743
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TIMELESS' 5744
-./prog_seq 'geneNames_1.txt' 'exe_25' 'BMPR1A' 5745
-./prog_seq 'geneNames_1.txt' 'exe_25' 'ANKRD1' 5746
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TRERF1' 5747
-./prog_seq 'geneNames_1.txt' 'exe_25' 'GTF2H2' 5748
-./prog_seq 'geneNames_1.txt' 'exe_25' 'IRF1' 5749
-./prog_seq 'geneNames_1.txt' 'exe_25' 'TBX3' 5750
-./prog_seq 'geneNames_1.txt' 'exe_26' 'AEBP1' 5751
-./prog_seq 'geneNames_1.txt' 'exe_26' 'PIM2' 5752
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TADA3' 5753
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ESRG' 5754
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ETV4' 5755
-./prog_seq 'geneNames_1.txt' 'exe_26' 'THY1' 5756
-./prog_seq 'geneNames_1.txt' 'exe_26' 'VEZF1' 5757
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ING1' 5758
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TNFAIP3' 5759
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TCF3' 5760
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TP53' 5761
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZNF397' 5762
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ELF1' 5763
-./prog_seq 'geneNames_1.txt' 'exe_26' 'NRIP1' 5764
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZFP36' 5765
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TRIM25' 5766
-./prog_seq 'geneNames_1.txt' 'exe_26' 'NR2F6' 5767
-./prog_seq 'geneNames_1.txt' 'exe_26' 'HCFC1' 5768
-./prog_seq 'geneNames_1.txt' 'exe_26' 'DDX54' 5769
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ESPL1' 5770
-./prog_seq 'geneNames_1.txt' 'exe_26' 'PDCD11' 5771
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZNRD1' 5772
-./prog_seq 'geneNames_1.txt' 'exe_26' 'SMAD3' 5773
-./prog_seq 'geneNames_1.txt' 'exe_26' 'SIRT1' 5774
-./prog_seq 'geneNames_1.txt' 'exe_26' 'HMGA2' 5775
-./prog_seq 'geneNames_1.txt' 'exe_26' 'EGF' 5776
-./prog_seq 'geneNames_1.txt' 'exe_26' 'HIST1H1E' 5777
-./prog_seq 'geneNames_1.txt' 'exe_26' 'BTG1' 5778
-./prog_seq 'geneNames_1.txt' 'exe_26' 'LHX1' 5779
-./prog_seq 'geneNames_1.txt' 'exe_26' 'NFIB' 5780
-./prog_seq 'geneNames_1.txt' 'exe_26' 'CDX2' 5781
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ETV1' 5782
-./prog_seq 'geneNames_1.txt' 'exe_26' 'BCOR' 5783
-./prog_seq 'geneNames_1.txt' 'exe_26' 'HIF1AN' 5784
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ETV5' 5785
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TCF19' 5786
-./prog_seq 'geneNames_1.txt' 'exe_26' 'CEBPD' 5787
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZIC3' 5788
-./prog_seq 'geneNames_1.txt' 'exe_26' 'BMP2' 5789
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ELAVL2' 5790
-./prog_seq 'geneNames_1.txt' 'exe_26' 'MED14' 5791
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZNF354A' 5792
-./prog_seq 'geneNames_1.txt' 'exe_26' 'BRIP1' 5793
-./prog_seq 'geneNames_1.txt' 'exe_26' 'MAF' 5794
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZBTB16' 5795
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TEAD2' 5796
-./prog_seq 'geneNames_1.txt' 'exe_26' 'NR5A2' 5797
-./prog_seq 'geneNames_1.txt' 'exe_26' 'JUN' 5798
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZNF300' 5799
-./prog_seq 'geneNames_1.txt' 'exe_26' 'EPAS1' 5800
-./prog_seq 'geneNames_1.txt' 'exe_26' 'NOTCH3' 5801
-./prog_seq 'geneNames_1.txt' 'exe_26' 'MYC' 5802
-./prog_seq 'geneNames_1.txt' 'exe_26' 'PAWR' 5803
-./prog_seq 'geneNames_1.txt' 'exe_26' 'CREG1' 5804
-./prog_seq 'geneNames_1.txt' 'exe_26' 'FOSB' 5805
-./prog_seq 'geneNames_1.txt' 'exe_26' 'GLI1' 5806
-./prog_seq 'geneNames_1.txt' 'exe_26' 'PRDM14' 5807
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TFE3' 5808
-./prog_seq 'geneNames_1.txt' 'exe_26' 'MAFF' 5809
-./prog_seq 'geneNames_1.txt' 'exe_26' 'MED20' 5810
-./prog_seq 'geneNames_1.txt' 'exe_26' 'E2F5' 5811
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TRIM22' 5812
-./prog_seq 'geneNames_1.txt' 'exe_26' 'WDR5' 5813
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZNF217' 5814
-./prog_seq 'geneNames_1.txt' 'exe_26' 'PEG3' 5815
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZHX1' 5816
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TARDBP' 5817
-./prog_seq 'geneNames_1.txt' 'exe_26' 'SNAPC1' 5818
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZBTB3' 5819
-./prog_seq 'geneNames_1.txt' 'exe_26' 'NFATC2' 5820
-./prog_seq 'geneNames_1.txt' 'exe_26' 'SALL3' 5821
-./prog_seq 'geneNames_1.txt' 'exe_26' 'MAPK1' 5822
-./prog_seq 'geneNames_1.txt' 'exe_26' 'MEIS3' 5823
-./prog_seq 'geneNames_1.txt' 'exe_26' 'CHAF1A' 5824
-./prog_seq 'geneNames_1.txt' 'exe_26' 'DAXX' 5825
-./prog_seq 'geneNames_1.txt' 'exe_26' 'E2F8' 5826
-./prog_seq 'geneNames_1.txt' 'exe_26' 'GATA5' 5827
-./prog_seq 'geneNames_1.txt' 'exe_26' 'RFX5' 5828
-./prog_seq 'geneNames_1.txt' 'exe_26' 'HINFP' 5829
-./prog_seq 'geneNames_1.txt' 'exe_26' 'MLXIPL' 5830
-./prog_seq 'geneNames_1.txt' 'exe_26' 'SSBP2' 5831
-./prog_seq 'geneNames_1.txt' 'exe_26' 'RREB1' 5832
-./prog_seq 'geneNames_1.txt' 'exe_26' 'SMARCD2' 5833
-./prog_seq 'geneNames_1.txt' 'exe_26' 'HDGF' 5834
-./prog_seq 'geneNames_1.txt' 'exe_26' 'MEF2C' 5835
-./prog_seq 'geneNames_1.txt' 'exe_26' 'SSBP3' 5836
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TAF5' 5837
-./prog_seq 'geneNames_1.txt' 'exe_26' 'SRF' 5838
-./prog_seq 'geneNames_1.txt' 'exe_26' 'HIPK2' 5839
-./prog_seq 'geneNames_1.txt' 'exe_26' 'EOMES' 5840
-./prog_seq 'geneNames_1.txt' 'exe_26' 'NCOA1' 5841
-./prog_seq 'geneNames_1.txt' 'exe_26' 'CREB3L3' 5842
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ELL2' 5843
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TOPORS' 5844
-./prog_seq 'geneNames_1.txt' 'exe_26' 'BTG2' 5845
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ING5' 5846
-./prog_seq 'geneNames_1.txt' 'exe_26' 'HNF1B' 5847
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TCF4' 5848
-./prog_seq 'geneNames_1.txt' 'exe_26' 'IRF9' 5849
-./prog_seq 'geneNames_1.txt' 'exe_26' 'JARID2' 5850
-./prog_seq 'geneNames_1.txt' 'exe_26' 'HNRNPAB' 5851
-./prog_seq 'geneNames_1.txt' 'exe_26' 'RARG' 5852
-./prog_seq 'geneNames_1.txt' 'exe_26' 'GMEB1' 5853
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZNF107' 5854
-./prog_seq 'geneNames_1.txt' 'exe_26' 'GATAD2B' 5855
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ARID3B' 5856
-./prog_seq 'geneNames_1.txt' 'exe_26' 'WBP11' 5857
-./prog_seq 'geneNames_1.txt' 'exe_26' 'NCOA6' 5858
-./prog_seq 'geneNames_1.txt' 'exe_26' 'GLI2' 5859
-./prog_seq 'geneNames_1.txt' 'exe_26' 'FOSL1' 5860
-./prog_seq 'geneNames_1.txt' 'exe_26' 'E2F4' 5861
-./prog_seq 'geneNames_1.txt' 'exe_26' 'MXD1' 5862
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TBL1X' 5863
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZSCAN21' 5864
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TRIM27' 5865
-./prog_seq 'geneNames_1.txt' 'exe_26' 'EGFR' 5866
-./prog_seq 'geneNames_1.txt' 'exe_26' 'THAP11' 5867
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TFAP2C' 5868
-./prog_seq 'geneNames_1.txt' 'exe_26' 'LDB2' 5869
-./prog_seq 'geneNames_1.txt' 'exe_26' 'AES' 5870
-./prog_seq 'geneNames_1.txt' 'exe_26' 'FOXA1' 5871
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZBTB24' 5872
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TAF1A' 5873
-./prog_seq 'geneNames_1.txt' 'exe_26' 'BCL11B' 5874
-./prog_seq 'geneNames_1.txt' 'exe_26' 'PITX1' 5875
-./prog_seq 'geneNames_1.txt' 'exe_26' 'MCM2' 5876
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZNF670' 5877
-./prog_seq 'geneNames_1.txt' 'exe_26' 'GLIS3' 5878
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TEAD4' 5879
-./prog_seq 'geneNames_1.txt' 'exe_26' 'NR1I3' 5880
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZNF202' 5881
-./prog_seq 'geneNames_1.txt' 'exe_26' 'REST' 5882
-./prog_seq 'geneNames_1.txt' 'exe_26' 'JUND' 5883
-./prog_seq 'geneNames_1.txt' 'exe_26' 'CREB3L4' 5884
-./prog_seq 'geneNames_1.txt' 'exe_26' 'DDX20' 5885
-./prog_seq 'geneNames_1.txt' 'exe_26' 'HDAC1' 5886
-./prog_seq 'geneNames_1.txt' 'exe_26' 'CTDSPL' 5887
-./prog_seq 'geneNames_1.txt' 'exe_26' 'RNF2' 5888
-./prog_seq 'geneNames_1.txt' 'exe_26' 'CNTRL' 5889
-./prog_seq 'geneNames_1.txt' 'exe_26' 'HNRNPUL1' 5890
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ATF3' 5891
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZNF227' 5892
-./prog_seq 'geneNames_1.txt' 'exe_26' 'EZH2' 5893
-./prog_seq 'geneNames_1.txt' 'exe_26' 'SP100' 5894
-./prog_seq 'geneNames_1.txt' 'exe_26' 'CEBPA' 5895
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZFP64' 5896
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ASXL1' 5897
-./prog_seq 'geneNames_1.txt' 'exe_26' 'THAP1' 5898
-./prog_seq 'geneNames_1.txt' 'exe_26' 'FOXA2' 5899
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZIC2' 5900
-./prog_seq 'geneNames_1.txt' 'exe_26' 'KLF5' 5901
-./prog_seq 'geneNames_1.txt' 'exe_26' 'FOSL2' 5902
-./prog_seq 'geneNames_1.txt' 'exe_26' 'PIAS2' 5903
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TFDP1' 5904
-./prog_seq 'geneNames_1.txt' 'exe_26' 'FHL2' 5905
-./prog_seq 'geneNames_1.txt' 'exe_26' 'DRAP1' 5906
-./prog_seq 'geneNames_1.txt' 'exe_26' 'JAG1' 5907
-./prog_seq 'geneNames_1.txt' 'exe_26' 'GTF3C4' 5908
-./prog_seq 'geneNames_1.txt' 'exe_26' 'RUNX1T1' 5909
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TAF6' 5910
-./prog_seq 'geneNames_1.txt' 'exe_26' 'NR2F2' 5911
-./prog_seq 'geneNames_1.txt' 'exe_26' 'AHR' 5912
-./prog_seq 'geneNames_1.txt' 'exe_26' 'SEC14L2' 5913
-./prog_seq 'geneNames_1.txt' 'exe_26' 'SERTAD3' 5914
-./prog_seq 'geneNames_1.txt' 'exe_26' 'SIRT2' 5915
-./prog_seq 'geneNames_1.txt' 'exe_26' 'NEIL2' 5916
-./prog_seq 'geneNames_1.txt' 'exe_26' 'AATF' 5917
-./prog_seq 'geneNames_1.txt' 'exe_26' 'MCM8' 5918
-./prog_seq 'geneNames_1.txt' 'exe_26' 'MYBBP1A' 5919
-./prog_seq 'geneNames_1.txt' 'exe_26' 'UHRF1' 5920
-./prog_seq 'geneNames_1.txt' 'exe_26' 'GPM6B' 5921
-./prog_seq 'geneNames_1.txt' 'exe_26' 'FOXH1' 5922
-./prog_seq 'geneNames_1.txt' 'exe_26' 'FOXO1' 5923
-./prog_seq 'geneNames_1.txt' 'exe_26' 'BDP1' 5924
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ETS1' 5925
-./prog_seq 'geneNames_1.txt' 'exe_26' 'POU2F1' 5926
-./prog_seq 'geneNames_1.txt' 'exe_26' 'PLAGL2' 5927
-./prog_seq 'geneNames_1.txt' 'exe_26' 'JAZF1' 5928
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZNHIT3' 5929
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZNF675' 5930
-./prog_seq 'geneNames_1.txt' 'exe_26' 'MYCN' 5931
-./prog_seq 'geneNames_1.txt' 'exe_26' 'U2AF1' 5932
-./prog_seq 'geneNames_1.txt' 'exe_26' 'MAZ' 5933
-./prog_seq 'geneNames_1.txt' 'exe_26' 'NANOG' 5934
-./prog_seq 'geneNames_1.txt' 'exe_26' 'KDM4C' 5935
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TFDP2' 5936
-./prog_seq 'geneNames_1.txt' 'exe_26' 'GATA6' 5937
-./prog_seq 'geneNames_1.txt' 'exe_26' 'THRB' 5938
-./prog_seq 'geneNames_1.txt' 'exe_26' 'CCND1' 5939
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TCOF1' 5940
-./prog_seq 'geneNames_1.txt' 'exe_26' 'DR1' 5941
-./prog_seq 'geneNames_1.txt' 'exe_26' 'PPARA' 5942
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZNF398' 5943
-./prog_seq 'geneNames_1.txt' 'exe_26' 'KLF3' 5944
-./prog_seq 'geneNames_1.txt' 'exe_26' 'BCL11A' 5945
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TTF2' 5946
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZNF33A' 5947
-./prog_seq 'geneNames_1.txt' 'exe_26' 'E2F7' 5948
-./prog_seq 'geneNames_1.txt' 'exe_26' 'HTATSF1' 5949
-./prog_seq 'geneNames_1.txt' 'exe_26' 'HIF3A' 5950
-./prog_seq 'geneNames_1.txt' 'exe_26' 'PCGF6' 5951
-./prog_seq 'geneNames_1.txt' 'exe_26' 'PIAS3' 5952
-./prog_seq 'geneNames_1.txt' 'exe_26' 'POLR1E' 5953
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZNF74' 5954
-./prog_seq 'geneNames_1.txt' 'exe_26' 'PTRF' 5955
-./prog_seq 'geneNames_1.txt' 'exe_26' 'SP4' 5956
-./prog_seq 'geneNames_1.txt' 'exe_26' 'HNF4A' 5957
-./prog_seq 'geneNames_1.txt' 'exe_26' 'CHD8' 5958
-./prog_seq 'geneNames_1.txt' 'exe_26' 'NR3C1' 5959
-./prog_seq 'geneNames_1.txt' 'exe_26' 'PBX1' 5960
-./prog_seq 'geneNames_1.txt' 'exe_26' 'EHMT2' 5961
-./prog_seq 'geneNames_1.txt' 'exe_26' 'FOXM1' 5962
-./prog_seq 'geneNames_1.txt' 'exe_26' 'GRHL1' 5963
-./prog_seq 'geneNames_1.txt' 'exe_26' 'SCD5' 5964
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ZFHX3' 5965
-./prog_seq 'geneNames_1.txt' 'exe_26' 'DOT1L' 5966
-./prog_seq 'geneNames_1.txt' 'exe_26' 'E2F3' 5967
-./prog_seq 'geneNames_1.txt' 'exe_26' 'GTF3C5' 5968
-./prog_seq 'geneNames_1.txt' 'exe_26' 'POU5F1' 5969
-./prog_seq 'geneNames_1.txt' 'exe_26' 'POLR3D' 5970
-./prog_seq 'geneNames_1.txt' 'exe_26' 'SOX2' 5971
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TCF7L1' 5972
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TCFL5' 5973
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TIMELESS' 5974
-./prog_seq 'geneNames_1.txt' 'exe_26' 'BMPR1A' 5975
-./prog_seq 'geneNames_1.txt' 'exe_26' 'ANKRD1' 5976
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TRERF1' 5977
-./prog_seq 'geneNames_1.txt' 'exe_26' 'GTF2H2' 5978
-./prog_seq 'geneNames_1.txt' 'exe_26' 'IRF1' 5979
-./prog_seq 'geneNames_1.txt' 'exe_26' 'TBX3' 5980
-./prog_seq 'geneNames_1.txt' 'exe_27' 'AEBP1' 5981
-./prog_seq 'geneNames_1.txt' 'exe_27' 'PIM2' 5982
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TADA3' 5983
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ESRG' 5984
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ETV4' 5985
-./prog_seq 'geneNames_1.txt' 'exe_27' 'THY1' 5986
-./prog_seq 'geneNames_1.txt' 'exe_27' 'VEZF1' 5987
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ING1' 5988
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TNFAIP3' 5989
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TCF3' 5990
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TP53' 5991
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZNF397' 5992
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ELF1' 5993
-./prog_seq 'geneNames_1.txt' 'exe_27' 'NRIP1' 5994
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZFP36' 5995
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TRIM25' 5996
-./prog_seq 'geneNames_1.txt' 'exe_27' 'NR2F6' 5997
-./prog_seq 'geneNames_1.txt' 'exe_27' 'HCFC1' 5998
-./prog_seq 'geneNames_1.txt' 'exe_27' 'DDX54' 5999
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ESPL1' 6000
-./prog_seq 'geneNames_1.txt' 'exe_27' 'PDCD11' 6001
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZNRD1' 6002
-./prog_seq 'geneNames_1.txt' 'exe_27' 'SMAD3' 6003
-./prog_seq 'geneNames_1.txt' 'exe_27' 'SIRT1' 6004
-./prog_seq 'geneNames_1.txt' 'exe_27' 'HMGA2' 6005
-./prog_seq 'geneNames_1.txt' 'exe_27' 'EGF' 6006
-./prog_seq 'geneNames_1.txt' 'exe_27' 'HIST1H1E' 6007
-./prog_seq 'geneNames_1.txt' 'exe_27' 'BTG1' 6008
-./prog_seq 'geneNames_1.txt' 'exe_27' 'LHX1' 6009
-./prog_seq 'geneNames_1.txt' 'exe_27' 'NFIB' 6010
-./prog_seq 'geneNames_1.txt' 'exe_27' 'CDX2' 6011
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ETV1' 6012
-./prog_seq 'geneNames_1.txt' 'exe_27' 'BCOR' 6013
-./prog_seq 'geneNames_1.txt' 'exe_27' 'HIF1AN' 6014
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ETV5' 6015
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TCF19' 6016
-./prog_seq 'geneNames_1.txt' 'exe_27' 'CEBPD' 6017
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZIC3' 6018
-./prog_seq 'geneNames_1.txt' 'exe_27' 'BMP2' 6019
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ELAVL2' 6020
-./prog_seq 'geneNames_1.txt' 'exe_27' 'MED14' 6021
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZNF354A' 6022
-./prog_seq 'geneNames_1.txt' 'exe_27' 'BRIP1' 6023
-./prog_seq 'geneNames_1.txt' 'exe_27' 'MAF' 6024
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZBTB16' 6025
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TEAD2' 6026
-./prog_seq 'geneNames_1.txt' 'exe_27' 'NR5A2' 6027
-./prog_seq 'geneNames_1.txt' 'exe_27' 'JUN' 6028
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZNF300' 6029
-./prog_seq 'geneNames_1.txt' 'exe_27' 'EPAS1' 6030
-./prog_seq 'geneNames_1.txt' 'exe_27' 'NOTCH3' 6031
-./prog_seq 'geneNames_1.txt' 'exe_27' 'MYC' 6032
-./prog_seq 'geneNames_1.txt' 'exe_27' 'PAWR' 6033
-./prog_seq 'geneNames_1.txt' 'exe_27' 'CREG1' 6034
-./prog_seq 'geneNames_1.txt' 'exe_27' 'FOSB' 6035
-./prog_seq 'geneNames_1.txt' 'exe_27' 'GLI1' 6036
-./prog_seq 'geneNames_1.txt' 'exe_27' 'PRDM14' 6037
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TFE3' 6038
-./prog_seq 'geneNames_1.txt' 'exe_27' 'MAFF' 6039
-./prog_seq 'geneNames_1.txt' 'exe_27' 'MED20' 6040
-./prog_seq 'geneNames_1.txt' 'exe_27' 'E2F5' 6041
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TRIM22' 6042
-./prog_seq 'geneNames_1.txt' 'exe_27' 'WDR5' 6043
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZNF217' 6044
-./prog_seq 'geneNames_1.txt' 'exe_27' 'PEG3' 6045
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZHX1' 6046
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TARDBP' 6047
-./prog_seq 'geneNames_1.txt' 'exe_27' 'SNAPC1' 6048
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZBTB3' 6049
-./prog_seq 'geneNames_1.txt' 'exe_27' 'NFATC2' 6050
-./prog_seq 'geneNames_1.txt' 'exe_27' 'SALL3' 6051
-./prog_seq 'geneNames_1.txt' 'exe_27' 'MAPK1' 6052
-./prog_seq 'geneNames_1.txt' 'exe_27' 'MEIS3' 6053
-./prog_seq 'geneNames_1.txt' 'exe_27' 'CHAF1A' 6054
-./prog_seq 'geneNames_1.txt' 'exe_27' 'DAXX' 6055
-./prog_seq 'geneNames_1.txt' 'exe_27' 'E2F8' 6056
-./prog_seq 'geneNames_1.txt' 'exe_27' 'GATA5' 6057
-./prog_seq 'geneNames_1.txt' 'exe_27' 'RFX5' 6058
-./prog_seq 'geneNames_1.txt' 'exe_27' 'HINFP' 6059
-./prog_seq 'geneNames_1.txt' 'exe_27' 'MLXIPL' 6060
-./prog_seq 'geneNames_1.txt' 'exe_27' 'SSBP2' 6061
-./prog_seq 'geneNames_1.txt' 'exe_27' 'RREB1' 6062
-./prog_seq 'geneNames_1.txt' 'exe_27' 'SMARCD2' 6063
-./prog_seq 'geneNames_1.txt' 'exe_27' 'HDGF' 6064
-./prog_seq 'geneNames_1.txt' 'exe_27' 'MEF2C' 6065
-./prog_seq 'geneNames_1.txt' 'exe_27' 'SSBP3' 6066
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TAF5' 6067
-./prog_seq 'geneNames_1.txt' 'exe_27' 'SRF' 6068
-./prog_seq 'geneNames_1.txt' 'exe_27' 'HIPK2' 6069
-./prog_seq 'geneNames_1.txt' 'exe_27' 'EOMES' 6070
-./prog_seq 'geneNames_1.txt' 'exe_27' 'NCOA1' 6071
-./prog_seq 'geneNames_1.txt' 'exe_27' 'CREB3L3' 6072
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ELL2' 6073
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TOPORS' 6074
-./prog_seq 'geneNames_1.txt' 'exe_27' 'BTG2' 6075
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ING5' 6076
-./prog_seq 'geneNames_1.txt' 'exe_27' 'HNF1B' 6077
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TCF4' 6078
-./prog_seq 'geneNames_1.txt' 'exe_27' 'IRF9' 6079
-./prog_seq 'geneNames_1.txt' 'exe_27' 'JARID2' 6080
-./prog_seq 'geneNames_1.txt' 'exe_27' 'HNRNPAB' 6081
-./prog_seq 'geneNames_1.txt' 'exe_27' 'RARG' 6082
-./prog_seq 'geneNames_1.txt' 'exe_27' 'GMEB1' 6083
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZNF107' 6084
-./prog_seq 'geneNames_1.txt' 'exe_27' 'GATAD2B' 6085
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ARID3B' 6086
-./prog_seq 'geneNames_1.txt' 'exe_27' 'WBP11' 6087
-./prog_seq 'geneNames_1.txt' 'exe_27' 'NCOA6' 6088
-./prog_seq 'geneNames_1.txt' 'exe_27' 'GLI2' 6089
-./prog_seq 'geneNames_1.txt' 'exe_27' 'FOSL1' 6090
-./prog_seq 'geneNames_1.txt' 'exe_27' 'E2F4' 6091
-./prog_seq 'geneNames_1.txt' 'exe_27' 'MXD1' 6092
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TBL1X' 6093
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZSCAN21' 6094
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TRIM27' 6095
-./prog_seq 'geneNames_1.txt' 'exe_27' 'EGFR' 6096
-./prog_seq 'geneNames_1.txt' 'exe_27' 'THAP11' 6097
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TFAP2C' 6098
-./prog_seq 'geneNames_1.txt' 'exe_27' 'LDB2' 6099
-./prog_seq 'geneNames_1.txt' 'exe_27' 'AES' 6100
-./prog_seq 'geneNames_1.txt' 'exe_27' 'FOXA1' 6101
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZBTB24' 6102
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TAF1A' 6103
-./prog_seq 'geneNames_1.txt' 'exe_27' 'BCL11B' 6104
-./prog_seq 'geneNames_1.txt' 'exe_27' 'PITX1' 6105
-./prog_seq 'geneNames_1.txt' 'exe_27' 'MCM2' 6106
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZNF670' 6107
-./prog_seq 'geneNames_1.txt' 'exe_27' 'GLIS3' 6108
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TEAD4' 6109
-./prog_seq 'geneNames_1.txt' 'exe_27' 'NR1I3' 6110
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZNF202' 6111
-./prog_seq 'geneNames_1.txt' 'exe_27' 'REST' 6112
-./prog_seq 'geneNames_1.txt' 'exe_27' 'JUND' 6113
-./prog_seq 'geneNames_1.txt' 'exe_27' 'CREB3L4' 6114
-./prog_seq 'geneNames_1.txt' 'exe_27' 'DDX20' 6115
-./prog_seq 'geneNames_1.txt' 'exe_27' 'HDAC1' 6116
-./prog_seq 'geneNames_1.txt' 'exe_27' 'CTDSPL' 6117
-./prog_seq 'geneNames_1.txt' 'exe_27' 'RNF2' 6118
-./prog_seq 'geneNames_1.txt' 'exe_27' 'CNTRL' 6119
-./prog_seq 'geneNames_1.txt' 'exe_27' 'HNRNPUL1' 6120
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ATF3' 6121
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZNF227' 6122
-./prog_seq 'geneNames_1.txt' 'exe_27' 'EZH2' 6123
-./prog_seq 'geneNames_1.txt' 'exe_27' 'SP100' 6124
-./prog_seq 'geneNames_1.txt' 'exe_27' 'CEBPA' 6125
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZFP64' 6126
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ASXL1' 6127
-./prog_seq 'geneNames_1.txt' 'exe_27' 'THAP1' 6128
-./prog_seq 'geneNames_1.txt' 'exe_27' 'FOXA2' 6129
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZIC2' 6130
-./prog_seq 'geneNames_1.txt' 'exe_27' 'KLF5' 6131
-./prog_seq 'geneNames_1.txt' 'exe_27' 'FOSL2' 6132
-./prog_seq 'geneNames_1.txt' 'exe_27' 'PIAS2' 6133
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TFDP1' 6134
-./prog_seq 'geneNames_1.txt' 'exe_27' 'FHL2' 6135
-./prog_seq 'geneNames_1.txt' 'exe_27' 'DRAP1' 6136
-./prog_seq 'geneNames_1.txt' 'exe_27' 'JAG1' 6137
-./prog_seq 'geneNames_1.txt' 'exe_27' 'GTF3C4' 6138
-./prog_seq 'geneNames_1.txt' 'exe_27' 'RUNX1T1' 6139
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TAF6' 6140
-./prog_seq 'geneNames_1.txt' 'exe_27' 'NR2F2' 6141
-./prog_seq 'geneNames_1.txt' 'exe_27' 'AHR' 6142
-./prog_seq 'geneNames_1.txt' 'exe_27' 'SEC14L2' 6143
-./prog_seq 'geneNames_1.txt' 'exe_27' 'SERTAD3' 6144
-./prog_seq 'geneNames_1.txt' 'exe_27' 'SIRT2' 6145
-./prog_seq 'geneNames_1.txt' 'exe_27' 'NEIL2' 6146
-./prog_seq 'geneNames_1.txt' 'exe_27' 'AATF' 6147
-./prog_seq 'geneNames_1.txt' 'exe_27' 'MCM8' 6148
-./prog_seq 'geneNames_1.txt' 'exe_27' 'MYBBP1A' 6149
-./prog_seq 'geneNames_1.txt' 'exe_27' 'UHRF1' 6150
-./prog_seq 'geneNames_1.txt' 'exe_27' 'GPM6B' 6151
-./prog_seq 'geneNames_1.txt' 'exe_27' 'FOXH1' 6152
-./prog_seq 'geneNames_1.txt' 'exe_27' 'FOXO1' 6153
-./prog_seq 'geneNames_1.txt' 'exe_27' 'BDP1' 6154
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ETS1' 6155
-./prog_seq 'geneNames_1.txt' 'exe_27' 'POU2F1' 6156
-./prog_seq 'geneNames_1.txt' 'exe_27' 'PLAGL2' 6157
-./prog_seq 'geneNames_1.txt' 'exe_27' 'JAZF1' 6158
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZNHIT3' 6159
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZNF675' 6160
-./prog_seq 'geneNames_1.txt' 'exe_27' 'MYCN' 6161
-./prog_seq 'geneNames_1.txt' 'exe_27' 'U2AF1' 6162
-./prog_seq 'geneNames_1.txt' 'exe_27' 'MAZ' 6163
-./prog_seq 'geneNames_1.txt' 'exe_27' 'NANOG' 6164
-./prog_seq 'geneNames_1.txt' 'exe_27' 'KDM4C' 6165
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TFDP2' 6166
-./prog_seq 'geneNames_1.txt' 'exe_27' 'GATA6' 6167
-./prog_seq 'geneNames_1.txt' 'exe_27' 'THRB' 6168
-./prog_seq 'geneNames_1.txt' 'exe_27' 'CCND1' 6169
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TCOF1' 6170
-./prog_seq 'geneNames_1.txt' 'exe_27' 'DR1' 6171
-./prog_seq 'geneNames_1.txt' 'exe_27' 'PPARA' 6172
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZNF398' 6173
-./prog_seq 'geneNames_1.txt' 'exe_27' 'KLF3' 6174
-./prog_seq 'geneNames_1.txt' 'exe_27' 'BCL11A' 6175
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TTF2' 6176
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZNF33A' 6177
-./prog_seq 'geneNames_1.txt' 'exe_27' 'E2F7' 6178
-./prog_seq 'geneNames_1.txt' 'exe_27' 'HTATSF1' 6179
-./prog_seq 'geneNames_1.txt' 'exe_27' 'HIF3A' 6180
-./prog_seq 'geneNames_1.txt' 'exe_27' 'PCGF6' 6181
-./prog_seq 'geneNames_1.txt' 'exe_27' 'PIAS3' 6182
-./prog_seq 'geneNames_1.txt' 'exe_27' 'POLR1E' 6183
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZNF74' 6184
-./prog_seq 'geneNames_1.txt' 'exe_27' 'PTRF' 6185
-./prog_seq 'geneNames_1.txt' 'exe_27' 'SP4' 6186
-./prog_seq 'geneNames_1.txt' 'exe_27' 'HNF4A' 6187
-./prog_seq 'geneNames_1.txt' 'exe_27' 'CHD8' 6188
-./prog_seq 'geneNames_1.txt' 'exe_27' 'NR3C1' 6189
-./prog_seq 'geneNames_1.txt' 'exe_27' 'PBX1' 6190
-./prog_seq 'geneNames_1.txt' 'exe_27' 'EHMT2' 6191
-./prog_seq 'geneNames_1.txt' 'exe_27' 'FOXM1' 6192
-./prog_seq 'geneNames_1.txt' 'exe_27' 'GRHL1' 6193
-./prog_seq 'geneNames_1.txt' 'exe_27' 'SCD5' 6194
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ZFHX3' 6195
-./prog_seq 'geneNames_1.txt' 'exe_27' 'DOT1L' 6196
-./prog_seq 'geneNames_1.txt' 'exe_27' 'E2F3' 6197
-./prog_seq 'geneNames_1.txt' 'exe_27' 'GTF3C5' 6198
-./prog_seq 'geneNames_1.txt' 'exe_27' 'POU5F1' 6199
-./prog_seq 'geneNames_1.txt' 'exe_27' 'POLR3D' 6200
-./prog_seq 'geneNames_1.txt' 'exe_27' 'SOX2' 6201
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TCF7L1' 6202
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TCFL5' 6203
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TIMELESS' 6204
-./prog_seq 'geneNames_1.txt' 'exe_27' 'BMPR1A' 6205
-./prog_seq 'geneNames_1.txt' 'exe_27' 'ANKRD1' 6206
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TRERF1' 6207
-./prog_seq 'geneNames_1.txt' 'exe_27' 'GTF2H2' 6208
-./prog_seq 'geneNames_1.txt' 'exe_27' 'IRF1' 6209
-./prog_seq 'geneNames_1.txt' 'exe_27' 'TBX3' 6210
-./prog_seq 'geneNames_1.txt' 'exe_28' 'AEBP1' 6211
-./prog_seq 'geneNames_1.txt' 'exe_28' 'PIM2' 6212
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TADA3' 6213
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ESRG' 6214
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ETV4' 6215
-./prog_seq 'geneNames_1.txt' 'exe_28' 'THY1' 6216
-./prog_seq 'geneNames_1.txt' 'exe_28' 'VEZF1' 6217
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ING1' 6218
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TNFAIP3' 6219
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TCF3' 6220
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TP53' 6221
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZNF397' 6222
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ELF1' 6223
-./prog_seq 'geneNames_1.txt' 'exe_28' 'NRIP1' 6224
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZFP36' 6225
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TRIM25' 6226
-./prog_seq 'geneNames_1.txt' 'exe_28' 'NR2F6' 6227
-./prog_seq 'geneNames_1.txt' 'exe_28' 'HCFC1' 6228
-./prog_seq 'geneNames_1.txt' 'exe_28' 'DDX54' 6229
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ESPL1' 6230
-./prog_seq 'geneNames_1.txt' 'exe_28' 'PDCD11' 6231
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZNRD1' 6232
-./prog_seq 'geneNames_1.txt' 'exe_28' 'SMAD3' 6233
-./prog_seq 'geneNames_1.txt' 'exe_28' 'SIRT1' 6234
-./prog_seq 'geneNames_1.txt' 'exe_28' 'HMGA2' 6235
-./prog_seq 'geneNames_1.txt' 'exe_28' 'EGF' 6236
-./prog_seq 'geneNames_1.txt' 'exe_28' 'HIST1H1E' 6237
-./prog_seq 'geneNames_1.txt' 'exe_28' 'BTG1' 6238
-./prog_seq 'geneNames_1.txt' 'exe_28' 'LHX1' 6239
-./prog_seq 'geneNames_1.txt' 'exe_28' 'NFIB' 6240
-./prog_seq 'geneNames_1.txt' 'exe_28' 'CDX2' 6241
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ETV1' 6242
-./prog_seq 'geneNames_1.txt' 'exe_28' 'BCOR' 6243
-./prog_seq 'geneNames_1.txt' 'exe_28' 'HIF1AN' 6244
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ETV5' 6245
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TCF19' 6246
-./prog_seq 'geneNames_1.txt' 'exe_28' 'CEBPD' 6247
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZIC3' 6248
-./prog_seq 'geneNames_1.txt' 'exe_28' 'BMP2' 6249
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ELAVL2' 6250
-./prog_seq 'geneNames_1.txt' 'exe_28' 'MED14' 6251
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZNF354A' 6252
-./prog_seq 'geneNames_1.txt' 'exe_28' 'BRIP1' 6253
-./prog_seq 'geneNames_1.txt' 'exe_28' 'MAF' 6254
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZBTB16' 6255
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TEAD2' 6256
-./prog_seq 'geneNames_1.txt' 'exe_28' 'NR5A2' 6257
-./prog_seq 'geneNames_1.txt' 'exe_28' 'JUN' 6258
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZNF300' 6259
-./prog_seq 'geneNames_1.txt' 'exe_28' 'EPAS1' 6260
-./prog_seq 'geneNames_1.txt' 'exe_28' 'NOTCH3' 6261
-./prog_seq 'geneNames_1.txt' 'exe_28' 'MYC' 6262
-./prog_seq 'geneNames_1.txt' 'exe_28' 'PAWR' 6263
-./prog_seq 'geneNames_1.txt' 'exe_28' 'CREG1' 6264
-./prog_seq 'geneNames_1.txt' 'exe_28' 'FOSB' 6265
-./prog_seq 'geneNames_1.txt' 'exe_28' 'GLI1' 6266
-./prog_seq 'geneNames_1.txt' 'exe_28' 'PRDM14' 6267
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TFE3' 6268
-./prog_seq 'geneNames_1.txt' 'exe_28' 'MAFF' 6269
-./prog_seq 'geneNames_1.txt' 'exe_28' 'MED20' 6270
-./prog_seq 'geneNames_1.txt' 'exe_28' 'E2F5' 6271
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TRIM22' 6272
-./prog_seq 'geneNames_1.txt' 'exe_28' 'WDR5' 6273
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZNF217' 6274
-./prog_seq 'geneNames_1.txt' 'exe_28' 'PEG3' 6275
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZHX1' 6276
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TARDBP' 6277
-./prog_seq 'geneNames_1.txt' 'exe_28' 'SNAPC1' 6278
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZBTB3' 6279
-./prog_seq 'geneNames_1.txt' 'exe_28' 'NFATC2' 6280
-./prog_seq 'geneNames_1.txt' 'exe_28' 'SALL3' 6281
-./prog_seq 'geneNames_1.txt' 'exe_28' 'MAPK1' 6282
-./prog_seq 'geneNames_1.txt' 'exe_28' 'MEIS3' 6283
-./prog_seq 'geneNames_1.txt' 'exe_28' 'CHAF1A' 6284
-./prog_seq 'geneNames_1.txt' 'exe_28' 'DAXX' 6285
-./prog_seq 'geneNames_1.txt' 'exe_28' 'E2F8' 6286
-./prog_seq 'geneNames_1.txt' 'exe_28' 'GATA5' 6287
-./prog_seq 'geneNames_1.txt' 'exe_28' 'RFX5' 6288
-./prog_seq 'geneNames_1.txt' 'exe_28' 'HINFP' 6289
-./prog_seq 'geneNames_1.txt' 'exe_28' 'MLXIPL' 6290
-./prog_seq 'geneNames_1.txt' 'exe_28' 'SSBP2' 6291
-./prog_seq 'geneNames_1.txt' 'exe_28' 'RREB1' 6292
-./prog_seq 'geneNames_1.txt' 'exe_28' 'SMARCD2' 6293
-./prog_seq 'geneNames_1.txt' 'exe_28' 'HDGF' 6294
-./prog_seq 'geneNames_1.txt' 'exe_28' 'MEF2C' 6295
-./prog_seq 'geneNames_1.txt' 'exe_28' 'SSBP3' 6296
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TAF5' 6297
-./prog_seq 'geneNames_1.txt' 'exe_28' 'SRF' 6298
-./prog_seq 'geneNames_1.txt' 'exe_28' 'HIPK2' 6299
-./prog_seq 'geneNames_1.txt' 'exe_28' 'EOMES' 6300
-./prog_seq 'geneNames_1.txt' 'exe_28' 'NCOA1' 6301
-./prog_seq 'geneNames_1.txt' 'exe_28' 'CREB3L3' 6302
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ELL2' 6303
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TOPORS' 6304
-./prog_seq 'geneNames_1.txt' 'exe_28' 'BTG2' 6305
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ING5' 6306
-./prog_seq 'geneNames_1.txt' 'exe_28' 'HNF1B' 6307
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TCF4' 6308
-./prog_seq 'geneNames_1.txt' 'exe_28' 'IRF9' 6309
-./prog_seq 'geneNames_1.txt' 'exe_28' 'JARID2' 6310
-./prog_seq 'geneNames_1.txt' 'exe_28' 'HNRNPAB' 6311
-./prog_seq 'geneNames_1.txt' 'exe_28' 'RARG' 6312
-./prog_seq 'geneNames_1.txt' 'exe_28' 'GMEB1' 6313
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZNF107' 6314
-./prog_seq 'geneNames_1.txt' 'exe_28' 'GATAD2B' 6315
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ARID3B' 6316
-./prog_seq 'geneNames_1.txt' 'exe_28' 'WBP11' 6317
-./prog_seq 'geneNames_1.txt' 'exe_28' 'NCOA6' 6318
-./prog_seq 'geneNames_1.txt' 'exe_28' 'GLI2' 6319
-./prog_seq 'geneNames_1.txt' 'exe_28' 'FOSL1' 6320
-./prog_seq 'geneNames_1.txt' 'exe_28' 'E2F4' 6321
-./prog_seq 'geneNames_1.txt' 'exe_28' 'MXD1' 6322
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TBL1X' 6323
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZSCAN21' 6324
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TRIM27' 6325
-./prog_seq 'geneNames_1.txt' 'exe_28' 'EGFR' 6326
-./prog_seq 'geneNames_1.txt' 'exe_28' 'THAP11' 6327
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TFAP2C' 6328
-./prog_seq 'geneNames_1.txt' 'exe_28' 'LDB2' 6329
-./prog_seq 'geneNames_1.txt' 'exe_28' 'AES' 6330
-./prog_seq 'geneNames_1.txt' 'exe_28' 'FOXA1' 6331
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZBTB24' 6332
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TAF1A' 6333
-./prog_seq 'geneNames_1.txt' 'exe_28' 'BCL11B' 6334
-./prog_seq 'geneNames_1.txt' 'exe_28' 'PITX1' 6335
-./prog_seq 'geneNames_1.txt' 'exe_28' 'MCM2' 6336
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZNF670' 6337
-./prog_seq 'geneNames_1.txt' 'exe_28' 'GLIS3' 6338
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TEAD4' 6339
-./prog_seq 'geneNames_1.txt' 'exe_28' 'NR1I3' 6340
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZNF202' 6341
-./prog_seq 'geneNames_1.txt' 'exe_28' 'REST' 6342
-./prog_seq 'geneNames_1.txt' 'exe_28' 'JUND' 6343
-./prog_seq 'geneNames_1.txt' 'exe_28' 'CREB3L4' 6344
-./prog_seq 'geneNames_1.txt' 'exe_28' 'DDX20' 6345
-./prog_seq 'geneNames_1.txt' 'exe_28' 'HDAC1' 6346
-./prog_seq 'geneNames_1.txt' 'exe_28' 'CTDSPL' 6347
-./prog_seq 'geneNames_1.txt' 'exe_28' 'RNF2' 6348
-./prog_seq 'geneNames_1.txt' 'exe_28' 'CNTRL' 6349
-./prog_seq 'geneNames_1.txt' 'exe_28' 'HNRNPUL1' 6350
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ATF3' 6351
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZNF227' 6352
-./prog_seq 'geneNames_1.txt' 'exe_28' 'EZH2' 6353
-./prog_seq 'geneNames_1.txt' 'exe_28' 'SP100' 6354
-./prog_seq 'geneNames_1.txt' 'exe_28' 'CEBPA' 6355
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZFP64' 6356
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ASXL1' 6357
-./prog_seq 'geneNames_1.txt' 'exe_28' 'THAP1' 6358
-./prog_seq 'geneNames_1.txt' 'exe_28' 'FOXA2' 6359
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZIC2' 6360
-./prog_seq 'geneNames_1.txt' 'exe_28' 'KLF5' 6361
-./prog_seq 'geneNames_1.txt' 'exe_28' 'FOSL2' 6362
-./prog_seq 'geneNames_1.txt' 'exe_28' 'PIAS2' 6363
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TFDP1' 6364
-./prog_seq 'geneNames_1.txt' 'exe_28' 'FHL2' 6365
-./prog_seq 'geneNames_1.txt' 'exe_28' 'DRAP1' 6366
-./prog_seq 'geneNames_1.txt' 'exe_28' 'JAG1' 6367
-./prog_seq 'geneNames_1.txt' 'exe_28' 'GTF3C4' 6368
-./prog_seq 'geneNames_1.txt' 'exe_28' 'RUNX1T1' 6369
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TAF6' 6370
-./prog_seq 'geneNames_1.txt' 'exe_28' 'NR2F2' 6371
-./prog_seq 'geneNames_1.txt' 'exe_28' 'AHR' 6372
-./prog_seq 'geneNames_1.txt' 'exe_28' 'SEC14L2' 6373
-./prog_seq 'geneNames_1.txt' 'exe_28' 'SERTAD3' 6374
-./prog_seq 'geneNames_1.txt' 'exe_28' 'SIRT2' 6375
-./prog_seq 'geneNames_1.txt' 'exe_28' 'NEIL2' 6376
-./prog_seq 'geneNames_1.txt' 'exe_28' 'AATF' 6377
-./prog_seq 'geneNames_1.txt' 'exe_28' 'MCM8' 6378
-./prog_seq 'geneNames_1.txt' 'exe_28' 'MYBBP1A' 6379
-./prog_seq 'geneNames_1.txt' 'exe_28' 'UHRF1' 6380
-./prog_seq 'geneNames_1.txt' 'exe_28' 'GPM6B' 6381
-./prog_seq 'geneNames_1.txt' 'exe_28' 'FOXH1' 6382
-./prog_seq 'geneNames_1.txt' 'exe_28' 'FOXO1' 6383
-./prog_seq 'geneNames_1.txt' 'exe_28' 'BDP1' 6384
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ETS1' 6385
-./prog_seq 'geneNames_1.txt' 'exe_28' 'POU2F1' 6386
-./prog_seq 'geneNames_1.txt' 'exe_28' 'PLAGL2' 6387
-./prog_seq 'geneNames_1.txt' 'exe_28' 'JAZF1' 6388
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZNHIT3' 6389
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZNF675' 6390
-./prog_seq 'geneNames_1.txt' 'exe_28' 'MYCN' 6391
-./prog_seq 'geneNames_1.txt' 'exe_28' 'U2AF1' 6392
-./prog_seq 'geneNames_1.txt' 'exe_28' 'MAZ' 6393
-./prog_seq 'geneNames_1.txt' 'exe_28' 'NANOG' 6394
-./prog_seq 'geneNames_1.txt' 'exe_28' 'KDM4C' 6395
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TFDP2' 6396
-./prog_seq 'geneNames_1.txt' 'exe_28' 'GATA6' 6397
-./prog_seq 'geneNames_1.txt' 'exe_28' 'THRB' 6398
-./prog_seq 'geneNames_1.txt' 'exe_28' 'CCND1' 6399
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TCOF1' 6400
-./prog_seq 'geneNames_1.txt' 'exe_28' 'DR1' 6401
-./prog_seq 'geneNames_1.txt' 'exe_28' 'PPARA' 6402
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZNF398' 6403
-./prog_seq 'geneNames_1.txt' 'exe_28' 'KLF3' 6404
-./prog_seq 'geneNames_1.txt' 'exe_28' 'BCL11A' 6405
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TTF2' 6406
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZNF33A' 6407
-./prog_seq 'geneNames_1.txt' 'exe_28' 'E2F7' 6408
-./prog_seq 'geneNames_1.txt' 'exe_28' 'HTATSF1' 6409
-./prog_seq 'geneNames_1.txt' 'exe_28' 'HIF3A' 6410
-./prog_seq 'geneNames_1.txt' 'exe_28' 'PCGF6' 6411
-./prog_seq 'geneNames_1.txt' 'exe_28' 'PIAS3' 6412
-./prog_seq 'geneNames_1.txt' 'exe_28' 'POLR1E' 6413
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZNF74' 6414
-./prog_seq 'geneNames_1.txt' 'exe_28' 'PTRF' 6415
-./prog_seq 'geneNames_1.txt' 'exe_28' 'SP4' 6416
-./prog_seq 'geneNames_1.txt' 'exe_28' 'HNF4A' 6417
-./prog_seq 'geneNames_1.txt' 'exe_28' 'CHD8' 6418
-./prog_seq 'geneNames_1.txt' 'exe_28' 'NR3C1' 6419
-./prog_seq 'geneNames_1.txt' 'exe_28' 'PBX1' 6420
-./prog_seq 'geneNames_1.txt' 'exe_28' 'EHMT2' 6421
-./prog_seq 'geneNames_1.txt' 'exe_28' 'FOXM1' 6422
-./prog_seq 'geneNames_1.txt' 'exe_28' 'GRHL1' 6423
-./prog_seq 'geneNames_1.txt' 'exe_28' 'SCD5' 6424
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ZFHX3' 6425
-./prog_seq 'geneNames_1.txt' 'exe_28' 'DOT1L' 6426
-./prog_seq 'geneNames_1.txt' 'exe_28' 'E2F3' 6427
-./prog_seq 'geneNames_1.txt' 'exe_28' 'GTF3C5' 6428
-./prog_seq 'geneNames_1.txt' 'exe_28' 'POU5F1' 6429
-./prog_seq 'geneNames_1.txt' 'exe_28' 'POLR3D' 6430
-./prog_seq 'geneNames_1.txt' 'exe_28' 'SOX2' 6431
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TCF7L1' 6432
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TCFL5' 6433
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TIMELESS' 6434
-./prog_seq 'geneNames_1.txt' 'exe_28' 'BMPR1A' 6435
-./prog_seq 'geneNames_1.txt' 'exe_28' 'ANKRD1' 6436
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TRERF1' 6437
-./prog_seq 'geneNames_1.txt' 'exe_28' 'GTF2H2' 6438
-./prog_seq 'geneNames_1.txt' 'exe_28' 'IRF1' 6439
-./prog_seq 'geneNames_1.txt' 'exe_28' 'TBX3' 6440
-./prog_seq 'geneNames_1.txt' 'exe_29' 'AEBP1' 6441
-./prog_seq 'geneNames_1.txt' 'exe_29' 'PIM2' 6442
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TADA3' 6443
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ESRG' 6444
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ETV4' 6445
-./prog_seq 'geneNames_1.txt' 'exe_29' 'THY1' 6446
-./prog_seq 'geneNames_1.txt' 'exe_29' 'VEZF1' 6447
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ING1' 6448
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TNFAIP3' 6449
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TCF3' 6450
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TP53' 6451
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZNF397' 6452
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ELF1' 6453
-./prog_seq 'geneNames_1.txt' 'exe_29' 'NRIP1' 6454
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZFP36' 6455
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TRIM25' 6456
-./prog_seq 'geneNames_1.txt' 'exe_29' 'NR2F6' 6457
-./prog_seq 'geneNames_1.txt' 'exe_29' 'HCFC1' 6458
-./prog_seq 'geneNames_1.txt' 'exe_29' 'DDX54' 6459
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ESPL1' 6460
-./prog_seq 'geneNames_1.txt' 'exe_29' 'PDCD11' 6461
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZNRD1' 6462
-./prog_seq 'geneNames_1.txt' 'exe_29' 'SMAD3' 6463
-./prog_seq 'geneNames_1.txt' 'exe_29' 'SIRT1' 6464
-./prog_seq 'geneNames_1.txt' 'exe_29' 'HMGA2' 6465
-./prog_seq 'geneNames_1.txt' 'exe_29' 'EGF' 6466
-./prog_seq 'geneNames_1.txt' 'exe_29' 'HIST1H1E' 6467
-./prog_seq 'geneNames_1.txt' 'exe_29' 'BTG1' 6468
-./prog_seq 'geneNames_1.txt' 'exe_29' 'LHX1' 6469
-./prog_seq 'geneNames_1.txt' 'exe_29' 'NFIB' 6470
-./prog_seq 'geneNames_1.txt' 'exe_29' 'CDX2' 6471
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ETV1' 6472
-./prog_seq 'geneNames_1.txt' 'exe_29' 'BCOR' 6473
-./prog_seq 'geneNames_1.txt' 'exe_29' 'HIF1AN' 6474
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ETV5' 6475
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TCF19' 6476
-./prog_seq 'geneNames_1.txt' 'exe_29' 'CEBPD' 6477
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZIC3' 6478
-./prog_seq 'geneNames_1.txt' 'exe_29' 'BMP2' 6479
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ELAVL2' 6480
-./prog_seq 'geneNames_1.txt' 'exe_29' 'MED14' 6481
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZNF354A' 6482
-./prog_seq 'geneNames_1.txt' 'exe_29' 'BRIP1' 6483
-./prog_seq 'geneNames_1.txt' 'exe_29' 'MAF' 6484
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZBTB16' 6485
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TEAD2' 6486
-./prog_seq 'geneNames_1.txt' 'exe_29' 'NR5A2' 6487
-./prog_seq 'geneNames_1.txt' 'exe_29' 'JUN' 6488
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZNF300' 6489
-./prog_seq 'geneNames_1.txt' 'exe_29' 'EPAS1' 6490
-./prog_seq 'geneNames_1.txt' 'exe_29' 'NOTCH3' 6491
-./prog_seq 'geneNames_1.txt' 'exe_29' 'MYC' 6492
-./prog_seq 'geneNames_1.txt' 'exe_29' 'PAWR' 6493
-./prog_seq 'geneNames_1.txt' 'exe_29' 'CREG1' 6494
-./prog_seq 'geneNames_1.txt' 'exe_29' 'FOSB' 6495
-./prog_seq 'geneNames_1.txt' 'exe_29' 'GLI1' 6496
-./prog_seq 'geneNames_1.txt' 'exe_29' 'PRDM14' 6497
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TFE3' 6498
-./prog_seq 'geneNames_1.txt' 'exe_29' 'MAFF' 6499
-./prog_seq 'geneNames_1.txt' 'exe_29' 'MED20' 6500
-./prog_seq 'geneNames_1.txt' 'exe_29' 'E2F5' 6501
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TRIM22' 6502
-./prog_seq 'geneNames_1.txt' 'exe_29' 'WDR5' 6503
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZNF217' 6504
-./prog_seq 'geneNames_1.txt' 'exe_29' 'PEG3' 6505
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZHX1' 6506
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TARDBP' 6507
-./prog_seq 'geneNames_1.txt' 'exe_29' 'SNAPC1' 6508
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZBTB3' 6509
-./prog_seq 'geneNames_1.txt' 'exe_29' 'NFATC2' 6510
-./prog_seq 'geneNames_1.txt' 'exe_29' 'SALL3' 6511
-./prog_seq 'geneNames_1.txt' 'exe_29' 'MAPK1' 6512
-./prog_seq 'geneNames_1.txt' 'exe_29' 'MEIS3' 6513
-./prog_seq 'geneNames_1.txt' 'exe_29' 'CHAF1A' 6514
-./prog_seq 'geneNames_1.txt' 'exe_29' 'DAXX' 6515
-./prog_seq 'geneNames_1.txt' 'exe_29' 'E2F8' 6516
-./prog_seq 'geneNames_1.txt' 'exe_29' 'GATA5' 6517
-./prog_seq 'geneNames_1.txt' 'exe_29' 'RFX5' 6518
-./prog_seq 'geneNames_1.txt' 'exe_29' 'HINFP' 6519
-./prog_seq 'geneNames_1.txt' 'exe_29' 'MLXIPL' 6520
-./prog_seq 'geneNames_1.txt' 'exe_29' 'SSBP2' 6521
-./prog_seq 'geneNames_1.txt' 'exe_29' 'RREB1' 6522
-./prog_seq 'geneNames_1.txt' 'exe_29' 'SMARCD2' 6523
-./prog_seq 'geneNames_1.txt' 'exe_29' 'HDGF' 6524
-./prog_seq 'geneNames_1.txt' 'exe_29' 'MEF2C' 6525
-./prog_seq 'geneNames_1.txt' 'exe_29' 'SSBP3' 6526
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TAF5' 6527
-./prog_seq 'geneNames_1.txt' 'exe_29' 'SRF' 6528
-./prog_seq 'geneNames_1.txt' 'exe_29' 'HIPK2' 6529
-./prog_seq 'geneNames_1.txt' 'exe_29' 'EOMES' 6530
-./prog_seq 'geneNames_1.txt' 'exe_29' 'NCOA1' 6531
-./prog_seq 'geneNames_1.txt' 'exe_29' 'CREB3L3' 6532
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ELL2' 6533
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TOPORS' 6534
-./prog_seq 'geneNames_1.txt' 'exe_29' 'BTG2' 6535
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ING5' 6536
-./prog_seq 'geneNames_1.txt' 'exe_29' 'HNF1B' 6537
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TCF4' 6538
-./prog_seq 'geneNames_1.txt' 'exe_29' 'IRF9' 6539
-./prog_seq 'geneNames_1.txt' 'exe_29' 'JARID2' 6540
-./prog_seq 'geneNames_1.txt' 'exe_29' 'HNRNPAB' 6541
-./prog_seq 'geneNames_1.txt' 'exe_29' 'RARG' 6542
-./prog_seq 'geneNames_1.txt' 'exe_29' 'GMEB1' 6543
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZNF107' 6544
-./prog_seq 'geneNames_1.txt' 'exe_29' 'GATAD2B' 6545
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ARID3B' 6546
-./prog_seq 'geneNames_1.txt' 'exe_29' 'WBP11' 6547
-./prog_seq 'geneNames_1.txt' 'exe_29' 'NCOA6' 6548
-./prog_seq 'geneNames_1.txt' 'exe_29' 'GLI2' 6549
-./prog_seq 'geneNames_1.txt' 'exe_29' 'FOSL1' 6550
-./prog_seq 'geneNames_1.txt' 'exe_29' 'E2F4' 6551
-./prog_seq 'geneNames_1.txt' 'exe_29' 'MXD1' 6552
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TBL1X' 6553
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZSCAN21' 6554
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TRIM27' 6555
-./prog_seq 'geneNames_1.txt' 'exe_29' 'EGFR' 6556
-./prog_seq 'geneNames_1.txt' 'exe_29' 'THAP11' 6557
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TFAP2C' 6558
-./prog_seq 'geneNames_1.txt' 'exe_29' 'LDB2' 6559
-./prog_seq 'geneNames_1.txt' 'exe_29' 'AES' 6560
-./prog_seq 'geneNames_1.txt' 'exe_29' 'FOXA1' 6561
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZBTB24' 6562
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TAF1A' 6563
-./prog_seq 'geneNames_1.txt' 'exe_29' 'BCL11B' 6564
-./prog_seq 'geneNames_1.txt' 'exe_29' 'PITX1' 6565
-./prog_seq 'geneNames_1.txt' 'exe_29' 'MCM2' 6566
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZNF670' 6567
-./prog_seq 'geneNames_1.txt' 'exe_29' 'GLIS3' 6568
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TEAD4' 6569
-./prog_seq 'geneNames_1.txt' 'exe_29' 'NR1I3' 6570
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZNF202' 6571
-./prog_seq 'geneNames_1.txt' 'exe_29' 'REST' 6572
-./prog_seq 'geneNames_1.txt' 'exe_29' 'JUND' 6573
-./prog_seq 'geneNames_1.txt' 'exe_29' 'CREB3L4' 6574
-./prog_seq 'geneNames_1.txt' 'exe_29' 'DDX20' 6575
-./prog_seq 'geneNames_1.txt' 'exe_29' 'HDAC1' 6576
-./prog_seq 'geneNames_1.txt' 'exe_29' 'CTDSPL' 6577
-./prog_seq 'geneNames_1.txt' 'exe_29' 'RNF2' 6578
-./prog_seq 'geneNames_1.txt' 'exe_29' 'CNTRL' 6579
-./prog_seq 'geneNames_1.txt' 'exe_29' 'HNRNPUL1' 6580
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ATF3' 6581
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZNF227' 6582
-./prog_seq 'geneNames_1.txt' 'exe_29' 'EZH2' 6583
-./prog_seq 'geneNames_1.txt' 'exe_29' 'SP100' 6584
-./prog_seq 'geneNames_1.txt' 'exe_29' 'CEBPA' 6585
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZFP64' 6586
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ASXL1' 6587
-./prog_seq 'geneNames_1.txt' 'exe_29' 'THAP1' 6588
-./prog_seq 'geneNames_1.txt' 'exe_29' 'FOXA2' 6589
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZIC2' 6590
-./prog_seq 'geneNames_1.txt' 'exe_29' 'KLF5' 6591
-./prog_seq 'geneNames_1.txt' 'exe_29' 'FOSL2' 6592
-./prog_seq 'geneNames_1.txt' 'exe_29' 'PIAS2' 6593
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TFDP1' 6594
-./prog_seq 'geneNames_1.txt' 'exe_29' 'FHL2' 6595
-./prog_seq 'geneNames_1.txt' 'exe_29' 'DRAP1' 6596
-./prog_seq 'geneNames_1.txt' 'exe_29' 'JAG1' 6597
-./prog_seq 'geneNames_1.txt' 'exe_29' 'GTF3C4' 6598
-./prog_seq 'geneNames_1.txt' 'exe_29' 'RUNX1T1' 6599
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TAF6' 6600
-./prog_seq 'geneNames_1.txt' 'exe_29' 'NR2F2' 6601
-./prog_seq 'geneNames_1.txt' 'exe_29' 'AHR' 6602
-./prog_seq 'geneNames_1.txt' 'exe_29' 'SEC14L2' 6603
-./prog_seq 'geneNames_1.txt' 'exe_29' 'SERTAD3' 6604
-./prog_seq 'geneNames_1.txt' 'exe_29' 'SIRT2' 6605
-./prog_seq 'geneNames_1.txt' 'exe_29' 'NEIL2' 6606
-./prog_seq 'geneNames_1.txt' 'exe_29' 'AATF' 6607
-./prog_seq 'geneNames_1.txt' 'exe_29' 'MCM8' 6608
-./prog_seq 'geneNames_1.txt' 'exe_29' 'MYBBP1A' 6609
-./prog_seq 'geneNames_1.txt' 'exe_29' 'UHRF1' 6610
-./prog_seq 'geneNames_1.txt' 'exe_29' 'GPM6B' 6611
-./prog_seq 'geneNames_1.txt' 'exe_29' 'FOXH1' 6612
-./prog_seq 'geneNames_1.txt' 'exe_29' 'FOXO1' 6613
-./prog_seq 'geneNames_1.txt' 'exe_29' 'BDP1' 6614
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ETS1' 6615
-./prog_seq 'geneNames_1.txt' 'exe_29' 'POU2F1' 6616
-./prog_seq 'geneNames_1.txt' 'exe_29' 'PLAGL2' 6617
-./prog_seq 'geneNames_1.txt' 'exe_29' 'JAZF1' 6618
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZNHIT3' 6619
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZNF675' 6620
-./prog_seq 'geneNames_1.txt' 'exe_29' 'MYCN' 6621
-./prog_seq 'geneNames_1.txt' 'exe_29' 'U2AF1' 6622
-./prog_seq 'geneNames_1.txt' 'exe_29' 'MAZ' 6623
-./prog_seq 'geneNames_1.txt' 'exe_29' 'NANOG' 6624
-./prog_seq 'geneNames_1.txt' 'exe_29' 'KDM4C' 6625
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TFDP2' 6626
-./prog_seq 'geneNames_1.txt' 'exe_29' 'GATA6' 6627
-./prog_seq 'geneNames_1.txt' 'exe_29' 'THRB' 6628
-./prog_seq 'geneNames_1.txt' 'exe_29' 'CCND1' 6629
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TCOF1' 6630
-./prog_seq 'geneNames_1.txt' 'exe_29' 'DR1' 6631
-./prog_seq 'geneNames_1.txt' 'exe_29' 'PPARA' 6632
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZNF398' 6633
-./prog_seq 'geneNames_1.txt' 'exe_29' 'KLF3' 6634
-./prog_seq 'geneNames_1.txt' 'exe_29' 'BCL11A' 6635
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TTF2' 6636
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZNF33A' 6637
-./prog_seq 'geneNames_1.txt' 'exe_29' 'E2F7' 6638
-./prog_seq 'geneNames_1.txt' 'exe_29' 'HTATSF1' 6639
-./prog_seq 'geneNames_1.txt' 'exe_29' 'HIF3A' 6640
-./prog_seq 'geneNames_1.txt' 'exe_29' 'PCGF6' 6641
-./prog_seq 'geneNames_1.txt' 'exe_29' 'PIAS3' 6642
-./prog_seq 'geneNames_1.txt' 'exe_29' 'POLR1E' 6643
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZNF74' 6644
-./prog_seq 'geneNames_1.txt' 'exe_29' 'PTRF' 6645
-./prog_seq 'geneNames_1.txt' 'exe_29' 'SP4' 6646
-./prog_seq 'geneNames_1.txt' 'exe_29' 'HNF4A' 6647
-./prog_seq 'geneNames_1.txt' 'exe_29' 'CHD8' 6648
-./prog_seq 'geneNames_1.txt' 'exe_29' 'NR3C1' 6649
-./prog_seq 'geneNames_1.txt' 'exe_29' 'PBX1' 6650
-./prog_seq 'geneNames_1.txt' 'exe_29' 'EHMT2' 6651
-./prog_seq 'geneNames_1.txt' 'exe_29' 'FOXM1' 6652
-./prog_seq 'geneNames_1.txt' 'exe_29' 'GRHL1' 6653
-./prog_seq 'geneNames_1.txt' 'exe_29' 'SCD5' 6654
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ZFHX3' 6655
-./prog_seq 'geneNames_1.txt' 'exe_29' 'DOT1L' 6656
-./prog_seq 'geneNames_1.txt' 'exe_29' 'E2F3' 6657
-./prog_seq 'geneNames_1.txt' 'exe_29' 'GTF3C5' 6658
-./prog_seq 'geneNames_1.txt' 'exe_29' 'POU5F1' 6659
-./prog_seq 'geneNames_1.txt' 'exe_29' 'POLR3D' 6660
-./prog_seq 'geneNames_1.txt' 'exe_29' 'SOX2' 6661
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TCF7L1' 6662
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TCFL5' 6663
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TIMELESS' 6664
-./prog_seq 'geneNames_1.txt' 'exe_29' 'BMPR1A' 6665
-./prog_seq 'geneNames_1.txt' 'exe_29' 'ANKRD1' 6666
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TRERF1' 6667
-./prog_seq 'geneNames_1.txt' 'exe_29' 'GTF2H2' 6668
-./prog_seq 'geneNames_1.txt' 'exe_29' 'IRF1' 6669
-./prog_seq 'geneNames_1.txt' 'exe_29' 'TBX3' 6670
-./prog_seq 'geneNames_1.txt' 'exe_30' 'AEBP1' 6671
-./prog_seq 'geneNames_1.txt' 'exe_30' 'PIM2' 6672
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TADA3' 6673
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ESRG' 6674
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ETV4' 6675
-./prog_seq 'geneNames_1.txt' 'exe_30' 'THY1' 6676
-./prog_seq 'geneNames_1.txt' 'exe_30' 'VEZF1' 6677
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ING1' 6678
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TNFAIP3' 6679
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TCF3' 6680
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TP53' 6681
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZNF397' 6682
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ELF1' 6683
-./prog_seq 'geneNames_1.txt' 'exe_30' 'NRIP1' 6684
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZFP36' 6685
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TRIM25' 6686
-./prog_seq 'geneNames_1.txt' 'exe_30' 'NR2F6' 6687
-./prog_seq 'geneNames_1.txt' 'exe_30' 'HCFC1' 6688
-./prog_seq 'geneNames_1.txt' 'exe_30' 'DDX54' 6689
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ESPL1' 6690
-./prog_seq 'geneNames_1.txt' 'exe_30' 'PDCD11' 6691
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZNRD1' 6692
-./prog_seq 'geneNames_1.txt' 'exe_30' 'SMAD3' 6693
-./prog_seq 'geneNames_1.txt' 'exe_30' 'SIRT1' 6694
-./prog_seq 'geneNames_1.txt' 'exe_30' 'HMGA2' 6695
-./prog_seq 'geneNames_1.txt' 'exe_30' 'EGF' 6696
-./prog_seq 'geneNames_1.txt' 'exe_30' 'HIST1H1E' 6697
-./prog_seq 'geneNames_1.txt' 'exe_30' 'BTG1' 6698
-./prog_seq 'geneNames_1.txt' 'exe_30' 'LHX1' 6699
-./prog_seq 'geneNames_1.txt' 'exe_30' 'NFIB' 6700
-./prog_seq 'geneNames_1.txt' 'exe_30' 'CDX2' 6701
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ETV1' 6702
-./prog_seq 'geneNames_1.txt' 'exe_30' 'BCOR' 6703
-./prog_seq 'geneNames_1.txt' 'exe_30' 'HIF1AN' 6704
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ETV5' 6705
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TCF19' 6706
-./prog_seq 'geneNames_1.txt' 'exe_30' 'CEBPD' 6707
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZIC3' 6708
-./prog_seq 'geneNames_1.txt' 'exe_30' 'BMP2' 6709
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ELAVL2' 6710
-./prog_seq 'geneNames_1.txt' 'exe_30' 'MED14' 6711
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZNF354A' 6712
-./prog_seq 'geneNames_1.txt' 'exe_30' 'BRIP1' 6713
-./prog_seq 'geneNames_1.txt' 'exe_30' 'MAF' 6714
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZBTB16' 6715
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TEAD2' 6716
-./prog_seq 'geneNames_1.txt' 'exe_30' 'NR5A2' 6717
-./prog_seq 'geneNames_1.txt' 'exe_30' 'JUN' 6718
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZNF300' 6719
-./prog_seq 'geneNames_1.txt' 'exe_30' 'EPAS1' 6720
-./prog_seq 'geneNames_1.txt' 'exe_30' 'NOTCH3' 6721
-./prog_seq 'geneNames_1.txt' 'exe_30' 'MYC' 6722
-./prog_seq 'geneNames_1.txt' 'exe_30' 'PAWR' 6723
-./prog_seq 'geneNames_1.txt' 'exe_30' 'CREG1' 6724
-./prog_seq 'geneNames_1.txt' 'exe_30' 'FOSB' 6725
-./prog_seq 'geneNames_1.txt' 'exe_30' 'GLI1' 6726
-./prog_seq 'geneNames_1.txt' 'exe_30' 'PRDM14' 6727
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TFE3' 6728
-./prog_seq 'geneNames_1.txt' 'exe_30' 'MAFF' 6729
-./prog_seq 'geneNames_1.txt' 'exe_30' 'MED20' 6730
-./prog_seq 'geneNames_1.txt' 'exe_30' 'E2F5' 6731
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TRIM22' 6732
-./prog_seq 'geneNames_1.txt' 'exe_30' 'WDR5' 6733
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZNF217' 6734
-./prog_seq 'geneNames_1.txt' 'exe_30' 'PEG3' 6735
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZHX1' 6736
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TARDBP' 6737
-./prog_seq 'geneNames_1.txt' 'exe_30' 'SNAPC1' 6738
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZBTB3' 6739
-./prog_seq 'geneNames_1.txt' 'exe_30' 'NFATC2' 6740
-./prog_seq 'geneNames_1.txt' 'exe_30' 'SALL3' 6741
-./prog_seq 'geneNames_1.txt' 'exe_30' 'MAPK1' 6742
-./prog_seq 'geneNames_1.txt' 'exe_30' 'MEIS3' 6743
-./prog_seq 'geneNames_1.txt' 'exe_30' 'CHAF1A' 6744
-./prog_seq 'geneNames_1.txt' 'exe_30' 'DAXX' 6745
-./prog_seq 'geneNames_1.txt' 'exe_30' 'E2F8' 6746
-./prog_seq 'geneNames_1.txt' 'exe_30' 'GATA5' 6747
-./prog_seq 'geneNames_1.txt' 'exe_30' 'RFX5' 6748
-./prog_seq 'geneNames_1.txt' 'exe_30' 'HINFP' 6749
-./prog_seq 'geneNames_1.txt' 'exe_30' 'MLXIPL' 6750
-./prog_seq 'geneNames_1.txt' 'exe_30' 'SSBP2' 6751
-./prog_seq 'geneNames_1.txt' 'exe_30' 'RREB1' 6752
-./prog_seq 'geneNames_1.txt' 'exe_30' 'SMARCD2' 6753
-./prog_seq 'geneNames_1.txt' 'exe_30' 'HDGF' 6754
-./prog_seq 'geneNames_1.txt' 'exe_30' 'MEF2C' 6755
-./prog_seq 'geneNames_1.txt' 'exe_30' 'SSBP3' 6756
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TAF5' 6757
-./prog_seq 'geneNames_1.txt' 'exe_30' 'SRF' 6758
-./prog_seq 'geneNames_1.txt' 'exe_30' 'HIPK2' 6759
-./prog_seq 'geneNames_1.txt' 'exe_30' 'EOMES' 6760
-./prog_seq 'geneNames_1.txt' 'exe_30' 'NCOA1' 6761
-./prog_seq 'geneNames_1.txt' 'exe_30' 'CREB3L3' 6762
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ELL2' 6763
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TOPORS' 6764
-./prog_seq 'geneNames_1.txt' 'exe_30' 'BTG2' 6765
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ING5' 6766
-./prog_seq 'geneNames_1.txt' 'exe_30' 'HNF1B' 6767
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TCF4' 6768
-./prog_seq 'geneNames_1.txt' 'exe_30' 'IRF9' 6769
-./prog_seq 'geneNames_1.txt' 'exe_30' 'JARID2' 6770
-./prog_seq 'geneNames_1.txt' 'exe_30' 'HNRNPAB' 6771
-./prog_seq 'geneNames_1.txt' 'exe_30' 'RARG' 6772
-./prog_seq 'geneNames_1.txt' 'exe_30' 'GMEB1' 6773
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZNF107' 6774
-./prog_seq 'geneNames_1.txt' 'exe_30' 'GATAD2B' 6775
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ARID3B' 6776
-./prog_seq 'geneNames_1.txt' 'exe_30' 'WBP11' 6777
-./prog_seq 'geneNames_1.txt' 'exe_30' 'NCOA6' 6778
-./prog_seq 'geneNames_1.txt' 'exe_30' 'GLI2' 6779
-./prog_seq 'geneNames_1.txt' 'exe_30' 'FOSL1' 6780
-./prog_seq 'geneNames_1.txt' 'exe_30' 'E2F4' 6781
-./prog_seq 'geneNames_1.txt' 'exe_30' 'MXD1' 6782
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TBL1X' 6783
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZSCAN21' 6784
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TRIM27' 6785
-./prog_seq 'geneNames_1.txt' 'exe_30' 'EGFR' 6786
-./prog_seq 'geneNames_1.txt' 'exe_30' 'THAP11' 6787
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TFAP2C' 6788
-./prog_seq 'geneNames_1.txt' 'exe_30' 'LDB2' 6789
-./prog_seq 'geneNames_1.txt' 'exe_30' 'AES' 6790
-./prog_seq 'geneNames_1.txt' 'exe_30' 'FOXA1' 6791
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZBTB24' 6792
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TAF1A' 6793
-./prog_seq 'geneNames_1.txt' 'exe_30' 'BCL11B' 6794
-./prog_seq 'geneNames_1.txt' 'exe_30' 'PITX1' 6795
-./prog_seq 'geneNames_1.txt' 'exe_30' 'MCM2' 6796
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZNF670' 6797
-./prog_seq 'geneNames_1.txt' 'exe_30' 'GLIS3' 6798
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TEAD4' 6799
-./prog_seq 'geneNames_1.txt' 'exe_30' 'NR1I3' 6800
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZNF202' 6801
-./prog_seq 'geneNames_1.txt' 'exe_30' 'REST' 6802
-./prog_seq 'geneNames_1.txt' 'exe_30' 'JUND' 6803
-./prog_seq 'geneNames_1.txt' 'exe_30' 'CREB3L4' 6804
-./prog_seq 'geneNames_1.txt' 'exe_30' 'DDX20' 6805
-./prog_seq 'geneNames_1.txt' 'exe_30' 'HDAC1' 6806
-./prog_seq 'geneNames_1.txt' 'exe_30' 'CTDSPL' 6807
-./prog_seq 'geneNames_1.txt' 'exe_30' 'RNF2' 6808
-./prog_seq 'geneNames_1.txt' 'exe_30' 'CNTRL' 6809
-./prog_seq 'geneNames_1.txt' 'exe_30' 'HNRNPUL1' 6810
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ATF3' 6811
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZNF227' 6812
-./prog_seq 'geneNames_1.txt' 'exe_30' 'EZH2' 6813
-./prog_seq 'geneNames_1.txt' 'exe_30' 'SP100' 6814
-./prog_seq 'geneNames_1.txt' 'exe_30' 'CEBPA' 6815
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZFP64' 6816
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ASXL1' 6817
-./prog_seq 'geneNames_1.txt' 'exe_30' 'THAP1' 6818
-./prog_seq 'geneNames_1.txt' 'exe_30' 'FOXA2' 6819
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZIC2' 6820
-./prog_seq 'geneNames_1.txt' 'exe_30' 'KLF5' 6821
-./prog_seq 'geneNames_1.txt' 'exe_30' 'FOSL2' 6822
-./prog_seq 'geneNames_1.txt' 'exe_30' 'PIAS2' 6823
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TFDP1' 6824
-./prog_seq 'geneNames_1.txt' 'exe_30' 'FHL2' 6825
-./prog_seq 'geneNames_1.txt' 'exe_30' 'DRAP1' 6826
-./prog_seq 'geneNames_1.txt' 'exe_30' 'JAG1' 6827
-./prog_seq 'geneNames_1.txt' 'exe_30' 'GTF3C4' 6828
-./prog_seq 'geneNames_1.txt' 'exe_30' 'RUNX1T1' 6829
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TAF6' 6830
-./prog_seq 'geneNames_1.txt' 'exe_30' 'NR2F2' 6831
-./prog_seq 'geneNames_1.txt' 'exe_30' 'AHR' 6832
-./prog_seq 'geneNames_1.txt' 'exe_30' 'SEC14L2' 6833
-./prog_seq 'geneNames_1.txt' 'exe_30' 'SERTAD3' 6834
-./prog_seq 'geneNames_1.txt' 'exe_30' 'SIRT2' 6835
-./prog_seq 'geneNames_1.txt' 'exe_30' 'NEIL2' 6836
-./prog_seq 'geneNames_1.txt' 'exe_30' 'AATF' 6837
-./prog_seq 'geneNames_1.txt' 'exe_30' 'MCM8' 6838
-./prog_seq 'geneNames_1.txt' 'exe_30' 'MYBBP1A' 6839
-./prog_seq 'geneNames_1.txt' 'exe_30' 'UHRF1' 6840
-./prog_seq 'geneNames_1.txt' 'exe_30' 'GPM6B' 6841
-./prog_seq 'geneNames_1.txt' 'exe_30' 'FOXH1' 6842
-./prog_seq 'geneNames_1.txt' 'exe_30' 'FOXO1' 6843
-./prog_seq 'geneNames_1.txt' 'exe_30' 'BDP1' 6844
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ETS1' 6845
-./prog_seq 'geneNames_1.txt' 'exe_30' 'POU2F1' 6846
-./prog_seq 'geneNames_1.txt' 'exe_30' 'PLAGL2' 6847
-./prog_seq 'geneNames_1.txt' 'exe_30' 'JAZF1' 6848
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZNHIT3' 6849
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZNF675' 6850
-./prog_seq 'geneNames_1.txt' 'exe_30' 'MYCN' 6851
-./prog_seq 'geneNames_1.txt' 'exe_30' 'U2AF1' 6852
-./prog_seq 'geneNames_1.txt' 'exe_30' 'MAZ' 6853
-./prog_seq 'geneNames_1.txt' 'exe_30' 'NANOG' 6854
-./prog_seq 'geneNames_1.txt' 'exe_30' 'KDM4C' 6855
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TFDP2' 6856
-./prog_seq 'geneNames_1.txt' 'exe_30' 'GATA6' 6857
-./prog_seq 'geneNames_1.txt' 'exe_30' 'THRB' 6858
-./prog_seq 'geneNames_1.txt' 'exe_30' 'CCND1' 6859
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TCOF1' 6860
-./prog_seq 'geneNames_1.txt' 'exe_30' 'DR1' 6861
-./prog_seq 'geneNames_1.txt' 'exe_30' 'PPARA' 6862
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZNF398' 6863
-./prog_seq 'geneNames_1.txt' 'exe_30' 'KLF3' 6864
-./prog_seq 'geneNames_1.txt' 'exe_30' 'BCL11A' 6865
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TTF2' 6866
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZNF33A' 6867
-./prog_seq 'geneNames_1.txt' 'exe_30' 'E2F7' 6868
-./prog_seq 'geneNames_1.txt' 'exe_30' 'HTATSF1' 6869
-./prog_seq 'geneNames_1.txt' 'exe_30' 'HIF3A' 6870
-./prog_seq 'geneNames_1.txt' 'exe_30' 'PCGF6' 6871
-./prog_seq 'geneNames_1.txt' 'exe_30' 'PIAS3' 6872
-./prog_seq 'geneNames_1.txt' 'exe_30' 'POLR1E' 6873
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZNF74' 6874
-./prog_seq 'geneNames_1.txt' 'exe_30' 'PTRF' 6875
-./prog_seq 'geneNames_1.txt' 'exe_30' 'SP4' 6876
-./prog_seq 'geneNames_1.txt' 'exe_30' 'HNF4A' 6877
-./prog_seq 'geneNames_1.txt' 'exe_30' 'CHD8' 6878
-./prog_seq 'geneNames_1.txt' 'exe_30' 'NR3C1' 6879
-./prog_seq 'geneNames_1.txt' 'exe_30' 'PBX1' 6880
-./prog_seq 'geneNames_1.txt' 'exe_30' 'EHMT2' 6881
-./prog_seq 'geneNames_1.txt' 'exe_30' 'FOXM1' 6882
-./prog_seq 'geneNames_1.txt' 'exe_30' 'GRHL1' 6883
-./prog_seq 'geneNames_1.txt' 'exe_30' 'SCD5' 6884
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ZFHX3' 6885
-./prog_seq 'geneNames_1.txt' 'exe_30' 'DOT1L' 6886
-./prog_seq 'geneNames_1.txt' 'exe_30' 'E2F3' 6887
-./prog_seq 'geneNames_1.txt' 'exe_30' 'GTF3C5' 6888
-./prog_seq 'geneNames_1.txt' 'exe_30' 'POU5F1' 6889
-./prog_seq 'geneNames_1.txt' 'exe_30' 'POLR3D' 6890
-./prog_seq 'geneNames_1.txt' 'exe_30' 'SOX2' 6891
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TCF7L1' 6892
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TCFL5' 6893
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TIMELESS' 6894
-./prog_seq 'geneNames_1.txt' 'exe_30' 'BMPR1A' 6895
-./prog_seq 'geneNames_1.txt' 'exe_30' 'ANKRD1' 6896
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TRERF1' 6897
-./prog_seq 'geneNames_1.txt' 'exe_30' 'GTF2H2' 6898
-./prog_seq 'geneNames_1.txt' 'exe_30' 'IRF1' 6899
-./prog_seq 'geneNames_1.txt' 'exe_30' 'TBX3' 6900
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'AEBP1' 1
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'PIM2' 2
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TADA3' 3
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ESRG' 4
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ETV4' 5
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'THY1' 6
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'VEZF1' 7
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ING1' 8
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TNFAIP3' 9
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TCF3' 10
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TP53' 11
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZNF397' 12
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ELF1' 13
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'NRIP1' 14
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZFP36' 15
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TRIM25' 16
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'NR2F6' 17
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'HCFC1' 18
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'DDX54' 19
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ESPL1' 20
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'PDCD11' 21
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZNRD1' 22
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'SMAD3' 23
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'SIRT1' 24
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'HMGA2' 25
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'EGF' 26
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'HIST1H1E' 27
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'BTG1' 28
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'LHX1' 29
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'NFIB' 30
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'CDX2' 31
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ETV1' 32
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'BCOR' 33
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'HIF1AN' 34
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ETV5' 35
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TCF19' 36
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'CEBPD' 37
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZIC3' 38
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'BMP2' 39
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ELAVL2' 40
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'MED14' 41
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZNF354A' 42
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'BRIP1' 43
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'MAF' 44
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZBTB16' 45
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TEAD2' 46
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'NR5A2' 47
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'JUN' 48
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZNF300' 49
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'EPAS1' 50
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'NOTCH3' 51
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'MYC' 52
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'PAWR' 53
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'CREG1' 54
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'FOSB' 55
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'GLI1' 56
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'PRDM14' 57
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TFE3' 58
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'MAFF' 59
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'MED20' 60
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'E2F5' 61
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TRIM22' 62
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'WDR5' 63
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZNF217' 64
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'PEG3' 65
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZHX1' 66
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TARDBP' 67
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'SNAPC1' 68
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZBTB3' 69
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'NFATC2' 70
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'SALL3' 71
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'MAPK1' 72
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'MEIS3' 73
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'CHAF1A' 74
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'DAXX' 75
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'E2F8' 76
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'GATA5' 77
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'RFX5' 78
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'HINFP' 79
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'MLXIPL' 80
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'SSBP2' 81
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'RREB1' 82
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'SMARCD2' 83
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'HDGF' 84
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'MEF2C' 85
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'SSBP3' 86
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TAF5' 87
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'SRF' 88
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'HIPK2' 89
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'EOMES' 90
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'NCOA1' 91
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'CREB3L3' 92
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ELL2' 93
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TOPORS' 94
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'BTG2' 95
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ING5' 96
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'HNF1B' 97
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TCF4' 98
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'IRF9' 99
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'JARID2' 100
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'HNRNPAB' 101
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'RARG' 102
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'GMEB1' 103
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZNF107' 104
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'GATAD2B' 105
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ARID3B' 106
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'WBP11' 107
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'NCOA6' 108
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'GLI2' 109
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'FOSL1' 110
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'E2F4' 111
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'MXD1' 112
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TBL1X' 113
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZSCAN21' 114
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TRIM27' 115
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'EGFR' 116
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'THAP11' 117
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TFAP2C' 118
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'LDB2' 119
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'AES' 120
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'FOXA1' 121
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZBTB24' 122
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TAF1A' 123
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'BCL11B' 124
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'PITX1' 125
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'MCM2' 126
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZNF670' 127
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'GLIS3' 128
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TEAD4' 129
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'NR1I3' 130
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZNF202' 131
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'REST' 132
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'JUND' 133
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'CREB3L4' 134
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'DDX20' 135
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'HDAC1' 136
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'CTDSPL' 137
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'RNF2' 138
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'CNTRL' 139
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'HNRNPUL1' 140
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ATF3' 141
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZNF227' 142
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'EZH2' 143
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'SP100' 144
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'CEBPA' 145
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZFP64' 146
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ASXL1' 147
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'THAP1' 148
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'FOXA2' 149
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZIC2' 150
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'KLF5' 151
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'FOSL2' 152
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'PIAS2' 153
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TFDP1' 154
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'FHL2' 155
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'DRAP1' 156
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'JAG1' 157
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'GTF3C4' 158
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'RUNX1T1' 159
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TAF6' 160
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'NR2F2' 161
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'AHR' 162
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'SEC14L2' 163
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'SERTAD3' 164
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'SIRT2' 165
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'NEIL2' 166
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'AATF' 167
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'MCM8' 168
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'MYBBP1A' 169
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'UHRF1' 170
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'GPM6B' 171
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'FOXH1' 172
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'FOXO1' 173
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'BDP1' 174
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ETS1' 175
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'POU2F1' 176
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'PLAGL2' 177
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'JAZF1' 178
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZNHIT3' 179
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZNF675' 180
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'MYCN' 181
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'U2AF1' 182
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'MAZ' 183
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'NANOG' 184
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'KDM4C' 185
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TFDP2' 186
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'GATA6' 187
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'THRB' 188
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'CCND1' 189
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TCOF1' 190
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'DR1' 191
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'PPARA' 192
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZNF398' 193
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'KLF3' 194
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'BCL11A' 195
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TTF2' 196
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZNF33A' 197
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'E2F7' 198
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'HTATSF1' 199
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'HIF3A' 200
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'PCGF6' 201
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'PIAS3' 202
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'POLR1E' 203
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZNF74' 204
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'PTRF' 205
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'SP4' 206
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'HNF4A' 207
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'CHD8' 208
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'NR3C1' 209
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'PBX1' 210
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'EHMT2' 211
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'FOXM1' 212
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'GRHL1' 213
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'SCD5' 214
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ZFHX3' 215
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'DOT1L' 216
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'E2F3' 217
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'GTF3C5' 218
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'POU5F1' 219
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'POLR3D' 220
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'SOX2' 221
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TCF7L1' 222
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TCFL5' 223
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TIMELESS' 224
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'BMPR1A' 225
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'ANKRD1' 226
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TRERF1' 227
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'GTF2H2' 228
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'IRF1' 229
+./prog_seq 'geneNames_1.txt' 'exe_1' 'hHep' 'TBX3' 230
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'AEBP1' 231
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'PIM2' 232
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TADA3' 233
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ESRG' 234
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ETV4' 235
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'THY1' 236
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'VEZF1' 237
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ING1' 238
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TNFAIP3' 239
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TCF3' 240
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TP53' 241
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZNF397' 242
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ELF1' 243
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'NRIP1' 244
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZFP36' 245
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TRIM25' 246
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'NR2F6' 247
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'HCFC1' 248
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'DDX54' 249
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ESPL1' 250
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'PDCD11' 251
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZNRD1' 252
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'SMAD3' 253
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'SIRT1' 254
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'HMGA2' 255
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'EGF' 256
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'HIST1H1E' 257
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'BTG1' 258
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'LHX1' 259
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'NFIB' 260
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'CDX2' 261
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ETV1' 262
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'BCOR' 263
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'HIF1AN' 264
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ETV5' 265
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TCF19' 266
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'CEBPD' 267
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZIC3' 268
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'BMP2' 269
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ELAVL2' 270
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'MED14' 271
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZNF354A' 272
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'BRIP1' 273
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'MAF' 274
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZBTB16' 275
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TEAD2' 276
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'NR5A2' 277
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'JUN' 278
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZNF300' 279
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'EPAS1' 280
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'NOTCH3' 281
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'MYC' 282
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'PAWR' 283
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'CREG1' 284
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'FOSB' 285
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'GLI1' 286
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'PRDM14' 287
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TFE3' 288
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'MAFF' 289
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'MED20' 290
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'E2F5' 291
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TRIM22' 292
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'WDR5' 293
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZNF217' 294
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'PEG3' 295
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZHX1' 296
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TARDBP' 297
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'SNAPC1' 298
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZBTB3' 299
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'NFATC2' 300
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'SALL3' 301
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'MAPK1' 302
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'MEIS3' 303
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'CHAF1A' 304
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'DAXX' 305
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'E2F8' 306
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'GATA5' 307
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'RFX5' 308
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'HINFP' 309
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'MLXIPL' 310
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'SSBP2' 311
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'RREB1' 312
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'SMARCD2' 313
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'HDGF' 314
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'MEF2C' 315
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'SSBP3' 316
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TAF5' 317
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'SRF' 318
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'HIPK2' 319
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'EOMES' 320
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'NCOA1' 321
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'CREB3L3' 322
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ELL2' 323
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TOPORS' 324
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'BTG2' 325
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ING5' 326
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'HNF1B' 327
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TCF4' 328
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'IRF9' 329
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'JARID2' 330
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'HNRNPAB' 331
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'RARG' 332
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'GMEB1' 333
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZNF107' 334
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'GATAD2B' 335
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ARID3B' 336
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'WBP11' 337
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'NCOA6' 338
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'GLI2' 339
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'FOSL1' 340
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'E2F4' 341
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'MXD1' 342
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TBL1X' 343
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZSCAN21' 344
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TRIM27' 345
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'EGFR' 346
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'THAP11' 347
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TFAP2C' 348
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'LDB2' 349
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'AES' 350
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'FOXA1' 351
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZBTB24' 352
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TAF1A' 353
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'BCL11B' 354
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'PITX1' 355
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'MCM2' 356
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZNF670' 357
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'GLIS3' 358
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TEAD4' 359
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'NR1I3' 360
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZNF202' 361
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'REST' 362
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'JUND' 363
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'CREB3L4' 364
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'DDX20' 365
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'HDAC1' 366
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'CTDSPL' 367
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'RNF2' 368
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'CNTRL' 369
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'HNRNPUL1' 370
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ATF3' 371
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZNF227' 372
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'EZH2' 373
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'SP100' 374
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'CEBPA' 375
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZFP64' 376
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ASXL1' 377
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'THAP1' 378
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'FOXA2' 379
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZIC2' 380
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'KLF5' 381
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'FOSL2' 382
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'PIAS2' 383
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TFDP1' 384
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'FHL2' 385
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'DRAP1' 386
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'JAG1' 387
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'GTF3C4' 388
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'RUNX1T1' 389
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TAF6' 390
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'NR2F2' 391
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'AHR' 392
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'SEC14L2' 393
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'SERTAD3' 394
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'SIRT2' 395
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'NEIL2' 396
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'AATF' 397
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'MCM8' 398
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'MYBBP1A' 399
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'UHRF1' 400
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'GPM6B' 401
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'FOXH1' 402
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'FOXO1' 403
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'BDP1' 404
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ETS1' 405
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'POU2F1' 406
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'PLAGL2' 407
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'JAZF1' 408
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZNHIT3' 409
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZNF675' 410
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'MYCN' 411
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'U2AF1' 412
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'MAZ' 413
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'NANOG' 414
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'KDM4C' 415
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TFDP2' 416
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'GATA6' 417
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'THRB' 418
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'CCND1' 419
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TCOF1' 420
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'DR1' 421
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'PPARA' 422
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZNF398' 423
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'KLF3' 424
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'BCL11A' 425
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TTF2' 426
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZNF33A' 427
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'E2F7' 428
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'HTATSF1' 429
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'HIF3A' 430
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'PCGF6' 431
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'PIAS3' 432
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'POLR1E' 433
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZNF74' 434
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'PTRF' 435
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'SP4' 436
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'HNF4A' 437
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'CHD8' 438
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'NR3C1' 439
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'PBX1' 440
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'EHMT2' 441
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'FOXM1' 442
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'GRHL1' 443
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'SCD5' 444
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ZFHX3' 445
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'DOT1L' 446
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'E2F3' 447
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'GTF3C5' 448
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'POU5F1' 449
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'POLR3D' 450
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'SOX2' 451
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TCF7L1' 452
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TCFL5' 453
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TIMELESS' 454
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'BMPR1A' 455
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'ANKRD1' 456
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TRERF1' 457
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'GTF2H2' 458
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'IRF1' 459
+./prog_seq 'geneNames_1.txt' 'exe_2' 'hHep' 'TBX3' 460
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'AEBP1' 461
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'PIM2' 462
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TADA3' 463
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ESRG' 464
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ETV4' 465
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'THY1' 466
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'VEZF1' 467
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ING1' 468
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TNFAIP3' 469
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TCF3' 470
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TP53' 471
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZNF397' 472
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ELF1' 473
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'NRIP1' 474
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZFP36' 475
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TRIM25' 476
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'NR2F6' 477
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'HCFC1' 478
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'DDX54' 479
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ESPL1' 480
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'PDCD11' 481
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZNRD1' 482
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'SMAD3' 483
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'SIRT1' 484
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'HMGA2' 485
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'EGF' 486
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'HIST1H1E' 487
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'BTG1' 488
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'LHX1' 489
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'NFIB' 490
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'CDX2' 491
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ETV1' 492
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'BCOR' 493
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'HIF1AN' 494
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ETV5' 495
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TCF19' 496
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'CEBPD' 497
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZIC3' 498
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'BMP2' 499
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ELAVL2' 500
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'MED14' 501
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZNF354A' 502
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'BRIP1' 503
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'MAF' 504
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZBTB16' 505
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TEAD2' 506
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'NR5A2' 507
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'JUN' 508
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZNF300' 509
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'EPAS1' 510
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'NOTCH3' 511
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'MYC' 512
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'PAWR' 513
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'CREG1' 514
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'FOSB' 515
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'GLI1' 516
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'PRDM14' 517
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TFE3' 518
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'MAFF' 519
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'MED20' 520
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'E2F5' 521
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TRIM22' 522
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'WDR5' 523
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZNF217' 524
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'PEG3' 525
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZHX1' 526
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TARDBP' 527
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'SNAPC1' 528
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZBTB3' 529
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'NFATC2' 530
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'SALL3' 531
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'MAPK1' 532
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'MEIS3' 533
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'CHAF1A' 534
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'DAXX' 535
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'E2F8' 536
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'GATA5' 537
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'RFX5' 538
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'HINFP' 539
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'MLXIPL' 540
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'SSBP2' 541
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'RREB1' 542
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'SMARCD2' 543
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'HDGF' 544
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'MEF2C' 545
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'SSBP3' 546
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TAF5' 547
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'SRF' 548
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'HIPK2' 549
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'EOMES' 550
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'NCOA1' 551
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'CREB3L3' 552
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ELL2' 553
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TOPORS' 554
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'BTG2' 555
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ING5' 556
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'HNF1B' 557
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TCF4' 558
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'IRF9' 559
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'JARID2' 560
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'HNRNPAB' 561
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'RARG' 562
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'GMEB1' 563
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZNF107' 564
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'GATAD2B' 565
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ARID3B' 566
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'WBP11' 567
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'NCOA6' 568
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'GLI2' 569
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'FOSL1' 570
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'E2F4' 571
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'MXD1' 572
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TBL1X' 573
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZSCAN21' 574
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TRIM27' 575
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'EGFR' 576
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'THAP11' 577
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TFAP2C' 578
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'LDB2' 579
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'AES' 580
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'FOXA1' 581
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZBTB24' 582
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TAF1A' 583
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'BCL11B' 584
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'PITX1' 585
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'MCM2' 586
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZNF670' 587
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'GLIS3' 588
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TEAD4' 589
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'NR1I3' 590
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZNF202' 591
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'REST' 592
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'JUND' 593
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'CREB3L4' 594
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'DDX20' 595
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'HDAC1' 596
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'CTDSPL' 597
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'RNF2' 598
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'CNTRL' 599
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'HNRNPUL1' 600
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ATF3' 601
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZNF227' 602
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'EZH2' 603
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'SP100' 604
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'CEBPA' 605
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZFP64' 606
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ASXL1' 607
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'THAP1' 608
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'FOXA2' 609
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZIC2' 610
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'KLF5' 611
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'FOSL2' 612
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'PIAS2' 613
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TFDP1' 614
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'FHL2' 615
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'DRAP1' 616
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'JAG1' 617
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'GTF3C4' 618
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'RUNX1T1' 619
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TAF6' 620
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'NR2F2' 621
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'AHR' 622
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'SEC14L2' 623
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'SERTAD3' 624
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'SIRT2' 625
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'NEIL2' 626
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'AATF' 627
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'MCM8' 628
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'MYBBP1A' 629
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'UHRF1' 630
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'GPM6B' 631
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'FOXH1' 632
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'FOXO1' 633
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'BDP1' 634
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ETS1' 635
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'POU2F1' 636
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'PLAGL2' 637
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'JAZF1' 638
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZNHIT3' 639
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZNF675' 640
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'MYCN' 641
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'U2AF1' 642
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'MAZ' 643
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'NANOG' 644
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'KDM4C' 645
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TFDP2' 646
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'GATA6' 647
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'THRB' 648
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'CCND1' 649
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TCOF1' 650
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'DR1' 651
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'PPARA' 652
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZNF398' 653
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'KLF3' 654
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'BCL11A' 655
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TTF2' 656
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZNF33A' 657
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'E2F7' 658
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'HTATSF1' 659
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'HIF3A' 660
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'PCGF6' 661
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'PIAS3' 662
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'POLR1E' 663
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZNF74' 664
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'PTRF' 665
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'SP4' 666
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'HNF4A' 667
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'CHD8' 668
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'NR3C1' 669
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'PBX1' 670
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'EHMT2' 671
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'FOXM1' 672
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'GRHL1' 673
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'SCD5' 674
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ZFHX3' 675
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'DOT1L' 676
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'E2F3' 677
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'GTF3C5' 678
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'POU5F1' 679
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'POLR3D' 680
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'SOX2' 681
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TCF7L1' 682
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TCFL5' 683
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TIMELESS' 684
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'BMPR1A' 685
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'ANKRD1' 686
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TRERF1' 687
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'GTF2H2' 688
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'IRF1' 689
+./prog_seq 'geneNames_1.txt' 'exe_3' 'hHep' 'TBX3' 690
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'AEBP1' 691
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'PIM2' 692
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TADA3' 693
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ESRG' 694
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ETV4' 695
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'THY1' 696
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'VEZF1' 697
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ING1' 698
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TNFAIP3' 699
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TCF3' 700
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TP53' 701
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZNF397' 702
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ELF1' 703
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'NRIP1' 704
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZFP36' 705
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TRIM25' 706
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'NR2F6' 707
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'HCFC1' 708
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'DDX54' 709
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ESPL1' 710
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'PDCD11' 711
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZNRD1' 712
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'SMAD3' 713
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'SIRT1' 714
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'HMGA2' 715
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'EGF' 716
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'HIST1H1E' 717
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'BTG1' 718
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'LHX1' 719
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'NFIB' 720
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'CDX2' 721
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ETV1' 722
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'BCOR' 723
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'HIF1AN' 724
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ETV5' 725
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TCF19' 726
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'CEBPD' 727
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZIC3' 728
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'BMP2' 729
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ELAVL2' 730
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'MED14' 731
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZNF354A' 732
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'BRIP1' 733
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'MAF' 734
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZBTB16' 735
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TEAD2' 736
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'NR5A2' 737
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'JUN' 738
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZNF300' 739
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'EPAS1' 740
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'NOTCH3' 741
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'MYC' 742
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'PAWR' 743
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'CREG1' 744
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'FOSB' 745
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'GLI1' 746
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'PRDM14' 747
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TFE3' 748
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'MAFF' 749
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'MED20' 750
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'E2F5' 751
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TRIM22' 752
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'WDR5' 753
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZNF217' 754
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'PEG3' 755
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZHX1' 756
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TARDBP' 757
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'SNAPC1' 758
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZBTB3' 759
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'NFATC2' 760
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'SALL3' 761
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'MAPK1' 762
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'MEIS3' 763
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'CHAF1A' 764
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'DAXX' 765
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'E2F8' 766
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'GATA5' 767
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'RFX5' 768
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'HINFP' 769
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'MLXIPL' 770
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'SSBP2' 771
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'RREB1' 772
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'SMARCD2' 773
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'HDGF' 774
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'MEF2C' 775
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'SSBP3' 776
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TAF5' 777
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'SRF' 778
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'HIPK2' 779
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'EOMES' 780
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'NCOA1' 781
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'CREB3L3' 782
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ELL2' 783
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TOPORS' 784
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'BTG2' 785
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ING5' 786
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'HNF1B' 787
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TCF4' 788
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'IRF9' 789
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'JARID2' 790
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'HNRNPAB' 791
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'RARG' 792
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'GMEB1' 793
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZNF107' 794
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'GATAD2B' 795
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ARID3B' 796
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'WBP11' 797
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'NCOA6' 798
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'GLI2' 799
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'FOSL1' 800
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'E2F4' 801
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'MXD1' 802
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TBL1X' 803
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZSCAN21' 804
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TRIM27' 805
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'EGFR' 806
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'THAP11' 807
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TFAP2C' 808
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'LDB2' 809
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'AES' 810
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'FOXA1' 811
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZBTB24' 812
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TAF1A' 813
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'BCL11B' 814
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'PITX1' 815
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'MCM2' 816
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZNF670' 817
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'GLIS3' 818
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TEAD4' 819
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'NR1I3' 820
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZNF202' 821
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'REST' 822
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'JUND' 823
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'CREB3L4' 824
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'DDX20' 825
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'HDAC1' 826
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'CTDSPL' 827
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'RNF2' 828
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'CNTRL' 829
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'HNRNPUL1' 830
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ATF3' 831
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZNF227' 832
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'EZH2' 833
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'SP100' 834
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'CEBPA' 835
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZFP64' 836
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ASXL1' 837
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'THAP1' 838
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'FOXA2' 839
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZIC2' 840
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'KLF5' 841
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'FOSL2' 842
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'PIAS2' 843
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TFDP1' 844
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'FHL2' 845
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'DRAP1' 846
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'JAG1' 847
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'GTF3C4' 848
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'RUNX1T1' 849
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TAF6' 850
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'NR2F2' 851
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'AHR' 852
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'SEC14L2' 853
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'SERTAD3' 854
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'SIRT2' 855
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'NEIL2' 856
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'AATF' 857
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'MCM8' 858
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'MYBBP1A' 859
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'UHRF1' 860
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'GPM6B' 861
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'FOXH1' 862
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'FOXO1' 863
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'BDP1' 864
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ETS1' 865
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'POU2F1' 866
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'PLAGL2' 867
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'JAZF1' 868
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZNHIT3' 869
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZNF675' 870
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'MYCN' 871
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'U2AF1' 872
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'MAZ' 873
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'NANOG' 874
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'KDM4C' 875
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TFDP2' 876
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'GATA6' 877
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'THRB' 878
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'CCND1' 879
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TCOF1' 880
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'DR1' 881
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'PPARA' 882
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZNF398' 883
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'KLF3' 884
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'BCL11A' 885
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TTF2' 886
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZNF33A' 887
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'E2F7' 888
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'HTATSF1' 889
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'HIF3A' 890
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'PCGF6' 891
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'PIAS3' 892
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'POLR1E' 893
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZNF74' 894
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'PTRF' 895
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'SP4' 896
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'HNF4A' 897
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'CHD8' 898
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'NR3C1' 899
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'PBX1' 900
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'EHMT2' 901
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'FOXM1' 902
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'GRHL1' 903
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'SCD5' 904
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ZFHX3' 905
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'DOT1L' 906
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'E2F3' 907
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'GTF3C5' 908
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'POU5F1' 909
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'POLR3D' 910
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'SOX2' 911
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TCF7L1' 912
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TCFL5' 913
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TIMELESS' 914
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'BMPR1A' 915
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'ANKRD1' 916
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TRERF1' 917
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'GTF2H2' 918
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'IRF1' 919
+./prog_seq 'geneNames_1.txt' 'exe_4' 'hHep' 'TBX3' 920
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'AEBP1' 921
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'PIM2' 922
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TADA3' 923
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ESRG' 924
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ETV4' 925
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'THY1' 926
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'VEZF1' 927
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ING1' 928
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TNFAIP3' 929
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TCF3' 930
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TP53' 931
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZNF397' 932
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ELF1' 933
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'NRIP1' 934
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZFP36' 935
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TRIM25' 936
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'NR2F6' 937
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'HCFC1' 938
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'DDX54' 939
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ESPL1' 940
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'PDCD11' 941
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZNRD1' 942
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'SMAD3' 943
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'SIRT1' 944
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'HMGA2' 945
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'EGF' 946
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'HIST1H1E' 947
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'BTG1' 948
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'LHX1' 949
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'NFIB' 950
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'CDX2' 951
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ETV1' 952
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'BCOR' 953
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'HIF1AN' 954
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ETV5' 955
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TCF19' 956
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'CEBPD' 957
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZIC3' 958
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'BMP2' 959
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ELAVL2' 960
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'MED14' 961
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZNF354A' 962
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'BRIP1' 963
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'MAF' 964
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZBTB16' 965
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TEAD2' 966
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'NR5A2' 967
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'JUN' 968
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZNF300' 969
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'EPAS1' 970
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'NOTCH3' 971
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'MYC' 972
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'PAWR' 973
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'CREG1' 974
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'FOSB' 975
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'GLI1' 976
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'PRDM14' 977
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TFE3' 978
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'MAFF' 979
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'MED20' 980
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'E2F5' 981
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TRIM22' 982
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'WDR5' 983
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZNF217' 984
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'PEG3' 985
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZHX1' 986
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TARDBP' 987
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'SNAPC1' 988
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZBTB3' 989
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'NFATC2' 990
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'SALL3' 991
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'MAPK1' 992
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'MEIS3' 993
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'CHAF1A' 994
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'DAXX' 995
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'E2F8' 996
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'GATA5' 997
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'RFX5' 998
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'HINFP' 999
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'MLXIPL' 1000
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'SSBP2' 1001
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'RREB1' 1002
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'SMARCD2' 1003
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'HDGF' 1004
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'MEF2C' 1005
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'SSBP3' 1006
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TAF5' 1007
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'SRF' 1008
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'HIPK2' 1009
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'EOMES' 1010
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'NCOA1' 1011
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'CREB3L3' 1012
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ELL2' 1013
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TOPORS' 1014
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'BTG2' 1015
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ING5' 1016
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'HNF1B' 1017
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TCF4' 1018
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'IRF9' 1019
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'JARID2' 1020
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'HNRNPAB' 1021
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'RARG' 1022
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'GMEB1' 1023
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZNF107' 1024
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'GATAD2B' 1025
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ARID3B' 1026
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'WBP11' 1027
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'NCOA6' 1028
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'GLI2' 1029
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'FOSL1' 1030
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'E2F4' 1031
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'MXD1' 1032
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TBL1X' 1033
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZSCAN21' 1034
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TRIM27' 1035
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'EGFR' 1036
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'THAP11' 1037
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TFAP2C' 1038
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'LDB2' 1039
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'AES' 1040
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'FOXA1' 1041
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZBTB24' 1042
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TAF1A' 1043
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'BCL11B' 1044
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'PITX1' 1045
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'MCM2' 1046
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZNF670' 1047
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'GLIS3' 1048
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TEAD4' 1049
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'NR1I3' 1050
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZNF202' 1051
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'REST' 1052
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'JUND' 1053
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'CREB3L4' 1054
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'DDX20' 1055
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'HDAC1' 1056
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'CTDSPL' 1057
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'RNF2' 1058
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'CNTRL' 1059
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'HNRNPUL1' 1060
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ATF3' 1061
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZNF227' 1062
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'EZH2' 1063
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'SP100' 1064
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'CEBPA' 1065
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZFP64' 1066
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ASXL1' 1067
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'THAP1' 1068
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'FOXA2' 1069
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZIC2' 1070
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'KLF5' 1071
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'FOSL2' 1072
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'PIAS2' 1073
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TFDP1' 1074
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'FHL2' 1075
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'DRAP1' 1076
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'JAG1' 1077
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'GTF3C4' 1078
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'RUNX1T1' 1079
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TAF6' 1080
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'NR2F2' 1081
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'AHR' 1082
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'SEC14L2' 1083
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'SERTAD3' 1084
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'SIRT2' 1085
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'NEIL2' 1086
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'AATF' 1087
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'MCM8' 1088
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'MYBBP1A' 1089
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'UHRF1' 1090
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'GPM6B' 1091
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'FOXH1' 1092
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'FOXO1' 1093
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'BDP1' 1094
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ETS1' 1095
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'POU2F1' 1096
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'PLAGL2' 1097
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'JAZF1' 1098
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZNHIT3' 1099
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZNF675' 1100
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'MYCN' 1101
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'U2AF1' 1102
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'MAZ' 1103
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'NANOG' 1104
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'KDM4C' 1105
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TFDP2' 1106
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'GATA6' 1107
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'THRB' 1108
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'CCND1' 1109
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TCOF1' 1110
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'DR1' 1111
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'PPARA' 1112
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZNF398' 1113
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'KLF3' 1114
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'BCL11A' 1115
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TTF2' 1116
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZNF33A' 1117
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'E2F7' 1118
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'HTATSF1' 1119
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'HIF3A' 1120
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'PCGF6' 1121
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'PIAS3' 1122
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'POLR1E' 1123
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZNF74' 1124
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'PTRF' 1125
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'SP4' 1126
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'HNF4A' 1127
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'CHD8' 1128
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'NR3C1' 1129
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'PBX1' 1130
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'EHMT2' 1131
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'FOXM1' 1132
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'GRHL1' 1133
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'SCD5' 1134
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ZFHX3' 1135
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'DOT1L' 1136
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'E2F3' 1137
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'GTF3C5' 1138
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'POU5F1' 1139
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'POLR3D' 1140
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'SOX2' 1141
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TCF7L1' 1142
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TCFL5' 1143
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TIMELESS' 1144
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'BMPR1A' 1145
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'ANKRD1' 1146
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TRERF1' 1147
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'GTF2H2' 1148
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'IRF1' 1149
+./prog_seq 'geneNames_1.txt' 'exe_5' 'hHep' 'TBX3' 1150
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'AEBP1' 1151
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'PIM2' 1152
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TADA3' 1153
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ESRG' 1154
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ETV4' 1155
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'THY1' 1156
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'VEZF1' 1157
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ING1' 1158
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TNFAIP3' 1159
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TCF3' 1160
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TP53' 1161
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZNF397' 1162
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ELF1' 1163
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'NRIP1' 1164
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZFP36' 1165
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TRIM25' 1166
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'NR2F6' 1167
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'HCFC1' 1168
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'DDX54' 1169
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ESPL1' 1170
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'PDCD11' 1171
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZNRD1' 1172
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'SMAD3' 1173
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'SIRT1' 1174
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'HMGA2' 1175
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'EGF' 1176
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'HIST1H1E' 1177
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'BTG1' 1178
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'LHX1' 1179
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'NFIB' 1180
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'CDX2' 1181
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ETV1' 1182
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'BCOR' 1183
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'HIF1AN' 1184
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ETV5' 1185
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TCF19' 1186
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'CEBPD' 1187
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZIC3' 1188
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'BMP2' 1189
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ELAVL2' 1190
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'MED14' 1191
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZNF354A' 1192
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'BRIP1' 1193
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'MAF' 1194
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZBTB16' 1195
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TEAD2' 1196
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'NR5A2' 1197
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'JUN' 1198
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZNF300' 1199
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'EPAS1' 1200
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'NOTCH3' 1201
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'MYC' 1202
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'PAWR' 1203
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'CREG1' 1204
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'FOSB' 1205
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'GLI1' 1206
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'PRDM14' 1207
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TFE3' 1208
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'MAFF' 1209
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'MED20' 1210
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'E2F5' 1211
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TRIM22' 1212
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'WDR5' 1213
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZNF217' 1214
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'PEG3' 1215
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZHX1' 1216
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TARDBP' 1217
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'SNAPC1' 1218
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZBTB3' 1219
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'NFATC2' 1220
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'SALL3' 1221
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'MAPK1' 1222
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'MEIS3' 1223
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'CHAF1A' 1224
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'DAXX' 1225
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'E2F8' 1226
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'GATA5' 1227
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'RFX5' 1228
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'HINFP' 1229
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'MLXIPL' 1230
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'SSBP2' 1231
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'RREB1' 1232
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'SMARCD2' 1233
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'HDGF' 1234
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'MEF2C' 1235
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'SSBP3' 1236
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TAF5' 1237
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'SRF' 1238
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'HIPK2' 1239
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'EOMES' 1240
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'NCOA1' 1241
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'CREB3L3' 1242
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ELL2' 1243
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TOPORS' 1244
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'BTG2' 1245
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ING5' 1246
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'HNF1B' 1247
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TCF4' 1248
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'IRF9' 1249
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'JARID2' 1250
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'HNRNPAB' 1251
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'RARG' 1252
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'GMEB1' 1253
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZNF107' 1254
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'GATAD2B' 1255
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ARID3B' 1256
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'WBP11' 1257
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'NCOA6' 1258
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'GLI2' 1259
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'FOSL1' 1260
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'E2F4' 1261
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'MXD1' 1262
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TBL1X' 1263
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZSCAN21' 1264
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TRIM27' 1265
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'EGFR' 1266
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'THAP11' 1267
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TFAP2C' 1268
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'LDB2' 1269
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'AES' 1270
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'FOXA1' 1271
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZBTB24' 1272
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TAF1A' 1273
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'BCL11B' 1274
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'PITX1' 1275
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'MCM2' 1276
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZNF670' 1277
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'GLIS3' 1278
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TEAD4' 1279
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'NR1I3' 1280
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZNF202' 1281
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'REST' 1282
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'JUND' 1283
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'CREB3L4' 1284
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'DDX20' 1285
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'HDAC1' 1286
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'CTDSPL' 1287
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'RNF2' 1288
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'CNTRL' 1289
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'HNRNPUL1' 1290
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ATF3' 1291
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZNF227' 1292
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'EZH2' 1293
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'SP100' 1294
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'CEBPA' 1295
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZFP64' 1296
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ASXL1' 1297
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'THAP1' 1298
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'FOXA2' 1299
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZIC2' 1300
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'KLF5' 1301
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'FOSL2' 1302
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'PIAS2' 1303
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TFDP1' 1304
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'FHL2' 1305
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'DRAP1' 1306
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'JAG1' 1307
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'GTF3C4' 1308
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'RUNX1T1' 1309
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TAF6' 1310
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'NR2F2' 1311
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'AHR' 1312
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'SEC14L2' 1313
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'SERTAD3' 1314
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'SIRT2' 1315
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'NEIL2' 1316
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'AATF' 1317
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'MCM8' 1318
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'MYBBP1A' 1319
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'UHRF1' 1320
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'GPM6B' 1321
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'FOXH1' 1322
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'FOXO1' 1323
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'BDP1' 1324
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ETS1' 1325
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'POU2F1' 1326
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'PLAGL2' 1327
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'JAZF1' 1328
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZNHIT3' 1329
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZNF675' 1330
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'MYCN' 1331
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'U2AF1' 1332
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'MAZ' 1333
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'NANOG' 1334
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'KDM4C' 1335
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TFDP2' 1336
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'GATA6' 1337
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'THRB' 1338
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'CCND1' 1339
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TCOF1' 1340
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'DR1' 1341
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'PPARA' 1342
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZNF398' 1343
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'KLF3' 1344
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'BCL11A' 1345
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TTF2' 1346
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZNF33A' 1347
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'E2F7' 1348
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'HTATSF1' 1349
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'HIF3A' 1350
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'PCGF6' 1351
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'PIAS3' 1352
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'POLR1E' 1353
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZNF74' 1354
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'PTRF' 1355
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'SP4' 1356
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'HNF4A' 1357
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'CHD8' 1358
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'NR3C1' 1359
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'PBX1' 1360
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'EHMT2' 1361
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'FOXM1' 1362
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'GRHL1' 1363
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'SCD5' 1364
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ZFHX3' 1365
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'DOT1L' 1366
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'E2F3' 1367
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'GTF3C5' 1368
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'POU5F1' 1369
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'POLR3D' 1370
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'SOX2' 1371
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TCF7L1' 1372
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TCFL5' 1373
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TIMELESS' 1374
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'BMPR1A' 1375
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'ANKRD1' 1376
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TRERF1' 1377
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'GTF2H2' 1378
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'IRF1' 1379
+./prog_seq 'geneNames_1.txt' 'exe_6' 'hHep' 'TBX3' 1380
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'AEBP1' 1381
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'PIM2' 1382
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TADA3' 1383
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ESRG' 1384
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ETV4' 1385
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'THY1' 1386
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'VEZF1' 1387
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ING1' 1388
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TNFAIP3' 1389
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TCF3' 1390
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TP53' 1391
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZNF397' 1392
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ELF1' 1393
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'NRIP1' 1394
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZFP36' 1395
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TRIM25' 1396
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'NR2F6' 1397
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'HCFC1' 1398
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'DDX54' 1399
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ESPL1' 1400
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'PDCD11' 1401
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZNRD1' 1402
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'SMAD3' 1403
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'SIRT1' 1404
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'HMGA2' 1405
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'EGF' 1406
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'HIST1H1E' 1407
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'BTG1' 1408
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'LHX1' 1409
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'NFIB' 1410
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'CDX2' 1411
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ETV1' 1412
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'BCOR' 1413
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'HIF1AN' 1414
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ETV5' 1415
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TCF19' 1416
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'CEBPD' 1417
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZIC3' 1418
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'BMP2' 1419
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ELAVL2' 1420
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'MED14' 1421
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZNF354A' 1422
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'BRIP1' 1423
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'MAF' 1424
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZBTB16' 1425
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TEAD2' 1426
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'NR5A2' 1427
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'JUN' 1428
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZNF300' 1429
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'EPAS1' 1430
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'NOTCH3' 1431
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'MYC' 1432
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'PAWR' 1433
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'CREG1' 1434
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'FOSB' 1435
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'GLI1' 1436
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'PRDM14' 1437
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TFE3' 1438
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'MAFF' 1439
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'MED20' 1440
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'E2F5' 1441
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TRIM22' 1442
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'WDR5' 1443
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZNF217' 1444
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'PEG3' 1445
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZHX1' 1446
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TARDBP' 1447
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'SNAPC1' 1448
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZBTB3' 1449
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'NFATC2' 1450
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'SALL3' 1451
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'MAPK1' 1452
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'MEIS3' 1453
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'CHAF1A' 1454
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'DAXX' 1455
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'E2F8' 1456
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'GATA5' 1457
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'RFX5' 1458
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'HINFP' 1459
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'MLXIPL' 1460
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'SSBP2' 1461
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'RREB1' 1462
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'SMARCD2' 1463
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'HDGF' 1464
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'MEF2C' 1465
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'SSBP3' 1466
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TAF5' 1467
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'SRF' 1468
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'HIPK2' 1469
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'EOMES' 1470
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'NCOA1' 1471
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'CREB3L3' 1472
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ELL2' 1473
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TOPORS' 1474
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'BTG2' 1475
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ING5' 1476
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'HNF1B' 1477
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TCF4' 1478
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'IRF9' 1479
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'JARID2' 1480
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'HNRNPAB' 1481
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'RARG' 1482
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'GMEB1' 1483
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZNF107' 1484
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'GATAD2B' 1485
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ARID3B' 1486
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'WBP11' 1487
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'NCOA6' 1488
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'GLI2' 1489
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'FOSL1' 1490
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'E2F4' 1491
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'MXD1' 1492
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TBL1X' 1493
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZSCAN21' 1494
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TRIM27' 1495
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'EGFR' 1496
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'THAP11' 1497
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TFAP2C' 1498
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'LDB2' 1499
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'AES' 1500
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'FOXA1' 1501
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZBTB24' 1502
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TAF1A' 1503
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'BCL11B' 1504
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'PITX1' 1505
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'MCM2' 1506
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZNF670' 1507
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'GLIS3' 1508
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TEAD4' 1509
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'NR1I3' 1510
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZNF202' 1511
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'REST' 1512
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'JUND' 1513
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'CREB3L4' 1514
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'DDX20' 1515
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'HDAC1' 1516
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'CTDSPL' 1517
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'RNF2' 1518
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'CNTRL' 1519
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'HNRNPUL1' 1520
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ATF3' 1521
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZNF227' 1522
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'EZH2' 1523
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'SP100' 1524
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'CEBPA' 1525
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZFP64' 1526
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ASXL1' 1527
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'THAP1' 1528
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'FOXA2' 1529
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZIC2' 1530
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'KLF5' 1531
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'FOSL2' 1532
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'PIAS2' 1533
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TFDP1' 1534
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'FHL2' 1535
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'DRAP1' 1536
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'JAG1' 1537
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'GTF3C4' 1538
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'RUNX1T1' 1539
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TAF6' 1540
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'NR2F2' 1541
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'AHR' 1542
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'SEC14L2' 1543
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'SERTAD3' 1544
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'SIRT2' 1545
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'NEIL2' 1546
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'AATF' 1547
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'MCM8' 1548
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'MYBBP1A' 1549
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'UHRF1' 1550
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'GPM6B' 1551
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'FOXH1' 1552
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'FOXO1' 1553
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'BDP1' 1554
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ETS1' 1555
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'POU2F1' 1556
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'PLAGL2' 1557
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'JAZF1' 1558
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZNHIT3' 1559
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZNF675' 1560
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'MYCN' 1561
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'U2AF1' 1562
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'MAZ' 1563
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'NANOG' 1564
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'KDM4C' 1565
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TFDP2' 1566
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'GATA6' 1567
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'THRB' 1568
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'CCND1' 1569
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TCOF1' 1570
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'DR1' 1571
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'PPARA' 1572
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZNF398' 1573
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'KLF3' 1574
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'BCL11A' 1575
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TTF2' 1576
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZNF33A' 1577
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'E2F7' 1578
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'HTATSF1' 1579
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'HIF3A' 1580
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'PCGF6' 1581
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'PIAS3' 1582
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'POLR1E' 1583
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZNF74' 1584
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'PTRF' 1585
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'SP4' 1586
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'HNF4A' 1587
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'CHD8' 1588
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'NR3C1' 1589
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'PBX1' 1590
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'EHMT2' 1591
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'FOXM1' 1592
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'GRHL1' 1593
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'SCD5' 1594
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ZFHX3' 1595
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'DOT1L' 1596
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'E2F3' 1597
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'GTF3C5' 1598
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'POU5F1' 1599
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'POLR3D' 1600
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'SOX2' 1601
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TCF7L1' 1602
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TCFL5' 1603
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TIMELESS' 1604
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'BMPR1A' 1605
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'ANKRD1' 1606
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TRERF1' 1607
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'GTF2H2' 1608
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'IRF1' 1609
+./prog_seq 'geneNames_1.txt' 'exe_7' 'hHep' 'TBX3' 1610
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'AEBP1' 1611
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'PIM2' 1612
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TADA3' 1613
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ESRG' 1614
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ETV4' 1615
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'THY1' 1616
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'VEZF1' 1617
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ING1' 1618
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TNFAIP3' 1619
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TCF3' 1620
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TP53' 1621
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZNF397' 1622
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ELF1' 1623
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'NRIP1' 1624
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZFP36' 1625
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TRIM25' 1626
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'NR2F6' 1627
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'HCFC1' 1628
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'DDX54' 1629
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ESPL1' 1630
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'PDCD11' 1631
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZNRD1' 1632
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'SMAD3' 1633
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'SIRT1' 1634
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'HMGA2' 1635
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'EGF' 1636
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'HIST1H1E' 1637
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'BTG1' 1638
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'LHX1' 1639
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'NFIB' 1640
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'CDX2' 1641
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ETV1' 1642
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'BCOR' 1643
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'HIF1AN' 1644
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ETV5' 1645
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TCF19' 1646
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'CEBPD' 1647
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZIC3' 1648
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'BMP2' 1649
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ELAVL2' 1650
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'MED14' 1651
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZNF354A' 1652
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'BRIP1' 1653
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'MAF' 1654
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZBTB16' 1655
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TEAD2' 1656
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'NR5A2' 1657
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'JUN' 1658
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZNF300' 1659
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'EPAS1' 1660
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'NOTCH3' 1661
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'MYC' 1662
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'PAWR' 1663
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'CREG1' 1664
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'FOSB' 1665
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'GLI1' 1666
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'PRDM14' 1667
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TFE3' 1668
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'MAFF' 1669
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'MED20' 1670
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'E2F5' 1671
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TRIM22' 1672
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'WDR5' 1673
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZNF217' 1674
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'PEG3' 1675
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZHX1' 1676
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TARDBP' 1677
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'SNAPC1' 1678
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZBTB3' 1679
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'NFATC2' 1680
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'SALL3' 1681
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'MAPK1' 1682
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'MEIS3' 1683
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'CHAF1A' 1684
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'DAXX' 1685
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'E2F8' 1686
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'GATA5' 1687
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'RFX5' 1688
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'HINFP' 1689
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'MLXIPL' 1690
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'SSBP2' 1691
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'RREB1' 1692
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'SMARCD2' 1693
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'HDGF' 1694
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'MEF2C' 1695
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'SSBP3' 1696
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TAF5' 1697
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'SRF' 1698
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'HIPK2' 1699
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'EOMES' 1700
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'NCOA1' 1701
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'CREB3L3' 1702
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ELL2' 1703
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TOPORS' 1704
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'BTG2' 1705
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ING5' 1706
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'HNF1B' 1707
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TCF4' 1708
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'IRF9' 1709
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'JARID2' 1710
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'HNRNPAB' 1711
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'RARG' 1712
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'GMEB1' 1713
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZNF107' 1714
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'GATAD2B' 1715
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ARID3B' 1716
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'WBP11' 1717
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'NCOA6' 1718
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'GLI2' 1719
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'FOSL1' 1720
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'E2F4' 1721
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'MXD1' 1722
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TBL1X' 1723
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZSCAN21' 1724
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TRIM27' 1725
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'EGFR' 1726
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'THAP11' 1727
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TFAP2C' 1728
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'LDB2' 1729
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'AES' 1730
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'FOXA1' 1731
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZBTB24' 1732
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TAF1A' 1733
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'BCL11B' 1734
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'PITX1' 1735
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'MCM2' 1736
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZNF670' 1737
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'GLIS3' 1738
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TEAD4' 1739
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'NR1I3' 1740
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZNF202' 1741
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'REST' 1742
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'JUND' 1743
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'CREB3L4' 1744
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'DDX20' 1745
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'HDAC1' 1746
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'CTDSPL' 1747
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'RNF2' 1748
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'CNTRL' 1749
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'HNRNPUL1' 1750
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ATF3' 1751
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZNF227' 1752
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'EZH2' 1753
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'SP100' 1754
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'CEBPA' 1755
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZFP64' 1756
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ASXL1' 1757
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'THAP1' 1758
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'FOXA2' 1759
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZIC2' 1760
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'KLF5' 1761
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'FOSL2' 1762
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'PIAS2' 1763
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TFDP1' 1764
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'FHL2' 1765
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'DRAP1' 1766
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'JAG1' 1767
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'GTF3C4' 1768
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'RUNX1T1' 1769
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TAF6' 1770
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'NR2F2' 1771
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'AHR' 1772
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'SEC14L2' 1773
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'SERTAD3' 1774
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'SIRT2' 1775
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'NEIL2' 1776
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'AATF' 1777
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'MCM8' 1778
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'MYBBP1A' 1779
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'UHRF1' 1780
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'GPM6B' 1781
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'FOXH1' 1782
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'FOXO1' 1783
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'BDP1' 1784
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ETS1' 1785
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'POU2F1' 1786
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'PLAGL2' 1787
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'JAZF1' 1788
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZNHIT3' 1789
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZNF675' 1790
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'MYCN' 1791
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'U2AF1' 1792
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'MAZ' 1793
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'NANOG' 1794
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'KDM4C' 1795
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TFDP2' 1796
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'GATA6' 1797
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'THRB' 1798
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'CCND1' 1799
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TCOF1' 1800
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'DR1' 1801
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'PPARA' 1802
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZNF398' 1803
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'KLF3' 1804
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'BCL11A' 1805
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TTF2' 1806
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZNF33A' 1807
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'E2F7' 1808
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'HTATSF1' 1809
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'HIF3A' 1810
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'PCGF6' 1811
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'PIAS3' 1812
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'POLR1E' 1813
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZNF74' 1814
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'PTRF' 1815
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'SP4' 1816
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'HNF4A' 1817
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'CHD8' 1818
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'NR3C1' 1819
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'PBX1' 1820
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'EHMT2' 1821
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'FOXM1' 1822
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'GRHL1' 1823
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'SCD5' 1824
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ZFHX3' 1825
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'DOT1L' 1826
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'E2F3' 1827
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'GTF3C5' 1828
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'POU5F1' 1829
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'POLR3D' 1830
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'SOX2' 1831
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TCF7L1' 1832
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TCFL5' 1833
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TIMELESS' 1834
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'BMPR1A' 1835
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'ANKRD1' 1836
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TRERF1' 1837
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'GTF2H2' 1838
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'IRF1' 1839
+./prog_seq 'geneNames_1.txt' 'exe_8' 'hHep' 'TBX3' 1840
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'AEBP1' 1841
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'PIM2' 1842
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TADA3' 1843
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ESRG' 1844
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ETV4' 1845
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'THY1' 1846
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'VEZF1' 1847
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ING1' 1848
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TNFAIP3' 1849
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TCF3' 1850
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TP53' 1851
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZNF397' 1852
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ELF1' 1853
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'NRIP1' 1854
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZFP36' 1855
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TRIM25' 1856
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'NR2F6' 1857
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'HCFC1' 1858
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'DDX54' 1859
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ESPL1' 1860
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'PDCD11' 1861
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZNRD1' 1862
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'SMAD3' 1863
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'SIRT1' 1864
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'HMGA2' 1865
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'EGF' 1866
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'HIST1H1E' 1867
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'BTG1' 1868
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'LHX1' 1869
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'NFIB' 1870
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'CDX2' 1871
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ETV1' 1872
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'BCOR' 1873
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'HIF1AN' 1874
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ETV5' 1875
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TCF19' 1876
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'CEBPD' 1877
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZIC3' 1878
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'BMP2' 1879
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ELAVL2' 1880
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'MED14' 1881
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZNF354A' 1882
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'BRIP1' 1883
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'MAF' 1884
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZBTB16' 1885
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TEAD2' 1886
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'NR5A2' 1887
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'JUN' 1888
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZNF300' 1889
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'EPAS1' 1890
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'NOTCH3' 1891
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'MYC' 1892
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'PAWR' 1893
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'CREG1' 1894
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'FOSB' 1895
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'GLI1' 1896
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'PRDM14' 1897
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TFE3' 1898
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'MAFF' 1899
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'MED20' 1900
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'E2F5' 1901
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TRIM22' 1902
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'WDR5' 1903
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZNF217' 1904
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'PEG3' 1905
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZHX1' 1906
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TARDBP' 1907
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'SNAPC1' 1908
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZBTB3' 1909
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'NFATC2' 1910
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'SALL3' 1911
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'MAPK1' 1912
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'MEIS3' 1913
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'CHAF1A' 1914
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'DAXX' 1915
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'E2F8' 1916
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'GATA5' 1917
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'RFX5' 1918
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'HINFP' 1919
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'MLXIPL' 1920
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'SSBP2' 1921
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'RREB1' 1922
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'SMARCD2' 1923
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'HDGF' 1924
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'MEF2C' 1925
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'SSBP3' 1926
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TAF5' 1927
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'SRF' 1928
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'HIPK2' 1929
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'EOMES' 1930
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'NCOA1' 1931
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'CREB3L3' 1932
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ELL2' 1933
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TOPORS' 1934
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'BTG2' 1935
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ING5' 1936
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'HNF1B' 1937
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TCF4' 1938
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'IRF9' 1939
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'JARID2' 1940
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'HNRNPAB' 1941
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'RARG' 1942
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'GMEB1' 1943
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZNF107' 1944
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'GATAD2B' 1945
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ARID3B' 1946
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'WBP11' 1947
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'NCOA6' 1948
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'GLI2' 1949
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'FOSL1' 1950
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'E2F4' 1951
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'MXD1' 1952
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TBL1X' 1953
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZSCAN21' 1954
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TRIM27' 1955
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'EGFR' 1956
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'THAP11' 1957
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TFAP2C' 1958
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'LDB2' 1959
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'AES' 1960
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'FOXA1' 1961
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZBTB24' 1962
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TAF1A' 1963
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'BCL11B' 1964
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'PITX1' 1965
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'MCM2' 1966
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZNF670' 1967
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'GLIS3' 1968
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TEAD4' 1969
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'NR1I3' 1970
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZNF202' 1971
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'REST' 1972
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'JUND' 1973
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'CREB3L4' 1974
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'DDX20' 1975
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'HDAC1' 1976
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'CTDSPL' 1977
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'RNF2' 1978
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'CNTRL' 1979
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'HNRNPUL1' 1980
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ATF3' 1981
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZNF227' 1982
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'EZH2' 1983
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'SP100' 1984
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'CEBPA' 1985
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZFP64' 1986
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ASXL1' 1987
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'THAP1' 1988
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'FOXA2' 1989
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZIC2' 1990
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'KLF5' 1991
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'FOSL2' 1992
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'PIAS2' 1993
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TFDP1' 1994
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'FHL2' 1995
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'DRAP1' 1996
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'JAG1' 1997
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'GTF3C4' 1998
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'RUNX1T1' 1999
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TAF6' 2000
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'NR2F2' 2001
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'AHR' 2002
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'SEC14L2' 2003
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'SERTAD3' 2004
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'SIRT2' 2005
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'NEIL2' 2006
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'AATF' 2007
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'MCM8' 2008
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'MYBBP1A' 2009
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'UHRF1' 2010
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'GPM6B' 2011
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'FOXH1' 2012
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'FOXO1' 2013
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'BDP1' 2014
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ETS1' 2015
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'POU2F1' 2016
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'PLAGL2' 2017
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'JAZF1' 2018
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZNHIT3' 2019
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZNF675' 2020
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'MYCN' 2021
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'U2AF1' 2022
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'MAZ' 2023
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'NANOG' 2024
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'KDM4C' 2025
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TFDP2' 2026
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'GATA6' 2027
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'THRB' 2028
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'CCND1' 2029
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TCOF1' 2030
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'DR1' 2031
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'PPARA' 2032
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZNF398' 2033
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'KLF3' 2034
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'BCL11A' 2035
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TTF2' 2036
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZNF33A' 2037
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'E2F7' 2038
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'HTATSF1' 2039
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'HIF3A' 2040
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'PCGF6' 2041
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'PIAS3' 2042
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'POLR1E' 2043
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZNF74' 2044
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'PTRF' 2045
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'SP4' 2046
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'HNF4A' 2047
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'CHD8' 2048
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'NR3C1' 2049
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'PBX1' 2050
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'EHMT2' 2051
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'FOXM1' 2052
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'GRHL1' 2053
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'SCD5' 2054
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ZFHX3' 2055
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'DOT1L' 2056
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'E2F3' 2057
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'GTF3C5' 2058
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'POU5F1' 2059
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'POLR3D' 2060
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'SOX2' 2061
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TCF7L1' 2062
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TCFL5' 2063
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TIMELESS' 2064
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'BMPR1A' 2065
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'ANKRD1' 2066
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TRERF1' 2067
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'GTF2H2' 2068
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'IRF1' 2069
+./prog_seq 'geneNames_1.txt' 'exe_9' 'hHep' 'TBX3' 2070
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'AEBP1' 2071
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'PIM2' 2072
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TADA3' 2073
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ESRG' 2074
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ETV4' 2075
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'THY1' 2076
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'VEZF1' 2077
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ING1' 2078
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TNFAIP3' 2079
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TCF3' 2080
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TP53' 2081
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZNF397' 2082
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ELF1' 2083
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'NRIP1' 2084
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZFP36' 2085
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TRIM25' 2086
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'NR2F6' 2087
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'HCFC1' 2088
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'DDX54' 2089
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ESPL1' 2090
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'PDCD11' 2091
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZNRD1' 2092
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'SMAD3' 2093
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'SIRT1' 2094
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'HMGA2' 2095
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'EGF' 2096
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'HIST1H1E' 2097
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'BTG1' 2098
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'LHX1' 2099
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'NFIB' 2100
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'CDX2' 2101
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ETV1' 2102
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'BCOR' 2103
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'HIF1AN' 2104
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ETV5' 2105
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TCF19' 2106
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'CEBPD' 2107
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZIC3' 2108
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'BMP2' 2109
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ELAVL2' 2110
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'MED14' 2111
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZNF354A' 2112
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'BRIP1' 2113
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'MAF' 2114
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZBTB16' 2115
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TEAD2' 2116
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'NR5A2' 2117
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'JUN' 2118
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZNF300' 2119
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'EPAS1' 2120
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'NOTCH3' 2121
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'MYC' 2122
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'PAWR' 2123
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'CREG1' 2124
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'FOSB' 2125
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'GLI1' 2126
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'PRDM14' 2127
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TFE3' 2128
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'MAFF' 2129
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'MED20' 2130
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'E2F5' 2131
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TRIM22' 2132
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'WDR5' 2133
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZNF217' 2134
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'PEG3' 2135
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZHX1' 2136
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TARDBP' 2137
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'SNAPC1' 2138
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZBTB3' 2139
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'NFATC2' 2140
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'SALL3' 2141
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'MAPK1' 2142
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'MEIS3' 2143
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'CHAF1A' 2144
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'DAXX' 2145
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'E2F8' 2146
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'GATA5' 2147
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'RFX5' 2148
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'HINFP' 2149
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'MLXIPL' 2150
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'SSBP2' 2151
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'RREB1' 2152
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'SMARCD2' 2153
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'HDGF' 2154
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'MEF2C' 2155
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'SSBP3' 2156
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TAF5' 2157
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'SRF' 2158
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'HIPK2' 2159
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'EOMES' 2160
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'NCOA1' 2161
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'CREB3L3' 2162
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ELL2' 2163
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TOPORS' 2164
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'BTG2' 2165
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ING5' 2166
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'HNF1B' 2167
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TCF4' 2168
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'IRF9' 2169
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'JARID2' 2170
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'HNRNPAB' 2171
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'RARG' 2172
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'GMEB1' 2173
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZNF107' 2174
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'GATAD2B' 2175
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ARID3B' 2176
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'WBP11' 2177
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'NCOA6' 2178
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'GLI2' 2179
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'FOSL1' 2180
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'E2F4' 2181
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'MXD1' 2182
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TBL1X' 2183
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZSCAN21' 2184
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TRIM27' 2185
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'EGFR' 2186
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'THAP11' 2187
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TFAP2C' 2188
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'LDB2' 2189
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'AES' 2190
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'FOXA1' 2191
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZBTB24' 2192
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TAF1A' 2193
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'BCL11B' 2194
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'PITX1' 2195
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'MCM2' 2196
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZNF670' 2197
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'GLIS3' 2198
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TEAD4' 2199
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'NR1I3' 2200
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZNF202' 2201
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'REST' 2202
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'JUND' 2203
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'CREB3L4' 2204
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'DDX20' 2205
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'HDAC1' 2206
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'CTDSPL' 2207
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'RNF2' 2208
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'CNTRL' 2209
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'HNRNPUL1' 2210
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ATF3' 2211
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZNF227' 2212
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'EZH2' 2213
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'SP100' 2214
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'CEBPA' 2215
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZFP64' 2216
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ASXL1' 2217
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'THAP1' 2218
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'FOXA2' 2219
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZIC2' 2220
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'KLF5' 2221
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'FOSL2' 2222
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'PIAS2' 2223
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TFDP1' 2224
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'FHL2' 2225
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'DRAP1' 2226
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'JAG1' 2227
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'GTF3C4' 2228
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'RUNX1T1' 2229
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TAF6' 2230
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'NR2F2' 2231
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'AHR' 2232
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'SEC14L2' 2233
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'SERTAD3' 2234
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'SIRT2' 2235
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'NEIL2' 2236
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'AATF' 2237
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'MCM8' 2238
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'MYBBP1A' 2239
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'UHRF1' 2240
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'GPM6B' 2241
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'FOXH1' 2242
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'FOXO1' 2243
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'BDP1' 2244
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ETS1' 2245
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'POU2F1' 2246
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'PLAGL2' 2247
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'JAZF1' 2248
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZNHIT3' 2249
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZNF675' 2250
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'MYCN' 2251
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'U2AF1' 2252
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'MAZ' 2253
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'NANOG' 2254
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'KDM4C' 2255
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TFDP2' 2256
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'GATA6' 2257
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'THRB' 2258
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'CCND1' 2259
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TCOF1' 2260
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'DR1' 2261
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'PPARA' 2262
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZNF398' 2263
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'KLF3' 2264
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'BCL11A' 2265
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TTF2' 2266
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZNF33A' 2267
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'E2F7' 2268
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'HTATSF1' 2269
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'HIF3A' 2270
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'PCGF6' 2271
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'PIAS3' 2272
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'POLR1E' 2273
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZNF74' 2274
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'PTRF' 2275
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'SP4' 2276
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'HNF4A' 2277
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'CHD8' 2278
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'NR3C1' 2279
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'PBX1' 2280
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'EHMT2' 2281
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'FOXM1' 2282
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'GRHL1' 2283
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'SCD5' 2284
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ZFHX3' 2285
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'DOT1L' 2286
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'E2F3' 2287
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'GTF3C5' 2288
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'POU5F1' 2289
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'POLR3D' 2290
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'SOX2' 2291
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TCF7L1' 2292
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TCFL5' 2293
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TIMELESS' 2294
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'BMPR1A' 2295
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'ANKRD1' 2296
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TRERF1' 2297
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'GTF2H2' 2298
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'IRF1' 2299
+./prog_seq 'geneNames_1.txt' 'exe_10' 'hHep' 'TBX3' 2300
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'AEBP1' 2301
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'PIM2' 2302
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TADA3' 2303
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ESRG' 2304
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ETV4' 2305
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'THY1' 2306
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'VEZF1' 2307
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ING1' 2308
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TNFAIP3' 2309
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TCF3' 2310
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TP53' 2311
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZNF397' 2312
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ELF1' 2313
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'NRIP1' 2314
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZFP36' 2315
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TRIM25' 2316
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'NR2F6' 2317
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'HCFC1' 2318
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'DDX54' 2319
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ESPL1' 2320
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'PDCD11' 2321
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZNRD1' 2322
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'SMAD3' 2323
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'SIRT1' 2324
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'HMGA2' 2325
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'EGF' 2326
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'HIST1H1E' 2327
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'BTG1' 2328
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'LHX1' 2329
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'NFIB' 2330
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'CDX2' 2331
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ETV1' 2332
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'BCOR' 2333
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'HIF1AN' 2334
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ETV5' 2335
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TCF19' 2336
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'CEBPD' 2337
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZIC3' 2338
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'BMP2' 2339
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ELAVL2' 2340
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'MED14' 2341
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZNF354A' 2342
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'BRIP1' 2343
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'MAF' 2344
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZBTB16' 2345
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TEAD2' 2346
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'NR5A2' 2347
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'JUN' 2348
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZNF300' 2349
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'EPAS1' 2350
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'NOTCH3' 2351
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'MYC' 2352
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'PAWR' 2353
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'CREG1' 2354
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'FOSB' 2355
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'GLI1' 2356
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'PRDM14' 2357
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TFE3' 2358
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'MAFF' 2359
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'MED20' 2360
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'E2F5' 2361
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TRIM22' 2362
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'WDR5' 2363
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZNF217' 2364
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'PEG3' 2365
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZHX1' 2366
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TARDBP' 2367
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'SNAPC1' 2368
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZBTB3' 2369
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'NFATC2' 2370
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'SALL3' 2371
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'MAPK1' 2372
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'MEIS3' 2373
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'CHAF1A' 2374
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'DAXX' 2375
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'E2F8' 2376
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'GATA5' 2377
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'RFX5' 2378
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'HINFP' 2379
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'MLXIPL' 2380
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'SSBP2' 2381
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'RREB1' 2382
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'SMARCD2' 2383
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'HDGF' 2384
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'MEF2C' 2385
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'SSBP3' 2386
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TAF5' 2387
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'SRF' 2388
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'HIPK2' 2389
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'EOMES' 2390
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'NCOA1' 2391
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'CREB3L3' 2392
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ELL2' 2393
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TOPORS' 2394
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'BTG2' 2395
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ING5' 2396
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'HNF1B' 2397
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TCF4' 2398
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'IRF9' 2399
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'JARID2' 2400
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'HNRNPAB' 2401
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'RARG' 2402
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'GMEB1' 2403
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZNF107' 2404
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'GATAD2B' 2405
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ARID3B' 2406
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'WBP11' 2407
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'NCOA6' 2408
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'GLI2' 2409
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'FOSL1' 2410
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'E2F4' 2411
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'MXD1' 2412
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TBL1X' 2413
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZSCAN21' 2414
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TRIM27' 2415
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'EGFR' 2416
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'THAP11' 2417
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TFAP2C' 2418
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'LDB2' 2419
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'AES' 2420
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'FOXA1' 2421
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZBTB24' 2422
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TAF1A' 2423
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'BCL11B' 2424
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'PITX1' 2425
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'MCM2' 2426
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZNF670' 2427
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'GLIS3' 2428
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TEAD4' 2429
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'NR1I3' 2430
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZNF202' 2431
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'REST' 2432
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'JUND' 2433
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'CREB3L4' 2434
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'DDX20' 2435
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'HDAC1' 2436
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'CTDSPL' 2437
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'RNF2' 2438
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'CNTRL' 2439
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'HNRNPUL1' 2440
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ATF3' 2441
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZNF227' 2442
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'EZH2' 2443
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'SP100' 2444
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'CEBPA' 2445
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZFP64' 2446
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ASXL1' 2447
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'THAP1' 2448
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'FOXA2' 2449
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZIC2' 2450
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'KLF5' 2451
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'FOSL2' 2452
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'PIAS2' 2453
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TFDP1' 2454
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'FHL2' 2455
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'DRAP1' 2456
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'JAG1' 2457
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'GTF3C4' 2458
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'RUNX1T1' 2459
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TAF6' 2460
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'NR2F2' 2461
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'AHR' 2462
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'SEC14L2' 2463
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'SERTAD3' 2464
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'SIRT2' 2465
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'NEIL2' 2466
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'AATF' 2467
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'MCM8' 2468
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'MYBBP1A' 2469
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'UHRF1' 2470
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'GPM6B' 2471
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'FOXH1' 2472
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'FOXO1' 2473
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'BDP1' 2474
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ETS1' 2475
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'POU2F1' 2476
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'PLAGL2' 2477
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'JAZF1' 2478
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZNHIT3' 2479
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZNF675' 2480
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'MYCN' 2481
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'U2AF1' 2482
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'MAZ' 2483
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'NANOG' 2484
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'KDM4C' 2485
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TFDP2' 2486
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'GATA6' 2487
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'THRB' 2488
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'CCND1' 2489
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TCOF1' 2490
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'DR1' 2491
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'PPARA' 2492
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZNF398' 2493
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'KLF3' 2494
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'BCL11A' 2495
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TTF2' 2496
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZNF33A' 2497
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'E2F7' 2498
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'HTATSF1' 2499
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'HIF3A' 2500
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'PCGF6' 2501
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'PIAS3' 2502
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'POLR1E' 2503
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZNF74' 2504
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'PTRF' 2505
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'SP4' 2506
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'HNF4A' 2507
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'CHD8' 2508
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'NR3C1' 2509
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'PBX1' 2510
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'EHMT2' 2511
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'FOXM1' 2512
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'GRHL1' 2513
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'SCD5' 2514
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ZFHX3' 2515
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'DOT1L' 2516
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'E2F3' 2517
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'GTF3C5' 2518
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'POU5F1' 2519
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'POLR3D' 2520
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'SOX2' 2521
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TCF7L1' 2522
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TCFL5' 2523
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TIMELESS' 2524
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'BMPR1A' 2525
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'ANKRD1' 2526
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TRERF1' 2527
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'GTF2H2' 2528
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'IRF1' 2529
+./prog_seq 'geneNames_1.txt' 'exe_11' 'hHep' 'TBX3' 2530
