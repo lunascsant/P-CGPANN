@@ -118,11 +118,6 @@ void OCLConfig::allocateBuffers(Parameters* p, int sizeTrain, int sizeValid, int
     int result;
     std::cout << "Allocating buffers... " << std::endl;
 
-    std::cout << "maxLocalSize " << maxLocalSize << std::endl;
-    std::cout << "O " << p->O << std::endl;
-    std::cout << "N " << p->N << std::endl;
-    std::cout << "num functions " << p->NUM_FUNCTIONS << std::endl;
-
     ///Buffers
     bufferSeeds = cl::Buffer(context, CL_MEM_READ_WRITE, NUM_INDIV * maxLocalSize  * sizeof(int), nullptr,  &result);
     checkError(result);
@@ -262,6 +257,7 @@ void OCLConfig::setCompileFlags(){
 
     std::cout << "Setting compile flags..." << std::endl;
 
+
     if( !IsPowerOf2( localSizeAval ) )
         compileFlags += " -D LOCAL_SIZE_IS_NOT_POWER_OF_2";
     if( !IsPowerOf2( localSizeTrain ) )
@@ -291,7 +287,6 @@ void OCLConfig::setCompileFlags(){
                     + ToString( NextPowerOf2(localSizeValid) );
     compileFlags += " -D LOCAL_SIZE_TEST_ROUNDED_UP_TO_POWER_OF_2="
                     + ToString( NextPowerOf2(localSizeTest) );
-
 }
 
 std::string OCLConfig::setProgramSource(Parameters* p, Dataset* fullData){
@@ -363,7 +358,9 @@ void OCLConfig::buildProgram(Parameters* p, Dataset* fullData, std::string sourc
     std::string program_src = setProgramSource(p,fullData) + sourceFile;
     //std::cout << program_src << std::endl;
     program = cl::Program(context, program_src);
-    compileFlags+= R"( -I .\\kernels)";
+    // eu adicionei isso aqui
+    compileFlags += R"( -cl-no-signed-zeros -cl-fast-relaxed-math )";
+    compileFlags += R"( -I .\\kernels )";
     int result = program.build(devices[GPU_PLATFORM], compileFlags.c_str());
 
     if(result != CL_SUCCESS){
