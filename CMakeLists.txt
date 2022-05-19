@@ -4,20 +4,24 @@ project(P-CGPDE)
 set(CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++ -static-libgcc")
 
-#include_directories(.)
-#include_directories(include)
-#link_directories(lib/x64)
 
+find_package(OpenCL REQUIRED)
+if(OPENCL_FOUND)
+    message("OpenCL found")
+    set(HAVE_OPENCL 1)
+    message("OpenCL INCLUDE: ${OPENCL_INCLUDE_DIRS}")
+    message("OpenCL LIB: ${OPENCL_LIBRARIES}")
+    message("OpenCL VERSION: ${OPENCL_VERSION}")
+    message("OpenCL_VERSION_MAJOR: ${OpenCL_VERSION_MAJOR}")
+    message("OpenCL_VERSION_MINOR: ${OpenCL_VERSION_MINOR}")
 
-#include_directories("nvidia\\include")
-#link_directories("nvidia\\lib\\Win32")
+endif()
 
-include_directories("amd\\include")
-link_directories("amd\\lib\\x86")
+include_directories(${OPENCL_INCLUDE_DIRS})
 
-#include_directories("C:\\Program Files (x86)\\OCL_SDK_Light\\include")
-#link_directories("C:\\Program Files (x86)\\OCL_SDK_Light\\lib\\x86")
+#configure_file(${PROJECT_SOURCE_DIR}/config.h.in ${PROJECT_SOURCE_DIR}/config.h)
 
+file(GLOB source_files *.cpp *.h)
 
-add_executable(P-CGPDE main.cpp cgp.cpp cgp.h constants.h utils.cpp utils.h stack.cpp stack.h GPTime.cpp GPTime.h OCLConfig.cpp OCLConfig.h)
-target_link_libraries(P-CGPDE OpenCL)
+add_executable(P-CGPDE ${source_files})
+target_link_libraries(P-CGPDE  PUBLIC OpenCL)
