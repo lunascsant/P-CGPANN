@@ -355,6 +355,6 @@ int main(int argc, char** argv) {
     delete params;
 
     rankedEdges.close();
-    unfeasibles.close();
+
     return 0;
 }

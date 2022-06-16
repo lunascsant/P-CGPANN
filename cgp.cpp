@@ -1048,7 +1048,7 @@ Chromosome* PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *see
         timeManager.getStartTime(Iteracao_T);
 
         int group = -1;
-        for(int k = 0; k < NUM_INDIV; k++) {
+        for(int k = 0; k < NUM_INDIV; k++){
             if(k % NUM_EXECUTIONS == 0) {
                 group++;
             }
