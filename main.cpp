@@ -1,13 +1,14 @@
 #include <iostream>
-
+#include "string.h"
 #include "cgp.h"
 #include <fstream>
 #include <map>
 #include "utils.h"
 #include "GPTime.h"
+#include "io.h"
 #include "OCLConfig.h"
 
-void printFileFiveExe(Chromosome *c, Parameters *p, std::ofstream& factivel_file) {
+void printFeasibleFile(Chromosome *c, Parameters *p, std::ofstream& factivel_file) {
     for(int i = 0; i < MAX_NODES; i++) {
         if (c->nodes[i].active) {
             factivel_file << "Node" << i + p->N << " " << c->nodes[i].inputs[0]
@@ -19,77 +20,88 @@ void printFileFiveExe(Chromosome *c, Parameters *p, std::ofstream& factivel_file
     factivel_file << "\n";
 }
 
+// entrada na linha de comando: tabela_verdade exe_n seed
 int main(int argc, char** argv) {
 
-    std::string newSeed = argv[5];
-    std::string geneNamesStr = argv[1];
-    std::cout << geneNamesStr << std::endl;
+    std::string dataset = argv[1];
+    std::string datasetFile = dataset + ".txt";
     std::string argExe = argv[2];
-    std::string argProblemName = argv[3];
-    std::ifstream geneNamesFile(geneNamesStr);
-    std::vector<std::string> geneNames;
-    std::string gene;
-    int numGenes = 0;
+    std::string newSeed = argv[3];
 
-    while(std::getline (geneNamesFile, gene)) {
-        geneNames.push_back(gene);
-        numGenes++;
-    }
-
-    std::cout << geneNames.size() << std::endl;
-
-    geneNamesFile.close();
-
-    std::string currentGene = argv[4];
-
-    std::vector<int> todasRedes;
-
-    std::string datasetFile = currentGene + "_" + argProblemName + ".txt";
-
-
+    std::string exe_1 = "exe_1";
 
 #if PARALLEL
 
-    std::string unfeasiblesFile = "./executions_parallel/" + argExe + "/unfeasibles_" + argProblemName + ".txt";
-    std::string rankedEdgesfile = "./executions_parallel/" + argExe + "/rankedEdges_" + argProblemName + ".csv";
-    std::ofstream rankedEdges;
+    if(strcmp(argExe.c_str(), exe_1.c_str())) {
+        mkdir("./executions_parallel");
+        std::string path_exe = "./executions_parallel/" + argExe;
+        mkdir(path_exe.c_str());
+    } else {
+        std::string path_exe = "./executions_parallel/" + argExe;
+        mkdir(path_exe.c_str());
+    }
+
+    std::string unfeasiblesFile = "./executions_parallel/" + argExe + "/unfeasibles.txt";
     std::ofstream unfeasibles;
-    rankedEdges.open(rankedEdgesfile, std::ios_base::app);
     unfeasibles.open(unfeasiblesFile, std::ios_base::app);
 
     std::ofstream factivelFile;
 
-    std::string nomeArquivo = currentGene + "_" + newSeed + "_" + argExe;
-    std::string caminhoArquivo = "./executions_parallel/" + argExe + "/" + nomeArquivo + ".txt";
-    factivelFile.open(caminhoArquivo, std::ios::out);
+    std::string nameFile = dataset + "_" + newSeed + "_" + argExe;
+    std::string pathFile = "./executions_parallel/" + argExe + "/" + nameFile + ".txt";
+    factivelFile.open(pathFile, std::ios::out);
     if (!factivelFile) {
         std::cout << "Error file" << std::endl;
         exit(1);
     }
 
-    std::string caminhoArquivoTime = "./time_counting/" + argExe + "/" + nomeArquivo + ".txt";
-    FILE *f_CGP_time_parallel = fopen(caminhoArquivoTime.c_str(), "w");
+    if(strcmp(argExe.c_str(), exe_1.c_str())) {
+        mkdir("./time_counting_par");
+        std::string path_exe = "./time_counting_par/" + argExe;
+        mkdir(path_exe.c_str());
+    } else {
+        std::string path_exe = "./time_counting_par/" + argExe;
+        mkdir(path_exe.c_str());
+    }
+
+    std::string pathFileTime = "./time_counting_par/" + argExe + "/" + nameFile + ".txt";
+    FILE *f_CGP_time_parallel = fopen(pathFileTime.c_str(), "w");
 #else
 
-    std::string unfeasiblesFile = "./executions_sequential/" + argExe + "/unfeasibles_" + argProblemName + ".txt";
-    std::string rankedEdgesfile = "./executions_sequential/" + argExe + "/rankedEdges_" + argProblemName + ".csv";
-    std::ofstream rankedEdges;
+    if(strcmp(argExe.c_str(), exe_1.c_str())) {
+        mkdir("./executions_sequential");
+        std::string path_exe = "./executions_sequential/" + argExe;
+        mkdir(path_exe.c_str());
+    } else {
+        std::string path_exe = "./executions_sequential/" + argExe;
+        mkdir(path_exe.c_str());
+    }
+
+    std::string unfeasiblesFile = "./executions_sequential/" + argExe + "/unfeasibles.txt";
     std::ofstream unfeasibles;
-    rankedEdges.open(rankedEdgesfile, std::ios_base::app);
     unfeasibles.open(unfeasiblesFile, std::ios_base::app);
 
     std::ofstream factivelFile;
 
-    std::string nomeArquivo = currentGene + "_" + newSeed + "_" + argExe;
-    std::string caminhoArquivo = "./executions_sequential/" + argExe + "/" + nomeArquivo + ".txt";
-    factivelFile.open(caminhoArquivo, std::ios::out);
+    std::string nameFile = datasetFile + "_" + newSeed + "_" + argExe;
+    std::string pathFile = "./executions_sequential/" + argExe + "/" + nameFile + ".txt";
+    factivelFile.open(pathFile, std::ios::out);
     if (!factivelFile) {
         std::cout << "Error file" << std::endl;
         exit(1);
     }
 
-    std::string caminhoArquivoTime = "./time_counting_sequential/" + argExe + "/" + nomeArquivo + ".txt";
-    FILE *f_CGP_time_sequential = fopen(caminhoArquivoTime.c_str(), "w");
+    if(strcmp(argExe.c_str(), exe_1.c_str())) {
+        mkdir("./time_counting_seq");
+        std::string path_exe = "./time_counting_seq/" + argExe;
+        mkdir(path_exe.c_str());
+    } else {
+        std::string path_exe = "./time_counting_seq/" + argExe;
+        mkdir(path_exe.c_str());
+    }
+
+    std::string pathFileTime = "./time_counting_seq/" + argExe + "/" + nameFile + ".txt";
+    FILE *f_CGP_time_sequential = fopen(pathFileTime.c_str(), "w");
 #endif
 
 #if DEFAULT
@@ -139,15 +151,6 @@ int main(int argc, char** argv) {
     resultFileTimeKernel = "./results/cgpann_timeKernel.txt";
 #endif
 
-    /*FILE *f_CGP = fopen(resultFile.c_str(), "w");
-    FILE *f_CGP_time = fopen(resultFileTime.c_str(), "w");
-    FILE *f_CGP_timeIter = fopen(resultFileTimeIter.c_str(), "w");
-    FILE *f_CGP_timeKernel = fopen(resultFileTimeKernel.c_str(), "w");*/
-
-
-    // fprintf(f_CGP, "i,\tj,\taccuracy\n");
-
-
     GPTime timeManager(4);
     timeManager.getStartTime(Total_T);
 
@@ -156,9 +159,9 @@ int main(int argc, char** argv) {
 
     Dataset fullData;
     readDataset(params, &fullData, datasetFile);
-    //std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
-    //printDataset(&fullData);
-    //std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
+    std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
+    printDataset(&fullData);
+    std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
 
     int trainSize, validSize, testSize;
     calculateDatasetsSize(&fullData, &trainSize, &validSize, &testSize);
@@ -191,18 +194,12 @@ int main(int argc, char** argv) {
     seeds = new int [ocl->maxLocalSize * NUM_INDIV];
     //seeds = new int [1];
 
-    srand(atoi(argv[5]));
+    srand(atoi(argv[3]));
 
     /*random seeds used in parallel code*/
     for(int i = 0; i < ocl->maxLocalSize * NUM_INDIV; i++){
-        seeds[i] = atoi(argv[5]);
+        seeds[i] = atoi(argv[3]);
     }
-
-
-
-    std::vector<int> rede;
-    int countUnfeasible;
-    std::vector<int> rede_local;
 
     Dataset* trainingData = &fullData;
 
@@ -212,131 +209,49 @@ int main(int argc, char** argv) {
     double timeKernel = 0;
     timeManager.getStartTime(Evolucao_T);
 #if PARALLEL
-    Chromosome* executionBest = PCGP(trainingData, params, ocl, seeds, &timeIter, &timeKernel, factivelFile);
+    Chromosome executionBest = PCGP(trainingData, params, ocl, seeds, &timeIter, &timeKernel, factivelFile);
 
-    for(int i = 0; i < NUM_EXECUTIONS; i++) {
-        std::cout << "Fitness - exe " << i << " : " << executionBest[i].fitness << std::endl;
-        if(executionBest[i].fitness == params->M)
-            printFileFiveExe(&executionBest[i], params, factivelFile);
-        else
-            factivelFile << "Nao factivel\n\n";
-    }
-
-    countUnfeasible = 0;
-
-    for(int i = 0; i < NUM_EXECUTIONS; i++) {
-        if(executionBest[i].fitness != params->M) {
-            countUnfeasible += 1;
-            continue;
-        }
-
-        for(int j = 0; j < MAX_NODES; j++){
-            if(executionBest[i].nodes[j].active == 1){
-                for(int k = 0; k < MAX_ARITY; k++){
-                    if(executionBest[i].nodes[j].inputs[k] < trainingData->N){
-                        //std::cout << "Input: " << k << " " << executionBest.nodes[j].inputs[k] << std::endl;
-                        auto search = find(rede_local.begin(), rede_local.end(), executionBest[i].nodes[j].inputs[k]);
-                        if(search == rede_local.end()){
-                            rede_local.push_back(executionBest[i].nodes[j].inputs[k]);
-                        }
-                    }
-                }
-
-            }
-        }
-
-        for(int & j : rede_local){
-            rede.push_back(j);
-        }
-
-        rede_local.clear();
+    std::cout << "Fitness: " << executionBest.fitness << std::endl;
+    if(executionBest.fitness == (params->M * params->O))
+        printFeasibleFile(&executionBest, params, factivelFile);
+    else {
+        factivelFile << "Nao factivel\n\n";
+        printFeasibleFile(&executionBest, params, factivelFile);
+        unfeasibles << datasetFile << "\n";
     }
 
 #else
-    Chromosome* executionBest = CGP(trainingData, params, seeds, &timeIter, &timeKernel, factivelFile);
+    Chromosome executionBest = CGP(trainingData, params, seeds, &timeIter, &timeKernel, factivelFile);
 
-    for(int i = 0; i < NUM_EXECUTIONS; i++) {
-        std::cout << "Fitness - exe " << i << " : " <<executionBest[i].fitness << std::endl;
-        if(executionBest[i].fitness == params->M)
-            printFileFiveExe(&executionBest[i], params, factivelFile);
-        else
-            factivelFile << "Nao factivel\n\n";
-    }
-
-    countUnfeasible = 0;
-
-    for(int i = 0; i < NUM_EXECUTIONS; i++) {
-        if(executionBest[i].fitness != params->M) {
-            countUnfeasible += 1;
-            continue;
-        }
-
-        for(int j = 0; j < MAX_NODES; j++){
-            if(executionBest[i].nodes[j].active == 1){
-                for(int k = 0; k < MAX_ARITY; k++){
-                    if(executionBest[i].nodes[j].inputs[k] < trainingData->N){
-                        //std::cout << "Input: " << k << " " << executionBest.nodes[j].inputs[k] << std::endl;
-                        auto search = find(rede_local.begin(), rede_local.end(), executionBest[i].nodes[j].inputs[k]);
-                        if(search == rede_local.end()){
-                            rede_local.push_back(executionBest[i].nodes[j].inputs[k]);
-                        }
-                    }
-                }
-
-            }
-        }
-
-        for(int & j : rede_local){
-            rede.push_back(j);
-        }
-
-        rede_local.clear();
+    std::cout << "Fitness: " << executionBest.fitness << std::endl;
+    if(executionBest.fitness == params->M)
+        printFeasibleFile(&executionBest, params, factivelFile);
+    else {
+        factivelFile << "Nao factivel\n\n";
+        unfeasibles << datasetFile << "\n";
     }
 
 #endif
+
     timeManager.getEndTime(Evolucao_T);
     timeIterTotal = timeManager.getElapsedTime(Evolucao_T);
     printf("Evol time: %f \n", timeIterTotal);
 
 #if PARALLEL
-    /*fprintf(f_CGP_time_parallel, "Fitness best: \t%.4f\n", executionBest.fitness);*/
+    fprintf(f_CGP_time_parallel, "Fitness best: \t%.4f\n", executionBest.fitness);
+    fprintf(f_CGP_time_parallel, "Transistors best: \t%d\n", executionBest.numTransistors);
     fprintf(f_CGP_time_parallel, "timeIter: \t%.4f\n", timeIter);
     fprintf(f_CGP_time_parallel, "timeIterTotal: \t%.4f\n", timeIterTotal);
     fprintf(f_CGP_time_parallel, "timeKernel: \t%.4f\n\n", timeKernel);
 #else
-    fprintf(f_CGP_time_sequential, "Fitness best: \t%.4f\n", executionBest->fitness);
+    fprintf(f_CGP_time_sequential, "Fitness best: \t%.4f\n", executionBest.fitness);
+    fprintf(f_CGP_time_sequential, "Transistors best: \t%d\n", executionBest.numTransistors);
     fprintf(f_CGP_time_sequential, "timeIter: \t%.4f\n", timeIter);
     fprintf(f_CGP_time_sequential, "timeIterTotal: \t%.4f\n", timeIterTotal);
     fprintf(f_CGP_time_sequential, "timeKernel: \t%.4f\n\n", timeKernel);
 #endif
 
     timeManager.getEndTime(Total_T);
-
-    std::vector<float> counting;
-
-    for(int i = 0; i < fullData.N; i++){
-        float counted = std::count(rede.begin(), rede.end(), i);
-        counting.push_back(counted/NUM_EXECUTIONS);
-    }
-
-    std::cout << "xxxxxx Contagem xxxxxx" << std::endl;
-
-    for(int i = 0; i < counting.size(); i++){
-        std::cout << counting.at(i) << " ";
-    }
-
-    std::cout << std::endl;
-
-    for(int i = 0; i < geneNames.size(); i++) {
-        if(counting.at(i) != 0) {
-            rankedEdges << geneNames[i] << "\t" << currentGene << "\t" << counting.at(i) << "\n";
-        }
-    }
-
-    if(countUnfeasible == NUM_EXECUTIONS) {
-        unfeasibles << currentGene << "\n";
-    }
-
 
 #if PARALLEL
     fprintf(f_CGP_time_parallel, "\n");
@@ -350,11 +265,8 @@ int main(int argc, char** argv) {
 
     std::cout << "Total time  = " << timeManager.getElapsedTime(Total_T) << std::endl;
 
-
     factivelFile.close();
     delete params;
-
-    rankedEdges.close();
-
+    unfeasibles.close();
     return 0;
 }

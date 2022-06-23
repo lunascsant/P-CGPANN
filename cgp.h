@@ -12,7 +12,8 @@
 void newNode(Chromosome* c, Parameters* params, unsigned int index, int* seed);
 void activateNodes(Chromosome* c, Parameters* p);
 void circuitGenerator(Chromosome* c, Parameters* params, int* seed);
-
+int get_num_transistors(int gate);
+void count_num_transistors_individual(Chromosome *c);
 
 void evaluateCircuit(Chromosome* c, Dataset* data);
 void evaluateCircuitValidation(Chromosome* c, Dataset* data);
@@ -33,11 +34,11 @@ Chromosome *mutateSAM(Chromosome *c, Parameters *p, int *seed);
 Chromosome *mutateTopologyPoint(Chromosome *c, Parameters *p, int *seed);
 
 
-Chromosome*
+Chromosome
 CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double *timeKernel, std::ofstream& factivel_file);
 
 //Chromosome PCGP(Dataset* training, Dataset* validation, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel);
-Chromosome *PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel, std::ofstream& factivel_file);
+Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seeds, double* timeIter, double* timeKernel, std::ofstream& factivel_file);
 
 void printChromosome(Chromosome *c, Parameters *p);
 void printFile(Chromosome *c, Parameters *p, std::ofstream& factivel_file);

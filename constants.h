@@ -44,14 +44,14 @@
 #define CONST_PI 3.14159265359
 
 /** Graph parameters */
-#define MAX_NODES 500
-#define MAX_OUTPUTS 1
+#define MAX_NODES 1000
+#define MAX_OUTPUTS 5
 #define MAX_ARITY 2
 
 #define TESTVAR MAX_OUTPUTS/2 + MAX_OUTPUTS%2
 /** Genetic parameters */
 #ifndef NUM_INDIV
-#define NUM_INDIV (25)
+#define NUM_INDIV (5)
 #endif // NUM_INDIV
 
 #ifndef PROB_CROSS
@@ -64,7 +64,7 @@
 
 #define NUM_INDIV_POP 5
 #define NUM_EXECUTIONS 5
-#define NUM_GENERATIONS 50000
+#define NUM_GENERATIONS 33600000
 #define NUM_EVALUATIONS 2.40e+007
 
 
@@ -120,6 +120,7 @@ typedef struct
     unsigned int activeNodes[MAX_NODES];
     unsigned int numActiveNodes;
     float fitness;
+    unsigned int numTransistors;
     float fitnessValidation;
 } Chromosome;
 

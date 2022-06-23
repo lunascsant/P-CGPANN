@@ -12,8 +12,8 @@ class OCLConfig {
 public:
     OCLConfig();
 
-    float fitness[NUM_INDIV];
-    float fitnessValidation[NUM_INDIV];
+    float fitness[NUM_INDIV_POP];
+    float fitnessValidation[NUM_INDIV_POP];
 
     std::vector<cl::Platform> platforms;
     std::vector<std::vector<cl::Device>> devices;

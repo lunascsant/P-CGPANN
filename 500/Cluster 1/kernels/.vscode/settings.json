@@ -1,6 +1,0 @@
-{
-	"editor.formatOnSave": false,
-	"files.associations": {
-		"*.txt": "cpp"
-	}
-}

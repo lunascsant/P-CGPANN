@@ -230,10 +230,10 @@ void OCLConfig::setNDRages() {
     }
 
     // One individual per work-group
-    globalSizeTrain = localSizeTrain * NUM_INDIV;
-    globalSizeValid = localSizeValid * NUM_INDIV;
+    globalSizeTrain = localSizeTrain * NUM_INDIV_POP;
+    globalSizeValid = localSizeValid * NUM_INDIV_POP;
     globalSizeTest = localSizeTest * 1;//* NUM_INDIV;
-    globalSizeAval = localSizeAval * NUM_INDIV;
+    globalSizeAval = localSizeAval * NUM_INDIV_POP;
 
 
     ///estes tamanhos servem para a evolução treinamento+validação
@@ -248,7 +248,7 @@ void OCLConfig::setNDRages() {
     }
 
     //localSizeEvol = MAX_NODES * MAX_ARITY;
-    globalSizeEvol = localSizeEvol * NUM_INDIV;
+    globalSizeEvol = localSizeEvol * NUM_INDIV_POP;
 
 
 }

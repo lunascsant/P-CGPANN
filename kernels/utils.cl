@@ -15,6 +15,7 @@ typedef struct
     unsigned int activeNodes[MAX_NODES];
     unsigned int numActiveNodes;
     float fitness;
+    unsigned int numTransistors;
     float fitnessValidation;
 } Chromosome;
 
