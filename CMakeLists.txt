@@ -4,20 +4,29 @@ project(P-CGPDE)
 set(CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++ -static-libgcc")
 
-#include_directories(.)
-#include_directories(include)
-#link_directories(lib/x64)
+find_package(OpenCL)
+if(OpenCL_FOUND)
+include_directories(${OpenCL_INCLUDE_DIRS})
+link_directories(${OpenCL_LIBRARY_DIRS})
+message("OpenCL found")
+else()
+# try to find Cuda OpenCL SDK
+find_package(Cuda)
+  if(Cuda_FOUND)
+      include_directories(${Cuda_INCLUDE_DIRS})
+  else()
+        message(FATAL_ERROR "OpenCL not found")
+  endif()
+endif()
 
 
-#include_directories("nvidia\\include")
-#link_directories("nvidia\\lib\\Win32")
+file(GLOB SRC_FILES *.cpp *.h)
 
-include_directories("amd\\include")
-link_directories("amd\\lib\\x86")
+add_executable(pcgp ${SRC_FILES})
+if(OPENCL_FOUND)
+  target_link_libraries(pcgp OpenCL)
+endif()
+if(Cuda_FOUND)
+  target_link_libraries(pcgp CUDA::OpenCL)
+endif()
 
-#include_directories("C:\\Program Files (x86)\\OCL_SDK_Light\\include")
-#link_directories("C:\\Program Files (x86)\\OCL_SDK_Light\\lib\\x86")
-
-
-add_executable(P-CGPDE main.cpp cgp.cpp cgp.h constants.h utils.cpp utils.h stack.cpp stack.h GPTime.cpp GPTime.h OCLConfig.cpp OCLConfig.h)
-target_link_libraries(P-CGPDE OpenCL)

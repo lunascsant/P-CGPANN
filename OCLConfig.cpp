@@ -360,7 +360,7 @@ void OCLConfig::buildProgram(Parameters* p, Dataset* fullData, std::string sourc
     program = cl::Program(context, program_src);
     // eu adicionei isso aqui
     compileFlags += R"( -cl-no-signed-zeros -cl-fast-relaxed-math )";
-    compileFlags += R"( -I .\\kernels )";
+    compileFlags += R"( -Ikernels )";
     int result = program.build(devices[GPU_PLATFORM], compileFlags.c_str());
 
     if(result != CL_SUCCESS){

@@ -5,8 +5,18 @@
 #include <map>
 #include "utils.h"
 #include "GPTime.h"
-#include "io.h"
 #include "OCLConfig.h"
+#ifdef WIN32
+#include "io.h"
+#else
+void mkdir(const char *path)
+{
+    char cmd[256];
+    sprintf(cmd, "mkdir -p %s", path);
+    system(cmd);
+}
+#endif
+
 
 void printFeasibleFile(Chromosome *c, Parameters *p, std::ofstream& factivel_file) {
     for(int i = 0; i < MAX_NODES; i++) {
@@ -166,12 +176,17 @@ int main(int argc, char** argv) {
     int trainSize, validSize, testSize;
     calculateDatasetsSize(&fullData, &trainSize, &validSize, &testSize);
 
+#ifdef WIN32
+    std::string kernel_str = "kernels\\kernel.cl";
+#else
+    std::string kernel_str = "kernels/kernel.cl";
+#endif
     /**OPENCL CONFIG */
     OCLConfig* ocl = new OCLConfig();
     ocl->allocateBuffers(params, trainSize, validSize, testSize);
     ocl->setNDRages();
     ocl->setCompileFlags();
-    ocl->buildProgram(params, &fullData, "kernels\\kernel.cl");
+    ocl->buildProgram(params, &fullData, kernel_str.c_str());
     ocl->buildKernels();
 #if IMAGE_R
     ocl->setupImageBuffers();
