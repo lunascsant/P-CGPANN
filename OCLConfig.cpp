@@ -74,7 +74,7 @@ OCLConfig::OCLConfig() {
     }
 */
     commandQueueProperties = CL_QUEUE_PROFILING_ENABLE;
-    cmdQueue = cl::CommandQueue(context, devices[GPU_PLATFORM][GPU_DEVICE], commandQueueProperties, &result);
+    cmdQueue = cl::CommandQueue(context, devices[GPU_PLATFORM][GPU_DEVICE]); // commandQueueProperties, &result);
     checkError(result);
 
     maxLocalSize = cmdQueue.getInfo<CL_QUEUE_DEVICE>().getInfo<CL_DEVICE_MAX_WORK_GROUP_SIZE>();

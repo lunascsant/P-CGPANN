@@ -11,6 +11,14 @@
 -- Check for working CXX compiler: C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
+-- Looking for CL_VERSION_2_2
+-- Looking for CL_VERSION_2_2 - not found
+-- Looking for CL_VERSION_2_1
+-- Looking for CL_VERSION_2_1 - not found
+-- Looking for CL_VERSION_2_0
+-- Looking for CL_VERSION_2_0 - found
+-- Found OpenCL: C:/Program Files (x86)/OCL_SDK_Light/lib/x86_64/opencl.lib (found version "2.0") 
+OpenCL found
 -- Configuring done
 -- Generating done
 -- Build files have been written to: C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug

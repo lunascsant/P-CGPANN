@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = C:\Users\lucia\Documents\GitHub\P-CGPANN\cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/P-CGPDE.dir/all
+all: CMakeFiles/pcgp.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -70,34 +70,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/P-CGPDE.dir/clean
+clean: CMakeFiles/pcgp.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/P-CGPDE.dir
+# Target rules for target CMakeFiles/pcgp.dir
 
 # All Build rule for target.
-CMakeFiles/P-CGPDE.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\lucia\Documents\GitHub\P-CGPANN\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target P-CGPDE"
-.PHONY : CMakeFiles/P-CGPDE.dir/all
+CMakeFiles/pcgp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\lucia\Documents\GitHub\P-CGPANN\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target pcgp"
+.PHONY : CMakeFiles/pcgp.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/P-CGPDE.dir/rule: cmake_check_build_system
+CMakeFiles/pcgp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lucia\Documents\GitHub\P-CGPANN\cmake-build-debug\CMakeFiles 7
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/P-CGPDE.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/pcgp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lucia\Documents\GitHub\P-CGPANN\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/P-CGPDE.dir/rule
+.PHONY : CMakeFiles/pcgp.dir/rule
 
 # Convenience name for target.
-P-CGPDE: CMakeFiles/P-CGPDE.dir/rule
-.PHONY : P-CGPDE
+pcgp: CMakeFiles/pcgp.dir/rule
+.PHONY : pcgp
 
 # clean rule for target.
-CMakeFiles/P-CGPDE.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/clean
-.PHONY : CMakeFiles/P-CGPDE.dir/clean
+CMakeFiles/pcgp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/clean
+.PHONY : CMakeFiles/pcgp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

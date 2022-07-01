@@ -64,11 +64,11 @@
 
 #define NUM_INDIV_POP 5
 #define NUM_EXECUTIONS 5
-#define NUM_GENERATIONS 33600000
+#define NUM_GENERATIONS 3600000
 #define NUM_EVALUATIONS 2.40e+007
 
 
-#define PARALLEL    1
+#define PARALLEL     1
 
 #define DEFAULT      1
 #define COMPACT      0

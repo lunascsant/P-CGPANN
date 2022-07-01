@@ -1,0 +1,64 @@
+Determining if the CL_VERSION_2_2 exist failed with the following output:
+Change Dir: C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f Makefile cmTC_72c53/fast && C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_72c53.dir\build.make CMakeFiles/cmTC_72c53.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_72c53.dir/CheckSymbolExists.c.obj
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  @CMakeFiles/cmTC_72c53.dir/includes_C.rsp  -o CMakeFiles\cmTC_72c53.dir\CheckSymbolExists.c.obj -c C:\Users\lucia\Documents\GitHub\P-CGPANN\cmake-build-debug\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\Users\lucia\Documents\GitHub\P-CGPANN\cmake-build-debug\CMakeFiles\CMakeTmp\CheckSymbolExists.c: In function 'main':
+C:\Users\lucia\Documents\GitHub\P-CGPANN\cmake-build-debug\CMakeFiles\CMakeTmp\CheckSymbolExists.c:8:19: error: 'CL_VERSION_2_2' undeclared (first use in this function); did you mean 'CL_VERSION_1_2'?
+   return ((int*)(&CL_VERSION_2_2))[argc];
+                   ^~~~~~~~~~~~~~
+                   CL_VERSION_1_2
+C:\Users\lucia\Documents\GitHub\P-CGPANN\cmake-build-debug\CMakeFiles\CMakeTmp\CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_72c53.dir\build.make:78: CMakeFiles/cmTC_72c53.dir/CheckSymbolExists.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:126: cmTC_72c53/fast] Error 2
+
+
+File C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <C:/Program Files (x86)/OCL_SDK_Light/include/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_2_2
+  return ((int*)(&CL_VERSION_2_2))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the CL_VERSION_2_1 exist failed with the following output:
+Change Dir: C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f Makefile cmTC_99371/fast && C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_99371.dir\build.make CMakeFiles/cmTC_99371.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_99371.dir/CheckSymbolExists.c.obj
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  @CMakeFiles/cmTC_99371.dir/includes_C.rsp  -o CMakeFiles\cmTC_99371.dir\CheckSymbolExists.c.obj -c C:\Users\lucia\Documents\GitHub\P-CGPANN\cmake-build-debug\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\Users\lucia\Documents\GitHub\P-CGPANN\cmake-build-debug\CMakeFiles\CMakeTmp\CheckSymbolExists.c: In function 'main':
+C:\Users\lucia\Documents\GitHub\P-CGPANN\cmake-build-debug\CMakeFiles\CMakeTmp\CheckSymbolExists.c:8:19: error: 'CL_VERSION_2_1' undeclared (first use in this function); did you mean 'CL_VERSION_2_0'?
+   return ((int*)(&CL_VERSION_2_1))[argc];
+                   ^~~~~~~~~~~~~~
+                   CL_VERSION_2_0
+C:\Users\lucia\Documents\GitHub\P-CGPANN\cmake-build-debug\CMakeFiles\CMakeTmp\CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_99371.dir\build.make:78: CMakeFiles/cmTC_99371.dir/CheckSymbolExists.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:126: cmTC_99371/fast] Error 2
+
+
+File C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <C:/Program Files (x86)/OCL_SDK_Light/include/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_2_1
+  return ((int*)(&CL_VERSION_2_1))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}

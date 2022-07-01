@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named P-CGPDE
+# Target rules for targets named pcgp
 
 # Build rule for target.
-P-CGPDE: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 P-CGPDE
-.PHONY : P-CGPDE
+pcgp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 pcgp
+.PHONY : pcgp
 
 # fast build rule for target.
-P-CGPDE/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/build
-.PHONY : P-CGPDE/fast
+pcgp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/build
+.PHONY : pcgp/fast
 
 GPTime.obj: GPTime.cpp.obj
 .PHONY : GPTime.obj
 
 # target to build an object file
 GPTime.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/GPTime.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/GPTime.cpp.obj
 .PHONY : GPTime.cpp.obj
 
 GPTime.i: GPTime.cpp.i
@@ -141,7 +141,7 @@ GPTime.i: GPTime.cpp.i
 
 # target to preprocess a source file
 GPTime.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/GPTime.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/GPTime.cpp.i
 .PHONY : GPTime.cpp.i
 
 GPTime.s: GPTime.cpp.s
@@ -149,7 +149,7 @@ GPTime.s: GPTime.cpp.s
 
 # target to generate assembly for a file
 GPTime.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/GPTime.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/GPTime.cpp.s
 .PHONY : GPTime.cpp.s
 
 OCLConfig.obj: OCLConfig.cpp.obj
@@ -157,7 +157,7 @@ OCLConfig.obj: OCLConfig.cpp.obj
 
 # target to build an object file
 OCLConfig.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/OCLConfig.cpp.obj
 .PHONY : OCLConfig.cpp.obj
 
 OCLConfig.i: OCLConfig.cpp.i
@@ -165,7 +165,7 @@ OCLConfig.i: OCLConfig.cpp.i
 
 # target to preprocess a source file
 OCLConfig.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/OCLConfig.cpp.i
 .PHONY : OCLConfig.cpp.i
 
 OCLConfig.s: OCLConfig.cpp.s
@@ -173,7 +173,7 @@ OCLConfig.s: OCLConfig.cpp.s
 
 # target to generate assembly for a file
 OCLConfig.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/OCLConfig.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/OCLConfig.cpp.s
 .PHONY : OCLConfig.cpp.s
 
 cgp.obj: cgp.cpp.obj
@@ -181,7 +181,7 @@ cgp.obj: cgp.cpp.obj
 
 # target to build an object file
 cgp.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/cgp.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/cgp.cpp.obj
 .PHONY : cgp.cpp.obj
 
 cgp.i: cgp.cpp.i
@@ -189,7 +189,7 @@ cgp.i: cgp.cpp.i
 
 # target to preprocess a source file
 cgp.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/cgp.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/cgp.cpp.i
 .PHONY : cgp.cpp.i
 
 cgp.s: cgp.cpp.s
@@ -197,7 +197,7 @@ cgp.s: cgp.cpp.s
 
 # target to generate assembly for a file
 cgp.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/cgp.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/cgp.cpp.s
 .PHONY : cgp.cpp.s
 
 main.obj: main.cpp.obj
@@ -205,7 +205,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -213,7 +213,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -221,7 +221,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 stack.obj: stack.cpp.obj
@@ -229,7 +229,7 @@ stack.obj: stack.cpp.obj
 
 # target to build an object file
 stack.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/stack.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/stack.cpp.obj
 .PHONY : stack.cpp.obj
 
 stack.i: stack.cpp.i
@@ -237,7 +237,7 @@ stack.i: stack.cpp.i
 
 # target to preprocess a source file
 stack.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/stack.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/stack.cpp.i
 .PHONY : stack.cpp.i
 
 stack.s: stack.cpp.s
@@ -245,7 +245,7 @@ stack.s: stack.cpp.s
 
 # target to generate assembly for a file
 stack.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/stack.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/stack.cpp.s
 .PHONY : stack.cpp.s
 
 utils.obj: utils.cpp.obj
@@ -253,7 +253,7 @@ utils.obj: utils.cpp.obj
 
 # target to build an object file
 utils.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/utils.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/utils.cpp.obj
 .PHONY : utils.cpp.obj
 
 utils.i: utils.cpp.i
@@ -261,7 +261,7 @@ utils.i: utils.cpp.i
 
 # target to preprocess a source file
 utils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/utils.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/utils.cpp.i
 .PHONY : utils.cpp.i
 
 utils.s: utils.cpp.s
@@ -269,7 +269,7 @@ utils.s: utils.cpp.s
 
 # target to generate assembly for a file
 utils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P-CGPDE.dir\build.make CMakeFiles/P-CGPDE.dir/utils.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pcgp.dir\build.make CMakeFiles/pcgp.dir/utils.cpp.s
 .PHONY : utils.cpp.s
 
 # Help Target
@@ -280,7 +280,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... P-CGPDE
+	@echo ... pcgp
 	@echo ... GPTime.obj
 	@echo ... GPTime.i
 	@echo ... GPTime.s

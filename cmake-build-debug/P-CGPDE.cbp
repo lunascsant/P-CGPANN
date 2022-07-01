@@ -17,14 +17,14 @@
 					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="P-CGPDE">
-				<Option output="C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/P-CGPDE.exe" prefix_auto="0" extension_auto="0"/>
+			<Target title="pcgp">
+				<Option output="C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/pcgp.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/lucia/Documents/GitHub/P-CGPANN/amd/include"/>
+					<Add directory="C:/Program Files (x86)/OCL_SDK_Light/include"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -33,20 +33,20 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/Makefile&quot;  VERBOSE=1 P-CGPDE"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/Makefile&quot;  VERBOSE=1 pcgp"/>
 					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="P-CGPDE/fast">
-				<Option output="C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/P-CGPDE.exe" prefix_auto="0" extension_auto="0"/>
+			<Target title="pcgp/fast">
+				<Option output="C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/pcgp.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/lucia/Documents/GitHub/P-CGPANN/amd/include"/>
+					<Add directory="C:/Program Files (x86)/OCL_SDK_Light/include"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -55,7 +55,7 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/Makefile&quot;  VERBOSE=1 P-CGPDE/fast"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/Makefile&quot;  VERBOSE=1 pcgp/fast"/>
 					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/lucia/Documents/GitHub/P-CGPANN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -83,40 +83,40 @@
 			</Target>
 		</Build>
 		<Unit filename="C:/Users/lucia/Documents/GitHub/P-CGPANN/GPTime.cpp">
-			<Option target="P-CGPDE"/>
+			<Option target="pcgp"/>
 		</Unit>
 		<Unit filename="C:/Users/lucia/Documents/GitHub/P-CGPANN/GPTime.h">
-			<Option target="P-CGPDE"/>
+			<Option target="pcgp"/>
 		</Unit>
 		<Unit filename="C:/Users/lucia/Documents/GitHub/P-CGPANN/OCLConfig.cpp">
-			<Option target="P-CGPDE"/>
+			<Option target="pcgp"/>
 		</Unit>
 		<Unit filename="C:/Users/lucia/Documents/GitHub/P-CGPANN/OCLConfig.h">
-			<Option target="P-CGPDE"/>
+			<Option target="pcgp"/>
 		</Unit>
 		<Unit filename="C:/Users/lucia/Documents/GitHub/P-CGPANN/cgp.cpp">
-			<Option target="P-CGPDE"/>
+			<Option target="pcgp"/>
 		</Unit>
 		<Unit filename="C:/Users/lucia/Documents/GitHub/P-CGPANN/cgp.h">
-			<Option target="P-CGPDE"/>
+			<Option target="pcgp"/>
 		</Unit>
 		<Unit filename="C:/Users/lucia/Documents/GitHub/P-CGPANN/constants.h">
-			<Option target="P-CGPDE"/>
+			<Option target="pcgp"/>
 		</Unit>
 		<Unit filename="C:/Users/lucia/Documents/GitHub/P-CGPANN/main.cpp">
-			<Option target="P-CGPDE"/>
+			<Option target="pcgp"/>
 		</Unit>
 		<Unit filename="C:/Users/lucia/Documents/GitHub/P-CGPANN/stack.cpp">
-			<Option target="P-CGPDE"/>
+			<Option target="pcgp"/>
 		</Unit>
 		<Unit filename="C:/Users/lucia/Documents/GitHub/P-CGPANN/stack.h">
-			<Option target="P-CGPDE"/>
+			<Option target="pcgp"/>
 		</Unit>
 		<Unit filename="C:/Users/lucia/Documents/GitHub/P-CGPANN/utils.cpp">
-			<Option target="P-CGPDE"/>
+			<Option target="pcgp"/>
 		</Unit>
 		<Unit filename="C:/Users/lucia/Documents/GitHub/P-CGPANN/utils.h">
-			<Option target="P-CGPDE"/>
+			<Option target="pcgp"/>
 		</Unit>
 		<Unit filename="C:/Users/lucia/Documents/GitHub/P-CGPANN/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
