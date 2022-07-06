@@ -6,7 +6,7 @@
 #include "utils.h"
 #include "GPTime.h"
 #include "OCLConfig.h"
-#ifdef WIN32
+#if (defined(WIN32) || defined(_WIN32) || defined(_WIN32_)) && !defined(__CYGWIN__)
 #include "io.h"
 #else
 void mkdir(const char *path)
@@ -169,9 +169,9 @@ int main(int argc, char** argv) {
 
     Dataset fullData;
     readDataset(params, &fullData, datasetFile);
-    std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
-    printDataset(&fullData);
-    std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
+    //std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
+    //printDataset(&fullData);
+    //std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
 
     int trainSize, validSize, testSize;
     calculateDatasetsSize(&fullData, &trainSize, &validSize, &testSize);
@@ -281,6 +281,8 @@ int main(int argc, char** argv) {
     std::cout << "Total time  = " << timeManager.getElapsedTime(Total_T) << std::endl;
 
     factivelFile.close();
+    delete [] seeds;
+    delete ocl;
     delete params;
     unfeasibles.close();
     return 0;
