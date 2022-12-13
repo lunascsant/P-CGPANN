@@ -1,4 +1,3 @@
-
 def read_txt_to_bin(name_file, name_output):
     txt_file = open(name_file, 'r')
     lines = txt_file.readlines()
@@ -8,6 +7,8 @@ def read_txt_to_bin(name_file, name_output):
     inp = infos[0]
     out = infos[1]
     n_lines = infos[2]
+
+    size = 3 + ((int(inp) + int(out)) * int(n_lines))
 
     inputs = []
     outputs = []
@@ -32,10 +33,12 @@ def read_txt_to_bin(name_file, name_output):
     output_file.write(out_bytes)
     output_file.close()
 
+    return size
 
-def read_bin_to_txt(name_file):
+
+def read_bin_to_txt(name_file, size):
     bin_file = open(name_file, 'rb')
-    data_bin = list(bin_file.read(303))
+    data_bin = list(bin_file.read(size))
 
     print(data_bin)
     bin_file.close()    
@@ -44,7 +47,11 @@ def read_bin_to_txt(name_file):
 
 ## MUDE O NOME DO ARQUIVO
 
-read_txt_to_bin('AMH_gsd.txt', 'AMH_gsd.bin')
 
-read_bin_to_txt('AMH_gsd.bin')
+
+size = read_txt_to_bin('ABLIM1_hESC.txt', 'ABLIM1_hESC.bin')
+
+print(str(size))
+
+read_bin_to_txt('ABLIM1_hESC.bin', size)
 
