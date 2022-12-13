@@ -105,6 +105,149 @@ std::string ToString( double t ){
     std::stringstream ss; ss << std::setprecision(32) << t; return ss.str();
 }
 
+void readDataset_2(Parameters* params, Dataset* fulldata, std::string filename){
+    std::fstream arq;
+    int i, j, k;
+
+    std::cout << "Lendo Dados Arquivo... " << filename << std::endl;
+    arq.open(filename, std::fstream::in | std::fstream::binary);
+
+    char* buffer;
+    long size;
+    arq.seekg(0, std::ios::end);
+    size = arq.tellg();
+    arq.seekg (0, std::ios::beg);
+    buffer = new char [size];
+    arq.read(buffer, size);
+
+    if (!arq) {
+        std::cout << "An error occurred!" << std::endl;
+        arq.close();
+        delete[] buffer;
+        exit(1);
+    }
+    
+    arq.close();
+
+    // unsigned short int *conversion = new unsigned short int [size];
+
+
+    // for(int i = 0; i < size; i++) {
+    //     conversion[i] = (unsigned short int) buffer[i];
+    // }
+
+    params->N = buffer[0];
+    params->O = buffer[1];
+    params->M = buffer[2];
+
+    unsigned short int M = params->M;
+    unsigned short int N = params->N;
+    unsigned short int O = params->O;
+    std::cout << M << " " << N << " " << O << std::endl;
+
+    fulldata->M = M;
+    fulldata->N = N;
+    fulldata->O = O;
+
+    (fulldata->data) = new unsigned short int* [(M)];
+    for(i = 0; i < (M); i++){
+        (fulldata->data)[i] = new unsigned short int [(N)];
+    }
+
+    (fulldata->output) = new unsigned short int* [(M)];
+    for(i = 0; i < (M); i++) {
+        (fulldata->output)[i] = new unsigned short int[(O)];
+    }
+
+    (params->labels) = new char* [(N + O)];
+    for(i = 0; i < (N + O); i++){
+        (params->labels)[i] = new char [10];
+    }
+
+    //LABELS
+    for(i = 0; i < params->N; i++){
+        std::stringstream ss;
+        std::string str;
+        ss << "i";
+        ss << i;
+        ss >> str;
+        strcpy((params->labels)[i], (str.c_str()));
+    }
+    for(; i < params->N+params->O; i++){
+        std::stringstream ss;
+        std::string str;
+        ss << "o";
+        ss << i;
+        ss >> str;
+        strcpy((params->labels)[i], (str.c_str()));
+    }
+
+
+    /** Read the dataset */
+    // 3 infos (inputs, outputs, lines)
+    k = 3;
+    for(i = 0; i < (M); i++) {
+        for(j = 0; j < (N); j++) {
+            (fulldata->data)[i][j] = buffer[k];
+            k++;
+        }
+    }
+
+    for(i = 0; i < (M); i++) {
+        for(j = 0; j < (O); j++) {
+            (fulldata->output)[i][j] = buffer[k];
+            k++;
+        }
+    }
+
+
+    // for(i = 0; i < (M); i++){
+    //     for(j = 0; j < (N); j++){
+    //         std::cout << (fulldata->data)[i][j] << " ";
+    //     }
+    //     std::cout << std::endl;
+    // }
+
+    // for(i = 0; i < (M); i++){
+    //     for(j = 0; j < (O); j++){
+    //         std::cout << (fulldata->output)[i][j] << " ";
+    //     }
+    //     std::cout << std::endl;
+    // }
+
+    params->NUM_FUNCTIONS = 7;
+    (params->functionSet) = new unsigned short int [params->NUM_FUNCTIONS];
+
+    i = 0;
+
+    (params->functionSet)[0] = AND;
+    //(params->maxFunctionInputs)[i++] = 2;
+
+    (params->functionSet)[1] = OR;
+    //(params->maxFunctionInputs)[i++] = 2;
+
+    (params->functionSet)[2] = XOR;
+    //(params->maxFunctionInputs)[i++] = 2;
+
+    (params->functionSet)[3] = NAND;
+    //(params->maxFunctionInputs)[i++] = 2;
+
+    (params->functionSet)[4] = NOR;
+    //(params->maxFunctionInputs)[i++] = 2;
+
+    (params->functionSet)[5] = XNOR;
+    //(params->maxFunctionInputs)[i++] = 2;
+
+
+    (params->functionSet)[6] = NOT;
+    //(params->maxFunctionInputs)[i++] = 1;
+
+    params->weightRange = 5;
+
+    // delete[] conversion;
+    delete[] buffer;
+}
+
 void readDataset(Parameters* params, Dataset* fulldata, std::string filename){
 
     std::fstream arq;
@@ -146,14 +289,14 @@ void readDataset(Parameters* params, Dataset* fulldata, std::string filename){
     fulldata->N = N;
     fulldata->O = O;
 
-    (fulldata->data) = new float* [(M)];
+    (fulldata->data) = new unsigned short int* [(M)];
     for(i = 0; i < (M); i++){
-        (fulldata->data)[i] = new float [(N)];
+        (fulldata->data)[i] = new unsigned short int [(N)];
     }
 
-    (fulldata->output) = new float* [(M)];
+    (fulldata->output) = new unsigned short int* [(M)];
     for(i = 0; i < (M); i++) {
-        (fulldata->output)[i] = new float[(O)];
+        (fulldata->output)[i] = new unsigned short int[(O)];
     }
 
     (params->labels) = new char* [(N + O)];
@@ -200,7 +343,7 @@ void readDataset(Parameters* params, Dataset* fulldata, std::string filename){
 
 
     params->NUM_FUNCTIONS = 7;
-    (params->functionSet) = new unsigned int [params->NUM_FUNCTIONS];
+    (params->functionSet) = new unsigned short int [params->NUM_FUNCTIONS];
 
     i = 0;
 
@@ -232,8 +375,9 @@ void readDataset(Parameters* params, Dataset* fulldata, std::string filename){
 }
 
 void printDataset(Dataset* data){
-    unsigned int i, j;
+    int i, j;
 
+    std::cout << "Dataset" << std::endl; 
     for(i = 0; i < data->M; i++){
         std::cout << i << " - ";
         for(j = 0; j < data->N; j++) {
@@ -293,13 +437,13 @@ Dataset* generateFolds(Dataset* data, int* indexesData, int* indexesDataInFolds)
     // allocate memory for the folds data
     for(i = 0; i < KFOLDS; i++) // for each fold
     {
-        folds[i].data = new float* [folds[i].M];
-        folds[i].output = new float* [folds[i].M];
+        folds[i].data = new unsigned short int* [folds[i].M];
+        folds[i].output = new unsigned short int* [folds[i].M];
 
         for(j = 0; j < folds[i].M; j++) // for each instance of each fold
         {
-            folds[i].data[j] = new float [folds[i].N];
-            folds[i].output[j] = new float [folds[i].O];
+            folds[i].data[j] = new unsigned short int [folds[i].N];
+            folds[i].output[j] = new unsigned short int [folds[i].O];
         }
     }
 
@@ -398,12 +542,12 @@ Dataset* getSelectedDataset(Dataset* folds, int* indexes, int index_start, int i
         newDataset->M += folds[indexes[i]].M;
     }
 
-    (newDataset->data) = new float* [newDataset->M];
-    (newDataset->output) = new float* [newDataset->M];
+    (newDataset->data) = new unsigned short int* [newDataset->M];
+    (newDataset->output) = new unsigned short int* [newDataset->M];
 
     for(int i = 0; i < newDataset->M; i++){
-        (newDataset->data)[i] = new float [newDataset->N];
-        (newDataset->output)[i] = new float[newDataset->O];
+        (newDataset->data)[i] = new unsigned short int [newDataset->N];
+        (newDataset->output)[i] = new unsigned short int[newDataset->O];
     }
 
     int l = 0;

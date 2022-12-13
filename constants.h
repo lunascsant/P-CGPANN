@@ -163,8 +163,8 @@ typedef struct
     unsigned int O; //outputs
     unsigned int M; //dataset size
 
-    unsigned int NUM_FUNCTIONS;
-    unsigned int* functionSet;
+    unsigned short int NUM_FUNCTIONS;
+    unsigned short int* functionSet;
    // unsigned int* maxFunctionInputs;
     //unsigned int* inputVariablesSet;
 
@@ -181,8 +181,8 @@ typedef struct
     /** Number of entries */
     unsigned int M;
 
-    float** data;
-    float** output;
+    unsigned short int** data;
+    unsigned short int** output;
 } Dataset;
 
 #endif //PCGP_CONSTANTS_H

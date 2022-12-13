@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
 
     std::string newSeed = argv[5];
     std::string geneNamesStr = argv[1];
-    std::cout << geneNamesStr << std::endl;
+    // std::cout << geneNamesStr << std::endl;
     std::string argExe = argv[2];
     std::string argProblemName = argv[3];
     std::ifstream geneNamesFile(geneNamesStr);
@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
         numGenes++;
     }
 
-    std::cout << geneNames.size() << std::endl;
+    // std::cout << geneNames.size() << std::endl;
 
     geneNamesFile.close();
 
@@ -44,26 +44,39 @@ int main(int argc, char** argv) {
 
     std::vector<int> todasRedes;
 
-    std::string datasetFile = currentGene + "_" + argProblemName + ".txt";
+    std::string datasetFile = currentGene + "_" + argProblemName + ".bin";
 
 
 
 #if PARALLEL
 
     std::string unfeasiblesFile = "./executions_parallel/" + argExe + "/unfeasibles_" + argProblemName + ".txt";
-    std::string rankedEdgesfile = "./executions_parallel/" + argExe + "/rankedEdges_" + argProblemName + ".csv";
+    std::string rankedEdgesFile = "./executions_parallel/" + argExe + "/rankedEdges_" + argProblemName + ".csv";
     std::ofstream rankedEdges;
     std::ofstream unfeasibles;
-    rankedEdges.open(rankedEdgesfile, std::ios_base::app);
+
+    // std::cout << unfeasiblesFile << std::endl;
+    // std::cout << rankedEdgesFile << std::endl;
+
+    rankedEdges.open(rankedEdgesFile, std::ios_base::app);
+     if (!rankedEdges) {
+        std::cout << "Error file ranked edges" << std::endl;
+        exit(1);
+    }
     unfeasibles.open(unfeasiblesFile, std::ios_base::app);
+     if (!unfeasibles) {
+        std::cout << "Error file unfeasibles" << std::endl;
+        exit(1);
+    }
 
     std::ofstream factivelFile;
 
     std::string nomeArquivo = currentGene + "_" + newSeed + "_" + argExe;
-    std::string caminhoArquivo = "./executions_parallel/" + argExe + "/" + nomeArquivo + ".txt";
+    std::string caminhoArquivo = ".\\executions_parallel\\" + argExe + "\\" + nomeArquivo + ".txt";
+    std::cout << caminhoArquivo << std::endl;
     factivelFile.open(caminhoArquivo, std::ios::out);
     if (!factivelFile) {
-        std::cout << "Error file" << std::endl;
+        std::cout << "Error file factivelFile" << std::endl;
         exit(1);
     }
 
@@ -72,10 +85,10 @@ int main(int argc, char** argv) {
 #else
 
     std::string unfeasiblesFile = "./executions_sequential/" + argExe + "/unfeasibles_" + argProblemName + ".txt";
-    std::string rankedEdgesfile = "./executions_sequential/" + argExe + "/rankedEdges_" + argProblemName + ".csv";
+    std::string rankedEdgesFile = "./executions_sequential/" + argExe + "/rankedEdges_" + argProblemName + ".csv";
     std::ofstream rankedEdges;
     std::ofstream unfeasibles;
-    rankedEdges.open(rankedEdgesfile, std::ios_base::app);
+    rankedEdges.open(rankedEdgesFile, std::ios_base::app);
     unfeasibles.open(unfeasiblesFile, std::ios_base::app);
 
     std::ofstream factivelFile;
@@ -155,10 +168,10 @@ int main(int argc, char** argv) {
     params = new Parameters;
 
     Dataset fullData;
-    readDataset(params, &fullData, datasetFile);
-    //std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
-    //printDataset(&fullData);
-    //std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
+    readDataset_2(params, &fullData, datasetFile);
+    std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
+    printDataset(&fullData);
+    std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
 
     int trainSize, validSize, testSize;
     calculateDatasetsSize(&fullData, &trainSize, &validSize, &testSize);
@@ -319,13 +332,13 @@ int main(int argc, char** argv) {
         counting.push_back(counted/NUM_EXECUTIONS);
     }
 
-    std::cout << "xxxxxx Contagem xxxxxx" << std::endl;
+    // std::cout << "xxxxxx Contagem xxxxxx" << std::endl;
 
-    for(int i = 0; i < counting.size(); i++){
-        std::cout << counting.at(i) << " ";
-    }
+    // for(int i = 0; i < counting.size(); i++){
+    //     std::cout << counting.at(i) << " ";
+    // }
 
-    std::cout << std::endl;
+    // std::cout << std::endl;
 
     for(int i = 0; i < geneNames.size(); i++) {
         if(counting.at(i) != 0) {
