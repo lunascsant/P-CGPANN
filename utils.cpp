@@ -7,24 +7,24 @@
 
 int rand2(int *seed){
     int s  = *seed;
-    s = ((unsigned int)(s * 16807) % 2147483647);//(int)(pown(2.0, 31)-1));
+    s = ((unsigned short int)(s * 16807) % 2147483647);//(int)(pown(2.0, 31)-1));
     *seed = s;
 
     return s;
 }
 
 
-unsigned int randomInput(Parameters *p, unsigned int index, int *seed) {
+unsigned short int randomInput(Parameters *p, unsigned short int index, int *seed) {
     return (rand() % (p->N + index));
     //return (rand2(seed) % (p->N + index));
 }
 
-unsigned int randomOutputIndex(int* seed){
+unsigned short int randomOutputIndex(int* seed){
     return (rand() % MAX_NODES);
     //return (rand2(seed) % MAX_NODES);
 }
 
-unsigned int randomFunction(Parameters *p, int *seed) {
+unsigned short int randomFunction(Parameters *p, int *seed) {
     return (rand() % (p->NUM_FUNCTIONS));
     //return (rand2(seed) % (p->NUM_FUNCTIONS));
 }
@@ -43,7 +43,7 @@ float randomProb(int* seed){
     return (float)rand2(seed) / 2147483647;//pown(2.0, 31);
 }
 
-unsigned int getFunctionInputs(unsigned int function){
+unsigned short int getFunctionInputs(unsigned short int function){
     switch (function) {
         case ADD:
         case SUB:
@@ -89,7 +89,7 @@ bool IsPowerOf2( int n ){
     return (n & -n) == n;
 }
 
-unsigned NextPowerOf2( unsigned n ){
+unsigned short int NextPowerOf2( unsigned short int n ){
     n--;
     n |= n >> 1;  // handle  2 bit numbers
     n |= n >> 2;  // handle  4 bit numbers
@@ -116,9 +116,17 @@ void readDataset_2(Parameters* params, Dataset* fulldata, std::string filename){
     long size;
     arq.seekg(0, std::ios::end);
     size = arq.tellg();
+    std::cout << "Size: " << size << std::endl;
     arq.seekg (0, std::ios::beg);
     buffer = new char [size];
     arq.read(buffer, size);
+
+    for(int i = 0; i < size; i++) {
+        std::cout << (unsigned short int) buffer[i] << " ";
+    }
+
+    std::cout << std::endl;
+    exit(1);
 
     if (!arq) {
         std::cout << "An error occurred!" << std::endl;
@@ -188,14 +196,14 @@ void readDataset_2(Parameters* params, Dataset* fulldata, std::string filename){
     k = 3;
     for(i = 0; i < (M); i++) {
         for(j = 0; j < (N); j++) {
-            (fulldata->data)[i][j] = buffer[k];
+            (fulldata->data)[i][j] = (unsigned short int) buffer[k];
             k++;
         }
     }
 
     for(i = 0; i < (M); i++) {
         for(j = 0; j < (O); j++) {
-            (fulldata->output)[i][j] = buffer[k];
+            (fulldata->output)[i][j] = (unsigned short int) buffer[k];
             k++;
         }
     }
@@ -393,7 +401,7 @@ void printDataset(Dataset* data){
 
 
 
-bool stopCriteria(unsigned int it){
+bool stopCriteria(unsigned short int it){
     return it < NUM_GENERATIONS;
     //return (it * NUM_INDIV < NUM_EVALUATIONS);
 }

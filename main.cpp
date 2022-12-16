@@ -152,14 +152,6 @@ int main(int argc, char** argv) {
     resultFileTimeKernel = "./results/cgpann_timeKernel.txt";
 #endif
 
-    /*FILE *f_CGP = fopen(resultFile.c_str(), "w");
-    FILE *f_CGP_time = fopen(resultFileTime.c_str(), "w");
-    FILE *f_CGP_timeIter = fopen(resultFileTimeIter.c_str(), "w");
-    FILE *f_CGP_timeKernel = fopen(resultFileTimeKernel.c_str(), "w");*/
-
-
-    // fprintf(f_CGP, "i,\tj,\taccuracy\n");
-
 
     GPTime timeManager(4);
     timeManager.getStartTime(Total_T);
@@ -200,6 +192,7 @@ int main(int argc, char** argv) {
 
 
     // O newSeed será o valor da SEED
+    
     int* seeds;
     seeds = new int [ocl->maxLocalSize * NUM_INDIV];
     //seeds = new int [1];
@@ -210,7 +203,6 @@ int main(int argc, char** argv) {
     for(int i = 0; i < ocl->maxLocalSize * NUM_INDIV; i++){
         seeds[i] = atoi(argv[5]);
     }
-
 
 
     std::vector<int> rede;

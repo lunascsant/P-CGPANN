@@ -43,13 +43,13 @@
 #define CPU_DEVICE 1
 
 
-unsigned int randomFunction(Parameters *p, int *seed);
-unsigned int randomInput(Parameters *p, unsigned int index, int *seed);
+unsigned short int randomFunction(Parameters *p, int *seed);
+unsigned short int randomInput(Parameters *p, unsigned short int index, int *seed);
 float randomConnectionWeight(Parameters *p, int *seed);
 int randomInterval(int inf_bound, int sup_bound, int *seed);
 float randomProb(int *seed);
-unsigned int randomOutputIndex(int* seed);
-unsigned int getFunctionInputs(unsigned int function);
+unsigned short int randomOutputIndex(int* seed);
+unsigned short int getFunctionInputs(unsigned short int function);
 
 void readDataset(Parameters* params, Dataset* fulldata, std::string filename);
 void readDataset_2(Parameters* params, Dataset* fulldata, std::string filename);
@@ -65,7 +65,7 @@ Dataset* getSelectedDataset(Dataset* folds, int* indexes, int index_start, int i
 
 std::string ToString( double t );
 bool IsPowerOf2( int n );
-unsigned NextPowerOf2( unsigned n );
-bool stopCriteria(unsigned int it);
+unsigned short int NextPowerOf2( unsigned short int n );
+bool stopCriteria(unsigned short int it);
 
 #endif //PCGP_UTILS_H

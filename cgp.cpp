@@ -5,7 +5,7 @@
 #include "cgp.h"
 #include "GPTime.h"
 
-void newNode(Chromosome* c, Parameters* params, unsigned int index, int* seed){
+void newNode(Chromosome* c, Parameters* params, unsigned short int index, int* seed){
     /** set node function */
     c->nodes[index].function = params->functionSet[randomFunction(params, seed)];
 
@@ -37,7 +37,7 @@ static int cmpInt(const void * a, const void * b) {
     return ( *(int*)a - * (int*)b );
 }
 
-void sortActiveArray(unsigned int *array, const int length) {
+void sortActiveArray(unsigned short int *array, const int length) {
 
     qsort(array, length, sizeof(int), cmpInt);
 }
@@ -60,12 +60,12 @@ void activateNodes(Chromosome* c, Parameters* p){
 
 
     for(i = 0; i < MAX_OUTPUTS; i++) {
-        unsigned int nodeIndex = c->output[i];
+        unsigned short int nodeIndex = c->output[i];
         //std::cout << " node index " << nodeIndex << std::endl;
         push(&s, nodeIndex);
 
         while(s.topIndex != -1) {
-            unsigned int node = pop(&s);
+            unsigned short int node = pop(&s);
             //std::cout << "Morre aqui no node " << node << std::endl;
             if( c->nodes[node].active == 0) {
                 for (j = 0; j < MAX_ARITY; j++) {
@@ -86,7 +86,7 @@ void activateNodes(Chromosome* c, Parameters* p){
 }
 
 void circuitGenerator(Chromosome* c, Parameters* params, int* seed){
-    unsigned int i;
+    unsigned short int i;
 
     for(i = 0; i < MAX_NODES; i++){
         newNode(c, params, i, seed);
@@ -153,7 +153,7 @@ void evaluateCircuitValidationLinear(Chromosome* c, Dataset* data) {
 float executeFunction(Chromosome* c, int node, ExStack* exStack){
     int i;
     float result, sum;
-    unsigned int inputs = c->nodes[node].maxInputs;
+    unsigned short int inputs = c->nodes[node].maxInputs;
 
     int r1, r2;
 
@@ -376,14 +376,14 @@ void runCircuit(Chromosome* c, Dataset* dataset, int index, int validation){
 
 
     for( i = 0; i < MAX_OUTPUTS; i++) {
-        unsigned int nodeIndex = c->output[i];
+        unsigned short int nodeIndex = c->output[i];
         push(&s, nodeIndex);
 
 
 
 
         while(s.topIndex != -1) {
-            unsigned int node = pop(&s);
+            unsigned short int node = pop(&s);
             //std::cout << "Function: " << c->nodes[node].function << " - Max inputs: " << c->nodes[node].maxInputs << std::endl;
             /*if(c->nodes[node].function == 14){
                 c->nodes[node].maxInputs = 1;
@@ -395,7 +395,7 @@ void runCircuit(Chromosome* c, Dataset* dataset, int index, int validation){
             for (int j = inputsEvaluatedAux[node]; j < c->nodes[node].maxInputs; j++) {
                 //std::cout << "J ATUAL: " << j << std::endl;
                 if (c->nodes[node].inputs[j] >= dataset->N) { // se é um outro nó, empilha nó ou o resultado
-                    unsigned int refIndex = c->nodes[node].inputs[j] - dataset->N;
+                    unsigned short int refIndex = c->nodes[node].inputs[j] - dataset->N;
 
                     if(alreadyEvaluated[refIndex] > -DBL_MAX) {
                         inputsEvaluatedAux[node]++;//c->nodes[node].inputsEvaluated++;
@@ -490,7 +490,7 @@ void runCircuitLinear(Chromosome* c, Dataset* dataset, int index, int validation
 
         for(j = 0; j < activeInputs; j++){
             if (c->nodes[currentActive].inputs[j] >= dataset->N) { // se é um outro nó, empilha nó ou o resultado
-                unsigned int refIndex = c->nodes[currentActive].inputs[j] - dataset->N;
+                unsigned short int refIndex = c->nodes[currentActive].inputs[j] - dataset->N;
 
                 if(alreadyEvaluated[refIndex] > -DBL_MAX) {
                     pushEx(&exStack, alreadyEvaluated[refIndex]);
@@ -522,7 +522,7 @@ void runCircuitLinear(Chromosome* c, Dataset* dataset, int index, int validation
     }
 
     for( i = 0; i < MAX_OUTPUTS; i++) {
-        unsigned int nodeIndex = c->output[i];
+        unsigned short int nodeIndex = c->output[i];
 
         executionOut[i] = alreadyEvaluated[nodeIndex];//c->nodes[c->output[i]].output;//popEx(&exStack);
 
@@ -552,7 +552,7 @@ void evaluatePopulation(Chromosome* pop, Dataset* dataset, int validation, int b
         bestFitness[k] = 0;
     }
 
-    unsigned int bestActiveNodes[NUM_EXECUTIONS];
+    unsigned short int bestActiveNodes[NUM_EXECUTIONS];
 
     for(k = 0; k < NUM_EXECUTIONS; k++) {
         bestActiveNodes[k] = 9999;
@@ -676,12 +676,12 @@ void copyActiveNodes(Chromosome *c, ActiveChromosome* ac){
 
     for(int i = 0; i < NUM_INDIV; i++ ){
 
-        unsigned int numActiveNodes = c[i].numActiveNodes;
+        unsigned short int numActiveNodes = c[i].numActiveNodes;
         ac[i].numActiveNodes = numActiveNodes;
 
 
         for(int j = 0; j < numActiveNodes; j++){
-            unsigned int currentActive = c[i].activeNodes[j];
+            unsigned short int currentActive = c[i].activeNodes[j];
 
             copyNode(&(c[i].nodes[currentActive]), &(ac[i].nodes[j]));
             ac[i].nodes[j].originalIndex = currentActive;
@@ -794,13 +794,13 @@ Chromosome *mutateSAM(Chromosome *c, Parameters *p, int *seed) {
 
 Chromosome *mutateTopologyPoint(Chromosome *c, Parameters *p, int *seed) {
     int mutationComplete = -1;
-    unsigned int newIndex;
-    unsigned int newInputIndex;
-    unsigned int newValue;
+    unsigned short int newIndex;
+    unsigned short int newInputIndex;
+    unsigned short int newValue;
 
     int num_inputs = MAX_NODES * MAX_ARITY;
     while (mutationComplete == -1){
-        unsigned int nodeIndex = randomInterval(0, MAX_NODES + (num_inputs) + MAX_OUTPUTS, seed); //Select any node or output
+        unsigned short int nodeIndex = randomInterval(0, MAX_NODES + (num_inputs) + MAX_OUTPUTS, seed); //Select any node or output
         if(nodeIndex < MAX_NODES) { // select function
             newIndex = nodeIndex;
             newValue = p->functionSet[randomFunction(p, seed)];
@@ -812,8 +812,8 @@ Chromosome *mutateTopologyPoint(Chromosome *c, Parameters *p, int *seed) {
                 }
             }
         } else if (nodeIndex <= MAX_NODES + (num_inputs)) { //select input
-            newIndex = (unsigned int) ((nodeIndex - MAX_NODES) / MAX_ARITY);
-            newInputIndex= (unsigned int) ((nodeIndex - MAX_NODES) % MAX_ARITY);
+            newIndex = (unsigned short int) ((nodeIndex - MAX_NODES) / MAX_ARITY);
+            newInputIndex= (unsigned short int) ((nodeIndex - MAX_NODES) % MAX_ARITY);
 
             newValue = randomInput(p, newIndex, seed);
 
@@ -858,7 +858,7 @@ CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double 
     int bestTrain[NUM_EXECUTIONS];
     evaluatePopulation(current_pop, training, 0, bestTrain);
 
-    unsigned int bestActiveNodes[NUM_EXECUTIONS];
+    unsigned short int bestActiveNodes[NUM_EXECUTIONS];
 
     for(int k = 0; k < NUM_EXECUTIONS; k++) {
         bestActiveNodes[k] = 9999;
@@ -1017,7 +1017,7 @@ Chromosome* PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *see
 
     evaluatePopulation(population, training, 0, bestTrain);
 
-    unsigned int bestActiveNodes[NUM_EXECUTIONS];
+    unsigned short int bestActiveNodes[NUM_EXECUTIONS];
 
     for(int k = 0; k < NUM_EXECUTIONS; k++) {
         bestActiveNodes[k] = 9999;
