@@ -33,6 +33,9 @@ Chromosome *mutateTopologyProbabilisticActive(Chromosome *c, Parameters *p, int 
 Chromosome *mutateSAM(Chromosome *c, Parameters *p, int *seed);
 Chromosome *mutateTopologyPoint(Chromosome *c, Parameters *p, int *seed);
 
+int *identifyBestNode(int node_cind, int input_eind, Chromosome *c, Dataset* data, int *seed);
+Chromosome *mutateSOMO(Chromosome *c, Parameters *p, int *seed, Dataset* data);
+
 
 Chromosome
 CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double *timeKernel, std::ofstream& factivel_file);

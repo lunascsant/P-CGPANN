@@ -146,14 +146,14 @@ void readDataset(Parameters* params, Dataset* fulldata, std::string filename){
     fulldata->N = N;
     fulldata->O = O;
 
-    (fulldata->data) = new float* [(M)];
+    (fulldata->data) = new unsigned short int* [(M)];
     for(i = 0; i < (M); i++){
-        (fulldata->data)[i] = new float [(N)];
+        (fulldata->data)[i] = new unsigned short int [(N)];
     }
 
-    (fulldata->output) = new float* [(M)];
+    (fulldata->output) = new unsigned short int* [(M)];
     for(i = 0; i < (M); i++) {
-        (fulldata->output)[i] = new float[(O)];
+        (fulldata->output)[i] = new unsigned short int[(O)];
     }
 
     (params->labels) = new char* [(N + O)];
@@ -200,7 +200,7 @@ void readDataset(Parameters* params, Dataset* fulldata, std::string filename){
 
 
     params->NUM_FUNCTIONS = 7;
-    (params->functionSet) = new unsigned int [params->NUM_FUNCTIONS];
+    (params->functionSet) = new unsigned short int [params->NUM_FUNCTIONS];
 
     i = 0;
 
@@ -398,12 +398,12 @@ Dataset* getSelectedDataset(Dataset* folds, int* indexes, int index_start, int i
         newDataset->M += folds[indexes[i]].M;
     }
 
-    (newDataset->data) = new float* [newDataset->M];
-    (newDataset->output) = new float* [newDataset->M];
+    (newDataset->data) = new unsigned short int* [newDataset->M];
+    (newDataset->output) = new unsigned short int* [newDataset->M];
 
     for(int i = 0; i < newDataset->M; i++){
-        (newDataset->data)[i] = new float [newDataset->N];
-        (newDataset->output)[i] = new float[newDataset->O];
+        (newDataset->data)[i] = new unsigned short int [newDataset->N];
+        (newDataset->output)[i] = new unsigned short int[newDataset->O];
     }
 
     int l = 0;

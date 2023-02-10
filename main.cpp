@@ -36,7 +36,31 @@ int main(int argc, char** argv) {
     std::string dataset = argv[1];
     std::string datasetFile = dataset + ".txt";
     std::string argExe = argv[2];
+<<<<<<< Updated upstream
     std::string newSeed = argv[3];
+=======
+    std::string argProblemName = argv[3];
+    std::ifstream geneNamesFile(geneNamesStr);
+    std::vector<std::string> geneNames;
+    std::string gene;
+    int numGenes = 0;
+
+    while(std::getline (geneNamesFile, gene)) {
+        geneNames.push_back(gene);
+        numGenes++;
+    }
+
+    // std::cout << geneNames.size() << std::endl;
+
+    geneNamesFile.close();
+
+    std::string currentGene = argv[4];
+
+    std::vector<int> todasRedes;
+
+    std::string datasetFile = currentGene + "_" + argProblemName + ".txt";
+
+>>>>>>> Stashed changes
 
     std::string exe_1 = "exe_1";
 
@@ -169,9 +193,15 @@ int main(int argc, char** argv) {
 
     Dataset fullData;
     readDataset(params, &fullData, datasetFile);
+<<<<<<< Updated upstream
     //std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
     //printDataset(&fullData);
     //std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
+=======
+    std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
+    printDataset(&fullData);
+    std::cout << "-----------------PRINT DATASET-------------------" << std::endl;
+>>>>>>> Stashed changes
 
     int trainSize, validSize, testSize;
     calculateDatasetsSize(&fullData, &trainSize, &validSize, &testSize);

@@ -2,6 +2,9 @@
 // Created by bruno on 04/02/2020.
 //
 
+#include <vector>
+using namespace std;
+
 #ifndef PCGP_CONSTANTS_H
 #define PCGP_CONSTANTS_H
 
@@ -62,13 +65,21 @@
 #define PROB_MUT 0.05
 #endif // PROB_MUT
 
+#ifndef PF
+#define PF 0.0
+#endif // PROB_MUT
+
+#ifndef PQ
+#define PQ 1.0
+#endif // PROB_MUT
+
 #define NUM_INDIV_POP 5
 #define NUM_EXECUTIONS 5
 #define NUM_GENERATIONS 3600000
 #define NUM_EVALUATIONS 2.40e+007
 
 
-#define PARALLEL     1
+#define PARALLEL    1
 
 #define DEFAULT      1
 #define COMPACT      0
@@ -106,9 +117,9 @@
 
 typedef struct
 {
-    unsigned int function;
-    unsigned int maxInputs;
-    unsigned int inputs[MAX_ARITY];
+    unsigned short int function;
+    unsigned short int maxInputs;
+    unsigned short int inputs[MAX_ARITY];
     float inputsWeight[MAX_ARITY];
     int active;
 } Node;
@@ -116,74 +127,81 @@ typedef struct
 typedef struct
 {
     Node nodes[MAX_NODES];
-    unsigned int output[MAX_OUTPUTS];
-    unsigned int activeNodes[MAX_NODES];
-    unsigned int numActiveNodes;
+    unsigned short int output[MAX_OUTPUTS];
+    unsigned short int activeNodes[MAX_NODES];
+    unsigned short int numActiveNodes;
     float fitness;
-    unsigned int numTransistors;
     float fitnessValidation;
 } Chromosome;
 
 typedef struct
 {
-    unsigned int function_inputs_active;
-    unsigned int inputs[MAX_ARITY/2];
+    unsigned short int function_inputs_active;
+    unsigned short int inputs[MAX_ARITY/2];
     float inputsWeight[MAX_ARITY];
 } CompactNode;
 
 typedef struct
 {
     CompactNode nodes[MAX_NODES];
-    unsigned int output[MAX_OUTPUTS];
-    unsigned int activeNodes[MAX_NODES/2];
-    unsigned int numActiveNodes;
+    unsigned short int output[MAX_OUTPUTS];
+    unsigned short int activeNodes[MAX_NODES/2];
+    unsigned short int numActiveNodes;
 } CompactChromosome;
 
 
 typedef struct
 {
-    unsigned int function;
-    unsigned int maxInputs;
-    unsigned int inputs[MAX_ARITY];
+    unsigned short int function;
+    unsigned short int maxInputs;
+    unsigned short int inputs[MAX_ARITY];
     float inputsWeight[MAX_ARITY];
-    unsigned int originalIndex;
+    unsigned short int originalIndex;
 
 } ActiveNode;
 
 typedef struct
 {
     ActiveNode nodes[MAX_NODES];
-    unsigned int output[MAX_OUTPUTS];
-    unsigned int numActiveNodes;
+    unsigned short int output[MAX_OUTPUTS];
+    unsigned short int numActiveNodes;
 } ActiveChromosome;
-
 
 typedef struct
 {
-    unsigned int N; //inputs
-    unsigned int O; //outputs
-    unsigned int M; //dataset size
+    unsigned short int N; //inputs
+    unsigned short int O; //outputs
+    unsigned short int M; //dataset size
 
-    unsigned int NUM_FUNCTIONS;
-    unsigned int* functionSet;
-   // unsigned int* maxFunctionInputs;
-    //unsigned int* inputVariablesSet;
+    unsigned short int NUM_FUNCTIONS;
+    unsigned short int* functionSet;
+   // unsigned short int* maxFunctionInputs;
+    //unsigned short int* inputVariablesSet;
 
     float weightRange;
     char** labels;
 } Parameters;
 
+typedef struct{
+    unsigned short int **truthTable;
+    vector<vector<int>> myStack;
+    vector<vector<vector<int>>> eSimulation;
+    vector<vector<int>> req;
+    vector<vector<int>> outputs_transpose;
+    vector<int> score;
+} SomoAuxStruct;
+
 typedef struct
 {
     /** Number of inputs */
-    unsigned int N;
+    unsigned short int N;
     /** Number of outputs */
-    unsigned int O;
+    unsigned short int O;
     /** Number of entries */
-    unsigned int M;
+    unsigned short int M;
 
-    float** data;
-    float** output;
+    unsigned short int** data;
+    unsigned short int** output;
 } Dataset;
 
 #endif //PCGP_CONSTANTS_H

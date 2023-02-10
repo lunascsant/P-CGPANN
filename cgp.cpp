@@ -4,6 +4,7 @@
 
 #include "cgp.h"
 #include "GPTime.h"
+#include <vector>
 
 void newNode(Chromosome* c, Parameters* params, unsigned int index, int* seed){
     /** set node function */
@@ -67,7 +68,7 @@ void activateNodes(Chromosome* c, Parameters* p){
         while(s.topIndex != -1) {
             unsigned int node = pop(&s);
             //std::cout << "Morre aqui no node " << node << std::endl;
-            if( c->nodes[node].active == 0) {
+            if(c->nodes[node].active == 0) {
                 for (j = 0; j < MAX_ARITY; j++) {
                     //std::cout << "Morre aqui no j " << j << std::endl;
                     if (c->nodes[node].inputs[j] >= p->N) {
@@ -425,9 +426,6 @@ void runCircuit(Chromosome* c, Dataset* dataset, int index, int validation){
     for( i = 0; i < MAX_OUTPUTS; i++) {
         unsigned int nodeIndex = c->output[i];
         push(&s, nodeIndex);
-
-
-
 
         while(s.topIndex != -1) {
             unsigned int node = pop(&s);
@@ -890,7 +888,319 @@ Chromosome *mutateTopologyPoint(Chromosome *c, Parameters *p, int *seed) {
     return  c;
 }
 
-Chromosome
+void personalStack(Chromosome *c, SomoAuxStruct *somo_aux, int node, int output, int n_i) {
+    int function = c->nodes[node].function;
+    int inp0 = c->nodes[node].inputs[0];
+    int inp1 = c->nodes[node].inputs[1];
+
+    if(node >= n_i) {
+        if(function == NOT) {
+            if(std::find(somo_aux->myStack[output].begin(), somo_aux->myStack[output].end(), inp0) != somo_aux->myStack[output].end()) {
+                somo_aux->myStack[output].push_back(inp0);
+            }
+            personalStack(c, somo_aux, inp0, output, n_i);
+        } else {
+            if(std::find(somo_aux->myStack[output].begin(), somo_aux->myStack[output].end(), inp0) != somo_aux->myStack[output].end()) {
+                somo_aux->myStack[output].push_back(inp0);
+            }
+            if(std::find(somo_aux->myStack[output].begin(), somo_aux->myStack[output].end(), inp1) != somo_aux->myStack[output].end()) {
+                somo_aux->myStack[output].push_back(inp1);
+            }
+            personalStack(c, somo_aux, inp0, output, n_i);
+            personalStack(c, somo_aux, inp1, output, n_i);
+        }
+    }
+        
+}
+
+void simulateI0I1(Chromosome *c, SomoAuxStruct *somo_aux, int out, int node_cind, int input_eind, int n_i, Dataset *data) {
+    int inpv, inpf, function;
+    
+    for(j = 0; j < 2; j++) {
+        for(int i = 0; i < somo_aux->myStack[out].size(); i++) {
+            if(somo_aux->myStack[out][i] >= node_cind) {
+                if(somo_aux->myStack[out][i] == node_cind) {
+                    inpv = c->nodes[somo_aux->myStack[out][i] - n_i].inputs[input_eind];
+                    if(input_eind == 0) {
+                        inpf = c->nodes[somo_aux->myStack[out][i] - n_i].inputs[1];
+                    } else {
+                        inpf = c->nodes[somo_aux->myStack[out][i] - n_i].inputs[0];
+                    }
+
+                    function = c->nodes[somo_aux->myStack[out][i] - n_i].function;
+                    
+                    switch(function) {
+                        case AND: 
+                            for(int k = 0; k < data->M; k++) {
+                                somo_aux->truthTable[node_cind][k] = somo_aux->truthTable[inpf][k] && j;
+                            }
+                            break;
+                        case OR:
+                            for(int k = 0; k < data->M; k++) {
+                                somo_aux->truthTable[node_cind][k] = somo_aux->truthTable[inpf][k] || j;
+                            }
+                            break;
+                        case NOR:
+                            for(int k = 0; k < data->M; k++) {
+                                somo_aux->truthTable[node_cind][k] = !(somo_aux->truthTable[inpf][k] || j);
+                            }
+                            break;
+                        case NOT:
+                            for(int k = 0; k < data->M; k++) {
+                                somo_aux->truthTable[node_cind][k] = !somo_aux->truthTable[inpf][k];
+                            }
+                            break;
+                        case NAND:
+                            for(int k = 0; k < data->M; k++) {
+                                somo_aux->truthTable[node_cind][k] = !(somo_aux->truthTable[inpf][k] && j);
+                            }
+                            break;
+                        case XOR:
+                            for(int k = 0; k < data->M; k++) {
+                                somo_aux->truthTable[node_cind][k] = (somo_aux->truthTable[inpf][k] && !j) || (!somo_aux->truthTable[inpf][k] && j);
+                            }
+                            break;
+                        case XNOR:
+                            for(int k = 0; k < data->M; k++) {
+                                somo_aux->truthTable[node_cind][k] = !((somo_aux->truthTable[inpf][k] && !j) || (!somo_aux->truthTable[inpf][k] && j));
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                    
+                } else {
+                    inpv = c->nodes[somo_aux->myStack[out][i] - n_i].inputs[0];
+                    inpf = c->nodes[somo_aux->myStack[out][i] - n_i].inputs[1];
+                    
+                    function = c->nodes[somo_aux->myStack[out][i] - n_i].function;
+                    
+                    switch(function) {
+                        case AND: 
+                            for(int k = 0; k < data->M; k++) {
+                                somo_aux->truthTable[node_cind][k] = somo_aux->truthTable[inpf][k] && somo_aux->truthTable[inpv][k];
+                            }
+                            break;
+                        case OR:
+                            for(int k = 0; k < data->M; k++) {
+                                somo_aux->truthTable[node_cind][k] = somo_aux->truthTable[inpf][k] || somo_aux->truthTable[inpv][k];
+                            }
+                            break;
+                        case NOR:
+                            for(int k = 0; k < data->M; k++) {
+                                somo_aux->truthTable[node_cind][k] = !(somo_aux->truthTable[inpf][k] || somo_aux->truthTable[inpv][k]);
+                            }
+                            break;
+                        case NOT:
+                            for(int k = 0; k < data->M; k++) {
+                                somo_aux->truthTable[node_cind][k] = !somo_aux->truthTable[inpf][k];
+                            }
+                            break;
+                        case NAND:
+                            for(int k = 0; k < data->M; k++) {
+                                somo_aux->truthTable[node_cind][k] = !(somo_aux->truthTable[inpf][k] && somo_aux->truthTable[inpv][k]);
+                            }
+                            break;
+                        case XOR:
+                            for(int k = 0; k < data->M; k++) {
+                                somo_aux->truthTable[node_cind][k] = (somo_aux->truthTable[inpf][k] && !somo_aux->truthTable[inpv][k]) || (!somo_aux->truthTable[inpf][k] && somo_aux->truthTable[inpv][k]);
+                            }
+                            break;
+                        case XNOR:
+                            for(int k = 0; k < data->M; k++) {
+                                somo_aux->truthTable[node_cind][k] = !((somo_aux->truthTable[inpf][k] && !somo_aux->truthTable[inpv][k]) || (!somo_aux->truthTable[inpf][k] && somo_aux->truthTable[inpv][k]));
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        }
+
+        // tabela verdade preenchida
+        for(int t = 0; t < data->M; t++) {
+            somo_aux->eSimulation[out][j].push_back(somo_aux->truthTable[somo_aux->myStack[out][myStack[out].size() - 1]][t]);
+        } 
+    }
+}
+
+void calculateReq(SomoAuxStruct *somo_aux, int out) {
+    for(int i = 0; i < somo_aux->outputs_transpose[out].size(); i++) {
+        if(somo_aux->eSimulation[out][0][i] == somo_aux->outputs_transpose[out][i]) {
+            if(somo_aux->eSimulation[out][0][i] == somo_aux->eSimulation[out][1][i]) {
+                somo_aux->req[out].push_back(9);
+            } else {
+                somo_aux->req[out].push_back(0);
+            }
+        } else {
+            somo_aux->req[out].push_back(1);
+        }
+    }
+}
+
+int *identifyBestNode(int node_cind, int input_eind, Chromosome *c, Dataset* data, int *seed) {
+    std::vector<int> connection_candidates;
+
+    for(int i = 0; i < node_cind; i++) {
+        connection_candidates.push_back(i);
+    }
+
+    SomoAuxStruct somo_aux;
+    somo_aux.truthTable = new unsigned short int[data->N + MAX_NODES];
+    somo_aux.score = new int[MAX_NODES];
+
+    for(int i = 0; i < data->N + MAX_NODES; i++) {
+        somo_aux.truthTable[i] = new unsigned short int[data->M];
+    }
+
+    for(int i = 0; i < data->N; i++) {
+        for(int j = 0; j < data->M; j++) {
+            somo_aux.truthTable[i][j] = data->data[j][i];
+        }
+    }
+
+    // calculando a tabela verdade dos nós que vem antes do nó escolhido
+    for(int i = 0; i < connection_candidates.size(); i++) {
+        int function = c->nodes[connection_candidates[i]].function;
+        int inp0 = c->nodes[connection_candidates[i]].inputs[0];
+        int inp1 = c->nodes[connection_candidates[i]].inputs[1];
+        
+        switch(function) {
+            case AND: 
+                for(int k = 0; k < data->M; k++) {
+                    somo_aux.truthTable[connection_candidates[i] + data-> N][k] = somo_aux.truthTable[inp0][k] && somo_aux.truthTable[inp1][k];
+                }
+                break;
+            case OR:
+                for(int k = 0; k < data->M; k++) {
+                    somo_aux.truthTable[connection_candidates[i] + data-> N][k] = somo_aux.truthTable[inp0][k] || somo_aux.truthTable[inp1][k];
+                }
+                break;
+            case NOR:
+                for(int k = 0; k < data->M; k++) {
+                    somo_aux.truthTable[connection_candidates[i] + data-> N][k] = !(somo_aux.truthTable[inp0][k] || somo_aux.truthTable[inp1][k]);
+                }
+                break;
+            case NOT:
+                for(int k = 0; k < data->M; k++) {
+                    somo_aux.truthTable[connection_candidates[i] + data-> N][k] = !somo_aux.truthTable[inp0][k];
+                }
+                break;
+            case NAND:
+                for(int k = 0; k < data->M; k++) {
+                    somo_aux.truthTable[connection_candidates[i] + data-> N][k] = !(somo_aux.truthTable[inp0][k] && somo_aux.truthTable[inp1][k]);
+                }
+                break;
+            case XOR:
+                for(int k = 0; k < data->M; k++) {
+                    somo_aux.truthTable[connection_candidates[i] + data-> N][k] = (somo_aux.truthTable[inp0][k] && !somo_aux.truthTable[inp1][k]) || (!somo_aux.truthTable[inp0][k] && somo_aux.truthTable[inp1][k]);
+                }
+                break;
+            case XNOR:
+                for(int k = 0; k < data->M; k++) {
+                    somo_aux.truthTable[connection_candidates[i] + data-> N][k] = !((somo_aux.truthTable[inp0][k] && !somo_aux.truthTable[inp1][k]) || (!somo_aux.truthTable[inp0][k] && somo_aux.truthTable[inp1][k]));
+                }
+                break;
+            default:
+                break;
+        }
+        
+    }
+
+    for(int i = 0; i < data->O; i++) {
+        for(int j = 0; j < data->M; j++) {
+            somo_aux.outputs_transpose[i].push_back(data->output[j][i]);
+        }
+    }
+
+    for(int i = 0; i < MAX_OUTPUTS; i++) {
+        personalStack(c, &somo_aux, c->output[i], i, data->N);
+        if(std::find(somo_aux.myStack[i].begin(), somo_aux.myStack[i].end(), node_cind) != somo_aux.myStack[i].end()) {
+            // faz simulacao 0 e 1 para saida i
+            std::sort(somo_aux.myStack[i].begin(), somo_aux.myStack[i].end()); 
+            simulateI0I1(c, &somo_aux, i, node_cind + data->N, input_eind, data->N, data);
+            calculateReq(&somo_aux, i);
+        }
+    }
+
+    int score;
+    for(int j = 0; j < node_cind + data->N; j++) {
+        score = 0;
+        for(int i = 0; i < MAX_OUTPUTS; i++) {
+            for(int k = 0; k < somo_aux.req[i].size(); k++) {
+                if(somo_aux.truthTable[j][k] == somo_aux.req[i][k]) {
+                    score++;
+                }
+            }
+        }
+
+        somo_aux.score.push_back(score);
+    }
+
+    std::vector<int> best_nodes;
+
+    int max = (int) *std::max_element(somo_aux.score.begin(), somo_aux.score.end());
+
+    for(int i = 0; i < somo_aux.score.size(); i++) {
+        if(somo_aux.score[i] == max) {
+            best_nodes.push_back(i);
+        }
+    }
+
+    int ind_best = randomInterval(0, best_nodes.size(), seed);
+    return ind_best;
+}
+
+Chromosome *mutateSOMO(Chromosome *c, Parameters *p, int *seed, Dataset* data) {
+    int i, j;
+    float randomProb;
+    int node_cind, input_eind, bestNode;
+    std::vector<int> active_nodes;
+
+
+    for(i = 0; i < MAX_NODES - 1; i++) {
+        if(c->nodes[i].active) {
+            active_nodes.push_back(i)
+        }
+    }
+
+    node_cind = randomInterval(0, active_nodes.size() - 1, seed);
+    
+    randomProb = randomInterval(0, 1);
+    if(randomProb < PF) {
+        c->nodes[node_cind].function = p->functionSet[randomFunction(p, seed)];
+        c->nodes[node_cind].maxInputs = getFunctionInputs(c->nodes[i].function);
+    } else {
+        std::vector<int> mutatedInactiveNodes;
+
+        for(int i = 0; i < PQ * MAX_NODES; i++) {
+            j = randomInterval(0, MAX_NODES - 1, seed);
+            while(c->nodes[j].active && std::find(mutatedInactiveNodes.begin(), mutatedInactiveNodes.end(), j) != mutatedInactiveNodes.end()) {
+                j = randomInterval(0, MAX_NODES - 1, seed);
+            }
+
+            mutatedInactiveNodes.push_back(j);
+            c->nodes[j].function = p->functionSet[randomFunction(p, seed)];
+            c->nodes[j].maxInputs = getFunctionInputs(c->nodes[j].function);
+
+            for(int k = 0; k < MAX_ARITY - 1; k++) {
+                c->nodes[j].inputs[k] = randomInput(p, j, seed);
+            }
+        }
+        
+        input_eind = randomInterval(0, MAX_ARITY, seed);
+
+        // já faz a conexão do nó c com o n ali dentro
+        bestNode = identifyBestNode(node_cind, input_eind, c, data);
+        c->nodes[node_cind].inputs[input_eind] = bestNode;
+    }
+
+}
+
+
+
+Chromosome*
 CGP(Dataset *training, Parameters *params, int *seeds, double *timeIter, double *timeKernel, std::ofstream& factivel_file) {
     GPTime timeManager(4);
     Chromosome *current_pop;
@@ -1069,9 +1379,14 @@ Chromosome PCGP(Dataset* training, Parameters* params, OCLConfig* ocl, int *seed
     while(stopCriteria(iterations)) {
         timeManager.getStartTime(Iteracao_T);
 
-        for(int k = 0; k < NUM_INDIV_POP; k++){
-            population[k] = best;
-            mutateSAM(&population[k], params, seeds);
+        int group = -1;
+        for(int k = 0; k < NUM_INDIV; k++) {
+            if(k % NUM_EXECUTIONS == 0) {
+                group++;
+            }
+            population[k] = best[group];
+            mutateSOMO(&population[k], params, seeds, training);
+            //mutateSAM(&population[k], params, seeds);
         }
 
 #if DEFAULT
